@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -35,4 +36,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #00112e; /* Replace lightblue with your desired color */
+}
+
+.App {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content img {
+  max-width: 80%; /* Adjust the size of the logo as needed */
+  max-height: 50%; /* Adjust the size of the logo as needed */
+  margin-bottom: 20px; /* Add some space between the logo and the text */
 }
