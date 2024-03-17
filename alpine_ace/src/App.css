@@ -38,8 +38,9 @@
   }
 }
 
-body {
-  background-color: #00112e; /* Replace lightblue with your desired color */
+.main {
+  background-color: #00112e; /* Replace lightblue with your desired color #00112e */
+  color: white;
 }
 
 .App {
@@ -52,10 +53,4 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
-
-.content img {
-  max-width: 80%; /* Adjust the size of the logo as needed */
-  max-height: 50%; /* Adjust the size of the logo as needed */
-  margin-bottom: 20px; /* Add some space between the logo and the text */
 }
