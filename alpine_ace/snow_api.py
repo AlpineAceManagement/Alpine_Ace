@@ -13,9 +13,9 @@ def get_station_data(station_code):
         '''Parse the Json response'''
         data =res.json()
         '''Extract relevant info'''
-        lon = data[2]
-        lat = data[1]
-        return lon,lat
+        hs = data[2]
+        md = data[1]
+        return hs,md
     else: 
         print(f"Error:Unable to retrieve data from SLF API (status code {res.status_code}) ")
         return None
