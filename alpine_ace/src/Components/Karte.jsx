@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const theme = createTheme({
   palette: {
@@ -30,7 +30,7 @@ const Karte = () => {
           alignItems: "center",
         }}
       >
-        <h1 color="black">Karte</h1>
+        <h1 style={{ color: "black" }}>Karte</h1>
         <Box
           sx={{
             width: "45vh",
@@ -38,25 +38,37 @@ const Karte = () => {
             borderRadius: 4,
             bgcolor: "p_white.main",
             marginBottom: "20px",
+            position: "relative",
           }}
         >
-          <MapContainer
-            center={[51.505, -0.09]}
-            zoom={13}
-            scrollWheelZoom={false}
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
           >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[51.505, -0.09]}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
-          </MapContainer>
-          <h1 style={{ color: "black" }}>schwarze bitte</h1>
+            <MapContainer
+              style={{ width: "100%", height: "100%" }}
+              center={[51.505, -0.09]}
+              zoom={13}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[51.505, -0.09]}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </MapContainer>
+          </div>
         </Box>
+        <h1 style={{ color: "black" }}>schwarze bitte</h1>
       </div>
     </ThemeProvider>
   );
