@@ -1,10 +1,10 @@
 import React from "react"; // Add this line
-const Wetter = () => {
+const Statistiken = () => {
   return (
     <div>
-      <h1>Wetter</h1>
+      <h1>Statistiken</h1>
     </div>
   );
 };
 
-export default Wetter;
+export default Statistiken;

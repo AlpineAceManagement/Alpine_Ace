@@ -1,10 +1,10 @@
 import React from "react"; // Add this line
-const Wetter = () => {
+const Restaurant = () => {
   return (
     <div>
-      <h1>Wetter</h1>
+      <h1>Restaurant</h1>
     </div>
   );
 };
 
-export default Wetter;
+export default Restaurant;

@@ -38,8 +38,18 @@
   }
 }
 
+.HauptmenuSchaltflaeche {
+  border-radius: 1px;
+  padding: 2px;
+  margin: 2px;
+  font-size: 14px;
+  text-align: right;
+  background-color: red;
+  color: red;
+}
+
 .main {
-  background-color: #00112e; /* Replace lightblue with your desired color #00112e */
+  background-color: #00112e;
   color: white;
 }
 
@@ -53,4 +63,44 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.zurueck-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.Kopfzeile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.back-link {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .Kopfzeile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .zurueck-icon {
+    order: -1; /* Ändere die Reihenfolge des Icons */
+  }
+}
+
+.button-grid-item {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  height: 10vh;
+}
+
+.Hauptmenu-button {
+  width: 4em;
+  height: 4em;
+
+  font-size: larger;
 }

@@ -1,10 +1,12 @@
+import React from "react"; // Add this line
 import { Link } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
 const Kopfzeile = () => {
   return (
-    <div>
-      <h1>Kopfzeile</h1>
+    <div className="Kopfzeile">
       <Link to="/">
-        <button>Zurück zum Hauptmenü</button>
+        <ArrowBackIosNewIcon className="zurueck-icon" />
       </Link>
     </div>
   );
