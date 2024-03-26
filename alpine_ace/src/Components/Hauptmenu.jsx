@@ -1,26 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
 import "../App.css";
-
-const theme = createTheme({
-  palette: {
-    p_red: {
-      main: "#FF6155",
-      light: "#ff7754",
-      dark: "#cc4d43",
-      contrastText: "white",
-    },
-    p_white: {
-      main: "white",
-      contrastText: "black",
-    },
-  },
-});
 
 const Hauptmenu = () => {
   return (
@@ -57,7 +43,7 @@ const Hauptmenu = () => {
           sx={{
             width: "45vh",
             height: "33vh",
-            borderRadius: 4,
+            borderRadius: "3vh",
             bgcolor: "p_white.main",
             display: "flex",
             flexDirection: "column",

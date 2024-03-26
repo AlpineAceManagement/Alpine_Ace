@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Artifakt Element Black";
+  src: url("./Font/Artifakt\ Element.ttf") format("truetype"); /* Replace 'path/to/your/font/Artifakt-Element-Black.ttf' with the actual path to your font file */
+}
+
 .App {
   text-align: center;
   color: white;
+  font-family: "Artifakt Element Black", sans-serif;
 }
 
 .App-logo {
@@ -51,6 +57,7 @@
 .main {
   background-color: #00112e;
   color: white;
+  font-family: "Artifakt Element Black", sans-serif;
 }
 
 .App {
@@ -103,4 +110,14 @@
   height: 4em;
 
   font-size: larger;
+}
+
+.foto_restaurant {
+  border-radius: 3vh;
+  width: 24vh;
+  height: 20vh;
+  align-items: center;
+}
+.name_restaurant {
+  text-align: center;
 }

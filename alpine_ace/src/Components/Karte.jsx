@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
-const theme = createTheme({
-  palette: {
-    p_red: {
-      main: "#FF6155",
-      light: "#ff7754",
-      dark: "#cc4d43",
-      contrastText: "white",
-    },
-    p_white: {
-      main: "white",
-      contrastText: "black",
-    },
-  },
-});
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
+import {
+  MapContainer,
+  WMSTileLayer,
+  TileLayer,
+  Marker,
+  Popup,
+} from "react-leaflet";
+import "../App.css";
 
 const Karte = () => {
+  const [position, setPosition] = useState(null);
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setPosition([position.coords.latitude, position.coords.longitude]);
+        },
+        (error) => {
+          console.error("Error getting geolocation:", error);
+        }
+      );
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -30,12 +39,12 @@ const Karte = () => {
           alignItems: "center",
         }}
       >
-        <h1 style={{ color: "black" }}>Karte</h1>
+        <h1>Karte</h1>
         <Box
           sx={{
             width: "45vh",
             height: "50vh",
-            borderRadius: 4,
+            borderRadius: "3vh",
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",
@@ -50,25 +59,39 @@ const Karte = () => {
               left: 0,
             }}
           >
+            {" "}
+            <link
+              rel="stylesheet"
+              href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+            />
             <MapContainer
-              style={{ width: "100%", height: "100%" }}
-              center={[51.505, -0.09]}
-              zoom={13}
-              scrollWheelZoom={false}
+              style={{ borderRadius: "3vh", width: "45vh", height: "50vh" }}
+              center={[46.7402, 9.55602]}
+              zoom={12}
+              scrollWheelZoom={true}
             >
               <TileLayer
+                transparent={true}
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe-winter/default/current/3857/{z}/{x}/{y}.jpeg"
               />
-              <Marker position={[51.505, -0.09]}>
-                <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-              </Marker>
+
+              <WMSTileLayer
+                layers="testuebung:Pisten"
+                url="http://localhost:8080/geoserver/testuebung/wms"
+                format="image/jpeg"
+                transparent={true}
+                tileSize={512}
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              {/* {position && (
+                <Marker position={position}>
+                  <Popup>Your current location</Popup>
+                </Marker>
+              )} */}
             </MapContainer>
           </div>
         </Box>
-        <h1 style={{ color: "black" }}>schwarze bitte</h1>
       </div>
     </ThemeProvider>
   );
