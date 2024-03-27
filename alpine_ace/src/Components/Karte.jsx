@@ -79,7 +79,7 @@ const Karte = () => {
               <WMSTileLayer
                 layers="testuebung:Pisten"
                 url="http://localhost:8080/geoserver/testuebung/wms"
-                format="image/jpeg"
+                format="image/png"
                 transparent={true}
                 tileSize={512}
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
