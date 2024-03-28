@@ -5,16 +5,16 @@ const app = express();
 
 app.use(cors());
 
-// PostgreSQL connection configuration
+// Zugriffsdaten zum GeoServer
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
   database: "geoserver",
   password: "jNtd2C13ka9oaPpRy1jP",
-  port: 5433, // Default PostgreSQL port
+  port: 5433, // Port auf PC nicht Standart (5433) WICHTIG auf Server ändern
 });
 
-// Route to fetch all data from the Restaurant table
+// Route um Restaurant Daten zu beziehen
 app.get("/api/restaurant", async (req, res) => {
   try {
     const client = await pool.connect();
@@ -28,7 +28,7 @@ app.get("/api/restaurant", async (req, res) => {
   }
 });
 
-// Start the server
+// Starten den Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
