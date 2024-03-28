@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
@@ -9,25 +9,45 @@ import {
   Marker,
   Popup,
 } from "react-leaflet";
+import L from "leaflet";
 import "../App.css";
+import markerIcon from "./Karte_Symbole/map-marker-512.webp";
+
+const customIcon = L.icon({
+  iconUrl: require("./Karte_Symbole/map-marker-512.webp"),
+  iconSize: [64, 64],
+  iconAnchor: [32, 58],
+  popupAnchor: [0, -32],
+});
 
 const Karte = () => {
   const [position, setPosition] = useState(null);
+  const [geolocationError, setGeolocationError] = useState(false);
+  const mapRef = useRef(null);
 
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          setPosition([position.coords.latitude, position.coords.longitude]);
+          const { latitude, longitude } = position.coords;
+          setPosition([latitude, longitude]);
         },
         (error) => {
           console.error("Error getting geolocation:", error);
+          setGeolocationError(true);
         }
       );
     } else {
       console.log("Geolocation is not supported by this browser.");
     }
   }, []);
+
+  const zoomToMarker = () => {
+    if (mapRef.current && position) {
+      mapRef.current.setView(position, 15);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -59,20 +79,19 @@ const Karte = () => {
               left: 0,
             }}
           >
-            {" "}
             <link
               rel="stylesheet"
               href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
             />
             <MapContainer
+              ref={mapRef}
               style={{ borderRadius: "3vh", width: "45vh", height: "50vh" }}
-              center={[46.7402, 9.55602]}
+              center={[46.72756, 6.55735]}
               zoom={12}
               scrollWheelZoom={true}
             >
               <TileLayer
                 transparent={true}
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe-winter/default/current/3857/{z}/{x}/{y}.jpeg"
               />
 
@@ -82,15 +101,24 @@ const Karte = () => {
                 format="image/png"
                 transparent={true}
                 tileSize={512}
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
-              {/* {position && (
-                <Marker position={position}>
-                  <Popup>Your current location</Popup>
-                </Marker>
-              )} */}
+              {position && (
+                <Marker position={position} icon={customIcon}></Marker>
+              )}
             </MapContainer>
           </div>
+        </Box>
+        <Box
+          sx={{
+            width: "45vh",
+            height: "30vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            marginBottom: "20px",
+            position: "relative",
+          }}
+        >
+          <button onClick={zoomToMarker}>Zoom to Marker</button>
         </Box>
       </div>
     </ThemeProvider>
