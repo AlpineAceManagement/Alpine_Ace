@@ -1,57 +1,55 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import restaurantData from "./restaurant_data.js";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "./theme";
-import "../App.css";
+import React, { useState, useEffect } from "react";
 
 const Restaurant = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <div
-        className="main"
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          color: "#282c34",
-        }}
-      >
-        <Box
-          sx={{
-            width: "45vh",
-            minHeight: "50vh", // Set a minimum height
-            borderRadius: 4,
-            bgcolor: "p_white.main",
-            marginBottom: "20px",
-            overflowY: "auto", // Add scrollbar if needed
-          }}
-        >
-          <h1 style={{ textAlign: "center" }}>Restaurants</h1>
+  const [restaurantData, setRestaurantData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-          <Box
-            marginTop={"2vh"}
-            display="flex"
-            flexWrap="wrap"
-            justifyContent="center"
-            alignItems="center"
-            gap={2} // Adjust the gap between items as needed
-          >
-            {restaurantData.map((restaurant) => (
-              <Box key={restaurant.id} className="restaurant-box">
-                <img
-                  className="foto_restaurant"
-                  src={require(`../Restaurant_data/${restaurant.fileName}`)}
-                  alt={restaurant.name}
-                />
-                <h3 className="name_restaurant">{restaurant.name}</h3>
-              </Box>
-            ))}
-          </Box>
-        </Box>
-      </div>
-    </ThemeProvider>
+  useEffect(() => {
+    fetch("http://localhost:5000/api/restaurant")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Response from server:", data);
+        setRestaurantData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching restaurant data", error);
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <div>
+      <h1>Restaurant Data</h1>
+      <ul>
+        {restaurantData.map((restaurant) => (
+          <li key={restaurant.restaurant_id}>
+            <h2>{restaurant.r_name}</h2>
+            <p>Infos: {restaurant.r_infos}</p>
+            <p>Öffnungszeiten: {restaurant.r_oeffnungszeiten}</p>
+            <p>Telefon: {restaurant.r_telefon}</p>
+            <p>Email: {restaurant.r_email}</p>
+            <p>Webseite: {restaurant.r_webseite}</p>
+            <p>Foto Datei: {restaurant.r_dateiname_foto}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
