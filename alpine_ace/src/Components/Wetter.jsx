@@ -1,3 +1,4 @@
+import React from "react"; // Add this line
 const Wetter = () => {
   return (
     <div>
