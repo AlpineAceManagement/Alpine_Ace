@@ -1,42 +1,43 @@
-'''import relevant libraries'''
+'''import libraries'''
 import requests
-import csv
+import psycopg2
+import json
 import time
 
+# Database credentials
+db_config = {
+    'host': 'localhost',
+    'database': 'AlpineACE',
+    'user': 'postgres',
+    'password': 'TeamLH44'
+}
 
-'''define API-access'''
-def get_station_data(station_code):
-    url= f"https://measurement-api.slf.ch/public/api/imis/station/{station_code}/measurements"
-    res = requests.get(url)
-    
-    if res.status_code == 200:
-        '''Parse the Json response'''
-        data =res.json()
-        '''Extract relevant info'''
-        hs = data[2]
-        md = data[1]
-        return hs,md
-    else: 
-        print(f"Error:Unable to retrieve data from SLF API (status code {res.status_code}) ")
-        return None
+def fetch_and_store_measurements(station_code):
+    api_url = f"https://measurement-api.slf.ch/public/api/imis/station/{station_code}/measurements"
 
-'''Write the data to a csv-file'''
-def write_to_csv(data):
-    with open("snowstation.csv", "a", newline="") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(data)
+    response = requests.get(api_url)
+    response.raise_for_status()
 
+    data = response.json()
+    # Extract the newest measurement
+    newest_measurement = data[46]  # Zero-based indexing
 
-'''main loop of program - extractin information every 0.5h'''
-def main():
-    station_code="ROT3"
-    
+    with psycopg2.connect(**db_config) as conn:
+        with conn.cursor() as cursor:
+            sql = """
+                INSERT INTO schneehoehe (station_code, sh_zeit, sh_hoehe)
+                VALUES (%s, %s, %s)
+            """
+            values = (
+                newest_measurement['station_code'], 
+                newest_measurement['measure_date'], 
+                newest_measurement['HS'],
+            )
+            cursor.execute(sql, values)
+
+if __name__ == '__main__':
+    station_code = "ROT3"    
+
     while True:
-        data = get_station_data(station_code)
-        
-        if data:
-            write_to_csv(data)
-        time.sleep(30*60)
-if __name__ == "__main__":
-    main()
-
+        fetch_and_store_measurements(station_code) 
+        time.sleep(60 * 60)  # Sleep for 30 minutes 
