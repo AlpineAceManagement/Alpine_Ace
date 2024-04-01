@@ -2,16 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
-import {
-  MapContainer,
-  WMSTileLayer,
-  TileLayer,
-  Marker,
-  Popup,
-} from "react-leaflet";
+import { MapContainer, WMSTileLayer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 import "../App.css";
-import markerIcon from "./Karte_Symbole/map-marker-512.webp";
 
 const customIcon = L.icon({
   iconUrl: require("./Karte_Symbole/map-marker-512.webp"),
@@ -86,22 +79,37 @@ const Karte = () => {
             <MapContainer
               ref={mapRef}
               style={{ borderRadius: "3vh", width: "45vh", height: "50vh" }}
-              center={[46.72756, 6.55735]}
+              center={[46.72756, 9.55735]}
               zoom={12}
               scrollWheelZoom={true}
             >
-              <TileLayer
+              {/* <TileLayer
                 transparent={true}
                 url="https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe-winter/default/current/3857/{z}/{x}/{y}.jpeg"
-              />
+              /> */}
 
               <WMSTileLayer
-                layers="testuebung:Pisten"
-                url="http://localhost:8080/geoserver/testuebung/wms"
+                layers="Alpine_Ace:restaurant"
+                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
                 format="image/png"
                 transparent={true}
                 tileSize={512}
               />
+              {/* <WMSTileLayer
+                layers="Alpine_Ace:anlagen"
+                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
+                format="image/png"
+                transparent={true}
+                tileSize={512}
+              /> */}
+
+              {/* <WMSTileLayer
+                layers="Alpine_Ace:pisten"
+                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
+                format="image/png"
+                transparent={true}
+                tileSize={512}
+              /> */}
               {position && (
                 <Marker position={position} icon={customIcon}></Marker>
               )}
