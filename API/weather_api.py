@@ -1,3 +1,4 @@
+'''import relevant libraries'''
 import openmeteo_requests
 import requests_cache
 import pandas as pd
@@ -9,6 +10,12 @@ import psycopg2
 import datetime
 from datetime import timezone
 import numpy as np
+import logging
+
+# Configure logging
+logging.basicConfig(filename="weather_data_updates.log",
+                    level=logging.INFO,
+                    format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Setup the Open-Meteo API client with cache and retry on error
 cache_session = requests_cache.CachedSession('.cache', expire_after = 15*60)
@@ -83,12 +90,6 @@ def save_current_weather():
     current_wind_direction_description = convert_wind_direction(current_wind_direction_10m)
 
     current_time = current_time = datetime.datetime.fromtimestamp(current.Time(), tz=timezone.utc)
-    print(current_time)
-
-
-  
-
-
     current_data ={
         "md_stationsname": current_time,
         "md_timestamp": current_time,
@@ -100,54 +101,46 @@ def save_current_weather():
         "md_windrichtung": current_wind_direction_description
     }
     
-    # Connect to the database
+    try:
+        # Connect to the database
 
-    conn = psycopg2.connect(
-        dbname= "AlpineACE",
-        user= "postgres",
-        password= "TeamLH44",
-        host= "localhost",
-        port="5432"
-    )
-
-    # Create a cursor object
-    cur = conn.cursor()
-
-    # Insert the current weather data into the table
-    cur.execute(
-        "Insert INTO messdaten (md_stationsname, md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung)VALUES(%s,%s, %s, %s, %s, %s, %s,%s)",
-        (
-            current_data["md_stationsname"],
-            current_data["md_timestamp"],
-            current_data["md_temperatur"],
-            current_data["md_niederschlag"],
-            current_data["md_wetter"],
-            current_data["md_druck"],
-            current_data["md_windgeschwindigkeit"],
-            current_data["md_windrichtung"]
+        conn = psycopg2.connect(
+            dbname= "AlpineACE",    # DB Name
+            user= "postgres",       # Username
+            password= "TeamLH44",   # Password
+            host= "localhost",      # Host adress
+            port="5432"             # Port number
         )
-    )
-    # Commit the changes and close the
-    conn.commit()
 
-    cur.close()
-    conn.close()
+        # Create a cursor object
+        cur = conn.cursor()
 
+        # Insert the current weather data into the table
+        cur.execute(
+            "Insert INTO messdaten (md_stationsname, md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung)VALUES(%s,%s, %s, %s, %s, %s, %s,%s)",
+            (
+                current_data["md_stationsname"],
+                current_data["md_timestamp"],
+                current_data["md_temperatur"],
+                current_data["md_niederschlag"],
+                current_data["md_wetter"],
+                current_data["md_druck"],
+                current_data["md_windgeschwindigkeit"],
+                current_data["md_windrichtung"]
+            )
+        )   
+        # Commit the changes and close the
+        conn.commit()
+        cur.close()
+        conn.close()
 
-
-
-
-
-    print("Current weather data saved to database")                    
-    print(f"Current time {current_time}")
-    print(f"Current temperature_2m {current_temperature_2m}")
-    print(f"Current apparent_temperature {current_precipitation}")
-    print(f"Current weather_code {current_weather_code}")
-    print(f"Current cloud_cover {current_surface_pressure}")
-    print(f"Current wind_speed_10m {current_wind_speed_10m}")
-    print(f"Current wind_direction_10m {current_wind_direction_10m}")
+        logging.info("Current weather data saved to database")
+    except psycopg2.Error as e:
+        logging.error(f"Database error while saving current weather: {e}")
 # Call the function to save data
 save_current_weather()
+
+
 # Process hourly data. The order of variables needs to be the same as requested.
 
 def save_hourly_forecast():
@@ -160,10 +153,6 @@ def save_hourly_forecast():
     hourly_surface_pressure = hourly.Variables(5).ValuesAsNumpy()
     hourly_wind_speed_10m = hourly.Variables(6).ValuesAsNumpy()
     hourly_wind_direction_10m = hourly.Variables(7).ValuesAsNumpy()
-    
-
-
-
     hourly_wind_direction_description = convert_wind_direction(np.mean(hourly_wind_direction_10m))
 
     
@@ -186,41 +175,40 @@ def save_hourly_forecast():
     hourly_data["pg_wetter"] = pd.Series(hourly_data["pg_wetter"])
     # Convert the weather code to a string using the weather_code_map
     hourly_data["pg_wetter"] = hourly_data["pg_wetter"].map(weather_codes)
+    try:
+        # Connect to database
+        conn = psycopg2.connect(
+            dbname= "AlpineACE",    #DB Name
+            user= "postgres",       #User name
+            password= "TeamLH44",   #Password
+            host= "localhost",      #Host address
+            port="5432"             #Port number
+        )
 
-    # Connect to database
-    conn = psycopg2.connect(
-        dbname= "AlpineACE",
-        user= "postgres",
-        password= "TeamLH44",
-        host= "localhost",
-        port="5432"
-    )
+        # Create a cursor object
+        cur = conn.cursor()
 
-    # Create a cursor object
-    cur = conn.cursor()
+        # Create a temporary DataFrame for efficient insertion
+        df = pd.DataFrame(hourly_data)
+        df.to_csv('hourly_forecast.csv', mode='w', header=not os.path.exists('hourly_forecast.csv'))
 
-    # Create a temporary DataFrame for efficient insertion
-    df = pd.DataFrame(hourly_data)
-    df.to_csv('hourly_forecast.csv', mode='w', header=not os.path.exists('hourly_forecast.csv'))
+        # Use executemany with tuples for efficiency:
+        tuples_list = [tuple(x) for x in df.to_numpy()]
+        # Insert the hourly forecast data into the table
+        cur.executemany(
+            "INSERT INTO prognose (pg_datum,pg_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_niederschlag, pg_niederschlagswahrscheinlichkeit, pg_druck,  pg_temperatur,pg_cloud_cover ) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            tuples_list
+        )
 
-    # Use executemany with tuples for efficiency:
-    tuples_list = [tuple(x) for x in df.to_numpy()]
-    print (tuples_list)
-    # Insert the hourly forecast data into the table
-    cur.executemany(
-        "INSERT INTO prognose (pg_datum,pg_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_niederschlag, pg_niederschlagswahrscheinlichkeit, pg_druck,  pg_temperatur,pg_cloud_cover ) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        tuples_list
-    )
+        # Commit the transaction
+        conn.commit()
 
-    # Commit the transaction
-    conn.commit()
-
-    # Close the cursor and the connection
-    cur.close()
-    conn.close()
-
-    print("Hourly forecast data saved to database.")
-
+        # Close the cursor and the connection
+        cur.close()
+        conn.close()
+        logging.info("Hourly forecast data saved to database.")
+    except psycopg2.Error as e:
+        logging.error(f"Database error while saving hourly forecast: {e}")
 save_hourly_forecast()
 
 # Schedule updates every 15 minutes
