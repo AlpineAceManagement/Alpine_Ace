@@ -10,7 +10,7 @@ db_config = {
     'host': 'localhost', #Hostname der DB
     'database': 'AlpineACE', #Name der DB
     'user': 'postgres', #Username für die Verbindung zur DB
-    'password': 'TeamLH44'  #Passwort für den Usernamen
+    'password': ''  #Passwort für den Usernamen
 }
 
 # Configure logging

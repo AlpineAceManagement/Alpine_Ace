@@ -115,6 +115,8 @@ def save_current_weather():
         # Create a cursor object
         cur = conn.cursor()
 
+        
+
         # Insert the current weather data into the table
         cur.execute(
             "Insert INTO messdaten (md_stationsname, md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung)VALUES(%s,%s, %s, %s, %s, %s, %s,%s)",
@@ -137,9 +139,6 @@ def save_current_weather():
         logging.info("Current weather data saved to database")
     except psycopg2.Error as e:
         logging.error(f"Database error while saving current weather: {e}")
-# Call the function to save data
-save_current_weather()
-
 
 # Process hourly data. The order of variables needs to be the same as requested.
 
@@ -188,6 +187,9 @@ def save_hourly_forecast():
         # Create a cursor object
         cur = conn.cursor()
 
+        # Clear existing data from the table
+        cur.execute("TRUNCATE TABLE prognose")
+
         # Create a temporary DataFrame for efficient insertion
         df = pd.DataFrame(hourly_data)
         df.to_csv('hourly_forecast.csv', mode='w', header=not os.path.exists('hourly_forecast.csv'))
@@ -209,7 +211,16 @@ def save_hourly_forecast():
         logging.info("Hourly forecast data saved to database.")
     except psycopg2.Error as e:
         logging.error(f"Database error while saving hourly forecast: {e}")
-save_hourly_forecast()
+
+def fetch_and_save_data():
+    try:
+        global response
+        response = openmeteo.weather_api(url, params=params)
+
+        save_current_weather()
+        save_hourly_forecast()
+    except requests_cache.exeptions.RequestException as e:
+        logging.error(f"OpenMeteo API request error: {e}")
 
 # Schedule updates every 15 minutes
 schedule.every(15).minutes.do(save_current_weather)
