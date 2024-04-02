@@ -69,7 +69,7 @@ const Restaurant = () => {
             display="flex"
             flexWrap="wrap"
             justifyContent="center"
-            alignItems="center"
+            alignItems="right"
             gap={2} // Abstand zwischen Boxen
           >
             {restaurantData.map(
@@ -79,7 +79,7 @@ const Restaurant = () => {
                 <Box key={restaurant.restaurant_id} className="restaurant-box">
                   <img
                     className="foto_restaurant"
-                    src={require(`../Restaurant_data/${restaurant.r_dateiname_foto}`)} // Pfad zum Ordner mit allen Bilder
+                    src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Pfad zum Ordner mit allen Bilder
                     alt={restaurant.r_name}
                   />
                   <h3 className="name_restaurant">{restaurant.r_name}</h3>
