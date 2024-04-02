@@ -38,8 +38,6 @@ responses = openmeteo.weather_api(url, params=params)
 response = responses[0]
 print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
 print(f"Elevation {response.Elevation()} m asl")
-print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
-print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
 
 
 weather_codes = {
@@ -64,6 +62,11 @@ weather_codes = {
     80:"regnerisch",
     81:"regnerisch",
     82:"regnerisch",
+    85:"schneereich",
+    86:"schneereich",
+    95:"gewitter",
+    96:"gewitter",
+    99:"gewitter"
     }
 def convert_wind_direction(degrees):
     directions = ["Nord", "Nord-Ost", "Ost", "Sued-Ost", "Sued", "Sued-West", "West", "Nord-West"]  # Adjust if needed 
@@ -146,6 +149,7 @@ def save_current_weather():
 # Process hourly data. The order of variables needs to be the same as requested.
 
 def save_hourly_forecast():
+
     hourly = response.Hourly()
     hourly_temperature_2m = hourly.Variables(0).ValuesAsNumpy()
     hourly_precipitation_probability = hourly.Variables(1).ValuesAsNumpy()
@@ -157,7 +161,8 @@ def save_hourly_forecast():
     hourly_wind_direction_10m = hourly.Variables(7).ValuesAsNumpy()
     hourly_wind_direction_description = convert_wind_direction(np.mean(hourly_wind_direction_10m))
 
-    
+    station_id = "ROT3"
+
     hourly_data = {"pg_datum": pd.date_range(
 	    start = pd.to_datetime(hourly.Time(), unit = "s", utc = True),
 	    end = pd.to_datetime(hourly.TimeEnd(), unit = "s", utc = True),
@@ -172,11 +177,15 @@ def save_hourly_forecast():
     hourly_data["pg_druck"]= hourly_surface_pressure
     hourly_data["pg_temperatur"] = hourly_temperature_2m
     hourly_data["pg_cloud_cover"] = hourly_cloud_cover
+    hourly_data["station_id"] = station_id
     
     # Convert the weather code to a pandas Series
     hourly_data["pg_wetter"] = pd.Series(hourly_data["pg_wetter"])
     # Convert the weather code to a string using the weather_code_map
     hourly_data["pg_wetter"] = hourly_data["pg_wetter"].map(weather_codes)
+
+    
+
     try:
         # Connect to database
         conn = psycopg2.connect(
@@ -201,7 +210,7 @@ def save_hourly_forecast():
         tuples_list = [tuple(x) for x in df.to_numpy()]
         # Insert the hourly forecast data into the table
         cur.executemany(
-            "INSERT INTO prognose (pg_datum,pg_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_niederschlag, pg_niederschlagswahrscheinlichkeit, pg_druck,  pg_temperatur,pg_cloud_cover ) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            "INSERT INTO prognose (pg_datum,pg_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_niederschlag, pg_niederschlagswahrscheinlichkeit, pg_druck,  pg_temperatur,pg_cloud_cover, station_id ) VALUES ( %s,%s, %s, %s, %s, %s, %s, %s, %s, %s)",
             tuples_list
         )
 
@@ -217,7 +226,7 @@ def save_hourly_forecast():
 
 
 save_current_weather()
-
+save_hourly_forecast()
 
 # Schedule updates every 15 minutes
 schedule.every(15).minutes.do(save_current_weather)

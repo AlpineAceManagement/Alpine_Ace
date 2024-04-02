@@ -35,3 +35,24 @@ LINE 1: ...sert INTO messdaten (md_timestamp, md_temperatur, md_nieders...
 LINE 1: ...g_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_nieders...
                                                              ^
 
+2024-04-02 15:34:54,965 - INFO - Current weather data saved to database
+2024-04-02 15:37:25,753 - INFO - Current weather data saved to database
+2024-04-02 15:37:25,819 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_wetter« hat Typ wetter, aber der Ausdruck hat Typ double precision
+LINE 1: ...ALUES ( '2024-04-03T21:00:00+00:00'::timestamptz, 'NaN'::flo...
+                                                             ^
+HINT:  Sie müssen den Ausdruck umschreiben oder eine Typumwandlung vornehmen.
+
+2024-04-02 15:43:47,748 - INFO - Current weather data saved to database
+2024-04-02 15:45:54,914 - INFO - Current weather data saved to database
+2024-04-02 15:50:30,214 - INFO - Current weather data saved to database
+2024-04-02 15:50:52,062 - INFO - Current weather data saved to database
+2024-04-02 15:50:52,148 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_wetter« hat Typ wetter, aber der Ausdruck hat Typ double precision
+LINE 1: ...VALUES ( '2024-04-03T21:00:00+00:00'::timestamptz,'NaN'::flo...
+                                                             ^
+HINT:  Sie müssen den Ausdruck umschreiben oder eine Typumwandlung vornehmen.
+
+2024-04-02 16:05:52,368 - INFO - Current weather data saved to database
+2024-04-02 16:12:36,950 - INFO - Current weather data saved to database
+2024-04-02 16:20:52,516 - INFO - Current weather data saved to database
+2024-04-02 16:28:45,693 - INFO - Current weather data saved to database
+2024-04-02 16:28:45,768 - INFO - Hourly forecast data saved to database.
