@@ -1,0 +1,12 @@
+2024-04-02 15:10:40,355 - ERROR - Database error for station ROT3: column "station_code" of relation "schneehoehe" does not exist
+LINE 2:                     INSERT INTO schneehoehe (station_code, s...
+                                                     ^
+
+2024-04-02 15:10:40,893 - ERROR - Database error for station CMA2: column "station_code" of relation "schneehoehe" does not exist
+LINE 2:                     INSERT INTO schneehoehe (station_code, s...
+                                                     ^
+
+2024-04-02 15:10:41,621 - ERROR - Database error for station GOS3: column "station_code" of relation "schneehoehe" does not exist
+LINE 2:                     INSERT INTO schneehoehe (station_code, s...
+                                                     ^
+
