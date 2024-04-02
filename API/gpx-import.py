@@ -7,7 +7,8 @@ def import_gpx_to_postgres(gpx_file_path, db_config):
     """
     Imports GPX data into a PostgreSQL database with PostGIS extension.
 
-    Args:
+    Args:pip install psycopg2
+
         gpx_file_path (str): Path to the GPX file.
         db_config (dict): Dictionary containing database connection details:
                         - host
