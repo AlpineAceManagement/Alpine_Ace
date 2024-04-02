@@ -91,7 +91,6 @@ def save_current_weather():
 
     current_time = current_time = datetime.datetime.fromtimestamp(current.Time(), tz=timezone.utc)
     current_data ={
-        "md_stationsname": current_time,
         "md_timestamp": current_time,
         "md_temperatur": current_temperature_2m,
         "md_niederschlag": current_precipitation,
@@ -100,6 +99,8 @@ def save_current_weather():
         "md_windgeschwindigkeit": current_wind_speed_10m,
         "md_windrichtung": current_wind_direction_description
     }
+
+    station_id= "ROT3"
     
     try:
         # Connect to the database
@@ -119,16 +120,17 @@ def save_current_weather():
 
         # Insert the current weather data into the table
         cur.execute(
-            "Insert INTO messdaten (md_stationsname, md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung)VALUES(%s,%s, %s, %s, %s, %s, %s,%s)",
+            "Insert INTO messdaten (md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung, station_id)VALUES(%s, %s, %s, %s, %s, %s,%s,%s)",
             (
-                current_data["md_stationsname"],
                 current_data["md_timestamp"],
                 current_data["md_temperatur"],
                 current_data["md_niederschlag"],
                 current_data["md_wetter"],
                 current_data["md_druck"],
                 current_data["md_windgeschwindigkeit"],
-                current_data["md_windrichtung"]
+                current_data["md_windrichtung"],
+                station_id
+
             )
         )   
         # Commit the changes and close the
@@ -139,6 +141,7 @@ def save_current_weather():
         logging.info("Current weather data saved to database")
     except psycopg2.Error as e:
         logging.error(f"Database error while saving current weather: {e}")
+
 
 # Process hourly data. The order of variables needs to be the same as requested.
 
@@ -212,15 +215,9 @@ def save_hourly_forecast():
     except psycopg2.Error as e:
         logging.error(f"Database error while saving hourly forecast: {e}")
 
-def fetch_and_save_data():
-    try:
-        global response
-        response = openmeteo.weather_api(url, params=params)
 
-        save_current_weather()
-        save_hourly_forecast()
-    except requests_cache.exeptions.RequestException as e:
-        logging.error(f"OpenMeteo API request error: {e}")
+save_current_weather()
+
 
 # Schedule updates every 15 minutes
 schedule.every(15).minutes.do(save_current_weather)

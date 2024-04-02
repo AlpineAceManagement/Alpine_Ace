@@ -3,3 +3,35 @@
 2024-04-02 10:35:27,002 - INFO - Current weather data saved to database
 2024-04-02 11:17:28,182 - INFO - Current weather data saved to database
 2024-04-02 11:17:28,254 - INFO - Hourly forecast data saved to database.
+2024-04-02 15:23:08,890 - ERROR - Database error while saving current weather: FEHLER:  Spalte »md_niederschlag« von Relation »messdaten« existiert nicht
+LINE 1: ...sert INTO messdaten (md_timestamp, md_temperatur, md_nieders...
+                                                             ^
+
+2024-04-02 15:23:08,956 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_niederschlag« von Relation »prognose« existiert nicht
+LINE 1: ...g_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_nieders...
+                                                             ^
+
+2024-04-02 15:23:20,550 - ERROR - Database error while saving current weather: FEHLER:  Spalte »md_niederschlag« von Relation »messdaten« existiert nicht
+LINE 1: ...sert INTO messdaten (md_timestamp, md_temperatur, md_nieders...
+                                                             ^
+
+2024-04-02 15:23:20,615 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_niederschlag« von Relation »prognose« existiert nicht
+LINE 1: ...g_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_nieders...
+                                                             ^
+
+2024-04-02 15:24:43,505 - ERROR - Database error while saving current weather: FEHLER:  Spalte »md_niederschlag« von Relation »messdaten« existiert nicht
+LINE 1: ...sert INTO messdaten (md_timestamp, md_temperatur, md_nieders...
+                                                             ^
+
+2024-04-02 15:24:43,571 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_niederschlag« von Relation »prognose« existiert nicht
+LINE 1: ...g_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_nieders...
+                                                             ^
+
+2024-04-02 15:26:36,593 - ERROR - Database error while saving current weather: FEHLER:  Spalte »md_niederschlag« von Relation »messdaten« existiert nicht
+LINE 1: ...sert INTO messdaten (md_timestamp, md_temperatur, md_nieders...
+                                                             ^
+
+2024-04-02 15:26:36,658 - ERROR - Database error while saving hourly forecast: FEHLER:  Spalte »pg_niederschlag« von Relation »prognose« existiert nicht
+LINE 1: ...g_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_nieders...
+                                                             ^
+

@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS Messdaten(
 	MD_Wetter WETTER NOT NULL,
 	MD_Windgeschwindigkeit FLOAT,
 	MD_Windrichtung RICHTUNG,
-	MD_Niederschlage FLOAT,
+	MD_Niederschlag FLOAT,
 	MD_Druck FLOAT NOT NULL,
 	MD_Temperatur FLOAT NOT NULL,
 	Station_ID VARCHAR(4) REFERENCES Station(Station_ID)
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS Prognose(
 	PG_Wetter WETTER NOT NULL,
 	PG_Windgeschwindigkeit FLOAT,
 	PG_Windrichtung RICHTUNG,
-	PG_Niederschlage FLOAT,
+	PG_Niederschlag FLOAT,
 	PG_Niederschlagswahrscheinlichkeit FLOAT,
 	PG_Druck FLOAT NOT NULL,
 	PG_Temperatur FLOAT NOT NULL,
