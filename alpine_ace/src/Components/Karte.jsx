@@ -55,9 +55,9 @@ const Karte = () => {
         <h1>Karte</h1>
         <Box
           sx={{
-            width: "45vh",
+            width: "90vw",
             height: "50vh",
-            borderRadius: "3vh",
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",
@@ -78,38 +78,47 @@ const Karte = () => {
             />
             <MapContainer
               ref={mapRef}
-              style={{ borderRadius: "3vh", width: "45vh", height: "50vh" }}
+              style={{ borderRadius: "3vw", width: "90vw", height: "50vh" }}
               center={[46.72756, 9.55735]}
               zoom={12}
               scrollWheelZoom={true}
             >
-              {/* <TileLayer
+              <TileLayer
                 transparent={true}
                 url="https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe-winter/default/current/3857/{z}/{x}/{y}.jpeg"
+              />
+
+              {/* <WMSTileLayer
+                layers="Alpine_Ace:Restaurant"
+                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
+                format="image/png"
+                transparent={true}
+                tileSize={512}
               /> */}
 
               <WMSTileLayer
-                layers="Alpine_Ace:restaurant"
+                layers="Alpine_Ace:parkplatz"
                 url="http://localhost:8080/geoserver/Alpine_Ace/wms"
                 format="image/png"
                 transparent={true}
                 tileSize={512}
               />
-              {/* <WMSTileLayer
-                layers="Alpine_Ace:anlagen"
-                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
-                format="image/png"
-                transparent={true}
-                tileSize={512}
-              /> */}
 
-              {/* <WMSTileLayer
+              <WMSTileLayer
                 layers="Alpine_Ace:pisten"
                 url="http://localhost:8080/geoserver/Alpine_Ace/wms"
                 format="image/png"
                 transparent={true}
                 tileSize={512}
-              /> */}
+              />
+              <WMSTileLayer
+                layers="Alpine_Ace:anlagen"
+                url="http://localhost:8080/geoserver/Alpine_Ace/wms"
+                format="image/png"
+                transparent={true}
+                tileSize={512}
+              />
+
               {position && (
                 <Marker position={position} icon={customIcon}></Marker>
               )}

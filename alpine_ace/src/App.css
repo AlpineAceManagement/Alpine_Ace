@@ -114,14 +114,12 @@
 
 .foto_restaurant {
   border-radius: 2vh;
-  width: 20vh;
-  height: 10vh;
+  width: 100%;
   align-items: center;
 }
 .name_restaurant {
   text-align: center;
-  font-size: 2vw;
+  font-size: 1rem;
   word-wrap: break-word;
   overflow: hidden;
-  max-width: 80%; /* You can adjust this value as needed */
 }

@@ -54,7 +54,7 @@ const Restaurant = () => {
       >
         <Box
           sx={{
-            width: "45vh",
+            width: "90vw",
             minHeight: "50vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
@@ -76,7 +76,11 @@ const Restaurant = () => {
               (
                 restaurant //Mapen nach Restaurantnamen, key ist id der DB
               ) => (
-                <Box key={restaurant.restaurant_id} className="restaurant-box">
+                <Box
+                  width="40vw"
+                  key={restaurant.restaurant_id}
+                  className="restaurant-box"
+                >
                   <img
                     className="foto_restaurant"
                     src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Pfad zum Ordner mit allen Bilder

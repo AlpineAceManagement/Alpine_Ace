@@ -18,7 +18,9 @@ const pool = new Pool({
 app.get("/api/restaurant", async (req, res) => {
   try {
     const client = await pool.connect();
-    const result = await client.query("SELECT * FROM Restaurant");
+    const result = await client.query(
+      "SELECT * FROM Restaurant ORDER BY r_name;"
+    );
     const data = result.rows;
     client.release();
     res.json(data);

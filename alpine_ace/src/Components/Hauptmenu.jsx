@@ -24,7 +24,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "45vh",
+            width: "90vw",
             height: "50vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
@@ -41,9 +41,9 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "45vh",
+            width: "90vw",
             height: "33vh",
-            borderRadius: "3vh",
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             display: "flex",
             flexDirection: "column",
