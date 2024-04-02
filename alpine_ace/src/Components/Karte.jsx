@@ -127,7 +127,7 @@ const Karte = () => {
         </Box>
         <Box
           sx={{
-            width: "45vh",
+            width: "90vw",
             height: "30vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
