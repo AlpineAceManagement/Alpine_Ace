@@ -123,3 +123,12 @@
   word-wrap: break-word;
   overflow: hidden;
 }
+
+.informationen-karte {
+  color: #00112e;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-size: 1rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}

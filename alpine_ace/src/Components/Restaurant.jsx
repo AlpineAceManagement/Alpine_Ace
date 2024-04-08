@@ -32,6 +32,12 @@ const Restaurant = () => {
       });
   }, []);
 
+  // Funktion zum Navigieren zur Karte
+  const navigateToMap = (restaurantId) => {
+    // Hier können Sie die Navigation zur Karte implementieren
+    console.log("Navigating to map with restaurant ID:", restaurantId);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -80,10 +86,12 @@ const Restaurant = () => {
                   width="40vw"
                   key={restaurant.restaurant_id}
                   className="restaurant-box"
+                  // Fügen Sie den Klick-Handler für jedes Restaurant hinzu
+                  onClick={() => navigateToMap(restaurant.restaurant_id)}
                 >
                   <img
                     className="foto_restaurant"
-                    src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Pfad zum Ordner mit allen Bilder
+                    src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Pfad zum Ordner mit allen Bildern
                     alt={restaurant.r_name}
                   />
                   <h3 className="name_restaurant">{restaurant.r_name}</h3>

@@ -133,7 +133,7 @@ const Hauptmenu = () => {
                 </Button>
               </Link>
             </Grid>
-            <Grid item xs={6} className="button-grid-item">
+            {/* <Grid item xs={6} className="button-grid-item">
               <Link to="/Test">
                 <Button
                   className="Hauptmenu-button"
@@ -145,7 +145,7 @@ const Hauptmenu = () => {
                   Test
                 </Button>
               </Link>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </div>
