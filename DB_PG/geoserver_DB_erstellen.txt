@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS Station(
 DO $$
 BEGIN
     BEGIN
-        CREATE TYPE WETTER AS ENUM ('sonnig', 'bewölkt', 'regnerisch', 'windig', 'schneereich');
+        CREATE TYPE WETTER AS ENUM ('sonnig', 'bewölkt', 'regnerisch', 'windig', 'schneereich', 'gewitter');
     EXCEPTION WHEN duplicate_object THEN
         RAISE NOTICE 'Typ WETTER existiert bereits';
     END;
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS Messdaten(
 CREATE TABLE IF NOT EXISTS Schneehoehe(
 	Schneehoehe_ID SERIAL NOT NULL,
 	SH_Zeit TIMESTAMP NOT NULL,
-	SH_Hoehe FLOAT NOT NULL,
+	SH_Hoehe FLOAT ,
 	Station_ID VARCHAR(4) REFERENCES Station(Station_ID)
 	);
 	

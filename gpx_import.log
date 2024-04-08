@@ -1,0 +1,75 @@
+ERROR:root:Error at processing from GPX_files\1.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\10.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\11.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\12.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\13.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\14.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\15.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\2.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\3.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\4.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\5.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\6.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\7.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\8.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\9.gpx: name 'transform' is not defined
+ERROR:root:Error at processing from GPX_files\1.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\10.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\11.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\12.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\13.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\14.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\15.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\2.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\3.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\4.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\5.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\6.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\7.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\8.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\9.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\1.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\10.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\11.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\12.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\13.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\14.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\15.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\2.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\3.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\4.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\5.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\6.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\7.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\8.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\9.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\1.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\10.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\11.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\12.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\13.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\14.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\15.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\2.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\3.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\4.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\5.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\6.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\7.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\8.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\9.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\1.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\10.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\11.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\12.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\13.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\14.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\15.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\2.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\3.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\4.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\5.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\6.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\7.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\8.gpx: 'NoneType' object has no attribute 'text'
+ERROR:root:Error at processing from GPX_files\9.gpx: 'NoneType' object has no attribute 'text'

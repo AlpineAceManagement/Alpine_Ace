@@ -4,13 +4,27 @@ import psycopg2
 import json
 import time
 import logging
+import csv
+
+# Extrac Station from statio_daten.csv
+
+def extract_station(csv_file):
+    station = []
+    with open(csv_file, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            station.append(row[0])
+    return station
+
+csv_file = "DB_PG\station_daten.csv"
+station = extract_station(csv_file)
 
 # Database credentials
 db_config = {
     'host': 'localhost', #Hostname der DB
     'database': 'AlpineACE', #Name der DB
     'user': 'postgres', #Username für die Verbindung zur DB
-    'password': ''  #Passwort für den Usernamen
+    'password': 'TeamLH44'  #Passwort für den Usernamen
 }
 
 # Configure logging
@@ -34,13 +48,13 @@ def fetch_and_store_measurement(station_code):
         with psycopg2.connect(**db_config) as conn:
             with conn.cursor() as cursor:
                 sql = """
-                    INSERT INTO schneehoehe (station_code, sh_zeit, sh_hoehe)
+                    INSERT INTO schneehoehe (sh_zeit, sh_hoehe, station_id)
                     VALUES (%s, %s, %s)
                 """
                 values = (
-                    last_measurement['station_code'], 
                     last_measurement['measure_date'], 
-                    last_measurement['HS']
+                    last_measurement['HS'], 
+                    last_measurement['station_code']
                 )
                 cursor.execute(sql, values)
         logging.info(f"Measurement fetched and stored for station: {station_code}")
@@ -49,7 +63,8 @@ def fetch_and_store_measurement(station_code):
     except psycopg2.Error as e:
         logging.error(f"Database error for station {station_code}: {e}")
 if __name__ == '__main__':
-    station_codes = ["ROT3", "CMA2", "GOS3"] 
+    
+    station_codes = station 
      
 
     while True:
