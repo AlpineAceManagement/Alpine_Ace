@@ -115,7 +115,7 @@ conn = psycopg2.connect(
     port=5433,  # Portnummer
     database="geoserver",  # Name der Datenbank
     user="postgres",  # Benutzername
-    password=""  # Passwort
+    password="jNtd2C13ka9oaPpRy1jP"  # Passwort
 )
 
 # Cursor erstellen

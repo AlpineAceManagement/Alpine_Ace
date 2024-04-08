@@ -133,6 +133,19 @@ const Hauptmenu = () => {
                 </Button>
               </Link>
             </Grid>
+            <Grid item xs={6} className="button-grid-item">
+              <Link to="/Test">
+                <Button
+                  className="Hauptmenu-button"
+                  variant="contained"
+                  color="p_red"
+                  fullWidth
+                  sx={{ fontSize: 20 }}
+                >
+                  Test
+                </Button>
+              </Link>
+            </Grid>
           </Grid>
         </Box>
       </div>

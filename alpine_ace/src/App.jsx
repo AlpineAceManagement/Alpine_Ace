@@ -9,7 +9,7 @@ import Statistiken from "./Components/Statistiken";
 import Navi from "./Components/Navi";
 import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
-import test from "./Components/test";
+import Test from "./Components/test";
 
 function App() {
   return (
@@ -83,7 +83,7 @@ function App() {
             element={
               <>
                 <Kopfzeile />
-                <test />
+                <Test />
               </>
             }
           />
