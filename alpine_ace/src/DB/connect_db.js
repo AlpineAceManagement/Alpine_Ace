@@ -33,6 +33,23 @@ app.get("/api/restaurant", async (req, res) => {
   }
 });
 
+// Route um Skidaten Daten zu beziehen
+app.get("/api/skidaten", async (req, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT * FROM Skidaten ORDER BY skidaten_id;"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  } catch (error) {
+    console.error("Error executing query", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
 // Starten den Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
