@@ -1,7 +1,7 @@
 const express = require("express");
 const { Pool } = require("pg"); // Importieren Sie Pool hier
 const cors = require("cors");
-require ("dotenv").config(); // Importieren Umgebungsvariablen
+require ('dotenv').config(); // Importieren Umgebungsvariablen
 
 
 const app = express();
