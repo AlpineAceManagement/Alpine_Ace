@@ -101,13 +101,13 @@ const Karte = () => {
         const colorAttribute = feature.get("p_farbe");
 
         // Definiere die Standardfarbe für den Fall, dass das Attribut nicht definiert ist
-        let color = "red"; // Standardfarbe
+        let color = "#E40513"; // Default color: red
 
         // Überprüfe, ob das Farbattribut definiert ist und weise entsprechende Farbe zu
         if (colorAttribute === "Blau") {
-          color = "blue";
+          color = "#0077BA";
         } else if (colorAttribute === "Schwarz") {
-          color = "black";
+          color = "#000000";
         }
         // Rückgabe des Stils mit dynamischer Farbe basierend auf dem Attribut
         return new Style({
