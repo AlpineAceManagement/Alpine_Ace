@@ -17,11 +17,12 @@ def entfernung_3d(lat1_m, lon1_m, ele1, lat2_m, lon2_m, ele2):
     return sqrt(dx**2 + dy**2 + dz**2)
 
 # Laden der GPX-Datei
-baum = ET.parse('Morning_Alpine_Ski.gpx')
+path = 'GPX_files/15'
+baum = ET.parse(path+'.gpx')
 wurzel = baum.getroot()
 
 # Öffnen einer CSV-Datei zum Schreiben der Ergebnisse
-with open('gpx_data.csv', 'w', newline='') as csvfile:
+with open(path+'.csv', 'w', newline='') as csvfile:
     feldnamen = ['Entfernung [m]', 'Höhenunterschied [m]', 'Zeit [s]', 'Geschwindigkeit [m/s]', 'Geschwindigkeit [km/h]']
     schreiber = csv.DictWriter(csvfile, fieldnames=feldnamen)
     schreiber.writeheader()
