@@ -1,17 +1,20 @@
 const express = require("express");
 const { Pool } = require("pg"); // Importieren Sie Pool hier
 const cors = require("cors");
+require ("dotenv").config(); // Importieren Umgebungsvariablen
+
+
 const app = express();
 
 app.use(cors());
 
 // Zugriffsdaten zum GeoServer
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "geoserver",
-  password: "jNtd2C13ka9oaPpRy1jP",
-  port: 5433, // Port auf PC nicht Standart (5433) WICHTIG auf Server ändern
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 });
 
 // Route um Restaurant Daten zu beziehen

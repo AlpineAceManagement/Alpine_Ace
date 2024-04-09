@@ -5,6 +5,7 @@ import json
 import time
 import logging
 import csv
+import config
 
 # Extrac Station from statio_daten.csv
 
@@ -19,16 +20,7 @@ def extract_station(csv_file):
 csv_file = "DB_PG\station_daten.csv"
 station = extract_station(csv_file)
 
-# Database credentials
-db_config = {
-    'host': 'localhost', #Hostname der DB
-    'database': 'AlpineACE', #Name der DB
-    'user': 'postgres', #Username für die Verbindung zur DB
-    'password': 'TeamLH44'  #Passwort für den Usernamen
-}
-
 # Configure logging
-
 logging.basicConfig(filename="snow_measuremnts.log",
                     level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s")
@@ -45,7 +37,7 @@ def fetch_and_store_measurement(station_code):
         # Extract the last measurement
         last_measurement = data[item -1]  # Zero-based indexing
 
-        with psycopg2.connect(**db_config) as conn:
+        with psycopg2.connect(**config.db_config) as conn:
             with conn.cursor() as cursor:
                 sql = """
                     INSERT INTO schneehoehe (sh_zeit, sh_hoehe, station_id)

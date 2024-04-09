@@ -12,6 +12,7 @@ from datetime import timezone
 import numpy as np
 import logging
 import config
+import json
 
 # Configure logging
 logging.basicConfig(filename="weather_data_updates.log",
@@ -22,6 +23,10 @@ logging.basicConfig(filename="weather_data_updates.log",
 cache_session = requests_cache.CachedSession('.cache', expire_after = 15*60)
 retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
 openmeteo = openmeteo_requests.Client(session = retry_session)
+
+# Load staion data from JSON
+with open('API\stations_coord_abk.json') as f:
+    station_data = json.load(f)
 
 # Make sure all required weather variables are listed here
 # The order of variables in hourly or daily is important to assign them correctly below
@@ -79,7 +84,9 @@ def convert_wind_direction(degrees):
 
 
 
-def save_current_weather():
+
+def save_current_weather(station_code):
+    
     # Current values. The order of variables needs to be the same as requested.
     current = response.Current()
     current_temperature_2m = current.Variables(0).Value()
@@ -104,48 +111,45 @@ def save_current_weather():
         "md_windrichtung": current_wind_direction_description
     }
 
-    station_id= "ROT3"
+    # Build API parameters dynamically based on station data
+    station = next((item for item in station_data if item["code"] == station_code), None)
+    if station:
+        params["latitude"] = station["lat"]
+        params["longitude"] = station["lon"]
+
+        response = openmeteo.weather_api(url, params=params)
     
-    try:
+        try:
         # Connect to the database
-
-        # conn = psycopg2.connect(
-        #     dbname= "AlpineACE",    # DB Name
-        #     user= "postgres",       # Username
-        #     password= "TeamLH44",   # Password
-        #     host= "localhost",      # Host adress
-        #     port="5432"             # Port number
-        # )
-        conn = psycopg2.connect(**config.db_config)
+            conn = psycopg2.connect(**config.db_config)
         # Create a cursor object
-        cur = conn.cursor()
-
-        
+            cur = conn.cursor()
 
         # Insert the current weather data into the table
-        cur.execute(
-            "Insert INTO messdaten (md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung, station_id)VALUES(%s, %s, %s, %s, %s, %s,%s,%s)",
-            (
-                current_data["md_timestamp"],
-                current_data["md_temperatur"],
-                current_data["md_niederschlag"],
-                current_data["md_wetter"],
-                current_data["md_druck"],
-                current_data["md_windgeschwindigkeit"],
-                current_data["md_windrichtung"],
-                station_id
+            cur.execute(
+                "Insert INTO messdaten (md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung, station_id)VALUES(%s, %s, %s, %s, %s, %s,%s,%s)",
+                (
+                    current_data["md_timestamp"],
+                    current_data["md_temperatur"],
+                    current_data["md_niederschlag"],
+                    current_data["md_wetter"],
+                    current_data["md_druck"],
+                    current_data["md_windgeschwindigkeit"],
+                    current_data["md_windrichtung"],
+                    station
 
-            )
-        )   
+                )
+            )   
         # Commit the changes and close the
-        conn.commit()
-        cur.close()
-        conn.close()
+            conn.commit()
+            cur.close()
+            conn.close()
 
-        logging.info("Current weather data saved to database")
-    except psycopg2.Error as e:
-        logging.error(f"Database error while saving current weather: {e}")
-
+            logging.info("Current weather data saved to database")
+        except psycopg2.Error as e:
+            logging.error(f"Database error while saving current weather: {e}")
+    else:
+        logging.error(f"Station not found: {station_code}")
 
 # Process hourly data. The order of variables needs to be the same as requested.
 
@@ -219,9 +223,12 @@ def save_hourly_forecast():
     except psycopg2.Error as e:
         logging.error(f"Database error while saving hourly forecast: {e}")
 
-
-save_current_weather()
+def update_weather_data():
+    for station_code in [item['code'] for item in station_data]:
+        save_current_weather(station_code)
 save_hourly_forecast()
+
+update_weather_data() 
 
 # Schedule updates every 15 minutes
 schedule.every(15).minutes.do(save_current_weather)

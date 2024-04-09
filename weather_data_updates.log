@@ -56,3 +56,12 @@ HINT:  Sie müssen den Ausdruck umschreiben oder eine Typumwandlung vornehmen.
 2024-04-02 16:20:52,516 - INFO - Current weather data saved to database
 2024-04-02 16:28:45,693 - INFO - Current weather data saved to database
 2024-04-02 16:28:45,768 - INFO - Hourly forecast data saved to database.
+2024-04-09 11:48:02,667 - INFO - Current weather data saved to database
+2024-04-09 11:48:02,761 - INFO - Hourly forecast data saved to database.
+2024-04-09 13:12:18,753 - INFO - Current weather data saved to database
+2024-04-09 13:12:18,838 - INFO - Hourly forecast data saved to database.
+2024-04-09 13:27:19,020 - INFO - Current weather data saved to database
+2024-04-09 13:42:19,174 - INFO - Current weather data saved to database
+2024-04-09 14:00:44,628 - INFO - Current weather data saved to database
+2024-04-09 14:28:07,495 - INFO - Current weather data saved to database
+2024-04-09 14:35:50,755 - INFO - Hourly forecast data saved to database.
