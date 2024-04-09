@@ -86,39 +86,46 @@ def convert_wind_direction(degrees):
 
 
 def save_current_weather(station_code):
-    
-    # Current values. The order of variables needs to be the same as requested.
-    current = response.Current()
-    current_temperature_2m = current.Variables(0).Value()
-    current_precipitation = current.Variables(1).Value()
-    current_weather_code = current.Variables(2).Value()
-    current_surface_pressure = current.Variables(3).Value()
-    current_wind_speed_10m = current.Variables(4).Value()
-    current_wind_direction_10m = current.Variables(5).Value()
-
-  
-    current_weather_description = weather_codes.get(current_weather_code, "unknown")
-    current_wind_direction_description = convert_wind_direction(current_wind_direction_10m)
-
-    current_time = current_time = datetime.datetime.fromtimestamp(current.Time(), tz=timezone.utc)
-    current_data ={
-        "md_timestamp": current_time,
-        "md_temperatur": current_temperature_2m,
-        "md_niederschlag": current_precipitation,
-        "md_wetter": current_weather_description,
-        "md_druck": current_surface_pressure,
-        "md_windgeschwindigkeit": current_wind_speed_10m,
-        "md_windrichtung": current_wind_direction_description
-    }
 
     # Build API parameters dynamically based on station data
     station = next((item for item in station_data if item["code"] == station_code), None)
+    
     if station:
         params["latitude"] = station["lat"]
         params["longitude"] = station["lon"]
 
         response = openmeteo.weather_api(url, params=params)
-    
+        
+        for response in responses:
+
+            
+            # Current values. The order of variables needs to be the same as requested.
+            current = response.Current()
+            current_temperature_2m = current.Variables(0).Value()
+            current_precipitation = current.Variables(1).Value()
+            current_weather_code = current.Variables(2).Value()
+            current_surface_pressure = current.Variables(3).Value()
+            current_wind_speed_10m = current.Variables(4).Value()
+            current_wind_direction_10m = current.Variables(5).Value()
+
+  
+            current_weather_description = weather_codes.get(current_weather_code, "unknown")
+            current_wind_direction_description = convert_wind_direction(current_wind_direction_10m)
+
+            current_time = current_time = datetime.datetime.fromtimestamp(current.Time(), tz=timezone.utc)
+            current_data ={
+                "md_timestamp": current_time,
+                "md_temperatur": current_temperature_2m,
+                "md_niederschlag": current_precipitation,
+                "md_wetter": current_weather_description,
+                "md_druck": current_surface_pressure,
+                "md_windgeschwindigkeit": current_wind_speed_10m,
+                "md_windrichtung": current_wind_direction_description
+            }
+
+        print (current_data)
+       
+
         try:
         # Connect to the database
             conn = psycopg2.connect(**config.db_config)

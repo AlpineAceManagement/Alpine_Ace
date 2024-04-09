@@ -3,6 +3,7 @@ import csv
 from datetime import datetime
 from math import sqrt, cos, pi
 import psycopg2 # pip install psycopg2 oder pip install psycopg2-binary
+import config    
 
 # Namensraum
 ns = {'gpx': 'http://www.topografix.com/GPX/1/1'}
@@ -110,13 +111,7 @@ print("Durchschnittsgeschwindigkeit: {:.2f} km/h".format(gesamtgeschwindigkeit_k
 print("Maximale Geschwindigkeit: {:.2f} km/h".format(max_geschwindigkeit))
 
 # Verbindung zur PostgreSQL-Datenbank herstellen
-conn = psycopg2.connect(
-    host="localhost",  # Hostname oder IP-Adresse des PostgreSQL-Servers
-    port=5433,  # Portnummer
-    database="geoserver",  # Name der Datenbank
-    user="postgres",  # Benutzername
-    password="jNtd2C13ka9oaPpRy1jP"  # Passwort
-)
+conn = psycopg2.connect(**config.db_config)
 
 # Cursor erstellen
 cur = conn.cursor()
