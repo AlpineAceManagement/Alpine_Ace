@@ -1,0 +1,19 @@
+-- Enable pgRouting extension
+CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE EXTENSION IF NOT EXISTS pgrouting;
+
+-- Drop the table if it already exists
+DROP TABLE IF EXISTS pisten_routing CASCADE;
+
+-- Create the table to store ski trails
+CREATE TABLE pisten_routing (
+    id INTEGER PRIMARY KEY,
+    source INTEGER,
+    target INTEGER,
+    cost FLOAT,
+    reverse_cost FLOAT,
+    geom GEOMETRY(LineString, 2056) 
+);
+
+-- Create a spatial index on the geometry column
+CREATE INDEX idx_pisten_routing_geom ON pisten_routing USING GIST (geom);
