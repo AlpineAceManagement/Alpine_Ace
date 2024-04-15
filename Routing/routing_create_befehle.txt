@@ -2,6 +2,9 @@
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS pgrouting;
 
+ogr2ogr -f "PostgreSQL" PG:"dbname=mydatabase user=myuser password=mypassword" open_streer_map.geojson -nln target_table -lco GEOMETRY_NAME=geom -lco FID=ID -nlt PROMOTE_TO_MULTI -append
+
+
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS pisten_routing CASCADE;
 
@@ -17,3 +20,12 @@ CREATE TABLE pisten_routing (
 
 -- Create a spatial index on the geometry column
 CREATE INDEX idx_pisten_routing_geom ON pisten_routing USING GIST (geom);
+
+
+------------------------------------------------------------------------------------
+
+
+CREATE TABLE nodes AS
+SELECT DISTINCT ST_Intersection(l1.geom, l2.geom) AS geom
+FROM your_lines_table l1, your_lines_table l2
+WHERE ST_Intersects(l1.geom, l2.geom) AND l1.id < l2.id;

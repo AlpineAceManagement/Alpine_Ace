@@ -1,0 +1,5 @@
+http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:2648338;y:1137974;&outputformat=application/json
+
+http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:262;target:288;&outputformat=application/json
+9758
+9060

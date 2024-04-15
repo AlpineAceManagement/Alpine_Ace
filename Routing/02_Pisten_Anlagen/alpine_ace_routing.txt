@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS a_a_routing_noded CASCADE;
+DROP TABLE IF EXISTS a_a_routing_noded_vertices_pgr CASCADE;
+SELECT pgr_nodeNetwork ('a_a_routing',0.1);
+SELECT pgr_createTopology ('a_a_routing_noded',0.1);
+SELECT pgr_nodeNetwork ('a_a_routing',0.1);
+SELECT pgr_createTopology ('a_a_routing_noded',0.1);
+ALTER TABLE a_a_routing_noded
+ADD COLUMN routing_einweg BOOLEAN,
+ADD COLUMN Anlage_ID INTEGER,
+ADD COLUMN A_Name VARCHAR(100),
+ADD COLUMN A_Hoehe FLOAT,
+ADD COLUMN A_Status BOOLEAN,
+ADD COLUMN Piste_ID INTEGER,
+ADD COLUMN P_Name VARCHAR(100),
+ADD COLUMN P_Nummer VARCHAR(5),
+ADD COLUMN P_Farbe VARCHAR(20), -- Assuming FARBE is a custom data type
+ADD COLUMN P_Status BOOLEAN,
+ADD COLUMN Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID);
+UPDATE a_a_routing_noded AS new 
+SET 
+    routing_einweg = old.routing_einweg,
+    the_geom = old.the_geom,
+    Anlage_ID = old.Anlage_ID,
+    A_Name = old.A_Name,
+    A_Hoehe = old.A_Hoehe,
+    A_Status = old.A_Status,
+    Piste_ID = old.Piste_ID,
+    P_Name = old.P_Name,
+    P_Nummer = old.P_Nummer,
+    P_Farbe = old.P_Farbe,
+    P_Status = old.P_Status,
+    Skigebiet_ID = old.Skigebiet_ID
+FROM 
+    a_a_routing AS old 
+WHERE 
+    new.id = old.id;
+
+ALTER TABLE a_a_routing_noded ADD distance FLOAT;
+UPDATE a_a_routing_noded 
+SET distance = ST_Length(ST_Transform(the_geom, 2056)) / 1000;

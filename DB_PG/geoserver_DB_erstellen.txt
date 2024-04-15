@@ -43,10 +43,11 @@ BEGIN
 END $$;
 CREATE TABLE IF NOT EXISTS Pisten(
 	Piste_ID INTEGER PRIMARY KEY,  -- wechseln zu Interger
-	P_Name VARCHAR(50),
+	P_Name VARCHAR(100),
 	P_Nummer VARCHAR(5),
 	P_Farbe FARBE,
 	P_Status BOOL,
+	P_einweg BOOL,
 	P_Geometrie GEOMETRY(LINESTRING, 2056) NOT NULL,
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
 	);
@@ -66,6 +67,7 @@ CREATE TABLE IF NOT EXISTS Anlagen(
 	A_Name VARCHAR(100),
 	A_Hoehe FLOAT NOT NULL,
 	A_Status BOOL,
+	a_einweg BOOL,
 	A_Geometrie GEOMETRY(LINESTRING, 2056) NOT NULL,
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
 	);

@@ -1,5 +1,6 @@
 import React from "react"; // Add this line
 const Navi = () => {
+  const mapRef = useRef(null); // Reference to the map container
   return (
     <div>
       <h1>Navi</h1>

@@ -1,3 +1,6 @@
 
 .DS_Store
 node_modules
+alpine_ace/node_modules
+alpine_ace/src/DB/config.env
+API/config.py
