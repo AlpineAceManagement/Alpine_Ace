@@ -1,6 +1,9 @@
 
 .DS_Store
 node_modules
+<<<<<<< HEAD
 alpine_ace/node_modules
+=======
+>>>>>>> 38ac42fc30b1f3765187f1819301082982073f4f
 alpine_ace/src/DB/config.env
 API/config.py

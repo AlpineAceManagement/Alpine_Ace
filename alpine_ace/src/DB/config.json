@@ -1,0 +1,9 @@
+{
+    "database": {
+      "user": "postgres",
+      "host": "localhost",
+      "database": "geoserver",
+      "password": "Mj5ty2ga8",
+      "port": 5433
+    }
+  }
