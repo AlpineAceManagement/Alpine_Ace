@@ -1,7 +1,8 @@
 const express = require("express");
 const { Pool } = require("pg"); // Importieren Sie Pool hier
 const cors = require("cors");
-require ('dotenv').config(); // Importieren Umgebungsvariablen
+const dotenv = require('dotenv'); // Importieren dotenv
+dotenv.config(); // Importieren Umgebungsvariablen
 
 
 const app = express();
@@ -10,11 +11,11 @@ app.use(cors());
 
 // Zugriffsdaten zum GeoServer
 const pool = new Pool({
-  user: process.env.PGUSER,
-  host: process.env.PGHOST,
-  database: process.env.PGDATABASE,
-  password: process.env.PGPASSWORD,
-  port: process.env.PGPORT,
+  user: "postgres",
+  host: "locahost",
+  database: "AlpineAce",
+  password: "TeamLH44",
+  port: 5432,
 });
 
 // Route um Restaurant Daten zu beziehen
@@ -49,6 +50,53 @@ app.get("/api/skidaten", async (req, res) => {
   }
 });
 
+
+// Route um Wetter Daten zu beziehen
+
+app.get("/api/prognose", async(reg, res) =>{
+  try{
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT * FROM prognose ORDER BY prognose_id;"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  }catch(error){
+    console.error("Error executing query", error);
+    res.status(500).json({error: "Internal server error"});
+  }
+})
+
+app.get("/api/schneehoehe", async(reg,res) =>{
+  try{
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT * FROM Schneehoehe ORDER BY schneehoehe_id;"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  }catch(error){
+    console.error("Error executing query", error);
+    res.status(500).json({error: "Internal server error"});
+  }
+})
+
+app.get("/api/messdaten", async(reg,res) =>{
+  try{
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT * FROM messdaten ORDER BY schneehoehe_id;"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  }catch(error){
+    console.error("Error executing query", error);
+    res.status(500).json({error: "Internal server error"});
+  }
+})
 
 // Starten den Server
 const PORT = process.env.PORT || 5000;
