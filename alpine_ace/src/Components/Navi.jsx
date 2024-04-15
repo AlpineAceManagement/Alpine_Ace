@@ -1,4 +1,4 @@
-import React from "react"; // Add this line
+import React, { useEffect, useRef, useState } from "react"; // Add this line
 const Navi = () => {
   const mapRef = useRef(null); // Reference to the map container
   return (
