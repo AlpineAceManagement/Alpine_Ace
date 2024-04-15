@@ -18,6 +18,15 @@ const pool = new Pool({
   port: 5432,
 });
 
+// ---------Théo---------
+// const pool = new Pool({
+//   user: 'postgres',
+//   host: 'localhost',
+//   database: 'geoserver',
+//   password: 'Mj5ty2ga8',
+//   port: 5433,
+// })
+
 // Route um Restaurant Daten zu beziehen
 app.get("/api/restaurant", async (req, res) => {
   try {
