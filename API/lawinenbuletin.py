@@ -36,5 +36,24 @@ else:
 
 response_bulletin = requests.get(api_bulletins)
 if response_bulletin.status_code == 200:
-    data_bulletin = response_bulletin.json()
-    bulletins = data_bulletin["bulletins"]
+    data = response_bulletin.json()
+    # Extract bulletins data
+bulletins = data['bulletins']
+
+# Process each bulletin
+for bulletin in bulletins:
+    regions = bulletin['regions']
+    danger_ratings = bulletin['dangerRatings']
+
+    # Only proceed if there are regions in this bulletin
+    if regions:
+        first_region = regions[0]  # Get the first region
+        print(f"\nRegion: {first_region}")
+
+        for rating in danger_ratings:
+            main_value = rating['mainValue']
+            subdivision = rating['customData'].get('CH', {}).get('subdivision')
+
+            print(f"  - Danger Rating: {main_value}")
+            if subdivision:
+                print(f"      - Subdivision: {subdivision}")
