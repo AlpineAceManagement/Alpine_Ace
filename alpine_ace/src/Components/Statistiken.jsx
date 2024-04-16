@@ -5,15 +5,14 @@ import theme from "./theme";
 import "../App.css";
 
 const Skidaten = () => {
-  //------------------------------------------------------------------------
-  // Anziehen der Restaurant API :)
-  //------------------------------------------------------------------------
   const [skiData, setSkiData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sortByDateDesc, setSortByDateDesc] = useState(true);
+  const [seasonFilter, setSeasonFilter] = useState("Alle Saison");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/skidaten") // API Pfad zur DB
+    fetch("http://localhost:5000/api/skidaten")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -22,7 +21,6 @@ const Skidaten = () => {
       })
       .then((data) => {
         console.log("Response from server:", data);
-        // Formater les données avec seulement 2 chiffres après la virgule, sauf pour Dauer
         const formattedData = data.map((item) => ({
           ...item,
           sd_hoehenmeter: parseFloat(item.sd_hoehenmeter).toFixed(2),
@@ -40,7 +38,19 @@ const Skidaten = () => {
       });
   }, []);
 
-  //------------------------------------------------------------------------
+  const toggleSortOrder = () => {
+    setSortByDateDesc((prevSortByDateDesc) => !prevSortByDateDesc);
+  };
+
+  const handleSeasonChange = (event) => {
+    setSeasonFilter(event.target.value);
+  };
+
+  const seasons = Array.from(new Set(skiData.map((item) => item.sd_saison)));
+  seasons.unshift("Alle Saison");
+
+  const filteredSkiData = skiData.filter((item) => seasonFilter === "Alle Saison" || item.sd_saison === seasonFilter);
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -63,39 +73,91 @@ const Skidaten = () => {
             overflowY: "auto",
           }}
         >
-          <h1 style={{ textAlign: "center" }}>Statistiken</h1>
-          {skiData.map((item) => (
-            <Box
-              key={item.Skidaten_ID}
-              sx={{
-                padding: "10px",
-                border: "1px solid #",
-                borderRadius: "16px", // Ajout de coins plus arrondis
-                marginBottom: "10px",
-                marginLeft: "10px", // Ajout de la marge à gauche
-                marginRight: "10px", // Ajout de la marge à droite
-                bgcolor: "#00112e",
-              }}
-            >
-              <span style={{ color: "white"}}>Skitag</span>
-              <span style={{color: "#ff6155" }}> {item.skidaten_id}</span><span style={{ color: "white"}}>:</span>
-              <br />
-              <span style={{ color: "white"}}>Höhenmeter:</span>
-              <span style={{ marginLeft: 91 ,color: "#ff6155" }}> {item.sd_hoehenmeter}</span><span style={{ color: "white"}}> m</span>
-              <br />
-              <span style={{ color: "white"}}>Distanz:</span>
-              <span style={{ marginLeft: 129 ,color: "#ff6155" }}> {item.sd_distanz}</span><span style={{ color: "white"}}> km</span>
-              <br />
-              <span style={{ color: "white"}}>Dauer:</span>
-              <span style={{ marginLeft: 141 ,color: "#ff6155" }}> {item.sd_dauer}</span><span style={{ color: "white"}}> Std</span>
-              <br />
-              <span style={{ color: "white"}}>Geschwindigkeit:</span>
-              <span style={{ marginLeft: 60 ,color: "#ff6155" }}> {item.sd_geschwindigkeit}</span><span style={{ color: "white"}}> km/h</span>
-              <br />
-              <span style={{ color: "white"}}>Max. Geschwindigkeit:</span>
-              <span style={{ marginLeft: 20 ,color: "#ff6155" }}> {item.sd_maxgeschwindigkeit}</span><span style={{ color: "white"}}> km/h</span>
-            </Box>
-          ))}
+          <h1 style={{ textAlign: "center", marginTop: "10px" }}>Statistiken</h1>
+          
+          <Box sx={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
+            <div style={{ position: "relative" }}>
+              <select 
+                value={seasonFilter} 
+                onChange={handleSeasonChange} 
+                style={{ 
+                  backgroundColor: "#ff6155", 
+                  color: "white", 
+                  padding: "8px", 
+                  border: "None", 
+                  borderRadius: "4px" 
+                }}
+              >
+                {seasons.map((season, index) => (
+                  <option key={index} value={season}>
+                    {season}
+                  </option>
+                ))}
+              </select>
+              <button 
+                onClick={toggleSortOrder} 
+                className="app-button" 
+                style={{ 
+                  backgroundColor: "#ff6155", 
+                  color: "white", 
+                  padding: "8px", 
+                  border: "None", 
+                  borderRadius: "4px",
+                  marginLeft: "10px" 
+                }}
+              >
+                {sortByDateDesc ? "Neu -> Alt" : "Alt -> Neu"}
+              </button>
+            </div>
+          </Box>
+
+          {filteredSkiData
+            .slice()
+            .sort((a, b) => {
+              return sortByDateDesc ? new Date(b.sd_date) - new Date(a.sd_date) : new Date(a.sd_date) - new Date(b.sd_date);
+            })
+            .map((item) => (
+              <Box
+                key={item.Skidaten_ID}
+                sx={{
+                  padding: "10px",
+                  border: "1px solid #",
+                  borderRadius: "16px",
+                  marginBottom: "10px",
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  bgcolor: "#00112e",
+                }}
+              >
+                <span style={{ color: "white" }}>Saison: </span>
+                <span style={{ marginLeft: 135, color: "#ff6155" }}>{item.sd_saison}</span>
+                <br />
+                <span style={{ color: "white" }}>Datum: </span>
+                <span style={{ marginLeft: 136, color: "#ff6155" }}>
+                  {item.sd_date.split("T")[0].split("-").reverse().join("/")}
+                </span>
+                <br />
+                <span style={{ color: "white" }}>Höhenmeter: </span>
+                <span style={{ marginLeft: 91, color: "#ff6155" }}>{item.sd_hoehenmeter}</span>
+                <span style={{ color: "white" }}> m</span>
+                <br />
+                <span style={{ color: "white" }}>Distanz: </span>
+                <span style={{ marginLeft: 129, color: "#ff6155" }}>{item.sd_distanz}</span>
+                <span style={{ color: "white" }}> km</span>
+                <br />
+                <span style={{ color: "white" }}>Dauer: </span>
+                <span style={{ marginLeft: 141, color: "#ff6155" }}>{item.sd_dauer}</span>
+                <span style={{ color: "white" }}> Std</span>
+                <br />
+                <span style={{ color: "white" }}>Geschwindigkeit: </span>
+                <span style={{ marginLeft: 60, color: "#ff6155" }}>{item.sd_geschwindigkeit}</span>
+                <span style={{ color: "white" }}> km/h</span>
+                <br />
+                <span style={{ color: "white" }}>Max. Geschwindigkeit: </span>
+                <span style={{ marginLeft: 20, color: "#ff6155" }}>{item.sd_maxgeschwindigkeit}</span>
+                <span style={{ color: "white" }}> km/h</span>
+              </Box>
+            ))}
         </Box>
       </div>
     </ThemeProvider>
