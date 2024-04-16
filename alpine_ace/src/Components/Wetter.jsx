@@ -50,6 +50,11 @@ const Wetter = () => {
           color: "#282c34",
         }}
       >
+
+{restaurantData.map(
+              (
+                restaurant //Mapen nach Restaurantnamen, key ist id der DB
+              ) => (
         <Box
           sx={{
             width: "90vw",
@@ -62,13 +67,16 @@ const Wetter = () => {
         >
           <h1 style={{ textAlign: "center" }}>Wetter</h1>
           <div key={weathertData.prognose_id}>
-          <p>Windrichtung: {weathertData.pg.windrichtung}</p>
+            <h3>{weathertData.prognose_id}</h3>
+          
 
 
           </div>
           
          
         </Box>
+                    )
+                  )}
       </div>
     </ThemeProvider>
   );

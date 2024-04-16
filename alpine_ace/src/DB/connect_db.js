@@ -12,8 +12,8 @@ app.use(cors());
 // Zugriffsdaten zum GeoServer
 const pool = new Pool({
   user: "postgres",
-  host: "locahost",
-  database: "AlpineAce",
+  host: "localhost",
+  database: "AlpineACE",
   password: "TeamLH44",
   port: 5432,
 });
@@ -66,7 +66,7 @@ app.get("/api/prognose", async(reg, res) =>{
   try{
     const client = await pool.connect();
     const result = await client.query(
-      "SELECT * FROM prognose ORDER BY prognose_id;"
+      "SELECT prognose_id FROM prognose ORDER BY prognose_id;"
     );
     const data = result.rows;
     client.release();
