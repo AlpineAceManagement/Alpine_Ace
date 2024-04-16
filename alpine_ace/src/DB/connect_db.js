@@ -18,7 +18,7 @@ const pool = new Pool({
   port: 5432,
 });
 
-// ---------Théo---------
+// // ---------Théo---------
 // const pool = new Pool({
 //   user: 'postgres',
 //   host: 'localhost',
