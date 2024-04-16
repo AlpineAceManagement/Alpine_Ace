@@ -52,11 +52,15 @@ def store_geometries(region):
         cursor = conn.cursor()
         # Convert geometry dictionary to GeoJSON string
         geometry_json = json.dumps(region["geometry"])
+        region_id = region["region_id"]
+        
+
+        
 
         cursor.execute(
-            '''INSERT INTO BULLETINS (B_GEOMETRIE)
-                VALUES (ST_GeomFromGeoJSON(%s))''',
-                (geometry_json,)
+            '''INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                VALUES (ST_GeomFromGeoJSON(%s),%s)''',
+                (geometry_json, region_id)
         )
 
         conn.commit()
@@ -68,55 +72,52 @@ def store_geometries(region):
             conn.close()
 
 regions = get_regions()
-print(regions)
-
 for region in regions:
     store_geometries(region)
 
 
-# # Get bulletins from API Bulletins
+def get_and_process_bulletins():
+    """Fetches bulletin data and updates the BULLETINS table."""
 
-# def get_and_process_bulletins():
-#     """Fetches bulletin data and stores it in the database."""
+    response_bulletin = requests.get(api_bulletins)
+    if response_bulletin.status_code == 200:
+        data = response_bulletin.json()
+        bulletins = data['bulletins']
 
-#     response_bulletin = requests.get(api_bulletins)
-#     if response_bulletin.status_code == 200:
-#         data = response_bulletin.json()
-#         bulletins = data['bulletins']
+        for bulletin in bulletins:
+            regions = bulletin['regions']
+            danger_ratings = bulletin['dangerRatings']
+            bulletin_id = bulletin.get('bulletinID')
 
-#         for bulletin in bulletins:
-#             regions = bulletin['regions']
-#             danger_ratings = bulletin['dangerRatings']
+            if regions and bulletin_id:
+                first_region = regions[0]
+                region_id = first_region['regionID']  # Get region_id
 
-#             if regions:
-#                 first_region = regions[0]
-#                 logging.info(f"Processing bulletin for region: {first_region}")
+                logging.info(f"Processing bulletin {bulletin_id} for region: {first_region}")
 
-#                 for rating in danger_ratings:
-#                     main_value = rating['mainValue']
-#                     subdivision = rating['customData'].get('CH', {}).get('subdivision')
+                for rating in danger_ratings:
+                    main_value = rating['mainValue']
+                    # ... any other fields you want to extract from bulletin ...
 
-#                     print(f" - Danger Rating: {main_value}")
-#                     if subdivision:
-#                         print(f"   - Subdivision: {subdivision}")
+                    try:
+                        with psycopg2.connect(**config.db_config) as conn:
+                            with conn.cursor() as cur:
+                                cur.execute(
+                                    """
+                                    UPDATE BULLETINS
+                                    SET B_Danger = %s 
+                                    WHERE B_REGION_ID = %s  
+                                    """,
+                                    (main_value, region_id,)
+                                )
+                    except (Exception, psycopg2.DatabaseError) as error:
+                        logging.error(f"Error updating data in database: {error}")
 
-#                     try:
-#                         with psycopg2.connect(**config.db_config) as conn:
-#                             with conn.cursor() as cur:
-#                                 cur.execute(
-#                                     """
-#                                     INSERT INTO avalanche_data (B_Danger)
-#                                     VALUES (%s)
-#                                     """,
-#                                     (main_value)
-#                                 )
-#                     except (Exception, psycopg2.DatabaseError) as error:
-#                         logging.error(f"Error inserting data into database: {error}")
-
-#     else:
-#         logging.error(f"Error fetching bulletins: {response_bulletin.status_code}")
+    else:
+        logging.error(f"Error fetching bulletins: {response_bulletin.status_code}")
 
 
+get_and_process_bulletins()
 
 # def perform_api_request_and_update():
 #     """Encapsulates the entire API request and update process."""
