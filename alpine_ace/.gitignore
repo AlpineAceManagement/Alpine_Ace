@@ -4,6 +4,7 @@
 alpine_ace/node_modules
 /.pnp
 .pnp.js
+API/config.py
 
 # testing
 /coverage

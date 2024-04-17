@@ -2,8 +2,8 @@
 #Database credentials
 db_config = {
     'host': 'localhost', #Hostname der DB
-    'port': '5433', #Port der DB
-    'database': 'geoserver', #Name der DB
+    'port': '5432', #Port der DB
+    'database': 'AlpineACE', #Name der DB
     'user': 'postgres', #Username für die Verbindung zur DB
-    'password': 'Mj5ty2ga8'  #Passwort für den Usernamen
+    'password': 'TeamLH44'  #Passwort für den Usernamen
 }
