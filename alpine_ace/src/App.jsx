@@ -10,6 +10,7 @@ import Navi from "./Components/Navi";
 import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
 import Test from "./Components/test";
+import KarteAufbau from "./Components/KarteAufbau";
 
 function App() {
   return (
