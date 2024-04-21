@@ -5,6 +5,7 @@ node_modules
 src/DB/config.env
 /.pnp
 .pnp.js
+API/config.py
 
 # testing
 /coverage

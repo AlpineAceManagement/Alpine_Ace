@@ -73,7 +73,7 @@ app.get("/api/prognose", async (reg, res) => {
   try {
     const client = await pool.connect();
     const result = await client.query(
-      "SELECT * FROM prognose ORDER BY prognose_id;"
+      "SELECT prognose_id FROM prognose ORDER BY prognose_id;"
     );
     const data = result.rows;
     client.release();

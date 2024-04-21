@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS Pisten_Endpunkt CASCADE;
 DROP TABLE IF EXISTS Pisten_Startpunkt CASCADE;
 DROP TABLE IF EXISTS Pisten CASCADE;
 DROP TABLE IF EXISTS Skigebiet CASCADE;
+DROP TABLE IF EXISTS Bulletins CASCADE;
 --Postgis Extension für postgis_db erstellen
 DO $$ 
 BEGIN 
@@ -162,6 +163,13 @@ CREATE TABLE IF NOT EXISTS Prognose(
 	Station_ID VARCHAR(4) REFERENCES Station(Station_ID)
 	);
 	
+CREATE TABLE IF NOT EXISTS Bulletins(
+	Bulletin_ID SERIAL PRIMARY KEY,
+	B_Danger VARCHAR(100),
+	B_Regio_ID VARCHAR(50),
+	B_Geometrie GEOMETRY(MULTIPOLYGON, 4326)
+	);
+	
 DO $$
 BEGIN
     BEGIN
@@ -189,7 +197,7 @@ CREATE TABLE IF NOT EXISTS Skidaten(
 	SD_Dauer TIME NOT NULL,
 	SD_Geschwindigkeit FLOAT,
 	SD_MaxGeschwindigkeit FLOAT,
-	SD_Geometrie GEOMETRY(LINESTRING, 2056) NOT NULL,
+	SD_Geometrie 
 	Benutzername VARCHAR(50) REFERENCES Benutzerprofil(Benutzername),
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
 	);
