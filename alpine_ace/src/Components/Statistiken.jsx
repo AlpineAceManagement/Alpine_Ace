@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
+import { Link } from "react-router-dom";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import "../App.css";
 
-const Skidaten = () => {
+const Statistiken = () => {
   const [skiData, setSkiData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,7 +35,7 @@ const Skidaten = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching restaurant data", error);
+        console.error("Error fetching ski data", error);
         setError(error);
         setLoading(false);
       });
@@ -49,7 +52,11 @@ const Skidaten = () => {
   const seasons = Array.from(new Set(skiData.map((item) => item.sd_saison)));
   seasons.unshift("Alle Saison");
 
-  const filteredSkiData = skiData.filter((item) => seasonFilter === "Alle Saison" || item.sd_saison === seasonFilter);
+  const filteredSkiData = skiData.filter(
+    (item) => seasonFilter === "Alle Saison" || item.sd_saison === seasonFilter
+  );
+
+  const sortedSeasons = seasons.sort().reverse();
 
   return (
     <ThemeProvider theme={theme}>
@@ -71,39 +78,54 @@ const Skidaten = () => {
             bgcolor: "p_white.main",
             marginBottom: "20px",
             overflowY: "auto",
+            position: "relative", // Ajout de la position relative
           }}
         >
+          {/* Bouton pour naviguer vers la page Graph */}
+          <Link to="/Graph" style={{ textDecoration: "none", position: "absolute", top: "10px", right: "10px" }}>
+            <button style={{ backgroundColor: "#ff6155", color: "white", padding: "8px", border: "none", borderRadius: "4px" }}>Graph</button>
+          </Link>
+
           <h1 style={{ textAlign: "center", marginTop: "10px" }}>Statistiken</h1>
           
-          <Box sx={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "10px",
+            }}
+          >
             <div style={{ position: "relative" }}>
-              <select 
-                value={seasonFilter} 
-                onChange={handleSeasonChange} 
-                style={{ 
-                  backgroundColor: "#ff6155", 
-                  color: "white", 
-                  padding: "8px", 
-                  border: "None", 
-                  borderRadius: "4px" 
+            <Select
+                value={seasonFilter}
+                onChange={handleSeasonChange}
+                displayEmpty
+                inputProps={{ 'aria-label': 'Season' }}
+                sx={{
+                  backgroundColor: "#ff6155",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "4px",
+                  fontSize: "12px",
                 }}
               >
-                {seasons.map((season, index) => (
-                  <option key={index} value={season}>
+                {sortedSeasons.map((season, index) => (
+                  <MenuItem key={index} value={season}>
                     {season}
-                  </option>
+                  </MenuItem>
                 ))}
-              </select>
-              <button 
-                onClick={toggleSortOrder} 
-                className="app-button" 
-                style={{ 
-                  backgroundColor: "#ff6155", 
-                  color: "white", 
-                  padding: "8px", 
-                  border: "None", 
+              </Select>
+              <button
+                onClick={toggleSortOrder}
+                className="app-button"
+                style={{
+                  backgroundColor: "#ff6155",
+                  marginLeft: "10px",
+                  color: "white",
+                  padding: "18px 24px", // Taille du bouton similaire à celle du dropdown
+                  border: "none",
                   borderRadius: "4px",
-                  marginLeft: "10px" 
+                  fontSize: "12px", // Taille de la police similaire à celle du dropdown
                 }}
               >
                 {sortByDateDesc ? "Neu -> Alt" : "Alt -> Neu"}
@@ -114,7 +136,9 @@ const Skidaten = () => {
           {filteredSkiData
             .slice()
             .sort((a, b) => {
-              return sortByDateDesc ? new Date(b.sd_date) - new Date(a.sd_date) : new Date(a.sd_date) - new Date(b.sd_date);
+              return sortByDateDesc
+                ? new Date(b.sd_date) - new Date(a.sd_date)
+                : new Date(a.sd_date) - new Date(b.sd_date);
             })
             .map((item) => (
               <Box
@@ -130,7 +154,9 @@ const Skidaten = () => {
                 }}
               >
                 <span style={{ color: "white" }}>Saison: </span>
-                <span style={{ marginLeft: 135, color: "#ff6155" }}>{item.sd_saison}</span>
+                <span style={{ marginLeft: 135, color: "#ff6155" }}>
+                  {item.sd_saison}
+                </span>
                 <br />
                 <span style={{ color: "white" }}>Datum: </span>
                 <span style={{ marginLeft: 136, color: "#ff6155" }}>
@@ -138,23 +164,33 @@ const Skidaten = () => {
                 </span>
                 <br />
                 <span style={{ color: "white" }}>Höhenmeter: </span>
-                <span style={{ marginLeft: 91, color: "#ff6155" }}>{item.sd_hoehenmeter}</span>
+                <span style={{ marginLeft: 91, color: "#ff6155" }}>
+                  {item.sd_hoehenmeter}
+                </span>
                 <span style={{ color: "white" }}> m</span>
                 <br />
                 <span style={{ color: "white" }}>Distanz: </span>
-                <span style={{ marginLeft: 129, color: "#ff6155" }}>{item.sd_distanz}</span>
+                <span style={{ marginLeft: 129, color: "#ff6155" }}>
+                  {item.sd_distanz}
+                </span>
                 <span style={{ color: "white" }}> km</span>
                 <br />
                 <span style={{ color: "white" }}>Dauer: </span>
-                <span style={{ marginLeft: 141, color: "#ff6155" }}>{item.sd_dauer}</span>
+                <span style={{ marginLeft: 141, color: "#ff6155" }}>
+                  {item.sd_dauer}
+                </span>
                 <span style={{ color: "white" }}> Std</span>
                 <br />
                 <span style={{ color: "white" }}>Geschwindigkeit: </span>
-                <span style={{ marginLeft: 60, color: "#ff6155" }}>{item.sd_geschwindigkeit}</span>
+                <span style={{ marginLeft: 60, color: "#ff6155" }}>
+                  {item.sd_geschwindigkeit}
+                </span>
                 <span style={{ color: "white" }}> km/h</span>
                 <br />
                 <span style={{ color: "white" }}>Max. Geschwindigkeit: </span>
-                <span style={{ marginLeft: 20, color: "#ff6155" }}>{item.sd_maxgeschwindigkeit}</span>
+                <span style={{ marginLeft: 20, color: "#ff6155" }}>
+                  {item.sd_maxgeschwindigkeit}
+                </span>
                 <span style={{ color: "white" }}> km/h</span>
               </Box>
             ))}
@@ -164,4 +200,4 @@ const Skidaten = () => {
   );
 };
 
-export default Skidaten;
+export default Statistiken;

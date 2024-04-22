@@ -11,6 +11,7 @@ import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
 import Test from "./Components/test";
 import KarteAufbau from "./Components/KarteAufbau";
+import Graph from "./Components/Graph";
 
 function App() {
   return (
@@ -75,6 +76,16 @@ function App() {
               <>
                 <Kopfzeile />
                 <Restaurant />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/Graph"
+            element={
+              <>
+                <Kopfzeile />
+                <Graph />
               </>
             }
           />

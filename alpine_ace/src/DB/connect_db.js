@@ -114,6 +114,21 @@ app.get("/api/messdaten", async (reg, res) => {
   }
 });
 
+app.get("/api/saison_total", async (reg, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query(
+        "SELECT sd_saison, SUM(sd_hoehenmeter) AS total_hoehenmeter, SUM(sd_distanz) AS total_distanz, AVG(sd_geschwindigkeit) AS average_geschwindigkeit, MAX(sd_maxgeschwindigkeit) AS max_geschwindigkeit FROM  skidaten GROUP BY  sd_saison;"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  } catch (error) {
+    console.error("Error executing query", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 // Starten den Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
