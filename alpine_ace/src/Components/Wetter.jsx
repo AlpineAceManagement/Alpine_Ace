@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import { useState, useEffect } from "react";
 import { withEmotionCache } from "@emotion/react";
+import { vegaSpec } from './vegaConfig.js';
 
 
 
@@ -22,139 +23,68 @@ const Wetter = () => {
   const [weatherChartData, setWeatherChartData] = useState(null);
   const [prognoseerror, setPrognoseError] = useState(null);
   const [prognoseloading, setPrognoseLoading] = useState(true);
-  const vegaSpec = {
-
-    "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 400,  
-    "height": 200,   
-    "padding": 5,  
   
-    "data": [
-      {
-        "name": "table",
-        "values": [] 
-     
-      }
-    ],
-  
-    "signals": [
-      {
-        "name": "width",
-        "value": 400
-      },
-      {
-        "name": "height",
-        "value": 200
-      }
-    ],
-  
-    "scales": [
-      {
-        "name": "xScale",
-        "type": "time",
-        "range": "width", 
-        "domain": {"data": "table", "field": "pg_datum"}
-      },
-      {
-        "name": "yScale",
-        "type": "linear", 
-        "range": "height", 
-        "domain": {"data": "table", "field": "pg_temperatur"},
-        "nice": true 
-      }
-    ],
-  
-    "axes": [
-      {"orient": "bottom", "scale": "xScale", "title": "Time"},
-      {"orient": "left", "scale": "yScale", "title": "Temperature (°C)"}
-    ],
-  
-    "marks": [
-      {
-        "type": "line",
-        "from": {"data": "table"},
-        "encode": {
-          "enter": {
-            "x": {"scale": "xScale", "field": "pg_datum"},
-            "y": {"scale": "yScale", "field": "pg_temperatur"},
-            "stroke": {"value": "steelblue"},
-            "strokeWidth": {"value": 2}
-          }
-        }
-      }
-    ]
-  };
 
   useEffect(() => {
-    const fetchData = async() =>{
+    const fetchData = async () => {
       setLoading(true);
-      try{
-        const response = await fetch("http://localhost:5000/api/messdaten");
-        if (!response.ok){
+  
+      try {
+        const [response, response2, response3] = await Promise.all([
+          fetch("http://localhost:5000/api/messdaten"),
+          fetch("http://localhost:5000/api/schneehoehe"),
+          fetch("http://localhost:5000/api/prognose")
+        ]);
+  
+        if (!response.ok) { 
           throw new Error("Network response from Messdaten was not ok");
         }
-        const data = await response.json();
-        setWeatherData(data[0]);
-        setLoading(false);
-      } catch (error){
-        console.error("Error fetching weather data", error);
-        setError("Error fetching weatherdata. Please try again.");
-        setLoading(false);
-      }
-      try{
-        const respnse2 = await fetch("http://localhost:5000/api/schneehoehe");
-        if (!respnse2.ok){
+        if (!response2.ok) {
           throw new Error("Network response from Schneehöhe was not ok");
         }
-        const data2 = await respnse2.json();
-        setSnowData(data2[0]);
-        setSnowLoading(false);
-      } catch(snowerror){
-        console.error("Error fetchin snowdata", snowerror);
-        setSnowError("Eroro fetching snowada. Please try again.");
-      }
-      try{
-        const response3 = await fetch("http://localhost:5000/api/prognose");
-        if (!response3.ok){
+        if (!response3.ok) {
           throw new Error("Network response from Prognose was not ok");
         }
-        const data3 = await response3.json();
-        setWeatherChartData(data3);
-        setPrognoseLoading(false);
-      }catch(prognoseerror){
-        console.error("Error fetching prognose", prognoseerror );
-        setPrognoseError("Error fetching prognose. Please try again.");
+  
+        const [data, data2, data3] = await Promise.all([
+          response.json(),
+          response2.json(),
+          response3.json()
+        ]);
+  
+        // Data Transformation (directly after fetching)
+        const transformedChartData = data.map(datapoint => ({
+          pg_datum: datapoint.pg_datum,
+          pg_temperatur: datapoint.pg_temperatur,
+        }));
+  
+        setWeatherData(data[0]);
+        setSnowData(data2[0]);
+        setWeatherChartData(transformedChartData);
+        setLoading(false);  
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // Handle errors appropriately for all data sources
+        setLoading(false);
       }
     };
+  
     fetchData();
-  },[]);
-
-  useEffect(() =>{
-    if (weatherData){
-      const transformedData = weatherData.map(datapoint =>({
-        pg_datum: datapoint.pg_datum,
-        pg_temperatur: datapoint.pg_temperatur,
-      }));
-      setWeatherChartData(transformedData);
-    }
-  }, [weatherData]);
-
-  useEffect(() =>{
-    if (weatherChartData){
-      console.log("Char data:", weatherChartData)
-      vegaSpec.data[0].values = weatherChartData;
-
+  }, []); 
+  
+  // useEffect for rendering the chart
+  useEffect(() => {
+    if (weatherChartData) {  // Ensure data exists before rendering
+        vegaSpec.data[0].values = weatherChartData;
+  
       vegaEmbed("#chart-container", vegaSpec)
         .then(result => console.log("Chart embedded:", result))
         .catch(console.error);
-    } else{
-      console.log("weatherChartData not yet ready");
-    }
-  }, [weatherChartData]);
+    }  
+  }, [weatherChartData]); 
+  
 
- 
-
-
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -223,74 +153,4 @@ const WeatherDataItem = ({label, value}) => (
     <p style={{color:"black"}}>{value}</p>
   </div>
 )
-
-const vegaSpec = {
-
-    "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 400,  
-    "height": 200,   
-    "padding": 5,  
-  
-    "data": [
-      {
-        "name": "table",
-        "values": [] 
-     
-      }
-    ],
-  
-    "signals": [
-      {
-        "name": "width",
-        "value": 400
-      },
-      {
-        "name": "height",
-        "value": 200
-      }
-    ],
-  
-    "scales": [
-      {
-        "name": "xScale",
-        "type": "time",
-        "range": "width", 
-        "domain": {"data": "table", "field": "pg_datum"}
-      },
-      {
-        "name": "yScale",
-        "type": "linear", 
-        "range": "height", 
-        "domain": {"data": "table", "field": "pg_temperatur"},
-        "nice": true 
-      }
-    ],
-  
-    "axes": [
-      {"orient": "bottom", "scale": "xScale", "title": "Time"},
-      {"orient": "left", "scale": "yScale", "title": "Temperature (°C)"}
-    ],
-  
-    "marks": [
-      {
-        "type": "line",
-        "from": {"data": "table"},
-        "encode": {
-          "enter": {
-            "x": {"scale": "xScale", "field": "pg_datum"},
-            "y": {"scale": "yScale", "field": "pg_temperatur"},
-            "stroke": {"value": "steelblue"},
-            "strokeWidth": {"value": 2}
-          }
-        }
-      }
-    ]
-};
-
-  
-
-
-
-
-
 export default Wetter;
