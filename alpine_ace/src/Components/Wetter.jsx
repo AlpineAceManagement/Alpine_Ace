@@ -1,4 +1,4 @@
-import React from "react"; // Add this line
+import React from "react"; 
 import { render } from "react-dom";
 import vegaEmbed from "vega-embed";
 import Box from "@mui/material/Box";
@@ -19,6 +19,71 @@ const Wetter = () => {
   const [snowData, setSnowData] = useState(null);
   const [snowloading, setSnowLoading] = useState(true);
   const [snowerror, setSnowError] = useState(null);
+  const [weatherChartData, setWeatherChartData] = useState(null);
+  const [prognoseerror, setPrognoseError] = useState(null);
+  const [prognoseloading, setPrognoseLoading] = useState(true);
+  const vegaSpec = {
+
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "width": 400,  
+    "height": 200,   
+    "padding": 5,  
+  
+    "data": [
+      {
+        "name": "table",
+        "values": [] 
+     
+      }
+    ],
+  
+    "signals": [
+      {
+        "name": "width",
+        "value": 400
+      },
+      {
+        "name": "height",
+        "value": 200
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "xScale",
+        "type": "time",
+        "range": "width", 
+        "domain": {"data": "table", "field": "pg_datum"}
+      },
+      {
+        "name": "yScale",
+        "type": "linear", 
+        "range": "height", 
+        "domain": {"data": "table", "field": "pg_temperatur"},
+        "nice": true 
+      }
+    ],
+  
+    "axes": [
+      {"orient": "bottom", "scale": "xScale", "title": "Time"},
+      {"orient": "left", "scale": "yScale", "title": "Temperature (°C)"}
+    ],
+  
+    "marks": [
+      {
+        "type": "line",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "x": {"scale": "xScale", "field": "pg_datum"},
+            "y": {"scale": "yScale", "field": "pg_temperatur"},
+            "stroke": {"value": "steelblue"},
+            "strokeWidth": {"value": 2}
+          }
+        }
+      }
+    ]
+  };
 
   useEffect(() => {
     const fetchData = async() =>{
@@ -48,9 +113,44 @@ const Wetter = () => {
         console.error("Error fetchin snowdata", snowerror);
         setSnowError("Eroro fetching snowada. Please try again.");
       }
+      try{
+        const response3 = await fetch("http://localhost:5000/api/prognose");
+        if (!response3.ok){
+          throw new Error("Network response from Prognose was not ok");
+        }
+        const data3 = await response3.json();
+        setWeatherChartData(data3);
+        setPrognoseLoading(false);
+      }catch(prognoseerror){
+        console.error("Error fetching prognose", prognoseerror );
+        setPrognoseError("Error fetching prognose. Please try again.");
+      }
     };
     fetchData();
   },[]);
+
+  useEffect(() =>{
+    if (weatherData){
+      const transformedData = weatherData.map(datapoint =>({
+        pg_datum: datapoint.pg_datum,
+        pg_temperatur: datapoint.pg_temperatur,
+      }));
+      setWeatherChartData(transformedData);
+    }
+  }, [weatherData]);
+
+  useEffect(() =>{
+    if (weatherChartData){
+      console.log("Char data:", weatherChartData)
+      vegaSpec.data[0].values = weatherChartData;
+
+      vegaEmbed("#chart-container", vegaSpec)
+        .then(result => console.log("Chart embedded:", result))
+        .catch(console.error);
+    } else{
+      console.log("weatherChartData not yet ready");
+    }
+  }, [weatherChartData]);
 
  
 
@@ -76,6 +176,7 @@ const Wetter = () => {
             marginBottom: "20px",
           }}
         >
+          <h1 style={{textAlign:"center", color:"#282c34"}}>Wetter</h1>
           {loading && <p>Loading weather data...</p>}
           {snowloading && <p> Loadin snow data...</p>}
           {error && <p>{error}</p>}
@@ -104,16 +205,13 @@ const Wetter = () => {
                 }}>
                 <WeatherDataItem label= "Schneehöhe" value={parseFloat(snowData.sh_hoehe).toFixed(1)} />
             </Box>
-          )}  
-
-
-
-
-
-
-
+          )}
+          <Box sx={{ 
+                marginTop: "20px" // Add some spacing
+              }}>
+            <div id="chart-container"></div> 
+          </Box>
         </Box>
-
       </div>
     </ThemeProvider>
   );
@@ -125,6 +223,73 @@ const WeatherDataItem = ({label, value}) => (
     <p style={{color:"black"}}>{value}</p>
   </div>
 )
+
+const vegaSpec = {
+
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "width": 400,  
+    "height": 200,   
+    "padding": 5,  
+  
+    "data": [
+      {
+        "name": "table",
+        "values": [] 
+     
+      }
+    ],
+  
+    "signals": [
+      {
+        "name": "width",
+        "value": 400
+      },
+      {
+        "name": "height",
+        "value": 200
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "xScale",
+        "type": "time",
+        "range": "width", 
+        "domain": {"data": "table", "field": "pg_datum"}
+      },
+      {
+        "name": "yScale",
+        "type": "linear", 
+        "range": "height", 
+        "domain": {"data": "table", "field": "pg_temperatur"},
+        "nice": true 
+      }
+    ],
+  
+    "axes": [
+      {"orient": "bottom", "scale": "xScale", "title": "Time"},
+      {"orient": "left", "scale": "yScale", "title": "Temperature (°C)"}
+    ],
+  
+    "marks": [
+      {
+        "type": "line",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "x": {"scale": "xScale", "field": "pg_datum"},
+            "y": {"scale": "yScale", "field": "pg_temperatur"},
+            "stroke": {"value": "steelblue"},
+            "strokeWidth": {"value": 2}
+          }
+        }
+      }
+    ]
+};
+
+  
+
+
 
 
 

@@ -69,12 +69,21 @@ app.get("/api/skidaten", async (req, res) => {
 
 // Route um Wetter Daten zu beziehen
 
-app.get("/api/prognose", async (reg, res) => {
+app.get("/api/prognose", async (req, res) => {
   try {
     const client = await pool.connect();
+    const today = new Date();
+
+    const formattedDate = await client.query(
+      "SELECT date_trunc('day', NOW())::date AS today;" 
+    )
+    const actualDate = formattedDate.rows[0].today;
+
     const result = await client.query(
-      "SELECT prognose_id FROM prognose ORDER BY prognose_id;"
+      "SELECT pg_datum, pg_niederschlagswahrscheinlichkeit, pg_temperatur, pg_cloud_cover FROM Prognose WHERE date_trunc('day', pg_datum) = $1 order by pg_datum ;",
+      [actualDate]
     );
+
     const data = result.rows;
     client.release();
     res.json(data);
