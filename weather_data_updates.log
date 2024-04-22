@@ -883,3 +883,5 @@ HINT:  Sie m�ssen den Ausdruck umschreiben oder eine Typumwandlung vornehmen.
 2024-04-09 16:02:37,496 - ERROR - Database error while saving current weather: can't adapt type 'dict'
 2024-04-09 16:02:37,540 - ERROR - Database error while saving current weather: can't adapt type 'dict'
 2024-04-09 16:02:37,592 - ERROR - Database error while saving current weather: can't adapt type 'dict'
+2024-04-22 08:48:42,011 - INFO - Current weather data saved to database
+2024-04-22 08:48:42,247 - INFO - Hourly forecast data saved to database.

@@ -12,9 +12,9 @@ app.use(cors());
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "geoserver",
-  password: "jNtd2C13ka9oaPpRy1jP",
-  port: 5433,
+  database: "AlpineACE",
+  password: "TeamLH44",
+  port: 5432,
 });
 
 // ---------Fabian---------
@@ -88,7 +88,7 @@ app.get("/api/schneehoehe", async (reg, res) => {
   try {
     const client = await pool.connect();
     const result = await client.query(
-      "SELECT * FROM Schneehoehe ORDER BY schneehoehe_id;"
+      "SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"
     );
     const data = result.rows;
     client.release();
@@ -103,7 +103,7 @@ app.get("/api/messdaten", async (reg, res) => {
   try {
     const client = await pool.connect();
     const result = await client.query(
-      "SELECT * FROM messdaten ORDER BY schneehoehe_id;"
+      "SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"
     );
     const data = result.rows;
     client.release();
