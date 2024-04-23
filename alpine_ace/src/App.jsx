@@ -12,6 +12,7 @@ import Restaurant from "./Components/Restaurant";
 import Test from "./Components/test";
 import KarteAufbau from "./Components/KarteAufbau";
 import Graph from "./Components/Graph";
+import Weather from "./Components/Wetter copy";
 
 function App() {
   return (
