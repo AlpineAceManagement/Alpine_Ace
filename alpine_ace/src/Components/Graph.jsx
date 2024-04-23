@@ -14,6 +14,7 @@ const Graph = () => {
   const [selectedSeason, setSelectedSeason] = useState('');
   const [seasons, setSeasons] = useState([]);
   const [seasonTotals, setSeasonTotals] = useState([]);
+  const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/api/skidaten")
@@ -56,8 +57,18 @@ const Graph = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Season totals from server:", data); // Ajoutez ce log
-        setSeasonTotals(data);
+        console.log("Season totals from server:", data);
+        const seasonData = data.map((item) => ({
+          ...item,
+          sd_date: item.sd_saison,
+          sd_hoehenmeter: parseFloat(item.total_hoehenmeter).toFixed(2),
+          sd_distanz: parseFloat(item.total_distanz).toFixed(2),
+          sd_geschwindigkeit: parseFloat(item.average_geschwindigkeit).toFixed(2),
+          sd_maxgeschwindigkeit: parseFloat(item.max_geschwindigkeit).toFixed(2),
+        }));
+        seasonData.sort((a, b) => new Date(b.sd_date) - new Date(a.sd_date));
+        setSeasonTotals(seasonData);
+  
       })
       .catch((error) => {
         console.error("Error fetching season totals", error);
@@ -65,30 +76,25 @@ const Graph = () => {
       });
   }, []);
   
-
+  useEffect(() => {
+    if (selectedSeason === "") {
+      const newData = seasonTotals.map(item => ({
+        ...item,
+        graphType: "Alle Saison"
+      }));
+      setChartData(newData);
+    } else {
+      const filteredData = skiData.filter(item => item.sd_saison === selectedSeason)
+                                   .map(item => ({ ...item, graphType: selectedSeason }));
+      setChartData(filteredData);
+    }
+  }, [selectedSeason, seasonTotals, skiData]);
+  
   const handleSeasonChange = (event) => {
     setSelectedSeason(event.target.value);
   };
-
-  let chartData;
-
-  if (selectedSeason === "Alle Saison") {
-    // Utiliser les données de la saison totale
-    chartData = seasonTotals.map(item => ({
-      ...item,
-      sd_date: item.sd_saison, // Utiliser la saison comme date pour le graphique
-      sd_hoehenmeter: item.total_hoehenmeter, // Adapter les clés de données
-      sd_distanz: item.total_distanz,
-      sd_geschwindigkeit: item.average_geschwindigkeit,
-      sd_maxgeschwindigkeit: item.max_geschwindigkeit,
-      graphType: "Alle Saison", // Ajouter une propriété pour indiquer le type de graphique
-    }));
-  } else {
-    // Filtrer simplement les données par saison spécifique à partir des données skiData
-    chartData = skiData.filter(item => item.sd_saison === selectedSeason)
-                       .map(item => ({ ...item, graphType: selectedSeason }));
-  }
   
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -116,7 +122,7 @@ const Graph = () => {
             <button style={{ backgroundColor: "#ff6155", color: "white", padding: "8px", border: "none", borderRadius: "4px" }}>Stats</button>
           </Link>
 
-          <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Graphs</h1>
+          <h1 style={{ textAlign: "center", marginBottom: "20px", marginTop: "10px" }}>Graphs</h1>
 
           <div style={{ marginBottom: "20px", display: "flex", justifyContent: "center"}}>
             <Select
@@ -145,243 +151,209 @@ const Graph = () => {
 
           <div style={{ marginBottom: "40px" }}>
             <h2 style={{ textAlign: "center" }}>Höhenmeter</h2>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={150}>
               <BarChart
-                data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                data={chartData.sort((a, b) => {
+                  const [dayA, monthA, yearA] = a.sd_date.split('/').map(Number);
+                  const [dayB, monthB, yearB] = b.sd_date.split('/').map(Number);
+                  
+                  if (yearA !== yearB) {
+                    return yearA - yearB;
+                  }
+                  
+                  if (monthA !== monthB) {
+                    return monthA - monthB;
+                  }
+                  
+                  return dayA - dayB;
+                })}
+                margin={{ top: 10, right: 30, left: 20, bottom: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="sd_date" />
-                <YAxis domain={[0, 'auto']}>
+                <XAxis 
+                  dataKey="sd_date"
+                  domain={selectedSeason === "" ? null : ['11-01', '03-31']}
+                  tickFormatter={(tickItem) => {
+                    if (selectedSeason === "") {
+                      return tickItem;
+                    } else {
+                      const [day, month] = tickItem.split('/');
+                      return `${day.padStart(2, '0')}/${month.padStart(2, '0')}`;
+                    }
+                  }} 
+                  angle={selectedSeason === "" ? 0 : -90}
+                  dx={selectedSeason === "" ? 0 : -6}
+                  dy={selectedSeason === "" ? 0 : 20}
+                />
+                <YAxis 
+                  domain={[0, selectedSeason === "" ? 80000 : 8000]}
+                >
                   <Label
-                    value="Höhenmeter [m]"
+                    value="[km]"
                     position="insideLeft"
                     angle={-90}
                     style={{ textAnchor: "middle", fill: "#000" }}
+                    dx={-15}
                   />
                 </YAxis>
-                <Tooltip 
-                content={({ active, payload, label }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div style={{ background: '#fff', border: '1px solid #999', margin: 0, padding: 10 }}>
-                        <p>{label}</p>
-                        {payload.map((item, index) => {
-                          let displayName = '';
-                          let value = item.value;
-                          switch(item.dataKey) {
-                            case 'sd_hoehenmeter':
-                              value += ' m';
-                              break;
-                            case 'sd_distanz':
-                              value += ' km';
-                              break;
-                            case 'sd_geschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            case 'sd_maxgeschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            default:
-                              displayName = item.dataKey;
-                              break;
-                          }
-                          return (
-                            <p key={index}>
-                              {value}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    );
-                  }
-                  return null;
-                }} 
-              />
-                <Bar dataKey="sd_hoehenmeter" fill="#ff6155" />
+                <Bar dataKey="sd_hoehenmeter" fill="#9eff55" barSize={selectedSeason === "" ? 50 : 10}/>
               </BarChart>
             </ResponsiveContainer>
           </div>
-
           <div style={{ marginBottom: "40px" }}>
             <h2 style={{ textAlign: "center" }}>Distanz</h2>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={150}>
               <BarChart
-                data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                data={chartData.sort((a, b) => {
+                  const [dayA, monthA, yearA] = a.sd_date.split('/').map(Number);
+                  const [dayB, monthB, yearB] = b.sd_date.split('/').map(Number);
+
+                  if (yearA !== yearB) {
+                    return yearA - yearB;
+                  }
+
+                  if (monthA !== monthB) {
+                    return monthA - monthB;
+                  }
+
+                  return dayA - dayB;
+                })}
+                margin={{ top: 10, right: 30, left: 20, bottom: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="sd_date" />
-                <YAxis domain={[0, 'auto']}>
+                <XAxis 
+                  dataKey="sd_date"
+                  domain={selectedSeason === "" ? null : ['11-01', '03-31']}
+                  tickFormatter={(tickItem) => {
+                    if (selectedSeason === "") {
+                      return tickItem;
+                    } else {
+                      const [day, month] = tickItem.split('/');
+                      return `${day.padStart(2, '0')}/${month.padStart(2, '0')}`;
+                    }
+                  }} 
+                  angle={selectedSeason === "" ? 0 : -90}
+                  dx={selectedSeason === "" ? 0 : -6}
+                  dy={selectedSeason === "" ? 0 : 20}
+                />
+                <YAxis 
+                  domain={[0, selectedSeason === "" ? 1000 : 100]}
+                >
                   <Label
-                    value="Kilometer [km]"
+                    value="[km]"
                     position="insideLeft"
                     angle={-90}
                     style={{ textAnchor: "middle", fill: "#000" }}
+                    dx={-15}
                   />
                 </YAxis>
-                <Tooltip 
-                content={({ active, payload, label }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div style={{ background: '#fff', border: '1px solid #999', margin: 0, padding: 10 }}>
-                        <p>{label}</p>
-                        {payload.map((item, index) => {
-                          let displayName = '';
-                          let value = item.value;
-                          switch(item.dataKey) {
-                            case 'sd_hoehenmeter':
-                              value += ' m';
-                              break;
-                            case 'sd_distanz':
-                              value += ' km';
-                              break;
-                            case 'sd_geschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            case 'sd_maxgeschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            default:
-                              displayName = item.dataKey;
-                              break;
-                          }
-                          return (
-                            <p key={index}>
-                              {value}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    );
-                  }
-                  return null;
-                }} 
-              />
-                <Bar dataKey="sd_distanz" fill="#ff6155" />
+                <Bar dataKey="sd_distanz" fill="#9eff55" barSize={selectedSeason === "" ? 50 : 10}/>
               </BarChart>
             </ResponsiveContainer>
           </div>
-
           <div style={{ marginBottom: "40px" }}>
             <h2 style={{ textAlign: "center" }}>Mittlere Geschwindigkeit</h2>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={150}>
               <BarChart
-                data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                data={chartData.sort((a, b) => {
+                  const [dayA, monthA, yearA] = a.sd_date.split('/').map(Number);
+                  const [dayB, monthB, yearB] = b.sd_date.split('/').map(Number);
+
+                  if (yearA !== yearB) {
+                    return yearA - yearB;
+                  }
+
+                  if (monthA !== monthB) {
+                    return monthA - monthB;
+                  }
+
+                  return dayA - dayB;
+                })}
+                margin={{ top: 10, right: 30, left: 20, bottom: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="sd_date" />
-                <YAxis domain={[0, 'auto']}>
+                <XAxis 
+                  dataKey="sd_date"
+                  domain={selectedSeason === "" ? null : ['11-01', '03-31']}
+                  tickFormatter={(tickItem) => {
+                    if (selectedSeason === "") {
+                      return tickItem;
+                    } else {
+                      const [day, month] = tickItem.split('/');
+                      return `${day.padStart(2, '0')}/${month.padStart(2, '0')}`;
+                    }
+                  }} 
+                  angle={selectedSeason === "" ? 0 : -90}
+                  dx={selectedSeason === "" ? 0 : -6}
+                  dy={selectedSeason === "" ? 0 : 20}
+                />
+                <YAxis 
+                  domain={[0, 60]}
+                >
                   <Label
-                    value="Geschwindigkeit [km/h]"
+                    value="[km/h]"
+                    position="insideLeft"
+                    angle={-90}
+                    style={{ textAnchor: "middle", fill: "#000"}}
+                    dx={-15}
+                  />
+                </YAxis>
+                <Bar dataKey="sd_geschwindigkeit" fill="#9eff55" barSize={selectedSeason === "" ? 50 : 10}/>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <div style={{ marginBottom: "40px" }}>
+            <h2 style={{ textAlign: "center" }}>Maximale Geschwindigkeit</h2>
+            <ResponsiveContainer width="100%" height={150}>
+              <BarChart
+                data={chartData.sort((a, b) => {
+                  const [dayA, monthA, yearA] = a.sd_date.split('/').map(Number);
+                  const [dayB, monthB, yearB] = b.sd_date.split('/').map(Number);
+
+                  if (yearA !== yearB) {
+                    return yearA - yearB;
+                  }
+
+                  if (monthA !== monthB) {
+                    return monthA - monthB;
+                  }
+
+                  return dayA - dayB;
+                })}
+                margin={{ top: 10, right: 30, left: 20, bottom: 20 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis 
+                  dataKey="sd_date"
+                  domain={selectedSeason === "" ? null : ['11-01', '03-31']}
+                  tickFormatter={(tickItem) => {
+                    if (selectedSeason === "") {
+                      return tickItem;
+                    } else {
+                      const [day, month] = tickItem.split('/');
+                      return `${day.padStart(2, '0')}/${month.padStart(2, '0')}`;
+                    }
+                  }} 
+                  angle={selectedSeason === "" ? 0 : -90}
+                  dx={selectedSeason === "" ? 0 : -6}
+                  dy={selectedSeason === "" ? 0 : 20}
+                />
+                <YAxis 
+                  domain={[0, 120]}
+                >
+                  <Label
+                    value="[km/h]"
                     position="insideLeft"
                     angle={-90}
                     style={{ textAnchor: "middle", fill: "#000" }}
+                    dx={-15}
                   />
                 </YAxis>
-                <Tooltip 
-                content={({ active, payload, label }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div style={{ background: '#fff', border: '1px solid #999', margin: 0, padding: 10 }}>
-                        <p>{label}</p>
-                        {payload.map((item, index) => {
-                          let displayName = '';
-                          let value = item.value;
-                          switch(item.dataKey) {
-                            case 'sd_hoehenmeter':
-                              value += ' m';
-                              break;
-                            case 'sd_distanz':
-                              value += ' km';
-                              break;
-                            case 'sd_geschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            case 'sd_maxgeschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            default:
-                              displayName = item.dataKey;
-                              break;
-                          }
-                          return (
-                            <p key={index}>
-                              {value}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    );
-                  }
-                  return null;
-                }} 
-              />
-                <Bar dataKey="sd_geschwindigkeit" fill="#ff6155" />
+                <Bar dataKey="sd_maxgeschwindigkeit" fill="#9eff55" barSize={selectedSeason === "" ? 50 : 10}/>
               </BarChart>
             </ResponsiveContainer>
           </div>
 
-          <div style={{ marginBottom: "40px" }}>
-            <h2 style={{ textAlign: "center" }}>Maximale Geschwindigkeit</h2>
-            <ResponsiveContainer width="100%" height={400}>
-              <BarChart
-                data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="sd_date" />
-                <YAxis domain={[0, 120]}>
-                  <Label
-                    value="Geschwindigkeit [km/h]"
-                    position="insideLeft"
-                    angle={-90}
-                    style={{ textAnchor: "middle", fill: "#000" }}
-                  />
-                </YAxis>
-                <Tooltip 
-                content={({ active, payload, label }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div style={{ background: '#fff', border: '1px solid #999', margin: 0, padding: 10 }}>
-                        <p>{label}</p>
-                        {payload.map((item, index) => {
-                          let displayName = '';
-                          let value = item.value;
-                          switch(item.dataKey) {
-                            case 'sd_hoehenmeter':
-                              value += ' m';
-                              break;
-                            case 'sd_distanz':
-                              value += ' km';
-                              break;
-                            case 'sd_geschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            case 'sd_maxgeschwindigkeit':
-                              value += ' km/h';
-                              break;
-                            default:
-                              displayName = item.dataKey;
-                              break;
-                          }
-                          return (
-                            <p key={index}>
-                              {value}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    );
-                  }
-                  return null;
-                }} 
-              />
-                <Bar dataKey="sd_maxgeschwindigkeit" fill="#ff6155" />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
 
         </Box>
       </div>

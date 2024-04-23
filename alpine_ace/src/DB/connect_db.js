@@ -9,13 +9,13 @@ const app = express();
 app.use(cors());
 
 // Zugriffsdaten zum GeoServer
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "AlpineACE",
-  password: "TeamLH44",
-  port: 5432,
-});
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost",
+//   database: "AlpineACE",
+//   password: "TeamLH44",
+//   port: 5432,
+// });
 
 // ---------Fabian---------
 // const pool = new Pool({
@@ -27,13 +27,13 @@ const pool = new Pool({
 // });
 
 // ---------Théo---------
-// const pool = new Pool({
-//   user: 'postgres',
-//   host: 'localhost',
-//   database: 'geoserver',
-//   password: 'Mj5ty2ga8',
-//   port: 5433,
-// })
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'geoserver',
+  password: 'Mj5ty2ga8',
+  port: 5433,
+});
 
 // Route um Restaurant Daten zu beziehen
 app.get("/api/restaurant", async (req, res) => {
@@ -129,6 +129,18 @@ app.get("/api/saison_total", async (reg, res) => {
     const result = await client.query(
         "SELECT sd_saison, SUM(sd_hoehenmeter) AS total_hoehenmeter, SUM(sd_distanz) AS total_distanz, AVG(sd_geschwindigkeit) AS average_geschwindigkeit, MAX(sd_maxgeschwindigkeit) AS max_geschwindigkeit FROM  skidaten GROUP BY  sd_saison;"
     );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  } catch (error) {
+    console.error("Error executing query", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+app.get("/api/upload", async (reg, res) => {
+  try {
+    const client = await pool.connect();
     const data = result.rows;
     client.release();
     res.json(data);

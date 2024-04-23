@@ -154,41 +154,41 @@ const Statistiken = () => {
                 }}
               >
                 <span style={{ color: "white" }}>Saison: </span>
-                <span style={{ marginLeft: 135, color: "#ff6155" }}>
+                <span style={{ marginLeft: 135, color: "#9eff55" }}>
                   {item.sd_saison}
                 </span>
                 <br />
                 <span style={{ color: "white" }}>Datum: </span>
-                <span style={{ marginLeft: 136, color: "#ff6155" }}>
+                <span style={{ marginLeft: 136, color: "#9eff55" }}>
                   {item.sd_date.split("T")[0].split("-").reverse().join("/")}
                 </span>
                 <br />
                 <span style={{ color: "white" }}>Höhenmeter: </span>
-                <span style={{ marginLeft: 91, color: "#ff6155" }}>
+                <span style={{ marginLeft: 91, color: "#9eff55" }}>
                   {item.sd_hoehenmeter}
                 </span>
                 <span style={{ color: "white" }}> m</span>
                 <br />
                 <span style={{ color: "white" }}>Distanz: </span>
-                <span style={{ marginLeft: 129, color: "#ff6155" }}>
+                <span style={{ marginLeft: 129, color: "#9eff55" }}>
                   {item.sd_distanz}
                 </span>
                 <span style={{ color: "white" }}> km</span>
                 <br />
                 <span style={{ color: "white" }}>Dauer: </span>
-                <span style={{ marginLeft: 141, color: "#ff6155" }}>
+                <span style={{ marginLeft: 141, color: "#9eff55" }}>
                   {item.sd_dauer}
                 </span>
                 <span style={{ color: "white" }}> Std</span>
                 <br />
                 <span style={{ color: "white" }}>Geschwindigkeit: </span>
-                <span style={{ marginLeft: 60, color: "#ff6155" }}>
+                <span style={{ marginLeft: 60, color: "#9eff55" }}>
                   {item.sd_geschwindigkeit}
                 </span>
                 <span style={{ color: "white" }}> km/h</span>
                 <br />
                 <span style={{ color: "white" }}>Max. Geschwindigkeit: </span>
-                <span style={{ marginLeft: 20, color: "#ff6155" }}>
+                <span style={{ marginLeft: 20, color: "#9eff55" }}>
                   {item.sd_maxgeschwindigkeit}
                 </span>
                 <span style={{ color: "white" }}> km/h</span>
@@ -201,3 +201,4 @@ const Statistiken = () => {
 };
 
 export default Statistiken;
+
