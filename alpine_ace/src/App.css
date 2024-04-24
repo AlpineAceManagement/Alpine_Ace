@@ -132,3 +132,9 @@
   word-wrap: break-word;
   overflow: hidden;
 }
+
+.chart-container {  /* Assuming your Vega chart has a surrounding div with this class */
+  width: 300px;     /* Adjust as needed */
+  height: 200px;    /* Adjust as needed */
+  overflow: hidden; /* Or use 'scroll' if you want a scrollbar */
+}
