@@ -34,7 +34,7 @@ const Navi = () => {
         <h1>Navi</h1>
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "50vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
@@ -46,6 +46,8 @@ const Navi = () => {
           <KarteAufbau
             mapRef={mapRef}
             setSelectedFeature={setSelectedFeature}
+            source={722}
+            target={11135}
           />
           <div
             ref={mapRef}
@@ -64,48 +66,14 @@ const Navi = () => {
           alignItems="flex-start"
           gap={2}
           sx={{
-            width: "90vw",
+            width: "95vw",
             minHeight: "25vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
             position: "relative",
             overflowY: "auto",
           }}
-        >
-          {/* Informationen für ausgewähltes Feature anzeigen */}
-          {selectedFeature && (
-            <div className="informationen-karte">
-              {/* Wenn ein Restaurant ausgewählt ist */}
-              {selectedFeature.r_name && (
-                <>
-                  <h2>{selectedFeature.r_name}</h2>
-                  <p>Öffnungszeiten: {selectedFeature.r_oeffnungszeiten}</p>
-                  <p>Telefon: {selectedFeature.r_telefon}</p>
-                  <p>Email: {selectedFeature.r_email}</p>
-                  <p>Webseite: {selectedFeature.r_webseite}</p>
-                </>
-              )}
-
-              {/* Wenn eine Piste ausgewählt ist */}
-              {selectedFeature.p_name && (
-                <>
-                  <h2>{selectedFeature.p_name}</h2>
-                  <p>Pistennummer: {selectedFeature.p_nummer}</p>
-                  {/* <p>Status: {selectedFeature.p_status}</p> */}
-                </>
-              )}
-
-              {/* Wenn eine Anlage ausgewählt ist */}
-              {selectedFeature.a_name && (
-                <>
-                  <p>Anlagennamen: {selectedFeature.a_name}</p>
-                  <p>Höhendifferenz: {parseInt(selectedFeature.a_hoehe)}m</p>
-                  {/* Füge hier weitere Attribute hinzu, die du anzeigen möchtest */}
-                </>
-              )}
-            </div>
-          )}
-        </Box>
+        ></Box>
       </div>
     </ThemeProvider>
   );

@@ -27,7 +27,7 @@ END $$;
 
 
 CREATE TABLE IF NOT EXISTS Skigebiet (
-    Skigebiet_ID INTEGER PRIMARY KEY,
+    Skigebiet_ID SERIAL PRIMARY KEY,
     SG_Name VARCHAR(100) NOT NULL,
     SG_Flaeche GEOMETRY(MULTIPOLYGON, 2056) --MULTIPOLYGON, braucht es wegen Skigebiet: Andermatt+Disentis+Sedrun, Sulden am Ortler - Solda al Ortles,Cima Piazzi – San Colombano,Monterosa Ski,Le Grand Massif,Villages	
 
@@ -191,7 +191,7 @@ CREATE TABLE IF NOT EXISTS Benutzerprofil(
 	);
 
 CREATE TABLE IF NOT EXISTS Skidaten(
-	Skidaten_ID SERIAL PRIMARY KEY,
+	Skidaten_ID INTEGER PRIMARY KEY,
 	SD_Hoehenmeter FLOAT,
 	SD_Distanz FLOAT,
 	SD_Dauer TIME NOT NULL,

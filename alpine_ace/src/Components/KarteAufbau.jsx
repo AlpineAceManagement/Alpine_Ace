@@ -12,7 +12,7 @@ import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 import LineString from "ol/geom/LineString.js";
 
-const KarteAufbau = ({ mapRef, setSelectedFeature }) => {
+const KarteAufbau = ({ mapRef, setSelectedFeature, source, target }) => {
   const [map, setMap] = useState(null);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const KarteAufbau = ({ mapRef, setSelectedFeature }) => {
     const geoserverWFSPointLayer = "Alpine_Ace:Restaurant";
     const geoserverWFSLineLayer = "Alpine_Ace:pisten";
     const geoserverWFSAnlagenLayer = "Alpine_Ace:anlagen";
+    const geoserverWFSNaviLayer = "Alpine_Ace:a_a_shortest_path";
 
     const pointVectorSource = new VectorSource({
       format: new GeoJSON(),
@@ -53,6 +54,26 @@ const KarteAufbau = ({ mapRef, setSelectedFeature }) => {
       },
     });
 
+    const naviVectorSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        return (
+          "http://localhost:8080/geoserver/wfs?service=WFS&" +
+          "version=1.1.0&request=GetFeature&typename=" +
+          geoserverWFSNaviLayer +
+          "&viewparams=source:" +
+          source +
+          ";target:" +
+          target +
+          "&outputFormat=application/json"
+        );
+      },
+      strategy: bboxStrategy,
+      onError: function (error) {
+        console.error("Error fetching WFS line data:", error);
+      },
+    });
+    console.log("naviVectorSource", naviVectorSource);
     const anlagenVectorSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
@@ -99,6 +120,16 @@ const KarteAufbau = ({ mapRef, setSelectedFeature }) => {
           }),
         });
       },
+    });
+
+    const naviVectorLayer = new VectorLayer({
+      source: naviVectorSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "orange",
+          width: 4,
+        }),
+      }),
     });
 
     const offsetDistance = 20;
@@ -201,17 +232,24 @@ const KarteAufbau = ({ mapRef, setSelectedFeature }) => {
       }),
     });
 
+    swisstopoLayer.setZIndex(0);
+    anlagenVectorLayer.setZIndex(1);
+    pistenVectorLayer.setZIndex(2);
+    naviVectorLayer.setZIndex(3);
+    pointVectorLayer.setZIndex(4);
+
     const newMap = new Map({
       layers: [
         swisstopoLayer,
-        pointVectorLayer,
         pistenVectorLayer,
+        pointVectorLayer,
+        naviVectorLayer,
         anlagenVectorLayer,
       ],
       target: mapRef.current,
       view: new View({
-        center: [2762640.8, 1179359.1],
-        zoom: 12,
+        center: [2762073, 1180429],
+        zoom: 16,
         projection: new Projection({
           code: "EPSG:2056",
           units: "m",

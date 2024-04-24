@@ -16,3 +16,22 @@ CREATE TABLE a_a_routing (
 	P_Status BOOL,
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
 );
+
+DROP TABLE IF EXISTS a_a_anlage_routing CASCADE;
+CREATE TABLE a_a_anlage_routing (
+    id INTEGER PRIMARY KEY,
+    routing_einweg BOOLEAN,
+    source INTEGER,
+    target INTEGER,
+    the_geom GEOMETRY(LineString, 2056) NOT NULL,
+	Anlage_ID INTEGER,
+	A_Name VARCHAR(100),
+	A_Hoehe FLOAT ,
+	A_Status BOOL,
+	Piste_ID INTEGER,
+	P_Name VARCHAR(100),
+	P_Nummer VARCHAR(5),
+	P_Farbe FARBE,
+	P_Status BOOL,
+	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
+);

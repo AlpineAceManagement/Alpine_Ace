@@ -135,7 +135,7 @@ const Karte = () => {
         const originalLineStyle = new Style({
           stroke: new Stroke({
             color: "black", // Choose your desired color for the original line
-            width: 6, // Choose your desired width
+            width: 4, // Choose your desired width
           }),
         });
 
