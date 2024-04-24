@@ -1,217 +1,174 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation hook to access query parameters
-import "ol/ol.css"; // Import OpenLayers CSS
+import React, { useEffect, useState } from "react";
 import Map from "ol/Map";
-import TileLayer from "ol/layer/Tile";
-import TileWMS from "ol/source/TileWMS";
 import View from "ol/View";
-import VectorSource from "ol/source/Vector";
-import GeoJSON from "ol/format/GeoJSON";
-import { bbox as bboxStrategy } from "ol/loadingstrategy";
+import TileLayer from "ol/layer/Tile";
 import VectorLayer from "ol/layer/Vector";
-import { Circle, Fill, Style } from "ol/style";
-import { ThemeProvider } from "@mui/material/styles";
+import VectorSource from "ol/source/Vector";
+import { Style, Icon } from "ol/style";
+import Point from "ol/geom/Point";
+import Feature from "ol/Feature";
+import { Translate } from "ol/interaction";
+import Collection from "ol/Collection";
+import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
-import Box from "@mui/material/Box";
-import theme from "./theme";
 
-const Test = () => {
-  const mapRef = useRef(null); // Reference to the map container
-  const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
-  const location = useLocation(); // Get the current location object
+const MapWithMarkers = () => {
+  const [showMarker1, setShowMarker1] = useState(false);
+  const [showMarker2, setShowMarker2] = useState(false);
+  const [map, setMap] = useState(null);
+  const [marker1Layer, setMarker1Layer] = useState(null);
+  const [marker2Layer, setMarker2Layer] = useState(null);
+
+  const handleButtonClick1 = () => {
+    setShowMarker1(true);
+  };
+
+  const handleButtonClick2 = () => {
+    setShowMarker2(true);
+  };
+
+  const handleHideMarker1 = () => {
+    setShowMarker1(false);
+    if (marker1Layer) {
+      map.removeLayer(marker1Layer);
+    }
+  };
+
+  const handleHideMarker2 = () => {
+    setShowMarker2(false);
+    if (marker2Layer) {
+      map.removeLayer(marker2Layer);
+    }
+  };
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const restaurantId = params.get("restaurantId"); // Retrieve restaurant ID from query parameter
-
-    // GeoServer layer arbeitsbereich:datenspeicher
-    const geoserverWFSPointLayer = "Alpine_Ace:Restaurant"; // Geoserver WFS Layername
-
-    // Instanziierung einer Vector Source mittels einer WFS GetFeature Abfrage
-    const pointVectorSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          "http://localhost:8080/geoserver/wfs?service=WFS&" +
-          "version=1.1.0&request=GetFeature&typename=" +
-          geoserverWFSPointLayer +
-          "&outputFormat=application/json"
-        );
-      },
-      strategy: bboxStrategy,
-      // Add error handler
-      onError: function (error) {
-        console.error("Error fetching WFS point data:", error);
-      },
-    });
-
-    // Instanziierung eines Vector Layers für Punkte mit der Source
-    const pointVectorLayer = new VectorLayer({
-      source: pointVectorSource,
-      style: new Style({
-        image: new Circle({
-          radius: 4,
-          fill: new Fill({
-            color: "green",
+    if (!map) {
+      const extent = [2420000, 130000, 2900000, 1350000];
+      const swisstopoLayer = new TileLayer({
+        extent: extent,
+        source: new TileWMS({
+          url: "https://wms.geo.admin.ch/",
+          crossOrigin: "anonymous",
+          attributions:
+            '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
+            'en/home.html">geo.admin.ch</a>',
+          projection: "EPSG:2056",
+          params: {
+            LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
+            FORMAT: "image/jpeg",
+          },
+          serverType: "mapserver",
+        }),
+      });
+      const newMap = new Map({
+        target: "map",
+        layers: [swisstopoLayer],
+        view: new View({
+          center: [2762073, 1180429],
+          zoom: 12,
+          projection: new Projection({
+            code: "EPSG:2056",
+            units: "m",
           }),
         }),
-      }),
-    });
+      });
+      setMap(newMap);
+    }
+  }, [map]);
 
-    //Definition des Kartenextents für WMS/WMTS
-    const extent = [2420000, 130000, 2900000, 1350000];
-
-    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
-    const swisstopoLayer = new TileLayer({
-      extent: extent,
-      source: new TileWMS({
-        url: "https://wms.geo.admin.ch/",
-        crossOrigin: "anonymous",
-        attributions:
-          '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-          'en/home.html">geo.admin.ch</a>',
-        projection: "EPSG:2056",
-        params: {
-          LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-          FORMAT: "image/jpeg",
-        },
-        serverType: "mapserver",
-      }),
-    });
-
-    // Initialize OpenLayers map
-    const map = new Map({
-      layers: [swisstopoLayer, pointVectorLayer], // Füge den Linien-Layer hinzu
-      target: mapRef.current,
-      view: new View({
-        center: [2762640.8, 1179359.1],
-        zoom: 12,
-        projection: new Projection({
-          code: "EPSG:2056",
-          units: "m",
+  useEffect(() => {
+    if (showMarker1 && map) {
+      const marker1Style = new Style({
+        image: new Icon({
+          src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
+          scale: 0.7,
+          anchor: [0.5, 1],
         }),
-      }),
-    });
-
-    // Function to handle feature selection
-    const selectFeature = (feature) => {
-      setSelectedFeature(feature.getProperties());
-      map.getView().fit(feature.getGeometry().getExtent(), {
-        duration: 500, // Optional: Animate the zooming process
-        padding: [1000, 1000, 1000, 1000], // Optional: Add padding around the extent
       });
-    };
 
-    // Function to handle click event on features
-    const handleClick = (event) => {
-      map.forEachFeatureAtPixel(event.pixel, (feature) => {
-        selectFeature(feature);
+      const marker1 = new Point([2762073, 1180429]);
+      const marker1Feature = new Feature(marker1);
+      marker1Feature.setStyle(marker1Style);
+
+      const marker1VectorSource = new VectorSource({
+        features: [marker1Feature],
       });
-    };
 
-    // Event-Handler für das Klicken auf Features hinzufügen
-    map.on("click", handleClick);
-
-    // Update the size of the map when the window is resized
-    window.addEventListener("resize", () => {
-      map.updateSize();
-    });
-
-    return () => {
-      // Event-Handler beim Entfernen der Komponente entfernen
-      map.on("click", handleClick);
-      window.removeEventListener("resize", () => {
-        map.updateSize();
+      const marker1VectorLayer = new VectorLayer({
+        source: marker1VectorSource,
       });
-    };
-  }, [location.search]);
+
+      map.addLayer(marker1VectorLayer);
+      setMarker1Layer(marker1VectorLayer);
+
+      const translate1 = new Translate({
+        features: new Collection([marker1Feature]),
+      });
+      map.addInteraction(translate1);
+
+      translate1.on("translatestart", (evt) => {
+        console.log("Translation started:", evt);
+      });
+
+      translate1.on("translateend", (evt) => {
+        console.log("Translation ended:", evt);
+      });
+    }
+  }, [showMarker1, map]);
+
+  useEffect(() => {
+    if (showMarker2 && map) {
+      const marker2Style = new Style({
+        image: new Icon({
+          src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
+          scale: 0.7,
+          anchor: [0.5, 1],
+        }),
+      });
+
+      const marker2 = new Point([2772173, 1190829]);
+      const marker2Feature = new Feature(marker2);
+      marker2Feature.setStyle(marker2Style);
+
+      const marker2VectorSource = new VectorSource({
+        features: [marker2Feature],
+      });
+
+      const marker2VectorLayer = new VectorLayer({
+        source: marker2VectorSource,
+      });
+
+      map.addLayer(marker2VectorLayer);
+      setMarker2Layer(marker2VectorLayer);
+
+      const translate2 = new Translate({
+        features: new Collection([marker2Feature]),
+      });
+      map.addInteraction(translate2);
+
+      translate2.on("translatestart", (evt) => {
+        console.log("Translation started:", evt);
+      });
+
+      translate2.on("translateend", (evt) => {
+        console.log("Translation ended:", evt);
+      });
+    }
+  }, [showMarker2, map]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <div
-        className="main"
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <h1>Test</h1>
-        <Box
-          sx={{
-            width: "90vw",
-            height: "50vh",
-            borderRadius: "3vh",
-            bgcolor: "p_white.main",
-            marginBottom: "20px",
-            position: "relative",
-            overflow: "hidden", // Kein Overflow der Karte
-          }}
-        >
-          <div
-            ref={mapRef}
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "3vh",
-            }}
-          ></div>
-        </Box>
-
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          justifyContent="left"
-          alignItems="flex-start"
-          gap={2}
-          sx={{
-            width: "90vw",
-            minHeight: "25vh",
-            borderRadius: "3vh",
-            bgcolor: "p_white.main",
-            position: "relative",
-            overflowY: "auto",
-          }}
-        >
-          {/* Informationen für ausgewähltes Feature anzeigen */}
-          {selectedFeature && (
-            <div className="informationen-karte">
-              {/* If a restaurant is selected */}
-              {selectedFeature.r_name && (
-                <>
-                  <h2>{selectedFeature.r_name}</h2>
-                  <p>Öffnungszeiten: {selectedFeature.r_oeffnungszeiten}</p>
-                  <p>Telefon: {selectedFeature.r_telefon}</p>
-                  <p>Email: {selectedFeature.r_email}</p>
-                  <p>Webseite: {selectedFeature.r_webseite}</p>
-                </>
-              )}
-
-              {/* If a ski slope is selected */}
-              {selectedFeature.p_name && (
-                <>
-                  <h2>{selectedFeature.p_name}</h2>
-                  <p>Pistennummer: {selectedFeature.p_nummer}</p>
-                  {/* <p>Status: {selectedFeature.p_status}</p> */}
-                </>
-              )}
-
-              {/* If a facility is selected */}
-              {selectedFeature.a_name && (
-                <>
-                  <p>Anlagennamen: {selectedFeature.a_name}</p>
-                  <p>Höhendifferenz: {parseInt(selectedFeature.a_hoehe)}m</p>
-                  {/* Add additional attributes you want to display here */}
-                </>
-              )}
-            </div>
-          )}
-        </Box>
-      </div>
-    </ThemeProvider>
+    <div>
+      <button onClick={handleButtonClick1} disabled={showMarker1}>
+        Show Marker 1
+      </button>
+      <button onClick={handleButtonClick2} disabled={showMarker2}>
+        Show Marker 2
+      </button>
+      <button onClick={handleHideMarker1}>Hide Marker 1</button>
+      <button onClick={handleHideMarker2}>Hide Marker 2</button>
+      <div id="map" style={{ width: "100%", height: "400px" }}></div>
+    </div>
   );
 };
 
-export default Test;
+export default MapWithMarkers;
