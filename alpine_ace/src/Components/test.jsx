@@ -4,13 +4,15 @@ import View from "ol/View";
 import TileLayer from "ol/layer/Tile";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
-import { Style, Icon } from "ol/style";
+import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
 import Point from "ol/geom/Point";
 import Feature from "ol/Feature";
 import { Translate } from "ol/interaction";
 import Collection from "ol/Collection";
 import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
+import GeoJSON from "ol/format/GeoJSON";
+import { bbox as bboxStrategy } from "ol/loadingstrategy";
 
 import Box from "@mui/material/Box";
 import theme from "./theme";
@@ -23,6 +25,10 @@ const Test = () => {
   const [map, setMap] = useState(null);
   const [marker1Coord, setMarker1Coord] = useState(null);
   const [marker2Coord, setMarker2Coord] = useState(null);
+  const [naviVectorSource, setNaviVectorSource] = useState(null); // Declare naviVectorSource variable
+  const [geoserverWFSNaviLayer, setGeoserverWFSNaviLayer] = useState(
+    "Alpine_Ace:a_a_shortest_path"
+  ); // Declare geoserverWFSNaviLayer variable
 
   const handleButtonClick1 = () => {
     setShowMarker1(true);
@@ -130,7 +136,7 @@ const Test = () => {
     });
   };
 
-  const [nodeSource, setNodeSource] = useState(null);
+  const [nodeSource, setNodeSource] = useState(0);
   const fetchDataForMarker1 = (coordinate) => {
     const [x, y] = coordinate;
     const url = `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
@@ -147,7 +153,7 @@ const Test = () => {
         // Handle error accordingly
       });
   };
-  const [nodeTarget, setNodeTarget] = useState(null);
+  const [nodeTarget, setNodeTarget] = useState(0);
   const fetchDataForMarker2 = (coordinate) => {
     const [x, y] = coordinate;
     const url = `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
@@ -185,8 +191,39 @@ const Test = () => {
           serverType: "mapserver",
         }),
       });
+      const geoserverWFSNaviLayer = "Alpine_Ace:a_a_shortest_path";
+      const naviVectorSource = new VectorSource({
+        format: new GeoJSON(),
+        url: function (extent) {
+          return (
+            "http://localhost:8080/geoserver/wfs?service=WFS&" +
+            "version=1.1.0&request=GetFeature&typename=" +
+            geoserverWFSNaviLayer +
+            "&viewparams=source:" +
+            nodeSource +
+            ";target:" +
+            nodeTarget +
+            "&outputFormat=application/json"
+          );
+        },
+        strategy: bboxStrategy,
+        onError: function (error) {
+          console.error("Error fetching WFS line data:", error);
+        },
+      });
+
+      const naviVectorLayer = new VectorLayer({
+        source: naviVectorSource,
+        style: new Style({
+          stroke: new Stroke({
+            color: "orange",
+            width: 4,
+          }),
+        }),
+      });
+      console.log("naviVectorSource", naviVectorSource);
       const newMap = new Map({
-        layers: [swisstopoLayer],
+        layers: [swisstopoLayer, naviVectorLayer], // Use naviVectorLayer instead of geoserverWFSNaviLayer
         view: new View({
           center: [2762073, 1180429],
           zoom: 12,
@@ -196,10 +233,25 @@ const Test = () => {
           }),
         }),
       });
+
       newMap.setTarget(mapRef.current); // Set the target to the mapRef
       setMap(newMap);
+    } else {
+      // Update naviVectorSource URL with new nodeSource and nodeTarget
+      if (naviVectorSource) {
+        const newUrl =
+          "http://localhost:8080/geoserver/wfs?service=WFS&" +
+          "version=1.1.0&request=GetFeature&typename=" +
+          geoserverWFSNaviLayer +
+          "&viewparams=source:" +
+          nodeSource +
+          ";target:" +
+          nodeTarget +
+          "&outputFormat=application/json";
+        naviVectorSource.setUrl(newUrl);
+      }
     }
-  }, [map]);
+  }, [map, nodeSource, nodeTarget]);
 
   return (
     <ThemeProvider theme={theme}>
