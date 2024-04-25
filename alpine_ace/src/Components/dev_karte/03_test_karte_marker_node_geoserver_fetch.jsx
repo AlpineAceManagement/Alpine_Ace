@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Map from "ol/Map";
 import View from "ol/View";
 import TileLayer from "ol/layer/Tile";
@@ -12,12 +12,7 @@ import Collection from "ol/Collection";
 import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
 
-import Box from "@mui/material/Box";
-import theme from "./theme";
-import { ThemeProvider } from "@mui/material/styles";
-
-const Test = () => {
-  const mapRef = useRef(null); // Reference to the map container
+const MapWithMarkers = () => {
   const [showMarker1, setShowMarker1] = useState(false);
   const [showMarker2, setShowMarker2] = useState(false);
   const [map, setMap] = useState(null);
@@ -186,6 +181,7 @@ const Test = () => {
         }),
       });
       const newMap = new Map({
+        target: "map",
         layers: [swisstopoLayer],
         view: new View({
           center: [2762073, 1180429],
@@ -196,47 +192,19 @@ const Test = () => {
           }),
         }),
       });
-      newMap.setTarget(mapRef.current); // Set the target to the mapRef
       setMap(newMap);
     }
   }, [map]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <div
-        className="main"
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <h1>Test</h1>
-        <Box
-          sx={{
-            width: "95vw",
-            height: "50vh",
-            borderRadius: "3vh",
-            bgcolor: "p_white.main",
-            marginBottom: "20px",
-            position: "relative",
-            overflow: "hidden", // Kein Overflow der Karte
-          }}
-        >
-          <div
-            ref={mapRef}
-            style={{ width: "100%", height: "50%", borderRadius: "3vh" }}
-          ></div>{" "}
-        </Box>
-
-        <button onClick={handleButtonClick1} disabled={showMarker1}>
-          Show Marker 1
-        </button>
-        <button onClick={handleButtonClick2} disabled={showMarker2}>
-          Show Marker 2
-        </button>
-        {/* <button
+    <div>
+      <button onClick={handleButtonClick1} disabled={showMarker1}>
+        Show Marker 1
+      </button>
+      <button onClick={handleButtonClick2} disabled={showMarker2}>
+        Show Marker 2
+      </button>
+      {/* <button
         onClick={() => {
           handleHideMarker1();
           handleHideMarker2();
@@ -244,9 +212,9 @@ const Test = () => {
       >
         Reset Markers
       </button> */}
-      </div>
-    </ThemeProvider>
+      <div id="map" style={{ width: "100%", height: "400px" }}></div>
+    </div>
   );
 };
 
-export default Test;
+export default MapWithMarkers;
