@@ -13,6 +13,7 @@ import Test from "./Components/test";
 import KarteAufbau from "./Components/KarteAufbau";
 import Graph from "./Components/Graph";
 import Weather from "./Components/Wetter copy";
+import Einstellungen from "./Components/Einstellungen";
 
 function App() {
   return (
@@ -97,6 +98,16 @@ function App() {
               <>
                 <Kopfzeile />
                 <Test />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/Einstellungen"
+            element={
+              <>
+                <Kopfzeile />
+                <Einstellungen />
               </>
             }
           />

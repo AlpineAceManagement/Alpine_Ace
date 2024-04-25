@@ -5,6 +5,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 import "../App.css";
 
@@ -20,7 +22,45 @@ const Hauptmenu = () => {
           alignItems: "center",
         }}
       >
-        <h1>Hauptmenü</h1>
+        <Grid
+          className="Kopfzeile"
+          container
+          direction="row"
+          justifyContent="space-between"
+          alignItems="flex-start"
+        >
+          <Grid>
+            <item>
+              {/*Der Pfeil hat dieslbe Farbe wie der Hintergrund, heisst dieser ist unsichbar*/}
+              <div to="/" className="Kopfzeile-link">
+                <ArrowBackIosNewIcon
+                  style={{ fontSize: "2rem", color: "#00112e" }}
+                />
+              </div>
+            </item>
+          </Grid>
+          <Grid>
+            <item>
+              {" "}
+              <img
+                src={require("../logo/logo.jpg")}
+                alt=""
+                style={{ maxWidth: "10vh", display: "block", margin: "0 auto" }}
+              />
+            </item>
+          </Grid>
+          <Grid>
+            <item>
+              {" "}
+              <Link to="/Einstellungen" className="Kopfzeile-link">
+                <SettingsIcon
+                  className="zurueck-icon"
+                  style={{ fontSize: "2rem" }}
+                />
+              </Link>
+            </item>
+          </Grid>
+        </Grid>
 
         <Box
           sx={{
@@ -62,7 +102,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Karte
                 </Button>
@@ -75,7 +115,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Wetter
                 </Button>
@@ -88,7 +128,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Statistiken
                 </Button>
@@ -101,7 +141,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Navi
                 </Button>
@@ -114,7 +154,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Bewertungen
                 </Button>
@@ -127,7 +167,7 @@ const Hauptmenu = () => {
                   variant="contained"
                   color="p_red"
                   fullWidth
-                  sx={{ fontSize: 20 }}
+                  sx={{ fontSize: "2.3vh" }}
                 >
                   Restaurant
                 </Button>

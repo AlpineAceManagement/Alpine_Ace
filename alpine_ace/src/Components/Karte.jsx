@@ -79,16 +79,15 @@ const Karte = () => {
         console.error("Error fetching WFS anlagen data:", error);
       },
     });
-
+    const iconSize = [32, 32]; // Set the fixed size for the icon
     // Instanziierung eines Vector Layers für Punkte mit der Source
     const pointVectorLayer = new VectorLayer({
       source: pointVectorSource,
       style: new Style({
-        image: new Circle({
-          radius: 4,
-          fill: new Fill({
-            color: "green",
-          }),
+        image: new Icon({
+          src: "https://www.svgrepo.com/show/399602/restaurant.svg", // Specify the path to your icon image
+          anchor: [0.5, 1], // Set the anchor point to the center bottom of the icon
+          scale: 0.025,
         }),
       }),
     });
@@ -312,7 +311,6 @@ const Karte = () => {
           alignItems: "center",
         }}
       >
-        <h1>Karte</h1>
         <Box
           sx={{
             width: "90vw",

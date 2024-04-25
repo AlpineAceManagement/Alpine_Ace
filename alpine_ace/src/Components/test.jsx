@@ -268,7 +268,7 @@ const Test = () => {
         <Box
           sx={{
             width: "95vw",
-            height: "50vh",
+            height: "70vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
             marginBottom: "20px",

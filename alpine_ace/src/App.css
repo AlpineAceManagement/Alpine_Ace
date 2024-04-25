@@ -108,7 +108,6 @@
 .Hauptmenu-button {
   width: 4em;
   height: 4em;
-
   font-size: larger;
 }
 
@@ -133,8 +132,22 @@
   overflow: hidden;
 }
 
-.chart-container {  /* Assuming your Vega chart has a surrounding div with this class */
-  width: 300px;     /* Adjust as needed */
-  height: 200px;    /* Adjust as needed */
+.chart-container {
+  /* Assuming your Vega chart has a surrounding div with this class */
+  width: 300px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
   overflow: hidden; /* Or use 'scroll' if you want a scrollbar */
+}
+
+.Kopfzeile {
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+
+.left {
+  margin-right: auto; /* Pushes the arrow icon to the left */
+}
+
+.center {
+  text-align: center; /* Centers the logo horizontally */
 }
