@@ -79,20 +79,20 @@ const Wetter = () => {
     fetchData();
   }, []);
 
-  const temp = [
-    { "hour": 0, "temperature": 10 },
-        { "hour": 1, "temperature": -4.178500175476074 },
-        { "hour": 2, "temperature": -4.378499984741211 },
-        { "hour": 3, "temperature": -4.628499984741211 },
-        { "hour": 4, "temperature": -4.628499984741211 },
-        { "hour": 5, "temperature": 5 },
-        { "hour": 6, "temperature": 6 },
-        { "hour": 7, "temperature": 5 },
-        { "hour": 8, "temperature": 5 },
-        { "hour": 9, "temperature": 6 },
-        { "hour": 10, "temperature": 5 },
-        { "hour": 11, "temperature": 8 },
-  ];
+  // const temp = [
+  //   { "hour": 0, "temperature": 10 },
+  //       { "hour": 1, "temperature": -4.178500175476074 },
+  //       { "hour": 2, "temperature": -4.378499984741211 },
+  //       { "hour": 3, "temperature": -4.628499984741211 },
+  //       { "hour": 4, "temperature": -4.628499984741211 },
+  //       { "hour": 5, "temperature": 5 },
+  //       { "hour": 6, "temperature": 6 },
+  //       { "hour": 7, "temperature": 5 },
+  //       { "hour": 8, "temperature": 5 },
+  //       { "hour": 9, "temperature": 6 },
+  //       { "hour": 10, "temperature": 5 },
+  //       { "hour": 11, "temperature": 8 },
+  // ];
   const vegaSpec = {
       "$schema": "https://vega.github.io/schema/vega/v5.json",
       "description": "Temperature over Time Line Chart",
@@ -102,8 +102,8 @@ const Wetter = () => {
     
       "data": [
         {
-          "name": "table",
-          "values": []
+          // "name": "table",
+          "values": weatherChartData
         }
       ],
       "scales": [
@@ -145,10 +145,10 @@ const Wetter = () => {
     };
 
   // Neue Komponente für das Prognose-Diagramm
-  const PrognosisChart = ({ data }) => {
-    // ... Vega-Spezifikation und Rendering
-    return <Vega spec={vegaSpec} data={{ table: data }} />;
-  };
+  // const PrognosisChart = ({ data }) => {
+  //   // ... Vega-Spezifikation und Rendering
+  //   return <Vega spec={vegaSpec} data={{ table: data }} />;
+  // };
   // const runtime = parse(vegaSpec)
   // var view = new Vega.View(runtime)
   // .logLevel(Vega.Warn) // set view logging level
@@ -181,10 +181,18 @@ const Wetter = () => {
         >
           <div className="large-box">
             <h1 style={{textAlign: "center", color: "#282c34"}}>Wetter</h1>
-            <div className="prognosis-chart">
-              {/* <VegaLite spec={vegaSpec} width={800} height={400}/>            */}
-              {weatherChartData && <PrognosisChart data={temp}/>}
-              {/* <VegaEmbed spec={vegaSpec} data={{ table: temp }} renderer="png"/> */}
+            <div style={{width: "100%", height:"150"}}>
+              {weatherChartData?(
+                <VegaLite 
+                spec={vegaSpec}
+                data={{value: weatherChartData}}
+                />
+              ): (
+                <div>Loading weather data...</div>
+              )
+            }
+              {/* {weatherChartData && <PrognosisChart data={temp}/>} */}
+              
             </div>
             {loading && <p>Loading weather data...</p>}
             {snowloading && <p> Loadin snow data...</p>}
