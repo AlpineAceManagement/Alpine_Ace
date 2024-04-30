@@ -72,8 +72,8 @@ const Test = () => {
     // Create marker style
     const markerStyle = new Style({
       image: new Icon({
-        src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
-        scale: 0.7,
+        src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/map-marker_green.svg",
+        scale: 1.75,
         anchor: [0.5, 1],
       }),
     });
@@ -107,8 +107,8 @@ const Test = () => {
     // Create marker style
     const markerStyle = new Style({
       image: new Icon({
-        src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker_3cc483.png",
-        scale: 0.7,
+        src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/map-marker_purple.svg",
+        scale: 1.75,
         anchor: [0.5, 1],
       }),
     });
@@ -296,28 +296,34 @@ const Test = () => {
         >
           <Grid
             container
-            style={{ width: "95%", margin: "auto" }} // Adjust the width and center the grid
+            style={{ width: "95%", margin: "auto", marginTop: "1vh" }} // Adjust the width, center the grid, and add top margin
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             justifyContent="center"
           >
-            <Grid item xs={6} className="button-grid-item">
+            <Grid item xs={6} className="button-navi-grid-item">
               <Button
                 className="Navi-button"
                 variant="contained"
-                color="p_red"
+                color="p_green"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
+                button
+                onClick={handleButtonClick1}
+                disabled={showMarker1}
               >
                 Start
               </Button>{" "}
             </Grid>
-            <Grid item xs={6} className="button-grid-item">
+            <Grid item xs={6} className="button-navi-grid-item">
               <Button
                 className="Navi-button"
                 variant="contained"
                 color="p_purple"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
+                button
+                onClick={handleButtonClick2}
+                disabled={showMarker2}
               >
                 Ziel
               </Button>
@@ -326,11 +332,11 @@ const Test = () => {
               <Button
                 className="Navi-button"
                 variant="contained"
-                color="p_purple"
+                color="p_red"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
               >
-                Ziel
+                reset
               </Button>
             </Grid>
           </Grid>
