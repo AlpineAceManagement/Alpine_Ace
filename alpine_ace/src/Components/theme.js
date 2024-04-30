@@ -14,6 +14,12 @@ const theme = createTheme({
       dark: "#b655ff",
       contrastText: "white",
     },
+    p_green: {
+      main: "#85d847",
+      light: "#85d847",
+      dark: "#85d847",
+      contrastText: "white",
+    },
     p_white: {
       main: "white",
       contrastText: "black",
