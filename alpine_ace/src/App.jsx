@@ -16,6 +16,8 @@ import Weather from "./Components/Wetter copy";
 import Einstellungen from "./Components/Einstellungen";
 import Test_2 from "./Components/test_2";
 import Test_3 from "./Components/test_3";
+import GPX_Viewer from "./Components/GPX_Viewer";
+
 function App() {
   return (
     <BrowserRouter>
@@ -130,6 +132,16 @@ function App() {
               <>
                 <Kopfzeile />
                 <Test_3 />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/GPX_Viewer"
+            element={
+              <>
+                <Kopfzeile />
+                <GPX_Viewer />
               </>
             }
           />

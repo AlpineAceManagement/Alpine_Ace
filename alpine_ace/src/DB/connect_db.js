@@ -19,22 +19,22 @@ app.use(cors());
 // });
 
 // ---------Fabian---------
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "geoserver",
-  password: "jNtd2C13ka9oaPpRy1jP",
-  port: 5433,
-});
-
-// ---------Théo---------
 // const pool = new Pool({
 //   user: "postgres",
 //   host: "localhost",
 //   database: "geoserver",
-//   password: "Mj5ty2ga8",
+//   password: "jNtd2C13ka9oaPpRy1jP",
 //   port: 5433,
 // });
+
+// ---------Théo---------
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "geoserver",
+  password: "Mj5ty2ga8",
+  port: 5433,
+});
 
 // Route um Restaurant Daten zu beziehen
 app.get("/api/restaurant", async (req, res) => {
