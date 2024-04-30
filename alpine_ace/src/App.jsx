@@ -14,7 +14,8 @@ import KarteAufbau from "./Components/KarteAufbau";
 import Graph from "./Components/Graph";
 import Weather from "./Components/Wetter copy";
 import Einstellungen from "./Components/Einstellungen";
-
+import Test_2 from "./Components/test_2";
+import Test_3 from "./Components/test_3";
 function App() {
   return (
     <BrowserRouter>
@@ -101,6 +102,17 @@ function App() {
               </>
             }
           />
+
+          <Route
+            exact
+            path="/test_2"
+            element={
+              <>
+                <Kopfzeile />
+                <Test_2 />
+              </>
+            }
+          />
           <Route
             exact
             path="/Einstellungen"
@@ -108,6 +120,16 @@ function App() {
               <>
                 <Kopfzeile />
                 <Einstellungen />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/test_3"
+            element={
+              <>
+                <Kopfzeile />
+                <Test_3 />
               </>
             }
           />

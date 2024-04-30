@@ -1,420 +1,98 @@
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|System Time: 20240424094003 UTC
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Form (floating)
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|Temporary License: 68 days left.
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|Machine host name is: orange
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen/'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Routing_Vorbereitung.fmw'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Platform: WIN64
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|System Status: 209.91 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1713789719317_16712\fmetmp_26)
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|START - ProcessID: 15716, peak process memory usage: 43900 kB, current process memory usage: 43900 kB
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\wb-xlate-1713951593983_16712' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `54475' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `54342'
-2024-04-24 11:40:03|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
-2024-04-24 11:40:03|   0.1|  0.1|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1713789719317_16712\fmetmp_26', set from environment variable `FME_TEMP'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Creating writer for format: 
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Creating reader for format: 
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding TEXTLINE Reader with keyword TEXTLINE_1
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_2
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding TEXTLINE Reader with keyword TEXTLINE_2
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_5
-2024-04-24 11:40:03|   0.1|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2024-04-24 11:40:03|   0.2|  0.1|INFORM|Creating reader for format: Text File
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `TEXTLINE'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'TEXTLINE' from file 'C:\Program Files\FME_Build_23619\plugins/TEXTLINE.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'TEXTLINE' matches current internal version (4.0 20230426)
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Text File Reader: Opening the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\alpine_ace_routing_DB_erstellen.txt'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Text File Reader: Will read the entire contents of each file into a single attribute
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'InspectorFactory' from file 'C:\Program Files\FME_Build_23619\plugins/InspectorFactory.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'InspectorFactory' matches current internal version (4.0 20230426)
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'CounterFactory' from file 'C:\Program Files\FME_Build_23619\plugins/CounterFactory.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'CounterFactory' matches current internal version (4.0 20230426)
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'VertexCreatorFactory' from file 'C:\Program Files\FME_Build_23619\plugins/VertexCreatorFactory.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'VertexCreatorFactory' matches current internal version (4.0 20230426)
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|Loaded module 'QueryFactory' from file 'C:\Program Files\FME_Build_23619\plugins/QueryFactory.dll'
-2024-04-24 11:40:03|   0.2|  0.0|INFORM|FME API version of module 'QueryFactory' matches current internal version (4.0 20230426)
-2024-04-24 11:40:04|   0.3|  0.1|INFORM|FME Configuration: Using connection values from 'geoserver' for R_1
-2024-04-24 11:40:04|   0.3|  0.0|INFORM|Creating reader for format: PostGIS
-2024-04-24 11:40:04|   0.5|  0.2|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Loaded module 'POSTGIS' from file 'C:\Program Files\FME_Build_23619\plugins/POSTGIS.dll'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (4.0 20230426)
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Performing query against POSTGIS dataset `geoserver'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Executing custom data query: 'DROP TABLE IF EXISTS a_a_routing CASCADE;
-CREATE TABLE a_a_routing (
-    id INTEGER PRIMARY KEY,
-    routing_einweg BOOLEAN,
-    source INTEGER,
-    target INTEGER,
-    the_geom GEOMETRY(LineString, 2056) NOT NULL,
-	Anlage_ID INTEGER,
-	A_Name VARCHAR(100),
-	A_Hoehe FLOAT ,
-	A_Status BOOL,
-	Piste_ID INTEGER,
-	P_Name VARCHAR(100),
-	P_Nummer VARCHAR(5),
-	P_Farbe FARBE,
-	P_Status BOOL,
-	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
-);
-
-DROP TABLE IF EXISTS a_a_anlage_routing CASCADE;
-CREATE TABLE a_a_anlage_routing (
-    id INTEGER PRIMARY KEY,
-    routing_einweg BOOLEAN,
-    source INTEGER,
-    target INTEGER,
-    the_geom GEOMETRY(LineString, 2056) NOT NULL,
-	Anlage_ID INTEGER,
-	A_Name VARCHAR(100),
-	A_Hoehe FLOAT ,
-	A_Status BOOL,
-	Piste_ID INTEGER,
-	P_Name VARCHAR(100),
-	P_Nummer VARCHAR(5),
-	P_Farbe FARBE,
-	P_Status BOOL,
-	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
-);'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Text File Reader: Closing the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\alpine_ace_routing_DB_erstellen.txt'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_2
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Creating reader for format: PostGIS
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
-2024-04-24 11:40:04|   0.5|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
-2024-04-24 11:40:04|   0.6|  0.1|INFORM|PostGIS client encoding: 'UTF8'
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|Executing data query: 'declare "public_pisten_crsr" cursor for select "piste_id","p_name","p_nummer","p_farbe","p_status","p_einweg","skigebiet_id", ST_AsEWKB("p_geometrie") as "p_geometrie" from "public"."pisten"'
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|Reading POSTGIS table: 'public.pisten'...
-2024-04-24 11:40:05|   0.6|  0.0|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_2[POSTGIS] set to `EPSG:2056' as read from input data
-2024-04-24 11:40:05|   0.8|  0.2|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-04-24 11:40:07|   1.7|  0.9|INFORM|Executing data query: 'declare "public_pisten_endpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("Pisten_Endkoordinaten") as "Pisten_Endkoordinaten" from "public"."pisten_endpunkt"'
-2024-04-24 11:40:07|   1.7|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_endpunkt'...
-2024-04-24 11:40:07|   1.8|  0.1|INFORM|LineOnLineOverlayer (OverlayFactory): Splitting bulk features into individual features
-2024-04-24 11:40:08|   2.4|  0.6|INFORM|Executing data query: 'declare "public_anlagen_startpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("anlagen_startkoordinaten") as "anlagen_startkoordinaten" from "public"."anlagen_startpunkt"'
-2024-04-24 11:40:08|   2.4|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_startpunkt'...
-2024-04-24 11:40:08|   2.4|  0.0|INFORM|CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:08|   2.4|  0.0|INFORM|CoordinateExtractor_4_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:08|   2.4|  0.0|INFORM|CoordinateExtractor_4_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:08|   2.6|  0.2|INFORM|CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:08|   2.6|  0.0|INFORM|NeighborFinder_3 (ProximityFactory): Splitting bulk features into individual features
-2024-04-24 11:40:08|   2.6|  0.0|WARN  |NeighborFinder_3 (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
-2024-04-24 11:40:09|   2.7|  0.1|INFORM|Executing data query: 'declare "public_pisten_startpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("pisten_startkoordinaten") as "pisten_startkoordinaten" from "public"."pisten_startpunkt"'
-2024-04-24 11:40:09|   2.7|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_startpunkt'...
-2024-04-24 11:40:09|   2.8|  0.1|INFORM|CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
-2024-04-24 11:40:09|   3.1|  0.3|INFORM|Executing data query: 'declare "public_anlagen_crsr" cursor for select "anlage_id","a_name","a_hoehe","a_status","a_einweg","skigebiet_id", ST_AsEWKB("a_geometrie") as "a_geometrie" from "public"."anlagen"'
-2024-04-24 11:40:09|   3.1|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen'...
-2024-04-24 11:40:09|   3.1|  0.0|INFORM|CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:09|   3.1|  0.0|INFORM|CoordinateExtractor_2_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:09|   3.1|  0.0|INFORM|CoordinateExtractor_2_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:10|   3.3|  0.2|INFORM|CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-04-24 11:40:10|   3.3|  0.0|INFORM|NeighborFinder (ProximityFactory): Splitting bulk features into individual features
-2024-04-24 11:40:10|   3.3|  0.0|WARN  |NeighborFinder (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
-2024-04-24 11:40:10|   3.4|  0.1|INFORM|Executing data query: 'declare "public_anlagen_endpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("Anlagen_Endkoordinaten") as "Anlagen_Endkoordinaten" from "public"."anlagen_endpunkt"'
-2024-04-24 11:40:10|   3.4|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_endpunkt'...
-2024-04-24 11:40:10|   3.4|  0.0|INFORM|AttributeManager (AttrSetFactory): Splitting bulk features into individual features
-2024-04-24 11:40:11|   3.8|  0.4|INFORM|CoordinateExtractor_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Creating reader for format: Text File
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `TEXTLINE'
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Text File Reader: Opening the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\alpine_ace_routing.txt'
-2024-04-24 11:40:11|   3.8|  0.0|INFORM|Text File Reader: Will read the entire contents of each file into a single attribute
-2024-04-24 11:40:11|   3.9|  0.1|INFORM|Text File Reader: Closing the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\alpine_ace_routing.txt'
-2024-04-24 11:40:11|   3.9|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_5
-2024-04-24 11:40:11|   3.9|  0.0|INFORM|Creating reader for format: PostGIS
-2024-04-24 11:40:11|   3.9|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
-2024-04-24 11:40:11|   3.9|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
-2024-04-24 11:40:12|   4.0|  0.1|INFORM|PostGIS client encoding: 'UTF8'
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|Executing data query: 'declare "public_a_a_routing_noded_crsr" cursor for select "id","old_id","sub_id","source","target","routing_einweg","anlage_id","a_name","a_hoehe","a_status","piste_id","p_name","p_nummer","p_farbe","p_status","skigebiet_id","distance","cost","rcost", ST_AsEWKB("the_geom") as "the_geom" from "public"."a_a_routing_noded"'
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|Reading POSTGIS table: 'public.a_a_routing_noded'...
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_5[POSTGIS] set to `EPSG:2056' as read from input data
-2024-04-24 11:40:12|   4.0|  0.0|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-04-24 11:40:18|   7.7|  3.7|STATS |Storing feature(s) to FME feature store file `C:\Temp\QGIS\wb-inspectors-RbBFhI\inspector.ffs'
-2024-04-24 11:40:18|   7.7|  0.0|INFORM|FFS writer: Writing 27156 feature(s) to file 'C:\Temp\QGIS\wb-inspectors-RbBFhI\inspector.fts'
-2024-04-24 11:40:18|   7.8|  0.1|INFORM|Spatial Index: Adding 27156 features
-2024-04-24 11:40:18|   7.9|  0.1|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:18|   7.9|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:18|   7.9|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 59376 features from 4 readers
-2024-04-24 11:40:18|   7.9|  0.0|INFORM|Emptying factory pipeline
-2024-04-24 11:40:18|   7.9|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 59376 input feature(s), wrote 59376 output feature(s): 59376 matched merge filters, 59376 were routed to output, 0 could not be routed.
-2024-04-24 11:40:18|   7.9|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.1|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.a_a_routing_noded_POSTGIS_5 Splitter (TeeFactory): Cloned 27156 input feature(s) into 27156 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |text_line_TEXTLINE_2 Splitter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.anlagen_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.anlagen_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.anlagen_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.pisten_POSTGIS_2 Splitter (TeeFactory): Cloned 9454 input feature(s) into 9454 output feature(s)
-2024-04-24 11:40:18|   8.0|  0.0|STATS |public.pisten_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9453 input feature(s) into 9453 output feature(s)
-2024-04-24 11:40:18|   8.1|  0.1|STATS |public.pisten_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9453 input feature(s) into 9453 output feature(s)
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_TESTMODE (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_TESTMODE (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:18|   8.1|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-04-24 11:40:18|   8.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:18|   8.1|  0.0|STATS |id                                                                       10742
-2024-04-24 11:40:18|   8.1|  0.0|STATS |==============================================================================
-2024-04-24 11:40:18|   8.1|  0.0|STATS |Total features counted:                                                  10742
-2024-04-24 11:40:18|   8.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:18|   8.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-04-24 11:40:19|   8.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:19|   8.1|  0.0|INFORM|Processing base feature(s)...
-2024-04-24 11:40:19|   8.2|  0.1|STATS |NeighborFinder_3 (ProximityFactory): Input Summary:  1286 base feature(s), 9453 candidate feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |NeighborFinder_3 (ProximityFactory): Output Summary: 1087 matched feature(s), 199 unmatched base feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Input Summary:  199 base feature(s), 0 candidate feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Output Summary: 0 matched feature(s), 199 unmatched base feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |Junction (TeeFactory): Cloned 1087 input feature(s) into 1087 output feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |GeometryRemover_2 (TeeFactory): Cloned 1087 input feature(s) into 1087 output feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.2|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-04-24 11:40:19|   8.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.2|  0.0|STATS |id                                                                       11829
-2024-04-24 11:40:19|   8.2|  0.0|STATS |==============================================================================
-2024-04-24 11:40:19|   8.2|  0.0|STATS |Total features counted:                                                  11829
-2024-04-24 11:40:19|   8.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.2|  0.0|STATS |Counter_2 OUTPUT Splitter (TeeFactory): Cloned 1087 input feature(s) into 2174 output feature(s)
-2024-04-24 11:40:19|   8.2|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-04-24 11:40:19|   8.2|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-04-24 11:40:19|   8.2|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-04-24 11:40:19|   8.2|  0.0|WARN  |Logging limit reached for the preceding message. Further instances of this message will not be logged
-2024-04-24 11:40:19|   8.3|  0.1|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 500 / 1087
-2024-04-24 11:40:19|   8.3|  0.0|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 1087 / 1087
-2024-04-24 11:40:19|   8.3|  0.0|STATS |LineBuilder_2 (ConnectionFactory): Processed 2174 input feature(s). Output 1087 feature(s) consisting of 0 polygonal feature(s), 1087 linear feature(s), and 0 point feature(s)
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-04-24 11:40:19|   8.3|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-04-24 11:40:19|   8.3|  0.0|INFORM|Processing base feature(s)...
-2024-04-24 11:40:19|   8.4|  0.1|STATS |NeighborFinder (ProximityFactory): Input Summary:  1286 base feature(s), 9453 candidate feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |NeighborFinder (ProximityFactory): Output Summary: 953 matched feature(s), 333 unmatched base feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |NeighborFinder_2 (ProximityFactory): Input Summary:  333 base feature(s), 0 candidate feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |NeighborFinder_2 (ProximityFactory): Output Summary: 0 matched feature(s), 333 unmatched base feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |Junction_2 (TeeFactory): Cloned 953 input feature(s) into 953 output feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |GeometryRemover (TeeFactory): Cloned 953 input feature(s) into 953 output feature(s)
-2024-04-24 11:40:19|   8.4|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.4|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-04-24 11:40:19|   8.4|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.4|  0.0|STATS |id                                                                       12782
-2024-04-24 11:40:19|   8.4|  0.0|STATS |==============================================================================
-2024-04-24 11:40:19|   8.4|  0.0|STATS |Total features counted:                                                  12782
-2024-04-24 11:40:19|   8.4|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:19|   8.4|  0.0|STATS |Counter OUTPUT Splitter (TeeFactory): Cloned 953 input feature(s) into 1906 output feature(s)
-2024-04-24 11:40:19|   8.5|  0.1|INFORM|LineBuilder (ConnectionFactory): Finished processing group 500 / 953
-2024-04-24 11:40:19|   8.5|  0.0|INFORM|LineBuilder (ConnectionFactory): Finished processing group 953 / 953
-2024-04-24 11:40:19|   8.5|  0.0|STATS |LineBuilder (ConnectionFactory): Processed 1906 input feature(s). Output 953 feature(s) consisting of 0 polygonal feature(s), 953 linear feature(s), and 0 point feature(s)
-2024-04-24 11:40:19|   8.5|  0.0|STATS |Orientor (TeeFactory): Cloned 953 input feature(s) into 953 output feature(s)
-2024-04-24 11:40:19|   8.5|  0.0|STATS |Orientor_Rejector (TestFactory): Tested 953 input feature(s) -- 0 feature(s) passed and 953 feature(s) failed
-2024-04-24 11:40:19|   8.5|  0.0|STATS |AttributeRemover (TeeFactory): Cloned 2040 input feature(s) into 2040 output feature(s)
-2024-04-24 11:40:19|   8.5|  0.0|STATS |Junction_3 (TeeFactory): Cloned 11494 input feature(s) into 11494 output feature(s)
-2024-04-24 11:40:19|   8.6|  0.1|INFORM|LineOnLineOverlayer (OverlayFactory): Overlaying with an automatic tolerance of 5.678246686675283e-9
-2024-04-24 11:40:20|   9.1|  0.5|INFORM|FME Configuration: Using FME Reprojection Engine
-2024-04-24 11:40:20|   9.2|  0.1|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_3
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|Creating writer for format: PostGIS
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|FME Configuration: Destination coordinate system set to `EPSG:2056'
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|Writer `POSTGIS_3' of type `POSTGIS' using group definition keyword `POSTGIS_3_DEF'
-2024-04-24 11:40:20|   9.2|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|Testing for the existence of table 'public.a_a_routing'...
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|Using existing table 'public.a_a_routing'
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_routing'
-2024-04-24 11:40:21|   9.2|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_routing'
-2024-04-24 11:40:21|   9.3|  0.1|INFORM|Committed transaction at feature '1000'
-2024-04-24 11:40:21|   9.5|  0.2|INFORM|Committed transaction at feature '2000'
-2024-04-24 11:40:22|   9.8|  0.3|INFORM|Committed transaction at feature '3000'
-2024-04-24 11:40:22|  10.0|  0.2|INFORM|Committed transaction at feature '4000'
-2024-04-24 11:40:23|  10.3|  0.3|INFORM|Committed transaction at feature '5000'
-2024-04-24 11:40:23|  10.5|  0.2|INFORM|Committed transaction at feature '6000'
-2024-04-24 11:40:24|  10.7|  0.2|INFORM|Committed transaction at feature '7000'
-2024-04-24 11:40:24|  11.0|  0.3|INFORM|Committed transaction at feature '8000'
-2024-04-24 11:40:24|  11.1|  0.1|INFORM|Committed transaction at feature '9000'
-2024-04-24 11:40:25|  11.3|  0.2|INFORM|Committed transaction at feature '10000'
-2024-04-24 11:40:25|  11.4|  0.1|INFORM|Committed transaction at feature '11000'
-2024-04-24 11:40:26|  11.7|  0.3|INFORM|Committed transaction at feature '12000'
-2024-04-24 11:40:26|  12.0|  0.3|INFORM|Committed transaction at feature '13000'
-2024-04-24 11:40:26|  12.3|  0.3|INFORM|Committed transaction at feature '14000'
-2024-04-24 11:40:27|  12.6|  0.3|INFORM|Committed transaction at feature '15000'
-2024-04-24 11:40:27|  12.7|  0.1|INFORM|Committed transaction at feature '16000'
-2024-04-24 11:40:27|  12.9|  0.2|INFORM|Committed transaction at feature '17000'
-2024-04-24 11:40:28|  13.2|  0.3|INFORM|Committed transaction at feature '18000'
-2024-04-24 11:40:28|  13.4|  0.2|INFORM|Committed transaction at feature '19000'
-2024-04-24 11:40:28|  13.6|  0.2|INFORM|Committed transaction at feature '20000'
-2024-04-24 11:40:29|  13.9|  0.3|INFORM|Committed transaction at feature '21000'
-2024-04-24 11:40:29|  14.0|  0.1|INFORM|Committed transaction at feature '22000'
-2024-04-24 11:40:29|  14.3|  0.3|INFORM|Committed transaction at feature '23000'
-2024-04-24 11:40:30|  14.3|  0.0|INFORM|Committed transaction at feature '24000'
-2024-04-24 11:40:30|  14.4|  0.1|INFORM|Committed transaction at feature '25000'
-2024-04-24 11:40:30|  14.6|  0.2|STATS |LineOnLineOverlayer (OverlayFactory): Input Summary:  0 area(s), 0 point(s), and 11494 line(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |LineOnLineOverlayer (OverlayFactory): Output Summary: 0 area(s), 12360 point(s), and 20280 line(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |LineOnLineOverlayer LINE Splitter (TeeFactory): Cloned 20280 input feature(s) into 40560 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Tester_2 (TestFactory): Tested 20280 input feature(s) -- 14840 feature(s) passed and 5440 feature(s) failed
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Orientor_2 (TeeFactory): Cloned 5440 input feature(s) into 5440 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Orientor_2_Rejector (TestFactory): Tested 5440 input feature(s) -- 0 feature(s) passed and 5440 feature(s) failed
-2024-04-24 11:40:30|  14.6|  0.0|STATS |AttributeRemover_3 (TeeFactory): Cloned 25720 input feature(s) into 25720 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|STATS |id                                                                       38502
-2024-04-24 11:40:30|  14.6|  0.0|STATS |==============================================================================
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Total features counted:                                                  38502
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Counter_5 OUTPUT Splitter (TeeFactory): Cloned 25720 input feature(s) into 51440 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Sampler (SamplingFactory): Sampled 1 of 25720 feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Sampler_Sampled (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |AttributeRemover_2 (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |FeatureJoiner (Disabled) Nuker (TeeFactory): Cloned 2 input feature(s) into 0 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |AttributeRemover_4 (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Tester (TestFactory): Tested 1286 input feature(s) -- 1278 feature(s) passed and 8 feature(s) failed
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Tester PASSED Splitter (TeeFactory): Cloned 1278 input feature(s) into 2556 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Tester_3 (TestFactory): Tested 1278 input feature(s) -- 2 feature(s) passed and 1276 feature(s) failed
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Orientor_3 (TeeFactory): Cloned 10 input feature(s) into 10 output feature(s)
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Orientor_3_Rejector (TestFactory): Tested 10 input feature(s) -- 0 feature(s) passed and 10 feature(s) failed
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|STATS |id                                                                       38502
-2024-04-24 11:40:30|  14.6|  0.0|STATS |==============================================================================
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Total features counted:                                                  38502
-2024-04-24 11:40:30|  14.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:30|  14.6|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:30|  14.6|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-04-24 11:40:30|  14.6|  0.0|STATS |Stored 1 feature(s) to FME feature store file `C:\Temp\QGIS\wb-inspectors-RbBFhI\inspector.ffs'
-2024-04-24 11:40:30|  14.6|  0.0|INFORM|Saving spatial index into file 'C:\Temp\QGIS\wb-inspectors-RbBFhI\inspector.fsi'
-2024-04-24 11:40:30|  14.7|  0.1|INFORM|Finished saving spatial index into file 'C:\Temp\QGIS\wb-inspectors-RbBFhI\inspector.fsi'
-2024-04-24 11:40:30|  14.7|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 27008 input feature(s), wrote 27008 output feature(s): 0 matched merge filters, 27008 were routed to output, 0 could not be routed.
-2024-04-24 11:40:30|  14.7|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-04-24 11:40:31|  14.7|  0.0|STATS |VisualizerProcessor (CreationFactory): Created 1 features
-2024-04-24 11:40:31|  14.7|  0.0|STATS |VisualizerCleaner (TeeFactory): Cloned 1 input feature(s) into 0 output feature(s)
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Successfully closed POSTGIS database writer
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_3':
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |                               Features Written
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.a_a_routing                                                       25720
-2024-04-24 11:40:31|  14.7|  0.0|STATS |==============================================================================
-2024-04-24 11:40:31|  14.7|  0.0|STATS |Total Features Written                                                   25720
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `2': Started outputting features
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_4
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Creating writer for format: PostGIS
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Writer `POSTGIS_4' of type `POSTGIS' using group definition keyword `POSTGIS_4_DEF'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Testing for the existence of table 'public.a_a_anlage_routing'...
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Using existing table 'public.a_a_anlage_routing'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_anlage_routing'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_anlage_routing'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Committed transaction at feature '1000'
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `2': Writing feature 1000 
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Successfully closed POSTGIS database writer
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_4':
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |                               Features Written
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.a_a_anlage_routing                                                 1288
-2024-04-24 11:40:31|  14.7|  0.0|STATS |==============================================================================
-2024-04-24 11:40:31|  14.7|  0.0|STATS |Total Features Written                                                    1288
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `2': done writing 1288 feature(s) 
-2024-04-24 11:40:31|  14.7|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |                            Features Read Summary
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.a_a_routing_noded                                                 27156
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.anlagen                                                            1286
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.anlagen_endpunkt                                                   1286
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.anlagen_startpunkt                                                 1286
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.pisten                                                             9454
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.pisten_endpunkt                                                    9453
-2024-04-24 11:40:31|  14.7|  0.0|STATS |public.pisten_startpunkt                                                  9453
-2024-04-24 11:40:31|  14.7|  0.0|STATS |text_line                                                                    2
-2024-04-24 11:40:31|  14.7|  0.0|STATS |==============================================================================
-2024-04-24 11:40:31|  14.7|  0.0|STATS |Total Features Read                                                      59376
-2024-04-24 11:40:31|  14.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.8|  0.1|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.8|  0.0|STATS |                           Features Written Summary
-2024-04-24 11:40:31|  14.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.8|  0.0|STATS |public.a_a_anlage_routing                                                 1288
-2024-04-24 11:40:31|  14.8|  0.0|STATS |public.a_a_routing                                                       25720
-2024-04-24 11:40:31|  14.8|  0.0|STATS |==============================================================================
-2024-04-24 11:40:31|  14.8|  0.0|STATS |Total Features Written                                                   27008
-2024-04-24 11:40:31|  14.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-04-24 11:40:31|  14.8|  0.0|INFORM|Translation was SUCCESSFUL with 5 warning(s) (27008 feature(s) output)
-2024-04-24 11:40:31|  14.9|  0.1|INFORM|FME Session Duration: 28.3 seconds. (CPU: 13.3s user, 1.6s system)
-2024-04-24 11:40:31|  14.9|  0.0|INFORM|END - ProcessID: 15716, peak process memory usage: 199004 kB, current process memory usage: 108772 kB
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|System Time: 20240429211941 UTC
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Form (floating)
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Temporary License: 63 days left.
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Machine host name is: orange
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen/'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Routing_Vorbereitung.fmw'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Platform: WIN64
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|System Status: 223.09 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1714422203411_21636\fmetmp_4)
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|START - ProcessID: 23476, peak process memory usage: 43080 kB, current process memory usage: 43080 kB
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen\wb-xlate-1714425579887_21636' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `58171' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `57508'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\Routing\02_Pisten_Anlagen'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1714422203411_21636\fmetmp_4', set from environment variable `FME_TEMP'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Creating writer for format: 
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Creating reader for format: 
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
+2024-04-29 23:19:41|   0.0|  0.0|INFORM|Emptying factory pipeline
+2024-04-29 23:19:41|   0.0|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
+2024-04-29 23:19:41|   0.0|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.a_a_routing_noded_POSTGIS_5 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |text_line_TEXTLINE_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.anlagen_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.anlagen_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.anlagen_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.pisten_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.pisten_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |public.pisten_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:41|   0.0|  0.0|STATS |Restoring 20639 feature(s) from FME feature store file `C:\Temp\QGIS\wb-cache-Routing_Vorbereitung-wSFSeZ\Main_LineOnLineOverlayer -1 128 fo 1 LINE  0  83808bfea43ecc14d6a6176977060c21eb99fd5d.ffs'
+2024-04-29 23:19:42|   0.3|  0.3|STATS |Tester_2 (TestFactory): Tested 20639 input feature(s) -- 14866 feature(s) passed and 5773 feature(s) failed
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Orientor_2 (TeeFactory): Cloned 5773 input feature(s) into 5773 output feature(s)
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Orientor_2_Rejector (TestFactory): Tested 5773 input feature(s) -- 0 feature(s) passed and 5773 feature(s) failed
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 5773 input feature(s), wrote 5773 output feature(s): 0 matched merge filters, 0 were routed to output, 5773 could not be routed.
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 5773 input feature(s) into 0 output feature(s)
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |      Features not written - verify feature type fanout/dynamic settings
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |  (Check that fanout/dynamic feature type attribute exists and has a value)
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |                                                                          5773
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |==============================================================================
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |Total features not written                                                5773
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |                            Features Read Summary
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |==============================================================================
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Total Features Read                                                          0
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |                           Features Written Summary
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|STATS |==============================================================================
+2024-04-29 23:19:42|   0.3|  0.0|STATS |Total Features Written                                                       0
+2024-04-29 23:19:42|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~                                                                             ~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~    Feature caches have been recorded at every stage of the translation.     ~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~              click the feature cache icons next to the ports.               ~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~                                                                             ~-
+2024-04-29 23:19:42|   0.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2024-04-29 23:19:42|   0.3|  0.0|INFORM|Translation was SUCCESSFUL with 16 warning(s) (0 feature(s) output)
+2024-04-29 23:19:42|   0.3|  0.0|INFORM|FME Session Duration: 1 second. (CPU: 0.3s user, 0.0s system)
+2024-04-29 23:19:42|   0.3|  0.0|INFORM|END - ProcessID: 23476, peak process memory usage: 91832 kB, current process memory usage: 91432 kB
