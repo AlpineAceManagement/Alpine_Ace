@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif; /* Set a basic web-friendly font */
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0; /* Reset default margins on the body*/
+    padding: 20px; /* Add some padding around content */
+}
+
+h1 {
+    color: #333; /* Dark gray heading */
+    text-align: center; /* Center the heading */
+}
+
+p {
+    line-height: 1.5; /* Increase line spacing for readability */
+}
