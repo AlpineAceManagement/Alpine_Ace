@@ -3,7 +3,7 @@
       "user": "postgres",
       "host": "localhost",
       "database": "geoserver",
-      "password": "Mj5ty2ga8",
+      "password": "",
       "port": 5433
     }
   }
