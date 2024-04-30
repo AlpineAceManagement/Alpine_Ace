@@ -152,7 +152,7 @@
   text-align: center; /* Centers the logo horizontally */
 }
 
-<<<<<<< Updated upstream
+
 .Navi-button {
   width: 2em;
   height: 2em;
@@ -162,7 +162,7 @@
   margin-top: 2vh;
   margin-bottom: 2vh;
   height: 5vh;
-=======
+}
 .large-box{
   flex: 1;
 }
@@ -175,5 +175,5 @@
 .prognosis-chart{
   width: 100%;
   height: 80%;
->>>>>>> Stashed changes
+
 }
