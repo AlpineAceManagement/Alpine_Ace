@@ -1,5 +1,5 @@
 import React from "react";
-import { Vega } from "react-vega";
+import { VegaLite } from "react-vega";
 import { View} from "react-vega";
 import vegaEmbed from "vega-embed";
 import Box from "@mui/material/Box";
@@ -93,8 +93,38 @@ const Wetter = () => {
   //       { "hour": 10, "temperature": 5 },
   //       { "hour": 11, "temperature": 8 },
   // ];
+
+  const spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container", // Use "container" for responsive width
+    "height": "container", // Use "container" for responsive height
+    "description": "A line chart showing weather forecast",
+    "data": {
+      "name": "weather-chart",
+      "values": weatherChartData // Use your weatherChartData variable
+    },
+    "mark": {
+      "type": "line"
+    },
+    "encoding": {
+      "x": { 
+         "field": "hour", 
+         "type": "temporal", 
+         "axis": { "title": "Hour"} 
+      },
+      "y": { 
+          "field": "temperature", 
+          "type": "quantitative",
+          "axis": { "title": "Temperature (°C)" }
+      }
+    }
+  };
+  
+
+
+
   const vegaSpec = {
-      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "$schema": "https://vega.github.io/schema/veg-litea/v5.json",
       "description": "Temperature over Time Line Chart",
       "width": 200,
       "height": 100,
@@ -131,7 +161,7 @@ const Wetter = () => {
       "marks": [
         {
           "type": "line",
-          "from": {"data":"table"},
+          // "from": {"data":"weatherChartData"},
           "encode": {
             "enter": {
               "x": {"scale": "xscale", "field": "hour"},
@@ -184,7 +214,7 @@ const Wetter = () => {
             <div style={{width: "100%", height:"150"}}>
               {weatherChartData?(
                 <VegaLite 
-                spec={vegaSpec}
+                spec={spec}
                 data={{value: weatherChartData}}
                 />
               ): (

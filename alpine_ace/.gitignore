@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules
-src/DB/config.env
+src/DB/config.js
 /.pnp
 .pnp.js
 API/config.py
