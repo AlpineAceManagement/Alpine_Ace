@@ -8,6 +8,12 @@ const theme = createTheme({
       dark: "#cc4d43",
       contrastText: "white",
     },
+    p_purple: {
+      main: "#b655ff",
+      light: "#b655ff",
+      dark: "#b655ff",
+      contrastText: "white",
+    },
     p_white: {
       main: "white",
       contrastText: "black",

@@ -192,11 +192,13 @@ CREATE TABLE IF NOT EXISTS Benutzerprofil(
 
 CREATE TABLE IF NOT EXISTS Skidaten(
 	Skidaten_ID SERIAL PRIMARY KEY,
+	SD_Date DATE,
 	SD_Hoehenmeter FLOAT,
 	SD_Distanz FLOAT,
 	SD_Dauer TIME NOT NULL,
 	SD_Geschwindigkeit FLOAT,
 	SD_MaxGeschwindigkeit FLOAT,
+	SD_Saison TEXT,
 	SD_Geometrie GEOMETRY(LINESTRING, 2056) NOT NULL,
 	Benutzername VARCHAR(50) REFERENCES Benutzerprofil(Benutzername),
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)

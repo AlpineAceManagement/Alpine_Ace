@@ -1,0 +1,23 @@
+SQL view: a_a_skidaten_weg
+
+SELECT
+    v.Skidaten_ID,
+	v.SD_Date,
+	v.SD_Hoehenmeter,
+	v.SD_Distanz,
+	v.SD_Dauer,
+	v.SD_Geschwindigkeit,
+	v.SD_MaxGeschwindigkeit,
+	v.SD_Saison,
+	v.Benutzername,
+    v.SD_Geometrie
+FROM
+    Skidaten AS v
+WHERE
+    v.Skidaten_ID = %Skidaten_ID%
+
+Name			Standardwert		Reguläre Ausdruck-Validierung
+Skidaten_ID		0					^[\d]+$
+
+Geometry
+LineString

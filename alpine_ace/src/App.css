@@ -151,3 +151,14 @@
 .center {
   text-align: center; /* Centers the logo horizontally */
 }
+
+.Navi-button {
+  width: 2em;
+  height: 2em;
+  font-size: larger;
+}
+.button-nvi-grid-item {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  height: 10vh;
+}

@@ -12,7 +12,7 @@ import Collection from "ol/Collection";
 import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
 
-const MapWithMarkers = () => {
+const Test_3 = () => {
   const [showMarker, setShowMarker] = useState(false);
   const [map, setMap] = useState(null);
 
@@ -61,7 +61,7 @@ const MapWithMarkers = () => {
 
       const markerStyle = new Style({
         image: new Icon({
-          src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
+          src: "  //raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
           scale: 0.7,
           anchor: [0.5, 1],
         }),
@@ -110,4 +110,4 @@ const MapWithMarkers = () => {
   );
 };
 
-export default MapWithMarkers;
+export default Test_3;

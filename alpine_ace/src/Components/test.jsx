@@ -13,6 +13,8 @@ import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 import Box from "@mui/material/Box";
 import theme from "./theme";
@@ -268,7 +270,7 @@ const Test = () => {
         <Box
           sx={{
             width: "95vw",
-            height: "70vh",
+            height: "60vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
             marginBottom: "20px",
@@ -280,6 +282,58 @@ const Test = () => {
             ref={mapRef}
             style={{ width: "100%", height: "50%", borderRadius: "3vh" }}
           ></div>{" "}
+        </Box>
+        <Box
+          sx={{
+            width: "95vw",
+            height: "15vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            marginBottom: "20px",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Grid
+            container
+            style={{ width: "95%", margin: "auto" }} // Adjust the width and center the grid
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            justifyContent="center"
+          >
+            <Grid item xs={6} className="button-grid-item">
+              <Button
+                className="Navi-button"
+                variant="contained"
+                color="p_red"
+                fullWidth
+                sx={{ fontSize: "2.3vh" }}
+              >
+                Start
+              </Button>{" "}
+            </Grid>
+            <Grid item xs={6} className="button-grid-item">
+              <Button
+                className="Navi-button"
+                variant="contained"
+                color="p_purple"
+                fullWidth
+                sx={{ fontSize: "2.3vh" }}
+              >
+                Ziel
+              </Button>
+            </Grid>
+            <Grid item xs={6} className="button-grid-item">
+              <Button
+                className="Navi-button"
+                variant="contained"
+                color="p_purple"
+                fullWidth
+                sx={{ fontSize: "2.3vh" }}
+              >
+                Ziel
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
 
         <button onClick={handleButtonClick1} disabled={showMarker1}>
