@@ -339,7 +339,7 @@ const Graph = () => {
                   dy={selectedSeason === "" ? 0 : 20}
                 />
                 <YAxis 
-                  domain={[0, 120]}
+                  domain={selectedSeason === "" ? [0, "auto"] : [0, 120]}
                 >
                   <Label
                     value="[km/h]"
@@ -353,8 +353,6 @@ const Graph = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-
-
         </Box>
       </div>
     </ThemeProvider>
