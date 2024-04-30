@@ -10,6 +10,7 @@ app.use(cors());
 
 // Zugriffsdaten zum GeoServer
 // ---------Andrea---------
+<<<<<<< Updated upstream
 // const pool = new Pool({
 //   user: "postgres",
 //   host: "localhost",
@@ -19,6 +20,26 @@ app.use(cors());
 // });
 
 // ---------Fabian---------
+=======
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "AlpineACE",
+  password: "TeamLH44",
+  port: 5432,
+});
+
+// ---------Fabian---------
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost",
+//   database: "geoserver",
+//   password: "jNtd2C13ka9oaPpRy1jP",
+//   port: 5433,
+// });
+
+// ---------Théo---------
+>>>>>>> Stashed changes
 // const pool = new Pool({
 //   user: "postgres",
 //   host: "localhost",
