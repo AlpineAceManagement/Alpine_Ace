@@ -72,8 +72,8 @@ const Test = () => {
     // Create marker style
     const markerStyle = new Style({
       image: new Icon({
-        src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker.png",
-        scale: 0.7,
+        src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/map-marker_green.svg",
+        scale: 1.75,
         anchor: [0.5, 1],
       }),
     });
@@ -107,8 +107,8 @@ const Test = () => {
     // Create marker style
     const markerStyle = new Style({
       image: new Icon({
-        src: "//raw.githubusercontent.com/jonataswalker/map-utils/master/images/marker_3cc483.png",
-        scale: 0.7,
+        src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/map-marker_purple.svg",
+        scale: 1.75,
         anchor: [0.5, 1],
       }),
     });
@@ -304,7 +304,7 @@ const Test = () => {
               <Button
                 className="Navi-button"
                 variant="contained"
-                color="p_red"
+                color="p_green"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
                 button
@@ -332,7 +332,7 @@ const Test = () => {
               <Button
                 className="Navi-button"
                 variant="contained"
-                color="p_green"
+                color="p_red"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
               >
