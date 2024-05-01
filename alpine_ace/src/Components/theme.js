@@ -2,6 +2,11 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
+    action: {
+      active: {
+        disabledBackground: "#FF6155",
+      },
+    },
     p_red: {
       main: "#FF6155",
       light: "#ff7754",

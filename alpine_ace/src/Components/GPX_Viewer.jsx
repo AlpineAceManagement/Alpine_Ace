@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 import theme from "./theme";
 import LineString from "ol/geom/LineString.js";
 
-const Karte = () => {
+const GPX_Viewer = () => {
   const mapRef = useRef(null); // Reference to the map container
   const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
 
@@ -295,4 +295,4 @@ const Karte = () => {
   );
 };
 
-export default Karte;
+export default GPX_Viewer;

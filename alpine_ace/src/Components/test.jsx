@@ -306,7 +306,13 @@ const Test = () => {
                 variant="contained"
                 color="p_green"
                 fullWidth
-                sx={{ fontSize: "2.3vh" }}
+                sx={{
+                  fontSize: "2.3vh",
+                  "&.Mui-disabled": {
+                    background: "#a9e37e",
+                    color: "white",
+                  },
+                }}
                 button
                 onClick={handleButtonClick1}
                 disabled={showMarker1}
@@ -320,7 +326,13 @@ const Test = () => {
                 variant="contained"
                 color="p_purple"
                 fullWidth
-                sx={{ fontSize: "2.3vh" }}
+                sx={{
+                  fontSize: "2.3vh",
+                  "&.Mui-disabled": {
+                    background: "#cc88ff",
+                    color: "white",
+                  },
+                }}
                 button
                 onClick={handleButtonClick2}
                 disabled={showMarker2}
