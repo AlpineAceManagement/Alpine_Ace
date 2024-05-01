@@ -10,7 +10,9 @@ import VectorLayer from "ol/layer/Vector";
 import { ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-<<<<<<< HEAD
+import { bbox as bboxStrategy } from "ol/loadingstrategy";
+import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Projection } from "ol/proj";
 
 const GPX_Viewer = () => {
   const mapRef = useRef(null);
@@ -18,17 +20,23 @@ const GPX_Viewer = () => {
   useEffect(() => {
     // const geoserverWFSWegLayer = "Alpine_Ace:a_a_skidaten_weg";
 
-    const wegVectorSource = new VectorSource({
-      format: new GeoJSON(),
-      url: "http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:1;&outputformat=application/json",
-    });
-
-    const wegVectorLayer = new VectorLayer({
-      source: wegVectorSource,
-    });
-
     const extent = [2420000, 130000, 2900000, 1350000];
-
+    const geoserverWFSPointLayer = "Alpine_Ace:Restaurant";
+    const pointVectorSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        return (
+          "http://localhost:8080/geoserver/wfs?service=WFS&" +
+          "version=1.1.0&request=GetFeature&typename=" +
+          geoserverWFSPointLayer +
+          "&outputFormat=application/json"
+        );
+      },
+      strategy: bboxStrategy,
+      onError: function (error) {
+        console.error("Error fetching WFS point data:", error);
+      },
+    });
     const swisstopoLayer = new TileLayer({
       extent: extent,
       source: new TileWMS({
@@ -46,13 +54,60 @@ const GPX_Viewer = () => {
       }),
     });
 
+    const pointVectorLayer = new VectorLayer({
+      source: pointVectorSource,
+      style: new Style({
+        image: new Circle({
+          radius: 4,
+          fill: new Fill({
+            color: "orange",
+          }),
+        }),
+      }),
+    });
+    const geoserverWFSAnlagenLayer = "Alpine_Ace:anlagen"; // Geoserver WFS Anlagen Layername
+    const wegVectorSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        // Pfad zur WFS Resource auf dem GeoServer
+        return (
+          "http://localhost:8080/geoserver/wfs?service=WFS&" +
+          "version=1.1.0&request=GetFeature&typename=" +
+          geoserverWFSAnlagenLayer +
+          "&outputFormat=application/json"
+        );
+      },
+      strategy: bboxStrategy,
+      // Add error handler
+      onError: function (error) {
+        console.error("Error fetching WFS anlagen data:", error);
+      },
+    });
+    console.log("wegVectorData:", wegVectorSource);
+
+    const wegVectorLayer = new VectorLayer({
+      source: wegVectorSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "orange",
+          width: 4,
+        }),
+      }),
+    });
+
+    swisstopoLayer.setZIndex(0);
+    wegVectorLayer.setZIndex(1);
+    pointVectorLayer.setZIndex(2);
+
     const map = new Map({
-      layers: [swisstopoLayer, wegVectorLayer],
-      target: mapRef.current,
+      layers: [swisstopoLayer, wegVectorLayer, pointVectorLayer],
       view: new View({
         center: [2762640.8, 1179359.1],
         zoom: 12,
-        projection: "EPSG:2056",
+        projection: new Projection({
+          code: "EPSG:2056",
+          units: "m",
+        }),
       }),
     });
 
@@ -69,91 +124,6 @@ const GPX_Viewer = () => {
     };
   }, []);
 
-=======
-import { Link } from "react-router-dom";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import "../App.css";
-import { Vega } from "react-vega";
-import wellknown from "wellknown";
-
-const GPX_Viewer = () => {
-  const [geometryData, setGeometryData] = useState(""); // Assume you have geometry data in WKT format
-
-  // Fetch geometry data from API
-  useEffect(() => {
-    fetch("http://localhost:5000/api/skidaten")
-      .then((response) => response.json())
-      .then((data) => {
-        // Assuming the geometry data is stored in the "sd_geometrie" field of each item
-        const firstItem = data[0];
-        if (firstItem && firstItem.sd_geometrie) {
-          setGeometryData(firstItem.sd_geometrie);
-        }
-      })
-      .catch((error) => console.error("Error fetching geometry data:", error));
-  }, []);
-
-  // Parse the WKT geometry
-  const parsedGeometry = geometryData ? wellknown.parse(geometryData) : null;
-
-  // Check if parsedGeometry is not null before accessing its properties
-  const lineData =
-    parsedGeometry && parsedGeometry.coordinates
-      ? parsedGeometry.coordinates.map((coord) => ({
-          x: coord[0],
-          y: coord[1],
-        }))
-      : [];
-
-  // Vega specification for plotting geometry with zoom
-  const vegaSpec = {
-    $schema: "https://vega.github.io/schema/vega/v5.json",
-    width: 400,
-    height: 200,
-    padding: 5,
-
-    data: [
-      {
-        name: "lineData",
-        values: lineData,
-      },
-    ],
-
-    scales: [
-      {
-        name: "x",
-        type: "linear",
-        range: "width",
-        zero: false,
-        domain: { data: "lineData", field: "x" },
-      },
-      {
-        name: "y",
-        type: "linear",
-        range: "height",
-        zero: false,
-        domain: { data: "lineData", field: "y" },
-      },
-    ],
-
-    marks: [
-      {
-        type: "line",
-        from: { data: "lineData" },
-        encode: {
-          enter: {
-            x: { scale: "x", field: "x" },
-            y: { scale: "y", field: "y" },
-            stroke: { value: "steelblue" },
-            strokeWidth: { value: 2 },
-          },
-        },
-      },
-    ],
-  };
-
->>>>>>> 8e1bf0f03fc1bfd4c0841a49becb80cc40b43a22
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -163,16 +133,11 @@ const GPX_Viewer = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-<<<<<<< HEAD
-=======
-          color: "#282c34",
->>>>>>> 8e1bf0f03fc1bfd4c0841a49becb80cc40b43a22
         }}
       >
         <Box
           sx={{
             width: "90vw",
-<<<<<<< HEAD
             height: "50vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
@@ -185,78 +150,10 @@ const GPX_Viewer = () => {
             ref={mapRef}
             style={{
               width: "100%",
-              height: "100%",
+              height: "200px",
               borderRadius: "3vh",
             }}
           ></div>
-=======
-            minHeight: "50vh",
-            borderRadius: 4,
-            bgcolor: "p_white.main",
-            marginBottom: "20px",
-            overflowY: "auto",
-            position: "relative",
-          }}
-        >
-          <Link
-            to="/Statistiken"
-            style={{
-              textDecoration: "none",
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-            }}
-          >
-            <button
-              style={{
-                backgroundColor: "#ff6155",
-                color: "white",
-                padding: "8px",
-                border: "none",
-                borderRadius: "4px",
-                marginBottom: "10px",
-              }}
-            >
-              Stats
-            </button>
-          </Link>
-          <Link
-            to="/Graph"
-            style={{
-              textDecoration: "none",
-              position: "absolute",
-              top: "50px",
-              right: "10px",
-            }}
-          >
-            <button
-              style={{
-                backgroundColor: "#ff6155",
-                color: "white",
-                padding: "8px",
-                border: "none",
-                borderRadius: "4px",
-              }}
-            >
-              Graph
-            </button>
-          </Link>
-
-          <h1
-            style={{
-              textAlign: "center",
-              marginBottom: "20px",
-              marginTop: "10px",
-            }}
-          >
-            GPX Viewer
-          </h1>
-
-          {/* Vega chart */}
-          <div id="vega-container">
-            <Vega spec={vegaSpec} renderer="svg" />
-          </div>
->>>>>>> 8e1bf0f03fc1bfd4c0841a49becb80cc40b43a22
         </Box>
       </div>
     </ThemeProvider>
