@@ -17,6 +17,7 @@ import Einstellungen from "./Components/Einstellungen";
 import Test_2 from "./Components/test_2";
 import Test_3 from "./Components/test_3";
 import GPX_Viewer from "./Components/GPX_Viewer";
+import Bulettin_karte from "./Components/Bulettin_karte";
 
 function App() {
   return (
@@ -142,6 +143,16 @@ function App() {
               <>
                 <Kopfzeile />
                 <GPX_Viewer />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/Bulettin_karte"
+            element={
+              <>
+                <Kopfzeile />
+                <Bulettin_karte />
               </>
             }
           />
