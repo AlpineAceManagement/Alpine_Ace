@@ -415,3 +415,393 @@ LINE 4:                                         WHERE B_REGION_ID = ...
                                                       ^
 HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
 
+2024-05-01 14:48:12,955 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:12,996 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,031 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,056 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,087 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,118 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,258 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,290 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:48:13,496 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:48:13,526 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,526 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:48:13,562 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,562 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:48:13,602 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,602 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:48:13,643 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,643 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:48:13,688 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,689 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:48:13,730 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,730 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:48:13,751 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:48:13,751 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 14:48:13,783 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:20,352 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,389 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,418 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,451 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,483 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,505 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,549 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,577 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:50:20,833 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:50:20,866 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:20,866 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:50:20,900 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:20,900 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:50:20,933 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:20,933 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:50:20,966 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:20,966 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:50:21,004 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:21,004 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:50:21,149 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:21,150 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:50:21,183 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:50:21,183 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 14:50:21,217 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:55:25,702 - ERROR - Error truncating table: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,020 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,054 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,086 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,117 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,148 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,286 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,320 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,360 - ERROR - Error storing geometries: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,561 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:55:26,591 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,591 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:55:26,621 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,621 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:55:26,650 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,650 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:55:26,682 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,682 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:55:26,710 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,710 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:55:26,744 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,744 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:55:26,769 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:55:26,769 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 14:55:26,806 - ERROR - Error updating data in database: connection to server at "localhost" (::1), port 5433 failed: FATAL:  password authentication failed for user "postgre"
+
+2024-05-01 14:56:08,162 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,195 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,227 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,259 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,279 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,314 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,353 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,376 - ERROR - Error storing geometries: column "b_region_id" of relation "bulletins" does not exist
+LINE 1: INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
+                                            ^
+
+2024-05-01 14:56:08,612 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:56:08,642 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,642 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:56:08,686 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,686 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:56:08,729 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,729 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:56:08,771 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,771 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:56:08,805 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,805 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:56:08,837 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,837 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:56:08,869 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:56:08,869 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 14:56:08,911 - ERROR - Error updating data in database: column "b_region_id" does not exist
+LINE 4:                                         WHERE B_REGION_ID = ...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
+
+2024-05-01 14:57:08,552 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:57:08,597 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:57:08,643 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:57:08,712 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:57:08,862 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:57:08,908 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:57:08,950 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:57:08,989 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 14:59:33,509 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 14:59:33,558 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 14:59:33,595 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 14:59:33,634 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 14:59:33,679 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 14:59:33,726 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 14:59:33,762 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 14:59:33,802 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 15:00:14,120 - INFO - Processing bulletin 85c104ac-a3a6-445b-a161-5e4cd9d7e472 for region: {'name': 'nördliches Simplon Gebiet', 'regionID': 'CH-4231'}
+2024-05-01 15:00:14,158 - INFO - Processing bulletin 7290bb69-6b55-4a7a-97ff-45078da55af8 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 15:00:14,192 - INFO - Processing bulletin 1c009aec-4a8b-46ab-a60e-ad712f50ea49 for region: {'name': 'Corvatsch', 'regionID': 'CH-7111'}
+2024-05-01 15:00:14,227 - INFO - Processing bulletin 56701bd0-97c9-4a20-9e42-9099fa040417 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 15:00:14,261 - INFO - Processing bulletin c8812fb0-ad95-4d6f-9907-8b6a7f3b83c1 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 15:00:14,295 - INFO - Processing bulletin 79f576f7-6de6-4e8b-ad13-57c7dc4605fe for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 15:00:14,329 - INFO - Processing bulletin 85ffa50e-1529-4d98-8e5c-733b7a544709 for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-01 15:00:14,362 - INFO - Processing bulletin ba61e12b-9e4e-4239-920c-e4d0231f7d25 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:04:33,592 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:04:33,639 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:04:33,671 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:04:33,721 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:04:33,771 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:04:33,808 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:04:33,854 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:04:34,090 - INFO - Processing bulletin 1c82bec6-cf81-4eee-96ff-cee8b95d3609 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:04:34,121 - INFO - Processing bulletin cd1c0319-d7cf-4365-ae04-7b166af4fce1 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:04:34,153 - INFO - Processing bulletin eae632a8-1a59-47e8-90eb-5427f782fbbe for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:04:34,185 - INFO - Processing bulletin 36e7d829-865a-4fb2-9a1d-c3454fd985aa for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:04:34,221 - INFO - Processing bulletin 417e9d51-8b79-4b65-91be-46c7b589a79a for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:04:34,253 - INFO - Processing bulletin e8e7a4ac-d5d9-4664-8806-a17fa67aa7c7 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:04:34,286 - INFO - Processing bulletin 3c46d46a-5f8e-4bc0-94b4-90fd765b5469 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:06:02,654 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:06:02,703 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:06:02,746 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:06:02,789 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:06:02,835 - ERROR - Error storing geometries: too many values to unpack (expected 2)
+2024-05-01 17:06:02,880 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:06:02,924 - ERROR - Error storing geometries: not enough values to unpack (expected 2, got 1)
+2024-05-01 17:06:03,126 - INFO - Processing bulletin 1c82bec6-cf81-4eee-96ff-cee8b95d3609 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:06:03,161 - INFO - Processing bulletin cd1c0319-d7cf-4365-ae04-7b166af4fce1 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:06:03,198 - INFO - Processing bulletin eae632a8-1a59-47e8-90eb-5427f782fbbe for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:06:03,234 - INFO - Processing bulletin 36e7d829-865a-4fb2-9a1d-c3454fd985aa for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:06:03,378 - INFO - Processing bulletin 417e9d51-8b79-4b65-91be-46c7b589a79a for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:06:03,413 - INFO - Processing bulletin e8e7a4ac-d5d9-4664-8806-a17fa67aa7c7 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:06:03,448 - INFO - Processing bulletin 3c46d46a-5f8e-4bc0-94b4-90fd765b5469 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:07:52,360 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,515 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,563 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,613 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,659 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,704 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:52,752 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:53,011 - INFO - Processing bulletin 1c82bec6-cf81-4eee-96ff-cee8b95d3609 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:07:53,053 - INFO - Processing bulletin cd1c0319-d7cf-4365-ae04-7b166af4fce1 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:07:53,094 - INFO - Processing bulletin eae632a8-1a59-47e8-90eb-5427f782fbbe for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:07:53,131 - INFO - Processing bulletin 36e7d829-865a-4fb2-9a1d-c3454fd985aa for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:07:53,168 - INFO - Processing bulletin 417e9d51-8b79-4b65-91be-46c7b589a79a for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:07:53,198 - INFO - Processing bulletin e8e7a4ac-d5d9-4664-8806-a17fa67aa7c7 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:07:53,237 - INFO - Processing bulletin 3c46d46a-5f8e-4bc0-94b4-90fd765b5469 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:07:57,332 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,374 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,425 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,570 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,634 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,685 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,738 - ERROR - Error storing geometries: Geometry SRID (4326) does not match column SRID (2056)
+
+2024-05-01 17:07:57,972 - INFO - Processing bulletin 1c82bec6-cf81-4eee-96ff-cee8b95d3609 for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:07:58,005 - INFO - Processing bulletin cd1c0319-d7cf-4365-ae04-7b166af4fce1 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:07:58,055 - INFO - Processing bulletin eae632a8-1a59-47e8-90eb-5427f782fbbe for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:07:58,104 - INFO - Processing bulletin 36e7d829-865a-4fb2-9a1d-c3454fd985aa for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:07:58,156 - INFO - Processing bulletin 417e9d51-8b79-4b65-91be-46c7b589a79a for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:07:58,225 - INFO - Processing bulletin e8e7a4ac-d5d9-4664-8806-a17fa67aa7c7 for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:07:58,455 - INFO - Processing bulletin 3c46d46a-5f8e-4bc0-94b4-90fd765b5469 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:19:25,215 - INFO - Processing bulletin 6f57bde9-4115-4518-a121-f5b727b1322e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:19:25,253 - INFO - Processing bulletin c46d17bf-55fc-43d1-994c-c5c4ed47f367 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:19:25,286 - INFO - Processing bulletin 2fa88e58-67b3-4b60-a61d-5b62237bedf9 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:19:25,320 - INFO - Processing bulletin 13a43418-b43f-4b5b-8088-8237af3d6f7f for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:19:25,353 - INFO - Processing bulletin 738b5dde-d4ca-4bf5-b9e3-c8b0dc856c17 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:19:25,389 - INFO - Processing bulletin 848d9300-9471-40e8-a5e1-db3701dadb9d for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:19:25,422 - INFO - Processing bulletin d1ccff33-86b3-458c-8b77-3858b75cefd6 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-01 17:19:40,593 - INFO - Processing bulletin 6f57bde9-4115-4518-a121-f5b727b1322e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-01 17:19:40,624 - INFO - Processing bulletin c46d17bf-55fc-43d1-994c-c5c4ed47f367 for region: {'name': 'unteres Puschlav', 'regionID': 'CH-7222'}
+2024-05-01 17:19:40,658 - INFO - Processing bulletin 2fa88e58-67b3-4b60-a61d-5b62237bedf9 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-01 17:19:40,817 - INFO - Processing bulletin 13a43418-b43f-4b5b-8088-8237af3d6f7f for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-01 17:19:40,860 - INFO - Processing bulletin 738b5dde-d4ca-4bf5-b9e3-c8b0dc856c17 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-01 17:19:40,898 - INFO - Processing bulletin 848d9300-9471-40e8-a5e1-db3701dadb9d for region: {'name': 'Gstaad', 'regionID': 'CH-1222'}
+2024-05-01 17:19:40,937 - INFO - Processing bulletin d1ccff33-86b3-458c-8b77-3858b75cefd6 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}

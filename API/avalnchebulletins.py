@@ -51,19 +51,18 @@ def get_regions():
 
 def store_geometries(region):
     try:
+
         # Connect to the database
         conn = psycopg2.connect(**config.db_config)
         cursor = conn.cursor()
+
         # Convert geometry dictionary to GeoJSON string
         geometry_json = json.dumps(region["geometry"])
         region_id = region["region_id"]
-        
-
-        
 
         cursor.execute(
             '''INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
-                VALUES (ST_GeomFromGeoJSON(%s),%s)''',
+                VALUES (ST_Transform(ST_SetSRID(ST_GeomFromGeoJSON(%s), 4326), 2056), %s)''', #Geometry are ocnvertet from 4326 to 2056
                 (geometry_json, region_id)
         )
         conn.commit()
