@@ -10,9 +10,6 @@ import VectorLayer from "ol/layer/Vector";
 import { ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-import { bbox as bboxStrategy } from "ol/loadingstrategy";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
-import { Projection } from "ol/proj";
 
 const GPX_Viewer = () => {
   const mapRef = useRef(null);

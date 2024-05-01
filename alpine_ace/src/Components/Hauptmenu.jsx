@@ -7,10 +7,21 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SettingsIcon from "@mui/icons-material/Settings";
+import {Vega} from "react-vega";
+
+import spec_analgen from "./diagramms_anlagen";
+import spec_pisten from "./diagramm_pisten";
 
 import "../App.css";
 
+
 const Hauptmenu = () => {
+  
+
+
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -71,12 +82,35 @@ const Hauptmenu = () => {
             marginBottom: "20px",
           }}
         >
-          {" "}
-          <img
-            src={require("../mockup/dashboard.png")}
-            alt=""
-            style={{ maxWidth: "100%", maxHeight: "100%", marginTop: "10%" }}
-          />
+          <Grid
+            container
+            style={{width: "95", margin:"auto"}}
+            columnSpacing={{xs:1,sm:2,md:3}}
+            justifyContent="center"
+          >
+            <Grid item xs={12}>
+              <h1 style={{color:"#00112e"}}>Lenzerheide Aktuell</h1>
+            </Grid> 
+            <Grid item xs={12}>
+              <h1 style={{color:"#00112e"}}>karte</h1>
+            </Grid>
+            <Grid item xs={4}>
+              <div>
+                <Vega spec={spec_analgen}/>
+              </div>
+            </Grid>
+            <Grid item xs={4}>
+              <h1 style={{color:"#00112e"}}>bulettin</h1>
+            </Grid>
+            <Grid item xs={4}>
+              <div>
+                <Vega spec={spec_pisten}/>
+              </div>
+            </Grid>
+
+
+          </Grid>
+
         </Box>
 
         <Box
