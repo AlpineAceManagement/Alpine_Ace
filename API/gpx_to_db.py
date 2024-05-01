@@ -4,6 +4,8 @@ from datetime import datetime
 from math import sqrt, cos, pi
 import psycopg2
 import config
+from pyproj import Transformer
+import os
 
 # Namespace
 ns = {'gpx': 'http://www.topografix.com/GPX/1/1'}
@@ -133,13 +135,20 @@ conn = psycopg2.connect(**config.db_config)
 cur = conn.cursor()
 
 # Extraire les données géométriques du fichier GPX et les convertir au format PostgreSQL
+wgs84= "epsg:4326"
+lv95= "epsg:2056"
+transformer1 = Transformer.from_crs("epsg:4326", "epsg:2056")
 geometrie = wurzel.find('.//gpx:trkseg', ns)
 geometrie_text = "LINESTRING("
 for punkt in geometrie.findall('.//gpx:trkpt', ns):
     lon = float(punkt.attrib['lon'])
     lat = float(punkt.attrib['lat'])
-    geometrie_text += "{} {}, ".format(lon, lat)
+    coord_LV95 = transformer1.transform(lat, lon)
+    E = round(coord_LV95[0],3)
+    N = round(coord_LV95[1],3)
+    geometrie_text += "{} {}, ".format(E, N)
 geometrie_text = geometrie_text[:-2] + ")"  # Supprimer la virgule finale et fermer le WKT
+print(geometrie_text)
 
 # Insérer les données géométriques dans la base de données
 insert_query = '''
@@ -153,6 +162,12 @@ conn.commit()
 # Fermer la connexion
 cur.close()
 conn.close()
-
 print("\n")
+if os.path.exists(path +'.csv'):
+    # Use the remove() function to delete the file
+    os.remove(path +'.csv')
+    print(f"The file {path +'.csv'} has been deleted.")
+else:
+    print(f"The file {path +'.csv'} does not exist.")
+
 print("Daten erfolgreich in die Tabelle 'Skidaten' der PostgreSQL-Datenbank eingefügt.")
