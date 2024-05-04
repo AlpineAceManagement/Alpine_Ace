@@ -280,7 +280,7 @@ const Test = () => {
         >
           <div
             ref={mapRef}
-            style={{ width: "100%", height: "50%", borderRadius: "3vh" }}
+            style={{ width: "100%", height: "100%", borderRadius: "3vh" }}
           ></div>{" "}
         </Box>
         <Box

@@ -129,8 +129,8 @@ const Hauptmenu = () => {
       layers: [swisstopoLayer, bulettinVectorLayer],
       target: mapRef.current,
       view: new View({
-        center: [2762640.8, 1179359.1],
-        zoom: 8,
+        center: [2655684.5, 1180000.125],
+        zoom: 7.2,
         projection: new Projection({
           code: "EPSG:2056",
           units: "m",
@@ -188,11 +188,31 @@ const Hauptmenu = () => {
             </item>
           </Grid>
         </Grid>
+        <Box
+          sx={{
+            width: "90vw",
+            height: "22vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            marginBottom: "20px",
+            position: "relative",
+            overflow: "hidden", // Kein Overflow der Karte
+          }}
+        >
+          <div
+            ref={mapRef}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "3vh",
+            }}
+          ></div>
+        </Box>
 
         <Box
           sx={{
             width: "90vw",
-            height: "50vh",
+            height: "25vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
             marginBottom: "20px",
@@ -207,35 +227,14 @@ const Hauptmenu = () => {
             <Grid item xs={12}>
               <h1 style={{ color: "#00112e" }}>Lenzerheide Aktuell</h1>
             </Grid>
-            <Grid item xs={12}>
-              <Box
-                sx={{
-                  width: "90vw",
-                  height: "22vh",
-                  borderRadius: "3vh",
-                  bgcolor: "p_white.main",
-                  marginBottom: "20px",
-                  position: "relative",
-                  overflow: "hidden", // Kein Overflow der Karte
-                }}
-              >
-                <div
-                  ref={mapRef}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "3vh",
-                  }}
-                ></div>
-              </Box>
-            </Grid>
+            <Grid item xs={12}></Grid>
             <Grid item xs={4}>
               <div>
                 <Vega spec={spec_analgen} />
               </div>
             </Grid>
             <Grid item xs={4}>
-              <h1 style={{ color: "#00112e" }}>bulettin</h1>
+              <h1 style={{ color: "#00112e" }}></h1>
             </Grid>
             <Grid item xs={4}>
               <div>

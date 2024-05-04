@@ -14,3 +14,6 @@ ST_Collect(e.the_geom) AS geom
  FROM pgr_dijkstra('SELECT id,source,target,distance AS cost 
  FROM a_a_routing_noded',%source%,%target%,false) AS r,a_a_routing_noded AS e 
  WHERE r.edge=e.id GROUP BY e.old_id, e.p_farbe
+
+
+
