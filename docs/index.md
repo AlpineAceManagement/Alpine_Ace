@@ -1,3 +1,5 @@
+<a id=start></a>
+
 # Alpine Ace - Ski App
 
 Das ist die Projekt Website des *Alpine Ace Ski App*. Das App enthält eine Server und eine Client Umgebung.
@@ -11,14 +13,24 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 ## Inhaltsverzeichnis
 - [Beschrieb](#beschrieb)
 - [Funktionen](#funktionen)
+    - [Backend](#backend)
+    - [Frontend](#frontend)   
 - [Incoming Features](#features)
 - [Contribution](#contribution)
 
 ## Beschrieb des Apps
 <a id=beschrieb></a>
 
+
+
 ## Funktionen
 <a id=funktionen></a>
+
+### Backend
+<a id=backend></a>
+
+### Frontend
+<a id=frontend></a>
 
 ## Incoming Features
 <a id=features></a>
@@ -29,3 +41,6 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 - Andrea Bricali, GitHub: [AJPB4133](https://github.com/AJPB4133)
 - Fabian Gross, GitHub: [loopercamera](https://github.com/loopercamera)
 - Théo Reibel, GitHub: [TheoR14](https://github.com/TheoR14)
+
+
+[Zurück nach oben](#start)
