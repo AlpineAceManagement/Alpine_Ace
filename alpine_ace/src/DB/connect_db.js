@@ -54,7 +54,7 @@ app.get("/api/prognose", async (req, res) => {
     const actualDate = formattedDate.rows[0].today;
 
     const result = await client.query(
-      "SELECT pg_datum, pg_niederschlagswahrscheinlichkeit, pg_temperatur FROM Prognose WHERE date_trunc('day', pg_datum) = $1 order by pg_datum ;",
+      "SELECT  pg_datum, pg_temperatur FROM Prognose WHERE date_trunc('day', pg_datum) = $1 order by pg_datum ;",
       [actualDate]
     );
 

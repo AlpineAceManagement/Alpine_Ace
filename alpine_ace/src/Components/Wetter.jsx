@@ -1,5 +1,5 @@
 import React from "react";
-import { VegaLite } from "react-vega";
+import { Vega, VegaLite } from "react-vega";
 import { View} from "react-vega";
 import vegaEmbed from "vega-embed";
 import Box from "@mui/material/Box";
@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 import { parse, scale } from "vega";
 import { title } from "vega-lite/build/src/channeldef";
 import VegaEmbed from "react-vega/lib/VegaEmbed";
+
+import spec_wetter from "./diagramm_wetter";
 
 const Wetter = () => {
   //------------------------------------------------------------------------
@@ -47,11 +49,11 @@ const Wetter = () => {
         }
         const data1 = await response1.json();
         setSnowData(data1[0]);
-        setLoading(false);
+        setSnowLoading(false);
       } catch (error) {
         console.error("Error fetching snow data", error);
-        setError("Error fetching snow data. Please try again.");
-        setLoading(false);
+        setSnowError("Error fetching snow data. Please try again.");
+        setSnowLoading(false);
       }
       try {
         const response2 = await fetch("http://localhost:5000/api/prognose");
@@ -79,114 +81,9 @@ const Wetter = () => {
     fetchData();
   }, []);
 
-  // const temp = [
-  //   { "hour": 0, "temperature": 10 },
-  //       { "hour": 1, "temperature": -4.178500175476074 },
-  //       { "hour": 2, "temperature": -4.378499984741211 },
-  //       { "hour": 3, "temperature": -4.628499984741211 },
-  //       { "hour": 4, "temperature": -4.628499984741211 },
-  //       { "hour": 5, "temperature": 5 },
-  //       { "hour": 6, "temperature": 6 },
-  //       { "hour": 7, "temperature": 5 },
-  //       { "hour": 8, "temperature": 5 },
-  //       { "hour": 9, "temperature": 6 },
-  //       { "hour": 10, "temperature": 5 },
-  //       { "hour": 11, "temperature": 8 },
-  // ];
-
-  const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container", // Use "container" for responsive width
-    "height": "container", // Use "container" for responsive height
-    "description": "A line chart showing weather forecast",
-    "data": {
-      "name": "weather-chart",
-      "values": weatherChartData // Use your weatherChartData variable
-    },
-    "mark": {
-      "type": "line"
-    },
-    "encoding": {
-      "x": { 
-         "field": "hour", 
-         "type": "temporal", 
-         "axis": { "title": "Hour"} 
-      },
-      "y": { 
-          "field": "temperature", 
-          "type": "quantitative",
-          "axis": { "title": "Temperature (°C)" }
-      }
-    }
-  };
-  
+ 
 
 
-
-  const vegaSpec = {
-      "$schema": "https://vega.github.io/schema/veg-litea/v5.json",
-      "description": "Temperature over Time Line Chart",
-      "width": 200,
-      "height": 100,
-      "padding": 5,
-    
-      "data": [
-        {
-          // "name": "table",
-          "values": weatherChartData
-        }
-      ],
-      "scales": [
-        {
-          "name": "xscale",
-          "type": "band",
-          "domain": {"data": "table", "field": "hour"},
-          "range": "width",
-          "padding": 0.05,
-          "round": true
-        },
-        {
-          "name": "yscale",
-          "domain": {"data": "table", "field": "temperature"},
-          "nice": true, 
-          "range": "height" 
-        }
-      ],
-    
-      "axes": [
-        { "orient": "bottom", "scale": "xscale", "title": "Hour" },
-        { "orient": "left", "scale": "yscale", "title": "Temperature (°C)" }
-      ],
-    
-      "marks": [
-        {
-          "type": "line",
-          // "from": {"data":"weatherChartData"},
-          "encode": {
-            "enter": {
-              "x": {"scale": "xscale", "field": "hour"},
-              "y": {"scale": "yscale", "field": "temperature"},
-              "stroke": {"value": "steelblue"},
-              "strokeWidth": {"value": 2}
-            }
-          }
-        }
-      ]
-    };
-
-  // Neue Komponente für das Prognose-Diagramm
-  // const PrognosisChart = ({ data }) => {
-  //   // ... Vega-Spezifikation und Rendering
-  //   return <Vega spec={vegaSpec} data={{ table: data }} />;
-  // };
-  // const runtime = parse(vegaSpec)
-  // var view = new Vega.View(runtime)
-  // .logLevel(Vega.Warn) // set view logging level
-  // .renderer('svg')     // set render type (defaults to 'canvas')
-  // .initialize('#view') // set parent DOM element
-  // .hover();            // enable hover event processing, *only call once*!
-
-// view.runAsync(); // evaluate and render the view
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -212,17 +109,19 @@ const Wetter = () => {
           <div className="large-box">
             <h1 style={{textAlign: "center", color: "#282c34"}}>Wetter</h1>
             <div style={{width: "100%", height:"150"}}>
-              {weatherChartData?(
-                <VegaLite 
-                spec={spec}
-                data={{value: weatherChartData}}
+              {weatherChartData ?(
+                <VegaLite
+                spec={{
+                  ...spec_wetter,
+                  data: {values:weatherChartData}
+                }}
                 />
-              ): (
-                <div>Loading weather data...</div>
-              )
-            }
-              {/* {weatherChartData && <PrognosisChart data={temp}/>} */}
-              
+              ):(
+                <div> Loading weather data..</div>
+        
+              )}
+
+              {/* <Vega spec={spec_wetter}/> */}
             </div>
             {loading && <p>Loading weather data...</p>}
             {snowloading && <p> Loadin snow data...</p>}
@@ -255,15 +154,14 @@ const Wetter = () => {
                     label="Temperatur (C°)"
                     value={parseFloat(weatherData.md_temperatur).toFixed(1)}
                   />
-                  <WeatherDataItem
+                  <WeatherDataItem2 
                     label="Wetter"
-                    value={weatherData.md_wetter}
-                  />
+                    value={weatherData.md_wetter} />
                   <WeatherDataItem
                     label="Windgeschwindigkeit [km/h]"
                     value={parseFloat(weatherData.md_windgeschwindigkeit.toFixed(1))}
                   />
-                  <WeatherDataItem
+                  <WeatherDataItem3
                     label = "Windrichtung"
                     value={weatherData.md_windrichtung}
                   />
@@ -296,4 +194,56 @@ const WeatherDataItem = ({ label, value }) => (
     <p style={{ textAlign:"center",color: "#00112e" }}>{value}</p>
   </div>
 );
+
+const weatherIconMap = {
+  "sonnig": "sunny",
+  "bewölkt": "cloudy",
+  "schneereich": "weather_snwoy",
+  "regnerisch": "rainy",
+};
+
+const WeatherDataItem2 = ({ label, value }) => {
+  const weatherCondition = value;
+  const iconName = weatherIconMap[weatherCondition] || "help"; // Fallback to 'help' icon
+
+  return (
+    <div>
+      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+        {label}
+      </p>
+      <span className="material-symbols-outlined" style={{ fontSize: "24px", color: "#00112e", display:"block", textAlign:"center" }}> 
+        {iconName}
+      </span>
+    </div>
+  );
+};
+
+const windIconMap = {
+  "Sued": "south",
+  "Sued-Ost": "south_east",
+  "Sued-West": "south_west",
+  "Nord": "north",
+  "Nord-West": "north_west",
+  "Nord-Ost": "north_east",
+};
+
+const WeatherDataItem3 = ({ label, value }) => {
+  const windCondition = value;
+  const iconName = windIconMap[windCondition] || "help"; // Fallback to 'help' icon
+
+  return (
+    <div>
+      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+        {label}
+      </p>
+      <span className="material-symbols-outlined" style={{ fontSize: "24px", color: "#00112e", display:"block", textAlign:"center" }}> 
+        {iconName}
+      </span>
+    </div>
+  );
+};
+
+
+
+
 export default Wetter;
