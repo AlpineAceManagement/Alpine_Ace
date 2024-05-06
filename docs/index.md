@@ -1,10 +1,10 @@
-# GDI Projekt - Footballmap
+# Alpine Ace - Ski App
 
-Das ist die Projekt Website des *Alpine Ace Ski App*. Das GDI enthält eine Server und eine Client Umgebung.
+Das ist die Projekt Website des *Alpine Ace Ski App*. Das App enthält eine Server und eine Client Umgebung.
 - Server: FastAPI
 - Client: React + OpenLayers
 
-GitHub Repository: [https://github.com/314a/GDI_Project](https://github.com/314a/GDI_Project)
+GitHub Repository: [https://github.com/AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
 ![GDI Projekt Screenshot](screenshot.png)
 
