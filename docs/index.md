@@ -4,9 +4,9 @@ Das ist die Projekt Website des *Alpine Ace Ski App*. Das App enthält eine Serv
 - Server: FastAPI
 - Client: React + OpenLayers
 
-GitHub Repository: [https://github.com/AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
+GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![GDI Projekt Screenshot](screenshot.png)
+![Alpine Ace Startseite Screenshot](Startseite.png)
 
 ## Inhaltsverzeichnis
 - [Startseite](./index)
