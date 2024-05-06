@@ -10,6 +10,11 @@ h1 {
     text-align: center; /* Center the heading */
 }
 
+h2 {
+    color: #FF0000; /* Dark gray heading */
+    text-align: center; /* Center the heading */
+}
+
 p {
     line-height: 1.5; /* Increase line spacing for readability */
 }
