@@ -4,9 +4,9 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 ## Funktionen
 
 *Hochwertige Karten zur Orientierung und Navigation im Gelände.
-*Akutelle Informationen über Wetter und Lawinensituation für jedes Skigebiet.
-*Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
-*Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
+- Akutelle Informationen über Wetter und Lawinensituation für jedes Skigebiet.
+- Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
+- Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
 
 ## Installation
 
@@ -22,7 +22,6 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 
 
-Hier wird der ganze Platform Code hochgeladen.
-
-
-[Page: alpineacemanagement.github.io](https://alpineacemanagement.github.io/Alpine_Ace/)
+## Page
+Für weiter Informationen zum Projekt beuschen Sie unsere GitHub Page:
+[alpineacemanagement.github.io](https://alpineacemanagement.github.io/Alpine_Ace/)
