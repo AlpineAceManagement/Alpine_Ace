@@ -9,12 +9,23 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 ![Alpine Ace Startseite Screenshot](images/Startseite.png)
 
 ## Inhaltsverzeichnis
-- [Startseite](./index)
-- [Beschrieb](./beschrieb)
-- [Benötigte Module + Installation](./installation)
-- [Contribution](./contribution)
-- [Licences](./licences)
-- [Datenbankschema](./datenbankschema)
-- [Prozess Diagramm](./prozess)
-- [Funktionen](./funktionen)
-- [Incoming Features](./features)
+- [Beschrieb](#beschrieb)
+- [Funktionen](#funktionen)
+- [Incoming Features](#features)
+- [Contribution](#contribution)
+
+## Beschrieb des Apps
+<a id=beschrieb></a>
+
+## Funktionen
+<a id=funktionen></a>
+
+## Incoming Features
+<a id=features></a>
+
+## Contribution
+<a id=contribution></a>
+
+- Andrea Bricali, GitHub: [AJPB4133](https://github.com/AJPB4133)
+- Fabian Gross, GitHub: [loopercamera](https://github.com/loopercamera)
+- Théo Reibel, GitHub: [TheoR14](https://github.com/TheoR14)
