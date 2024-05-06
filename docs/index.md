@@ -14,13 +14,13 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 - [Incoming Features](#features)
 - [Contribution](#contribution)
 
-## Beschrieb des Apps
+## Beschrieb des Apps
 <a id=beschrieb></a>
 
-## Funktionen
+## Funktionen
 <a id=funktionen></a>
 
-## Incoming Features
+## Incoming Features
 <a id=features></a>
 
 ## Contribution
