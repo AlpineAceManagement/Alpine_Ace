@@ -10,7 +10,7 @@ import { parse, scale } from "vega";
 import { title } from "vega-lite/build/src/channeldef";
 import VegaEmbed from "react-vega/lib/VegaEmbed";
 
-import spec_wetter from "./diagramm_wetter";
+import WeatherChart from "./Wetter_diagramm";
 
 const Wetter = () => {
   //------------------------------------------------------------------------
@@ -109,19 +109,7 @@ const Wetter = () => {
           <div className="large-box">
             <h1 style={{textAlign: "center", color: "#282c34"}}>Wetter</h1>
             <div style={{width: "100%", height:"150"}}>
-              {weatherChartData ?(
-                <VegaLite
-                spec={{
-                  ...spec_wetter,
-                  data: {values:weatherChartData}
-                }}
-                />
-              ):(
-                <div> Loading weather data..</div>
-        
-              )}
-
-              {/* <Vega spec={spec_wetter}/> */}
+              <weatherChart/>
             </div>
             {loading && <p>Loading weather data...</p>}
             {snowloading && <p> Loadin snow data...</p>}
