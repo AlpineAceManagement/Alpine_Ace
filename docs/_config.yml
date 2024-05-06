@@ -4,10 +4,10 @@ title: Alpine Ace - Ski App
 description: Speichere diese Seite als Bookmark und verfolge unseren Projektstand!
 
 Inhaltsverzeichnis:
-- [Beschrieb](#beschrieb)
-- [Architektur](#architektur)
-    - [Backend](#backend)
-    - [Frontend](#frontend)   
-- [Funktionen](#funktionen)
-- [Incoming Features](#features)
-- [Contribution](#contribution)
+  - [Beschrieb](index.md#beschrieb)
+  - [Architektur](index.md#architektur)
+      - [Backend](index.md#backend)
+      - [Frontend](index.md#frontend)   
+  - [Funktionen](index.md#funktionen)
+  - [Incoming Features](index.md#features)
+  - [Contribution](index.md#contribution)
