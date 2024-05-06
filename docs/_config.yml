@@ -2,3 +2,12 @@ theme: jekyll-theme-minimal
 logo: images/Logo_erste_Wahl_lachen.jpg
 title: Alpine Ace - Ski App
 description: Speichere diese Seite als Bookmark und verfolge unseren Projektstand!
+
+Inhaltsverzeichnis:
+- [Beschrieb](#beschrieb)
+- [Architektur](#architektur)
+    - [Backend](#backend)
+    - [Frontend](#frontend)   
+- [Funktionen](#funktionen)
+- [Incoming Features](#features)
+- [Contribution](#contribution)

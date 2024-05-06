@@ -10,15 +10,6 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 
 ![Alpine Ace Startseite Screenshot](images/Startseite.png)
 
-## Inhaltsverzeichnis
-- [Beschrieb](#beschrieb)
-- [Architektur](#architektur)
-    - [Backend](#backend)
-    - [Frontend](#frontend)   
-- [Funktionen](#funktionen)
-- [Incoming Features](#features)
-- [Contribution](#contribution)
-
 ## Beschrieb des Apps
 <a id=beschrieb></a>
 
