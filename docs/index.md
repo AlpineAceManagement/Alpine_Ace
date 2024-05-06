@@ -12,5 +12,5 @@ GitHub Repository: [https://github.com/314a/GDI_Project](https://github.com/314a
 - [Dokumentation](./dokumentation)
 - [Startseite](./index)
 - [Spielerdaten](./spielerdaten)
-- [Spielerherkunft](./spielerherkunft)
-- [Spielertransfer](./spielertransfer)
+- [Spielerherkunft](./Spielerherkunft)
+- [Spielertransfer](./Transferhistorie)

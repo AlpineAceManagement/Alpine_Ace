@@ -1,15 +1,3 @@
 theme: jekyll-theme-minimal
 title: Alpine Ace - Ski App
 description: Speichere diese Seite als Bookmark und verfolge unseren Projektstand!
-
-main:
-  - title: "Dokumentation"
-    url: /dokumentation.html
-  - title: "Startseite"
-    url: /index.html
-  - title: "Team"
-    url: /team.html
-  - title: "Spielerherkunft"
-    url: /spielerherkunft.html
-  - title: "Transferhistorie"
-    url: /transferhistorie.html
