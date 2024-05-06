@@ -205,7 +205,7 @@ const Hauptmenu = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <h1 style={{ color: "#00112e" }}>Lenzerheide Aktuell</h1>
+              <h2 style={{ color: "#00112e" }}>Lenzerheide Aktuell</h2>
             </Grid>
             <Grid item xs={12}></Grid>
             <Grid item xs={4}>
