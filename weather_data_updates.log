@@ -950,3 +950,11 @@ could not connect to server: Connection refused (0x0000274D/10061)
 2024-05-06 14:24:48,310 - INFO - Current weather data saved to database
 2024-05-06 14:39:48,498 - INFO - Current weather data saved to database
 2024-05-06 14:54:48,689 - INFO - Current weather data saved to database
+2024-05-06 22:08:05,948 - INFO - Current weather data saved to database
+2024-05-06 22:08:06,045 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:08:30,419 - INFO - Current weather data saved to database
+2024-05-06 22:08:30,489 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:50:04,985 - INFO - Current weather data saved to database
+2024-05-06 22:50:05,161 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:52:22,156 - INFO - Current weather data saved to database
+2024-05-06 22:52:22,225 - INFO - Hourly forecast data saved to database.

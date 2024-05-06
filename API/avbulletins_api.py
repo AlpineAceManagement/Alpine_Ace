@@ -1,5 +1,4 @@
 '''import relevant libraries'''
-
 import requests
 import psycopg2
 import time
@@ -9,7 +8,6 @@ import config
 import schedule
 import os
 import json
-
 
 # Configure logging
 logging.basicConfig(filename='avalanche_bulletin_script.log', 

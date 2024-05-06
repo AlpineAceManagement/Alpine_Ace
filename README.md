@@ -14,7 +14,11 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 
 ### Backend
-Folgende Module müssen für das Backend Instaliert werden:
+Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python),  einem Speicherungsteil (Postgres inkl. Postgis) und einem Geoserver.
+
+#### Python
+
+Folgende Module müssen für das Backend Installiert werden:
 
 - Python 3.8.19
 - openmeteo_request
@@ -22,6 +26,32 @@ Folgende Module müssen für das Backend Instaliert werden:
 - requests
 - pyproj
 - xml.etree.ElementTree
+- pandas
+
+Die Module können über das __requirements.txt__ im gewünschten prompt installiert werden.
+
+#### Postgres inkl. Postgis
+
+Das Schema der DB findet sich unter *Backend/DB_PG.* 
+
+Damit die bezogenen Daten über die APIs gespeicher werden könne, muss das __config_template.py__ angepasst und in __config.py__ umbenannt werden.
+
+'''python
+db_config = {
+    'host': 'host', #Hostname of DB
+    'port': 'port', #Port of DB
+    'database': 'database', #Name fo DB
+    'user': 'user', #Username for connection to DB
+    'password': 'password'  #Passwort for usernamen
+}
+'''
+
+#### Geoserver
+
+
+## Datenbank befüllen
+Um die Datenbank mit den API Daten zu befüllen muss das __main.py__ in *Backend/API* ausgeführt werden.
+
 
 ### API
 Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
@@ -34,9 +64,9 @@ Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Li
 
 
 ## Mitwirkende
-* [Bricalli Andrea](https://github.com/AJPB4133)
-* [Gross Fabian](https://github.com/loopercamera)
-* [Reibel Theo](https://github.com/TheoR14)
+* [Andrea Bricalli](https://github.com/AJPB4133)
+* [Fabian Gross](https://github.com/loopercamera)
+* [Théo Reibel](https://github.com/TheoR14)
 
 
 ## Lizenz
