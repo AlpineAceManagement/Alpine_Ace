@@ -3,12 +3,23 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ## Funktionen
 
-*Hochwertige Karten zur Orientierung und Navigation im Gelände.
+- Hochwertige Karten zur Orientierung und Navigation im Gelände.
 - Akutelle Informationen über Wetter und Lawinensituation für jedes Skigebiet.
 - Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
 - Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
 
 ## Installation
+
+### Frontend
+
+
+### Backend
+Folgende Module müssen für das Backend Instaliert werden:
+
+- openmeteo_request
+- psycopgg2
+- requests
+
 
 ## Mitwirkende
 * [Bricalli Andrea](https://github.com/AJPB4133)
