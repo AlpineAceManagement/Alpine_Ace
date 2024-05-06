@@ -1,11 +1,19 @@
 main:
-  - title: "Dokumentation"
-    url: /dokumentation.html
   - title: "Startseite"
     url: /index.html
-  - title: "Team"
-    url: /team.html
-  - title: "Spielerherkunft"
-    url: /spielerherkunft.html
-  - title: "Transferhistorie"
-    url: /Transferhistorie.md
+  - title: "Beschrieb"
+    url: /beschrieb.html
+  - title: "Installation"
+    url: /installation.html
+  - title: "Contribution"
+    url: /contribution.html
+  - title: "Licences"
+    url: /licences.html
+  - title: "Datenbankschema"
+    url: /datenbankschema.html
+  - title: "Prozess"
+    url: /prozess.html
+  - title: "Funktionen"
+    url: /funktionen.html
+  - title: "Features"
+    url: /features.html
