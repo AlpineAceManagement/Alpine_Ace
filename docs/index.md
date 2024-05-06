@@ -6,7 +6,7 @@ Das ist die Projekt Website des *Alpine Ace Ski App*. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![Alpine Ace Startseite Screenshot](iamges/Startseite.png)
+![Alpine Ace Startseite Screenshot](images/Startseite.png)
 
 ## Inhaltsverzeichnis
 - [Startseite](./index)
