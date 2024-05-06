@@ -16,9 +16,21 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 ### Backend
 Folgende Module müssen für das Backend Instaliert werden:
 
+- Python 3.8.19
 - openmeteo_request
 - psycopgg2
 - requests
+- pyproj
+- xml.etree.ElementTree
+
+### API
+Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
+- [Open-Meteo](https://open-meteo.com/en/docs)
+- [SLF Measurement API](https://measurement-api.slf.ch/)
+- Lawinenbulletins Daten werden über eine API des SLF bezogen.
+
+### Clone
+
 
 
 ## Mitwirkende
@@ -34,5 +46,5 @@ Folgende Module müssen für das Backend Instaliert werden:
 
 
 ## Page
-Für weiter Informationen zum Projekt beuschen Sie unsere GitHub Page:
+Für weiter Informationen zum Projekt besuche unsere GitHub Page:
 [alpineacemanagement.github.io](https://alpineacemanagement.github.io/Alpine_Ace/)
