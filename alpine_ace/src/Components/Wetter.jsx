@@ -27,7 +27,7 @@ const Wetter = () => {
   const [prognoseloading, setPrognoseLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async () => { 
       setLoading(true);
       try {
         const response = await fetch("http://localhost:5000/api/messdaten");
@@ -242,8 +242,5 @@ const WeatherDataItem3 = ({ label, value }) => {
     </div>
   );
 };
-
-
-
 
 export default Wetter;

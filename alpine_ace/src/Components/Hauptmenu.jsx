@@ -22,6 +22,7 @@ import { Projection } from "ol/proj";
 
 import spec_analgen from "./diagramms_anlagen";
 import spec_pisten from "./diagramm_pisten";
+import Bulletin from "./Bulletin";
 
 import "../App.css";
 
@@ -205,7 +206,7 @@ const Hauptmenu = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <h2 style={{ color: "#00112e" }}>Lenzerheide Aktuell</h2>
+              <h2 style={{ color: "#00112e", textAlign:"center" }}>Lenzerheide Aktuell</h2>
             </Grid>
             <Grid item xs={12}></Grid>
             <Grid item xs={4}>
@@ -214,7 +215,7 @@ const Hauptmenu = () => {
               </div>
             </Grid>
             <Grid item xs={4}>
-              <h1 style={{ color: "#00112e" }}></h1>
+              <Bulletin/>
             </Grid>
             <Grid item xs={4}>
               <div>
