@@ -188,26 +188,6 @@ const Hauptmenu = () => {
             </item>
           </Grid>
         </Grid>
-        <Box
-          sx={{
-            width: "90vw",
-            height: "22vh",
-            borderRadius: "3vh",
-            bgcolor: "p_white.main",
-            marginBottom: "20px",
-            position: "relative",
-            overflow: "hidden", // Kein Overflow der Karte
-          }}
-        >
-          <div
-            ref={mapRef}
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "3vh",
-            }}
-          ></div>
-        </Box>
 
         <Box
           sx={{
@@ -242,6 +222,27 @@ const Hauptmenu = () => {
               </div>
             </Grid>
           </Grid>
+        </Box>
+
+        <Box
+          sx={{
+            width: "90vw",
+            height: "22vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            marginBottom: "20px",
+            position: "relative",
+            overflow: "hidden", // Kein Overflow der Karte
+          }}
+        >
+          <div
+            ref={mapRef}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "3vh",
+            }}
+          ></div>
         </Box>
 
         <Box
