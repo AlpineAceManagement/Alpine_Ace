@@ -10,6 +10,7 @@ import { field } from "vega";
 //     const [loading, setLoading] = useState(true);
 //     const [error, setError] = useState(null);
 
+<<<<<<< Updated upstream
 //     useEffect(() => {
 //         const fetchData = async()=>{
 //             setLoading(true);
@@ -36,6 +37,16 @@ import { field } from "vega";
 //         };
 //         fetchData();   
 //   }, []);
+=======
+  //zwei effekte
+
+  return (
+    <div id="vega-chart">
+        {view}
+    </div>
+  );
+};
+>>>>>>> Stashed changes
 
 
 const spec_wetter = {
