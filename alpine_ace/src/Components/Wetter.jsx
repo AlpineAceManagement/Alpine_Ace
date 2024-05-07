@@ -1,16 +1,12 @@
 import React from "react";
-import { Vega, VegaLite } from "react-vega";
-import { View} from "react-vega";
-import vegaEmbed from "vega-embed";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import { useState, useEffect } from "react";
-import { parse, scale } from "vega";
-import { title } from "vega-lite/build/src/channeldef";
-import VegaEmbed from "react-vega/lib/VegaEmbed";
+import { Vega } from "react-vega";
 
-import WeatherChart from "./Wetter_diagramm";
+import spec_wetter from "./Wetter_diagramm";
+// import WeatherChart from "./Wetter_diagramm copy";
 
 const Wetter = () => {
   //------------------------------------------------------------------------
@@ -55,35 +51,30 @@ const Wetter = () => {
         setSnowError("Error fetching snow data. Please try again.");
         setSnowLoading(false);
       }
-      try {
-        const response2 = await fetch("http://localhost:5000/api/prognose");
-        if (!response2.ok) {
-          throw new Error("Network respnse was not ok");
-        }
-        const data2 = await response2.json();
-        const formattedData = data2.map((data2Point) => {
-          const datum = new Date(data2Point.pg_datum);
-          return {
-            hour: datum.getHours(), 
-            temperature: data2Point.pg_temperatur,
-          };
-        });
-        // const temperatur = data2;
-        setWeatherChartData(formattedData);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching prognose data", error);
-        setError("Error fetching prognose data. Please try again.");
-        setLoading(false);
-      }
+      // try {
+      //   const response2 = await fetch("http://localhost:5000/api/prognose");
+      //   if (!response2.ok) {
+      //     throw new Error("Network respnse was not ok");
+      //   }
+      //   const data2 = await response2.json();
+      //   const formattedData = data2.map((data2Point) => {
+      //     const datum = new Date(data2Point.pg_datum);
+      //     return {
+      //       hour: datum.getHours(), 
+      //       temperature: data2Point.pg_temperatur,
+      //     };
+      //   });
+      //   setWeatherChartData(formattedData);
+      //   setLoading(false);
+      // } catch (error) {
+      //   console.error("Error fetching prognose data", error);
+      //   setError("Error fetching prognose data. Please try again.");
+      //   setLoading(false);
+      // }
     };
-
     fetchData();
   }, []);
-
  
-
-
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -108,8 +99,8 @@ const Wetter = () => {
         >
           <div className="large-box">
             <h1 style={{textAlign: "center", color: "#282c34"}}>Wetter</h1>
-            <div style={{width: "100%", height:"150"}}>
-              <weatherChart/>
+            <div style={{width: "100%", height:"150", }}>
+              <Vega spec={spec_wetter} renderer="svg" actions={false}/>
             </div>
             {loading && <p>Loading weather data...</p>}
             {snowloading && <p> Loadin snow data...</p>}
