@@ -42,7 +42,7 @@ Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erst
 <a id=backend></a>
 
 #### API
-<a id=api></a>
+
 Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu kön- nen, werden einige APIs benötigt.
 
 - Meteo: Die Wetter Daten werden über [https://www.meteomatics.com/de/free-wetter-api/](https://www.meteomatics.com/de/free-wetter-api/) bezogen. 500 Abfragen pro Tag sind kostenlos. Die Abfrage der Daten erfolgt im Viertelstunden Takt.
