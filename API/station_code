@@ -1,0 +1,13 @@
+import json
+
+# Annahme: Die Datei heißt "daten.json" und befindet sich im selben Verzeichnis wie dieses Skript.
+# Du musst den Pfad zur Datei entsprechend anpassen, wenn sie sich an einem anderen Ort befindet.
+
+with open("API/stations_coord_abk.json", "r") as file:
+    data = json.load(file)
+
+# Extrahiere die "code"-Werte aus jedem Eintrag in der Datei
+codes = [entry["code"] for entry in data]
+
+# Gib die extrahierten Codes aus
+print(codes)
