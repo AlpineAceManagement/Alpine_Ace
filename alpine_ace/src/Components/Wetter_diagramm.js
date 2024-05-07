@@ -1,75 +1,135 @@
-import View from "ol/View";
-import { useState, useEffect } from "react";
-import * as vega from 'vega';
+const spec_wetter =  {
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A basic line chart example.",
+  "width": 500,
+  "height": 200,
+  "padding": 5,
 
-const WeatherChart = () => {
-    const [weatherData, setweatherData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [view, setView] = useState(null);
+  "signals": [
+    {
+      "name": "interpolate",
+      "value": "basis"
+    }
+  ],
 
-    useEffect(() => {
-        const fetchData = async()=>{
-            setLoading(true);
-            try{
-                const response = await fetch("http://localhost:5000/api/prognose");
-                if (!response.ok){
-                    throw new Error("Network respnonse was not ok");
-                }
-                const data = await response.json();
-                const f_data = data.map((dataPoint)=>{
-                    const datum = new Date(dataPoint.pg_datum);
-                    return{
-                        hour: datum.getHours(),
-                        temperatur: dataPoint.pg_temperatur,
-                    };
-                });
-                setweatherData(f_data);
-                setLoading(false);
-            }   catch(error){
-                console.error("Error fetching prognose data", error);
-                setError("Error fetching prognose data. Please try again.");
-                setLoading(false);
-            } 
-        };
-        fetchData();
-        const spec = {
-            $schema: "https://vega.github.io/schema/vega/v5.json",
-            width: 600,
-            height: 400,
-            data: [{
-              name: "weatherData",
-              values: weatherData
-            }],
-            marks: [{
-              type: "line",
-              from: {
-                data: "weatherData"
-              },
-              encode: {
-                x: { field: "hour", type: "ordinal" },
-                y: { field: "temperatur", type: "quantitative" },
-                stroke: { value: "blue" }
-              }
-            }],
-            axes: [{
-              orient: "bottom",
-              scale: "x"
-            }, {
-              orient: "left",
-              scale: "y"
-            }]
-        };
-        const newView = new vega.View("vega-chart", spec);
-        newView.render();
-        setView(newView); 
-  }, []);
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"x": 0, "y": 5.9}, 
+        {"x": 1, "y": 6.0},
+        {"x": 2, "y": 5.8},
+        {"x": 3, "y": 5.0},
+        {"x": 4, "y": 4.2},
+        {"x": 5, "y": 4.0},
+        {"x": 6, "y": 5.7},
+        {"x": 7, "y": 5.9},
+        {"x": 8, "y": 5.9}, 
+        {"x": 9, "y": 5.7},
+        {"x": 10, "y": 5.9},
+        {"x": 11, "y": 6.0},
+        {"x": 12, "y": 5.9},
+        {"x": 13, "y": 6.1},
+        {"x": 14, "y": 6.5},
+        {"x": 15, "y": 6.1},
+        {"x": 16, "y": 5.7},
+        {"x": 17, "y": 5.5},
+        {"x": 18, "y": 5.2},
+        {"x": 19, "y": 5.2},
+        {"x": 20, "y": 5.1},
+        {"x": 21, "y": 5.1},
+        {"x": 22, "y": 5.1},
+        {"x": 23, "y": 5.1}
+      ]
+    },
 
-  return (
-    <div id="vega-chart">
-        {view}
-    </div>
-  );
+    {
+      "name": "tag",
+      "values": [
+        {
+          "start": 8,
+          "end": 17,
+          "text": "Lift offen"
+        
+        }
+      ]
+
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "range": "width",
+      "domain": {"data": "table", "field": "x"}
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "table", "field": "y"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": ["grey"],
+      "domain": {"data": "tag", "field": "text"}
+    }
+  ],
+
+  "axes": [
+    {"orient": "bottom", "scale": "x", "title": "Tageszeit", "titlePadding": 10},
+    {"orient": "left", "scale": "y", "title": "Temperatur [C°]", "titlePadding": 10}
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data":"tag"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "x", "field": "start"},
+          "x2": {"scale": "x", "field": "end"},
+          "y": {"value": 0},
+          "y2": {"signal": "height"},
+          "fill": {"scale": "color", "field": "text"},
+          "opacity": {"value": 0.2}
+        }
+      }
+    },
+    {
+      "type": "line",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "interpolate": {"value": "monotone"},
+          "x": {"scale": "x", "field": "x"},
+          "y": {"scale": "y", "field": "y"},
+          "stroke": {"value": "steelblue"},
+          "strokeWidth": {"value": 3}
+        } 
+      } 
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "orient":"bottom",
+      "offset": 8,
+      "encode": {
+        "symbols": {
+          "update": {
+            "strokeWidth": {"value": 0},
+            "shape": {"value": "square"},
+            "opacity": {"value": 0.3}
+          }
+        }
+      }
+    }
+  ]
+
 };
 
-export default WeatherChart;
+export default spec_wetter;

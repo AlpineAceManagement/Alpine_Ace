@@ -9,8 +9,9 @@ import { useState, useEffect } from "react";
 import { parse, scale } from "vega";
 import { title } from "vega-lite/build/src/channeldef";
 import VegaEmbed from "react-vega/lib/VegaEmbed";
+import Grid from "@mui/material/Grid";
 
-import WeatherChart from "./Wetter_diagramm";
+import spec_wetter from "./Wetter_diagramm";
 
 const Wetter = () => {
   //------------------------------------------------------------------------
@@ -106,16 +107,24 @@ const Wetter = () => {
             flex:1
           }}
         >
-          <div className="large-box">
-            <h1 style={{textAlign: "center", color: "#282c34"}}>Wetter</h1>
-            <div style={{width: "100%", height:"150"}}>
-              <weatherChart/>
-            </div>
-            {loading && <p>Loading weather data...</p>}
-            {snowloading && <p> Loadin snow data...</p>}
-            {error && <p>{error}</p>}
-            {snowerror && <p>{snowerror}</p>}
-          </div>
+          <Grid 
+          container
+          style={{ width: "95", margin: "auto" }}
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          justifyContent="center"
+          >
+            <Grid item xs={12}>
+              <div className="large-box">
+                <h1 style={{textAlign: "center", color: "#282c34", marginBottom: "20px"}}>Wetter</h1> 
+              </div>
+            </Grid>
+            
+            <Grid item xs={12} >
+                < div className= "parent-div" style={{width: "100%",  height: "150px", display: "flex", justifyContent: "center", alignItems: "center", marginTop:"20px"}} >
+                  <Vega spec={spec_wetter} renderer="svg" actions={false} className="vega-vis"/>
+                </div>
+            </Grid>
+          </Grid>
         </Box>
         <Box
           sx={{
@@ -129,6 +138,10 @@ const Wetter = () => {
           }}
         >  
           <div className="small-boxes-wrapper">
+            {loading && <p>Loading weather data...</p>}
+            {snowloading && <p> Loadin snow data...</p>}
+            {error && <p>{error}</p>}
+            {snowerror && <p>{snowerror}</p>}
            {weatherData &&(
             <Box
               sx={{
