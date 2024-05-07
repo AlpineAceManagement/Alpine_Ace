@@ -17,7 +17,7 @@ import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 
 import spec_analgen from "./diagramms_anlagen";
@@ -218,7 +218,9 @@ const Hauptmenu = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <h2 style={{ color: "#00112e", textAlign:"center" }}>Lenzerheide Aktuell</h2>
+              <h2 style={{ color: "#00112e", textAlign: "center" }}>
+                Lenzerheide Aktuell
+              </h2>
             </Grid>
             <Grid item xs={12}></Grid>
             <Grid item xs={4}>
@@ -227,7 +229,7 @@ const Hauptmenu = () => {
               </div>
             </Grid>
             <Grid item xs={4}>
-              <Bulletin/>
+              <Bulletin />
             </Grid>
             <Grid item xs={4}>
               <div>

@@ -22,13 +22,12 @@ const Test = () => {
   const [showMarker1, setShowMarker1] = useState(false);
   const [markers, setMarkers] = useState([]); // Store marker positions
   const [mapInstance, setMapInstance] = useState(null);
-  const [map, setMap] = useState(null);
   const [naviVectorLayer, setNaviVectorLayer] = useState(null);
 
   const handleButtonClick1 = () => {
     setShowMarker1(true);
-    if (map) {
-      const view = map.getView();
+    if (mapInstance) {
+      const view = mapInstance.getView();
       const centerCoord = view.getCenter();
 
       if (centerCoord) {
@@ -63,13 +62,13 @@ const Test = () => {
     const vectorLayer = new VectorLayer({
       source: vectorSource,
     });
-    map.addLayer(vectorLayer);
+    mapInstance.addLayer(vectorLayer);
 
     // Add translate interaction
     const translate = new Translate({
       features: new Collection([markerFeature]),
     });
-    map.addInteraction(translate);
+    mapInstance.addInteraction(translate);
 
     translate.on("translateend", (evt) => {
       const updatedCoord = evt.coordinate;
@@ -81,7 +80,7 @@ const Test = () => {
       console.log("New position:", updatedCoord);
 
       // Remove the existing marker
-      map.removeLayer(vectorLayer);
+      mapInstance.removeLayer(vectorLayer);
 
       // Add a new marker at the same location
       addNewMarker(updatedCoord);
@@ -120,7 +119,7 @@ const Test = () => {
     const vectorLayer = new VectorLayer({
       source: vectorSource,
     });
-    map.addLayer(vectorLayer);
+    mapInstance.addLayer(vectorLayer);
   };
 
   const fetchDataForMarker = (coordinate) => {
@@ -206,22 +205,13 @@ const Test = () => {
       }),
     });
 
-    newMap.setTarget(mapRef.current); // Set the target to the mapRef
-    setMap(newMap);
     setMapInstance(newMap);
-
-    // Cleanup function
-    return () => {
-      newMap.setTarget(null); // Remove the map target when the component unmounts
-    };
-  }, [nodeSource, nodeTarget]); // Listen for changes in nodeSource and nodeTarget
+  }, []); // Listen for changes in nodeSource and nodeTarget
 
   useEffect(() => {
     // Add markers when map is re-rendered
-    if (map) {
-      markers.forEach((marker) => addMarker(marker));
-    }
-  }, [markers, map]);
+    const newMap = setMapInstance();
+  }, [nodeSource, nodeTarget]);
 
   const handleButtonClick = () => {
     // Change the values of nodeSource and nodeTarget

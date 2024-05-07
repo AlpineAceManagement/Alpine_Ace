@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import { Link } from "react-router-dom";
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 import "../App.css";
 
 const Statistiken = () => {
@@ -26,10 +26,13 @@ const Statistiken = () => {
         console.log("Response from server:", data);
         const formattedData = data.map((item) => ({
           ...item,
+          skidaten_id: parseInt(item.skidaten_id),
           sd_hoehenmeter: parseFloat(item.sd_hoehenmeter).toFixed(2),
           sd_distanz: parseFloat(item.sd_distanz).toFixed(2),
           sd_geschwindigkeit: parseFloat(item.sd_geschwindigkeit).toFixed(2),
-          sd_maxgeschwindigkeit: parseFloat(item.sd_maxgeschwindigkeit).toFixed(2),
+          sd_maxgeschwindigkeit: parseFloat(item.sd_maxgeschwindigkeit).toFixed(
+            2
+          ),
         }));
         setSkiData(formattedData);
         setLoading(false);
@@ -82,12 +85,32 @@ const Statistiken = () => {
           }}
         >
           {/* Bouton pour naviguer vers la page Graph */}
-          <Link to="/Graph" style={{ textDecoration: "none", position: "absolute", top: "10px", right: "10px" }}>
-            <button style={{ backgroundColor: "#ff6155", color: "white", padding: "8px", border: "none", borderRadius: "4px" }}>Graph</button>
+          <Link
+            to="/Graph"
+            style={{
+              textDecoration: "none",
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+            }}
+          >
+            <button
+              style={{
+                backgroundColor: "#ff6155",
+                color: "white",
+                padding: "8px",
+                border: "none",
+                borderRadius: "4px",
+              }}
+            >
+              Graph
+            </button>
           </Link>
 
-          <h1 style={{ textAlign: "center", marginTop: "10px" }}>Statistiken</h1>
-          
+          <h1 style={{ textAlign: "center", marginTop: "10px" }}>
+            Statistiken
+          </h1>
+
           <Box
             sx={{
               display: "flex",
@@ -96,11 +119,11 @@ const Statistiken = () => {
             }}
           >
             <div style={{ position: "relative" }}>
-            <Select
+              <Select
                 value={seasonFilter}
                 onChange={handleSeasonChange}
                 displayEmpty
-                inputProps={{ 'aria-label': 'Season' }}
+                inputProps={{ "aria-label": "Season" }}
                 sx={{
                   backgroundColor: "#ff6155",
                   color: "white",
@@ -141,11 +164,13 @@ const Statistiken = () => {
                 : new Date(a.sd_date) - new Date(b.sd_date);
             })
             .map((item) => (
-              //<Link key={item.Skidaten_ID} to={`/GPX_Viewer/${item.Skidaten_ID}`} style={{ textDecoration: "none" }}>
-              
-                <Link key={item.Skidaten_ID} to={`/GPX_Viewer/`} style={{ textDecoration: "none" }}>              
+              <Link
+                key={item.skidaten_id}
+                to={`/GPX_Viewer?Skidaten_ID=${item.skidaten_id}`}
+                style={{ textDecoration: "none" }}
+              >
                 <Box
-                  key={item.Skidaten_ID}
+                  key={item.skidaten_id}
                   sx={{
                     padding: "10px",
                     border: "1px solid #",

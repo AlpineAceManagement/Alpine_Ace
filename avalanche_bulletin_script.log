@@ -823,3 +823,9 @@ HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
 2024-05-06 22:52:22,884 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
 2024-05-06 22:52:22,917 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
 2024-05-06 22:52:22,971 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 11:52:50,975 - INFO - Processing bulletin a76b20a0-87c7-4129-bd96-1c5232cd2330 for region: {'name': 'obere Leventina', 'regionID': 'CH-6112'}
+2024-05-07 11:52:51,084 - INFO - Processing bulletin c859003b-ed41-47fe-9b28-6262418e347e for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 11:52:51,162 - INFO - Processing bulletin f9ae4ae2-e235-4757-9b52-0b761936ec73 for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-07 11:52:51,241 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 11:52:51,310 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 11:52:51,367 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
