@@ -823,3 +823,45 @@ HINT:  Perhaps you meant to reference the column "bulletins.b_regio_id".
 2024-05-06 22:52:22,884 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
 2024-05-06 22:52:22,917 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
 2024-05-06 22:52:22,971 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 09:00:49,714 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:49,814 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:49,914 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:50,003 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:50,116 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:50,226 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:00:50,553 - INFO - Processing bulletin a76b20a0-87c7-4129-bd96-1c5232cd2330 for region: {'name': 'obere Leventina', 'regionID': 'CH-6112'}
+2024-05-07 09:00:50,632 - INFO - Processing bulletin c859003b-ed41-47fe-9b28-6262418e347e for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 09:00:50,675 - INFO - Processing bulletin f9ae4ae2-e235-4757-9b52-0b761936ec73 for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-07 09:00:50,711 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 09:00:50,743 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 09:00:50,791 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 09:01:33,864 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,074 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,175 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,277 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,372 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,471 - ERROR - Error storing geometries: FEHLER:  Geometry SRID (2056) does not match column SRID (4326)
+
+2024-05-07 09:01:34,728 - INFO - Processing bulletin a76b20a0-87c7-4129-bd96-1c5232cd2330 for region: {'name': 'obere Leventina', 'regionID': 'CH-6112'}
+2024-05-07 09:01:34,781 - INFO - Processing bulletin c859003b-ed41-47fe-9b28-6262418e347e for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 09:01:34,827 - INFO - Processing bulletin f9ae4ae2-e235-4757-9b52-0b761936ec73 for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-07 09:01:34,874 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 09:01:34,916 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 09:01:34,961 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 09:05:17,830 - INFO - Processing bulletin a76b20a0-87c7-4129-bd96-1c5232cd2330 for region: {'name': 'obere Leventina', 'regionID': 'CH-6112'}
+2024-05-07 09:05:17,888 - INFO - Processing bulletin c859003b-ed41-47fe-9b28-6262418e347e for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 09:05:17,934 - INFO - Processing bulletin f9ae4ae2-e235-4757-9b52-0b761936ec73 for region: {'name': 'Bivio', 'regionID': 'CH-5234'}
+2024-05-07 09:05:17,980 - INFO - Processing bulletin 8ad7f005-1adc-49e1-9925-d739dd7a9c0e for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 09:05:18,025 - INFO - Processing bulletin 3aca8438-82ac-4c63-b876-5762e035b989 for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 09:05:18,066 - INFO - Processing bulletin cce5157e-51a2-411a-9d9f-a0d363794254 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
