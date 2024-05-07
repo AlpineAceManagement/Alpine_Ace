@@ -12,13 +12,13 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ### Frontend
 
-'''pyhton
+```pyhton
 cd alpine_ace
 
-'''python
+```python
 npm install
 
-'''python
+```python
 npm start
 
 
@@ -48,10 +48,10 @@ Das Schema der DB findet sich unter *Backend/DB_PG.* Schema in pgAdmin kopieren 
 Damit die bezogenen Daten über die APIs gespeicher werden könne, muss das __config_template.py__ angepasst und in __config.py__ umbenannt werden.
 
 Verbindungsaufbau zu node server:
-'''python
+```python
 cd alpine_ace/src/DB
 
-'''python
+```python
 node connect_db.js
 
 
