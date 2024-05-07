@@ -14,7 +14,7 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 - [Beschrieb](#beschrieb)
 - [Architektur](#architektur)
     - [Backend](#backend)
-    - [Frontend](#frontend)   
+    - [Frontend](#frontend)
 - [Funktionen](#funktionen)
 - [Incoming Features](#features)
 - [Contribution](#contribution)
