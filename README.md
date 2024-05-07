@@ -10,18 +10,46 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ## Installation
 
-### Frontend
-Um die Webapp zum laufen zu bringen müssen folgende Schritte ausgeführt werden:
+### Python-Requirements
 
-__Ordner wechseln__
+Folgende Python-Module müssen für das Backend Installiert werden:
+
+- Python 3.8.19
+- openmeteo_request
+- psycopgg2
+- requests
+- pyproj
+- xml.etree.ElementTree
+- pandas
+
+Die Module können über das __requirements.txt__ im gewünschten Prompt installiert werden.
+
+1. Speicherort für Enviroment festlegen
+```python
+cd path/to/workspace
+```
+
+2. Python Enviroment erstellen
+```python
+conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
+```
+
+### Node-Requirements
+
+
+### Frontend
+Um die Webapp zum laufen zu bringen müssen folgende Schritte ausgeführt werden: 
+
+
+1. Ordner wechseln
 ```pyhton
 cd alpine_ace
 ```
-__npm Module instaliieren__
+2. npm Module instaliieren
 ```python
 npm install
 ```
-__React-App starten__
+3. React-App starten
 ```python
 npm start
 ```
