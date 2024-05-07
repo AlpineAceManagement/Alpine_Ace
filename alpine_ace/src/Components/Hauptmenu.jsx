@@ -231,7 +231,7 @@ const Hauptmenu = () => {
             </Grid>
             <Grid item xs={4}>
               <div>
-                <Vega spec={spec_pisten} />
+                <Vega spec={spec_pisten} renderer="svg" actions={false} />
               </div>
             </Grid>
           </Grid>
