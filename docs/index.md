@@ -42,7 +42,7 @@ Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erst
 <a id=backend></a>
 
 #### API
-
+<a id=api></a>
 Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu kön- nen, werden einige APIs benötigt.
 
 - Meteo: Die Wetter Daten werden über [https://www.meteomatics.com/de/free-wetter-api/](https://www.meteomatics.com/de/free-wetter-api/) bezogen. 500 Abfragen pro Tag sind kostenlos. Die Abfrage der Daten erfolgt im Viertelstunden Takt.
@@ -69,6 +69,19 @@ Durch die Verwendung der räumlichen Datenbank (RDB) ist sichergestellt, dass di
 
 #### Farbschema
 <a id=farbschema></a>
+
+Wir haben mit großer Sorgfalt ein Farbschema für unsere App entwickelt, das nicht nur funktional ist, sondern auch visuell ansprechend und leicht verständlich für unsere Benutzer.
+
+Unsere Hauptfarbe, `#00112E`, bildet das Fundament unserer App und verleiht ihr eine solide Basis. Sie vermittelt Stabilität und Verlässlichkeit.
+
+Die Sekundärfarbe, `#FF6155`, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
+
+Für das Routing und andere Markierungen haben wir `#9EFF55` und `#B655FF` gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in `#FFA500`. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+
+Schließlich haben wir uns entschieden, die verschiedenen Skipisten auf der Karte mit den klassischen Farben Blau: `#0077BA`, Rot: `#E40513` und Schwarz:`#000000` darzustellen. Diese klare Unterscheidung ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
+
 
 ## Funktionen
 <a id=funktionen></a>
