@@ -2,15 +2,11 @@
 // import { Vega } from "react-vega";  
 // import * as vega from 'vega';
 // import { vals } from "vega-lite";
-
-import { field } from "vega";
-
 // const Spec_wetter = () => {
 //     const [weatherData, setweatherData] = useState(null);
 //     const [loading, setLoading] = useState(true);
 //     const [error, setError] = useState(null);
 
-<<<<<<< Updated upstream
 //     useEffect(() => {
 //         const fetchData = async()=>{
 //             setLoading(true);
@@ -37,16 +33,6 @@ import { field } from "vega";
 //         };
 //         fetchData();   
 //   }, []);
-=======
-  //zwei effekte
-
-  return (
-    <div id="vega-chart">
-        {view}
-    </div>
-  );
-};
->>>>>>> Stashed changes
 
 
 const spec_wetter = {

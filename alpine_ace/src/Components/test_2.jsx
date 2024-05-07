@@ -1,21 +1,87 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";
-import View from "ol/View";
 import TileLayer from "ol/layer/Tile";
-import { TileWMS, Vector as VectorSource } from "ol/source";
-import { Vector as VectorLayer } from "ol/layer";
-import { Style, Icon } from "ol/style";
-import { bbox as bboxStrategy } from "ol/loadingstrategy";
+import TileWMS from "ol/source/TileWMS";
+import View from "ol/View";
+import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
-import { fromLonLat } from "ol/proj";
+import { bbox as bboxStrategy } from "ol/loadingstrategy";
+import VectorLayer from "ol/layer/Vector";
+import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
+import Box from "@mui/material/Box";
+import theme from "./theme";
+import LineString from "ol/geom/LineString.js";
+import { useParams } from "react-router-dom";
 
-const Test_2 = () => {
+const GPX_Viewer = () => {
+  const [mapInstance, setMapInstance] = useState(null);
   const [map, setMap] = useState(null);
+  const [Skidaten_ID, setSkidaten_ID] = useState(1); // State to store Skidaten_ID
+  const mapRef = useRef(null); // Reference to the map container
+
   const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
 
   useEffect(() => {
+    // Function to extract Skidaten_ID from URL
+    const getSkidatenIDFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+      const Skidaten_ID = params.get("Skidaten_ID");
+      if (Skidaten_ID) {
+        setSkidaten_ID(Skidaten_ID);
+        console.log("Skidaten_ID parameter found in URL:", Skidaten_ID);
+      } else {
+        console.error("Skidaten_ID parameter not found in URL.");
+      }
+    };
+
+    // Call the function when the component mounts
+    getSkidatenIDFromURL();
+  }, []);
+
+  useEffect(() => {
+    // GeoServer layer arbeitsbereich:datenspeicher
+    const geoserverWFSAnfrage =
+      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
+    const geoserverWFSOutputFormat = "&outputFormat=application/json";
+
+    // Create a new VectorSource with updated URL when Skidaten_ID changes
+    const wegVectorSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        return (
+          console.log("WFS Anfrage:", Skidaten_ID),
+          geoserverWFSAnfrage +
+            "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:" +
+            Skidaten_ID +
+            ";" +
+            geoserverWFSOutputFormat
+        );
+      },
+      strategy: bboxStrategy,
+      // Add error handler
+      onError: function (error) {
+        console.error("Error fetching WFS anlagen data:", error);
+      },
+    });
+
+    // Instanziierung eines Vector Layers für Linien mit der Source
+    const wegVectorLayer = new VectorLayer({
+      source: wegVectorSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "orange",
+          width: 4,
+        }),
+      }),
+    });
+
+    //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
+
+    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
     const swisstopoLayer = new TileLayer({
       extent: extent,
       source: new TileWMS({
@@ -32,42 +98,15 @@ const Test_2 = () => {
         serverType: "mapserver",
       }),
     });
+    swisstopoLayer.setZIndex(0);
+    wegVectorLayer.setZIndex(1);
 
-    const pointVectorSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // URL to the WFS resource on the GeoServer
-        return (
-          "http://localhost:8080/geoserver/wfs?service=WFS&" +
-          "version=1.1.0&request=GetFeature&typename=" +
-          "Alpine_Ace:Restaurant" +
-          "&outputFormat=application/json"
-        );
-      },
-      strategy: bboxStrategy,
-      // Add error handler
-      onError: function (error) {
-        console.error("Error fetching WFS point data:", error);
-      },
-    });
-
-    const pointVectorLayer = new VectorLayer({
-      source: pointVectorSource,
-      style: new Style({
-        image: new Icon({
-          src: "https://www.svgrepo.com/show/399602/restaurant.svg", // Path to your icon image
-          anchor: [0.5, 1], // Set the anchor point to the center bottom of the icon
-          scale: 0.025,
-        }),
-      }),
-    });
-
-    // Create a new map instance
+    // Initialize OpenLayers map
     const map = new Map({
-      target: "map", // ID of the DOM element where the map will be rendered
-      layers: [swisstopoLayer, pointVectorLayer],
+      layers: [swisstopoLayer, wegVectorLayer], // Füge den Linien-Layer hinzu
+      target: mapRef.current,
       view: new View({
-        center: [2762073, 1180429],
+        center: [2762640.8, 1179359.1],
         zoom: 12,
         projection: new Projection({
           code: "EPSG:2056",
@@ -75,106 +114,50 @@ const Test_2 = () => {
         }),
       }),
     });
+    map.setTarget(mapRef.current); // Set the target to the mapRef
+    setMap(map);
+    setMapInstance(map);
 
-    // Parse URL parameters
-    const getUrlParameter = (name) => {
-      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-      var results = regex.exec(window.location.search);
-      return results === null
-        ? ""
-        : decodeURIComponent(results[1].replace(/\+/g, " "));
-    };
-
-    const r_name = getUrlParameter("r_name");
-
-    // Filter point layer based on the parameter
-    if (r_name) {
-      pointVectorSource.once("change", function (evt) {
-        if (pointVectorSource.getState() === "ready") {
-          const features = pointVectorSource.getFeatures();
-          const selectedFeature = features.find(
-            (feature) => feature.get("name") === r_name
-          );
-          if (selectedFeature) {
-            // Highlight or select the feature
-            // For example, change its style
-            selectedFeature.setStyle(
-              new Style({
-                image: new Icon({
-                  src: "https://www.svgrepo.com/show/399602/restaurant.svg", // Path to your highlighted icon image
-                  anchor: [0.5, 1],
-                  scale: 0.05,
-                }),
-              })
-            );
-            // Pan to the selected feature
-            const selectedFeatureCoords = selectedFeature
-              .getGeometry()
-              .getCoordinates();
-            map
-              .getView()
-              .animate({ center: selectedFeatureCoords, duration: 1000 });
-          }
-        }
-      });
-    }
-
-    const handleClick = (event) => {
-      map.forEachFeatureAtPixel(event.pixel, (feature) => {
-        console.log("Feature Eigenschaften:", feature.getProperties());
-
-        // Setzen von Mindest- und Maximalzoomstufen
-        const minZoomLevel = 8; // Beispielwert für Mindestzoomstufe
-        const maxZoomLevel = 16; // Beispielwert für Maximalzoomstufe
-        map.getView().setMinZoom(minZoomLevel);
-        map.getView().setMaxZoom(maxZoomLevel);
-
-        // Zoom auf das ausgewählte Feature
-        map.getView().fit(feature.getGeometry().getExtent(), {
-          duration: 500, // Optional: Animate the zooming process
-          padding: [1000, 1000, 1000, 1000], // Optional: Add padding around the extent
-        });
-
-        setSelectedFeature(feature.getProperties()); // Update selected feature state
-      });
-    };
-
-    // Event-Handler für das Klicken auf Features hinzufügen
-    map.on("click", handleClick);
-
-    // Update the size of the map when the window is resized
-    window.addEventListener("resize", () => {
-      map.updateSize();
-    });
-
+    // Cleanup function
     return () => {
-      // Event-Handler beim Entfernen der Komponente entfernen
-      map.on("click", handleClick);
-      window.removeEventListener("resize", () => {
-        map.updateSize();
-      });
+      map.setTarget(null); // Remove the map target when the component unmounts
     };
-  }, []);
+  }, [Skidaten_ID]);
 
   return (
-    <div id="map" style={{ width: "100%", height: "200px" }}>
-      {selectedFeature && (
-        <div className="informationen-karte">
-          {/* Wenn ein Restaurant ausgewählt ist */}
-          {selectedFeature.r_name && (
-            <>
-              <h2>{selectedFeature.r_name}</h2>
-              <p>Öffnungszeiten: {selectedFeature.r_oeffnungszeiten}</p>
-              <p>Telefon: {selectedFeature.r_telefon}</p>
-              <p>Email: {selectedFeature.r_email}</p>
-              <p>Webseite: {selectedFeature.r_webseite}</p>
-            </>
-          )}
-        </div>
-      )}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div
+        className="main"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            width: "95vw",
+            height: "50vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            marginBottom: "20px",
+            position: "relative",
+            overflow: "hidden", // Kein Overflow der Karte
+          }}
+        >
+          <div
+            ref={mapRef}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "3vh",
+            }}
+          ></div>
+        </Box>
+      </div>
+    </ThemeProvider>
   );
 };
 
-export default Test_2;
+export default GPX_Viewer;
