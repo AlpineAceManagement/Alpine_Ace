@@ -232,6 +232,7 @@ const Hauptmenu = () => {
             >
               <div>
                 <Vega spec={spec_analgen} renderer="svg" actions={false} />
+                <Vega spec={spec_analgen} renderer="svg" actions={false} />
               </div>
             </Grid>
             <Grid
