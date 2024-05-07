@@ -132,7 +132,7 @@ app.get("/api/bulletins", async (reg, res) => {
   try {
     const client = await pool.connect();
     const result = await client.query(
-      "SELECT b_danger FROM bulletins WHERE ST_Within(ST_GeomFromText('POINT(9.550 46.750)',4326),b_geometrie);"
+      "SELECT b_danger FROM bulletins WHERE ST_Within(ST_GeomFromText('POINT( 2761604.750 1177326.125)',2056),b_geometrie);"
     );
     const data = result.rows;
     client.release();

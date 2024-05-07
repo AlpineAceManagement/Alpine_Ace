@@ -65,6 +65,8 @@ const WeatherChart = () => {
         setView(newView); 
   }, []);
 
+  //zwei effekte
+
   return (
     <div id="vega-chart">
         {view}

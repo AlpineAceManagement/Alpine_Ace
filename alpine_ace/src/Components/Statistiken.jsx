@@ -105,6 +105,10 @@ const Statistiken = () => {
             >
               Graph
             </button>
+          <Link to="/Graph" style={{ textDecoration: "none", position: "absolute", top: "10px", right: "10px" }}>
+            <button style={{ backgroundColor: "#ff6155", color: "white", padding: "8px", border: "none", borderRadius: "4px" }}>
+              <img src="alpine_ace/src/logo/bar.png" alt="Graph" style={{ maxWidth: "100%", maxHeight: "100%" }} />
+            </button>
           </Link>
 
           <h1 style={{ textAlign: "center", marginTop: "10px" }}>

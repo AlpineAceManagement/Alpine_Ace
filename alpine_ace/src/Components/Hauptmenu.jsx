@@ -223,17 +223,35 @@ const Hauptmenu = () => {
               </h2>
             </Grid>
             <Grid item xs={12}></Grid>
-            <Grid item xs={4}>
+            <Grid
+              item
+              xs={4}
+              container
+              justifyContent="center"
+              alignItems="center"
+            >
               <div>
-                <Vega spec={spec_analgen} />
+                <Vega spec={spec_analgen} renderer="svg" actions={false} />
               </div>
             </Grid>
-            <Grid item xs={4}>
+            <Grid
+              item
+              xs={4}
+              container
+              justifyContent="center"
+              alignItems="center"
+            >
               <Bulletin />
             </Grid>
-            <Grid item xs={4}>
+            <Grid
+              item
+              xs={4}
+              container
+              justifyContent="center"
+              alignItems="center"
+            >
               <div>
-                <Vega spec={spec_pisten} />
+                <Vega spec={spec_pisten} renderer="svg" actions={false} />
               </div>
             </Grid>
           </Grid>
