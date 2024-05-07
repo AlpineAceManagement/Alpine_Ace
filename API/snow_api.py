@@ -19,7 +19,7 @@ def extract_station(csv_file):
             station.append(row[0])
     return station
 
-csv_file = "DB_PG\station_daten.csv"
+csv_file = "station_daten.csv" 
 station = extract_station(csv_file)
 
 # Configure logging

@@ -6,9 +6,9 @@ def start_script(script_name):
     subprocess.Popen(['python', script_name])
 
 if __name__ == '__main__':
-    scripts = ['API\weather_api.py',
-                'API\snow_api.py', 
-                'API/avbulletins_api.py']
+    scripts = ['./weather_api.py',
+                './snow_api.py', 
+                './avbulletins_api.py']
 
     for script in scripts:
         start_script(script)
