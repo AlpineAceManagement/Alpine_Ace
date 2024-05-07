@@ -223,7 +223,7 @@ const Hauptmenu = () => {
             <Grid item xs={12}></Grid>
             <Grid item xs={4}>
               <div>
-                <Vega spec={spec_analgen} />
+                <Vega spec={spec_analgen} renderer="svg" actions={{ export:false}}/>
               </div>
             </Grid>
             <Grid item xs={4}>
