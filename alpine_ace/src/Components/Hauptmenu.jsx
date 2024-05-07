@@ -192,7 +192,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "25vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
@@ -206,7 +206,9 @@ const Hauptmenu = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <h2 style={{ color: "#00112e", textAlign:"center" }}>Lenzerheide Aktuell</h2>
+              <h2 style={{ color: "#00112e", textAlign: "center" }}>
+                Lenzerheide Aktuell
+              </h2>
             </Grid>
             <Grid item xs={12}></Grid>
             <Grid item xs={4}>
@@ -215,7 +217,7 @@ const Hauptmenu = () => {
               </div>
             </Grid>
             <Grid item xs={4}>
-              <Bulletin/>
+              <Bulletin />
             </Grid>
             <Grid item xs={4}>
               <div>
@@ -227,7 +229,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "22vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
@@ -248,7 +250,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "33vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
