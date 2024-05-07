@@ -26,34 +26,47 @@ const Bulletin = () => {
     }, []);
 
     const  LevelIconMap = {
-        "low": "bulletin_icons/gering.png",
-        "moderate": "bulletin_icons/massig.png",
-        "considerable": "/bulletin_icons/erheblich.png",
-        "high": "bulletin_icons/gross.png",
-        "very_high":"bulletin_icons/sehr_gross.png",
-        "no_snow": "bulletin_icons/keine.png", 
-        "no_rating":  "bulletin_icons/keine.png"
+        "low": "./bulletin_icon/gering.png",
+        "moderate": "./bulletin_icon/massig.png",
+        "considerable": "./bulletin_icon/erheblich.png",
+        "high": "./bulletin_icon/gross.png",
+        "very_high":"/bulletin_icon/sehr_gross.png",
+        "no_snow": "./bulletin_icon/keine.png", 
+        "no_rating":  "./bulletin_icon/keine.png"
     };
 
-
+    const TextMap ={
+        "low": "gering",
+        "moderate": "mässig",
+        "considerable": "erheblich",
+        "high": "gross",
+        "very_high": "sehr gross",
+        "no_snow": "keine",
+        "no_rating": "keine"
+    }
     
+   
  
-
     return (
         <div> 
-      
-          {bulletins && bulletins.map((bulletin) => (
-            <div key={bulletin.id}>
-                <img 
-                src={LevelIconMap[bulletin.b_danger]} 
-                alt={`Avalanche Danger Level ${bulletin.b_danger}`} 
-                style={{ display: "block", margin: "0 auto", width: "20px" }} 
-                />
-                <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
-                {bulletin.b_danger} 
-                </p>
-            </div>
-          ))}
+            {loading && <p>Loading Avalanche...</p>}
+            {error && <p>{error}</p>}
+            <item>
+                {bulletins && bulletins.map((bulletin) => (
+                    <div >
+                        <img 
+                        // src={LevelIconMap[bulletin.b_danger]} 
+                        // src={require(`${LevelIconMap[bulletin.b_danger]}`)}
+                        src={require("./bulletin_icon/massig.png")}
+                        alt={`Avalanche Danger Lever ${bulletin.b_danger}`} 
+                        style={{ maxWidth: "10vh", display: "block", margin: "0 auto"}} 
+                        />
+                        <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+                        {TextMap[bulletin.b_danger]} 
+                        </p>
+                    </div>
+                ))}
+            </item>
         </div>
       );
       
