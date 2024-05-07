@@ -223,11 +223,7 @@ const Hauptmenu = () => {
             <Grid item xs={12}></Grid>
             <Grid item xs={4} container justifyContent="center" alignItems="center">
               <div>
-<<<<<<< Updated upstream
                 <Vega spec={spec_analgen} renderer="svg" actions={false}/>
-=======
-                <Vega spec={spec_analgen} renderer="svg" actions={{ export:false}}/>
->>>>>>> Stashed changes
               </div>
             </Grid>
             <Grid item xs={4} container justifyContent="center" alignItems="center">
