@@ -14,12 +14,15 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ```pyhton
 cd alpine_ace
+```
 
 ```python
 npm install
+```
 
 ```python
 npm start
+```
 
 
 
@@ -50,9 +53,11 @@ Damit die bezogenen Daten über die APIs gespeicher werden könne, muss das __co
 Verbindungsaufbau zu node server:
 ```python
 cd alpine_ace/src/DB
+```
 
 ```python
 node connect_db.js
+```
 
 
 
