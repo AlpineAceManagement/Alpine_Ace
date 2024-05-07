@@ -21,20 +21,19 @@ const Karte = () => {
 
   useEffect(() => {
     // GeoServer layer arbeitsbereich:datenspeicher
-    const geoserverWFSPointLayer = "Alpine_Ace:Restaurant"; // Geoserver WFS Layername
-    const geoserverWFSLineLayer = "Alpine_Ace:pisten"; // Geoserver WFS Linien Layername
-    const geoserverWFSAnlagenLayer = "Alpine_Ace:anlagen"; // Geoserver WFS Anlagen Layername
+    const geoserverWFSAnfrage =
+      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
+    const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
     // Instanziierung einer Vector Source mittels einer WFS GetFeature Abfrage
-    const pointVectorSource = new VectorSource({
+    const restuarantSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         // Pfad zur WFS Resource auf dem GeoServer
         return (
-          "http://localhost:8080/geoserver/wfs?service=WFS&" +
-          "version=1.1.0&request=GetFeature&typename=" +
-          geoserverWFSPointLayer +
-          "&outputFormat=application/json"
+          geoserverWFSAnfrage +
+          "Alpine_Ace:Restaurant" +
+          geoserverWFSOutputFormat
         );
       },
       strategy: bboxStrategy,
@@ -44,15 +43,12 @@ const Karte = () => {
       },
     });
 
-    const lineVectorSource = new VectorSource({
+    const pistenSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         // Pfad zur WFS Resource auf dem GeoServer
         return (
-          "http://localhost:8080/geoserver/wfs?service=WFS&" +
-          "version=1.1.0&request=GetFeature&typename=" +
-          geoserverWFSLineLayer +
-          "&outputFormat=application/json"
+          geoserverWFSAnfrage + "Alpine_Ace:pisten" + geoserverWFSOutputFormat
         );
       },
       strategy: bboxStrategy,
@@ -62,15 +58,12 @@ const Karte = () => {
       },
     });
 
-    const anlagenVectorSource = new VectorSource({
+    const anlagenSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         // Pfad zur WFS Resource auf dem GeoServer
         return (
-          "http://localhost:8080/geoserver/wfs?service=WFS&" +
-          "version=1.1.0&request=GetFeature&typename=" +
-          geoserverWFSAnlagenLayer +
-          "&outputFormat=application/json"
+          geoserverWFSAnfrage + "Alpine_Ace:anlagen" + geoserverWFSOutputFormat
         );
       },
       strategy: bboxStrategy,
@@ -81,8 +74,8 @@ const Karte = () => {
     });
     const iconSize = [32, 32]; // Set the fixed size for the icon
     // Instanziierung eines Vector Layers für Punkte mit der Source
-    const pointVectorLayer = new VectorLayer({
-      source: pointVectorSource,
+    const restuarantLayer = new VectorLayer({
+      source: restuarantSource,
       style: new Style({
         image: new Icon({
           src: "https://www.svgrepo.com/show/399602/restaurant.svg", // Specify the path to your icon image
@@ -93,8 +86,8 @@ const Karte = () => {
     });
 
     // Instanziierung eines Vector Layers für Linien mit der Source
-    const pistenVectorLayer = new VectorLayer({
-      source: lineVectorSource,
+    const pistenLayer = new VectorLayer({
+      source: pistenSource,
       style: function (feature) {
         // Hole den Wert des Attributs "p_farbe" für das aktuelle Feature
         const colorAttribute = feature.get("p_farbe");
@@ -133,7 +126,7 @@ const Karte = () => {
         // Style for the original line (without offsets)
         const originalLineStyle = new Style({
           stroke: new Stroke({
-            color: "black", // Choose your desired color for the original line
+            color: "DarkGray ", // Choose your desired color for the original line
             width: 4, // Choose your desired width
           }),
         });
@@ -202,7 +195,7 @@ const Karte = () => {
             const lineStyle = new Style({
               geometry: line,
               stroke: new Stroke({
-                color: "black",
+                color: "DarkGray ",
                 width: 6,
               }),
             });
@@ -217,8 +210,8 @@ const Karte = () => {
       }
     };
     // Create the vector layer for Anlagen with the custom style
-    const anlagenVectorLayer = new VectorLayer({
-      source: anlagenVectorSource,
+    const anlagenLayer = new VectorLayer({
+      source: anlagenSource,
       style: anlagenStyle,
     });
 
@@ -243,14 +236,13 @@ const Karte = () => {
       }),
     });
 
+    swisstopoLayer.setZIndex(0);
+    pistenLayer.setZIndex(1);
+    anlagenLayer.setZIndex(2);
+    restuarantLayer.setZIndex(3);
     // Initialize OpenLayers map
     const map = new Map({
-      layers: [
-        swisstopoLayer,
-        pointVectorLayer,
-        pistenVectorLayer,
-        anlagenVectorLayer,
-      ], // Füge den Linien-Layer hinzu
+      layers: [swisstopoLayer, restuarantLayer, pistenLayer, anlagenLayer], // Füge den Linien-Layer hinzu
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
@@ -313,7 +305,7 @@ const Karte = () => {
       >
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "50vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
@@ -339,7 +331,7 @@ const Karte = () => {
           alignItems="flex-start"
           gap={2}
           sx={{
-            width: "90vw",
+            width: "95vw",
             minHeight: "25vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",

@@ -33,7 +33,7 @@ const Hauptmenu = () => {
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
-    const bulettinVectorSource = new VectorSource({
+    const bulettinSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         return (
@@ -56,8 +56,8 @@ const Hauptmenu = () => {
     // Define transparency constant for fill colors
     const fillOpacity = 0.3; // Adjust as needed
 
-    const bulettinVectorLayer = new VectorLayer({
-      source: bulettinVectorSource,
+    const bulettinLayer = new VectorLayer({
+      source: bulettinSource,
       style: function (feature) {
         // Get the value of the "b_danger" attribute for the current feature
         const dangerAttribute = feature.get("b_danger");
@@ -69,20 +69,32 @@ const Hauptmenu = () => {
         // Assign colors based on attribute value
         switch (dangerAttribute) {
           case "low":
-            strokeColor = "#00FF00"; // Green
-            fillColor = "rgba(0, 255, 0, " + fillOpacity + ")"; // Transparent green
+            strokeColor = "rgb(175, 255, 1)"; // Green
+            fillColor = "rgba(175, 255, 1, " + fillOpacity + ")"; // Transparent green
             break;
           case "moderate":
-            strokeColor = "#FFFF00"; // Yellow
+            strokeColor = "rgb(255, 255, 0)"; // Yellow
             fillColor = "rgba(255, 255, 0, " + fillOpacity + ")"; // Transparent yellow
             break;
           case "considerable":
-            strokeColor = "#FFA500"; // Orange
-            fillColor = "rgba(255, 165, 0, " + fillOpacity + ")"; // Transparent orange
+            strokeColor = "rgb(254, 165, 0)"; // Orange
+            fillColor = "rgba(254, 165, 0, " + fillOpacity + ")"; // Transparent orange
             break;
           case "high":
-            strokeColor = "#FF0000"; // Red
-            fillColor = "rgba(255, 0, 0, " + fillOpacity + ")"; // Transparent red
+            strokeColor = "rgb(254,0, 0)"; // Red
+            fillColor = "rgba(254, 0, 0, " + fillOpacity + ")"; // Transparent red
+            break;
+          case "very_high":
+            strokeColor = "rgb(128, 0, 0)"; // Red
+            fillColor = "rgba(128, 0, 0)" + fillOpacity + ")"; // Transparent red
+            break;
+          case "no_snow":
+            strokeColor = "rgb(190,190,190)"; // Red
+            fillColor = "rgba(190,190,190)" + fillOpacity + ")"; // Transparent red
+            break;
+          case "no_rating":
+            strokeColor = "rgb(0,0,0)"; // Red
+            fillColor = "rgba(0,0,0," + fillOpacity + ")"; // Transparent red
             break;
           default:
             // Keep default colors if attribute value is not recognized
@@ -122,11 +134,11 @@ const Hauptmenu = () => {
       }),
     });
     swisstopoLayer.setZIndex(0);
-    bulettinVectorLayer.setZIndex(3);
+    bulettinLayer.setZIndex(1);
 
     // Initialize OpenLayers map
     const map = new Map({
-      layers: [swisstopoLayer, bulettinVectorLayer],
+      layers: [swisstopoLayer, bulettinLayer],
       target: mapRef.current,
       view: new View({
         center: [2655684.5, 1180000.125],
@@ -191,7 +203,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "25vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
@@ -226,7 +238,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "22vh",
             borderRadius: "3vh",
             bgcolor: "p_white.main",
@@ -247,7 +259,7 @@ const Hauptmenu = () => {
 
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "33vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",

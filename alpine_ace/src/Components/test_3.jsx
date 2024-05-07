@@ -27,7 +27,6 @@ const Test = () => {
 
   const handleButtonClick1 = () => {
     setShowMarker1(true);
-    console.log("centerCoord:");
     if (map) {
       const view = map.getView();
       const centerCoord = view.getCenter();
@@ -37,12 +36,6 @@ const Test = () => {
         addMarker(centerCoord);
       }
     }
-  };
-
-  const handleHideMarker1 = () => {
-    setShowMarker1(false);
-    setMarkers([]); // Clear marker positions
-    // Remove marker1 from the map
   };
 
   const addMarker = (coord) => {
@@ -60,6 +53,9 @@ const Test = () => {
     const markerFeature = new Feature(marker);
     markerFeature.setStyle(markerStyle);
 
+    // Add marker coordinates to the marker object
+    marker.setProperties({ coordinate: coord });
+
     // Add marker to the map
     const vectorSource = new VectorSource({
       features: [markerFeature],
@@ -76,8 +72,55 @@ const Test = () => {
     map.addInteraction(translate);
 
     translate.on("translateend", (evt) => {
-      fetchDataForMarker(evt.coordinate);
+      const updatedCoord = evt.coordinate;
+      marker.setCoordinates(updatedCoord); // Update marker coordinates directly
+      marker.setProperties({ coordinate: updatedCoord }); // Update marker properties
+      fetchDataForMarker(updatedCoord);
+
+      // Log the new position of the marker into the console
+      console.log("New position:", updatedCoord);
+
+      // Remove the existing marker
+      map.removeLayer(vectorLayer);
+
+      // Add a new marker at the same location
+      addNewMarker(updatedCoord);
     });
+  };
+
+  const handleHideMarker1 = () => {
+    setShowMarker1(false);
+    setMarkers([]); // Clear marker positions
+    // Remove marker1 from the map
+  };
+
+  const addNewMarker = (coord) => {
+    // Create marker style
+    const markerStyle = new Style({
+      image: new Icon({
+        src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/map-marker_green.svg",
+        scale: 1.75,
+        anchor: [0.5, 1],
+      }),
+    });
+
+    // Create marker feature
+    const marker = new Point(coord);
+    const markerFeature = new Feature(marker);
+    markerFeature.setStyle(markerStyle);
+
+    // Add marker coordinates to the marker object
+    console.log("coord:", coord);
+    marker.setProperties({ coordinate: coord });
+
+    // Add marker to the map
+    const vectorSource = new VectorSource({
+      features: [markerFeature],
+    });
+    const vectorLayer = new VectorLayer({
+      source: vectorSource,
+    });
+    map.addLayer(vectorLayer);
   };
 
   const fetchDataForMarker = (coordinate) => {
@@ -90,6 +133,8 @@ const Test = () => {
         const id = data.features[0].properties.id; // Extract ID from response
         console.log("nodeSource:", id);
         setNodeSource(id); // Update the node_source variable with the ID
+        // Add the new marker at the updated coordinates
+        addNewMarker(coordinate);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -173,8 +218,10 @@ const Test = () => {
 
   useEffect(() => {
     // Add markers when map is re-rendered
-    markers.forEach((marker) => addMarker(marker));
-  }, [markers]);
+    if (map) {
+      markers.forEach((marker) => addMarker(marker));
+    }
+  }, [markers, map]);
 
   const handleButtonClick = () => {
     // Change the values of nodeSource and nodeTarget
