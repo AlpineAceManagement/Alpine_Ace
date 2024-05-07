@@ -35,7 +35,6 @@
 //   }, []);
 
 
-
 const spec_wetter = {
   $schema: "https://vega.github.io/schema/vega/v5.json",
   width: 600,
