@@ -1,6 +1,0 @@
-openmeteo_request
-psycopgg2
-requests
-pyproj
-xml.etree.ElementTree
-pandas
