@@ -5,7 +5,7 @@ node_modules
 src/DB/config.js
 /.pnp
 .pnp.js
-API/config.py
+Alpine_Ace/API/config.py
 
 # testing
 /coverage

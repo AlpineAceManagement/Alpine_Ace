@@ -14,9 +14,11 @@ import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
 import LineString from "ol/geom/LineString.js";
+import { useParams } from "react-router-dom";
 
 const GPX_Viewer = () => {
   const mapRef = useRef(null); // Reference to the map container
+  const { Skidaten_ID } = useParams();
   const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
 
   useEffect(() => {
@@ -64,7 +66,7 @@ const GPX_Viewer = () => {
       url: function (extent) {
         return (
           geoserverWFSAnfrage +
-          "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:1;" +
+          "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:7;" +
           geoserverWFSOutputFormat
         );
       },

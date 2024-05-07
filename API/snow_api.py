@@ -6,6 +6,8 @@ import time
 import logging
 import csv
 import config
+import schedule
+
 
 # Extrac Station from statio_daten.csv
 
@@ -54,12 +56,15 @@ def fetch_and_store_measurement(station_code):
         logging.error(f"Request error for station {station_code}: {e}")
     except psycopg2.Error as e:
         logging.error(f"Database error for station {station_code}: {e}")
-if __name__ == '__main__':
-    
-    station_codes = station 
-     
 
+
+
+
+if __name__ == '__main__':
+    station_codes = station 
+    
     while True:
         for station_code in station_codes:
             fetch_and_store_measurement(station_code)
         time.sleep(30 * 60)  # Sleep for 30 minutes 
+

@@ -906,3 +906,55 @@ HINT:  Sie m�ssen den Ausdruck umschreiben oder eine Typumwandlung vornehmen.
 2024-04-30 15:02:20,526 - INFO - Current weather data saved to database
 2024-04-30 15:17:20,774 - INFO - Current weather data saved to database
 2024-04-30 15:40:41,414 - INFO - Current weather data saved to database
+2024-05-06 10:16:58,322 - ERROR - Database error while saving current weather: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5433?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5433?
+
+2024-05-06 10:17:02,386 - ERROR - Database error while saving hourly forecast: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5433?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5433?
+
+2024-05-06 11:01:01,207 - ERROR - Database error while saving current weather: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5433?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5433?
+
+2024-05-06 11:01:05,306 - ERROR - Database error while saving hourly forecast: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5433?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5433?
+
+2024-05-06 11:10:11,303 - ERROR - Database error while saving current weather: 
+2024-05-06 11:10:11,334 - ERROR - Database error while saving hourly forecast: 
+2024-05-06 11:10:52,135 - INFO - Current weather data saved to database
+2024-05-06 11:10:52,204 - INFO - Hourly forecast data saved to database.
+2024-05-06 11:27:41,086 - INFO - Current weather data saved to database
+2024-05-06 11:42:41,304 - INFO - Current weather data saved to database
+2024-05-06 12:39:19,420 - INFO - Current weather data saved to database
+2024-05-06 12:54:19,572 - INFO - Current weather data saved to database
+2024-05-06 13:09:19,741 - INFO - Current weather data saved to database
+2024-05-06 13:24:19,932 - INFO - Current weather data saved to database
+2024-05-06 13:39:20,135 - INFO - Current weather data saved to database
+2024-05-06 13:54:47,803 - INFO - Current weather data saved to database
+2024-05-06 14:09:48,034 - INFO - Current weather data saved to database
+2024-05-06 14:24:48,310 - INFO - Current weather data saved to database
+2024-05-06 14:39:48,498 - INFO - Current weather data saved to database
+2024-05-06 14:54:48,689 - INFO - Current weather data saved to database
+2024-05-06 22:08:05,948 - INFO - Current weather data saved to database
+2024-05-06 22:08:06,045 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:08:30,419 - INFO - Current weather data saved to database
+2024-05-06 22:08:30,489 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:50:04,985 - INFO - Current weather data saved to database
+2024-05-06 22:50:05,161 - INFO - Hourly forecast data saved to database.
+2024-05-06 22:52:22,156 - INFO - Current weather data saved to database
+2024-05-06 22:52:22,225 - INFO - Hourly forecast data saved to database.

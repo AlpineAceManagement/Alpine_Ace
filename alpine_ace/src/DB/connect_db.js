@@ -2,7 +2,8 @@ const express = require("express");
 const { Pool } = require("pg"); // Importieren Sie Pool hier
 const cors = require("cors");
 const app = express();
-const dbConfig = require("./config")
+const dbConfig = require("./config");
+//const { POINT } = require("vega-lite/build/src/mark");
 
 app.use(cors());
 
@@ -54,7 +55,7 @@ app.get("/api/prognose", async (req, res) => {
     const actualDate = formattedDate.rows[0].today;
 
     const result = await client.query(
-      "SELECT pg_datum, pg_niederschlagswahrscheinlichkeit, pg_temperatur FROM Prognose WHERE date_trunc('day', pg_datum) = $1 order by pg_datum ;",
+      "SELECT  pg_datum, pg_temperatur FROM Prognose WHERE date_trunc('day', pg_datum) = $1 order by pg_datum ;",
       [actualDate]
     );
 
@@ -123,6 +124,26 @@ app.get("/api/upload", async (reg, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+
+//Rout zu Bulletin_Informationen
+
+app.get("/api/bulletins", async (reg, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT b_danger FROM bulletins WHERE ST_Within(ST_GeomFromText('POINT(9.550 46.750)',4326),b_geometrie);"
+    );
+    const data = result.rows;
+    client.release();
+    res.json(data);
+  } catch (error) {
+    console.error("Error executing query", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
 
 // Starten den Server
 const PORT = process.env.PORT || 5000;
