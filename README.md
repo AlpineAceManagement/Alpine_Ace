@@ -12,6 +12,17 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ### Frontend
 
+'''pyhton
+cd alpine_ace
+
+'''python
+npm install
+
+'''python
+npm start
+
+
+
 
 ### Backend
 Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python),  einem Speicherungsteil (Postgres inkl. Postgis) und einem Geoserver.
@@ -32,19 +43,19 @@ Die Module können über das __requirements.txt__ im gewünschten prompt install
 
 #### Postgres inkl. Postgis
 
-Das Schema der DB findet sich unter *Backend/DB_PG.* 
+Das Schema der DB findet sich unter *Backend/DB_PG.* Schema in pgAdmin kopieren und ausführen.
 
 Damit die bezogenen Daten über die APIs gespeicher werden könne, muss das __config_template.py__ angepasst und in __config.py__ umbenannt werden.
 
+Verbindungsaufbau zu node server:
 '''python
-db_config = {
-    'host': 'host', #Hostname of DB
-    'port': 'port', #Port of DB
-    'database': 'database', #Name fo DB
-    'user': 'user', #Username for connection to DB
-    'password': 'password'  #Passwort for usernamen
-}
-'''
+cd alpine_ace/src/DB
+
+'''python
+node connect_db.js
+
+
+
 
 #### Geoserver
 
