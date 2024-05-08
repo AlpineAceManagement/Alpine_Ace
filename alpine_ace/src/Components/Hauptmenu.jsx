@@ -255,7 +255,7 @@ const Hauptmenu = () => {
           sx={{
             width: "95vw",
             height: "22vh",
-            borderRadius: "3vh",
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",

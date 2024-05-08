@@ -1,6 +1,6 @@
 import React from "react";
 import { Vega, VegaLite } from "react-vega";
-import { View} from "react-vega";
+import { View } from "react-vega";
 import vegaEmbed from "vega-embed";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
@@ -28,7 +28,7 @@ const Wetter = () => {
   const [prognoseloading, setPrognoseLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => { 
+    const fetchData = async () => {
       setLoading(true);
       try {
         const response = await fetch("http://localhost:5000/api/messdaten");
@@ -36,7 +36,7 @@ const Wetter = () => {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setWeatherData(data[0]); 
+        setWeatherData(data[0]);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching weather data", error);
@@ -65,7 +65,7 @@ const Wetter = () => {
         const formattedData = data2.map((data2Point) => {
           const datum = new Date(data2Point.pg_datum);
           return {
-            hour: datum.getHours(), 
+            hour: datum.getHours(),
             temperature: data2Point.pg_temperatur,
           };
         });
@@ -82,9 +82,6 @@ const Wetter = () => {
     fetchData();
   }, []);
 
- 
-
-
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -98,90 +95,117 @@ const Wetter = () => {
       >
         <Box
           sx={{
-             width: "90vw",
+            width: "95vw",
             height: "100vh",
-            borderRadius: 4,
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
-            marginBottom: "5px",
-            display:"flex",
-            flex:1
+            marginBottom: "20px",
+            display: "flex",
+            flex: 1,
           }}
         >
-          <Grid 
-          container
-          style={{ width: "95", margin: "auto" }}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          justifyContent="center"
+          <Grid
+            container
+            style={{ width: "95", margin: "auto" }}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            justifyContent="center"
           >
             <Grid item xs={12}>
               <div className="large-box">
-                <h1 style={{textAlign: "center", color: "#282c34", marginBottom: "20px"}}>Wetter</h1> 
+                <h1
+                  style={{
+                    textAlign: "center",
+                    color: "#282c34",
+                    marginBottom: "20px",
+                  }}
+                >
+                  Wetter
+                </h1>
               </div>
             </Grid>
-            
-            <Grid item xs={12} >
-                < div className= "parent-div" style={{width: "100%",  height: "150px", display: "flex", justifyContent: "center", alignItems: "center", marginTop:"20px"}} >
-                  <Vega spec={spec_wetter} renderer="svg" actions={false} className="vega-vis"/>
-                </div>
+
+            <Grid item xs={12}>
+              <div
+                className="parent-div"
+                style={{
+                  width: "100%",
+                  height: "150px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "20px",
+                }}
+              >
+                <Vega
+                  spec={spec_wetter}
+                  renderer="svg"
+                  actions={false}
+                  className="vega-vis"
+                />
+              </div>
             </Grid>
           </Grid>
         </Box>
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             height: "100vh",
-            borderRadius: 4,
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
-            display:"flex",
-            flex:1
+            display: "flex",
+            flex: 1,
           }}
-        >  
+        >
           <div className="small-boxes-wrapper">
             {loading && <p>Loading weather data...</p>}
             {snowloading && <p> Loadin snow data...</p>}
             {error && <p>{error}</p>}
             {snowerror && <p>{snowerror}</p>}
-           {weatherData &&(
-            <Box
-              sx={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-                gap: "20px",
-                padding: "20px",
-              }}>
-               
-                  <WeatherDataItem
-                    label="Temperatur (C°)"
-                    value={parseFloat(weatherData.md_temperatur).toFixed(1)}
-                  />
-                  <WeatherDataItem2 
-                    label="Wetter"
-                    value={weatherData.md_wetter} />
-                  <WeatherDataItem
-                    label="Windgeschwindigkeit [km/h]"
-                    value={parseFloat(weatherData.md_windgeschwindigkeit.toFixed(1))}
-                  />
-                  <WeatherDataItem3
-                    label = "Windrichtung"
-                    value={weatherData.md_windrichtung}
-                  />
-              </Box>
-              )}
-              {snowData && (
-                <Box
-                  sx={{
+            {weatherData && (
+              <Box
+                sx={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
                   gap: "20px",
                   padding: "20px",
-                }}>
-                    <WeatherDataItem
-                      label="Schneehöhe [cm]"
-                      value={parseFloat(snowData.sh_hoehe).toFixed(1)}  
-                    />
-                </Box>
-              )}
+                }}
+              >
+                <WeatherDataItem
+                  label="Temperatur (C°)"
+                  value={parseFloat(weatherData.md_temperatur).toFixed(1)}
+                />
+                <WeatherDataItem2
+                  label="Wetter"
+                  value={weatherData.md_wetter}
+                />
+                <WeatherDataItem
+                  label="Windgeschwindigkeit [km/h]"
+                  value={parseFloat(
+                    weatherData.md_windgeschwindigkeit.toFixed(1)
+                  )}
+                />
+                <WeatherDataItem3
+                  label="Windrichtung"
+                  value={weatherData.md_windrichtung}
+                />
+              </Box>
+            )}
+            {snowData && (
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+                  gap: "20px",
+                  padding: "20px",
+                }}
+              >
+                <WeatherDataItem
+                  label="Schneehöhe [cm]"
+                  value={parseFloat(snowData.sh_hoehe).toFixed(1)}
+                />
+              </Box>
+            )}
           </div>
         </Box>
       </div>
@@ -191,16 +215,18 @@ const Wetter = () => {
 
 const WeatherDataItem = ({ label, value }) => (
   <div>
-    <p style={{ textAlign: "center",fontWeight: "bold", color: "#00112e" }}>{label}</p>
-    <p style={{ textAlign:"center",color: "#00112e" }}>{value}</p>
+    <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+      {label}
+    </p>
+    <p style={{ textAlign: "center", color: "#00112e" }}>{value}</p>
   </div>
 );
 
 const weatherIconMap = {
-  "sonnig": "sunny",
-  "bewölkt": "cloudy",
-  "schneereich": "weather_snwoy",
-  "regnerisch": "rainy",
+  sonnig: "sunny",
+  bewölkt: "cloudy",
+  schneereich: "weather_snwoy",
+  regnerisch: "rainy",
 };
 
 const WeatherDataItem2 = ({ label, value }) => {
@@ -212,7 +238,15 @@ const WeatherDataItem2 = ({ label, value }) => {
       <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
         {label}
       </p>
-      <span className="material-symbols-outlined" style={{ fontSize: "24px", color: "#00112e", display:"block", textAlign:"center" }}> 
+      <span
+        className="material-symbols-outlined"
+        style={{
+          fontSize: "24px",
+          color: "#00112e",
+          display: "block",
+          textAlign: "center",
+        }}
+      >
         {iconName}
       </span>
     </div>
@@ -220,10 +254,10 @@ const WeatherDataItem2 = ({ label, value }) => {
 };
 
 const windIconMap = {
-  "Sued": "south",
+  Sued: "south",
   "Sued-Ost": "south_east",
   "Sued-West": "south_west",
-  "Nord": "north",
+  Nord: "north",
   "Nord-West": "north_west",
   "Nord-Ost": "north_east",
 };
@@ -237,7 +271,15 @@ const WeatherDataItem3 = ({ label, value }) => {
       <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
         {label}
       </p>
-      <span className="material-symbols-outlined" style={{ fontSize: "24px", color: "#00112e", display:"block", textAlign:"center" }}> 
+      <span
+        className="material-symbols-outlined"
+        style={{
+          fontSize: "24px",
+          color: "#00112e",
+          display: "block",
+          textAlign: "center",
+        }}
+      >
         {iconName}
       </span>
     </div>

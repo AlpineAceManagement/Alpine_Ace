@@ -307,7 +307,7 @@ const Karte = () => {
           sx={{
             width: "95vw",
             height: "50vh",
-            borderRadius: "3vh",
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",
@@ -319,7 +319,7 @@ const Karte = () => {
             style={{
               width: "100%",
               height: "100%",
-              borderRadius: "3vh",
+              borderRadius: "3vw",
             }}
           ></div>
         </Box>
@@ -333,7 +333,7 @@ const Karte = () => {
           sx={{
             width: "95vw",
             minHeight: "25vh",
-            borderRadius: "3vh",
+            borderRadius: "3vw",
             bgcolor: "p_white.main",
             position: "relative",
             overflowY: "auto",

@@ -75,7 +75,7 @@ const Statistiken = () => {
       >
         <Box
           sx={{
-            width: "90vw",
+            width: "95vw",
             minHeight: "50vh",
             borderRadius: 4,
             bgcolor: "p_white.main",
