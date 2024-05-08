@@ -13,7 +13,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-import { useParams } from "react-router-dom";
 
 const Restaurant_Viewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
