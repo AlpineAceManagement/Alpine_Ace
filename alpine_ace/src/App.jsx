@@ -18,6 +18,9 @@ import Test_2 from "./Components/test_2";
 import Test_3 from "./Components/test_3";
 import GPX_Viewer from "./Components/GPX_Viewer";
 import Bulettin_karte from "./Components/Bulettin_karte";
+import Kopfzeile_Statistiken from "./Components/Kopfzeile_Statistiken";
+import Restaurant_Viewer from "./Components/Restaurant_Viewer";
+import Kopfzeile_Restaurant from "./Components/Kopfzeile_Restaurant";
 
 function App() {
   return (
@@ -87,6 +90,16 @@ function App() {
           />
           <Route
             exact
+            path="/Restaurant_Viewer"
+            element={
+              <>
+                <Kopfzeile_Restaurant />
+                <Restaurant_Viewer />
+              </>
+            }
+          />
+          <Route
+            exact
             path="/Graph"
             element={
               <>
@@ -141,7 +154,7 @@ function App() {
             path="/GPX_Viewer"
             element={
               <>
-                <Kopfzeile />
+                <Kopfzeile_Statistiken />
                 <GPX_Viewer />
               </>
             }
