@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const Restaurant = () => {
@@ -82,20 +83,26 @@ const Restaurant = () => {
               (
                 restaurant //Mapen nach Restaurantnamen, key ist id der DB
               ) => (
-                <Box
-                  width="40vw"
+                <Link
                   key={restaurant.restaurant_id}
-                  className="restaurant-box"
-                  // Fügen Sie den Klick-Handler für jedes Restaurant hinzu
-                  onClick={() => navigateToMap(restaurant.restaurant_id)}
+                  to={`/Restaurant_Viewer?Restaurant_ID=${restaurant.restaurant_id}`}
+                  style={{ textDecoration: "none", color: "inherit" }} // Add color: "inherit" to inherit the text color from the parent
                 >
-                  <img
-                    className="foto_restaurant"
-                    src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Pfad zum Ordner mit allen Bildern
-                    alt={restaurant.r_name}
-                  />
-                  <h3 className="name_restaurant">{restaurant.r_name}</h3>
-                </Box>
+                  <Box
+                    width="40vw"
+                    key={restaurant.restaurant_id}
+                    className="restaurant-box"
+                    // Add the click handler for each restaurant
+                    onClick={() => navigateToMap(restaurant.restaurant_id)}
+                  >
+                    <img
+                      className="foto_restaurant"
+                      src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Path to the folder containing all images
+                      alt={restaurant.r_name}
+                    />
+                    <h3 className="name_restaurant">{restaurant.r_name}</h3>
+                  </Box>
+                </Link>
               )
             )}
           </Box>

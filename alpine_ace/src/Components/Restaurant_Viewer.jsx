@@ -8,80 +8,60 @@ import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Icon, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-import LineString from "ol/geom/LineString.js";
 import { useParams } from "react-router-dom";
 
 const Restaurant_Viewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
   const [map, setMap] = useState(null);
-  const [Skidaten_ID, setSkidaten_ID] = useState(1); // State to store Skidaten_ID
-  const mapRef = useRef(null); // Reference to the map container
-
-  const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
+  const [Restaurant_ID, setRestaurant_ID] = useState(1);
+  const [restaurantInfo, setRestaurantInfo] = useState({});
+  const mapRef = useRef(null);
 
   useEffect(() => {
-    // Function to extract Skidaten_ID from URL
-    const getSkidatenIDFromURL = () => {
+    const getRestaurant_IDFromURL = () => {
       const params = new URLSearchParams(window.location.search);
-      const Skidaten_ID = params.get("Skidaten_ID");
-      if (Skidaten_ID) {
-        setSkidaten_ID(Skidaten_ID);
-        console.log("Skidaten_ID parameter found in URL:", Skidaten_ID);
+      const Restaurant_ID = params.get("Restaurant_ID");
+      if (Restaurant_ID) {
+        setRestaurant_ID(Restaurant_ID);
+        console.log("Restaurant_ID parameter found in URL:", Restaurant_ID);
       } else {
-        console.error("Skidaten_ID parameter not found in URL.");
+        console.error("Restaurant_ID parameter not found in URL.");
       }
     };
 
     // Call the function when the component mounts
-    getSkidatenIDFromURL();
+    getRestaurant_IDFromURL();
   }, []);
 
   useEffect(() => {
-    // GeoServer layer arbeitsbereich:datenspeicher
     const geoserverWFSAnfrage =
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
-    // Create a new VectorSource with updated URL when Skidaten_ID changes
-    const wegVectorSource = new VectorSource({
+    const restaurantAnfrageSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         return (
-          console.log("WFS Anfrage:", Skidaten_ID),
           geoserverWFSAnfrage +
-            "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:" +
-            Skidaten_ID +
-            ";" +
-            geoserverWFSOutputFormat
+          "Alpine_Ace:a_a_restaurant&viewparams=Restaurant_ID:" +
+          Restaurant_ID +
+          ";" +
+          geoserverWFSOutputFormat
         );
       },
       strategy: bboxStrategy,
-      // Add error handler
       onError: function (error) {
         console.error("Error fetching WFS anlagen data:", error);
       },
     });
 
-    // Instanziierung eines Vector Layers für Linien mit der Source
-    const wegVectorLayer = new VectorLayer({
-      source: wegVectorSource,
-      style: new Style({
-        stroke: new Stroke({
-          color: "orange",
-          width: 4,
-        }),
-      }),
-    });
-
-    //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
 
-    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
     const swisstopoLayer = new TileLayer({
       extent: extent,
       source: new TileWMS({
@@ -98,12 +78,23 @@ const Restaurant_Viewer = () => {
         serverType: "mapserver",
       }),
     });
-    swisstopoLayer.setZIndex(0);
-    wegVectorLayer.setZIndex(1);
 
-    // Initialize OpenLayers map
+    const restaurantAnfrageLayer = new VectorLayer({
+      source: restaurantAnfrageSource,
+      style: new Style({
+        image: new Icon({
+          src: "https://www.svgrepo.com/show/399602/restaurant.svg",
+          anchor: [0.5, 1],
+          scale: 0.025,
+        }),
+      }),
+    });
+
+    swisstopoLayer.setZIndex(0);
+    restaurantAnfrageLayer.setZIndex(1);
+
     const map = new Map({
-      layers: [swisstopoLayer, wegVectorLayer], // Füge den Linien-Layer hinzu
+      layers: [swisstopoLayer, restaurantAnfrageLayer],
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
@@ -114,15 +105,38 @@ const Restaurant_Viewer = () => {
         }),
       }),
     });
-    map.setTarget(mapRef.current); // Set the target to the mapRef
+
+    map.setTarget(mapRef.current);
     setMap(map);
     setMapInstance(map);
 
-    // Cleanup function
+    restaurantAnfrageSource.on("change", () => {
+      if (restaurantAnfrageSource.getState() === "ready") {
+        const features = restaurantAnfrageSource.getFeatures();
+        if (features.length > 0) {
+          const featureProperties = features[0].getProperties();
+          setRestaurantInfo({
+            r_name: featureProperties.r_name || "",
+            r_oeffnungszeiten: featureProperties.r_oeffnungszeiten || "",
+            r_telefon: featureProperties.r_telefon || "",
+            r_email: featureProperties.r_email || "",
+            r_webseite: featureProperties.r_webseite || "",
+          });
+          const geometry = features[0].getGeometry();
+          const coordinates = geometry.getCoordinates();
+          map.getView().animate({
+            center: coordinates,
+            zoom: 16,
+            duration: 3000,
+          });
+        }
+      }
+    });
+
     return () => {
-      map.setTarget(null); // Remove the map target when the component unmounts
+      map.setTarget(null);
     };
-  }, [Skidaten_ID]);
+  }, [Restaurant_ID]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -143,7 +157,7 @@ const Restaurant_Viewer = () => {
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",
-            overflow: "hidden", // Kein Overflow der Karte
+            overflow: "hidden",
           }}
         >
           <div
@@ -154,6 +168,41 @@ const Restaurant_Viewer = () => {
               borderRadius: "3vh",
             }}
           ></div>
+        </Box>
+        <Box
+          sx={{
+            width: "95vw",
+            minHeight: "20vh",
+            borderRadius: "3vh",
+            bgcolor: "p_white.main",
+            position: "relative",
+            overflowY: "auto",
+          }}
+        >
+          <div className="informationen-karte">
+            <h2>{restaurantInfo.r_name}</h2>
+            <p>
+              <strong>Öffnungszeiten</strong> {restaurantInfo.r_oeffnungszeiten}
+            </p>
+            <p>
+              <strong>Telefon:</strong> {restaurantInfo.r_telefon}
+            </p>
+            <p>
+              <strong>Email:</strong> {restaurantInfo.r_email}
+            </p>
+            <p>
+              <strong>Webseite:</strong>
+              {restaurantInfo.r_webseite && (
+                <a
+                  href={restaurantInfo.r_webseite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {restaurantInfo.r_webseite}
+                </a>
+              )}
+            </p>
+          </div>
         </Box>
       </div>
     </ThemeProvider>
