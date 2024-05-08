@@ -9,7 +9,6 @@ app.use(cors());
 
 const pool = new Pool(dbConfig);
 
-
 // Route um Restaurant Daten zu beziehen
 app.get("/api/restaurant", async (req, res) => {
   try {
@@ -125,7 +124,6 @@ app.get("/api/upload", async (reg, res) => {
   }
 });
 
-
 //Rout zu Bulletin_Informationen
 
 app.get("/api/bulletins", async (reg, res) => {
@@ -142,8 +140,6 @@ app.get("/api/bulletins", async (reg, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
-
-
 
 // Starten den Server
 const PORT = process.env.PORT || 5000;

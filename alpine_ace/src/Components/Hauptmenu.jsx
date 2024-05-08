@@ -64,26 +64,38 @@ const Hauptmenu = () => {
         const dangerAttribute = feature.get("b_danger");
 
         // Define default colors in case the attribute is not defined
-        let strokeColor = "#E40513"; // Default stroke color: red
-        let fillColor = "rgba(255, 0, 0, " + fillOpacity + ")"; // Default fill color: transparent red
+        let strokeColor = "#FFFFFF"; //
+        let fillColor = "rgba(255, 255, 255, " + fillOpacity + ")"; //
 
         // Assign colors based on attribute value
         switch (dangerAttribute) {
           case "low":
-            strokeColor = "#00FF00"; // Green
-            fillColor = "rgba(0, 255, 0, " + fillOpacity + ")"; // Transparent green
+            strokeColor = "rgb(175, 255, 1)"; // Green
+            fillColor = "rgba(175, 255, 1, " + fillOpacity + ")";
             break;
           case "moderate":
-            strokeColor = "#FFFF00"; // Yellow
-            fillColor = "rgba(255, 255, 0, " + fillOpacity + ")"; // Transparent yellow
+            strokeColor = "rgb(255, 255, 0)"; // Yellow
+            fillColor = "rgba(255, 255, 0, " + fillOpacity + ")";
             break;
           case "considerable":
-            strokeColor = "#FFA500"; // Orange
-            fillColor = "rgba(255, 165, 0, " + fillOpacity + ")"; // Transparent orange
+            strokeColor = "rgb(254, 165, 0)"; // Orange
+            fillColor = "rgba(254, 165, 0, " + fillOpacity + ")";
             break;
           case "high":
-            strokeColor = "#FF0000"; // Red
-            fillColor = "rgba(255, 0, 0, " + fillOpacity + ")"; // Transparent red
+            strokeColor = "rgb(254,0, 0)"; // Red
+            fillColor = "rgba(254, 0, 0, " + fillOpacity + ")";
+            break;
+          case "very_high":
+            strokeColor = "rgb(128, 0, 0)"; // Dark red
+            fillColor = "rgba(128, 0, 0)" + fillOpacity + ")";
+            break;
+          case "no_snow":
+            strokeColor = "rgb(190,190,190)"; // Gray
+            fillColor = "rgba(190,190,190)" + fillOpacity + ")";
+            break;
+          case "no_rating":
+            strokeColor = "rgb(0,0,0)"; // Black
+            fillColor = "rgba(0,0,0," + fillOpacity + ")";
             break;
           default:
             // Keep default colors if attribute value is not recognized
@@ -211,27 +223,29 @@ const Hauptmenu = () => {
               </h2>
             </Grid>
             <Grid item xs={12}></Grid>
-            <Grid 
+            <Grid
               item
               xs={4}
               container
               justifyContent="center"
-              alignItems="center">
+              alignItems="center"
+            >
               <div>
-              <Vega spec={spec_analgen} renderer="svg" actions={false} />
+                <Vega spec={spec_analgen} renderer="svg" actions={false} />
               </div>
             </Grid>
             <Grid item xs={4}>
               <Bulletin />
             </Grid>
-            <Grid 
+            <Grid
               item
               xs={4}
               container
               justifyContent="center"
-              alignItems="center">
+              alignItems="center"
+            >
               <div>
-              <Vega spec={spec_pisten} renderer="svg" actions={false} />
+                <Vega spec={spec_pisten} renderer="svg" actions={false} />
               </div>
             </Grid>
           </Grid>
