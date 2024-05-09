@@ -5,7 +5,7 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 ## Funktionen
 
 - Hochwertige Karten zur Orientierung und Navigation im Gelände.
-- Akutelle Informationen über Wetter und Lawinensituation für jedes Skigebiet.
+- Aktuelle Informationen über Wetter und Lawinensituation für jedes Skigebiet.
 - Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
 - Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
 
@@ -13,7 +13,7 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ### Repositroy lokal klonen
 
-Mit Git in einem Terminal das GitHub Repository _Alpine_Ace_ in ein lokales verzeichnis klonen.
+Mit Git in einem Terminal das GitHub Repository _Alpine_Ace_ in ein lokales Verzeichnis klonen.
 
 1. Speicherort angeben
 
@@ -103,9 +103,25 @@ cd alpine_ace/src/DB
 node connect_db.js
 ```
 
-#### Geoserver
+## Geoserver
 
-## Datenbank befüllen
+1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
+2. Extension postgis installieren.
+
+```
+CREATE EXTENSION postgis;
+```
+
+### Datenbank befüllen Variante 1 mit FME
+
+Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+
+Aus der Datei `geoserver_DB_erstellen.txt` wird dabei Datenbankschema bezogen. Es werden die nötigen Tabellen erstellt.
+Folgen abfüllt:
+
+- sk
+
+## Datenbank befüllen API
 
 Um die Datenbank mit den API Daten zu befüllen muss das **main.py** in _Backend/API_ ausgeführt werden.
 
