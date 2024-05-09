@@ -14,18 +14,20 @@ const Restaurant = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/restaurant") // API Pfad zur DB
+    // Aufrufen der API von Node Server connect_db
+    fetch("http://localhost:5000/api/restaurant")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         return response.json();
       })
+      // Setzen der Daten in RestaurantData
       .then((data) => {
-        console.log("Response from server:", data);
         setRestaurantData(data);
         setLoading(false);
       })
+      //Fehler in der Konsole anzeigen
       .catch((error) => {
         console.error("Error fetching restaurant data", error);
         setError(error);
@@ -33,21 +35,17 @@ const Restaurant = () => {
       });
   }, []);
 
-  // Funktion zum Navigieren zur Karte
-  const navigateToMap = (restaurantId) => {
-    // Hier können Sie die Navigation zur Karte implementieren
-    console.log("Navigating to map with restaurant ID:", restaurantId);
-  };
-
+  // Text der während des Ladens angezeigt wird
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Lade die Daten vom Server...</div>;
   }
-
+  // Fehlermeldung anzeigen
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Fehler: {error.message}</div>;
   }
   //------------------------------------------------------------------------
   return (
+    // Theme wird aufgerufen
     <ThemeProvider theme={theme}>
       <div
         className="main"
@@ -61,6 +59,7 @@ const Restaurant = () => {
       >
         <Box
           sx={{
+            // Styling der Hintergrund Box
             width: "90vw",
             minHeight: "50vh",
             borderRadius: 4,
@@ -71,34 +70,32 @@ const Restaurant = () => {
         >
           <h1 style={{ textAlign: "center" }}>Restaurants</h1>
 
-          <Box
+          <Box //Box für die Anordnung der Restuarntboxen
             marginTop={"2vh"}
             display="flex"
             flexWrap="wrap"
             justifyContent="center"
             alignItems="right"
-            gap={2} // Abstand zwischen Boxen
+            gap={2} // Abstand zwischen zwei Boxen
           >
             {restaurantData.map(
               (
-                restaurant //Mapen nach Restaurantnamen, key ist id der DB
+                restaurant // Mapping der Restaurantdaten
               ) => (
                 <Link
                   key={restaurant.restaurant_id}
-                  to={`/Restaurant_Viewer?Restaurant_ID=${restaurant.restaurant_id}`}
-                  style={{ textDecoration: "none", color: "inherit" }} // Add color: "inherit" to inherit the text color from the parent
+                  to={`/Restaurant_Viewer?Restaurant_ID=${restaurant.restaurant_id}`} // Link auf Restaurant_Viewer
+                  style={{ textDecoration: "none", color: "inherit" }} // Link wird immer gleich angezigt auch wenn dieser schon verwendet wurde
                 >
                   <Box
                     width="40vw"
                     key={restaurant.restaurant_id}
                     className="restaurant-box"
-                    // Add the click handler for each restaurant
-                    onClick={() => navigateToMap(restaurant.restaurant_id)}
                   >
                     <img
                       className="foto_restaurant"
-                      src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} // Path to the folder containing all images
-                      alt={restaurant.r_name}
+                      src={require(`../Restaurant_data/${restaurant.r_dateipfad_bildname}`)} //Bildpfad
+                      alt={restaurant.r_name} //Bildbeschreibung
                     />
                     <h3 className="name_restaurant">{restaurant.r_name}</h3>
                   </Box>
