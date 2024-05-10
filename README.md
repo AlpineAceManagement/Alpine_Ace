@@ -38,6 +38,10 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 - pyproj
 - xml.etree.ElementTree
 - pandas
+- os
+- urllib
+- zipfile
+- shutil
 
 Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden.
 
@@ -52,6 +56,10 @@ cd path/to/workspace
 ```python
 conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
 ```
+
+### FME-Requirements
+
+FME Workbench 2023.1 (Build 23619 )oder aktueller. Kann auf der von der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
 
 ### Node-Requirements
 
@@ -106,20 +114,48 @@ node connect_db.js
 ## Geoserver
 
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
-2. Extension postgis installieren.
+2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
 
 ```
 CREATE EXTENSION postgis;
+CREATE EXTENSION pgrouting;
 ```
 
 ### Datenbank befüllen Variante 1 mit FME
 
-Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+Download vom Höhenmodell DHM25 der Swisstopo.
 
-Aus der Datei `geoserver_DB_erstellen.txt` wird dabei Datenbankschema bezogen. Es werden die nötigen Tabellen erstellt.
-Folgen abfüllt:
+1.Zurück ins Bassverzeichnis navigieren:
 
-- sk
+```
+cd $(git rev-parse --show-toplevel)
+```
+
+2. Daten download starten:
+
+```
+python DB_PG/ASCII_Hoehenmodell_download.py
+```
+
+3. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+
+- `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
+- `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Pisten_OSM`
+- `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Skigebiete_OSM`
+- `DB_PG\gpkg_Daten\Anlagen.gpkg`: Daten für den Reader `Anlagen`
+- `DB_PG\ASCII_Hoehenmodell\dhm25_grid_raster.asc`: Daten für den Reader `DHM25`
+- `DB_PG\CSV_Daten\Restaurants_Arosa_Lenzerheide.csv` : Daten für den Reader `Restaurants_Arosa_Lenzerheide` : Daten für den Reader `Restaurants_Arosa_Lenzerheide`
+- `DB_PG\CSV_Daten\Parkplatz.csv` : Daten für den Reader `Parkplatz`
+- `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
+- `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
+
+4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`.
+
+- `C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
+- Daten von Reader `geoserver_daten` von der Datenbank
+
+5. Routing Script in PG Admin 4 kopieren und ausführen:
+   `Routing\alpine_ace_routing.txt`
 
 ## Datenbank befüllen API
 

@@ -15,15 +15,6 @@ DROP TABLE IF EXISTS Pisten_Startpunkt CASCADE;
 DROP TABLE IF EXISTS Pisten CASCADE;
 DROP TABLE IF EXISTS Skigebiet CASCADE;
 DROP TABLE IF EXISTS Bulletins CASCADE;
---Postgis Extension für postgis_db erstellen
-DO $$ 
-BEGIN 
-    BEGIN 
-        CREATE EXTENSION IF NOT EXISTS postgis; 
-    EXCEPTION WHEN duplicate_object THEN 
-        RAISE NOTICE 'PostGIS extension already exists'; 
-    END; 
-END $$;
 
 
 CREATE TABLE IF NOT EXISTS Skigebiet (

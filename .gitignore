@@ -4,5 +4,5 @@ node_modules
 alpine_ace/node_modules
 alpine_ace/src/DB/config.js
 API/config.py
-DB_PG/TIFF_Hoehenmodell/
+DB_PG/ASCII_Hoehenmodell/
 
