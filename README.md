@@ -111,7 +111,7 @@ cd alpine_ace/src/DB
 node connect_db.js
 ```
 
-## Geoserver
+## Datenbank
 
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
 2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
@@ -174,23 +174,136 @@ cd API
 python main.py
 ```
 
-### API
-
-Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
-
-- [Open-Meteo](https://open-meteo.com/en/docs)
-- [SLF Measurement API](https://measurement-api.slf.ch/)
-- Lawinenbulletins Daten werden über eine API des SLF bezogen.
-
-## Mitwirkende
-
-- [Andrea Bricalli](https://github.com/AJPB4133)
-- [Fabian Gross](https://github.com/loopercamera)
-- [Théo Reibel](https://github.com/TheoR14)
-
-## Lizenz
-
 ### GeoServer
+
+#### GeoServer Basis aufsetzten
+
+#TODO Müssen wir das machen?
+
+#### Arbeitsbereich erstellen
+
+1. Arbeitsbereiche
+2. Arbeitsbereich hinzufügen
+3. Name
+
+```
+Alpine_Ace
+```
+
+3. Namensraum URI
+
+```
+http://geoserver.org/Alpine_Ace
+```
+
+4.  - [x] Standardarbeitsbereich
+5.  Security
+6.  - [x] Erlaube Zugriff auf jede Rolle
+7.  Speichern
+
+#### Datenspeicher hinzufügen
+
+1. Datenspeicher
+2. Datenspeicher hinzufügen
+3. PostGIS
+4. Arbeitsbereich `Alpine_Ace` auswählen
+5. Name der Datenquelle
+
+```
+geoserver
+```
+
+7. host
+
+```
+localhost
+```
+
+8. port: `Portnummer`
+
+9. database
+
+```
+geoserver
+```
+
+10. user
+
+```
+postgres
+```
+
+12. passwd: `Passwort`
+13. Speichern
+
+#### SQL viwes
+
+Folgende Layers müssen erstellt werden:
+
+##### Restaurants:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. unter Layer mit Namensraum und Präfix , Zeile `restaurant` auswählen und `Publizieren `
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### Anlagen:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. unter Layer mit Namensraum und Präfix , Zeile `anlagen` auswählen und `	Publizieren `
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### Lawinen Bulletins:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. unter Layer mit Namensraum und Präfix , Zeile `bulletins` auswählen und `	Publizieren `
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### Parkplätze:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. unter Layer mit Namensraum und Präfix , Zeile `parkplatz` auswählen und `	Publizieren `
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### Pisten:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. unter Layer mit Namensraum und Präfix , Zeile `pisten` auswählen und `	Publizieren `
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
 
 #### SQL viwes
 
@@ -263,8 +376,9 @@ Reguläre Ausdruck-Validierung
     Suche nach `EPSG:2056`
 12. Begrenzendes Rechteck:
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-    Aus den nativen Grenzen berechnen, anklicken
-13. Speichern
+
+13. Aus den nativen Grenzen berechnen, anklicken
+14. Speichern
 
 ##### Routing: Kürzester Weg finden:
 
@@ -331,8 +445,8 @@ Reguläre Ausdruck-Validierung
     Suche nach `EPSG:2056`
 13. Begrenzendes Rechteck:
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-    Aus den nativen Grenzen berechnen, anklicken
-14. Speichern
+14. Aus den nativen Grenzen berechnen, anklicken
+15. Speichern
 
 ##### Restaurant: Angewähltes Restaurant anzeigen:
 
@@ -382,8 +496,8 @@ Reguläre Ausdruck-Validierung
     Suche nach `EPSG:2056`
 12. Begrenzendes Rechteck:
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-    Aus den nativen Grenzen berechnen, anklicken
-13. Speichern
+13. Aus den nativen Grenzen berechnen, anklicken
+14. Speichern
 
 ##### GPX_Viewer: Angewählte Streck anzeigen:
 
@@ -436,8 +550,8 @@ Reguläre Ausdruck-Validierung
     Suche nach `EPSG:2056`
 12. Begrenzendes Rechteck:
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-    Aus den nativen Grenzen berechnen, anklicken
-13. Speichern
+13. Aus den nativen Grenzen berechnen, anklicken
+14. Speichern
 
 ## Page
 
@@ -447,3 +561,19 @@ Für weiter Informationen zum Projekt besuche unsere GitHub Page:
 ```
 
 ```
+
+### API
+
+Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
+
+- [Open-Meteo](https://open-meteo.com/en/docs)
+- [SLF Measurement API](https://measurement-api.slf.ch/)
+- Lawinenbulletins Daten werden über eine API des SLF bezogen.
+
+## Mitwirkende
+
+- [Andrea Bricalli](https://github.com/AJPB4133)
+- [Fabian Gross](https://github.com/loopercamera)
+- [Théo Reibel](https://github.com/TheoR14)
+
+## Lizenz
