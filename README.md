@@ -190,7 +190,206 @@ Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Li
 
 ## Lizenz
 
+### GeoServer
+
+#### SQL viwes
+
+Folgende SQL views müssen erstellt werden:
+
+##### Routing: Nächster Konten finden:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. SQL View konfigurieren
+4. Name der View:
+
+```
+a_a_nearest_vertex
+```
+
+5. SQL-Statement:
+
+```
+   SELECT
+    v.id,
+    v.the_geom
+FROM
+    a_a_routing_noded_vertices_pgr AS v,
+    a_a_routing_noded AS e
+WHERE
+    v.id = (
+        SELECT
+            id
+        FROM
+            a_a_routing_noded_vertices_pgr
+        ORDER BY
+            the_geom <-> ST_SetSRID(ST_MakePoint(%x%, %y%), 2056)
+        LIMIT 1
+    )
+    AND (e.source = v.id OR e.target = v.id)
+GROUP BY
+    v.id, v.the_geom
+```
+
+6. Schlage Parameter vor
+7. Standartwert für x
+
+```
+2600000
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+^[\d\.\+]+$
+```
+
+7. Standartwert für y
+
+```
+1200000
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+^[\d\.\+]+$
+```
+
+8. Attribute: Aktualisieren
+9. the_geo: `Point` auswählen als Typ
+10. Speichern
+11. Koordinatenreferenzsystem:
+    Suche nach `EPSG:2056`
+12. Begrenzendes Rechteck:
+    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+    Aus den nativen Grenzen berechnen, anklicken
+13. Speichern
+
+##### Routing: Kürzester Weg finden:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. SQL View konfigurieren
+4. Name der View:
+
+```
+a_a_shortest_path_test
+```
+
+5. SQL-Statement:
+
+```
+SELECT
+    min(r.seq) AS seq,
+    e.old_id AS id,
+    e.p_farbe,
+    sum(e.distance) AS distance,
+    ST_Collect(e.the_geom) AS geom,
+    sum(e.cost) AS cost,  -- Adding the 'cost' column
+    sum(e.rcost) AS rcost  -- Adding the 'rcost' column
+FROM
+    pgr_dijkstra(
+        'SELECT id,source,target,distance AS cost, rcost FROM a_a_routing_noded', %source%, %target%, false
+    ) AS r,
+    a_a_routing_noded AS e
+WHERE
+    r.edge = e.id
+GROUP BY
+    e.old_id, e.p_farbe
+```
+
+6. Schlage Parameter vor
+7. Standartwert für source
+
+```
+0
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+\d+
+```
+
+8. Standartwert für target
+
+```
+0
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+\d+
+```
+
+9. Attribute: Aktualisieren
+10. the_geo: `MultiLineString` auswählen als Typ
+11. Speichern
+12. Koordinatenreferenzsystem:
+    Suche nach `EPSG:2056`
+13. Begrenzendes Rechteck:
+    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+    Aus den nativen Grenzen berechnen, anklicken
+14. Speichern
+
+##### Restaurant: Angewähltes Restaurant anzeigen:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. SQL View konfigurieren
+4. Name der View:
+
+```
+Alpine_Ace:a_a_restaurant
+```
+
+5. SQL-Statement:
+
+```
+  SELECT
+    v.Restaurant_ID,
+   v.R_Name,
+   v.R_Oeffnungszeiten,
+   v.R_Telefon,
+   v.R_Email,
+   v.R_Webseite,
+   v.R_Geometry
+   FROM
+    Restaurant AS v
+   WHERE
+    v.Restaurant_ID= %Restaurant_ID%
+```
+
+6. Schlage Parameter vor
+7. Standartwert für Restaurant_ID
+
+```
+0
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+\d+
+```
+
+8. Attribute: Aktualisieren
+9. the_geo: `Point` auswählen als Typ
+10. Speichern
+11. Koordinatenreferenzsystem:
+    Suche nach `EPSG:2056`
+12. Begrenzendes Rechteck:
+    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+    Aus den nativen Grenzen berechnen, anklicken
+13. Speichern
+
 ## Page
 
 Für weiter Informationen zum Projekt besuche unsere GitHub Page:
 [alpineacemanagement.github.io](https://alpineacemanagement.github.io/Alpine_Ace/)
+
+```
+
+```

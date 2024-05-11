@@ -166,7 +166,7 @@ const Statistiken = () => {
             .map((item) => (
               <Link
                 key={item.skidaten_id}
-                to={`/GPX_Viewer?Skidaten_ID=${item.skidaten_id}`}
+                to={`/GPX_Viewer?Skidaten_ID=${item.skidaten_id}`} // Link auf GPX_Viewer
                 style={{ textDecoration: "none" }}
               >
                 <Box

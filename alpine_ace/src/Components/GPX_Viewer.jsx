@@ -8,13 +8,11 @@ import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Stroke, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-import LineString from "ol/geom/LineString.js";
-import { useParams } from "react-router-dom";
 
 const GPX_Viewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
@@ -22,10 +20,8 @@ const GPX_Viewer = () => {
   const [Skidaten_ID, setSkidaten_ID] = useState(1); // State to store Skidaten_ID
   const mapRef = useRef(null); // Reference to the map container
 
-  const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
-
   useEffect(() => {
-    // Function to extract Skidaten_ID from URL
+    // Extrahieren der Skidaten_ID aus der URL
     const getSkidatenIDFromURL = () => {
       const params = new URLSearchParams(window.location.search);
       const Skidaten_ID = params.get("Skidaten_ID");
@@ -37,39 +33,36 @@ const GPX_Viewer = () => {
       }
     };
 
-    // Call the function when the component mounts
     getSkidatenIDFromURL();
   }, []);
 
   useEffect(() => {
-    // GeoServer layer arbeitsbereich:datenspeicher
     const geoserverWFSAnfrage =
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
-    // Create a new VectorSource with updated URL when Skidaten_ID changes
-    const wegVectorSource = new VectorSource({
+    //WFS Anfrage für das ausgewählte Skidaten Aufnahme
+    const skidatenAnfrageSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
         return (
           console.log("WFS Anfrage:", Skidaten_ID),
           geoserverWFSAnfrage +
             "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:" +
-            Skidaten_ID +
+            Skidaten_ID + // Die Skidaten_ID von der URL
             ";" +
             geoserverWFSOutputFormat
         );
       },
       strategy: bboxStrategy,
-      // Add error handler
       onError: function (error) {
         console.error("Error fetching WFS anlagen data:", error);
       },
     });
 
-    // Instanziierung eines Vector Layers für Linien mit der Source
-    const wegVectorLayer = new VectorLayer({
-      source: wegVectorSource,
+    //Skidaten Anfrage Layer Styl
+    const skidatenAnfrageLayer = new VectorLayer({
+      source: skidatenAnfrageSource,
       style: new Style({
         stroke: new Stroke({
           color: "orange",
@@ -81,7 +74,7 @@ const GPX_Viewer = () => {
     //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
 
-    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
+    //Basis Swisstopo Winter Layer
     const swisstopoLayer = new TileLayer({
       extent: extent,
       source: new TileWMS({
@@ -98,15 +91,17 @@ const GPX_Viewer = () => {
         serverType: "mapserver",
       }),
     });
-    swisstopoLayer.setZIndex(0);
-    wegVectorLayer.setZIndex(1);
 
-    // Initialize OpenLayers map
+    // Darstellungsreihenfolge der Layer festlegen
+    swisstopoLayer.setZIndex(0);
+    skidatenAnfrageLayer.setZIndex(1);
+
+    // Karte erstellen
     const map = new Map({
-      layers: [swisstopoLayer, wegVectorLayer], // Füge den Linien-Layer hinzu
+      layers: [swisstopoLayer, skidatenAnfrageLayer], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({
-        center: [2762640.8, 1179359.1],
+        center: [2762640.8, 1179359.1], // Zentrum der Karte
         zoom: 12,
         projection: new Projection({
           code: "EPSG:2056",
@@ -114,17 +109,19 @@ const GPX_Viewer = () => {
         }),
       }),
     });
-    map.setTarget(mapRef.current); // Set the target to the mapRef
+    map.setTarget(mapRef.current);
     setMap(map);
     setMapInstance(map);
 
-    // Cleanup function
+    // löscht die Karte, wenn die Komponente entfernt wird,
+    // wichtig wenn eine andere Aufnahmen aufgerufen wird
     return () => {
-      map.setTarget(null); // Remove the map target when the component unmounts
+      map.setTarget(null);
     };
   }, [Skidaten_ID]);
 
   return (
+    // Theme wird aufgerufen
     <ThemeProvider theme={theme}>
       <div
         className="main"
@@ -137,13 +134,14 @@ const GPX_Viewer = () => {
       >
         <Box
           sx={{
+            // Styling der Karten Box
             width: "95vw",
-            height: "50vh",
+            height: "80vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
             position: "relative",
-            overflow: "hidden", // Kein Overflow der Karte
+            overflow: "hidden",
           }}
         >
           <div
