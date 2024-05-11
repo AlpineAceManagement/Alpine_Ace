@@ -385,6 +385,60 @@ Reguläre Ausdruck-Validierung
     Aus den nativen Grenzen berechnen, anklicken
 13. Speichern
 
+##### GPX_Viewer: Angewählte Streck anzeigen:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. SQL View konfigurieren
+4. Name der View:
+
+```
+a_a_skidaten_weg
+```
+
+5. SQL-Statement:
+
+```
+SELECT
+    v.Skidaten_ID,
+    v.SD_Date,
+    v.SD_Hoehenmeter,
+    v.SD_Distanz,
+    v.SD_Dauer,
+    v.SD_Geschwindigkeit,
+    v.SD_MaxGeschwindigkeit,
+    v.SD_Saison,
+    v.Benutzername,
+    v.SD_Geometrie
+FROM
+    Skidaten AS v
+WHERE
+    v.Skidaten_ID = %Skidaten_ID%
+```
+
+6. Schlage Parameter vor
+7. Standartwert für Skidaten_ID
+
+```
+0
+```
+
+Reguläre Ausdruck-Validierung
+
+```
+\d+
+```
+
+8. Attribute: Aktualisieren
+9. the_geo: `LineString` auswählen als Typ
+10. Speichern
+11. Koordinatenreferenzsystem:
+    Suche nach `EPSG:2056`
+12. Begrenzendes Rechteck:
+    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+    Aus den nativen Grenzen berechnen, anklicken
+13. Speichern
+
 ## Page
 
 Für weiter Informationen zum Projekt besuche unsere GitHub Page:
