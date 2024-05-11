@@ -11,7 +11,7 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 
 ## Installation
 
-### Repositroy lokal klonen
+### Repository lokal klonen
 
 Mit Git in einem Terminal das GitHub Repository _Alpine_Ace_ in ein lokales Verzeichnis klonen.
 
@@ -45,13 +45,13 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 
 Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden.
 
-1. Speicherort für Enviroment festlegen
+1. Speicherort für Environment festlegen
 
 ```python
 cd path/to/workspace
 ```
 
-2. Python Enviroment erstellen
+2. Python Environment erstellen
 
 ```python
 conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
@@ -71,14 +71,14 @@ Eine QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der von der Webseite von 
 
 Um die Webapp zum laufen zu bringen müssen folgende Schritte ausgeführt werden:
 
-1. neues Terminal öffnen -> als GitBasch
+1. neues Terminal öffnen -> als GitBash
 2. Ordner wechseln
 
-```pyhton
+```python
 cd alpine_ace
 ```
 
-3. npm Module instaliieren
+3. npm Module installieren
 
 ```python
 npm install
@@ -92,24 +92,24 @@ npm start
 
 ### Backend
 
-Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einem Speicherungsteil (Postgres inkl. Postgis) und einem Geoserver.
+Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis) und einem Geoserver.
 
 #### Postgres inkl. Postgis
 
 Das Schema der DB findet sich unter _Backend/DB_PG._ Schema in pgAdmin kopieren und ausführen.
 
-Damit die bezogenen Daten über die APIs gespeicher werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden.
+Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden.
 
 #### Node-Server
 
-1. neues Terminal öffnen -> als GitBasch
+1. neues Terminal öffnen -> als GitBash
 2. Verbindungsaufbau zu Node Server
 
 ```python
 cd alpine_ace/src/DB
 ```
 
-3. Node Server staren
+3. Node Server starten
 
 ```python
 node connect_db.js
@@ -240,7 +240,7 @@ postgres
 12. passwd: `Passwort`
 13. Speichern
 
-#### SQL viwes
+#### SQL views
 
 Folgende Layers müssen erstellt werden:
 
@@ -309,7 +309,7 @@ Folgende Layers müssen erstellt werden:
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
-#### SQL viwes
+#### SQL views
 
 Folgende SQL views müssen erstellt werden:
 
@@ -503,7 +503,7 @@ Reguläre Ausdruck-Validierung
 13. Aus den nativen Grenzen berechnen, anklicken
 14. Speichern
 
-##### GPX_Viewer: Angewählte Streck anzeigen:
+##### GPX_Viewer: Angewählte Strecke anzeigen:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
@@ -568,7 +568,7 @@ Für weiter Informationen zum Projekt besuche unsere GitHub Page:
 
 ### API
 
-Es werden drei APIs verwendent. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
+Es werden drei APIs verwendet. Die Dokumentationen dazu sind unter folgenden Links ersichtlich:
 
 - [Open-Meteo](https://open-meteo.com/en/docs)
 - [SLF Measurement API](https://measurement-api.slf.ch/)
