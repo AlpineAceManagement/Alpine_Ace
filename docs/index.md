@@ -26,6 +26,8 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
+      - [Mock-Up](#mockup)
+      - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Hauptmenü](#hauptmenü)
     - [Karte](#karte)
@@ -152,6 +154,24 @@ Folgende API's sind vorhanden:
 
 Da das Ziel ist eine APP für Mobiltelefone zu entfernen musste ein Performance starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
 Der Entscheid fiel auf PWAs, da die sie Webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOs, Andoird, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über ein offline Modus verfügen. Heisst sie können auch offline verwendet werden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischen gespeichert sind.
+
+#### Mock-Up
+<a id=mockup></a>
+
+#### Farbschema
+<a id=farbschema></a>
+
+Wir haben mit grosser Sorgfalt ein Farbschema für unsere App entwickelt, das nicht nur funktional ist, sondern auch visuell ansprechend und leicht verständlich für unsere Benutzer.
+
+Unsere Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament unserer App und verleiht ihr eine solide Basis. Sie vermittelt Stabilität und Verlässlichkeit.
+
+Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
+
+Für das Routing und andere Markierungen haben wir <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+
+Schliesslich haben wir uns entschieden, die verschiedenen Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese klare Unterscheidung ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
 
 ## Funktionen
 
