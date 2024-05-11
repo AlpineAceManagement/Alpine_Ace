@@ -328,16 +328,25 @@ Zuerst werden die Kordinaten Start- und Endpunkte der Anlagen und Pisten extrahi
 
 Mit Hilfe des QGIS Projektes `Alpine_ace_Routing.qgz` können Änderugen in den Routing Tabelle vorgenommen werden. Beim Start des Projekts muss der `Benutzername` und das `Passwort` der Datenbank eingetragen werden.
 
-Die Änderungen müssen in der Datengrunlage Routing vorgenommene werden. Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Nach vollbrachter Änderung muss die Berechnung des Routings in `pgAdmin 4` erfolgen.
+Die Änderungen müssen in der Datengrundlage Routing vorgenommene werden . Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Der Pfeil der zeig jeweils die Orientierung der Verbindungslinien an. Nach vollbrachter Änderung muss die [Berechnung des Routings](#berechnen-des-routings) in `pgAdmin 4` erfolgen.
 
-1. **Einweg oder beideitg anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbitungsmouds setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen.
+1. **Einweg oder beideitg anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbeitungsmodus setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen. Nach erfolgter Änderung den Layer speichern.
 
 - [ ] bedetutet, Line ist beidseitig befahrbar
 - [x] bedetutet, Line ist einsetig befahrbar
 
 <iframe src="videos/routing_einweg_oder_beideitg_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
-Nach erfolgter Änderung, Layer speichern.
+2. **Verbindung hizufügen** : Den Layer `a_a_routing` in Bearbeitung setzten, den Fangmodus einschalten (Magentensymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
+
+Falls die Fehlermeldung: `Konnte Änderungen am Layer a_a_routing nicht festschreiben
+  Fehler: FEHLER: Ein Objekt nicht hinzugefügt.` erscheint liegt dies meist an der Vergabe der id in der Tabelle.
+Behoben kann dieses Problem werden wenn unter: `Eigenschaften --> Attributformular --> Verfügbare Element --> Fields --> id --> Vorgaben` den Ausdruck `maximum( "id" ) + 1` eingefügt wird. Dieser erhöht den akutell höchsten Wert der `id` um 1 und setzt diesen ins Attributfolrumar automatisch ein. Zusätzlich die Checkbox bei `Vorgabewert bei Aktualisierung anwenden` setzten.
+
+<iframe src="videos/routing_verbindung_hizufügen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+
+3. **Verbindung löschen** : Den Layer geünschten in Bearbeitung setzten, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
+<iframe src="videos/routing_verbindung_loeschen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
 ##### Berechnen des Routings
 
