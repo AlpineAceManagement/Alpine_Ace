@@ -125,7 +125,7 @@ CREATE EXTENSION pgrouting;
 
 Download vom Höhenmodell DHM25 der Swisstopo.
 
-1.Zurück ins Bassverzeichnis navigieren:
+1. Zurück ins Bassverzeichnis navigieren:
 
 ```
 cd $(git rev-parse --show-toplevel)
@@ -144,12 +144,12 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Skigebiete_OSM`
 - `DB_PG\gpkg_Daten\Anlagen.gpkg`: Daten für den Reader `Anlagen`
 - `DB_PG\ASCII_Hoehenmodell\dhm25_grid_raster.asc`: Daten für den Reader `DHM25`
-- `DB_PG\CSV_Daten\Restaurants_Arosa_Lenzerheide.csv` : Daten für den Reader `Restaurants_Arosa_Lenzerheide` : Daten für den Reader `Restaurants_Arosa_Lenzerheide`
+- `DB_PG\CSV_Daten\Restaurants_Arosa_Lenzerheide.csv` : Daten für den Reader `Restaurants_Arosa_Lenzerheide`
 - `DB_PG\CSV_Daten\Parkplatz.csv` : Daten für den Reader `Parkplatz`
 - `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
 - `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
 
-4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`.
+1. Ausführen der FME Workbench `geoserver_Datenimport.fmw`.
 
 - `C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
 - Daten von Reader `geoserver_daten` von der Datenbank
