@@ -26,8 +26,6 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
-      - [Mock-Up](#mockup)
-      - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Hauptmenü](#hauptmenü)
     - [Karte](#karte)
@@ -38,9 +36,17 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [ÖV-Haltestellen](#öv-haltestellen)
     - [Wetter](#wetter)
     - [Statistiken](#statistiken)
-    - [Navi](#navi)s
-    - [Restaurant](#restaurant)
+      - [Konzept](#konzept)
       - [Funktion](#funktion)
+    - [Navi](#navi)
+      - [Konzept](#konzept-1)
+      - [Aufbereitung der Daten](#aufbereitung-der-daten)
+      - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
+      - [Berechnen des Routings](#berechnen-des-routings)
+      - [SQL views Routing](#sql-views-routing)
+      - [Funktion](#funktion-1)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-2)
   - [Incoming Features](#incoming-features)
   - [Contribution](#contribution)
 
@@ -155,24 +161,6 @@ Folgende API's sind vorhanden:
 Da das Ziel ist eine APP für Mobiltelefone zu entfernen musste ein Performance starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
 Der Entscheid fiel auf PWAs, da die sie Webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOs, Andoird, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über ein offline Modus verfügen. Heisst sie können auch offline verwendet werden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischen gespeichert sind.
 
-#### Mock-Up
-<a id=mockup></a>
-
-#### Farbschema
-<a id=farbschema></a>
-
-Wir haben mit grosser Sorgfalt ein Farbschema für unsere App entwickelt, das nicht nur funktional ist, sondern auch visuell ansprechend und leicht verständlich für unsere Benutzer.
-
-Unsere Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament unserer App und verleiht ihr eine solide Basis. Sie vermittelt Stabilität und Verlässlichkeit.
-
-Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
-
-Für das Routing und andere Markierungen haben wir <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
-
-Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
-
-Schliesslich haben wir uns entschieden, die verschiedenen Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese klare Unterscheidung ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
-
 ## Funktionen
 
 <a id=funktionen></a>
@@ -191,7 +179,7 @@ In der Karte finden sich verschiedene Funktionen wieder. Beim Start der Karte be
 
 - Restaurants und Bars Die Verpflegungsmöglichkeiten im Skigebiet sind mit jeweiligem Piktogramm visualisiert. Nach dem Anwählen erscheinen Informationen zur Örtlichkeit, sowie die Öffnungszeiten.
 
-- POI’sWeiterePointsofinterests,wiezumBeispielParkplätzeoderBushaltestellenkönnen Informationen wie den Namen enthalten.
+- POI’sWeiterePointsofinterests,wie zum Beispiel Parkplätze oder Bushaltestellen können Informationen wie den Namen enthalten.
 
 - Hintergrundkarte Im Hintergrund ist die Winterlandeskarte der Swisstopo
 
@@ -267,11 +255,157 @@ Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebi
 
 #### Statistiken
 
+Beschreibiung Statistiken (#TODO)
+
+- **Datenursprung**: Positionsaufahmen von der Sport Uhr von... (#TODO)
+- **Datenstand**: 01.04.2024 (#TODO)
+- **Datenformat**: GPX, Delimiter ;
+- **Datenimport**: gpx_to_db.py
+- **Datenbankschema**: [Datenbank](#datenbank)
+
+##### Konzept
+
 Das Menü Statistiken zeigt die Informationen zu den gefahren Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in die verscheide Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum Einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum Andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
+
+##### Funktion
+
+(#TODO) Theo Alle Vega Statistiken Sachen erklären
+
+Vom dem Menü Statisik aus kann auf die verschienden Positions Aufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
+
+1. Um jede Box mit den Informationen zur Strekcke befindet sich ein Link auf den GPX_Viewer. Dies ist die Karte, auf dem die Strecke auf der Karte angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
+
+Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
+
+2. Im GPX_Viewer wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
+   `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
+   Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
+   Die SQL View ist folgendermassen definiert:
+
+   ```
+   SELECT
+    v.Skidaten_ID,
+   v.SD_Date,
+   v.SD_Hoehenmeter,
+   v.SD_Distanz,
+   v.SD_Dauer,
+   v.SD_Geschwindigkeit,
+   v.SD_MaxGeschwindigkeit,
+   v.SD_Saison,
+   v.Benutzername,
+    v.SD_Geometrie
+   FROM
+    Skidaten AS v
+   WHERE
+    v.Skidaten_ID = %Skidaten_ID%
+   ```
+
+   Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebreich `\d+`. Dieser lässt nur positive Integer zu.
+
+3. Die zurückgeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
 #### Navi
 
-Bei der Navigation wird ein Ziel aus einer Liste ausgewählt. Der Weg zum Ziel wird danach hervorgehoben. Unterhalb der Karte ist eine chronologische Auflistung der Pisten und Anlagen welche auf der Route genutzt wird. Die Ziele in der Liste haben jeweils zusätzlich zum Namen ein Piktogramm, welches einfach erkennen lässt, ob es sich um eine Anlage, Parkplatz oder ein Restaurant handelt.
+Bei der Navigation wird ein Ziel aus einer Liste ausgewählt. Der Weg zum Ziel wird danach hervorgehoben. Unterhalb der Karte ist eine chronologische Auflistung der Pisten und Anlagen welche auf der Route genutzt wird. Die Ziele in der Liste haben jeweils zusätzlich zum Namen ein Piktogramm, welches einfach erkennen lässt, ob es sich um eine Anlage, Parkplatz oder ein Restaurant handelt.(#TODO Beschreibung anpassen)
+
+Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
+
+##### Konzept
+
+Die Naviagation bassiert auf den Daten der Pisten und Anlagen. Diese müssen zuerst aufberteitet werden und sind in seperaten Tabellen. Das Rotuing wird serverseitig in der Datenbank berchnet. Dafür wird die Extension [pgrouting](https://pgrouting.org/) verwendet.
+
+Bei der Nutzung wird ein Startpunkt angeben. In einem ersten Schritt wird in der Datenbank nach dem nächsten Startpunkt `(Node)` gesucht. Dasselbe passiert mit dem Zielpunkt. Über ein Topologischens Netzwerk aus gerichten Graphen `(edges)` wird dann die kürzeste Distanz mithilfe des Dijkstra Algorithmus errechnet.
+
+##### Aufbereitung der Daten
+
+Die Daten werden in der FME Workbench `Routing_geoserver.fmw` aufbereitet. Dabei wird eine Verbindungsline zwischen den Analgen und Pisten berechnet um ein durchgäniges topologisches Netzwerk zu erhalten. Grand für die aufberietung ist, dass beide Datensätze verschiedene Datengrundlagen haben. Die jeweilgen Start- oder Endpuntke schiessen dabei nicht aufeinadner ab. In einem weitern Schritt werden alle Linien die beidseitig sind, dupliziert. Beim Dupliakt wir die Orinetierung gedreht.
+
+Für das Routing muss die Datenbank erweitert werden. Aus der Datei `alpine_ace_routing_DB_erweitern.txt` werdne SQL Code geladen der mit einem SQLExecutor ausgeführt wird in der Datenbank. Es werden dabei zwei Tabellen erstellt. `a_a_routing` für das Rotuing der Pisten und `a_a_anlage_routing` für das Routing der Analgen. Beide Tabellen sind nur für die Berechnung des Routings relevant und nachher inaktiv.
+
+Zuerst werden die Kordinaten Start- und Endpunkte der Anlagen und Pisten extrahiert. Dann werden die Anlagen Endpunkte mit dem Pisten Starpunkt über den NeighborFinder gemachtcht. Genau gleich werden die Pisten Enden mit dem Analgen Startpunkt über den NeighborFinder gematcht. Bei beiden Schritten ist die Anzahl der Matches nicht begrenzt und die Maximaledistanz kann über den UserParameter `max_distanz_anlagen_end_pisten_start`, respektive `max_distanz_pisten_end_anlagen_start`eingbene werden. Der Standartwert ist 50 Meter. Ein einem zweiten Schritt werden die nicht gematchten nicht Anlagen Endpunkte mit den Pisten Startpunkten gematcht. Daselbe gilf für die nicht gematchten Pisten Starpunkten. Auch wieder mit dem NeighborFinder und nur einem Match mit einer Maximal Distanz von 120m. Bei ersten Schritt mit der kürzeren Distanz werden nur die Umliegend Verbindungen hergestellt. Beim zweiten Schritt werden längere Verbindungen hergestellt, damit alle Analgen oder Pisten in Netzwerk untereinander Verbunden sind. Um zu verhindern, dass falsche Verbindungen entstehen ist nur ein Match zugelassen. Die Distanzen 50m und 120m Meter sind Erfahrungswerte. Die Gemeoterien der Punkte wird anschliessend gelöscht. Mit den zuvor extrahiretn Korrdinaten wird anschliessend ein Punkt erstellt. Zwischen den jeweiligen Start und Endpunkten wird eine direkte Verbindungslinie berechnet. Die Orinentierung der Line ist von oben nach unten. Die Pisten aus der Datenbank werden anschliessend mit den Verbidnungslinien zusammengeführt. Alle Linien die das Attribute `routing_einweg = true` haben werden dupliziert und die Orienteriung gedreht, damit in beide Richtungen eine Verbindung besteht. Die Verbindungen und Pisten werden in der Tabelle `a_a_routing` gespeichert. Dasselbe passiert mit den Anlagen welche beidseitig sind. Diese werden in der Tabelle a_a_anlage_routing gespeichert.
+
+##### Manuelle Änderungen des Routings
+
+Mit Hilfe des QGIS Projektes `Alpine_ace_Routing.qgz` können Änderugen in den Routing Tabelle vorgenommen werden. Beim Start des Projekts muss der `Benutzername` und das `Passwort` der Datenbank eingetragen werden.
+
+Die Änderungen müssen in der Datengrunlage Routing vorgenommene werden. Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Nach vollbrachter Änderung muss die Berechnung des Routings in `pgAdmin 4` erfolgen.
+
+1. **Einweg oder beideitg anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbitungsmouds setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen.
+
+- [ ] bedetutet, Line ist beidseitig befahrbar
+- [x] bedetutet, Line ist einsetig befahrbar
+
+<iframe src="videos/routing_einweg_oder_beideitg_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+
+Nach erfolgter Änderung, Layer speichern.
+
+##### Berechnen des Routings
+
+Im `pgAdmin 4` wird anschliessend das Routing berechnet, der Code dafür liegt in der Datei `alpine_ace_routing.txt`. Zuerst werden für die Analgen und die Pisten separat die Knoten berechnet mit dem Befehlt `pgr_nodeNetwork`. Daraus resultieren die beiden Tabellen `a_a_routing_noded` und `a_a_anlage_routing_noded` Dies geschiet getrennt, da überall wo sich zwei Linien schneiden einen Konten erstellt wird. Da die Analgen über den Pisten sind dürfen sich zwischen diesen Linien keine Punkte erstellt werden. In die beiden Tabellen werden die Attribute der Ursprungsdaten kopiert. Die Konten der Analgen werden in Tabelle `a_a_routing_noded` kopiert. Darin wird das rotuing gerechnet mit dem Befehl `pgr_createTopology`.
+
+Ursprünglich war die geplannt das Routing mit einweg über die `reverse_cost` zu steurn. Deshabl wurden Kosten in Abhängkeit der Distanz vergeben. Wenn eine Strecke einseitig ist wurde zu den `reverse_cost` eine Million addiert. Für beidseitige Stecken ist sind die Kosten in beide Seiten gleich. Dies hat aber im jetzigen Routing keine Anwendungen, da beidseige Strecken Doppelt in beide Richtungen in Datensatz vorhanden sind.
+
+##### SQL views Routing
+
+Für das Routing werden zwei SQL views benötigt.
+
+1. SQL view `a_a_nearest_vertex`:
+
+```
+SELECT
+    v.id,
+    v.the_geom
+FROM
+    a_a_routing_noded_vertices_pgr AS v,
+    a_a_routing_noded AS e
+WHERE
+    v.id = (
+        SELECT
+            id
+        FROM
+            a_a_routing_noded_vertices_pgr
+        ORDER BY
+            the_geom <-> ST_SetSRID(ST_MakePoint(%x%, %y%), 2056)
+        LIMIT 1
+    )
+    AND (e.source = v.id OR e.target = v.id)
+GROUP BY
+    v.id, v.the_geom
+```
+
+Diese SQL view bekommt als Parameter die ein Koordinatenpaar `%x%` und `%y%` mit dem Wertebreich `^[\d\.\+]+$` Dieser lässt Positive Gleitkommazahlen zu. Es sucht in der Tabelle `a_a_routing_noded ` den nächsten Knoten. Ausgeben wird die Geometrie des Knotens und die `id`.
+Beispiel:
+`http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:2648338;y:1137974;&outputformat=application/json`
+
+2. SQL view `a_a_shortest_path_test`:
+
+```
+SELECT
+    min(r.seq) AS seq,
+    e.old_id AS id,
+    e.p_farbe,
+    sum(e.distance) AS distance,
+    ST_Collect(e.the_geom) AS geom,
+    sum(e.cost) AS cost,  -- Adding the 'cost' column
+    sum(e.rcost) AS rcost  -- Adding the 'rcost' column
+FROM
+    pgr_dijkstra(
+        'SELECT id,source,target,distance AS cost, rcost FROM a_a_routing_noded', %source%, %target%, false
+    ) AS r,
+    a_a_routing_noded AS e
+WHERE
+    r.edge = e.id
+GROUP BY
+    e.old_id, e.p_farbe
+```
+
+Diese SQL view bekommt als Paramter die Konten ID des Startpunktes `%source%` und der Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt.. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgeben wird die die einzelnen Geometrien der Steecken, `seq` (Sequenznummer für die Reihnenfolge), `p_farbe` und die `distance`.
+Beispiel:
+`http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
+
+##### Funktion
+
+#TODO
 
 #### Restaurant
 
@@ -293,8 +427,11 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 1. Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter bezogen werden unter dem Pfad: `http://localhost:5000/api/restaurant`.
 2. Beim Aufrufen der Seite Restaurant wird über einen useEffect-Hook eine Fetch-Anfrage an die oben genannten API Endpunkt gesendet. Die zurückkommenden Daten werden dann in einem Arry gespeichert. Während die Daten geladen werden, wird dies angezeigt. Bei einem Fehler erscheint die [Fehlermeldung](#nodeserver_fehler).
 3. Jedes Element im Arry mittels der `map()` Funktion in einer eigenen Box dargestellt. Für jedes Restaurant befindet sich ein Bild in der React-App im Ordner `/Restaurant_data/` . Der restliche Pfad der Bilddatei ist im Attribut `r_dateipfad_bildname` gespeichert. So wird für jedes Restaurant das dazugehörige Bild angezeigt. Unterhalb des Bildes ist der Restaurant Name. Dieser ist ebenfalls die Bildbeschreibung.
-4. Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf dem die Position und die Kontakt Informationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
-5. Im Restaurant_Viewer wird mit einem useEffect die `useEffect` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wir wieder die `Restaurant_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
+4. Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf dem die Position und die Kontakt Informationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants.
+
+Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
+
+5. Im Restaurant_Viewer wird mit einem useEffect die `Restaurant_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Restaurant_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
    `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_restaurant&viewparams=Restaurant_ID:50;&outputformat=application/json`
    Dabei ist `Alpine_Ace:a_a_restaurant` der Name der SQL View auf dem GeoServer.
    Die SQL View ist folgendermassen definiert:
@@ -312,7 +449,7 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
    WHERE
     v.Restaurant_ID= %Restaurant_ID%
    ```
-   Der Parameter ist `%Restaurant_ID%` hat dabei den Standardwert `1` und den Gültigkeitsbereich `\d+`. Dieser lässt nur Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
+   Der Parameter ist `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebreich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
 6. Die zurückgeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Styl Eigenschaften zugwiesen, so wie das Icon. Die weitern Informationen vom extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features

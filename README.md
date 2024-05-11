@@ -59,7 +59,11 @@ conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.
 
 ### FME-Requirements
 
-FME Workbench 2023.1 (Build 23619 )oder aktueller. Kann auf der von der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
+FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der von der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
+
+### QGIS-Requirements
+
+Eine QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der von der Webseite von [QGIS](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
 
 ### Node-Requirements
 
