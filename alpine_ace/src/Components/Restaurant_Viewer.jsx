@@ -134,7 +134,7 @@ const Restaurant_Viewer = () => {
           map.getView().animate({
             center: coordinates,
             zoom: 16, // Zoomstufe an Zielposition
-            duration: 1, // Dauer der Animation in ms
+            duration: 3000, // Dauer der Animation in ms
           });
         }
       }

@@ -60,6 +60,20 @@ const Karte = () => {
       },
     });
 
+    const oevSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        // Pfad zur WFS Resource auf dem GeoServer
+        return (
+          geoserverWFSAnfrage + "Alpine_Ace:oev" + geoserverWFSOutputFormat
+        );
+      },
+      strategy: bboxStrategy,
+      onError: function (error) {
+        console.error("Error fetching WFS point data:", error);
+      },
+    });
+
     const pistenSource = new VectorSource({
       format: new GeoJSON(),
       url: function (extent) {
@@ -112,6 +126,17 @@ const Karte = () => {
       }),
     });
 
+    const oevLayer = new VectorLayer({
+      source: oevSource,
+      style: new Style({
+        image: new Icon({
+          src: basisPfadKartenSymbole + "oev_haltestelle.svg",
+          scale: 0.15,
+          anchor: [0.5, 0.5],
+        }),
+      }),
+    });
+
     // Instanziierung eines Vector Layers für Linien mit der Source
     const pistenLayer = new VectorLayer({
       source: pistenSource,
@@ -138,6 +163,7 @@ const Karte = () => {
       },
     });
     const strichStaerkeAnlage = 4; // Hier wird die Strichstärke für die Anlagen definiert
+    const farbeAnlage = "#757575"; // Hier wird die Farbe für die Anlagen definiert
     const offsetDistance = 20; // Hier wird offsetDistance definiert
     const anlagenStyle = function (feature) {
       // Get the geometry of the feature
@@ -154,7 +180,7 @@ const Karte = () => {
         // Style for the original line (without offsets)
         const originalLineStyle = new Style({
           stroke: new Stroke({
-            color: "DarkGray ", // Choose your desired color for the original line
+            color: farbeAnlage, // Choose your desired color for the original line
             width: strichStaerkeAnlage, // Choose your desired width
           }),
         });
@@ -223,7 +249,7 @@ const Karte = () => {
             const lineStyle = new Style({
               geometry: line,
               stroke: new Stroke({
-                color: "DarkGray ",
+                color: farbeAnlage,
                 width: strichStaerkeAnlage,
               }),
             });
@@ -268,10 +294,18 @@ const Karte = () => {
     pistenLayer.setZIndex(1);
     anlagenLayer.setZIndex(2);
     parkplatzLayer.setZIndex(3);
+    oevLayer.setZIndex(4);
     restuarantLayer.setZIndex(5);
     // Initialize OpenLayers map
     const map = new Map({
-      layers: [swisstopoLayer, pistenLayer, anlagenLayer, parkplatzLayer], // Füge den Linien-Layer hinzu
+      layers: [
+        swisstopoLayer,
+        pistenLayer,
+        anlagenLayer,
+        parkplatzLayer,
+        oevLayer,
+        restuarantLayer,
+      ], // Füge den Linien-Layer hinzu
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
@@ -333,9 +367,11 @@ const Karte = () => {
         }}
       >
         <Box
+          display="flex"
+          flexDirection="column" // Anordnung der Boxen in einer Spalte
           sx={{
             width: "95vw",
-            height: "50vh",
+            height: "65vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
@@ -343,14 +379,15 @@ const Karte = () => {
             overflow: "hidden", // Kein Overflow der Karte
           }}
         >
-          <div
+          <Box
             ref={mapRef}
-            style={{
-              width: "100%",
-              height: "100%",
+            sx={{
+              flexGrow: 1, // Karte wächst, um verfügbaren Platz zu füllen
               borderRadius: "3vw",
+              overflow: "hidden",
+              bgcolor: "inherit", // Farbe von Elternbox erben
             }}
-          ></div>
+          ></Box>
         </Box>
 
         <Box
@@ -360,8 +397,7 @@ const Karte = () => {
           alignItems="flex-start"
           gap={2}
           sx={{
-            width: "95vw",
-            minHeight: "25vh",
+            width: "95vw", // Volle Breite der Elternbox
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             position: "relative",
@@ -375,10 +411,29 @@ const Karte = () => {
               {selectedFeature.r_name && (
                 <>
                   <h2>{selectedFeature.r_name}</h2>
-                  <p>Öffnungszeiten: {selectedFeature.r_oeffnungszeiten}</p>
-                  <p>Telefon: {selectedFeature.r_telefon}</p>
-                  <p>Email: {selectedFeature.r_email}</p>
-                  <p>Webseite: {selectedFeature.r_webseite}</p>
+                  <p>
+                    <strong>Öffnungszeiten:</strong>{" "}
+                    {selectedFeature.r_oeffnungszeiten}
+                  </p>
+                  <p>
+                    <strong>Telefon:</strong> {selectedFeature.r_telefon}
+                  </p>
+                  <p>
+                    <strong>E-Mail:</strong> {selectedFeature.r_email}
+                  </p>
+                  <p>
+                    <strong>Webseite:</strong>{" "}
+                    {selectedFeature.r_webseite && (
+                      <a
+                        href={selectedFeature.r_webseite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }} // Link wird immer gleich angezigt auch wenn dieser schon verwendet wurde
+                      >
+                        {selectedFeature.r_webseite}
+                      </a>
+                    )}
+                  </p>
                 </>
               )}
 
@@ -386,7 +441,9 @@ const Karte = () => {
               {selectedFeature.p_name && (
                 <>
                   <h2>{selectedFeature.p_name}</h2>
-                  <p>Pistennummer: {selectedFeature.p_nummer}</p>
+                  <p>
+                    <strong>Pistennummer:</strong> {selectedFeature.p_nummer}
+                  </p>
                   {/* <p>Status: {selectedFeature.p_status}</p> */}
                 </>
               )}
@@ -394,8 +451,24 @@ const Karte = () => {
               {/* Wenn eine Anlage ausgewählt ist */}
               {selectedFeature.a_name && (
                 <>
-                  <p>Anlagennamen: {selectedFeature.a_name}</p>
-                  <p>Höhendifferenz: {parseInt(selectedFeature.a_hoehe)}m</p>
+                  <h2>Anlagennamen: {selectedFeature.a_name}</h2>
+                  <p>
+                    <strong>Höhendifferenz:</strong>{" "}
+                    {parseInt(selectedFeature.a_hoehe)}m
+                  </p>
+                  {/* Füge hier weitere Attribute hinzu, die du anzeigen möchtest */}
+                </>
+              )}
+              {/* Wenn eine Anlage ausgewählt ist */}
+              {selectedFeature.pp_name && (
+                <>
+                  <h2>Parkplatz: {selectedFeature.pp_name}</h2>
+                  {/* Füge hier weitere Attribute hinzu, die du anzeigen möchtest */}
+                </>
+              )}
+              {selectedFeature.o_name && (
+                <>
+                  s<h2>Haltestelle: {selectedFeature.o_name}</h2>
                   {/* Füge hier weitere Attribute hinzu, die du anzeigen möchtest */}
                 </>
               )}
