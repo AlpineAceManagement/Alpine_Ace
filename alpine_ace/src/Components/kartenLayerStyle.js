@@ -1,4 +1,5 @@
-import { Style, Stroke, Icon } from "ol/style";
+import { VectorLayer } from "ol/layer";
+import { Style, Stroke, Icon, Fill } from "ol/style";
 import LineString from "ol/geom/LineString";
 
 const strichStaerkeAnlage = 4;
@@ -116,6 +117,30 @@ export function restaurantStyle() {
       src: basisPfadKartenSymbole + "restaurant.svg",
       scale: 0.15,
       anchor: [0.5, 0.5],
+    }),
+  });
+}
+
+export function kantonsGrenzenStyle() {
+  return new Style({
+    stroke: new Stroke({
+      color: "black",
+      width: 2,
+    }),
+    fill: new Fill({
+      color: "rgba(0, 0, 0,0)",
+    }),
+  });
+}
+
+export function landesGrenzenStyle() {
+  return new Style({
+    stroke: new Stroke({
+      color: "rgba(0, 0, 0,0.5)",
+      width: 2.5,
+    }),
+    fill: new Fill({
+      color: "rgba(0, 0, 0,0)",
     }),
   });
 }

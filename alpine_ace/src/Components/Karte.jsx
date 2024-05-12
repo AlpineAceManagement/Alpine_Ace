@@ -29,8 +29,7 @@ const Karte = () => {
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
-    //WFS Anfrage für alle Restaurants
-
+    //WFS Anfrage Funktion
     function createVectorSource(featureName) {
       return new VectorSource({
         format: new GeoJSON(),

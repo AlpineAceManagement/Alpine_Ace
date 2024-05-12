@@ -10,8 +10,6 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Vega } from "react-vega";
 import Map from "ol/Map";
-import TileLayer from "ol/layer/Tile";
-import TileWMS from "ol/source/TileWMS";
 import View from "ol/View";
 import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
@@ -20,6 +18,7 @@ import VectorLayer from "ol/layer/Vector";
 import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
+import { kantonsGrenzenStyle } from "./kartenLayerStyle.js";
 
 import spec_analgen from "./diagramms_anlagen";
 import spec_pisten from "./diagramm_pisten";
@@ -35,20 +34,33 @@ const Hauptmenu = () => {
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
-    const bulettinVectorSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:bulletins" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
+    //WFS Anfrage Funktion
+    function createVectorSource(featureName) {
+      return new VectorSource({
+        format: new GeoJSON(),
+        url: function (extent) {
+          return (
+            geoserverWFSAnfrage +
+            "Alpine_Ace:" +
+            featureName +
+            geoserverWFSOutputFormat
+          );
+        },
+        strategy: bboxStrategy,
+        onError: function (error) {
+          console.error(
+            "Error fetching WFS data for " + featureName + ":",
+            error
+          );
+        },
+      });
+    }
+    //WFS Anfrage für die Lawinenbulletin
+    const bulettinVectorSource = createVectorSource("bulletins");
+    //WFS Anfrage für die Kantonsgrenzen
+    const kantonesgrenzenSource = createVectorSource("tlm_kantonsgebiet");
+    //WFS Anfrage für die Kantonsgrenzen
+    const landesgrenzenSource = createVectorSource("tlm_landesgebiet");
 
     // Define transparency constant for fill colors
     const fillOpacity = 0.3; // Adjust as needed
@@ -111,60 +123,15 @@ const Hauptmenu = () => {
       },
     });
 
-    const kantonesgrenzenSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:tlm_kantonsgebiet" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
-
-    const landesgrenzenSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:tlm_landesgebiet" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
-
+    // Kantonsgrenzen Layer Styl aus kartenLayerStyle.js
     const kantonsLayer = new VectorLayer({
       source: kantonesgrenzenSource,
-      style: new Style({
-        stroke: new Stroke({
-          color: "rgba(0, 0, 0,0.5)",
-          width: 1.5,
-        }),
-        fill: new Fill({
-          color: "rgba(0, 0, 0,0)",
-        }),
-      }),
+      style: kantonsGrenzenStyle(),
     });
-
+    // Landesgrenzen Layer Styl aus kartenLayerStyle.js
     const landesgrenzenLayer = new VectorLayer({
       source: landesgrenzenSource,
-      style: new Style({
-        stroke: new Stroke({
-          color: "rgba(0, 0, 0,0.5)",
-          width: 2.5,
-        }),
-        fill: new Fill({
-          color: "rgba(0, 0, 0,0)",
-        }),
-      }),
+      style: kantonsGrenzenStyle(),
     });
 
     //Definition des Kartenextents für WMS/WMTS
