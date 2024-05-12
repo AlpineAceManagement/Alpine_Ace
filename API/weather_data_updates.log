@@ -12,3 +12,8 @@
 2024-05-12 11:42:54,793 - INFO - Hourly forecast data saved to database.
 2024-05-12 11:45:02,566 - INFO - Current weather data saved to database
 2024-05-12 11:45:02,728 - INFO - Hourly forecast data saved to database.
+2024-05-12 17:36:14,671 - INFO - Current weather data saved to database
+2024-05-12 17:36:14,792 - ERROR - Database error while saving hourly forecast: invalid input value for enum wetter: "gewitter"
+LINE 1: ...VALUES ( '2024-05-12T16:00:00+00:00'::timestamptz,'gewitter'...
+                                                             ^
+

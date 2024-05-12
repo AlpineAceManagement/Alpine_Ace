@@ -8,304 +8,122 @@ import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Icon, Stroke, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
-import LineString from "ol/geom/LineString.js";
+import { ZoomToExtent, defaults as defaultControls } from "ol/control.js";
+import { SwisstopoLayer } from "./swisstopoLayer.js";
+import {
+  restaurantStyle,
+  parkplatzStyle,
+  oevStyle,
+  anlagenStyle,
+  pistenStyle,
+} from "./kartenLayerStyle.js";
 
 const Karte = () => {
-  const mapRef = useRef(null); // Reference to the map container
-  const [selectedFeature, setSelectedFeature] = useState(null); // State to store the selected feature properties
+  const mapRef = useRef(null);
+  const [selectedFeature, setSelectedFeature] = useState(null);
 
   useEffect(() => {
-    // GeoServer layer arbeitsbereich:datenspeicher
     const geoserverWFSAnfrage =
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
-    const basisPfadKartenSymbole =
-      "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/";
 
-    // Instanziierung einer Vector Source mittels einer WFS GetFeature Abfrage
-    const restuarantSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:Restaurant" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS point data:", error);
-      },
-    });
+    //WFS Anfrage für alle Restaurants
 
-    const parkplatzSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:parkplatz" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS point data:", error);
-      },
-    });
+    function createVectorSource(featureName) {
+      return new VectorSource({
+        format: new GeoJSON(),
+        url: function (extent) {
+          return (
+            geoserverWFSAnfrage +
+            "Alpine_Ace:" +
+            featureName +
+            geoserverWFSOutputFormat
+          );
+        },
+        strategy: bboxStrategy,
+        onError: function (error) {
+          console.error(
+            "Error fetching WFS data for " + featureName + ":",
+            error
+          );
+        },
+      });
+    }
+    //WFS Anfrage für alle Restaurants
+    const restaurantSource = createVectorSource("Restaurant");
+    //WFS Anfrage für alle Parkplätze
+    const parkplatzSource = createVectorSource("parkplatz");
+    //WFS Anfrage für alle ÖV Haltestellen
+    const oevSource = createVectorSource("oev");
+    //WFS Anfrage für alle Pisten
+    const pistenSource = createVectorSource("pisten");
+    //WFS Anfrage für alle Anlagen
+    const anlagenSource = createVectorSource("anlagen");
 
-    const oevSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          geoserverWFSAnfrage + "Alpine_Ace:oev" + geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS point data:", error);
-      },
+    // Restaurant Layer Styl aus kartenLayerStyle.js
+    const restaurantLayer = new VectorLayer({
+      source: restaurantSource,
+      style: restaurantStyle(),
     });
-
-    const pistenSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          geoserverWFSAnfrage + "Alpine_Ace:pisten" + geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      // Add error handler
-      onError: function (error) {
-        console.error("Error fetching WFS line data:", error);
-      },
-    });
-
-    const anlagenSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        // Pfad zur WFS Resource auf dem GeoServer
-        return (
-          geoserverWFSAnfrage + "Alpine_Ace:anlagen" + geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      // Add error handler
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
-    // Instanziierung eines Vector Layers für Punkte mit der Source
-    const restuarantLayer = new VectorLayer({
-      source: restuarantSource,
-      style: new Style({
-        image: new Icon({
-          src: basisPfadKartenSymbole + "restaurant.svg",
-          scale: 0.15,
-          anchor: [0.5, 0.5],
-        }),
-      }),
-    });
-
+    // Parkplätze Layer Styl aus kartenLayerStyle.js
     const parkplatzLayer = new VectorLayer({
       source: parkplatzSource,
-      style: new Style({
-        image: new Icon({
-          src: basisPfadKartenSymbole + "parkplatz.svg",
-          scale: 0.15,
-          anchor: [0.5, 0.5],
-        }),
-      }),
+      style: parkplatzStyle(),
     });
-
+    // Haltestellen Layer Styl aus kartenLayerStyle.js
     const oevLayer = new VectorLayer({
       source: oevSource,
-      style: new Style({
-        image: new Icon({
-          src: basisPfadKartenSymbole + "oev_haltestelle.svg",
-          scale: 0.15,
-          anchor: [0.5, 0.5],
-        }),
-      }),
+      style: oevStyle(),
     });
-
-    // Instanziierung eines Vector Layers für Linien mit der Source
+    //Pisten Layer Styl aus kartenLayerStyle.js
     const pistenLayer = new VectorLayer({
       source: pistenSource,
-      style: function (feature) {
-        // Hole den Wert des Attributs "p_farbe" für das aktuelle Feature
-        const colorAttribute = feature.get("p_farbe");
-
-        // Definiere die Standardfarbe für den Fall, dass das Attribut nicht definiert ist
-        let color = "#E40513"; // Default color: red
-
-        // Überprüfe, ob das Farbattribut definiert ist und weise entsprechende Farbe zu
-        if (colorAttribute === "Blau") {
-          color = "#0077BA";
-        } else if (colorAttribute === "Schwarz") {
-          color = "#000000";
-        }
-        // Rückgabe des Stils mit dynamischer Farbe basierend auf dem Attribut
-        return new Style({
-          stroke: new Stroke({
-            color: color,
-            width: 4,
-          }),
-        });
-      },
+      style: pistenStyle,
     });
-    const strichStaerkeAnlage = 4; // Hier wird die Strichstärke für die Anlagen definiert
-    const farbeAnlage = "#757575"; // Hier wird die Farbe für die Anlagen definiert
-    const offsetDistance = 20; // Hier wird offsetDistance definiert
-    const anlagenStyle = function (feature) {
-      // Get the geometry of the feature
-      const geometry = feature.getGeometry();
 
-      // Check if the feature has a LineString geometry
-      if (geometry.getType() === "LineString") {
-        // Get the coordinates of the LineString
-        const coordinates = geometry.getCoordinates();
-
-        // Define the styles array to hold the styles for each part of the line
-        const lineStyles = [];
-
-        // Style for the original line (without offsets)
-        const originalLineStyle = new Style({
-          stroke: new Stroke({
-            color: farbeAnlage, // Choose your desired color for the original line
-            width: strichStaerkeAnlage, // Choose your desired width
-          }),
-        });
-
-        lineStyles.push(originalLineStyle); // Add the original line style to the array
-
-        // Calculate the total length of the line
-        let totalLength = 0;
-        for (let i = 0; i < coordinates.length - 1; i++) {
-          totalLength += Math.sqrt(
-            Math.pow(coordinates[i + 1][0] - coordinates[i][0], 2) +
-              Math.pow(coordinates[i + 1][1] - coordinates[i][1], 2)
-          );
-        }
-
-        // Define the number of intervals
-        const numIntervals = 5; // Change this value to adjust the number of intervals
-
-        // Calculate the length of each interval
-        const intervalLength = totalLength / numIntervals;
-
-        // Iterate over the segments of the line
-        for (let i = 0; i < coordinates.length - 1; i++) {
-          // Calculate the length of the current segment
-          const segmentLength = Math.sqrt(
-            Math.pow(coordinates[i + 1][0] - coordinates[i][0], 2) +
-              Math.pow(coordinates[i + 1][1] - coordinates[i][1], 2)
-          );
-
-          // Calculate the number of intervals within the current segment
-          const numSegments = Math.ceil(segmentLength / intervalLength);
-
-          // Calculate the distance between each interval
-          const intervalDistance = segmentLength / numSegments;
-
-          // Calculate the unit vector along the segment
-          const segmentVector = [
-            (coordinates[i + 1][0] - coordinates[i][0]) / segmentLength,
-            (coordinates[i + 1][1] - coordinates[i][1]) / segmentLength,
-          ];
-
-          // Iterate over the intervals within the current segment
-          for (let j = 0; j < numSegments; j++) {
-            // Calculate the coordinates of the current interval
-            const intervalStart = [
-              coordinates[i][0] + segmentVector[0] * j * intervalDistance,
-              coordinates[i][1] + segmentVector[1] * j * intervalDistance,
-            ];
-
-            // Calculate the coordinates of the point 90 degrees to the right of the interval start
-            const intervalEndRight = [
-              intervalStart[0] + segmentVector[1] * offsetDistance,
-              intervalStart[1] - segmentVector[0] * offsetDistance,
-            ];
-
-            // Calculate the coordinates of the point 90 degrees to the left of the interval start
-            const intervalEndLeft = [
-              intervalStart[0] - segmentVector[1] * offsetDistance,
-              intervalStart[1] + segmentVector[0] * offsetDistance,
-            ];
-
-            // Create the new line geometry
-            const line = new LineString([intervalEndLeft, intervalEndRight]);
-
-            // Create the style for the line
-            const lineStyle = new Style({
-              geometry: line,
-              stroke: new Stroke({
-                color: farbeAnlage,
-                width: strichStaerkeAnlage,
-              }),
-            });
-
-            // Add the style to the array
-            lineStyles.push(lineStyle);
-          }
-        }
-
-        // Return the array of styles for the feature
-        return lineStyles;
-      }
+    // Anlagen Layer Styl aus kartenLayerStyle.js
+    const styleFunction = function (feature) {
+      return anlagenStyle(feature);
     };
-    // Create the vector layer for Anlagen with the custom style
+    // Anlage Layer Styl aus kartenLayerStyle.js
     const anlagenLayer = new VectorLayer({
       source: anlagenSource,
-      style: anlagenStyle,
+      style: styleFunction,
     });
 
     //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
+    // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
+    const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
-    const swisstopoLayer = new TileLayer({
-      extent: extent,
-      source: new TileWMS({
-        url: "https://wms.geo.admin.ch/",
-        crossOrigin: "anonymous",
-        attributions:
-          '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-          'en/home.html">geo.admin.ch</a>',
-        projection: "EPSG:2056",
-        params: {
-          LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-          FORMAT: "image/jpeg",
-        },
-        serverType: "mapserver",
-      }),
-    });
-
-    swisstopoLayer.setZIndex(0);
+    // Layer Reihenfolge festlegen, 0 ist zu underst
+    WMSwinterlandeskarteLayer.setZIndex(0);
     pistenLayer.setZIndex(1);
     anlagenLayer.setZIndex(2);
     parkplatzLayer.setZIndex(3);
     oevLayer.setZIndex(4);
-    restuarantLayer.setZIndex(5);
-    // Initialize OpenLayers map
+    restaurantLayer.setZIndex(5);
+
+    // Karte erstellen
     const map = new Map({
+      controls: defaultControls().extend([
+        new ZoomToExtent({
+          extent: [2755375, 1164628, 2775625, 1195443],
+        }),
+      ]),
       layers: [
-        swisstopoLayer,
+        WMSwinterlandeskarteLayer,
         pistenLayer,
         anlagenLayer,
         parkplatzLayer,
         oevLayer,
-        restuarantLayer,
-      ], // Füge den Linien-Layer hinzu
+        restaurantLayer,
+      ],
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
@@ -468,7 +286,7 @@ const Karte = () => {
               )}
               {selectedFeature.o_name && (
                 <>
-                  s<h2>Haltestelle: {selectedFeature.o_name}</h2>
+                  <h2>Haltestelle: {selectedFeature.o_name}</h2>
                   {/* Füge hier weitere Attribute hinzu, die du anzeigen möchtest */}
                 </>
               )}
