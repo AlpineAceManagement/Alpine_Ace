@@ -66,14 +66,14 @@ FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der Webseite von [Sa
 
 ### QGIS-Requirements
 
-QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der von der Webseite von [QGIS heruntergeladen](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
+QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS heruntergeladen](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
 #FRAGE gehört die Info ins License? ich denke nicht da es hier um die Software geht
 
 ### Node-Requirements
 
 ### Frontend
 
-Um die Webapp zum laufen zu bringen müssen folgende Schritte ausgeführt werden:
+Um die Webapp zum Laufen zu bringen, müssen folgende Schritte ausgeführt werden:
 
 1. neues Terminal öffnen -> als GitBash
 2. Ordner wechseln
@@ -98,7 +98,7 @@ npm start
 
 Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis) und einem GeoServer der die Geodaten zur Verfügung stellt.
 
-#FRAGE fehlt hier nicht ein weiteren Teil? Den Node Server? Oder gehört dieser zum Datenbezugsteil? Wenn ja muss hinter Python auf JS stehen.
+#FRAGE fehlt hier nicht ein weiterer Teil? Den Node Server? Oder gehört dieser zum Datenbezugsteil? Wenn ja muss hinter Python auf JS stehen.
 
 #### Postgres inkl. Postgis
 
@@ -142,7 +142,7 @@ CREATE EXTENSION pgrouting;
 
 Download vom Höhenmodell DHM25 der Swisstopo.
 
-1. Zurück ins Bassverzeichnis navigieren:
+1. Zurück ins Basisverzeichnis navigieren:
 
 ```
 cd $(git rev-parse --show-toplevel)
@@ -411,7 +411,7 @@ GROUP BY
 ```
 
 6. `Schlage Parameter vor`
-7. Standartwert für x
+7. Standardwert für x
 
 ```
 2600000
@@ -423,7 +423,7 @@ Reguläre Ausdruck-Validierung
 ^[\d\.\+]+$
 ```
 
-8. Standartwert für y
+8. Standardwert für y
 
 ```
 1200000
@@ -479,7 +479,7 @@ GROUP BY
 ```
 
 6. `Schlage Parameter vor`
-7. Standartwert für source
+7. Standardwert für source
 
 ```
 0
@@ -542,7 +542,7 @@ Alpine_Ace:a_a_restaurant
 ```
 
 6. `Schlage Parameter vor`
-7. Standartwert für Restaurant_ID
+7. Standardwert für Restaurant_ID
 
 ```
 0

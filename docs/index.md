@@ -74,9 +74,9 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 
 - Meteo: Die Wetter Daten werden über [https://www.meteomatics.com/de/free-wetter-api/](https://www.meteomatics.com/de/free-wetter-api/) bezogen. 500 Abfragen pro Tag sind kostenlos. Die Abfrage der Daten erfolgt im Viertelstunden Takt.
 
-- Lawineninformation: Lawineninformation werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen [https://www.slf.ch/de/services-und-produkte/slf-datenservice/](https://www.slf.ch/de/services-und-produkte/slf-datenservice/). Dabei kommen die Daten von den Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 24h Takt.
+- Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen [https://www.slf.ch/de/services-und-produkte/slf-datenservice/](https://www.slf.ch/de/services-und-produkte/slf-datenservice/). Dabei werden die Daten vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 24h Takt.
 
-- Schneehöhen: Die Schneehöhen werden über die API des SLF bezogen. Dabei handelt es sich um die Gleiche API wie bei den Lawineninformation. Die Abfrage der Daten erfolgt im 24h Takt
+- Schneehöhen: Die Schneehöhen werden über die API des SLF bezogen. Dabei handelt es sich um die gleiche API wie bei den Lawineninformationen. Die Abfrage der Daten erfolgt im 24h Takt
 
 - Informationen über Skigebiet: Die Informationen zu den offenen Anlagen oder den offenen Pisten werden entweder über Scraping oder über eine API der einzelne Bergbahnen bezogen, dies ist jedoch noch in Abklärung.
 
@@ -86,13 +86,13 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 
 <a id=datenbank></a>
 
-In diesem Projekt werden neben Sachdaten auch Daten mit Raumbezug verwendet, wie Pisten und Anlagen welche Geometrien haben. Um sicherzustellen, dass die Datenbank die geometrischen Daten effizient verarbeiten kann, wurde entschieden, eine relationalen Datenbank mit der räumlichen Erweiterung PostGIS zu verwenden. Dadurch wird PostgreSQL in der Lage sein, räumliche Abfragen und Operationen durchzuführen, was für unser Projekt von entscheidender Bedeutung ist.
+In diesem Projekt werden neben Sachdaten auch Daten mit Raumbezug verwendet, wie Pisten und Anlagen welche Geometrien haben, verwendet. Um sicherzustellen, dass die Datenbank die geometrischen Daten effizient verarbeiten kann, wurde entschieden, eine relationale Datenbank mit der räumlichen Erweiterung PostGIS zu verwenden. Dadurch wird PostgreSQL in der Lage sein, räumliche Abfragen und Operationen durchzuführen, was für unser Projekt von entscheidender Bedeutung ist.
 
 ##### Datenbankverbindung
 
 <a id=datenbankverbindung></a>
 
-Während des Betriebes der Plattform müssen verschiedene Systeme lese- oder schreibzugriff haben. Für die Datenbankverbindung werden folgende Informationen verwendet:
+Während des Betriebes der Plattform müssen verschiedene Systeme Lese- oder Schreibzugriff haben. Für die Datenbankverbindung werden folgende Informationen verwendet:
 
 - **Benutzername:** postgress
 - **Passwort:** gesetztes Passwort der Datenbank
@@ -100,7 +100,7 @@ Während des Betriebes der Plattform müssen verschiedene Systeme lese- oder sch
 - **host:** Während der Entwicklung wird Local host verwendet
 - **port:** Standardmässig wird der Port 5432 verwendet
 
-Die Informationen werden an verschieden Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welcher die Verbindungsinformationen angeben sind:
+Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welchem die Verbindungsinformationen angegeben sind:
 
 - Python: `alpine_ace\src\DB\config.js`
 
@@ -114,7 +114,7 @@ Das Datenbankschema ist in folgende Gruppen eingeteilt:
 
 - **Skigebiet:** Das Skigebiet ist mit sehr vielen Tabellen verknüpft.
 - **Meteodaten:** Beinhaltet Informationen Wetterprognose, Schneehöhen, Messdaten
-- **Sicherheitsinformationen:** Verfügt über die aktuelle Lawinenbulletin
+- **Sicherheitsinformationen:** Verfügt über das aktuelle Lawinenbulletin
 - **Pistenplan (Punktinformationen):** Standorte von POI wie Restaurants, Parkplätze und ÖV-Haltestellen
 - **Pistenplan (Linieninformationen):** Anlagen und Pisten sowie deren Start und Endpunkte
 - **Routing:** Enthält Tabellen für das Erstellen des Routings (inaktiv) und die eigentlichen Routing Tabellen (aktiv)
@@ -123,7 +123,7 @@ Das Datenbankschema ist in folgende Gruppen eingeteilt:
 
 #### Datenimport mit FME
 
-Folgende Daten werden mithilfe von FME in den GeoServer importiert:
+Folgende Daten werden mit Hilfe von FME in den GeoServer importiert:
 
 - Skigebiet
 - Pisten
@@ -140,7 +140,7 @@ Folgende Daten werden mithilfe von FME in den GeoServer importiert:
 
 <a id=nodeserver></a>
 
-Node Server greif auf Daten des Servers zu GeoServer stellt diese innerhalb der React-App zur Verfügung. Dies sind als API's abrufbar.
+Node Server greift auf Daten des Servers zu GeoServer stellt diese innerhalb der React-App zur Verfügung. Dies sind als API's abrufbar.
 
 Folgende API's sind vorhanden:
 
@@ -151,7 +151,7 @@ Folgende API's sind vorhanden:
 - **/api/schneehoehe** Die aktuellsten Informationen der Tabelle Schneehoehe von der Station ROT3
 - **/api/messdaten** Die aktuellsten Informationen der Tabelle Messdaten
 - **/api/bulletins** Die aktuellsten Informationen der Lawinengefahr in der Lenzerheide
-- **/api/upload** Wird für das hochladen der GPX files verwendet? #TODO
+- **/api/upload** Wird für das Hochladen der GPX files verwendet? #TODO
 
 ##### Fehler
 
@@ -163,8 +163,8 @@ Folgende API's sind vorhanden:
 
 <a id=frontend></a>
 
-Da das Ziel ist eine APP für Mobiltelefone zu entwerfen musste ein Performance starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOs, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über ein offline Modus verfügen. Heisst sie können auch offline verwendet werden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischen gespeichert sind.
+Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
+Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet werden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
 ## Funktionen
 
@@ -175,7 +175,7 @@ Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installa
 #TODO
 
 1. Beschreibung wie funktioniert,
-2. Welche Menüs eingen Kopfzeilen haben
+2. Welche Menüs eigene Kopfzeilen haben
 
 #### Hauptmenü
 
@@ -200,7 +200,7 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 1. Dashboard Lifte(Veag)
 2. Symbol Lawinenstufe
-3. Karte (maping, Code beschreiben, Informationen Farbe, Hintergrundkarte)
+3. Karte (mapping, Code beschreiben, Informationen Farbe, Hintergrundkarte)
 4. Buttons (Schaltflächen Menüs)
 
 #### Karte
@@ -215,11 +215,11 @@ In der Karte finden sich verschiedene Funktionen wieder. Beim Start der Karte be
 
 - **POI’s (points of interests)**: Zum Beispiel Parkplätze oder Bushaltestellen die Informationen wie den Namen enthalten.
 
-- **Hintergrundkarte**: Im Hintergrund ist die Winterlandeskarte der Swisstopo
+- **Hintergrundkarte**: Den Hintergrund bildet die Winterlandeskarte von Swisstopo
 
 ##### Skigebiete
 
-Die Daten der Skigebiete wurden von der Platform OpenSnowMap bezogen. Die Platform OpenSnowMap bezieht täglich alle Pisten und Skigebiete weltweit von [Open Street Map](https://www.openstreetmap.org/).
+Die Daten der Skigebiete wurden von der Plattform OpenSnowMap bezogen. Die Platform OpenSnowMap bezieht täglich alle Pisten und Skigebiete weltweit von [Open Street Map](https://www.openstreetmap.org/).
 
 - **Datenursprung**: Datei der `planet_pistes.osm.gz` von der Platform [data.opensnowmap.org](https://www.opensnowmap.org/iframes/data.html).
 - **Datenstand**: 11.03.2024
@@ -245,8 +245,8 @@ Die Daten der Pisten wurden von der Platform OpenSnowMap bezogen. Die Platform O
 
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Linien gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Linien wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
-Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench werden zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilinen werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem Benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#TODO Datenbeschreibung DHM25 erstellen)
-abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Wenn dies nicht möglich wir diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als einweg eingestuft (`p_einweg = true`) wird oder die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess [Routing_Vorbereitung](#TODO Prozess beschreiben)
+Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench wird zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilines werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#TODO Datenbeschreibung DHM25 erstellen)
+abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess [Routing_Vorbereitung](#TODO Prozess beschreiben)
 verwendet.
 
 ##### Anlagen
@@ -259,13 +259,13 @@ Die Daten der Anlagen sind aus dem TLM3D Datensatz der Swisstopo. In der Objektk
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
-In der Workbench werden die `anlage_id` erstellt und das Attribut name in `a_name` umbenennt. Für das Routing ist es später wichtig in, welche Richtung die Anlage verläuft. In einem v Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#TODO Datenbeschreibung DHM25 erstellen)
-abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich wir diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest ab wann eine Anlage als einweg eingestuft (`a_einweg = true`) wird oder die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess [Routing_Vorbereitung](#TODO Prozess beschreiben)
+In der Workbench werden die `anlage_id` erstellt und das Attribut name in `a_name` umbenannt. Für das Routing ist es später wichtig, in welche Richtung die Anlage verläuft. In einem v Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#TODO Datenbeschreibung DHM25 erstellen)
+abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich ist, wird diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest, ab wann eine Anlage als Einweg eingestuft (`a_einweg = true`) wird, oder ob die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess [Routing_Vorbereitung](#TODO Prozess beschreiben)
 verwendet.
 
 ##### Parkplätze
 
-- **Datenursprung**: Manuelles Recherche der auf [Google Maps](https://www.google.com/maps/search/arosa+lenzerheide+parkpl%C3%A4tze/@46.743912,9.5576594,12.71z?entry=ttu).
+- **Datenursprung**: Manuelle Recherche auf [Google Maps](https://www.google.com/maps/search/arosa+lenzerheide+parkpl%C3%A4tze/@46.743912,9.5576594,12.71z?entry=ttu).
 - **Datenstand**: 02.04.2024
 - **Datenformat Informationen**: CSV, Delimiter ;
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
@@ -285,7 +285,7 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 #### Wetter
 
-Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die aktuelle Temperatur, Bewölkungsgrad, Schneehöhe, Neuschnee, Windgeschwindigkeit und Windrichtung. Letztere wird durch einen Pfeil signalisiert der sich in entsprechende Richtung dreht.
+Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehören die aktuelle Temperatur, Bewölkungsgrad, Schneehöhe, Neuschnee, Windgeschwindigkeit und Windrichtung. Letztere wird durch einen Pfeil signalisiert der sich in entsprechende Richtung dreht.
 
 #### Statistiken
 
@@ -299,15 +299,15 @@ Beschreibung Statistiken (#TODO)
 
 ##### Konzept
 
-Das Menü Statistiken zeigt die Informationen zu den gefahren Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in die verscheide Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum Einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum Andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
+Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
 
 ##### Funktion
 
 (#TODO) Theo Alle Vega Statistiken Sachen erklären
 
-Vom Menü Statistik aus, kann auf die verschiedene Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
+Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
 
-1. Um jede Box mit den Informationen zur Strecke befindet sich ein Link auf den GPX_Viewer. Dies ist die Karte, auf dem die Strecke auf der Karte angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
+1. Um jede Box mit den Informationen zur Strecke befindet sich ein Link zum GPX_Viewer. Dies ist die Karte, auf der die Strecke angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
 
 Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
 
@@ -336,7 +336,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
 
    Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
 
-3. Die zurückgeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
+3. Die zurückgebenen Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
 #### Navi
 
@@ -346,23 +346,23 @@ Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
 
 ##### Konzept
 
-Die Navigation basiert auf den Daten der Pisten und Anlagen. Diese müssen zuerst aufbereitet werden und sind in separaten Tabellen. Das Routing wird serverseitig in der Datenbank berechnet. Dafür wird die Extension [pgrouting](https://pgrouting.org/) verwendet.
+Die Navigation basiert auf den Daten der Pisten und Anlagen. Diese müssen zuerst aufbereitet werden und sind in separaten Tabellen angelegt. Das Routing wird serverseitig in der Datenbank berechnet. Dafür wird die Extension [pgrouting](https://pgrouting.org/) verwendet.
 
-Bei der Nutzung wird ein Startpunkt angeben. In einem ersten Schritt wird in der Datenbank nach dem nächsten Startpunkt `(Node)` gesucht. Dasselbe passiert mit dem Zielpunkt. Über ein topologisches Netzwerk aus gerichteten Graphen `(edges)` wird dann die kürzeste Distanz mithilfe des Dijkstra Algorithmus errechnet.
+Bei der Nutzung wird ein Startpunkt angegeben. In einem ersten Schritt wird in der Datenbank nach dem nächsten Startpunkt `(Node)` gesucht. Dasselbe passiert mit dem Zielpunkt. Über ein topologisches Netzwerk aus gerichteten Graphen `(edges)` wird dann die kürzeste Distanz mithilfe des Dijkstra Algorithmus errechnet.
 
 ##### Aufbereitung der Daten
 
 Die Daten werden in der FME Workbench `Routing_geoserver.fmw` aufbereitet. Dabei wird eine Verbindungslinie zwischen den Anlagen und Pisten berechnet um ein durchgängiges topologisches Netzwerk zu erhalten. Grund für die Aufbereitung ist, dass beide Datensätze verschiedene Datengrundlagen haben. Die jeweiligen Start- oder Endpunkte schliessen dabei nicht aufeinander ab. In einem weiteren Schritt werden alle Linien die beidseitig sind, dupliziert. Beim Duplikat wir die Orientierung gedreht.
 
-Für das Routing muss die Datenbank erweitert werden. Aus der Datei `alpine_ace_routing_DB_erweitern.txt` werden SQL Code geladen der mit einem SQLExecutor ausgeführt wird in der Datenbank. Es werden dabei zwei Tabellen erstellt. `a_a_routing` für das Routing der Pisten und `a_a_anlage_routing` für das Routing der Anlagen. Beide Tabellen sind nur für die Berechnung des Routings relevant und nachher inaktiv.
+Für das Routing muss die Datenbank erweitert werden. Aus der Datei `alpine_ace_routing_DB_erweitern.txt` wird der SQL Code geladen der in der Datenbank mit einem SQLExecutor ausgeführt wird in der Datenbank. Es werden dabei zwei Tabellen erstellt. `a_a_routing` für das Routing der Pisten und `a_a_anlage_routing` für das Routing der Anlagen. Beide Tabellen sind nur für die Berechnung des Routings relevant und nachher inaktiv.
 
-Zuerst werden die Koordinaten Start- und Endpunkte der Anlagen und Pisten extrahiert. Dann werden die Anlagen Endpunkte mit dem Pisten Startpunkt über den NeighborFinder gematcht . Genau gleich werden die Pisten Enden mit dem Anlagen Startpunkt über den NeighborFinder gematcht . Bei beiden Schritten ist die Anzahl der Matches nicht begrenzt und die Maximaledistanz kann über den UserParameter `max_distanz_anlagen_end_pisten_start`, respektive `max_distanz_pisten_end_anlagen_start`eingegeben werden. Der Standartwert ist 50 Meter. In einem zweiten Schritt werden die nicht gematchten Anlagen Endpunkte mit den Pisten Startpunkten gematcht. Dasselbe gilt für die nicht gematchten Pisten Startpunkten. Auch wieder mit dem NeighborFinder und nur einem Match mit einer Maximal Distanz von 120 Meter. Bei ersten Schritt mit der kürzeren Distanz werden nur die Umliegend Verbindungen hergestellt. Beim zweiten Schritt werden längere Verbindungen hergestellt, damit alle Anlagen oder Pisten in Netzwerk untereinander Verbunden sind. Um zu verhindern, dass falsche Verbindungen entstehen ist nur ein Match zugelassen. Die Distanzen 50 Meter und 120 Meter sind Erfahrungswerte. Die Geometrien der Punkte wird anschliessend gelöscht. Mit den zuvor extrahierten Koordinaten wird anschliessend ein Punkt erstellt. Zwischen den jeweiligen Start und Endpunkten wird eine direkte Verbindungslinie berechnet. Die Orientierung der Line ist von oben nach unten. Die Pisten aus der Datenbank werden anschliessend mit den Verbindungslinien zusammengeführt. Alle Linien die das Attribute `routing_einweg = true` haben werden dupliziert und die Orientierung gedreht, damit in beide Richtungen eine Verbindung besteht. Die Verbindungen und Pisten werden in der Tabelle `a_a_routing` gespeichert. Dasselbe passiert mit den Anlagen welche beidseitig sind. Diese werden in der Tabelle a_a_anlage_routing gespeichert.
+Zuerst werden die Koordinaten Start- und Endpunkte der Anlagen und Pisten extrahiert. Dann werden die Anlagen Endpunkte mit dem Pisten Startpunkt über den NeighborFinder gematcht . Genau gleich werden die Pisten Enden mit dem Anlagen Startpunkt über den NeighborFinder gematcht . Bei beiden Schritten ist die Anzahl der Matches nicht begrenzt und die Maximaldistanz kann über den UserParameter `max_distanz_anlagen_end_pisten_start`, respektive `max_distanz_pisten_end_anlagen_start`eingegeben werden. Der Standardwert ist 50 Meter. In einem zweiten Schritt werden die nicht gematchten Anlagen Endpunkte mit den Pisten Startpunkten gematcht. Dasselbe gilt für die nicht gematchten Pisten Startpunkte. Auch wieder mit dem NeighborFinder und nur einem Match mit einer Maximaldistanz von 120 Meter. Bei ersten Schritt mit der kürzeren Distanz werden nur die umliegenden Verbindungen hergestellt. Beim zweiten Schritt werden längere Verbindungen hergestellt, damit alle Anlagen oder Pisten in Netzwerk untereinander verbunden sind. Um zu verhindern, dass falsche Verbindungen entstehen ist nur ein Match zugelassen. Die Distanzen 50 Meter und 120 Meter sind Erfahrungswerte. Die Geometrien der Punkte werden anschliessend gelöscht. Mit den zuvor extrahierten Koordinaten wird anschliessend ein Punkt erstellt. Zwischen den jeweiligen Start und Endpunkten wird eine direkte Verbindungslinie berechnet. Die Orientierung der Line ist von oben nach unten. Die Pisten aus der Datenbank werden anschliessend mit den Verbindungslinien zusammengeführt. Alle Linien die das Attribut `routing_einweg = true` haben werden dupliziert und die Orientierung gedreht, damit in beide Richtungen eine Verbindung besteht. Die Verbindungen und Pisten werden in der Tabelle `a_a_routing` gespeichert. Dasselbe passiert mit den Anlagen welche beidseitig sind. Diese werden in der Tabelle a_a_anlage_routing gespeichert.
 
 ##### Manuelle Änderungen des Routings
 
-Mit Hilfe des QGIS Projektes `Alpine_ace_Routing.qgz` können Änderungen in den Routing Tabelle vorgenommen werden. Beim Start des Projekts muss der `Benutzername` und das `Passwort` der Datenbank eingetragen werden.
+Mit Hilfe des QGIS Projektes `Alpine_ace_Routing.qgz` können Änderungen in den Routing Tabellen vorgenommen werden. Beim Start des Projekts muss der `Benutzername` und das `Passwort` der Datenbank eingetragen werden.
 
-Die Änderungen müssen in der Datengrundlage Routing vorgenommene werden . Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Der Pfeil der zeig jeweils die Orientierung der Verbindungslinien an. Nach vollbrachter Änderung muss die [Berechnung des Routings](#berechnen-des-routings) in `pgAdmin 4` erfolgen.
+Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Der Pfeil zeigt jeweils die Orientierung der Verbindungslinien an. Nach vollbrachter Änderung muss die [Berechnung des Routings](#berechnen-des-routings) in `pgAdmin 4` erfolgen.
 
 1.  **Einweg oder beidseitig anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbeitungsmodus setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen. Nach erfolgter Änderung den Layer speichern.
 
@@ -371,22 +371,22 @@ Die Änderungen müssen in der Datengrundlage Routing vorgenommene werden . Es d
 
 <iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
-2. **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzten, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
+2. **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
 Falls die Fehlermeldung: `Konnte Änderungen am Layer a_a_routing nicht festschreiben
-  Fehler: FEHLER: Ein Objekt nicht hinzugefügt.` erscheint liegt dies meist an der Vergabe der id in der Tabelle.
-Behoben kann dieses Problem werden wenn unter: `Eigenschaften --> Attributformular --> Verfügbare Element --> Fields --> id --> Vorgaben` den Ausdruck `maximum( "id" ) + 1` eingefügt wird. Dieser erhöht den aktuell höchsten Wert der `id` um 1 und setzt diesen ins Attributformular automatisch ein. Zusätzlich die Checkbox bei `Vorgabewert bei Aktualisierung anwenden` setzten.
+  Fehler: FEHLER: Ein Objekt nicht hinzugefügt.` erscheint, liegt dies meist an der Vergabe der id in der Tabelle.
+Behoben kann dieses Problem werden, wenn unter: `Eigenschaften --> Attributformular --> Verfügbare Element --> Fields --> id --> Vorgaben` den Ausdruck `maximum( "id" ) + 1` eingefügt wird. Dieser erhöht den aktuell höchsten Wert der `id` um 1 und setzt diesen ins Attributformular automatisch ein. Zusätzlich die Checkbox bei `Vorgabewert bei Aktualisierung anwenden` setzen.
 
 <iframe src="videos/routing_verbindung_hizufügen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
-3. **Verbindung löschen** : Den Layer gewünschten in Bearbeitung setzten, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
+3. **Verbindung löschen** : Den Layer der gewünschten Verbindung in Bearbeitung setzen, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
 <iframe src="videos/routing_verbindung_loeschen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
 ##### Berechnen des Routings
 
-Im `pgAdmin 4` wird anschliessend das Routing berechnet, der Code dafür liegt in der Datei `alpine_ace_routing.txt`. Zuerst werden für die Anlagen und die Pisten separat die Knoten berechnet mit dem Befehlt `pgr_nodeNetwork`. Daraus resultieren die beiden Tabellen `a_a_routing_noded` und `a_a_anlage_routing_noded` Dies geschieht getrennt, da überall wo sich zwei Linien schneiden einen Knoten erstellt wird. Da die Anlagen über den Pisten sind dürfen sich zwischen diesen Linien keine Punkte erstellt werden. In die beiden Tabellen werden die Attribute der Ursprungsdaten kopiert. Die Knoten der Anlagen werden in Tabelle `a_a_routing_noded` kopiert. Darin wird das Routing gerechnet mit dem Befehl `pgr_createTopology`.
+Im `pgAdmin 4` wird anschliessend das Routing berechnet, der Code dafür liegt in der Datei `alpine_ace_routing.txt`. Zuerst werden für die Anlagen und die Pisten separat die Knoten berechnet mit dem Befehl `pgr_nodeNetwork`. Daraus resultieren die beiden Tabellen `a_a_routing_noded` und `a_a_anlage_routing_noded` Dies geschieht getrennt, da überall, wo sich zwei Linien schneiden, ein Knoten erstellt wird. Da die Anlagen über den Pisten sind dürfen zwischen diesen Linien keine Punkte erstellt werden. In die beiden Tabellen werden die Attribute der Ursprungsdaten kopiert. Die Knoten der Anlagen werden in Tabelle `a_a_routing_noded` kopiert. Darin wird das Routing gerechnet mit dem Befehl `pgr_createTopology`.
 
-Ursprünglich war geplant die Funktion einweg Routing über die `reverse_cost` zu steuern. Deshalb wurden Kosten in Abhängigkeit der Distanz vergeben. Wenn eine Strecke einseitig ist wurde zu den `reverse_cost` eine Million addiert. Für beidseitige Stecken ist sind die Kosten in beide Seiten gleich. Dies hat aber im jetzigen Routing keine Anwendungen, da beidseitige Strecken Doppelt in beide Richtungen in Datensatz vorhanden sind.
+Ursprünglich war geplant, die Funktion Einweg Routing über die `reverse_cost` zu steuern. Deshalb wurden Kosten in Abhängigkeit der Distanz vergeben. Wenn eine Strecke einseitig ist, wurde zu den `reverse_cost` eine Million addiert. Für beidseitige Strecken sind die Kosten in beide Richtungen gleich. Dies findet aber im jetzigen Routing keine Anwendung, da beidseitige Strecken doppelt in beide Richtungen im Datensatz vorhanden sind.
 
 ##### SQL views Routing
 
@@ -416,7 +416,7 @@ GROUP BY
     v.id, v.the_geom
 ```
 
-Diese SQL view bekommt als Parameter die ein Koordinatenpaar `%x%` und `%y%` mit dem Wertebereich `^[\d\.\+]+$` Dieser lässt Positive Gleitkommazahlen zu. Es sucht in der Tabelle `a_a_routing_noded ` den nächsten Knoten. Ausgeben wird die Geometrie des Knotens und die `id`.
+Diese SQL view bekommt als Parameter das Koordinatenpaar `%x%` und `%y%` mit dem Wertebereich `^[\d\.\+]+$` Dieser lässt Positive Gleitkommazahlen zu. Es sucht in der Tabelle `a_a_routing_noded ` den nächsten Knoten. Ausgeben wird die Geometrie des Knotens und die `id`.
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:2648338;y:1137974;&outputformat=application/json`
 
@@ -442,7 +442,7 @@ GROUP BY
     e.old_id, e.p_farbe
 ```
 
-Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und der Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt.. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgeben wird die einzelnen Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
+Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und des Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgegeben werde die einzelnen die Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
 
@@ -454,7 +454,7 @@ Beispiel:
 
 Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln ist jeweils ein Bild des Restaurants und darunter der Name. Nach dem Anklicken einer Kachel wird das gewählte Restaurant in der Karte dargestellt. Unterhalb der Karte werden die Informationen zu Öffnungszeiten und Kontaktinformationen wie Telefonnummer oder Webseite angezeigt.
 
-- **Datenursprung**: Manuelles Recherche der auf der Webseite des Skigebietes [Arosa Lenzerheide](https://arosalenzerheide.swiss/de/Skigebiet/Berggastronomie).
+- **Datenursprung**: Manuelle Recherche auf der Webseite des Skigebietes [Arosa Lenzerheide](https://arosalenzerheide.swiss/de/Skigebiet/Berggastronomie).
 - **Datenstand**: 01.04.2024
 - **Datenformat Informationen**: CSV, Delimiter ;
 - **Datenformat Bilder**: png, ohne Umlaute
@@ -467,10 +467,10 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort befinden sich die Bilder der Restaurants und unterhalb der dazugehörige Name. Beim Anklicken des Bildes oder Textes, öffnet sich die Karte und es wird auf die Position des Restaurants gezoomt. Unterhalb der Karte werden die Informationen angezeigt.
 
-1. Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter dem Pfad: `http://localhost:5000/api/restaurant` bezogen werden unter dem.
+1. Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter dem Pfad: `http://localhost:5000/api/restaurant` bezogen werden.
 2. Beim Aufrufen der Seite Restaurant wird über einen useEffect-Hook eine Fetch-Anfrage an die oben genannten API Endpunkt gesendet. Die zurückkommenden Daten werden dann in einem Array gespeichert. Während die Daten geladen werden, wird dies angezeigt. Bei einem Fehler erscheint die [Fehlermeldung](#nodeserver_fehler).
-3. Jedes Element im Array mittels der `map()` Funktion in einer eigenen Box dargestellt. Für jedes Restaurant befindet sich ein Bild in der React-App im Ordner `/Restaurant_data/` . Der restliche Pfad der Bilddatei ist im Attribut `r_dateipfad_bildname` gespeichert. So wird für jedes Restaurant das dazugehörige Bild angezeigt. Unterhalb des Bildes ist der Restaurant Name. Dieser ist ebenfalls die Bildbeschreibung.
-4. Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf dem die Position und die Kontakt Informationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants.
+3. Jedes Element wird im Array mittels der `map()` Funktion in einer eigenen Box dargestellt. Für jedes Restaurant befindet sich ein Bild in der React-App im Ordner `/Restaurant_data/` . Der restliche Pfad der Bilddatei ist im Attribut `r_dateipfad_bildname` gespeichert. So wird für jedes Restaurant das dazugehörige Bild angezeigt. Unterhalb des Bildes ist der Restaurant Name. Dieser ist ebenfalls die Bildbeschreibung.
+4. Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf der die Position und die Kontaktinformationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants.
 
 Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
 
@@ -492,8 +492,8 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
    WHERE
     v.Restaurant_ID= %Restaurant_ID%
    ```
-   Der Parameter ist `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
-6. Die zurückgeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften zugwiesen, so wie das Icon. Die weiteren Informationen vom extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
+   Der Parameter `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
+6. Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften zugwiesen, so wie das Icon. Die weiteren Informationen vom Feature extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
 
@@ -503,7 +503,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
 
 <a id=contribution></a>
 
-- Andrea Bricali, GitHub: [AJPB4133](https://github.com/AJPB4133)
+- Andrea Bricalli, GitHub: [AJPB4133](https://github.com/AJPB4133)
 - Fabian Gross, GitHub: [loopercamera](https://github.com/loopercamera)
 - Théo Reibel, GitHub: [TheoR14](https://github.com/TheoR14)
 
