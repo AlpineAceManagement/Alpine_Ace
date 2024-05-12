@@ -85,9 +85,9 @@ const Restaurant_Viewer = () => {
       source: restaurantAnfrageSource,
       style: new Style({
         image: new Icon({
-          src: "https://www.svgrepo.com/show/399602/restaurant.svg",
+          src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
           anchor: [0.5, 1],
-          scale: 0.025,
+          scale: 1,
         }),
       }),
     });
