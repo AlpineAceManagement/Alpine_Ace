@@ -72,15 +72,14 @@ const Karte = () => {
         console.error("Error fetching WFS anlagen data:", error);
       },
     });
-    const iconSize = [32, 32]; // Set the fixed size for the icon
     // Instanziierung eines Vector Layers für Punkte mit der Source
     const restuarantLayer = new VectorLayer({
       source: restuarantSource,
       style: new Style({
         image: new Icon({
-          src: "https://www.svgrepo.com/show/399602/restaurant.svg", // Specify the path to your icon image
-          anchor: [0.5, 1], // Set the anchor point to the center bottom of the icon
-          scale: 0.025,
+          src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
+          scale: 0.15,
+          anchor: [0.5, 0.5],
         }),
       }),
     });
@@ -110,6 +109,7 @@ const Karte = () => {
         });
       },
     });
+    const strichStaerkeAnlage = 4; // Hier wird die Strichstärke für die Anlagen definiert
     const offsetDistance = 20; // Hier wird offsetDistance definiert
     const anlagenStyle = function (feature) {
       // Get the geometry of the feature
@@ -127,7 +127,7 @@ const Karte = () => {
         const originalLineStyle = new Style({
           stroke: new Stroke({
             color: "DarkGray ", // Choose your desired color for the original line
-            width: 4, // Choose your desired width
+            width: strichStaerkeAnlage, // Choose your desired width
           }),
         });
 
@@ -196,7 +196,7 @@ const Karte = () => {
               geometry: line,
               stroke: new Stroke({
                 color: "DarkGray ",
-                width: 6,
+                width: strichStaerkeAnlage,
               }),
             });
 

@@ -86,8 +86,8 @@ const Restaurant_Viewer = () => {
       style: new Style({
         image: new Icon({
           src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
-          scale: 1,
-          anchor: [0, 0],
+          scale: 0.15,
+          anchor: [0.5, 0.5],
         }),
       }),
     });
@@ -134,7 +134,7 @@ const Restaurant_Viewer = () => {
           map.getView().animate({
             center: coordinates,
             zoom: 16, // Zoomstufe an Zielposition
-            duration: 3000, // Dauer der Animation in ms
+            duration: 1, // Dauer der Animation in ms
           });
         }
       }
