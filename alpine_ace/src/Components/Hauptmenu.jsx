@@ -11,9 +11,6 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { Vega } from "react-vega";
 import Map from "ol/Map";
 import View from "ol/View";
-import VectorSource from "ol/source/Vector";
-import GeoJSON from "ol/format/GeoJSON";
-import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
 import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
@@ -139,6 +136,23 @@ const Hauptmenu = () => {
       }),
     });
   }, []);
+  function hauptmenuSchaltfächenErstellen(text, link) {
+    return (
+      <Grid item xs={6} className="button-grid-item">
+        <Link to={link}>
+          <Button
+            className="Hauptmenu-button"
+            variant="contained"
+            color="p_red"
+            fullWidth
+            sx={{ fontSize: "2.3vh" }}
+          >
+            {text}
+          </Button>
+        </Link>
+      </Grid>
+    );
+  }
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -259,7 +273,6 @@ const Hauptmenu = () => {
             }}
           ></div>
         </Box>
-
         <Box
           sx={{
             width: "95vw",
@@ -272,88 +285,16 @@ const Hauptmenu = () => {
         >
           <Grid
             container
-            style={{ width: "95%", margin: "auto" }} // Adjust the width and center the grid
+            style={{ width: "95%", margin: "auto" }}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             justifyContent="center"
           >
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Karte">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Karte
-                </Button>
-              </Link>
-            </Grid>
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Wetter">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Wetter
-                </Button>
-              </Link>
-            </Grid>
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Statistiken">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Statistiken
-                </Button>
-              </Link>
-            </Grid>
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Navi">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Navi
-                </Button>
-              </Link>
-            </Grid>
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Bewertungen">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Bewertungen
-                </Button>
-              </Link>
-            </Grid>
-            <Grid item xs={6} className="button-grid-item">
-              <Link to="/Restaurant">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: "2.3vh" }}
-                >
-                  Restaurant
-                </Button>
-              </Link>
-            </Grid>
+            {hauptmenuSchaltfächenErstellen("Karte", "/Karte")}
+            {hauptmenuSchaltfächenErstellen("Wetter", "/Wetter")}
+            {hauptmenuSchaltfächenErstellen("Statistiken", "/Statistiken")}
+            {hauptmenuSchaltfächenErstellen("Navi", "/Navi")}
+            {hauptmenuSchaltfächenErstellen("Bewertungen", "/Bewertungen")}
+            {hauptmenuSchaltfächenErstellen("Restaurant", "/Restaurant")}
           </Grid>
         </Box>
       </div>
