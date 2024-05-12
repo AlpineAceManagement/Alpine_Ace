@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -17,7 +17,7 @@ import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Circle, Fill, Stroke, Style } from "ol/style";
+import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 
 import spec_analgen from "./diagramms_anlagen";

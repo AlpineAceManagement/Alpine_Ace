@@ -199,6 +199,7 @@ def save_hourly_forecast():
 
         # Create a temporary DataFrame for efficient insertion
         df = pd.DataFrame(hourly_data)
+        # Ausgabe der Daten in eine CSV-Datei, falls gewünscht
         #df.to_csv('hourly_forecast.csv', mode='w', header=not os.path.exists('hourly_forecast.csv'))
 
         # Use executemany with tuples for efficiency:
