@@ -1,11 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";
-import TileLayer from "ol/layer/Tile";
-import TileWMS from "ol/source/TileWMS";
 import View from "ol/View";
-import VectorSource from "ol/source/Vector";
-import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
 import { Stroke, Style } from "ol/style";
@@ -13,6 +9,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
+import { SwisstopoLayer } from "./swisstopoLayer";
+import { createVectorSource } from "./kartenWFS";
 
 const GPX_Viewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
@@ -37,28 +35,11 @@ const GPX_Viewer = () => {
   }, []);
 
   useEffect(() => {
-    const geoserverWFSAnfrage =
-      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
-    const geoserverWFSOutputFormat = "&outputFormat=application/json";
-
     //WFS Anfrage für das ausgewählte Skidaten Aufnahme
-    const skidatenAnfrageSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        return (
-          console.log("WFS Anfrage:", Skidaten_ID),
-          geoserverWFSAnfrage +
-            "Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:" +
-            Skidaten_ID + // Die Skidaten_ID von der URL
-            ";" +
-            geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
+    const skidatenAnfrageSource = createVectorSource(
+      "a_a_skidaten_weg&viewparams=Skidaten_ID:" + Skidaten_ID + ";",
+      bboxStrategy
+    );
 
     //Skidaten Anfrage Layer Styl
     const skidatenAnfrageLayer = new VectorLayer({
@@ -73,32 +54,16 @@ const GPX_Viewer = () => {
 
     //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
-
-    //Basis Swisstopo Winter Layer
-    const swisstopoLayer = new TileLayer({
-      extent: extent,
-      source: new TileWMS({
-        url: "https://wms.geo.admin.ch/",
-        crossOrigin: "anonymous",
-        attributions:
-          '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-          'en/home.html">geo.admin.ch</a>',
-        projection: "EPSG:2056",
-        params: {
-          LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-          FORMAT: "image/jpeg",
-        },
-        serverType: "mapserver",
-      }),
-    });
+    // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
+    const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
     // Darstellungsreihenfolge der Layer festlegen
-    swisstopoLayer.setZIndex(0);
+    WMSwinterlandeskarteLayer.setZIndex(0);
     skidatenAnfrageLayer.setZIndex(1);
 
     // Karte erstellen
     const map = new Map({
-      layers: [swisstopoLayer, skidatenAnfrageLayer], // angezeigte Layer definieren
+      layers: [WMSwinterlandeskarteLayer, skidatenAnfrageLayer], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1], // Zentrum der Karte

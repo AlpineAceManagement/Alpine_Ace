@@ -1,18 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";
-import TileLayer from "ol/layer/Tile";
-import TileWMS from "ol/source/TileWMS";
 import View from "ol/View";
-import VectorSource from "ol/source/Vector";
-import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
+import { createVectorSource } from "./kartenWFS.js";
+import { SwisstopoLayer } from "./swisstopoLayer.js";
+import { restaurantStyle } from "./kartenLayerStyle.js";
 
 const Restaurant_Viewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
@@ -38,67 +36,32 @@ const Restaurant_Viewer = () => {
   }, []);
 
   useEffect(() => {
-    const geoserverWFSAnfrage =
-      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
-    const geoserverWFSOutputFormat = "&outputFormat=application/json";
-
     //WFS Anfrage für das ausgewählte Restaurant
-    const restaurantAnfrageSource = new VectorSource({
-      format: new GeoJSON(),
-      url: function (extent) {
-        return (
-          geoserverWFSAnfrage +
-          "Alpine_Ace:a_a_restaurant&viewparams=Restaurant_ID:" +
-          Restaurant_ID + // Die Restaurant_ID von der URL
-          ";" +
-          geoserverWFSOutputFormat
-        );
-      },
-      strategy: bboxStrategy,
-      onError: function (error) {
-        console.error("Error fetching WFS anlagen data:", error);
-      },
-    });
+    const restaurantAnfrageSource = createVectorSource(
+      "a_a_restaurant&viewparams=Restaurant_ID:" +
+        Restaurant_ID + // Die Restaurant_ID von der URL
+        ";",
+      bboxStrategy
+    );
 
+    //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
+    // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
+    const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-    //Basis Swisstopo Winter Layer
-    const swisstopoLayer = new TileLayer({
-      extent: extent,
-      source: new TileWMS({
-        url: "https://wms.geo.admin.ch/",
-        crossOrigin: "anonymous",
-        attributions:
-          '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-          'en/home.html">geo.admin.ch</a>',
-        projection: "EPSG:2056",
-        params: {
-          LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-          FORMAT: "image/jpeg",
-        },
-        serverType: "mapserver",
-      }),
-    });
-
-    //Restaurant Anfrage Layer Styl
+    // Restaurant Layer Styl aus kartenLayerStyle.js
     const restaurantAnfrageLayer = new VectorLayer({
       source: restaurantAnfrageSource,
-      style: new Style({
-        image: new Icon({
-          src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
-          scale: 0.15,
-          anchor: [0.5, 0.5],
-        }),
-      }),
+      style: restaurantStyle(),
     });
 
-    // Darstellungsreihenfolge der Layer festlegen
-    swisstopoLayer.setZIndex(0);
+    // Layer Reihenfolge festlegen, 0 ist zu zuunterst
+    WMSwinterlandeskarteLayer.setZIndex(0);
     restaurantAnfrageLayer.setZIndex(1);
 
     // Karte erstellen
     const map = new Map({
-      layers: [swisstopoLayer, restaurantAnfrageLayer], // angezeigte Layer definieren
+      layers: [WMSwinterlandeskarteLayer, restaurantAnfrageLayer], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1], // Zentrum der Karte

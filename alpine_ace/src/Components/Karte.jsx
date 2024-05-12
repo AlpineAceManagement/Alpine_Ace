@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";
 import View from "ol/View";
-import VectorSource from "ol/source/Vector";
-import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
 import { ThemeProvider } from "@mui/material/styles";
@@ -11,6 +9,7 @@ import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
 import { ZoomToExtent, defaults as defaultControls } from "ol/control.js";
+import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 import {
   restaurantStyle,
@@ -25,41 +24,16 @@ const Karte = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   useEffect(() => {
-    const geoserverWFSAnfrage =
-      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
-    const geoserverWFSOutputFormat = "&outputFormat=application/json";
-
-    //WFS Anfrage Funktion
-    function createVectorSource(featureName) {
-      return new VectorSource({
-        format: new GeoJSON(),
-        url: function (extent) {
-          return (
-            geoserverWFSAnfrage +
-            "Alpine_Ace:" +
-            featureName +
-            geoserverWFSOutputFormat
-          );
-        },
-        strategy: bboxStrategy,
-        onError: function (error) {
-          console.error(
-            "Error fetching WFS data for " + featureName + ":",
-            error
-          );
-        },
-      });
-    }
     //WFS Anfrage für alle Restaurants
-    const restaurantSource = createVectorSource("Restaurant");
+    const restaurantSource = createVectorSource("Restaurant", bboxStrategy);
     //WFS Anfrage für alle Parkplätze
-    const parkplatzSource = createVectorSource("parkplatz");
+    const parkplatzSource = createVectorSource("parkplatz", bboxStrategy);
     //WFS Anfrage für alle ÖV Haltestellen
-    const oevSource = createVectorSource("oev");
+    const oevSource = createVectorSource("oev", bboxStrategy);
     //WFS Anfrage für alle Pisten
-    const pistenSource = createVectorSource("pisten");
+    const pistenSource = createVectorSource("pisten", bboxStrategy);
     //WFS Anfrage für alle Anlagen
-    const anlagenSource = createVectorSource("anlagen");
+    const anlagenSource = createVectorSource("anlagen", bboxStrategy);
 
     // Restaurant Layer Styl aus kartenLayerStyle.js
     const restaurantLayer = new VectorLayer({

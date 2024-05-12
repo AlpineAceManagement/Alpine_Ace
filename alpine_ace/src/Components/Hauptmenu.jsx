@@ -17,6 +17,7 @@ import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
 import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
+import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 import { kantonsGrenzenStyle } from "./kartenLayerStyle.js";
 
@@ -29,32 +30,6 @@ import "../App.css";
 const Hauptmenu = () => {
   const mapRef = useRef(null); // Reference to the map container
   useEffect(() => {
-    // GeoServer layer arbeitsbereich:datenspeicher
-    const geoserverWFSAnfrage =
-      "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
-    const geoserverWFSOutputFormat = "&outputFormat=application/json";
-
-    //WFS Anfrage Funktion
-    function createVectorSource(featureName) {
-      return new VectorSource({
-        format: new GeoJSON(),
-        url: function (extent) {
-          return (
-            geoserverWFSAnfrage +
-            "Alpine_Ace:" +
-            featureName +
-            geoserverWFSOutputFormat
-          );
-        },
-        strategy: bboxStrategy,
-        onError: function (error) {
-          console.error(
-            "Error fetching WFS data for " + featureName + ":",
-            error
-          );
-        },
-      });
-    }
     //WFS Anfrage für die Lawinenbulletin
     const bulettinVectorSource = createVectorSource("bulletins");
     //WFS Anfrage für die Kantonsgrenzen
@@ -379,19 +354,6 @@ const Hauptmenu = () => {
                 </Button>
               </Link>
             </Grid>
-            {/* <Grid item xs={6} className="button-grid-item">
-              <Link to="/Test">
-                <Button
-                  className="Hauptmenu-button"
-                  variant="contained"
-                  color="p_red"
-                  fullWidth
-                  sx={{ fontSize: 20 }}
-                >
-                  Test
-                </Button>
-              </Link>
-            </Grid> */}
           </Grid>
         </Box>
       </div>

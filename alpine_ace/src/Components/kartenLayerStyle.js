@@ -1,4 +1,3 @@
-import { VectorLayer } from "ol/layer";
 import { Style, Stroke, Icon, Fill } from "ol/style";
 import LineString from "ol/geom/LineString";
 

@@ -9,7 +9,6 @@ import Point from "ol/geom/Point";
 import Feature from "ol/Feature";
 import { Translate } from "ol/interaction";
 import Collection from "ol/Collection";
-import { TileWMS } from "ol/source";
 import { Projection } from "ol/proj";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
@@ -18,6 +17,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/material/styles";
+import { SwisstopoLayer } from "./swisstopoLayer.js";
 
 const Test = () => {
   const mapRef = useRef(null); // Reference to the map container
@@ -176,23 +176,10 @@ const Test = () => {
   useEffect(() => {
     // Initialize map
     if (!map) {
+      //Definition des Kartenextents für WMS/WMTS
       const extent = [2420000, 130000, 2900000, 1350000];
-      const swisstopoLayer = new TileLayer({
-        extent: extent,
-        source: new TileWMS({
-          url: "https://wms.geo.admin.ch/",
-          crossOrigin: "anonymous",
-          attributions:
-            '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-            'en/home.html">geo.admin.ch</a>',
-          projection: "EPSG:2056",
-          params: {
-            LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-            FORMAT: "image/jpeg",
-          },
-          serverType: "mapserver",
-        }),
-      });
+      // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
+      const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
       const naviVectorSource = new VectorSource({
         format: new GeoJSON(),
@@ -225,7 +212,7 @@ const Test = () => {
       });
 
       const newMap = new Map({
-        layers: [swisstopoLayer, naviVectorLayer], // Use naviVectorLayer instead of geoserverWFSNaviLayer
+        layers: [WMSwinterlandeskarteLayer, naviVectorLayer], // Use naviVectorLayer instead of geoserverWFSNaviLayer
         view: new View({
           center: [2762073, 1180429],
           zoom: 12,
