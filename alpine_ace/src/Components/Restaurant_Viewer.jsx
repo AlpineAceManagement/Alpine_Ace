@@ -86,8 +86,8 @@ const Restaurant_Viewer = () => {
       style: new Style({
         image: new Icon({
           src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
-          anchor: [0.5, 1],
           scale: 1,
+          anchor: [0, 0],
         }),
       }),
     });
