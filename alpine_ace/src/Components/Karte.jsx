@@ -1,14 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";
-import TileLayer from "ol/layer/Tile";
-import TileWMS from "ol/source/TileWMS";
 import View from "ol/View";
 import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Icon, Stroke, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
@@ -101,7 +98,7 @@ const Karte = () => {
     // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
     const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-    // Layer Reihenfolge festlegen, 0 ist zu underst
+    // Layer Reihenfolge festlegen, 0 ist zu zuunterst
     WMSwinterlandeskarteLayer.setZIndex(0);
     pistenLayer.setZIndex(1);
     anlagenLayer.setZIndex(2);

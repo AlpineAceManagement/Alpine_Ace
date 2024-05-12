@@ -19,6 +19,7 @@ import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
 import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
+import { SwisstopoLayer } from "./swisstopoLayer.js";
 
 import spec_analgen from "./diagramms_anlagen";
 import spec_pisten from "./diagramm_pisten";
@@ -166,26 +167,13 @@ const Hauptmenu = () => {
       }),
     });
 
+    //Definition des Kartenextents für WMS/WMTS
     const extent = [2420000, 130000, 2900000, 1350000];
+    // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
+    const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-    //Laden des WMTS von geo.admin.ch > Hintergrundkarte in der Applikation
-    const swisstopoLayer = new TileLayer({
-      extent: extent,
-      source: new TileWMS({
-        url: "https://wms.geo.admin.ch/",
-        crossOrigin: "anonymous",
-        attributions:
-          '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-          'en/home.html">geo.admin.ch</a>',
-        projection: "EPSG:2056",
-        params: {
-          LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
-          FORMAT: "image/jpeg",
-        },
-        serverType: "mapserver",
-      }),
-    });
-    swisstopoLayer.setZIndex(0);
+    // Layer Reihenfolge festlegen, 0 ist zu zuunterst
+    WMSwinterlandeskarteLayer.setZIndex(0);
     kantonsLayer.setZIndex(1);
     landesgrenzenLayer.setZIndex(2);
     bulettinVectorLayer.setZIndex(3);
@@ -193,7 +181,7 @@ const Hauptmenu = () => {
     // Initialize OpenLayers map
     const map = new Map({
       layers: [
-        swisstopoLayer,
+        WMSwinterlandeskarteLayer,
         bulettinVectorLayer,
         kantonsLayer,
         landesgrenzenLayer,
