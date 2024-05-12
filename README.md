@@ -315,6 +315,18 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
+3. Unter Layer mit Namensraum und Präfix , Zeile `oev` auswählen und `Publizieren`
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### ÖV Haltestellen:
+
+1. Neuer Layer
+2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
 3. Unter Layer mit Namensraum und Präfix , Zeile `parkplatz` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`

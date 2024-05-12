@@ -24,6 +24,8 @@ const Karte = () => {
     const geoserverWFSAnfrage =
       "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
     const geoserverWFSOutputFormat = "&outputFormat=application/json";
+    const basisPfadKartenSymbole =
+      "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/";
 
     // Instanziierung einer Vector Source mittels einer WFS GetFeature Abfrage
     const restuarantSource = new VectorSource({
@@ -37,7 +39,22 @@ const Karte = () => {
         );
       },
       strategy: bboxStrategy,
-      // Add error handler
+      onError: function (error) {
+        console.error("Error fetching WFS point data:", error);
+      },
+    });
+
+    const parkplatzSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        // Pfad zur WFS Resource auf dem GeoServer
+        return (
+          geoserverWFSAnfrage +
+          "Alpine_Ace:parkplatz" +
+          geoserverWFSOutputFormat
+        );
+      },
+      strategy: bboxStrategy,
       onError: function (error) {
         console.error("Error fetching WFS point data:", error);
       },
@@ -77,7 +94,18 @@ const Karte = () => {
       source: restuarantSource,
       style: new Style({
         image: new Icon({
-          src: "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/restaurant.svg",
+          src: basisPfadKartenSymbole + "restaurant.svg",
+          scale: 0.15,
+          anchor: [0.5, 0.5],
+        }),
+      }),
+    });
+
+    const parkplatzLayer = new VectorLayer({
+      source: parkplatzSource,
+      style: new Style({
+        image: new Icon({
+          src: basisPfadKartenSymbole + "parkplatz.svg",
           scale: 0.15,
           anchor: [0.5, 0.5],
         }),
@@ -239,10 +267,11 @@ const Karte = () => {
     swisstopoLayer.setZIndex(0);
     pistenLayer.setZIndex(1);
     anlagenLayer.setZIndex(2);
-    restuarantLayer.setZIndex(3);
+    parkplatzLayer.setZIndex(3);
+    restuarantLayer.setZIndex(5);
     // Initialize OpenLayers map
     const map = new Map({
-      layers: [swisstopoLayer, restuarantLayer, pistenLayer, anlagenLayer], // Füge den Linien-Layer hinzu
+      layers: [swisstopoLayer, pistenLayer, anlagenLayer, parkplatzLayer], // Füge den Linien-Layer hinzu
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
