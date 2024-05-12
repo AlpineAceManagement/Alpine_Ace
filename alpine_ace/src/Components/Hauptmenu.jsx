@@ -44,11 +44,6 @@ const Hauptmenu = () => {
         );
       },
       strategy: bboxStrategy,
-      // Set the data projection to EPSG:4326 (WGS 84)
-      dataProjection: "EPSG:2056",
-      // Set the feature projection to match the map's projection (EPSG:2056)
-      featureProjection: "EPSG:2056",
-      // Add error handler
       onError: function (error) {
         console.error("Error fetching WFS anlagen data:", error);
       },
@@ -70,31 +65,31 @@ const Hauptmenu = () => {
         // Assign colors based on attribute value
         switch (dangerAttribute) {
           case "low":
-            strokeColor = "rgb(175, 255, 1)"; // Green
+            strokeColor = "rgb(175, 255, 1,0.5)"; // Green
             fillColor = "rgba(175, 255, 1, " + fillOpacity + ")";
             break;
           case "moderate":
-            strokeColor = "rgb(255, 255, 0)"; // Yellow
+            strokeColor = "rgba(255, 255, 0,0.5)"; // Yellow
             fillColor = "rgba(255, 255, 0, " + fillOpacity + ")";
             break;
           case "considerable":
-            strokeColor = "rgb(254, 165, 0)"; // Orange
+            strokeColor = "rgba(254, 165, 0,0.5)"; // Orange
             fillColor = "rgba(254, 165, 0, " + fillOpacity + ")";
             break;
           case "high":
-            strokeColor = "rgb(254,0, 0)"; // Red
+            strokeColor = "rgba(254,0, 0,0.5)"; // Red
             fillColor = "rgba(254, 0, 0, " + fillOpacity + ")";
             break;
           case "very_high":
-            strokeColor = "rgb(128, 0, 0)"; // Dark red
+            strokeColor = "rgba(128, 0, 0,0.5)"; // Dark red
             fillColor = "rgba(128, 0, 0)" + fillOpacity + ")";
             break;
           case "no_snow":
-            strokeColor = "rgb(190,190,190)"; // Gray
+            strokeColor = "rgba(190,190,190,0.5)"; // Gray
             fillColor = "rgba(190,190,190)" + fillOpacity + ")";
             break;
           case "no_rating":
-            strokeColor = "rgb(0,0,0)"; // Black
+            strokeColor = "rgba(0,0,0,0.5)"; // Black
             fillColor = "rgba(0,0,0," + fillOpacity + ")";
             break;
           default:
@@ -113,6 +108,62 @@ const Hauptmenu = () => {
           }),
         });
       },
+    });
+
+    const kantonesgrenzenSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        return (
+          geoserverWFSAnfrage +
+          "Alpine_Ace:tlm_kantonsgebiet" +
+          geoserverWFSOutputFormat
+        );
+      },
+      strategy: bboxStrategy,
+      onError: function (error) {
+        console.error("Error fetching WFS anlagen data:", error);
+      },
+    });
+
+    const landesgrenzenSource = new VectorSource({
+      format: new GeoJSON(),
+      url: function (extent) {
+        return (
+          geoserverWFSAnfrage +
+          "Alpine_Ace:tlm_landesgebiet" +
+          geoserverWFSOutputFormat
+        );
+      },
+      strategy: bboxStrategy,
+      onError: function (error) {
+        console.error("Error fetching WFS anlagen data:", error);
+      },
+    });
+
+    const kantonsLayer = new VectorLayer({
+      source: kantonesgrenzenSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "rgba(0, 0, 0,0.5)",
+          width: 1.5,
+        }),
+        fill: new Fill({
+          color: "rgba(0, 0, 0,0)",
+        }),
+      }),
+    });
+
+    const landesgrenzenLayer = new VectorLayer({
+      source: landesgrenzenSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "rgba(0, 0, 0,0.5)",
+          width: 2.5,
+        }),
+        fill: new Fill({
+          color: "rgba(0, 0, 0,0)",
+        }),
+      }),
     });
 
     const extent = [2420000, 130000, 2900000, 1350000];
@@ -135,15 +186,22 @@ const Hauptmenu = () => {
       }),
     });
     swisstopoLayer.setZIndex(0);
+    kantonsLayer.setZIndex(1);
+    landesgrenzenLayer.setZIndex(2);
     bulettinVectorLayer.setZIndex(3);
 
     // Initialize OpenLayers map
     const map = new Map({
-      layers: [swisstopoLayer, bulettinVectorLayer],
+      layers: [
+        swisstopoLayer,
+        bulettinVectorLayer,
+        kantonsLayer,
+        landesgrenzenLayer,
+      ],
       target: mapRef.current,
       view: new View({
-        center: [2655684.5, 1180000.125],
-        zoom: 7.2,
+        center: [2667684.5, 1185000.125],
+        zoom: 7.1,
         projection: new Projection({
           code: "EPSG:2056",
           units: "m",

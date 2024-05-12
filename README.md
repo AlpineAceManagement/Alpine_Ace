@@ -57,13 +57,17 @@ cd path/to/workspace
 conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
 ```
 
+#FRAGE muss nicht no activate conda angegeben werden?
+
 ### FME-Requirements
 
-FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der von der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
+FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
+#FRAGE gehört die Info ins License? ich denke nicht da es hier um die Software geht
 
 ### QGIS-Requirements
 
-Eine QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der von der Webseite von [QGIS](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
+QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der von der Webseite von [QGIS heruntergeladen](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
+#FRAGE gehört die Info ins License? ich denke nicht da es hier um die Software geht
 
 ### Node-Requirements
 
@@ -92,18 +96,25 @@ npm start
 
 ### Backend
 
-Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis) und einem Geoserver.
+Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis) und einem GeoServer der die Geodaten zur Verfügung stellt.
+
+#FRAGE fehlt hier nicht ein weiteren Teil? Den Node Server? Oder gehört dieser zum Datenbezugsteil? Wenn ja muss hinter Python auf JS stehen.
 
 #### Postgres inkl. Postgis
 
 Das Schema der DB findet sich unter _Backend/DB_PG._ Schema in pgAdmin kopieren und ausführen.
+#FRAGE \_Backend? korrekt wäre DB_PG/geoserver_DB_erstellen.txt
 
 Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden.
 
+#FRAGE noch klarstellen was eingetragen werden muss?
+
 #### Node-Server
 
+#FRAGE Ist die Reihenfolge so sinnvoll? Wäre es nicht besser zuerst die Datenbank zu erstellen und nachher die Daten mit dem Node Server zu beziehen?
+
 1. neues Terminal öffnen -> als GitBash
-2. Verbindungsaufbau zu Node Server
+2. Verbindungsaufbau zum Node Server
 
 ```python
 cd alpine_ace/src/DB
@@ -119,6 +130,8 @@ node connect_db.js
 
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
 2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
+
+#FRAGE ist dies genügend detailliert oder braucht es noch einen screenshot?
 
 ```
 CREATE EXTENSION postgis;
@@ -141,7 +154,9 @@ cd $(git rev-parse --show-toplevel)
 python DB_PG/ASCII_Hoehenmodell_download.py
 ```
 
-3. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+3. Verzeichnis `DB_PG` öffnen.
+4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+   #FRAGE muss ich hier die Datenbankverbindungsinformationen noch angeben?
 
 - `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Pisten_OSM`
@@ -153,17 +168,21 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 - `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
 - `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
 
-1. Ausführen der FME Workbench `geoserver_Datenimport.fmw`.
+5. Verzeichnis `DB_PG` öffnen.
+6. Ausführen der FME Workbench `Routing_geoserver.fmw`.
+7. Verzeichnis `DB_PG` öffnen.
 
-- `C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
+- `Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
 - Daten von Reader `geoserver_daten` von der Datenbank
 
-5. Routing Script in PG Admin 4 kopieren und ausführen:
-   `Routing\alpine_ace_routing.txt`
+8. Wenn nötig, anpassen der aufbereiteten Routing Daten im QGIS, [siehe Dokumentation](https://alpineacemanagement.github.io/Alpine_Ace/#manuelle-%C3%A4nderungen-des-routings).
+9. Vom Basisverzeichnis den Ordner `Routing` öffnen.
+10. Routing Script in PG Admin 4 kopieren und ausführen:
+    `Routing\alpine_ace_routing.txt`
 
-## Datenbank befüllen API
+## Datenbank befüllen mit API Daten
 
-Um die Datenbank mit den API Daten zu befüllen muss das **main.py** in _Backend/API_ ausgeführt werden.
+Um die Datenbank mit den API Daten zu befüllen, muss das **main.py** in _Backend/API_ ausgeführt werden.
 
 1. Neues Terminal öffnen -> als Command Prompt
 2. Ordner wechseln
@@ -182,7 +201,7 @@ python main.py
 
 #### GeoServer Basis aufsetzten
 
-#TODO Müssen wir das machen?
+#FRAGE Müssen wir das machen, reicht Referenz auf die Folien?
 
 #### Arbeitsbereich erstellen
 
@@ -217,30 +236,42 @@ http://geoserver.org/Alpine_Ace
 geoserver
 ```
 
-7. host
+6. host
 
 ```
 localhost
 ```
 
-8. port: `Portnummer`
-
-9. database
+7. port: `Portnummer`
+8. database
 
 ```
 geoserver
 ```
 
-10. user
+9. user
 
 ```
 postgres
 ```
 
-12. passwd: `Passwort`
-13. Speichern
+10. passwd: `Passwort`
+11. Speichern
+12. Datenspeicher
+13. Datenspeicher hinzufügen
+14. Vektordatenquelle `GeoPackage`
+15. Arbeitsbereich `Alpine_Ace` auswählen
+16. Name der Datenquelle
 
-#### SQL views
+```
+swissBOUNDARIES3D
+```
+
+17. Verbindungsparameter, database `Durchsuchen`
+    Dateipfad: `DB_PG\gpkg_Daten\swissBOUNDARIES3D_1_5_LV95_LN02.gpkg`
+18. Speichern
+
+#### Layers
 
 Folgende Layers müssen erstellt werden:
 
@@ -248,12 +279,11 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
-3. unter Layer mit Namensraum und Präfix , Zeile `restaurant` auswählen und `Publizieren `
+3. Unter Layer mit Namensraum und Präfix , Zeile `restaurant` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`
 5. Begrenzendes Rechteck:
    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
@@ -261,12 +291,11 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
-3. unter Layer mit Namensraum und Präfix , Zeile `anlagen` auswählen und `	Publizieren `
+3. Unter Layer mit Namensraum und Präfix , Zeile `anlagen` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`
 5. Begrenzendes Rechteck:
    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
@@ -274,12 +303,11 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
-3. unter Layer mit Namensraum und Präfix , Zeile `bulletins` auswählen und `	Publizieren `
+3. Unter Layer mit Namensraum und Präfix , Zeile `bulletins` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`
 5. Begrenzendes Rechteck:
    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
@@ -287,12 +315,11 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
-3. unter Layer mit Namensraum und Präfix , Zeile `parkplatz` auswählen und `	Publizieren `
+3. Unter Layer mit Namensraum und Präfix , Zeile `parkplatz` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`
 5. Begrenzendes Rechteck:
    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
@@ -300,12 +327,35 @@ Folgende Layers müssen erstellt werden:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
-3. unter Layer mit Namensraum und Präfix , Zeile `pisten` auswählen und `	Publizieren `
+3. Unter Layer mit Namensraum und Präfix , Zeile `pisten` auswählen und `Publizieren`
 4. Koordinatenreferenzsystem:
    Suche nach `EPSG:2056`
 5. Begrenzendes Rechteck:
    Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
 
+##### tlm_kantonsgebiet :
+
+1. Layer hinzufügen
+2. Arbeitsbereich `Alpine_Ace:swissBOUNDARIES3D` auswählen
+3. Unter Layer mit Namensraum und Präfix , Zeile `tlm_kantonsgebiet` auswählen und `Publizieren`
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
+6. Aus den nativen Grenzen berechnen, anklicken
+7. Speichern
+
+##### tlm_landesgebiet :
+
+1. Layer hinzufügen
+2. Arbeitsbereich `Alpine_Ace:swissBOUNDARIES3D` auswählen
+3. Unter Layer mit Namensraum und Präfix , Zeile `tlm_landesgebiet` auswählen und `Publizieren`
+4. Koordinatenreferenzsystem:
+   Suche nach `EPSG:2056`
+5. Begrenzendes Rechteck:
+   Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
 6. Aus den nativen Grenzen berechnen, anklicken
 7. Speichern
 
@@ -348,7 +398,7 @@ GROUP BY
     v.id, v.the_geom
 ```
 
-6. Schlage Parameter vor
+6. `Schlage Parameter vor`
 7. Standartwert für x
 
 ```
@@ -361,7 +411,7 @@ Reguläre Ausdruck-Validierung
 ^[\d\.\+]+$
 ```
 
-7. Standartwert für y
+8. Standartwert für y
 
 ```
 1200000
@@ -373,16 +423,15 @@ Reguläre Ausdruck-Validierung
 ^[\d\.\+]+$
 ```
 
-8. Attribute: Aktualisieren
-9. the_geo: `Point` auswählen als Typ
-10. Speichern
-11. Koordinatenreferenzsystem:
+9. Attribute: Aktualisieren
+10. the_geo: `Point` auswählen als Typ
+11. Speichern
+12. Koordinatenreferenzsystem:
     Suche nach `EPSG:2056`
-12. Begrenzendes Rechteck:
+13. Begrenzendes Rechteck:
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
-
-13. Aus den nativen Grenzen berechnen, anklicken
-14. Speichern
+14. Aus den nativen Grenzen berechnen, anklicken
+15. Speichern
 
 ##### Routing: Kürzester Weg finden:
 
@@ -417,7 +466,7 @@ GROUP BY
     e.old_id, e.p_farbe
 ```
 
-6. Schlage Parameter vor
+6. `Schlage Parameter vor`
 7. Standartwert für source
 
 ```
@@ -480,7 +529,7 @@ Alpine_Ace:a_a_restaurant
     v.Restaurant_ID= %Restaurant_ID%
 ```
 
-6. Schlage Parameter vor
+6. `Schlage Parameter vor`
 7. Standartwert für Restaurant_ID
 
 ```
@@ -534,7 +583,7 @@ WHERE
     v.Skidaten_ID = %Skidaten_ID%
 ```
 
-6. Schlage Parameter vor
+6. `Schlage Parameter vor`
 7. Standartwert für Skidaten_ID
 
 ```
@@ -556,6 +605,8 @@ Reguläre Ausdruck-Validierung
     Aus den Grenzen des Koordinatenreferenzsystems berechnen, anklicken
 13. Aus den nativen Grenzen berechnen, anklicken
 14. Speichern
+
+# TODO hineinladen der GPX Daten?
 
 ## Page
 

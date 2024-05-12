@@ -9,7 +9,7 @@ Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![Alpine Ace Startseite Screenshot](images/Startseite.png)
+![Alpine Ace Startseite Screenshot](images/Startseite_Alpine_Ace.png)
 
 ## Inhaltsverzeichnis
 
@@ -27,7 +27,11 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
         - [Fehler](#fehler)
     - [Frontend](#frontend)
   - [Funktionen](#funktionen)
+    - [Kopfzeile?](#kopfzeile)
     - [Hauptmenü](#hauptmenü)
+      - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
+      - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
+      - [Funktion](#funktion)
     - [Karte](#karte)
       - [Skigebiete](#skigebiete)
       - [Pisten](#pisten)
@@ -37,16 +41,16 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
     - [Wetter](#wetter)
     - [Statistiken](#statistiken)
       - [Konzept](#konzept)
-      - [Funktion](#funktion)
+      - [Funktion](#funktion-1)
     - [Navi](#navi)
       - [Konzept](#konzept-1)
       - [Aufbereitung der Daten](#aufbereitung-der-daten)
       - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
       - [Berechnen des Routings](#berechnen-des-routings)
       - [SQL views Routing](#sql-views-routing)
-      - [Funktion](#funktion-1)
-    - [Restaurant](#restaurant)
       - [Funktion](#funktion-2)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-3)
   - [Incoming Features](#incoming-features)
   - [Contribution](#contribution)
 
@@ -75,6 +79,8 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 - Schneehöhen: Die Schneehöhen werden über die API des SLF bezogen. Dabei handelt es sich um die Gleiche API wie bei den Lawineninformation. Die Abfrage der Daten erfolgt im 24h Takt
 
 - Informationen über Skigebiet: Die Informationen zu den offenen Anlagen oder den offenen Pisten werden entweder über Scraping oder über eine API der einzelne Bergbahnen bezogen, dies ist jedoch noch in Abklärung.
+
+#TODO beschreiben was main.p macht
 
 #### Datenbank
 
@@ -165,9 +171,38 @@ Der Entscheid fiel auf PWAs, da die sie Webbasiert sind und somit keine Installa
 
 <a id=funktionen></a>
 
+#### Kopfzeile?
+
+#TODO
+
+1. Beschreibung wie funktioniert,
+2. Welche menüs eingen Kopfzeilen haben
+
 #### Hauptmenü
 
 Das Hauptmenü ist der wichtigste Ort der Webseite. Aus diesem wird in die Untermenüs navigiert. Die Untermenüs sind in sechs Kacheln angeordnet. Die wichtigsten Informationen zum Skigebiet wie die Lawinensituation, offene Anlagen und Pisten sind wie in einem Dashboard direkt über den Kacheln angeordnet.
+
+##### Bulletin Karte Lawinen
+
+#TODO oder unter Kapitel API?
+
+##### Bulletin Karte Grenzen
+
+- **Datenursprung**: Datei der `swissboundaries3d_2024-01_2056_5728.gpkg.zip` von der [Swisstopo](https://www.swisstopo.admin.ch/de/landschaftsmodell-swissboundaries3d).
+- **Datenstand**: 12.05.2024
+- **Datenformat**: gpkg
+- **Datenimport**: Datenspeicher swissBOUNDARIES3D, GeoPackage
+
+Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hinzugefügt.Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
+
+##### Funktion
+
+#TODO
+
+1. Dashboard Lifte(Veag)
+2. Symbol Lawinenstufe
+3. Karte (maping, Code beschreiben, Informationen Farbe, Hintergrundkarte)
+4. Buttons (Schaltflächen Menüs)
 
 #### Karte
 
