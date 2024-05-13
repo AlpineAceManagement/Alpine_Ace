@@ -102,9 +102,9 @@ Während des Betriebes der Plattform müssen verschiedene Systeme Lese- oder Sch
 
 Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welchem die Verbindungsinformationen angegeben sind:
 
-- Python: `alpine_ace\src\DB\config.js`
+- Python: `API\config.py`
 
-- JS: `API\config.py`
+- JS: `alpine_ace\src\DB\config.js`
 
 - FME: Bei FME muss unter ` Tools ->  FME Options -> Database Connections` die Datenbankverbindung zum GeoServer angepasst werden.
 
