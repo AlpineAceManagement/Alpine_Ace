@@ -11,6 +11,7 @@ import theme from "./theme.js";
 import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 import { restaurantStyle } from "./kartenLayerStyle.js";
+import { ZoomToExtent, defaults as defaultControls } from "ol/control.js";
 
 const RestaurantViewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
@@ -61,6 +62,11 @@ const RestaurantViewer = () => {
 
     // Karte erstellen
     const map = new Map({
+      controls: defaultControls().extend([
+        new ZoomToExtent({
+          extent: [2755375, 1164628, 2775625, 1195443],
+        }),
+      ]),
       layers: [WMSwinterlandeskarteLayer, restaurantAnfrageLayer], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({

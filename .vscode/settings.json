@@ -52,6 +52,7 @@
     "hizufügen",
     "IMIS",
     "interests",
+    "karten",
     "like",
     "loopercamera",
     "Maps",
@@ -102,12 +103,15 @@
     "shutil",
     "SRID",
     "stationen",
+    "swissboundaries",
     "swisstlm",
+    "swisstopo",
     "Théo",
     "Topology",
     "Transformer",
     "true",
     "urllib",
+    "Veag",
     "Vega",
     "verbindung",
     "Verpflegungsmöglichkeiten",
@@ -119,7 +123,8 @@
     "WHERE",
     "Worckbench",
     "Workbench",
-    "zipfile"
+    "zipfile",
+    "Zoomstufe"
   ],
   "cSpell.enableFiletypes": ["!javascriptreact"]
 }

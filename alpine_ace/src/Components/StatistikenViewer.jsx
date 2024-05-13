@@ -1,22 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
-import "ol/ol.css"; // Import OpenLayers CSS
+import "ol/ol.css";
 import Map from "ol/Map";
 import View from "ol/View";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import VectorLayer from "ol/layer/Vector";
-import { Stroke, Style } from "ol/style";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
 import theme from "./theme";
+import { ZoomToExtent, defaults as defaultControls } from "ol/control.js";
 import { SwisstopoLayer } from "./swisstopoLayer";
 import { createVectorSource } from "./kartenWFS";
+import { skidatenAnfrageStyl } from "./kartenLayerStyle";
 
-const GPX_Viewer = () => {
+const StatistikenViewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
   const [map, setMap] = useState(null);
   const [Skidaten_ID, setSkidaten_ID] = useState(1); // State to store Skidaten_ID
-  const mapRef = useRef(null); // Reference to the map container
+  const mapRef = useRef(null);
 
   useEffect(() => {
     // Extrahieren der Skidaten_ID aus der URL
@@ -41,15 +42,10 @@ const GPX_Viewer = () => {
       bboxStrategy
     );
 
-    //Skidaten Anfrage Layer Styl
+    // Skidaten Anfrage Layer Styl aus kartenLayerStyle.js
     const skidatenAnfrageLayer = new VectorLayer({
       source: skidatenAnfrageSource,
-      style: new Style({
-        stroke: new Stroke({
-          color: "orange",
-          width: 4,
-        }),
-      }),
+      style: skidatenAnfrageStyl,
     });
 
     //Definition des Kartenextents für WMS/WMTS
@@ -63,6 +59,11 @@ const GPX_Viewer = () => {
 
     // Karte erstellen
     const map = new Map({
+      controls: defaultControls().extend([
+        new ZoomToExtent({
+          extent: [2755375, 1164628, 2775625, 1195443],
+        }),
+      ]),
       layers: [WMSwinterlandeskarteLayer, skidatenAnfrageLayer], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({
@@ -123,4 +124,4 @@ const GPX_Viewer = () => {
   );
 };
 
-export default GPX_Viewer;
+export default StatistikenViewer;

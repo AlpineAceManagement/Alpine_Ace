@@ -6,13 +6,15 @@ export function SwisstopoLayer(extent) {
     // Verwende direkt den importierten Namen TileLayer
     extent: extent,
     source: new TileWMS({
+      // Basis-URL
       url: "https://wms.geo.admin.ch/",
       crossOrigin: "anonymous",
+      //Quellenangabe
       attributions:
-        '© <a href="http://www.geo.admin.ch/internet/geoportal/' +
-        'en/home.html">geo.admin.ch</a>',
+        '© <a href="https://www.geo.admin.ch/de/wms-verfuegbare-dienste-und-daten" >geo.admin.ch</a>',
       projection: "EPSG:2056",
       params: {
+        // Layer-URL
         LAYERS: "ch.swisstopo.pixelkarte-farbe-winter",
         FORMAT: "image/jpeg",
       },

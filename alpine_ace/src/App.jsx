@@ -11,7 +11,7 @@ import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
 import Graph from "./Components/Graph";
 import Einstellungen from "./Components/Einstellungen";
-import GPX_Viewer from "./Components/GPX_Viewer";
+import StatistikenViewer from "./Components/StatistikenViewer";
 import StatistikenKopfzeile from "./Components/StatistikenKopfzeile";
 import RestaurantViewer from "./Components/RestaurantViewer";
 import RestaurantKopfzeile from "./Components/RestaurantKopfzeile";
@@ -116,11 +116,11 @@ function App() {
 
           <Route
             exact
-            path="/GPX_Viewer"
+            path="/StatistikenViewer"
             element={
               <>
                 <StatistikenKopfzeile />
-                <GPX_Viewer />
+                <StatistikenViewer />
               </>
             }
           />

@@ -105,31 +105,31 @@ const Karte = () => {
       }),
     });
 
-    // Funktion zum Behandeln des Klickereignisses auf dem Vektorlayer
+    // Funktion wen auf ein Vektorlayer geklickt wird
     const handleClick = (event) => {
       map.forEachFeatureAtPixel(event.pixel, (feature) => {
         console.log("Feature Eigenschaften:", feature.getProperties());
 
         // Setzen von Mindest- und Maximalzoomstufen
-        const minZoomLevel = 8; // Beispielwert für Mindestzoomstufe
-        const maxZoomLevel = 16; // Beispielwert für Maximalzoomstufe
+        const minZoomLevel = 8; // Mindestzoomstufe
+        const maxZoomLevel = 16; // Maximalzoomstufe
         map.getView().setMinZoom(minZoomLevel);
         map.getView().setMaxZoom(maxZoomLevel);
 
         // Zoom auf das ausgewählte Feature
         map.getView().fit(feature.getGeometry().getExtent(), {
-          duration: 500, // Optional: Animate the zooming process
-          padding: [1000, 1000, 1000, 1000], // Optional: Add padding around the extent
+          duration: 500, // Animationsdauer in Millisekunden
+          padding: [1000, 1000, 1000, 1000], // Abstand des Features zum Rand
         });
 
-        setSelectedFeature(feature.getProperties()); // Update selected feature state
+        setSelectedFeature(feature.getProperties()); // Setzen des ausgewählten Features
       });
     };
 
     // Event-Handler für das Klicken auf Features hinzufügen
     map.on("click", handleClick);
 
-    // Update the size of the map when the window is resized
+    // Fenstergröße anpassen
     window.addEventListener("resize", () => {
       map.updateSize();
     });

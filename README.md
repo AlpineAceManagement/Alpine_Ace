@@ -89,7 +89,9 @@ npm install
 ```python
 npm start
 ```
+
 ## Installation
+
 ### Backend
 
 Das Backend besteht aus vier Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis), einem Node-Sever und einem GeoServer der die Geodaten zur Verfügung stellt.
@@ -563,7 +565,7 @@ Reguläre Ausdruck-Validierung
 13. Aus den nativen Grenzen berechnen, anklicken
 14. Speichern
 
-##### GPX_Viewer: Angewählte Strecke anzeigen:
+##### StatistikenViewer: Angewählte Strecke anzeigen:
 
 1. Neuer Layer
 2. Arbeitsbereich: `Alpine_Ace:geoserver` anwählen
@@ -619,7 +621,7 @@ Reguläre Ausdruck-Validierung
 
 ### GPX-Daten laden
 
-Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt werden. Im File muss dabei der Pfad zur GPX-Datei angegenben werden:
+Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner _API_ ausgeführt werden. Im File muss dabei der Pfad zur GPX-Datei angegeben werden:
 
 ```python
 # GPX-Datei hochladen

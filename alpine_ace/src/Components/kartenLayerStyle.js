@@ -152,3 +152,12 @@ export function naviStyl() {
     }),
   });
 }
+
+export function skidatenAnfrageStyl() {
+  return new Style({
+    stroke: new Stroke({
+      color: "orange",
+      width: 4,
+    }),
+  });
+}
