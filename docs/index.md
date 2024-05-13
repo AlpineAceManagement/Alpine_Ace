@@ -72,15 +72,15 @@ Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erst
 
 Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden einige APIs benötigt.
 
-- Meteo: Die Wetter Daten werden über [https://www.meteomatics.com/de/free-wetter-api/](https://www.meteomatics.com/de/free-wetter-api/) bezogen. 500 Abfragen pro Tag sind kostenlos. Die Abfrage der Daten erfolgt im Viertelstunden Takt.
+- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind Kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
 
-- Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen [https://www.slf.ch/de/services-und-produkte/slf-datenservice/](https://www.slf.ch/de/services-und-produkte/slf-datenservice/). Dabei werden die Daten vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 24h Takt.
+- Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über die API des SLF bezogen. Dabei handelt es sich um die gleiche API wie bei den Lawineninformationen. Die Abfrage der Daten erfolgt im 24h Takt
+- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/] (https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Konstenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
-- Informationen über Skigebiet: Die Informationen zu den offenen Anlagen oder den offenen Pisten werden entweder über Scraping oder über eine API der einzelne Bergbahnen bezogen, dies ist jedoch noch in Abklärung.
+- Informationen über Skigebiet: Die Informationen der Skigebiete werden in Zukunft über ein Webscraping der Seite Bergfex gemacht.
 
-#TODO beschreiben was main.p macht
+Damit der Datenbezug reibungslos läuft, werden die Scripts für den Datenbezug über eine Datei **main.py** gesteuert. Diese Datei läuft im Hinergrund und ruft die einzelnen Scripts in den oben erwähntne Zeitinervallen auf um sie auszuführen.
 
 #### Datenbank
 
