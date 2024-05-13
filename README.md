@@ -617,7 +617,7 @@ Reguläre Ausdruck-Validierung
 13. Aus den nativen Grenzen berechnen, anklicken
 14. Speichern
 
-### GPX Datenladen
+### GPX-Daten laden
 
 Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt. werden. Im File muss dabei der Pfad zum gpx file angegenben werden:
 
