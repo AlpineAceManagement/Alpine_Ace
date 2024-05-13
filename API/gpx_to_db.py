@@ -26,8 +26,8 @@ def get_season(date):
     elif month <= 4:
         return "{}/{}".format(date.year - 1, date.year)
 
-# Charger le fichier GPX
-path = 'GPX_files/6' #--------------------------------------------------
+# upload gpx-file
+path = 'GPX_files/6' #
 baum = ET.parse(path+'.gpx')
 wurzel = baum.getroot()
 

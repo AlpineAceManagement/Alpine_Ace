@@ -617,16 +617,21 @@ Reguläre Ausdruck-Validierung
 13. Aus den nativen Grenzen berechnen, anklicken
 14. Speichern
 
-# TODO hineinladen der GPX Daten?
+### GPX Datenladen
+
+Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt. werden. Im File muss dabei der Pfad zum gpx file angegenben werden:
+
+```python
+# upload gpx-file
+path = "path/to/gpx"
+```
+
+Es empfiehlt sich, innerhalb des Projekts einen Ordner namens "GPX" anzulegen und dort die Dateien zu speichern.
 
 ## Page
 
 Für weiter Informationen zum Projekt besuche unsere GitHub Page:
 [alpineacemanagement.github.io](https://alpineacemanagement.github.io/Alpine_Ace/)
-
-```
-
-```
 
 ### API
 

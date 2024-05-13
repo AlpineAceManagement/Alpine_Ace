@@ -109,18 +109,8 @@ def save_current_weather():
     try:
         # Connect to the database
 
-        # conn = psycopg2.connect(
-        #     dbname= "AlpineACE",    # DB Name
-        #     user= "postgres",       # Username
-        #     password= "TeamLH44",   # Password
-        #     host= "localhost",      # Host adress
-        #     port="5432"             # Port number
-        # )
         conn = psycopg2.connect(**config.db_config)
-        # Create a cursor object
         cur = conn.cursor()
-
-        
 
         # Insert the current weather data into the table
         cur.execute(
@@ -191,7 +181,6 @@ def save_hourly_forecast():
         # Connect to database
         conn = psycopg2.connect(**config.db_config)
 
-        # Create a cursor object
         cur = conn.cursor()
 
         # Clear existing data from the table
