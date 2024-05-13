@@ -1,9 +1,9 @@
-'''this code is for the connection with the Postgres Database'''
-#Database credentials
+'''dieser Code ist für die Verbindung mit der Postgres-Datenbank'''
+
 db_config = {
-    'host': 'host', #Hostname of DB
-    'port': 'port', #Port of DB
-    'database': 'database', #Name fo DB
-    'user': 'user', #Username for connection to DB
-    'password': 'password'  #Passwort for usernamen
+    'host': 'host', #Hostname von der DB
+    'port': 'port', #Port von der  DB
+    'database': 'database', #Name von der DB
+    'user': 'user', #Username für die Verbindung zur DB
+    'password': 'password'  #Passwort für Username
 }
