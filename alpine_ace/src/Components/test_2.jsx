@@ -75,6 +75,12 @@ const Test_2 = () => {
     map.addLayer(newVectorLayer);
   };
 
+  const handleRemoveVectorLayer = () => {
+    if (!map || !vectorLayer) return;
+    map.removeLayer(vectorLayer);
+    setVectorLayer(null);
+  };
+
   const handleChangeSourceAndTarget = () => {
     // Update source and target values
     const newSource = 6034;
@@ -95,6 +101,7 @@ const Test_2 = () => {
       <button onClick={handleChangeSourceAndTarget}>
         Change Source and Target
       </button>
+      <button onClick={handleRemoveVectorLayer}>Remove Vector Layer</button>
     </div>
   );
 };

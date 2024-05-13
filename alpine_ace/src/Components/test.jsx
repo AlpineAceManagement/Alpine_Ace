@@ -9,6 +9,7 @@ import Feature from "ol/Feature";
 import { Translate } from "ol/interaction";
 import Collection from "ol/Collection";
 import { Projection } from "ol/proj";
+
 import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import Button from "@mui/material/Button";
@@ -28,6 +29,7 @@ const Test = () => {
   const [marker2Coord, setMarker2Coord] = useState(null);
   const [nodeSource, setNodeSource] = useState(646);
   const [nodeTarget, setNodeTarget] = useState(6085);
+  const [vectorLayer, setVectorLayer] = useState(null);
   const [naviVectorSource, setNaviVectorSource] = useState(null); // Declare naviVectorSource variable
   const [geoserverWFSNaviLayer, setGeoserverWFSNaviLayer] = useState(
     "Alpine_Ace:a_a_shortest_path"
@@ -38,6 +40,7 @@ const Test = () => {
     if (map) {
       const view = map.getView();
       const centerCoord = view.getCenter();
+
       if (centerCoord) {
         setMarker1Coord(centerCoord);
         addMarker1(centerCoord, "marker1");
@@ -56,17 +59,42 @@ const Test = () => {
       }
     }
   };
+  const vectorLayer1Ref = useRef(null);
+  const vectorLayer2Ref = useRef(null);
+
+  const vectorSource1Ref = useRef(null);
+  const vectorSource2Ref = useRef(null);
 
   const handleHideMarker1 = () => {
     setShowMarker1(false);
     setMarker1Coord(null);
-    // Remove marker1 from the map
+
+    // Remove marker1 layer from the map
+    if (map && vectorLayer1Ref.current) {
+      map.removeLayer(vectorLayer1Ref.current);
+      console.log("vectorLayer1 removed");
+      vectorLayer1Ref.current = null; // Reset the ref
+      if (vectorSource1Ref.current) {
+        vectorSource1Ref.current.clear(); // Clear features from the source
+        vectorSource1Ref.current = null; // Reset the ref
+      }
+    }
   };
 
   const handleHideMarker2 = () => {
     setShowMarker2(false);
     setMarker2Coord(null);
-    // Remove marker2 from the map
+
+    // Remove marker2 layer from the map
+    if (map && vectorLayer2Ref.current) {
+      map.removeLayer(vectorLayer2Ref.current);
+      console.log("vectorLayer2 removed");
+      vectorLayer2Ref.current = null; // Reset the ref
+      if (vectorSource2Ref.current) {
+        vectorSource2Ref.current.clear(); // Clear features from the source
+        vectorSource2Ref.current = null; // Reset the ref
+      }
+    }
   };
 
   const addMarker1 = (coord, markerType) => {
@@ -102,6 +130,10 @@ const Test = () => {
     translate.on("translateend", (evt) => {
       fetchDataForMarker1(evt.coordinate);
     });
+
+    // Update the refs
+    vectorLayer1Ref.current = vectorLayer;
+    vectorSource1Ref.current = vectorSource;
   };
 
   const addMarker2 = (coord, markerType) => {
@@ -137,8 +169,11 @@ const Test = () => {
     translate.on("translateend", (evt) => {
       fetchDataForMarker2(evt.coordinate);
     });
-  };
 
+    // Update the refs
+    vectorLayer2Ref.current = vectorLayer;
+    vectorSource2Ref.current = vectorSource;
+  };
   const fetchDataForMarker1 = (coordinate) => {
     const [x, y] = coordinate;
 
@@ -176,47 +211,68 @@ const Test = () => {
 
   useEffect(() => {
     // Initialize map
-    if (!map) {
-      //Definition des Kartenextents für WMS/WMTS
-      const extent = [2420000, 130000, 2900000, 1350000];
-      // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
-      const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
+    if (!mapRef.current) return;
+    const extent = [2420000, 130000, 2900000, 1350000];
+    const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-      const naviAnfrageSource = createVectorSource(
-        "a_a_shortest_path&viewparams=source:" +
-          nodeSource +
-          ";target:" +
-          nodeTarget +
-          ";",
-        bboxStrategy
-      );
-
-      const naviVectorLayer = new VectorLayer({
-        source: naviAnfrageSource,
-        style: new Style({
-          stroke: new Stroke({
-            color: "orange",
-            width: 4,
-          }),
+    const newMap = new Map({
+      layers: [WMSwinterlandeskarteLayer],
+      target: mapRef.current,
+      view: new View({
+        center: [2762640.8, 1179359.1],
+        zoom: 12,
+        projection: new Projection({
+          code: "EPSG:2056",
+          units: "m",
         }),
-      });
+      }),
+    });
 
-      const newMap = new Map({
-        layers: [WMSwinterlandeskarteLayer, naviVectorLayer], // Use naviVectorLayer instead of geoserverWFSNaviLayer
-        view: new View({
-          center: [2762073, 1180429],
-          zoom: 12,
-          projection: new Projection({
-            code: "EPSG:2056",
-            units: "m",
-          }),
-        }),
-      });
+    setMap(newMap);
 
-      newMap.setTarget(mapRef.current); // Set the target to the mapRef
-      setMap(newMap);
+    return () => {
+      newMap.setTarget(null);
+    };
+  }, []);
+
+  const handleLoadVectorData = () => {
+    if (!map) return; // Check if map is initialized
+    console.log("clicked");
+
+    const newVectorLayer = vectorLayer; // Store the current vectorLayer reference
+
+    if (newVectorLayer) {
+      map.removeLayer(newVectorLayer);
+      console.log("newVectorLayer removed");
     }
-  }, [map, nodeSource, nodeTarget]);
+
+    const newVectorSource = createVectorSource(
+      "a_a_shortest_path&viewparams=source:" +
+        nodeSource +
+        ";target:" +
+        nodeTarget +
+        ";",
+      bboxStrategy
+    );
+
+    const updatedVectorLayer = new VectorLayer({
+      // Use a different variable name to prevent confusion
+      source: newVectorSource,
+      style: new Style({
+        stroke: new Stroke({
+          color: "orange",
+          width: 4,
+        }),
+      }),
+    });
+
+    setVectorLayer(updatedVectorLayer);
+    map.addLayer(updatedVectorLayer);
+  };
+
+  useEffect(() => {
+    handleLoadVectorData();
+  }, [nodeSource, nodeTarget]);
 
   const handleButtonClick = () => {
     // Change the values of nodeSource and nodeTarget
@@ -224,6 +280,19 @@ const Test = () => {
     setNodeSource(6049);
     setNodeTarget(6085);
     console.log(nodeSource, nodeTarget);
+    addMarker1([2762640.8, 1179359.1], "marker1");
+    addMarker2([2762640.8, 1179359.1], "marker2");
+  };
+  const resetMarker = () => {
+    handleHideMarker1();
+    handleHideMarker2();
+    handleRemoveVectorLayer();
+  };
+
+  const handleRemoveVectorLayer = () => {
+    if (!map || !vectorLayer) return;
+    map.removeLayer(vectorLayer);
+    setVectorLayer(null);
   };
 
   return (
@@ -318,17 +387,13 @@ const Test = () => {
                 color="p_red"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
-                onClick={() => {
-                  // handleHideMarker1();
-                  // handleHideMarker2();
-                }}
+                onClick={resetMarker} // This should call handleLoadVectorData function
               >
-                add Layer
+                Reset
               </Button>
             </Grid>
           </Grid>
         </Box>
-        <Button onClick={handleButtonClick}>Change Values</Button>
       </div>
     </ThemeProvider>
   );
