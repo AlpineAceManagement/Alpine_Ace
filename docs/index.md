@@ -348,7 +348,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
 
 #### Navi
 
-Bei der Navigation wird ein Ziel aus einer Liste ausgewählt. Der Weg zum Ziel wird danach hervorgehoben. Unterhalb der Karte ist eine chronologische Auflistung der Pisten und Anlagen welche auf der Route genutzt wird. Die Ziele in der Liste haben jeweils zusätzlich zum Namen ein Piktogramm, welches einfach erkennen lässt, ob es sich um eine Anlage, Parkplatz oder ein Restaurant handelt.(#TODO Beschreibung anpassen)
+Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Position verschoben. Der kürzeste Weg zum Ziel wird danach in der Karte als Route hervorgehoben. Mit nach anklicken Reset Schaltfläche verschwinden Marker und Route von der Karte.
 
 Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
 
@@ -456,7 +456,17 @@ Beispiel:
 
 ##### Funktion
 
-#TODO
+Durch anklicken der Schaltfläche `START` oder `ZIEL` wird der Start, respektive Ziel Marker in den Mittelpunkt des Kartenausschnittes gesetzt. Sobald der Start oder Ziel Marker erstellt ist, wird die Schaltfläche für das erstellen deaktiviert. Den Start und Ziel Marker mittels des Attribut `markerType` unterschieden. Das Icon bezieht der Marker aus der Ordner `Karte_Symbole` vom online Github Repository, da dies per lokalen Ordner nicht funktioniert. Mit der Position des Markers wird über die Funktion `fetchNearestVertex` mit der SQL View `a_a_nearest_vertex` die nächste `Node_ID` gesucht. Diese wird dann als `nodeSource` beim Start Marker und als `nodeTarget` beim Ziel Marker gesetzt. Wenn die Marker verschoben werden, wir die Funktion `fetchNearestVertex` wieder aufgerufen und die `Node_ID` aktualisiert. Wenn die `nodeSource` oder `nodeTarget` den Wert ändern wird die Funktion `handleLoadRoute` gestartet. Diese löscht als erstes die alte Route und lädt die neue Route mit der SQL View `a_a_shortest_path` in der die Parameter `nodeSource` und `nodeTarget` verwendet werden. Der Stil für den Layer kommt aus der Datei `kartenLayerStyle.js`, dem CSS für die Layer Symbolisierung.
+
+Mit der Funktion `resetMarkerUndRoute` wird durch anklicken von der Schaltfläche `RESET` gestartet. Dabei werden die Marker und den Routen Layer gelöscht. Die Schaltflächen `START` und `Ziel` werden wieder aktiviert (verwendbar).
+
+In der Karte sind die Layer Pisten und Anlagen mit der Winterlandeskarte im Hintergrund. Der Import der WFS und WMS Daten, die Symbolisierung, die Quellenangaben der Hintergrundkarte und das Zoomen auf einen vorgeben Bereich ist gleich wie in der [Karte](#funktion-2) der Mit der Funktion `setZIndex` wird die Darstellungsreihenfolge gesetzt. Dabei ist 1 zu unterst und 5 zuoberst:
+
+1. Winterlandeskarte
+2. Pisten
+3. Anlagen
+4. Route
+5. Marker
 
 #### Restaurant
 

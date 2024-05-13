@@ -59,6 +59,7 @@ const StatistikenViewer = () => {
 
     // Karte erstellen
     const map = new Map({
+      //Zoom to Extent Button hinzufügen
       controls: defaultControls().extend([
         new ZoomToExtent({
           extent: [2755375, 1164628, 2775625, 1195443],

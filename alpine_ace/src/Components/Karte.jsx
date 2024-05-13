@@ -24,15 +24,15 @@ const Karte = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   useEffect(() => {
-    //WFS Anfrage für alle Restaurants
+    //WFS Anfrage für alle Restaurants aus kartenWFS.js
     const restaurantSource = createVectorSource("Restaurant", bboxStrategy);
-    //WFS Anfrage für alle Parkplätze
+    //WFS Anfrage für alle Parkplätze aus kartenWFS.js
     const parkplatzSource = createVectorSource("parkplatz", bboxStrategy);
-    //WFS Anfrage für alle ÖV Haltestellen
+    //WFS Anfrage für alle ÖV Haltestellen aus kartenWFS.js
     const oevSource = createVectorSource("oev", bboxStrategy);
-    //WFS Anfrage für alle Pisten
+    //WFS Anfrage für alle Pisten aus kartenWFS.js
     const pistenSource = createVectorSource("pisten", bboxStrategy);
-    //WFS Anfrage für alle Anlagen
+    //WFS Anfrage für alle Anlagen aus kartenWFS.js
     const anlagenSource = createVectorSource("anlagen", bboxStrategy);
 
     // Restaurant Layer Styl aus kartenLayerStyle.js
@@ -55,7 +55,6 @@ const Karte = () => {
       source: pistenSource,
       style: pistenStyle,
     });
-
     // Anlagen Layer Styl aus kartenLayerStyle.js
     const styleFunction = function (feature) {
       return anlagenStyle(feature);
@@ -81,6 +80,7 @@ const Karte = () => {
 
     // Karte erstellen
     const map = new Map({
+      //Zoom to Extent Button hinzufügen
       controls: defaultControls().extend([
         new ZoomToExtent({
           extent: [2755375, 1164628, 2775625, 1195443],

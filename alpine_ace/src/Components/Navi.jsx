@@ -29,77 +29,90 @@ const Navi = () => {
   const [zielMarkerCoord, setMarkerZielCoord] = useState(null);
   const [nodeSource, setNodeSource] = useState(1);
   const [nodeTarget, setNodeTarget] = useState(1);
-  const [vectorLayer, setVectorLayer] = useState(null);
+  const [routeLayer, setVectorLayer] = useState(null);
 
+  //Start Button
   const startButton = () => {
     setShowStartMarker(true);
     if (map) {
       const view = map.getView();
       const centerCoord = view.getCenter();
-
+      // Marker wird im Zentrum der Karte erstellt
       if (centerCoord) {
         setMarkerStartCoord(centerCoord);
+        // Markertype startMarker festlegen
         addMarkerStart(centerCoord, "startMarker");
         fetchNearestVertex(centerCoord, setNodeSource);
       }
     }
   };
 
+  //Ziel Button
   const zielButton = () => {
     setShowZielMarker(true);
     if (map) {
       const view = map.getView();
       const centerCoord = view.getCenter();
-
+      // Marker wird im Zentrum der Karte erstellt
       if (centerCoord) {
         setMarkerZielCoord(centerCoord);
+        // Markertype zielMarker festlegen
         addMarkerZiel(centerCoord, "zielMarker");
         fetchNearestVertex(centerCoord, setNodeTarget);
       }
     }
   };
+
+  // Refs für die Marker
   const vectorLayerStartRef = useRef(null);
   const vectorLayerZielRef = useRef(null);
 
   const vectorSourceStartRef = useRef(null);
   const vectorSourceZielRef = useRef(null);
 
+  // Für das verteckten des Start Markers
   const handleHideStartMarker = () => {
+    // Start Marker wird ausgebelndet
     setShowStartMarker(false);
+    // Start Marker Koordianten auf null setzen
     setMarkerStartCoord(null);
 
-    // Remove Start layer from the map
+    //wenn der Startvektorlayer exisitiert wird er entfernt
     if (map && vectorLayerStartRef.current) {
       map.removeLayer(vectorLayerStartRef.current);
-      console.log("vectorLayer1 removed");
-      vectorLayerStartRef.current = null; // Reset the ref
+      console.log("vectorLayerStart removed");
+      vectorLayerStartRef.current = null; // auf null setzen
       if (vectorSourceStartRef.current) {
-        vectorSourceStartRef.current.clear(); // Clear features from the source
-        vectorSourceStartRef.current = null; // Reset the ref
+        vectorSourceStartRef.current.clear(); // Alle Features löschen
+        vectorSourceStartRef.current = null; // auf null setzen
       }
     }
   };
-
+  // Für das verteckten des Ziel Markers
   const handleHideZielMarker = () => {
+    // Ziel Marker wird ausgebelndet
     setShowZielMarker(false);
+    // Ziel Marker Koordianten auf null setzen
     setMarkerZielCoord(null);
 
-    // Remove  Ziel marker layer from the map
+    //wenn der Zielvektorlayer exisitiert wird er entfernt
     if (map && vectorLayerZielRef.current) {
       map.removeLayer(vectorLayerZielRef.current);
-      console.log("vectorLayer2 removed");
-      vectorLayerZielRef.current = null; // Reset the ref
+      console.log("vectorLayerStart removed");
+      vectorLayerZielRef.current = null; // auf null setzen
       if (vectorSourceZielRef.current) {
-        vectorSourceZielRef.current.clear(); // Clear features from the source
-        vectorSourceZielRef.current = null; // Reset the ref
+        vectorSourceZielRef.current.clear(); // Alle Features löschen
+        vectorSourceZielRef.current = null; // auf null setzen
       }
     }
   };
+
+  // Basispfad für den den Ordner Karte_Symbole im Github Repository
   const basisPfadKartenSymbole =
     "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/";
 
   const addMarker = (coord, markerType, markerColor) => {
-    // Create marker style
+    // Marker style erstellen
     const markerStyle = new Style({
       image: new Icon({
         src: basisPfadKartenSymbole + markerColor,
@@ -108,55 +121,64 @@ const Navi = () => {
       }),
     });
 
-    // Create marker feature
+    // Marker erstellen
     const marker = new Point(coord);
     const markerFeature = new Feature(marker);
+    // Marker Style setzen
     markerFeature.setStyle(markerStyle);
 
-    // Add marker to the map
     const vectorSource = new VectorSource({
       features: [markerFeature],
     });
-    const vectorLayer = new VectorLayer({
+    const MarkerLayer = new VectorLayer({
       source: vectorSource,
     });
-    vectorLayer.setZIndex(5);
-    map.addLayer(vectorLayer);
 
-    // Add translate interaction
+    // Darstellungsreihenfolge festlegen (Marker zuoberst)
+    MarkerLayer.setZIndex(5);
+    map.addLayer(MarkerLayer);
+
+    // Translate Interaktion hinzufügen um Marker verschieben zu können
     const translate = new Translate({
       features: new Collection([markerFeature]),
     });
     map.addInteraction(translate);
 
     translate.on("translateend", (evt) => {
+      // Herausfinden welcher Marker verschoben wurde
       markerType === "startMarker"
-        ? fetchDataForStartMarker(evt.coordinate)
-        : fetchDataForZielMarker(evt.coordinate);
+        ? // Wenn startMarker, setNodeSource herausfinden
+          fetchDataForStartMarker(evt.coordinate)
+        : // Wenn zielMarker, setNodeTarget herausfinden
+          fetchDataForZielMarker(evt.coordinate);
     });
 
-    // Update the refs based on the marker type
+    // Wenn der startMarker verschoben wurde auf den vektorLayerStartRef setzen
     if (markerType === "startMarker") {
-      vectorLayerStartRef.current = vectorLayer;
+      vectorLayerStartRef.current = MarkerLayer;
       vectorSourceStartRef.current = vectorSource;
-    } else {
-      vectorLayerZielRef.current = vectorLayer;
+    }
+    // Wenn der zielMarker verschoben wurde auf den vektorLayerZielRef setzen
+    else if (markerType === "zielMarker") {
+      vectorLayerZielRef.current = MarkerLayer;
       vectorSourceZielRef.current = vectorSource;
     }
   };
 
-  // Usage:
+  // Start Marker  erstellen mit markerType und genauer svg Datei
   const addMarkerStart = (coord) => {
     addMarker(coord, "startMarker", "map-marker_green.svg");
   };
-
+  // Ziel Marker erstellen mit markerType und genauer svg Datei
   const addMarkerZiel = (coord) => {
     addMarker(coord, "zielMarker", "map-marker_purple.svg");
   };
 
+  // Mit SQL view a_a_nearest_vertex nächste Node ID herausfinden
   const fetchNearestVertex = (coordinate, setNodeId) => {
     const [x, y] = coordinate;
 
+    // WFS Abfrage für die nächste Node ID, Parameter x und y
     const url = `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
 
     fetch(url)
@@ -167,39 +189,38 @@ const Navi = () => {
         return response.json();
       })
       .then((data) => {
-        const id = data.features[0].properties.id; // Extract ID from response
+        const id = data.features[0].properties.id; // ID extrahieren
         console.log("Node ID:", id);
-        setNodeId(id); // Update the node ID variable with the fetched ID
+        setNodeId(id); // Node ID setzen
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
-        // Handle error accordingly
+        console.error("Error fetching data:", error); // Fehlermeldung
       });
   };
-
+  // NodeSource herausfinden mit Koordinate von startMarker
   const fetchDataForStartMarker = (coordinate) => {
     fetchNearestVertex(coordinate, setNodeSource);
   };
-
+  // NodeTarget herausfinden mit Koordinate von zielMarker
   const fetchDataForZielMarker = (coordinate) => {
     fetchNearestVertex(coordinate, setNodeTarget);
   };
 
   useEffect(() => {
-    // Initialize map
+    // Karte initialisieren
     if (!mapRef.current) return;
     //WFS Anfrage für alle Pisten
     const pistenSource = createVectorSource("pisten", bboxStrategy);
     //WFS Anfrage für alle Anlagen
     const anlagenSource = createVectorSource("anlagen", bboxStrategy);
     const extent = [2420000, 130000, 2900000, 1350000];
+    // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
     const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
-
+    //Pisten Layer Styl aus kartenLayerStyle.js
     const pistenLayer = new VectorLayer({
       source: pistenSource,
       style: pistenStyle,
     });
-
     // Anlagen Layer Styl aus kartenLayerStyle.js
     const styleFunction = function (feature) {
       return anlagenStyle(feature);
@@ -209,11 +230,13 @@ const Navi = () => {
       source: anlagenSource,
       style: styleFunction,
     });
-
-    WMSwinterlandeskarteLayer.setZIndex(0);
-    pistenLayer.setZIndex(1);
-    anlagenLayer.setZIndex(2);
+    // Layer Reihenfolge festlegen, 0 ist zu zuunterst
+    WMSwinterlandeskarteLayer.setZIndex(1);
+    pistenLayer.setZIndex(2);
+    anlagenLayer.setZIndex(3);
+    // Karte erstellen
     const newMap = new Map({
+      //Zoom to Extent Button hinzufügen
       controls: defaultControls().extend([
         new ZoomToExtent({
           extent: [2755375, 1164628, 2775625, 1195443],
@@ -238,18 +261,17 @@ const Navi = () => {
     };
   }, []);
 
-  const handleLoadVectorData = () => {
-    if (!map) return; // Check if map is initialized
-    console.log("clicked");
+  // Funktion um den Route zu laden
+  const handleLoadRoute = () => {
+    if (!map) return; // Wenn die Karte initialisiert ist
+    const newRouteLayer = routeLayer; // Route Layer
 
-    const newVectorLayer = vectorLayer; // Store the current vectorLayer reference
-
-    if (newVectorLayer) {
-      map.removeLayer(newVectorLayer);
-      console.log("newVectorLayer removed");
+    if (newRouteLayer) {
+      map.removeLayer(newRouteLayer); // Wenn bereits eine Route exisitiert, entfernen
     }
-
-    const newVectorSource = createVectorSource(
+    //WFS Anfrage  der View a_a_shortest_path, für alle Route mit Funktion aus  aus kartenWFS.js
+    // Parameter source und target
+    const newRouteSource = createVectorSource(
       "a_a_shortest_path&viewparams=source:" +
         nodeSource +
         ";target:" +
@@ -258,29 +280,32 @@ const Navi = () => {
       bboxStrategy
     );
 
-    const updatedVectorLayer = new VectorLayer({
-      source: newVectorSource,
+    // naviStyl Layer Styl aus kartenLayerStyle.js
+    const updatedRouteLayer = new VectorLayer({
+      source: newRouteSource,
       style: naviStyl,
     });
-
-    setVectorLayer(updatedVectorLayer);
-    updatedVectorLayer.setZIndex(2);
-    map.addLayer(updatedVectorLayer);
+    // Layer Reihenfolge festlegen
+    setVectorLayer(updatedRouteLayer);
+    updatedRouteLayer.setZIndex(4);
+    map.addLayer(updatedRouteLayer);
   };
-
+  // Wenn sich nodeSource oder nodeTarget ändern, wird die Route neu geladen
   useEffect(() => {
-    handleLoadVectorData();
+    handleLoadRoute();
   }, [nodeSource, nodeTarget]);
 
-  const resetMarker = () => {
+  // Funktion um Marker und Route zurückzusetzen vom Reset Button
+  const resetMarkerUndRoute = () => {
     handleHideStartMarker();
     handleHideZielMarker();
     handleRemoveVectorLayer();
   };
 
+  //Route Layer entfernen
   const handleRemoveVectorLayer = () => {
-    if (!map || !vectorLayer) return;
-    map.removeLayer(vectorLayer);
+    if (!map || !routeLayer) return;
+    map.removeLayer(routeLayer);
     setVectorLayer(null);
   };
 
@@ -325,7 +350,7 @@ const Navi = () => {
         >
           <Grid
             container
-            style={{ width: "95%", margin: "auto", marginTop: "1vh" }} // Adjust the width, center the grid, and add top margin
+            style={{ width: "95%", margin: "auto", marginTop: "1vh" }}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             justifyContent="center"
           >
@@ -344,7 +369,7 @@ const Navi = () => {
                 }}
                 button
                 onClick={startButton}
-                disabled={showStartMarker}
+                disabled={showStartMarker} // werden deaktiviert, wenn der Marker bereits gesetzt ist
               >
                 Start
               </Button>{" "}
@@ -364,7 +389,7 @@ const Navi = () => {
                 }}
                 button
                 onClick={zielButton}
-                disabled={showZielMarker}
+                disabled={showZielMarker} // werden deaktiviert, wenn der Marker bereits gesetzt ist
               >
                 Ziel
               </Button>
@@ -376,7 +401,7 @@ const Navi = () => {
                 color="p_red"
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
-                onClick={resetMarker} // This should call handleLoadVectorData function
+                onClick={resetMarkerUndRoute}
               >
                 Reset
               </Button>
