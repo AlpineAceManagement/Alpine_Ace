@@ -76,7 +76,7 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 
 - Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/] (https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Konstenlos. Die Abfrage der Daten erfolgt alle 30 min.
+- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Konstenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
 - Informationen über Skigebiet: Die Informationen der Skigebiete werden in Zukunft über ein Webscraping der Seite Bergfex gemacht.
 
