@@ -197,11 +197,15 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 ##### Funktion
 
 #TODO
+1. Dashboard Skigebiet
 
-1. Dashboard Lifte(Veag)
+
 2. Symbol Lawinenstufe
+Das Symbol der Lawinenstufe gibt auskunft über die akutelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehrer Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibiliserung der Skifahrer zu erhöhen. 
+
 3. Karte (mapping, Code beschreiben, Informationen Farbe, Hintergrundkarte)
 4. Buttons (Schaltflächen Menüs)
+
 
 #### Karte
 
@@ -498,6 +502,12 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
 ## Incoming Features
 
 <a id=features></a>
+
+mehrere Skigebiete
+bewertungen
+einstellungen
+benuzterkonto
+livetracking
 
 ## Contribution
 
