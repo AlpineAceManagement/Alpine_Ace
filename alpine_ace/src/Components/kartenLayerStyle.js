@@ -143,3 +143,12 @@ export function landesGrenzenStyle() {
     }),
   });
 }
+
+export function naviStyl() {
+  return new Style({
+    stroke: new Stroke({
+      color: "orange",
+      width: 4,
+    }),
+  });
+}

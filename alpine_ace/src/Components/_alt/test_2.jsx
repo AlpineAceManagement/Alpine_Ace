@@ -8,8 +8,8 @@ import { Vector as VectorLayer } from "ol/layer";
 import { Vector as VectorSource } from "ol/source";
 import { Icon, Style } from "ol/style";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
-import { createVectorSource } from "./kartenWFS";
-import { SwisstopoLayer } from "./swisstopoLayer.js";
+import { createVectorSource } from "../kartenWFS.js";
+import { SwisstopoLayer } from "../swisstopoLayer.js";
 import { Projection } from "ol/proj";
 import Stroke from "ol/style/Stroke";
 

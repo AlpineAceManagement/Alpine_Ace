@@ -9,16 +9,15 @@ import Feature from "ol/Feature";
 import { Translate } from "ol/interaction";
 import Collection from "ol/Collection";
 import { Projection } from "ol/proj";
-
-import GeoJSON from "ol/format/GeoJSON";
 import { bbox as bboxStrategy } from "ol/loadingstrategy";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import theme from "./theme";
+import theme from "../theme.js";
 import { ThemeProvider } from "@mui/material/styles";
-import { createVectorSource } from "./kartenWFS.js";
-import { SwisstopoLayer } from "./swisstopoLayer.js";
+import { createVectorSource } from "../kartenWFS.js";
+import { SwisstopoLayer } from "../swisstopoLayer.js";
+import { anlagenStyle, pistenStyle } from "../kartenLayerStyle.js";
 
 const Test = () => {
   const mapRef = useRef(null); // Reference to the map container
@@ -33,7 +32,7 @@ const Test = () => {
   const [naviVectorSource, setNaviVectorSource] = useState(null); // Declare naviVectorSource variable
   const [geoserverWFSNaviLayer, setGeoserverWFSNaviLayer] = useState(
     "Alpine_Ace:a_a_shortest_path"
-  ); // Declare geoserverWFSNaviLayer variable
+  );
 
   const handleButtonClick1 = () => {
     setShowMarker1(true);
@@ -119,6 +118,7 @@ const Test = () => {
     const vectorLayer = new VectorLayer({
       source: vectorSource,
     });
+    vectorLayer.setZIndex(5);
     map.addLayer(vectorLayer);
 
     // Add translate interaction
@@ -158,6 +158,7 @@ const Test = () => {
     const vectorLayer = new VectorLayer({
       source: vectorSource,
     });
+    vectorLayer.setZIndex(5);
     map.addLayer(vectorLayer);
 
     // Add translate interaction
@@ -212,11 +213,33 @@ const Test = () => {
   useEffect(() => {
     // Initialize map
     if (!mapRef.current) return;
+    //WFS Anfrage für alle Pisten
+    const pistenSource = createVectorSource("pisten", bboxStrategy);
+    //WFS Anfrage für alle Anlagen
+    const anlagenSource = createVectorSource("anlagen", bboxStrategy);
     const extent = [2420000, 130000, 2900000, 1350000];
     const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
+    const pistenLayer = new VectorLayer({
+      source: pistenSource,
+      style: pistenStyle,
+    });
+
+    // Anlagen Layer Styl aus kartenLayerStyle.js
+    const styleFunction = function (feature) {
+      return anlagenStyle(feature);
+    };
+    // Anlage Layer Styl aus kartenLayerStyle.js
+    const anlagenLayer = new VectorLayer({
+      source: anlagenSource,
+      style: styleFunction,
+    });
+
+    WMSwinterlandeskarteLayer.setZIndex(0);
+    pistenLayer.setZIndex(1);
+    anlagenLayer.setZIndex(2);
     const newMap = new Map({
-      layers: [WMSwinterlandeskarteLayer],
+      layers: [WMSwinterlandeskarteLayer, pistenLayer, anlagenLayer],
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1],
@@ -267,6 +290,7 @@ const Test = () => {
     });
 
     setVectorLayer(updatedVectorLayer);
+    updatedVectorLayer.setZIndex(2);
     map.addLayer(updatedVectorLayer);
   };
 

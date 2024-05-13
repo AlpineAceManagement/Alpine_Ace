@@ -9,13 +9,11 @@ import Statistiken from "./Components/Statistiken";
 import Navi from "./Components/Navi";
 import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
-import Test from "./Components/test";
-import KarteAufbau from "./Components/KarteAufbau";
+import Test from "./Components/_alt/test";
 import Graph from "./Components/Graph";
-import Weather from "./Components/Wetter copy";
 import Einstellungen from "./Components/Einstellungen";
-import Test_2 from "./Components/test_2";
-import Test_3 from "./Components/test_3";
+import Test_2 from "./Components/_alt/test_2";
+import Test_3 from "./Components/_alt/test_3";
 import GPX_Viewer from "./Components/GPX_Viewer";
 import Kopfzeile_Statistiken from "./Components/Kopfzeile_Statistiken";
 import Restaurant_Viewer from "./Components/Restaurant_Viewer";
@@ -107,27 +105,7 @@ function App() {
               </>
             }
           />
-          <Route
-            exact
-            path="/test"
-            element={
-              <>
-                <Kopfzeile />
-                <Test />
-              </>
-            }
-          />
 
-          <Route
-            exact
-            path="/test_2"
-            element={
-              <>
-                <Kopfzeile />
-                <Test_2 />
-              </>
-            }
-          />
           <Route
             exact
             path="/Einstellungen"
@@ -138,16 +116,7 @@ function App() {
               </>
             }
           />
-          <Route
-            exact
-            path="/test_3"
-            element={
-              <>
-                <Kopfzeile />
-                <Test_3 />
-              </>
-            }
-          />
+
           <Route
             exact
             path="/GPX_Viewer"
