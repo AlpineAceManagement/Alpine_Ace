@@ -3,27 +3,24 @@ import requests
 import psycopg2
 import time
 import logging
-import csv
 import config
 import schedule
-import os
 import json
 
-# Configure logging
+
+# Protokollierung konfigurieren
 logging.basicConfig(filename='avalanche_bulletin_script.log', 
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Request to API
+# Datenbankverbindung aufbauen
 
 api_zone = f"https://aws.slf.ch/api/bulletin/caaml/DE/geojson"
 api_bulletins = "https://aws.slf.ch/api/bulletin/caaml/de/json"
 
 
-# Get regions from API Zone
 
 def get_regions():
-    """Fetches region data from the API zone endpoint"""
 
     regions = []
 
@@ -50,17 +47,17 @@ def get_regions():
 def store_geometries(region):
     try:
 
-        # Connect to the database
+        # Verbindung zu Datenbank
         conn = psycopg2.connect(**config.db_config)
         cursor = conn.cursor()
 
-        # Convert geometry dictionary to GeoJSON string
+        # Geometrie in GeoJSON-String konvertieren
         geometry_json = json.dumps(region["geometry"])
         region_id = region["region_id"]
 
         cursor.execute(
             '''INSERT INTO BULLETINS (B_GEOMETRIE, B_REGION_ID)
-                VALUES (ST_Transform(ST_SetSRID(ST_GeomFromGeoJSON(%s), 4326), 2056), %s)''', #Geometry are ocnvertet from 4326 to 2056
+                VALUES (ST_Transform(ST_SetSRID(ST_GeomFromGeoJSON(%s), 4326), 2056), %s)''', #Geometrie in LV95 transformieren
                 (geometry_json, region_id)
         )
         conn.commit()
@@ -84,13 +81,13 @@ def get_and_process_bulletins():
 
                 if regions and bulletin_id:
                     first_region = regions[0]
-                    region_id = first_region['regionID']  # Get region_id
+                    region_id = first_region['regionID'] 
 
                     logging.info(f"Processing bulletin {bulletin_id} for region: {first_region}")
 
                     for rating in danger_ratings:
                         main_value = rating['mainValue']
-                        # ... any other fields you want to extract from bulletin ...
+                        
 
                         try:
                             with psycopg2.connect(**config.db_config) as conn:
@@ -113,7 +110,7 @@ def get_and_process_bulletins():
 
 def main():
 
-    # Truncate the table before fetching new data
+    # Tabelle Löschen vor dem Abrufen neuer Daten
     try:
         with psycopg2.connect(**config.db_config) as conn:
             with conn.cursor() as cur:
@@ -126,7 +123,6 @@ def main():
     get_and_process_bulletins()
 
 main()
-#Schedule the script for every 12 hours
 schedule.every(12).hours.do(main)
 
 while True:
