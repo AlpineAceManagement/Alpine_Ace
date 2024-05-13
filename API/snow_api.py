@@ -1,15 +1,14 @@
 '''import relevant libraries'''
 import requests
 import psycopg2
-import json
 import time
 import logging
 import csv
 import config
-import schedule
 
 
-# Extrac Station from statio_daten.csv
+
+# Station aus statio_daten.csv extrahieren
 
 def extract_station(csv_file):
     station = []
@@ -19,15 +18,15 @@ def extract_station(csv_file):
             station.append(row[0])
     return station
 
-csv_file = "station_daten.csv" 
+csv_file = "API/station_daten.csv" 
 station = extract_station(csv_file)
 
-# Configure logging
+# Protokollierung konfigurieren
 logging.basicConfig(filename="snow_measuremnts.log",
                     level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-#  Connect to the database
+#  Verbindung zu Datenbank
 def fetch_and_store_measurement(station_code):
     api_url = f"https://measurement-api.slf.ch/public/api/imis/station/{station_code}/measurements"
     try:
@@ -36,8 +35,8 @@ def fetch_and_store_measurement(station_code):
 
         data = response.json()  
         item= len(data)
-        # Extract the last measurement
-        last_measurement = data[item -1]  # Zero-based indexing
+        # Extrahieren der letzten Messung
+        last_measurement = data[item -1] 
 
         with psycopg2.connect(**config.db_config) as conn:
             with conn.cursor() as cursor:
@@ -66,5 +65,5 @@ if __name__ == '__main__':
     while True:
         for station_code in station_codes:
             fetch_and_store_measurement(station_code)
-        time.sleep(30 * 60)  # Sleep for 30 minutes 
+        time.sleep(30 * 60)  # Schlafen für 30 min
 
