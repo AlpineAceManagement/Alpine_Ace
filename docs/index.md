@@ -27,30 +27,32 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
         - [Fehler](#fehler)
     - [Frontend](#frontend)
   - [Funktionen](#funktionen)
-    - [Kopfzeile?](#kopfzeile)
+    - [Kopfzeile](#kopfzeile)
+      - [Funktion](#funktion)
     - [Hauptmenü](#hauptmenü)
       - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
       - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
-      - [Funktion](#funktion)
+      - [Funktion](#funktion-1)
     - [Karte](#karte)
       - [Skigebiete](#skigebiete)
       - [Pisten](#pisten)
       - [Anlagen](#anlagen)
       - [Parkplätze](#parkplätze)
       - [ÖV-Haltestellen](#öv-haltestellen)
+      - [Funktion](#funktion-2)
     - [Wetter](#wetter)
     - [Statistiken](#statistiken)
       - [Konzept](#konzept)
-      - [Funktion](#funktion-1)
+      - [Funktion](#funktion-3)
     - [Navi](#navi)
       - [Konzept](#konzept-1)
       - [Aufbereitung der Daten](#aufbereitung-der-daten)
       - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
       - [Berechnen des Routings](#berechnen-des-routings)
       - [SQL views Routing](#sql-views-routing)
-      - [Funktion](#funktion-2)
+      - [Funktion](#funktion-4)
     - [Restaurant](#restaurant)
-      - [Funktion](#funktion-3)
+      - [Funktion](#funktion-5)
   - [Incoming Features](#incoming-features)
   - [Contribution](#contribution)
 
@@ -76,11 +78,11 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 
 - Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Konstenlos. Die Abfrage der Daten erfolgt alle 30 min.
+- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
 - Informationen über Skigebiet: Die Informationen der Skigebiete werden in Zukunft über ein Webscraping der Seite Bergfex gemacht.
 
-Damit der Datenbezug reibungslos läuft, werden die Scripts für den Datenbezug über eine Datei **main.py** gesteuert. Diese Datei läuft im Hinergrund und ruft die einzelnen Scripts in den oben erwähntne Zeitinervallen auf um sie auszuführen.
+Damit der Datenbezug reibungslos läuft, werden die Scripts für den Datenbezug über eine Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Scripts in den oben erwähnten Zeitintervallen auf um sie auszuführen.
 
 #### Datenbank
 
@@ -102,11 +104,11 @@ Während des Betriebes der Plattform müssen verschiedene Systeme Lese- oder Sch
 
 Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welchem die Verbindungsinformationen angegeben sind:
 
-- Python: `API\config.py`
+- **Python:** `API\config.py`
 
-- JS: `alpine_ace\src\DB\config.js`
+- **JS:** `alpine_ace\src\DB\config.js`
 
-- FME: Bei FME muss unter ` Tools ->  FME Options -> Database Connections` die Datenbankverbindung zum GeoServer angepasst werden.
+- **FME:** Bei FME muss unter ` Tools ->  FME Options -> Database Connections` die Datenbankverbindung zum GeoServer angepasst werden.
 
 ##### Datenbankschema
 
@@ -170,12 +172,13 @@ Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installa
 
 <a id=funktionen></a>
 
-#### Kopfzeile?
+#### Kopfzeile
 
-#TODO
+Die Kopfzeile ist in Menü und Untermenü gleich aufgebaut. Neben dem Logo in der Mitte, befindet sich links die Zurück-Pfeil und rechts das Zahnrad für die Einstellungen. Pfeil und Zahnrad sind aus der [Symbol Bibliothek von MUI](https://mui.com/material-ui/material-icons/).
 
-1. Beschreibung wie funktioniert,
-2. Welche Menüs eigene Kopfzeilen haben
+##### Funktion
+
+Beim anklicken des Symbols wird mittels eines Links auf das entsprechende Menü navigiert. In der Datei `App.jsx` ist die Kopfzeilen über jeder Menü Komponente. Einzig die Menüs Restaurant und Statistiken, welche über Untermenüs verfügen, haben eine eigene abgeänderte Kopfziele. Dort zeigt der Link auf das vorherig Menü.
 
 #### Hauptmenü
 
@@ -246,7 +249,7 @@ Die Daten der Pisten wurden von der Platform OpenSnowMap bezogen. Die Platform O
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Linien gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Linien wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
 Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench wird zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilines werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#TODO Datenbeschreibung DHM25 erstellen)
-abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess [Routing_Vorbereitung](#TODO Prozess beschreiben)
+abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess [Routing_geoserver.fmw](#TODO Prozess beschreiben)
 verwendet.
 
 ##### Anlagen
@@ -283,6 +286,10 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jede Haltestelle mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
+##### Funktion
+
+Mi
+
 #### Wetter
 
 Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehören die aktuelle Temperatur, Bewölkungsgrad, Schneehöhe, Neuschnee, Windgeschwindigkeit und Windrichtung. Letztere wird durch einen Pfeil signalisiert der sich in entsprechende Richtung dreht.
@@ -303,7 +310,7 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 ##### Funktion
 
-(#TODO) Theo Alle Vega Statistiken Sachen erklären
+(#TODO) Theo Alle Balken Diagramm Statistiken erklären
 
 Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
 
@@ -336,7 +343,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
 
    Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
 
-3. Die zurückgebenen Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
+3. Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
 #### Navi
 
@@ -493,7 +500,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
     v.Restaurant_ID= %Restaurant_ID%
    ```
    Der Parameter `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
-6. Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften zugwiesen, so wie das Icon. Die weiteren Informationen vom Feature extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
+6. Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
 

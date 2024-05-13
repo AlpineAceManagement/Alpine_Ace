@@ -7,12 +7,12 @@ import VectorLayer from "ol/layer/Vector";
 import { ThemeProvider } from "@mui/material/styles";
 import { Projection } from "ol/proj";
 import Box from "@mui/material/Box";
-import theme from "./theme";
+import theme from "./theme.js";
 import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 import { restaurantStyle } from "./kartenLayerStyle.js";
 
-const Restaurant_Viewer = () => {
+const RestaurantViewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
   const [map, setMap] = useState(null);
   const [Restaurant_ID, setRestaurant_ID] = useState(1);
@@ -185,4 +185,4 @@ const Restaurant_Viewer = () => {
   );
 };
 
-export default Restaurant_Viewer;
+export default RestaurantViewer;

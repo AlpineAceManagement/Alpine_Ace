@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Hauptmenu from "./Components/Hauptmenu";
 import Karte from "./Components/Karte";
@@ -9,15 +9,12 @@ import Statistiken from "./Components/Statistiken";
 import Navi from "./Components/Navi";
 import Bewertungen from "./Components/Bewertungen";
 import Restaurant from "./Components/Restaurant";
-import Test from "./Components/_alt/test";
 import Graph from "./Components/Graph";
 import Einstellungen from "./Components/Einstellungen";
-import Test_2 from "./Components/_alt/test_2";
-import Test_3 from "./Components/_alt/test_3";
 import GPX_Viewer from "./Components/GPX_Viewer";
-import Kopfzeile_Statistiken from "./Components/Kopfzeile_Statistiken";
-import Restaurant_Viewer from "./Components/Restaurant_Viewer";
-import Kopfzeile_Restaurant from "./Components/Kopfzeile_Restaurant";
+import StatistikenKopfzeile from "./Components/StatistikenKopfzeile";
+import RestaurantViewer from "./Components/RestaurantViewer";
+import RestaurantKopfzeile from "./Components/RestaurantKopfzeile";
 
 function App() {
   return (
@@ -90,8 +87,8 @@ function App() {
             path="/Restaurant_Viewer"
             element={
               <>
-                <Kopfzeile_Restaurant />
-                <Restaurant_Viewer />
+                <RestaurantKopfzeile />
+                <RestaurantViewer />
               </>
             }
           />
@@ -122,7 +119,7 @@ function App() {
             path="/GPX_Viewer"
             element={
               <>
-                <Kopfzeile_Statistiken />
+                <StatistikenKopfzeile />
                 <GPX_Viewer />
               </>
             }

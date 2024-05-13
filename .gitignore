@@ -5,4 +5,8 @@ alpine_ace/node_modules
 alpine_ace/src/DB/config.js
 DB_PG/ASCII_Hoehenmodell/
 GPX_Files
-API\config.py
+API/config.py
+API/avalanche_bulletin_script.log
+API/weather_data_updates.log
+API/avalanche_bulletin_script.log
+API/snow_measuremnts.log

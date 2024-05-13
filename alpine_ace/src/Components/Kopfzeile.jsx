@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import SettingsIcon from "@mui/icons-material/Settings";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"; //Icon für Zurück
+import SettingsIcon from "@mui/icons-material/Settings"; //Icon für Einstellungen
 import Grid from "@mui/material/Grid";
 
 const Kopfzeile = () => {
@@ -16,7 +16,9 @@ const Kopfzeile = () => {
         <Grid>
           <item>
             {" "}
+            {/* Link zum Haupmenü*/}
             <Link to="/" className="Kopfzeile-link">
+              {" "}
               <ArrowBackIosNewIcon
                 className="zurueck-icon"
                 style={{ fontSize: "2rem" }}
@@ -28,7 +30,7 @@ const Kopfzeile = () => {
           <item>
             {" "}
             <img
-              src={require("../logo/logo.jpg")}
+              src={require("../logo/logo.jpg")} //Logo.jpg aus dem Ordner Logo beziehen
               alt=""
               style={{ maxWidth: "10vh", display: "block", margin: "0 auto" }}
             />
@@ -37,7 +39,9 @@ const Kopfzeile = () => {
         <Grid>
           <item>
             {" "}
+            {/* Link zum Mneü Einstellungen*/}
             <Link to="/Einstellungen" className="Kopfzeile-link">
+              {" "}
               <SettingsIcon
                 className="zurueck-icon"
                 style={{ fontSize: "2rem" }}

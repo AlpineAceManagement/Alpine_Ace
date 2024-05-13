@@ -4,7 +4,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Grid from "@mui/material/Grid";
 
-const Kopfzeile_Statistiken = () => {
+const RestaurantKopfzeile = () => {
   return (
     <div className="Kopfzeile">
       <Grid
@@ -16,7 +16,7 @@ const Kopfzeile_Statistiken = () => {
         <Grid>
           <item>
             {" "}
-            <Link to="/Statistiken" className="Kopfzeile-link">
+            <Link to="/Restaurant" className="Kopfzeile-link">
               <ArrowBackIosNewIcon
                 className="zurueck-icon"
                 style={{ fontSize: "2rem" }}
@@ -50,4 +50,4 @@ const Kopfzeile_Statistiken = () => {
   );
 };
 
-export default Kopfzeile_Statistiken;
+export default RestaurantKopfzeile;
