@@ -102,11 +102,11 @@ Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **c
 
 ```python
 db_config = {
-    'host': 'host', #Hostname of DB
-    'port': 'port', #Port of DB
-    'database': 'database', #Name fo DB
-    'user': 'user', #Username for connection to DB
-    'password': 'password'  #Passwort for usernamen
+    'host': 'host', #Hostname der DB
+    'port': 'port', #Port der DB
+    'database': 'database', #Name der DB
+    'user': 'user', #Username für die Verbindung zur DB
+    'password': 'password'  #Passwort des Username
 }
 ```
 
@@ -622,7 +622,7 @@ Reguläre Ausdruck-Validierung
 Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt. werden. Im File muss dabei der Pfad zum gpx file angegenben werden:
 
 ```python
-# upload gpx-file
+# GPX-Datei hochladen
 path = "path/to/gpx"
 ```
 
