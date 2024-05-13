@@ -13,18 +13,17 @@ import numpy as np
 import logging
 import config
 
-# Configure logging
+# Konfiguration der Protokollierung
 logging.basicConfig(filename="weather_data_updates.log",
                     level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Setup the Open-Meteo API client with cache and retry on error
+# Einrichten des Open-Meteo-API-Clients mit Cache und Wiederholung im Fehlerfall
 cache_session = requests_cache.CachedSession('.cache', expire_after = 15*60)
 retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
 openmeteo = openmeteo_requests.Client(session = retry_session)
 
-# Make sure all required weather variables are listed here
-# The order of variables in hourly or daily is important to assign them correctly below
+# Stell sicher, dass alle erforderlichen Wettervariablen hier aufgeführt sind. Die Reihenfolge der Variablen in stündlich oder täglich ist wichtig, um sie richtig zuzuordnen
 url = "https://api.open-meteo.com/v1/forecast"
 params = {
 	"latitude": 46.72,
@@ -35,7 +34,7 @@ params = {
 }
 responses = openmeteo.weather_api(url, params=params)
 
-# Process first location. Add a for-loop for multiple locations or weather models
+# Verarbeitung des ersten Orts. Hinzufügen einer for-Schleife für mehrere Orte oder Wettermodelle
 response = responses[0]
 print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
 print(f"Elevation {response.Elevation()} m asl")
@@ -80,7 +79,7 @@ def convert_wind_direction(degrees):
 
 
 def save_current_weather():
-    # Current values. The order of variables needs to be the same as requested.
+    # Aktuelle Werte. Die Reihenfolge der Variablen muss mit der geforderten übereinstimmen.
     current = response.Current()
     current_temperature_2m = current.Variables(0).Value()
     current_precipitation = current.Variables(1).Value()
@@ -107,22 +106,12 @@ def save_current_weather():
     station_id= "ROT3"
     
     try:
-        # Connect to the database
+        # Verbindung zu Datenbank
 
-        # conn = psycopg2.connect(
-        #     dbname= "AlpineACE",    # DB Name
-        #     user= "postgres",       # Username
-        #     password= "TeamLH44",   # Password
-        #     host= "localhost",      # Host adress
-        #     port="5432"             # Port number
-        # )
         conn = psycopg2.connect(**config.db_config)
-        # Create a cursor object
         cur = conn.cursor()
 
-        
-
-        # Insert the current weather data into the table
+        # Einfügen der aktuellen Wetterdaten in die Tabelle
         cur.execute(
             "Insert INTO messdaten (md_timestamp, md_temperatur, md_niederschlag, md_wetter, md_druck, md_windgeschwindigkeit, md_windrichtung, station_id)VALUES(%s, %s, %s, %s, %s, %s,%s,%s)",
             (
@@ -137,7 +126,7 @@ def save_current_weather():
 
             )
         )   
-        # Commit the changes and close the
+        # Änderung bestätigen und Verbindung schliessen
         conn.commit()
         cur.close()
         conn.close()
@@ -147,7 +136,7 @@ def save_current_weather():
         logging.error(f"Database error while saving current weather: {e}")
 
 
-# Process hourly data. The order of variables needs to be the same as requested.
+# Verarbeiten Sie stündliche Daten. Die Reihenfolge der Variablen muss mit der angeforderten Reihenfolge übereinstimmen.
 
 def save_hourly_forecast():
 
@@ -180,40 +169,35 @@ def save_hourly_forecast():
     hourly_data["pg_cloud_cover"] = hourly_cloud_cover
     hourly_data["station_id"] = station_id
     
-    # Convert the weather code to a pandas Series
+    # Umwandlung des Wettercodes in eine Pandas-Serie
     hourly_data["pg_wetter"] = pd.Series(hourly_data["pg_wetter"])
-    # Convert the weather code to a string using the weather_code_map
+    # Umwandlung des Wettercodes in eine Zeichenkette mit Hilfe der weather_code_map
     hourly_data["pg_wetter"] = hourly_data["pg_wetter"].map(weather_codes)
 
     
 
     try:
-        # Connect to database
+        # Verbindung zu Datenbank
         conn = psycopg2.connect(**config.db_config)
 
-        # Create a cursor object
         cur = conn.cursor()
 
-        # Clear existing data from the table
+        # Vorhandene Tabelle löschen
         cur.execute("TRUNCATE TABLE prognose")
 
-        # Create a temporary DataFrame for efficient insertion
         df = pd.DataFrame(hourly_data)
         # Ausgabe der Daten in eine CSV-Datei, falls gewünscht
         #df.to_csv('hourly_forecast.csv', mode='w', header=not os.path.exists('hourly_forecast.csv'))
 
-        # Use executemany with tuples for efficiency:
         tuples_list = [tuple(x) for x in df.to_numpy()]
-        # Insert the hourly forecast data into the table
+        # Einfügen der Werte in die Tabelle
         cur.executemany(
             "INSERT INTO prognose (pg_datum,pg_wetter, pg_windgeschwindigkeit, pg_windrichtung,pg_niederschlag, pg_niederschlagswahrscheinlichkeit, pg_druck,  pg_temperatur,pg_cloud_cover, station_id ) VALUES ( %s,%s, %s, %s, %s, %s, %s, %s, %s, %s)",
             tuples_list
         )
 
-        # Commit the transaction
+        # Änderung bestätigen und Verbindung schliessen
         conn.commit()
-
-        # Close the cursor and the connection
         cur.close()
         conn.close()
         logging.info("Hourly forecast data saved to database.")
@@ -224,7 +208,7 @@ def save_hourly_forecast():
 save_current_weather()
 save_hourly_forecast()
 
-# Schedule updates every 15 minutes
+
 schedule.every(15).minutes.do(save_current_weather)
 schedule.every().day.at("00:00").do(save_hourly_forecast)
 
