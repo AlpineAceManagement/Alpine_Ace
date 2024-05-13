@@ -9,7 +9,7 @@ Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Sk
 - Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
 - Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
 
-## Installation
+## Requirements
 
 ### Repository lokal klonen
 
@@ -57,17 +57,13 @@ cd path/to/workspace
 conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
 ```
 
-#FRAGE muss nicht no activate conda angegeben werden?
-
 ### FME-Requirements
 
 FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der Webseite von [Safe Software heruntergeladen](https://fme.safe.com/downloads/) werden. Die Software ist Lizenzpflichtig.
-#FRAGE gehört die Info ins License? ich denke nicht da es hier um die Software geht
 
 ### QGIS-Requirements
 
 QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS heruntergeladen](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
-#FRAGE gehört die Info ins License? ich denke nicht da es hier um die Software geht
 
 ### Node-Requirements
 
@@ -93,37 +89,25 @@ npm install
 ```python
 npm start
 ```
-
+## Installation
 ### Backend
 
-Das Backend besteht aus drei Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis) und einem GeoServer der die Geodaten zur Verfügung stellt.
-
-#FRAGE fehlt hier nicht ein weiterer Teil? Den Node Server? Oder gehört dieser zum Datenbezugsteil? Wenn ja muss hinter Python auf JS stehen.
+Das Backend besteht aus vier Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis), einem Node-Sever und einem GeoServer der die Geodaten zur Verfügung stellt.
 
 #### Postgres inkl. Postgis
 
-Das Schema der DB findet sich unter _Backend/DB_PG._ Schema in pgAdmin kopieren und ausführen.
-#FRAGE \_Backend? korrekt wäre DB_PG/geoserver_DB_erstellen.txt
+Das Schema der DB findet sich unter _DB_PG/geoserver_DB_erstellen.txt._ Schema in pgAdmin kopieren und ausführen.
 
-Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden.
-
-#FRAGE noch klarstellen was eingetragen werden muss?
-
-#### Node-Server
-
-#FRAGE Ist die Reihenfolge so sinnvoll? Wäre es nicht besser zuerst die Datenbank zu erstellen und nachher die Daten mit dem Node Server zu beziehen?
-
-1. neues Terminal öffnen -> als GitBash
-2. Verbindungsaufbau zum Node Server
+Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden. Es müssen folgende Parameter geändert werden:
 
 ```python
-cd alpine_ace/src/DB
-```
-
-3. Node Server starten
-
-```python
-node connect_db.js
+db_config = {
+    'host': 'host', #Hostname of DB
+    'port': 'port', #Port of DB
+    'database': 'database', #Name fo DB
+    'user': 'user', #Username for connection to DB
+    'password': 'password'  #Passwort for usernamen
+}
 ```
 
 ## Datenbank
@@ -195,6 +179,21 @@ cd API
 
 ```python
 python main.py
+```
+
+#### Node-Server
+
+1. neues Terminal öffnen -> als GitBash
+2. Verbindungsaufbau zum Node Server
+
+```python
+cd alpine_ace/src/DB
+```
+
+3. Node Server starten
+
+```python
+node connect_db.js
 ```
 
 ### GeoServer
