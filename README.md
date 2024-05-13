@@ -619,7 +619,7 @@ Reguläre Ausdruck-Validierung
 
 ### GPX-Daten laden
 
-Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt. werden. Im File muss dabei der Pfad zum gpx file angegenben werden:
+Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner *API* ausgeführt werden. Im File muss dabei der Pfad zur GPX-Datei angegenben werden:
 
 ```python
 # GPX-Datei hochladen
