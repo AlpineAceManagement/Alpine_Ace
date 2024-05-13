@@ -201,11 +201,15 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 ##### Funktion
 
 #TODO
+1. Dashboard Skigebiet
+Die Beiden Diagramme mit Anzahl offenen Pisten und Anlagen soll die akutelle Informationen des Skigebiets wiederspiegeln. Momentan sind die Diagramme noch mit "Fake" Daten befüllt. Zu einem Später Zeitpunkt sollen die Daten direkt von den Skigebieten bezogen werden oder zumindest von dessen Websiten. Die Diagramme werden mit der Vega-Bibliothekt dargestellt.
 
-1. Dashboard Lifte(Veag)
 2. Symbol Lawinenstufe
+Das Symbol der Lawinenstufe gibt auskunft über die akutelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehrer Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibiliserung der Skifahrer zu erhöhen. Die Daten werden dabei direkt beim Institut für Schnee und Lawinenforschung bezogen und werden alle 12 Stunden automatisch aktualisiert.
+
 3. Karte (mapping, Code beschreiben, Informationen Farbe, Hintergrundkarte)
 4. Buttons (Schaltflächen Menüs)
+
 
 #### Karte
 
@@ -520,6 +524,12 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
 SelectedFeature Zoomstufe verbessern
 
 <a id=features></a>
+
+mehrere Skigebiete
+bewertungen
+einstellungen
+benuzterkonto
+livetracking
 
 ## Contribution
 
