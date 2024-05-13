@@ -14,4 +14,4 @@ if __name__ == '__main__':
         start_script(script)
 
     while True:
-        time.sleep(60)  # Adjust the sleep time if necessary
+        time.sleep(60)  # Passen Sie die Schlafdauer gegebenenfalls an
