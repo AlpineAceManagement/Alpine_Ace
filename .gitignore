@@ -3,6 +3,6 @@
 node_modules
 alpine_ace/node_modules
 alpine_ace/src/DB/config.js
-API/config.py
 DB_PG/ASCII_Hoehenmodell/
-
+GPX_Files
+API\config.py
