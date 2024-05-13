@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS a_a_routing_noded CASCADE;
 DROP TABLE IF EXISTS a_a_routing_noded_vertices_pgr CASCADE;
 DROP TABLE IF EXISTS a_a_anlage_routing_noded CASCADE;
-DROP TABLE IF EXISTS a_a_anlage_routing_noded_vertices_pgr CASCADE;
 
 SELECT pgr_nodeNetwork ('a_a_routing',0.1);
 SELECT pgr_nodeNetwork ('a_a_anlage_routing',0.1);

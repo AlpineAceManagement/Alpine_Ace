@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Map from "ol/Map";
 import View from "ol/View";
-import TileLayer from "ol/layer/Tile";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 import { Icon, Stroke, Style } from "ol/style";
@@ -17,6 +16,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/material/styles";
+import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 
 const Test = () => {
@@ -141,6 +141,7 @@ const Test = () => {
 
   const fetchDataForMarker1 = (coordinate) => {
     const [x, y] = coordinate;
+
     const url = `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
     // Make a request to the generated URL
     fetch(url)
@@ -181,28 +182,17 @@ const Test = () => {
       // WMS Winterlandeskarte holen mit der Funktion SwisstopoLayer aus dem File swisstopoLayer.js
       const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
-      const naviVectorSource = new VectorSource({
-        format: new GeoJSON(),
-        url: function (extent) {
-          return (
-            "http://localhost:8080/geoserver/wfs?service=WFS&" +
-            "version=1.1.0&request=GetFeature&typename=" +
-            "Alpine_Ace:a_a_shortest_path" +
-            "&viewparams=source:" +
-            nodeSource +
-            ";target:" +
-            nodeTarget +
-            "&outputFormat=application/json"
-          );
-        },
-        strategy: bboxStrategy,
-        onError: function (error) {
-          console.error("Error fetching WFS line data:", error);
-        },
-      });
+      const naviAnfrageSource = createVectorSource(
+        "a_a_shortest_path&viewparams=source:" +
+          nodeSource +
+          ";target:" +
+          nodeTarget +
+          ";",
+        bboxStrategy
+      );
 
       const naviVectorLayer = new VectorLayer({
-        source: naviVectorSource,
+        source: naviAnfrageSource,
         style: new Style({
           stroke: new Stroke({
             color: "orange",
@@ -329,11 +319,11 @@ const Test = () => {
                 fullWidth
                 sx={{ fontSize: "2.3vh" }}
                 onClick={() => {
-                  handleHideMarker1();
-                  handleHideMarker2();
+                  // handleHideMarker1();
+                  // handleHideMarker2();
                 }}
               >
-                reset
+                add Layer
               </Button>
             </Grid>
           </Grid>
