@@ -1,0 +1,49 @@
+2024-05-07 22:41:33,667 - INFO - Processing bulletin c59e8fc4-65e1-4b18-b8a7-e8abdd0ae93b for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 22:41:33,738 - INFO - Processing bulletin 8081380f-6f29-4dac-9214-29ad0d0dc64e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-07 22:41:33,786 - INFO - Processing bulletin d7546501-d0ba-4de8-be2a-99ab23a366d3 for region: {'name': 'Binntal', 'regionID': 'CH-4242'}
+2024-05-07 22:41:33,842 - INFO - Processing bulletin 46a0322b-a061-4e8e-a162-fe32772ee3e8 for region: {'name': 'Val Sumvitg', 'regionID': 'CH-5215'}
+2024-05-07 22:41:33,994 - INFO - Processing bulletin 538de5bc-9c95-4524-8565-e0d381b60ec0 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-07 22:41:34,045 - INFO - Processing bulletin 9d9efd63-db1b-4818-875d-1f6a2c3cd9b7 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 22:41:34,204 - INFO - Processing bulletin 44eaee47-1c4e-44a9-98eb-b74791d94219 for region: {'name': 'Waadtländer Voralpen', 'regionID': 'CH-1111'}
+2024-05-07 22:41:34,245 - INFO - Processing bulletin d6b4d094-e568-465d-92d3-48afdb3a84fb for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-07 22:41:34,287 - INFO - Processing bulletin d36c1ec3-cf95-4885-8d5c-92369ba76968 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 22:41:34,336 - INFO - Processing bulletin 4df198a0-4a70-4968-8e27-8da8fd752d5b for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 22:42:24,676 - INFO - Processing bulletin c59e8fc4-65e1-4b18-b8a7-e8abdd0ae93b for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 22:42:24,731 - INFO - Processing bulletin 8081380f-6f29-4dac-9214-29ad0d0dc64e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-07 22:42:24,776 - INFO - Processing bulletin d7546501-d0ba-4de8-be2a-99ab23a366d3 for region: {'name': 'Binntal', 'regionID': 'CH-4242'}
+2024-05-07 22:42:24,823 - INFO - Processing bulletin 46a0322b-a061-4e8e-a162-fe32772ee3e8 for region: {'name': 'Val Sumvitg', 'regionID': 'CH-5215'}
+2024-05-07 22:42:24,966 - INFO - Processing bulletin 538de5bc-9c95-4524-8565-e0d381b60ec0 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-07 22:42:25,002 - INFO - Processing bulletin 9d9efd63-db1b-4818-875d-1f6a2c3cd9b7 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 22:42:25,054 - INFO - Processing bulletin 44eaee47-1c4e-44a9-98eb-b74791d94219 for region: {'name': 'Waadtländer Voralpen', 'regionID': 'CH-1111'}
+2024-05-07 22:42:25,097 - INFO - Processing bulletin d6b4d094-e568-465d-92d3-48afdb3a84fb for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-07 22:42:25,136 - INFO - Processing bulletin d36c1ec3-cf95-4885-8d5c-92369ba76968 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 22:42:25,197 - INFO - Processing bulletin 4df198a0-4a70-4968-8e27-8da8fd752d5b for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 22:43:36,752 - INFO - Processing bulletin c59e8fc4-65e1-4b18-b8a7-e8abdd0ae93b for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 22:43:36,803 - INFO - Processing bulletin 8081380f-6f29-4dac-9214-29ad0d0dc64e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-07 22:43:36,850 - INFO - Processing bulletin d7546501-d0ba-4de8-be2a-99ab23a366d3 for region: {'name': 'Binntal', 'regionID': 'CH-4242'}
+2024-05-07 22:43:36,911 - INFO - Processing bulletin 46a0322b-a061-4e8e-a162-fe32772ee3e8 for region: {'name': 'Val Sumvitg', 'regionID': 'CH-5215'}
+2024-05-07 22:43:36,960 - INFO - Processing bulletin 538de5bc-9c95-4524-8565-e0d381b60ec0 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-07 22:43:37,027 - INFO - Processing bulletin 9d9efd63-db1b-4818-875d-1f6a2c3cd9b7 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 22:43:37,079 - INFO - Processing bulletin 44eaee47-1c4e-44a9-98eb-b74791d94219 for region: {'name': 'Waadtländer Voralpen', 'regionID': 'CH-1111'}
+2024-05-07 22:43:37,238 - INFO - Processing bulletin d6b4d094-e568-465d-92d3-48afdb3a84fb for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-07 22:43:37,287 - INFO - Processing bulletin d36c1ec3-cf95-4885-8d5c-92369ba76968 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 22:43:37,347 - INFO - Processing bulletin 4df198a0-4a70-4968-8e27-8da8fd752d5b for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-07 22:45:32,055 - INFO - Processing bulletin c59e8fc4-65e1-4b18-b8a7-e8abdd0ae93b for region: {'name': 'Gadmertal', 'regionID': 'CH-1246'}
+2024-05-07 22:45:32,236 - INFO - Processing bulletin 8081380f-6f29-4dac-9214-29ad0d0dc64e for region: {'name': 'südliches Obergoms', 'regionID': 'CH-4244'}
+2024-05-07 22:45:32,275 - INFO - Processing bulletin d7546501-d0ba-4de8-be2a-99ab23a366d3 for region: {'name': 'Binntal', 'regionID': 'CH-4242'}
+2024-05-07 22:45:32,325 - INFO - Processing bulletin 46a0322b-a061-4e8e-a162-fe32772ee3e8 for region: {'name': 'Val Sumvitg', 'regionID': 'CH-5215'}
+2024-05-07 22:45:32,366 - INFO - Processing bulletin 538de5bc-9c95-4524-8565-e0d381b60ec0 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-07 22:45:32,408 - INFO - Processing bulletin 9d9efd63-db1b-4818-875d-1f6a2c3cd9b7 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-07 22:45:32,467 - INFO - Processing bulletin 44eaee47-1c4e-44a9-98eb-b74791d94219 for region: {'name': 'Waadtländer Voralpen', 'regionID': 'CH-1111'}
+2024-05-07 22:45:32,510 - INFO - Processing bulletin d6b4d094-e568-465d-92d3-48afdb3a84fb for region: {'name': 'oberes Puschlav', 'regionID': 'CH-7221'}
+2024-05-07 22:45:32,554 - INFO - Processing bulletin d36c1ec3-cf95-4885-8d5c-92369ba76968 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-07 22:45:32,622 - INFO - Processing bulletin 4df198a0-4a70-4968-8e27-8da8fd752d5b for region: {'name': 'Luganese', 'regionID': 'CH-6131'}
+2024-05-12 11:34:53,453 - INFO - Processing bulletin e69878ce-97c3-4684-92a3-83eceae300b7 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-12 11:34:53,534 - INFO - Processing bulletin cde7fb37-ccb0-48e1-87af-281705e5c595 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-12 11:34:53,626 - INFO - Processing bulletin e2f0f991-a0c3-4729-a491-a54326306fce for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-12 11:42:55,207 - INFO - Processing bulletin e69878ce-97c3-4684-92a3-83eceae300b7 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-12 11:42:55,448 - INFO - Processing bulletin cde7fb37-ccb0-48e1-87af-281705e5c595 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-12 11:42:55,684 - INFO - Processing bulletin e2f0f991-a0c3-4729-a491-a54326306fce for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-12 11:45:02,937 - INFO - Processing bulletin e69878ce-97c3-4684-92a3-83eceae300b7 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
+2024-05-12 11:45:03,116 - INFO - Processing bulletin cde7fb37-ccb0-48e1-87af-281705e5c595 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
+2024-05-12 11:45:03,298 - INFO - Processing bulletin e2f0f991-a0c3-4729-a491-a54326306fce for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
