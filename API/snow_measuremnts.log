@@ -2150,3 +2150,1018 @@ DETAIL:  Fehlgeschlagene Zeile enth�lt (2945, 2024-05-07 20:30:00, null, MLB1)
 2024-05-13 22:57:46,266 - INFO - Measurement fetched and stored for station: HTR2
 2024-05-13 22:57:46,840 - INFO - Measurement fetched and stored for station: PMA2
 2024-05-13 22:57:47,367 - INFO - Measurement fetched and stored for station: DAV6
+2024-05-13 23:27:47,371 - ERROR - Request error for station DAV2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DAV2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,371 - ERROR - Request error for station VSC1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VSC1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4820>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,371 - ERROR - Request error for station MUT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,387 - ERROR - Request error for station TUM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TUM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBCD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,387 - ERROR - Request error for station GLA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GLA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4490>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,398 - ERROR - Request error for station GAN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GAN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4B80>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,398 - ERROR - Request error for station GOR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3D30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,403 - ERROR - Request error for station GOM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0E50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,408 - ERROR - Request error for station ILI1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ILI1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB5E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,408 - ERROR - Request error for station VAL2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VAL2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35CD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,408 - ERROR - Request error for station BEL2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BEL2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,419 - ERROR - Request error for station TAM3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TAM3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0D00>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,420 - ERROR - Request error for station ILI2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ILI2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3CA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,420 - ERROR - Request error for station MAN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MAN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC44C0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,429 - ERROR - Request error for station GOS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB460>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,429 - ERROR - Request error for station ROT3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ROT3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBD30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,434 - ERROR - Request error for station FUL2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FUL2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB2B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,434 - ERROR - Request error for station ADE3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ADE3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,434 - ERROR - Request error for station FRA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FRA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4670>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,434 - ERROR - Request error for station SMN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SMN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA39A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,434 - ERROR - Request error for station BER1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BER1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0520>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,452 - ERROR - Request error for station VLS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VLS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0D60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,452 - ERROR - Request error for station HIN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/HIN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0CD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,452 - ERROR - Request error for station KLO1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLO1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E43E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,461 - ERROR - Request error for station NEN3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/NEN3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3CA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,461 - ERROR - Request error for station ARO1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ARO1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4550>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,466 - ERROR - Request error for station ADE2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ADE2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB130>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station GRA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GRA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBD90>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station CAM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CAM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBC10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station PLD2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/PLD2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4C40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station SCH2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCH2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4FD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station KES1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KES1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3EE0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,467 - ERROR - Request error for station LUM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LUM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0D00>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,483 - ERROR - Request error for station LAU1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAU1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35820>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,483 - ERROR - Request error for station FRA3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FRA3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0D60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,492 - ERROR - Request error for station KLT4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLT4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB08E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,493 - ERROR - Request error for station JUL2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/JUL2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3970>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,498 - ERROR - Request error for station JUL1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/JUL1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4EB0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,499 - ERROR - Request error for station OFE1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OFE1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBD00>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,503 - ERROR - Request error for station ROA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ROA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBC10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,503 - ERROR - Request error for station TIT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TIT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB610>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,503 - ERROR - Request error for station CON2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CON2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC48B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,513 - ERROR - Request error for station GOM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC44F0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,514 - ERROR - Request error for station STN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/STN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,514 - ERROR - Request error for station CMA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CMA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB00A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,514 - ERROR - Request error for station LAU2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAU2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35B50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,514 - ERROR - Request error for station FOU1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FOU1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0BE0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,529 - ERROR - Request error for station ROA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ROA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,530 - ERROR - Request error for station AMD2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/AMD2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3640>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,530 - ERROR - Request error for station KLO3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLO3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4FA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,530 - ERROR - Request error for station BOR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB430>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,530 - ERROR - Request error for station OBW2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OBW2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB610>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,530 - ERROR - Request error for station LAG1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAG1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBF70>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,547 - ERROR - Request error for station JAU1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/JAU1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4880>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,547 - ERROR - Request error for station DTR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DTR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,547 - ERROR - Request error for station GUT1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GUT1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA36D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,556 - ERROR - Request error for station SHE2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SHE2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0A60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,561 - ERROR - Request error for station VIN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VIN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35D90>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,562 - ERROR - Request error for station FLU2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FLU2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0CD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,566 - ERROR - Request error for station MAE2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MAE2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0FA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,566 - ERROR - Request error for station VSC2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VSC2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,566 - ERROR - Request error for station DAV3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DAV3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC43A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,566 - ERROR - Request error for station OBW1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OBW1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB3A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,578 - ERROR - Request error for station NAR1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/NAR1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBC10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,578 - ERROR - Request error for station KES2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KES2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBA60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,578 - ERROR - Request error for station SCB2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCB2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4310>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,587 - ERROR - Request error for station ZER1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ZER1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4AC0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,590 - ERROR - Request error for station SPN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SPN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3280>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,594 - ERROR - Request error for station TUJ3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TUJ3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0F40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,594 - ERROR - Request error for station FAE1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FAE1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35B50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,594 - ERROR - Request error for station RNZ2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/RNZ2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0FD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,594 - ERROR - Request error for station BED3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BED3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0C40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,603 - ERROR - Request error for station KLT1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLT1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA39D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,609 - ERROR - Request error for station ZER2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ZER2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4BB0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,610 - ERROR - Request error for station BER2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BER2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB8B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,610 - ERROR - Request error for station MUN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB2B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,610 - ERROR - Request error for station NAS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/NAS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB5B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,610 - ERROR - Request error for station TAM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TAM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4FA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,610 - ERROR - Request error for station ELS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4B20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,626 - ERROR - Request error for station BEV1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BEV1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3580>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,626 - ERROR - Request error for station VAL1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VAL1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB08E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,626 - ERROR - Request error for station ELM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35D30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,636 - ERROR - Request error for station BED1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BED1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0AF0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,636 - ERROR - Request error for station FNH2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FNH2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB05B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,642 - ERROR - Request error for station ELA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3F70>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,642 - ERROR - Request error for station GOM3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOM3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC45E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,642 - ERROR - Request error for station CHA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CHA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB670>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,642 - ERROR - Request error for station TAM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TAM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBA90>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,652 - ERROR - Request error for station VIN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VIN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB400>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,657 - ERROR - Request error for station NEN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/NEN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC49D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,657 - ERROR - Request error for station GAN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GAN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4760>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,662 - ERROR - Request error for station LAG3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAG3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA39D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,662 - ERROR - Request error for station FAE2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FAE2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0700>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,667 - ERROR - Request error for station BOV2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOV2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35940>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,674 - ERROR - Request error for station VDS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VDS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB01F0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,674 - ERROR - Request error for station SAA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SAA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0C10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,674 - ERROR - Request error for station MUO1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUO1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3670>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,674 - ERROR - Request error for station ELA3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELA3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4BB0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,674 - ERROR - Request error for station OBW3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OBW3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB2E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,690 - ERROR - Request error for station HTR1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/HTR1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB880>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,690 - ERROR - Request error for station KLO2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLO2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB5E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,690 - ERROR - Request error for station ZNZ1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ZNZ1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4FA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,700 - ERROR - Request error for station SPN3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SPN3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4310>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,700 - ERROR - Request error for station TRU1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TRU1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,706 - ERROR - Request error for station YBR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/YBR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0130>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,706 - ERROR - Request error for station OFE2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OFE2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35CD0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,710 - ERROR - Request error for station TUJ2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TUJ2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0E50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,710 - ERROR - Request error for station URS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/URS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0EB0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,710 - ERROR - Request error for station PAR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/PAR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3550>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,723 - ERROR - Request error for station BOG1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOG1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4C40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,723 - ERROR - Request error for station FUS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FUS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB310>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,723 - ERROR - Request error for station SWM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SWM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB880>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,723 - ERROR - Request error for station SAA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SAA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBF10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,732 - ERROR - Request error for station BOG3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOG3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4160>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,732 - ERROR - Request error for station AMD1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/AMD1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4DF0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station SIM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SIM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3310>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station WFJ2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/WFJ2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0A00>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station GUT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GUT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station SCA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0190>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station ELS1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELS1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0C40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,738 - ERROR - Request error for station HTR3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/HTR3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA33D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,754 - ERROR - Request error for station PUZ2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/PUZ2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4C10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,754 - ERROR - Request error for station FUL1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FUL1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4E50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,754 - ERROR - Request error for station ANV3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ANV3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB640>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,754 - ERROR - Request error for station ARO2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ARO2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBFA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,763 - ERROR - Request error for station VLS1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VLS1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4220>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,768 - ERROR - Request error for station SCH1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCH1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4DF0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,770 - ERROR - Request error for station SAA4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SAA4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3CA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,770 - ERROR - Request error for station CAM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CAM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0400>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,770 - ERROR - Request error for station MLB2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MLB2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E358B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,770 - ERROR - Request error for station STH1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/STH1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0BE0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,785 - ERROR - Request error for station DIA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DIA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0580>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,786 - ERROR - Request error for station TUM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TUM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3D60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,786 - ERROR - Request error for station ANV2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ANV2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4100>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,786 - ERROR - Request error for station ENG2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ENG2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBE50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,796 - ERROR - Request error for station JAU2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/JAU2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBC40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,800 - ERROR - Request error for station VDS1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VDS1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB8E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,801 - ERROR - Request error for station STH2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/STH2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4B50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,806 - ERROR - Request error for station CSL2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CSL2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4490>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,806 - ERROR - Request error for station ALI2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ALI2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3550>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,806 - ERROR - Request error for station CAM3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CAM3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0A90>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,806 - ERROR - Request error for station PUZ1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/PUZ1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35C10>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,817 - ERROR - Request error for station KLT3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/KLT3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB01F0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,817 - ERROR - Request error for station BER3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BER3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB00A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,817 - ERROR - Request error for station LHO2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LHO2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3EE0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,826 - ERROR - Request error for station VRG3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/VRG3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4DC0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,826 - ERROR - Request error for station MUN2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUN2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB820>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,833 - ERROR - Request error for station LAG2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAG2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB2E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,833 - ERROR - Request error for station WAS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/WAS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB3A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,833 - ERROR - Request error for station ALI1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ALI1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4550>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,843 - ERROR - Request error for station BOV1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOV1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4C70>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,843 - ERROR - Request error for station BEV2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BEV2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3D60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,850 - ERROR - Request error for station LUM3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LUM3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0640>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,853 - ERROR - Request error for station ARO3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ARO3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35B80>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,853 - ERROR - Request error for station ELM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB05B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,853 - ERROR - Request error for station DAV4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DAV4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0040>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,864 - ERROR - Request error for station MES2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MES2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3A60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,868 - ERROR - Request error for station GRA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GRA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4100>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,875 - ERROR - Request error for station GOS3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GOS3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB550>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,875 - ERROR - Request error for station GAD2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/GAD2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB880>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,880 - ERROR - Request error for station DAV1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DAV1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBD30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,880 - ERROR - Request error for station DTR1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DTR1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4B50>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,880 - ERROR - Request error for station SPN1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SPN1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4220>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,880 - ERROR - Request error for station LUK2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LUK2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3AF0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,897 - ERROR - Request error for station SCA3: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCA3/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0E20>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,897 - ERROR - Request error for station MEI2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MEI2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35970>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,897 - ERROR - Request error for station BOG2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BOG2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB05E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,897 - ERROR - Request error for station MUO2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUO2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0070>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,907 - ERROR - Request error for station FOU2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FOU2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3940>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,912 - ERROR - Request error for station FIS2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FIS2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC43D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,913 - ERROR - Request error for station SIM1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SIM1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBD60>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,913 - ERROR - Request error for station FIR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FIR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB880>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,913 - ERROR - Request error for station ENG1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ENG1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB040>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,922 - ERROR - Request error for station ALB2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ALB2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4A30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,922 - ERROR - Request error for station LAV1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LAV1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC42E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,929 - ERROR - Request error for station BED4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BED4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3D30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,929 - ERROR - Request error for station LUK1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/LUK1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0130>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,929 - ERROR - Request error for station OTT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OTT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35C70>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,929 - ERROR - Request error for station NAR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/NAR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0A30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,939 - ERROR - Request error for station ANV1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ANV1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0580>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,939 - ERROR - Request error for station MUT1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MUT1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA37C0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,946 - ERROR - Request error for station BIN4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/BIN4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4CA0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,946 - ERROR - Request error for station ELA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ELA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC49A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,946 - ERROR - Request error for station URS1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/URS1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB850>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,946 - ERROR - Request error for station SAA5: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SAA5/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB310>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,955 - ERROR - Request error for station TUJ1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TUJ1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4190>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,960 - ERROR - Request error for station MES1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MES1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC42E0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,960 - ERROR - Request error for station SCA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SCA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3100>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,966 - ERROR - Request error for station SLF2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/SLF2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0910>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,968 - ERROR - Request error for station CHA1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/CHA1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35BB0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,968 - ERROR - Request error for station MTR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MTR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0DF0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,968 - ERROR - Request error for station FNH1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/FNH1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB0D30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,976 - ERROR - Request error for station EGH2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/EGH2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3340>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,976 - ERROR - Request error for station ORT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ORT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC43A0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,976 - ERROR - Request error for station TRU2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/TRU2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB520>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,976 - ERROR - Request error for station ATT2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ATT2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBBA30>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,976 - ERROR - Request error for station ZNZ2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ZNZ2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EBB3D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,993 - ERROR - Request error for station OBM2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/OBM2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4C40>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,993 - ERROR - Request error for station MLB1: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/MLB1/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EC4850>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,993 - ERROR - Request error for station ZER4: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/ZER4/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EA3940>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:47,993 - ERROR - Request error for station HTR2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/HTR2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB03D0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:48,003 - ERROR - Request error for station PMA2: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/PMA2/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9E35820>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:27:48,003 - ERROR - Request error for station DAV6: HTTPSConnectionPool(host='measurement-api.slf.ch', port=443): Max retries exceeded with url: /public/api/imis/station/DAV6/measurements (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FDF9EB05B0>: Failed to resolve 'measurement-api.slf.ch' ([Errno 11001] getaddrinfo failed)"))
+2024-05-13 23:57:49,112 - INFO - Measurement fetched and stored for station: DAV2
+2024-05-13 23:57:50,283 - INFO - Measurement fetched and stored for station: VSC1
+2024-05-13 23:57:51,382 - INFO - Measurement fetched and stored for station: MUT2
+2024-05-13 23:57:52,595 - INFO - Measurement fetched and stored for station: TUM2
+2024-05-13 23:57:53,668 - INFO - Measurement fetched and stored for station: GLA2
+2024-05-13 23:57:54,804 - INFO - Measurement fetched and stored for station: GAN2
+2024-05-13 23:57:55,776 - INFO - Measurement fetched and stored for station: GOR2
+2024-05-13 23:57:56,950 - INFO - Measurement fetched and stored for station: GOM1
+2024-05-13 23:57:58,018 - INFO - Measurement fetched and stored for station: ILI1
+2024-05-13 23:57:59,107 - INFO - Measurement fetched and stored for station: VAL2
+2024-05-13 23:58:00,032 - INFO - Measurement fetched and stored for station: BEL2
+2024-05-13 23:58:01,371 - INFO - Measurement fetched and stored for station: TAM3
+2024-05-13 23:58:02,391 - INFO - Measurement fetched and stored for station: ILI2
+2024-05-13 23:58:03,346 - INFO - Measurement fetched and stored for station: MAN1
+2024-05-13 23:58:04,449 - INFO - Measurement fetched and stored for station: GOS2
+2024-05-13 23:58:05,247 - INFO - Measurement fetched and stored for station: ROT3
+2024-05-13 23:58:06,429 - INFO - Measurement fetched and stored for station: FUL2
+2024-05-13 23:58:07,917 - INFO - Measurement fetched and stored for station: ADE3
+2024-05-13 23:58:08,984 - INFO - Measurement fetched and stored for station: FRA2
+2024-05-13 23:58:10,191 - INFO - Measurement fetched and stored for station: SMN2
+2024-05-13 23:58:11,100 - INFO - Measurement fetched and stored for station: BER1
+2024-05-13 23:58:12,032 - INFO - Measurement fetched and stored for station: VLS2
+2024-05-13 23:58:12,982 - INFO - Measurement fetched and stored for station: HIN1
+2024-05-13 23:58:13,981 - INFO - Measurement fetched and stored for station: KLO1
+2024-05-13 23:58:15,236 - INFO - Measurement fetched and stored for station: NEN3
+2024-05-13 23:58:16,530 - INFO - Measurement fetched and stored for station: ARO1
+2024-05-13 23:58:17,762 - INFO - Measurement fetched and stored for station: ADE2
+2024-05-13 23:58:19,275 - INFO - Measurement fetched and stored for station: GRA2
+2024-05-13 23:58:20,606 - INFO - Measurement fetched and stored for station: CAM2
+2024-05-13 23:58:21,709 - INFO - Measurement fetched and stored for station: PLD2
+2024-05-13 23:58:22,733 - INFO - Measurement fetched and stored for station: SCH2
+2024-05-13 23:58:24,415 - INFO - Measurement fetched and stored for station: KES1
+2024-05-13 23:58:25,579 - INFO - Measurement fetched and stored for station: LUM2
+2024-05-13 23:58:26,895 - INFO - Measurement fetched and stored for station: LAU1
+2024-05-13 23:58:28,318 - INFO - Measurement fetched and stored for station: FRA3
+2024-05-13 23:58:29,490 - INFO - Measurement fetched and stored for station: KLT4
+2024-05-13 23:58:30,510 - INFO - Measurement fetched and stored for station: JUL2
+2024-05-13 23:58:31,512 - INFO - Measurement fetched and stored for station: JUL1
+2024-05-13 23:58:32,365 - INFO - Measurement fetched and stored for station: OFE1
+2024-05-13 23:58:33,215 - INFO - Measurement fetched and stored for station: ROA2
+2024-05-13 23:58:34,761 - INFO - Measurement fetched and stored for station: TIT2
+2024-05-13 23:58:35,669 - INFO - Measurement fetched and stored for station: CON2
+2024-05-13 23:58:36,729 - INFO - Measurement fetched and stored for station: GOM2
+2024-05-13 23:58:37,778 - INFO - Measurement fetched and stored for station: STN2
+2024-05-13 23:58:38,745 - INFO - Measurement fetched and stored for station: CMA2
+2024-05-13 23:58:39,519 - INFO - Measurement fetched and stored for station: LAU2
+2024-05-13 23:58:40,393 - INFO - Measurement fetched and stored for station: FOU1
+2024-05-13 23:58:41,569 - INFO - Measurement fetched and stored for station: ROA1
+2024-05-13 23:58:42,622 - INFO - Measurement fetched and stored for station: AMD2
+2024-05-13 23:58:44,329 - INFO - Measurement fetched and stored for station: KLO3
+2024-05-13 23:58:45,152 - INFO - Measurement fetched and stored for station: BOR2
+2024-05-13 23:58:46,126 - INFO - Measurement fetched and stored for station: OBW2
+2024-05-13 23:58:47,030 - INFO - Measurement fetched and stored for station: LAG1
+2024-05-13 23:58:47,977 - INFO - Measurement fetched and stored for station: JAU1
+2024-05-13 23:58:48,957 - INFO - Measurement fetched and stored for station: DTR2
+2024-05-13 23:58:50,006 - INFO - Measurement fetched and stored for station: GUT1
+2024-05-13 23:58:50,945 - INFO - Measurement fetched and stored for station: SHE2
+2024-05-13 23:58:52,060 - INFO - Measurement fetched and stored for station: VIN2
+2024-05-13 23:58:52,914 - INFO - Measurement fetched and stored for station: FLU2
+2024-05-13 23:58:53,926 - INFO - Measurement fetched and stored for station: MAE2
+2024-05-13 23:58:54,937 - INFO - Measurement fetched and stored for station: VSC2
+2024-05-13 23:58:55,828 - INFO - Measurement fetched and stored for station: DAV3
+2024-05-13 23:58:57,008 - INFO - Measurement fetched and stored for station: OBW1
+2024-05-13 23:58:58,111 - INFO - Measurement fetched and stored for station: NAR1
+2024-05-13 23:58:59,077 - INFO - Measurement fetched and stored for station: KES2
+2024-05-13 23:58:59,928 - INFO - Measurement fetched and stored for station: SCB2
+2024-05-13 23:59:00,802 - INFO - Measurement fetched and stored for station: ZER1
+2024-05-13 23:59:01,685 - INFO - Measurement fetched and stored for station: SPN2
+2024-05-13 23:59:02,727 - INFO - Measurement fetched and stored for station: TUJ3
+2024-05-13 23:59:03,597 - INFO - Measurement fetched and stored for station: FAE1
+2024-05-13 23:59:04,437 - INFO - Measurement fetched and stored for station: RNZ2
+2024-05-13 23:59:05,294 - INFO - Measurement fetched and stored for station: BED3
+2024-05-13 23:59:06,072 - INFO - Measurement fetched and stored for station: KLT1
+2024-05-13 23:59:07,086 - INFO - Measurement fetched and stored for station: ZER2
+2024-05-13 23:59:08,035 - INFO - Measurement fetched and stored for station: BER2
+2024-05-13 23:59:09,145 - INFO - Measurement fetched and stored for station: MUN1
+2024-05-13 23:59:10,061 - INFO - Measurement fetched and stored for station: NAS2
+2024-05-13 23:59:10,824 - INFO - Measurement fetched and stored for station: TAM1
+2024-05-13 23:59:11,675 - INFO - Measurement fetched and stored for station: ELS2
+2024-05-13 23:59:12,709 - INFO - Measurement fetched and stored for station: BEV1
+2024-05-13 23:59:13,604 - INFO - Measurement fetched and stored for station: VAL1
+2024-05-13 23:59:14,353 - INFO - Measurement fetched and stored for station: ELM2
+2024-05-13 23:59:15,287 - INFO - Measurement fetched and stored for station: BED1
+2024-05-13 23:59:16,021 - INFO - Measurement fetched and stored for station: FNH2
+2024-05-13 23:59:16,952 - INFO - Measurement fetched and stored for station: ELA1
+2024-05-13 23:59:17,970 - INFO - Measurement fetched and stored for station: GOM3
+2024-05-13 23:59:18,739 - INFO - Measurement fetched and stored for station: CHA2
+2024-05-13 23:59:19,593 - INFO - Measurement fetched and stored for station: TAM2
+2024-05-13 23:59:20,527 - INFO - Measurement fetched and stored for station: VIN1
+2024-05-13 23:59:21,414 - INFO - Measurement fetched and stored for station: NEN1
+2024-05-13 23:59:22,269 - INFO - Measurement fetched and stored for station: GAN1
+2024-05-13 23:59:23,047 - INFO - Measurement fetched and stored for station: LAG3
+2024-05-13 23:59:23,911 - INFO - Measurement fetched and stored for station: FAE2
+2024-05-13 23:59:24,715 - INFO - Measurement fetched and stored for station: BOV2
+2024-05-13 23:59:25,656 - INFO - Measurement fetched and stored for station: VDS2
+2024-05-13 23:59:26,441 - INFO - Measurement fetched and stored for station: SAA1
+2024-05-13 23:59:27,346 - INFO - Measurement fetched and stored for station: MUO1
+2024-05-13 23:59:28,599 - INFO - Measurement fetched and stored for station: ELA3
+2024-05-13 23:59:29,495 - INFO - Measurement fetched and stored for station: OBW3
+2024-05-13 23:59:30,361 - INFO - Measurement fetched and stored for station: HTR1
+2024-05-13 23:59:31,379 - INFO - Measurement fetched and stored for station: KLO2
+2024-05-13 23:59:32,301 - INFO - Measurement fetched and stored for station: ZNZ1
+2024-05-13 23:59:33,343 - INFO - Measurement fetched and stored for station: SPN3
+2024-05-13 23:59:34,260 - INFO - Measurement fetched and stored for station: TRU1
+2024-05-13 23:59:35,109 - INFO - Measurement fetched and stored for station: YBR2
+2024-05-13 23:59:35,867 - INFO - Measurement fetched and stored for station: OFE2
+2024-05-13 23:59:36,760 - INFO - Measurement fetched and stored for station: TUJ2
+2024-05-13 23:59:37,700 - INFO - Measurement fetched and stored for station: URS2
+2024-05-13 23:59:38,660 - INFO - Measurement fetched and stored for station: PAR2
+2024-05-13 23:59:39,462 - INFO - Measurement fetched and stored for station: BOG1
+2024-05-13 23:59:40,271 - INFO - Measurement fetched and stored for station: FUS2
+2024-05-13 23:59:41,185 - INFO - Measurement fetched and stored for station: SWM1
+2024-05-13 23:59:42,001 - INFO - Measurement fetched and stored for station: SAA2
+2024-05-13 23:59:42,846 - INFO - Measurement fetched and stored for station: BOG3
+2024-05-13 23:59:43,737 - INFO - Measurement fetched and stored for station: AMD1
+2024-05-13 23:59:44,634 - INFO - Measurement fetched and stored for station: SIM2
+2024-05-13 23:59:45,579 - INFO - Measurement fetched and stored for station: WFJ2
+2024-05-13 23:59:46,467 - INFO - Measurement fetched and stored for station: GUT2
+2024-05-13 23:59:47,331 - INFO - Measurement fetched and stored for station: SCA2
+2024-05-13 23:59:48,196 - INFO - Measurement fetched and stored for station: ELS1
+2024-05-13 23:59:49,098 - INFO - Measurement fetched and stored for station: HTR3
+2024-05-13 23:59:49,992 - INFO - Measurement fetched and stored for station: PUZ2
+2024-05-13 23:59:50,827 - INFO - Measurement fetched and stored for station: FUL1
+2024-05-13 23:59:51,669 - INFO - Measurement fetched and stored for station: ANV3
+2024-05-13 23:59:52,757 - INFO - Measurement fetched and stored for station: ARO2
+2024-05-13 23:59:53,590 - INFO - Measurement fetched and stored for station: VLS1
+2024-05-13 23:59:54,427 - INFO - Measurement fetched and stored for station: SCH1
+2024-05-13 23:59:55,307 - INFO - Measurement fetched and stored for station: SAA4
+2024-05-13 23:59:56,258 - INFO - Measurement fetched and stored for station: CAM1
+2024-05-13 23:59:57,181 - INFO - Measurement fetched and stored for station: MLB2
+2024-05-13 23:59:57,971 - INFO - Measurement fetched and stored for station: STH1
+2024-05-13 23:59:58,941 - INFO - Measurement fetched and stored for station: DIA2
+2024-05-13 23:59:59,963 - INFO - Measurement fetched and stored for station: TUM1
+2024-05-14 00:00:01,511 - INFO - Measurement fetched and stored for station: ANV2
+2024-05-14 00:00:02,576 - INFO - Measurement fetched and stored for station: ENG2
+2024-05-14 00:00:03,551 - INFO - Measurement fetched and stored for station: JAU2
+2024-05-14 00:00:04,537 - INFO - Measurement fetched and stored for station: VDS1
+2024-05-14 00:00:05,526 - INFO - Measurement fetched and stored for station: STH2
+2024-05-14 00:00:06,892 - INFO - Measurement fetched and stored for station: CSL2
+2024-05-14 00:00:08,019 - INFO - Measurement fetched and stored for station: ALI2
+2024-05-14 00:00:08,927 - INFO - Measurement fetched and stored for station: CAM3
+2024-05-14 00:00:10,203 - INFO - Measurement fetched and stored for station: PUZ1
+2024-05-14 00:00:11,243 - INFO - Measurement fetched and stored for station: KLT3
+2024-05-14 00:00:12,330 - INFO - Measurement fetched and stored for station: BER3
+2024-05-14 00:00:13,306 - INFO - Measurement fetched and stored for station: LHO2
+2024-05-14 00:00:14,411 - INFO - Measurement fetched and stored for station: VRG3
+2024-05-14 00:00:15,359 - INFO - Measurement fetched and stored for station: MUN2
+2024-05-14 00:00:16,238 - INFO - Measurement fetched and stored for station: LAG2
+2024-05-14 00:00:18,170 - INFO - Measurement fetched and stored for station: WAS2
+2024-05-14 00:00:19,585 - INFO - Measurement fetched and stored for station: ALI1
+2024-05-14 00:00:20,416 - INFO - Measurement fetched and stored for station: BOV1
+2024-05-14 00:00:21,338 - INFO - Measurement fetched and stored for station: BEV2
+2024-05-14 00:00:22,142 - INFO - Measurement fetched and stored for station: LUM3
+2024-05-14 00:00:23,101 - INFO - Measurement fetched and stored for station: ARO3
+2024-05-14 00:00:23,958 - INFO - Measurement fetched and stored for station: ELM1
+2024-05-14 00:00:24,962 - INFO - Measurement fetched and stored for station: DAV4
+2024-05-14 00:00:26,034 - INFO - Measurement fetched and stored for station: MES2
+2024-05-14 00:00:26,962 - INFO - Measurement fetched and stored for station: GRA1
+2024-05-14 00:00:27,999 - INFO - Measurement fetched and stored for station: GOS3
+2024-05-14 00:00:29,020 - INFO - Measurement fetched and stored for station: GAD2
+2024-05-14 00:00:29,865 - INFO - Measurement fetched and stored for station: DAV1
+2024-05-14 00:00:30,965 - INFO - Measurement fetched and stored for station: DTR1
+2024-05-14 00:00:32,105 - INFO - Measurement fetched and stored for station: SPN1
+2024-05-14 00:00:32,970 - INFO - Measurement fetched and stored for station: LUK2
+2024-05-14 00:00:33,821 - INFO - Measurement fetched and stored for station: SCA3
+2024-05-14 00:00:34,634 - INFO - Measurement fetched and stored for station: MEI2
+2024-05-14 00:00:35,592 - INFO - Measurement fetched and stored for station: BOG2
+2024-05-14 00:00:36,691 - INFO - Measurement fetched and stored for station: MUO2
+2024-05-14 00:00:37,731 - INFO - Measurement fetched and stored for station: FOU2
+2024-05-14 00:00:38,736 - INFO - Measurement fetched and stored for station: FIS2
+2024-05-14 00:00:39,696 - INFO - Measurement fetched and stored for station: SIM1
+2024-05-14 00:00:40,877 - INFO - Measurement fetched and stored for station: FIR2
+2024-05-14 00:00:42,533 - INFO - Measurement fetched and stored for station: ENG1
+2024-05-14 00:00:43,268 - INFO - Measurement fetched and stored for station: ALB2
+2024-05-14 00:00:43,962 - INFO - Measurement fetched and stored for station: LAV1
+2024-05-14 00:00:45,121 - INFO - Measurement fetched and stored for station: BED4
+2024-05-14 00:00:46,030 - INFO - Measurement fetched and stored for station: LUK1
+2024-05-14 00:00:46,714 - INFO - Measurement fetched and stored for station: OTT2
+2024-05-14 00:00:47,766 - INFO - Measurement fetched and stored for station: NAR2
+2024-05-14 00:00:48,734 - INFO - Measurement fetched and stored for station: ANV1
+2024-05-14 00:00:49,797 - INFO - Measurement fetched and stored for station: MUT1
+2024-05-14 00:00:50,765 - INFO - Measurement fetched and stored for station: BIN4
+2024-05-14 00:00:51,661 - INFO - Measurement fetched and stored for station: ELA2
+2024-05-14 00:00:52,593 - INFO - Measurement fetched and stored for station: URS1
+2024-05-14 00:00:53,819 - INFO - Measurement fetched and stored for station: SAA5
+2024-05-14 00:00:54,769 - INFO - Measurement fetched and stored for station: TUJ1
+2024-05-14 00:00:55,755 - INFO - Measurement fetched and stored for station: MES1
+2024-05-14 00:00:56,577 - INFO - Measurement fetched and stored for station: SCA1
+2024-05-14 00:00:57,829 - INFO - Measurement fetched and stored for station: SLF2
+2024-05-14 00:00:59,151 - INFO - Measurement fetched and stored for station: CHA1
+2024-05-14 00:01:00,177 - INFO - Measurement fetched and stored for station: MTR2
+2024-05-14 00:01:01,263 - INFO - Measurement fetched and stored for station: FNH1
+2024-05-14 00:01:02,084 - INFO - Measurement fetched and stored for station: EGH2
+2024-05-14 00:01:03,128 - INFO - Measurement fetched and stored for station: ORT2
+2024-05-14 00:01:04,037 - INFO - Measurement fetched and stored for station: TRU2
+2024-05-14 00:01:04,951 - INFO - Measurement fetched and stored for station: ATT2
+2024-05-14 00:01:06,235 - INFO - Measurement fetched and stored for station: ZNZ2
+2024-05-14 00:01:07,224 - INFO - Measurement fetched and stored for station: OBM2
+2024-05-14 00:01:08,115 - INFO - Measurement fetched and stored for station: MLB1
+2024-05-14 00:01:08,956 - INFO - Measurement fetched and stored for station: ZER4
+2024-05-14 00:01:09,782 - INFO - Measurement fetched and stored for station: HTR2
+2024-05-14 00:01:10,562 - INFO - Measurement fetched and stored for station: PMA2
+2024-05-14 00:01:11,843 - INFO - Measurement fetched and stored for station: DAV6
+2024-05-14 00:31:13,064 - INFO - Measurement fetched and stored for station: DAV2
+2024-05-14 00:31:14,159 - INFO - Measurement fetched and stored for station: VSC1
+2024-05-14 00:31:15,347 - INFO - Measurement fetched and stored for station: MUT2
+2024-05-14 00:31:16,481 - INFO - Measurement fetched and stored for station: TUM2
+2024-05-14 00:31:17,462 - INFO - Measurement fetched and stored for station: GLA2
+2024-05-14 00:31:18,410 - INFO - Measurement fetched and stored for station: GAN2
+2024-05-14 00:31:19,503 - INFO - Measurement fetched and stored for station: GOR2
+2024-05-14 00:31:20,732 - INFO - Measurement fetched and stored for station: GOM1
+2024-05-14 00:31:22,185 - INFO - Measurement fetched and stored for station: ILI1
+2024-05-14 00:31:23,456 - INFO - Measurement fetched and stored for station: VAL2
+2024-05-14 00:31:24,557 - INFO - Measurement fetched and stored for station: BEL2
+2024-05-14 00:31:25,890 - INFO - Measurement fetched and stored for station: TAM3
+2024-05-14 00:31:27,106 - INFO - Measurement fetched and stored for station: ILI2
+2024-05-14 00:31:28,311 - INFO - Measurement fetched and stored for station: MAN1
+2024-05-14 00:31:30,252 - INFO - Measurement fetched and stored for station: GOS2
+2024-05-14 00:31:31,433 - INFO - Measurement fetched and stored for station: ROT3
+2024-05-14 00:31:32,432 - INFO - Measurement fetched and stored for station: FUL2
+2024-05-14 00:31:33,450 - INFO - Measurement fetched and stored for station: ADE3
+2024-05-14 00:31:34,859 - INFO - Measurement fetched and stored for station: FRA2
+2024-05-14 00:31:36,362 - INFO - Measurement fetched and stored for station: SMN2
+2024-05-14 00:31:37,302 - INFO - Measurement fetched and stored for station: BER1
+2024-05-14 00:31:38,804 - INFO - Measurement fetched and stored for station: VLS2
+2024-05-14 00:31:39,837 - INFO - Measurement fetched and stored for station: HIN1
+2024-05-14 00:31:41,346 - INFO - Measurement fetched and stored for station: KLO1
+2024-05-14 00:31:42,933 - INFO - Measurement fetched and stored for station: NEN3
+2024-05-14 00:31:44,368 - INFO - Measurement fetched and stored for station: ARO1
+2024-05-14 00:31:45,828 - INFO - Measurement fetched and stored for station: ADE2
+2024-05-14 00:31:47,457 - INFO - Measurement fetched and stored for station: GRA2
+2024-05-14 00:31:48,602 - INFO - Measurement fetched and stored for station: CAM2
+2024-05-14 00:31:49,874 - INFO - Measurement fetched and stored for station: PLD2
+2024-05-14 00:31:51,339 - INFO - Measurement fetched and stored for station: SCH2
+2024-05-14 00:31:53,156 - INFO - Measurement fetched and stored for station: KES1
+2024-05-14 00:31:54,359 - INFO - Measurement fetched and stored for station: LUM2
+2024-05-14 00:31:55,394 - INFO - Measurement fetched and stored for station: LAU1
+2024-05-14 00:31:57,185 - INFO - Measurement fetched and stored for station: FRA3
+2024-05-14 00:31:58,753 - INFO - Measurement fetched and stored for station: KLT4
+2024-05-14 00:31:59,969 - INFO - Measurement fetched and stored for station: JUL2
+2024-05-14 00:32:01,149 - INFO - Measurement fetched and stored for station: JUL1
+2024-05-14 00:32:02,209 - INFO - Measurement fetched and stored for station: OFE1
+2024-05-14 00:32:04,225 - INFO - Measurement fetched and stored for station: ROA2
+2024-05-14 00:32:05,963 - INFO - Measurement fetched and stored for station: TIT2
+2024-05-14 00:32:07,562 - INFO - Measurement fetched and stored for station: CON2
+2024-05-14 00:32:08,740 - INFO - Measurement fetched and stored for station: GOM2
+2024-05-14 00:32:10,515 - INFO - Measurement fetched and stored for station: STN2
+2024-05-14 00:32:11,763 - INFO - Measurement fetched and stored for station: CMA2
+2024-05-14 00:32:13,054 - INFO - Measurement fetched and stored for station: LAU2
+2024-05-14 00:32:14,547 - INFO - Measurement fetched and stored for station: FOU1
+2024-05-14 00:32:15,830 - INFO - Measurement fetched and stored for station: ROA1
+2024-05-14 00:32:16,852 - INFO - Measurement fetched and stored for station: AMD2
+2024-05-14 00:32:17,535 - INFO - Measurement fetched and stored for station: KLO3
+2024-05-14 00:32:18,819 - INFO - Measurement fetched and stored for station: BOR2
+2024-05-14 00:32:19,741 - INFO - Measurement fetched and stored for station: OBW2
+2024-05-14 00:32:20,759 - INFO - Measurement fetched and stored for station: LAG1
+2024-05-14 00:32:21,618 - INFO - Measurement fetched and stored for station: JAU1
+2024-05-14 00:32:22,389 - INFO - Measurement fetched and stored for station: DTR2
+2024-05-14 00:32:23,226 - INFO - Measurement fetched and stored for station: GUT1
+2024-05-14 00:32:24,155 - INFO - Measurement fetched and stored for station: SHE2
+2024-05-14 00:32:25,488 - INFO - Measurement fetched and stored for station: VIN2
+2024-05-14 00:32:26,629 - INFO - Measurement fetched and stored for station: FLU2
+2024-05-14 00:32:27,762 - INFO - Measurement fetched and stored for station: MAE2
+2024-05-14 00:32:28,768 - INFO - Measurement fetched and stored for station: VSC2
+2024-05-14 00:32:30,296 - INFO - Measurement fetched and stored for station: DAV3
+2024-05-14 00:32:31,396 - INFO - Measurement fetched and stored for station: OBW1
+2024-05-14 00:32:32,441 - INFO - Measurement fetched and stored for station: NAR1
+2024-05-14 00:32:33,487 - INFO - Measurement fetched and stored for station: KES2
+2024-05-14 00:32:34,319 - INFO - Measurement fetched and stored for station: SCB2
+2024-05-14 00:32:35,283 - INFO - Measurement fetched and stored for station: ZER1
+2024-05-14 00:32:36,346 - INFO - Measurement fetched and stored for station: SPN2
+2024-05-14 00:32:37,350 - INFO - Measurement fetched and stored for station: TUJ3
+2024-05-14 00:32:38,275 - INFO - Measurement fetched and stored for station: FAE1
+2024-05-14 00:32:39,091 - INFO - Measurement fetched and stored for station: RNZ2
+2024-05-14 00:32:39,904 - INFO - Measurement fetched and stored for station: BED3
+2024-05-14 00:32:41,348 - INFO - Measurement fetched and stored for station: KLT1
+2024-05-14 00:32:42,646 - INFO - Measurement fetched and stored for station: ZER2
+2024-05-14 00:32:43,800 - INFO - Measurement fetched and stored for station: BER2
+2024-05-14 00:32:44,717 - INFO - Measurement fetched and stored for station: MUN1
+2024-05-14 00:32:46,054 - INFO - Measurement fetched and stored for station: NAS2
+2024-05-14 00:32:47,307 - INFO - Measurement fetched and stored for station: TAM1
+2024-05-14 00:32:48,377 - INFO - Measurement fetched and stored for station: ELS2
+2024-05-14 00:32:49,424 - INFO - Measurement fetched and stored for station: BEV1
+2024-05-14 00:32:50,574 - INFO - Measurement fetched and stored for station: VAL1
+2024-05-14 00:32:51,575 - INFO - Measurement fetched and stored for station: ELM2
+2024-05-14 00:32:52,484 - INFO - Measurement fetched and stored for station: BED1
+2024-05-14 00:32:54,012 - INFO - Measurement fetched and stored for station: FNH2
+2024-05-14 00:32:55,425 - INFO - Measurement fetched and stored for station: ELA1
+2024-05-14 00:32:57,503 - INFO - Measurement fetched and stored for station: GOM3
+2024-05-14 00:32:59,236 - INFO - Measurement fetched and stored for station: CHA2
+2024-05-14 00:33:00,573 - INFO - Measurement fetched and stored for station: TAM2
+2024-05-14 00:33:01,818 - INFO - Measurement fetched and stored for station: VIN1
+2024-05-14 00:33:03,479 - INFO - Measurement fetched and stored for station: NEN1
+2024-05-14 00:33:04,691 - INFO - Measurement fetched and stored for station: GAN1
+2024-05-14 00:33:05,804 - INFO - Measurement fetched and stored for station: LAG3
+2024-05-14 00:33:06,944 - INFO - Measurement fetched and stored for station: FAE2
+2024-05-14 00:33:07,886 - INFO - Measurement fetched and stored for station: BOV2
+2024-05-14 00:33:09,361 - INFO - Measurement fetched and stored for station: VDS2
+2024-05-14 00:33:10,393 - INFO - Measurement fetched and stored for station: SAA1
+2024-05-14 00:33:11,424 - INFO - Measurement fetched and stored for station: MUO1
+2024-05-14 00:33:12,353 - INFO - Measurement fetched and stored for station: ELA3
+2024-05-14 00:33:13,293 - INFO - Measurement fetched and stored for station: OBW3
+2024-05-14 00:33:14,215 - INFO - Measurement fetched and stored for station: HTR1
+2024-05-14 00:33:15,802 - INFO - Measurement fetched and stored for station: KLO2
+2024-05-14 00:33:17,391 - INFO - Measurement fetched and stored for station: ZNZ1
+2024-05-14 00:33:18,500 - INFO - Measurement fetched and stored for station: SPN3
+2024-05-14 00:33:19,444 - INFO - Measurement fetched and stored for station: TRU1
+2024-05-14 00:33:20,541 - INFO - Measurement fetched and stored for station: YBR2
+2024-05-14 00:33:21,624 - INFO - Measurement fetched and stored for station: OFE2
+2024-05-14 00:33:22,877 - INFO - Measurement fetched and stored for station: TUJ2
+2024-05-14 00:33:23,755 - INFO - Measurement fetched and stored for station: URS2
+2024-05-14 00:33:24,874 - INFO - Measurement fetched and stored for station: PAR2
+2024-05-14 00:33:25,798 - INFO - Measurement fetched and stored for station: BOG1
+2024-05-14 00:33:26,558 - INFO - Measurement fetched and stored for station: FUS2
+2024-05-14 00:33:27,883 - INFO - Measurement fetched and stored for station: SWM1
+2024-05-14 00:33:29,238 - INFO - Measurement fetched and stored for station: SAA2
+2024-05-14 00:33:30,870 - INFO - Measurement fetched and stored for station: BOG3
+2024-05-14 00:33:32,046 - INFO - Measurement fetched and stored for station: AMD1
+2024-05-14 00:33:32,934 - INFO - Measurement fetched and stored for station: SIM2
+2024-05-14 00:33:34,098 - INFO - Measurement fetched and stored for station: WFJ2
+2024-05-14 00:33:35,342 - INFO - Measurement fetched and stored for station: GUT2
+2024-05-14 00:33:36,664 - INFO - Measurement fetched and stored for station: SCA2
+2024-05-14 00:33:38,083 - INFO - Measurement fetched and stored for station: ELS1
+2024-05-14 00:33:39,893 - INFO - Measurement fetched and stored for station: HTR3
+2024-05-14 00:33:41,649 - INFO - Measurement fetched and stored for station: PUZ2
+2024-05-14 00:33:43,317 - INFO - Measurement fetched and stored for station: FUL1
+2024-05-14 00:33:44,767 - INFO - Measurement fetched and stored for station: ANV3
+2024-05-14 00:33:45,782 - INFO - Measurement fetched and stored for station: ARO2
+2024-05-14 00:33:47,247 - INFO - Measurement fetched and stored for station: VLS1
+2024-05-14 00:33:48,314 - INFO - Measurement fetched and stored for station: SCH1
+2024-05-14 00:33:49,457 - INFO - Measurement fetched and stored for station: SAA4
+2024-05-14 00:33:50,493 - INFO - Measurement fetched and stored for station: CAM1
+2024-05-14 00:33:51,652 - INFO - Measurement fetched and stored for station: MLB2
+2024-05-14 00:33:53,321 - INFO - Measurement fetched and stored for station: STH1
+2024-05-14 00:33:54,230 - INFO - Measurement fetched and stored for station: DIA2
+2024-05-14 00:33:55,203 - INFO - Measurement fetched and stored for station: TUM1
+2024-05-14 00:33:56,007 - INFO - Measurement fetched and stored for station: ANV2
+2024-05-14 00:33:56,921 - INFO - Measurement fetched and stored for station: ENG2
+2024-05-14 00:33:57,918 - INFO - Measurement fetched and stored for station: JAU2
+2024-05-14 00:33:58,762 - INFO - Measurement fetched and stored for station: VDS1
+2024-05-14 00:33:59,526 - INFO - Measurement fetched and stored for station: STH2
+2024-05-14 00:34:00,287 - INFO - Measurement fetched and stored for station: CSL2
+2024-05-14 00:34:01,324 - INFO - Measurement fetched and stored for station: ALI2
+2024-05-14 00:34:02,003 - INFO - Measurement fetched and stored for station: CAM3
+2024-05-14 00:34:02,849 - INFO - Measurement fetched and stored for station: PUZ1
+2024-05-14 00:34:04,132 - INFO - Measurement fetched and stored for station: KLT3
+2024-05-14 00:34:05,249 - INFO - Measurement fetched and stored for station: BER3
+2024-05-14 00:34:06,428 - INFO - Measurement fetched and stored for station: LHO2
+2024-05-14 00:34:07,519 - INFO - Measurement fetched and stored for station: VRG3
+2024-05-14 00:34:08,762 - INFO - Measurement fetched and stored for station: MUN2
+2024-05-14 00:34:10,152 - INFO - Measurement fetched and stored for station: LAG2
+2024-05-14 00:34:11,478 - INFO - Measurement fetched and stored for station: WAS2
+2024-05-14 00:34:13,069 - INFO - Measurement fetched and stored for station: ALI1
+2024-05-14 00:34:14,547 - INFO - Measurement fetched and stored for station: BOV1
+2024-05-14 00:34:15,854 - INFO - Measurement fetched and stored for station: BEV2
+2024-05-14 00:34:16,986 - INFO - Measurement fetched and stored for station: LUM3
+2024-05-14 00:34:18,155 - INFO - Measurement fetched and stored for station: ARO3
+2024-05-14 00:34:19,134 - INFO - Measurement fetched and stored for station: ELM1
+2024-05-14 00:34:19,983 - INFO - Measurement fetched and stored for station: DAV4
+2024-05-14 00:34:20,863 - INFO - Measurement fetched and stored for station: MES2
+2024-05-14 00:34:21,934 - INFO - Measurement fetched and stored for station: GRA1
+2024-05-14 00:34:22,955 - INFO - Measurement fetched and stored for station: GOS3
+2024-05-14 00:34:23,877 - INFO - Measurement fetched and stored for station: GAD2
+2024-05-14 00:34:24,983 - INFO - Measurement fetched and stored for station: DAV1
+2024-05-14 00:34:25,874 - INFO - Measurement fetched and stored for station: DTR1
+2024-05-14 00:34:26,827 - INFO - Measurement fetched and stored for station: SPN1
+2024-05-14 00:34:27,684 - INFO - Measurement fetched and stored for station: LUK2
+2024-05-14 00:34:28,494 - INFO - Measurement fetched and stored for station: SCA3
+2024-05-14 00:34:29,274 - INFO - Measurement fetched and stored for station: MEI2
+2024-05-14 00:34:29,952 - INFO - Measurement fetched and stored for station: BOG2
+2024-05-14 00:34:30,899 - INFO - Measurement fetched and stored for station: MUO2
+2024-05-14 00:34:32,078 - INFO - Measurement fetched and stored for station: FOU2
+2024-05-14 00:34:33,225 - INFO - Measurement fetched and stored for station: FIS2
+2024-05-14 00:34:34,252 - INFO - Measurement fetched and stored for station: SIM1
+2024-05-14 00:34:35,332 - INFO - Measurement fetched and stored for station: FIR2
+2024-05-14 00:34:36,560 - INFO - Measurement fetched and stored for station: ENG1
+2024-05-14 00:34:37,835 - INFO - Measurement fetched and stored for station: ALB2
+2024-05-14 00:34:38,575 - INFO - Measurement fetched and stored for station: LAV1
+2024-05-14 00:34:39,176 - INFO - Measurement fetched and stored for station: BED4
+2024-05-14 00:34:39,949 - INFO - Measurement fetched and stored for station: LUK1
+2024-05-14 00:34:40,607 - INFO - Measurement fetched and stored for station: OTT2
+2024-05-14 00:34:41,289 - INFO - Measurement fetched and stored for station: NAR2
+2024-05-14 00:34:42,168 - INFO - Measurement fetched and stored for station: ANV1
+2024-05-14 00:34:43,043 - INFO - Measurement fetched and stored for station: MUT1
+2024-05-14 00:34:43,964 - INFO - Measurement fetched and stored for station: BIN4
+2024-05-14 00:34:45,233 - INFO - Measurement fetched and stored for station: ELA2
+2024-05-14 00:34:46,278 - INFO - Measurement fetched and stored for station: URS1
+2024-05-14 00:34:47,395 - INFO - Measurement fetched and stored for station: SAA5
+2024-05-14 00:34:48,296 - INFO - Measurement fetched and stored for station: TUJ1
+2024-05-14 00:34:49,475 - INFO - Measurement fetched and stored for station: MES1
+2024-05-14 00:34:50,679 - INFO - Measurement fetched and stored for station: SCA1
+2024-05-14 00:34:52,272 - INFO - Measurement fetched and stored for station: SLF2
+2024-05-14 00:34:53,625 - INFO - Measurement fetched and stored for station: CHA1
+2024-05-14 00:34:54,793 - INFO - Measurement fetched and stored for station: MTR2
+2024-05-14 00:34:56,714 - INFO - Measurement fetched and stored for station: FNH1
+2024-05-14 00:34:57,940 - INFO - Measurement fetched and stored for station: EGH2
+2024-05-14 00:34:59,281 - INFO - Measurement fetched and stored for station: ORT2
+2024-05-14 00:35:00,409 - INFO - Measurement fetched and stored for station: TRU2
+2024-05-14 00:35:01,627 - INFO - Measurement fetched and stored for station: ATT2
+2024-05-14 00:35:03,123 - INFO - Measurement fetched and stored for station: ZNZ2
+2024-05-14 00:35:04,064 - INFO - Measurement fetched and stored for station: OBM2
+2024-05-14 00:35:05,018 - INFO - Measurement fetched and stored for station: MLB1
+2024-05-14 00:35:05,812 - INFO - Measurement fetched and stored for station: ZER4
+2024-05-14 00:35:06,858 - INFO - Measurement fetched and stored for station: HTR2
+2024-05-14 00:35:07,901 - INFO - Measurement fetched and stored for station: PMA2
+2024-05-14 00:35:08,935 - INFO - Measurement fetched and stored for station: DAV6
+2024-05-14 01:05:09,488 - INFO - Measurement fetched and stored for station: DAV2
+2024-05-14 01:05:10,036 - INFO - Measurement fetched and stored for station: VSC1
+2024-05-14 01:05:10,520 - INFO - Measurement fetched and stored for station: MUT2
+2024-05-14 01:05:11,035 - INFO - Measurement fetched and stored for station: TUM2
+2024-05-14 01:05:11,521 - INFO - Measurement fetched and stored for station: GLA2
+2024-05-14 01:05:12,023 - INFO - Measurement fetched and stored for station: GAN2
+2024-05-14 01:05:12,634 - INFO - Measurement fetched and stored for station: GOR2
+2024-05-14 01:05:13,150 - INFO - Measurement fetched and stored for station: GOM1
+2024-05-14 01:05:13,656 - INFO - Measurement fetched and stored for station: ILI1
+2024-05-14 01:05:14,217 - INFO - Measurement fetched and stored for station: VAL2
+2024-05-14 01:05:14,774 - INFO - Measurement fetched and stored for station: BEL2
+2024-05-14 01:05:15,347 - INFO - Measurement fetched and stored for station: TAM3
+2024-05-14 01:05:15,896 - INFO - Measurement fetched and stored for station: ILI2
+2024-05-14 01:05:16,370 - INFO - Measurement fetched and stored for station: MAN1
+2024-05-14 01:05:17,125 - INFO - Measurement fetched and stored for station: GOS2
+2024-05-14 01:05:17,803 - INFO - Measurement fetched and stored for station: ROT3
+2024-05-14 01:05:18,299 - INFO - Measurement fetched and stored for station: FUL2
+2024-05-14 01:05:18,869 - INFO - Measurement fetched and stored for station: ADE3
+2024-05-14 01:05:19,356 - INFO - Measurement fetched and stored for station: FRA2
+2024-05-14 01:05:19,885 - INFO - Measurement fetched and stored for station: SMN2
+2024-05-14 01:05:20,400 - INFO - Measurement fetched and stored for station: BER1
+2024-05-14 01:05:20,957 - INFO - Measurement fetched and stored for station: VLS2
+2024-05-14 01:05:21,484 - INFO - Measurement fetched and stored for station: HIN1
+2024-05-14 01:05:22,016 - INFO - Measurement fetched and stored for station: KLO1
+2024-05-14 01:05:22,558 - INFO - Measurement fetched and stored for station: NEN3
+2024-05-14 01:05:23,056 - INFO - Measurement fetched and stored for station: ARO1
+2024-05-14 01:05:23,616 - INFO - Measurement fetched and stored for station: ADE2
+2024-05-14 01:05:24,152 - INFO - Measurement fetched and stored for station: GRA2
+2024-05-14 01:05:24,800 - INFO - Measurement fetched and stored for station: CAM2
+2024-05-14 01:05:25,296 - INFO - Measurement fetched and stored for station: PLD2
+2024-05-14 01:05:25,796 - INFO - Measurement fetched and stored for station: SCH2
+2024-05-14 01:05:26,411 - INFO - Measurement fetched and stored for station: KES1
+2024-05-14 01:05:26,951 - INFO - Measurement fetched and stored for station: LUM2
+2024-05-14 01:05:27,568 - INFO - Measurement fetched and stored for station: LAU1
+2024-05-14 01:05:28,132 - INFO - Measurement fetched and stored for station: FRA3
+2024-05-14 01:05:28,654 - INFO - Measurement fetched and stored for station: KLT4
+2024-05-14 01:05:29,183 - INFO - Measurement fetched and stored for station: JUL2
+2024-05-14 01:05:29,763 - INFO - Measurement fetched and stored for station: JUL1
+2024-05-14 01:05:30,376 - INFO - Measurement fetched and stored for station: OFE1
+2024-05-14 01:05:30,852 - INFO - Measurement fetched and stored for station: ROA2
+2024-05-14 01:05:31,353 - INFO - Measurement fetched and stored for station: TIT2
+2024-05-14 01:05:31,875 - INFO - Measurement fetched and stored for station: CON2
+2024-05-14 01:05:32,507 - INFO - Measurement fetched and stored for station: GOM2
+2024-05-14 01:05:33,116 - INFO - Measurement fetched and stored for station: STN2
+2024-05-14 01:05:33,667 - INFO - Measurement fetched and stored for station: CMA2
+2024-05-14 01:05:34,206 - INFO - Measurement fetched and stored for station: LAU2
+2024-05-14 01:05:34,774 - INFO - Measurement fetched and stored for station: FOU1
+2024-05-14 01:05:35,269 - INFO - Measurement fetched and stored for station: ROA1
+2024-05-14 01:05:35,807 - INFO - Measurement fetched and stored for station: AMD2
+2024-05-14 01:05:36,321 - INFO - Measurement fetched and stored for station: KLO3
+2024-05-14 01:05:36,872 - INFO - Measurement fetched and stored for station: BOR2
+2024-05-14 01:05:37,420 - INFO - Measurement fetched and stored for station: OBW2
+2024-05-14 01:05:38,065 - INFO - Measurement fetched and stored for station: LAG1
+2024-05-14 01:05:38,613 - INFO - Measurement fetched and stored for station: JAU1
+2024-05-14 01:05:39,147 - INFO - Measurement fetched and stored for station: DTR2
+2024-05-14 01:05:39,678 - INFO - Measurement fetched and stored for station: GUT1
+2024-05-14 01:05:40,306 - INFO - Measurement fetched and stored for station: SHE2
+2024-05-14 01:05:40,902 - INFO - Measurement fetched and stored for station: VIN2
+2024-05-14 01:05:41,366 - INFO - Measurement fetched and stored for station: FLU2
+2024-05-14 01:05:41,882 - INFO - Measurement fetched and stored for station: MAE2
+2024-05-14 01:05:42,491 - INFO - Measurement fetched and stored for station: VSC2
+2024-05-14 01:05:42,896 - INFO - Measurement fetched and stored for station: DAV3
+2024-05-14 01:05:43,410 - INFO - Measurement fetched and stored for station: OBW1
+2024-05-14 01:05:43,891 - INFO - Measurement fetched and stored for station: NAR1
+2024-05-14 01:05:44,489 - INFO - Measurement fetched and stored for station: KES2
+2024-05-14 01:05:45,151 - INFO - Measurement fetched and stored for station: SCB2
+2024-05-14 01:05:45,660 - INFO - Measurement fetched and stored for station: ZER1
+2024-05-14 01:05:46,159 - INFO - Measurement fetched and stored for station: SPN2
+2024-05-14 01:05:46,699 - INFO - Measurement fetched and stored for station: TUJ3
+2024-05-14 01:05:47,202 - INFO - Measurement fetched and stored for station: FAE1
+2024-05-14 01:05:47,683 - INFO - Measurement fetched and stored for station: RNZ2
+2024-05-14 01:05:48,344 - INFO - Measurement fetched and stored for station: BED3
+2024-05-14 01:05:48,923 - INFO - Measurement fetched and stored for station: KLT1
+2024-05-14 01:05:49,425 - INFO - Measurement fetched and stored for station: ZER2
+2024-05-14 01:05:50,077 - INFO - Measurement fetched and stored for station: BER2
+2024-05-14 01:05:50,722 - INFO - Measurement fetched and stored for station: MUN1
+2024-05-14 01:05:51,263 - INFO - Measurement fetched and stored for station: NAS2
+2024-05-14 01:05:51,890 - INFO - Measurement fetched and stored for station: TAM1
+2024-05-14 01:05:52,415 - INFO - Measurement fetched and stored for station: ELS2
+2024-05-14 01:05:52,921 - INFO - Measurement fetched and stored for station: BEV1
+2024-05-14 01:05:53,553 - INFO - Measurement fetched and stored for station: VAL1
+2024-05-14 01:05:54,113 - INFO - Measurement fetched and stored for station: ELM2
+2024-05-14 01:05:54,612 - INFO - Measurement fetched and stored for station: BED1
+2024-05-14 01:05:55,097 - INFO - Measurement fetched and stored for station: FNH2
+2024-05-14 01:05:55,646 - INFO - Measurement fetched and stored for station: ELA1
+2024-05-14 01:05:56,179 - INFO - Measurement fetched and stored for station: GOM3
+2024-05-14 01:05:56,857 - INFO - Measurement fetched and stored for station: CHA2
+2024-05-14 01:05:57,399 - INFO - Measurement fetched and stored for station: TAM2
+2024-05-14 01:05:57,886 - INFO - Measurement fetched and stored for station: VIN1
+2024-05-14 01:05:58,379 - INFO - Measurement fetched and stored for station: NEN1
+2024-05-14 01:05:58,946 - INFO - Measurement fetched and stored for station: GAN1
+2024-05-14 01:05:59,488 - INFO - Measurement fetched and stored for station: LAG3
+2024-05-14 01:06:00,075 - INFO - Measurement fetched and stored for station: FAE2
+2024-05-14 01:06:00,661 - INFO - Measurement fetched and stored for station: BOV2
+2024-05-14 01:06:01,235 - INFO - Measurement fetched and stored for station: VDS2
+2024-05-14 01:06:01,946 - INFO - Measurement fetched and stored for station: SAA1
+2024-05-14 01:06:02,669 - INFO - Measurement fetched and stored for station: MUO1
+2024-05-14 01:06:03,317 - INFO - Measurement fetched and stored for station: ELA3
+2024-05-14 01:06:04,002 - INFO - Measurement fetched and stored for station: OBW3
+2024-05-14 01:06:04,640 - INFO - Measurement fetched and stored for station: HTR1
+2024-05-14 01:06:05,188 - INFO - Measurement fetched and stored for station: KLO2
+2024-05-14 01:06:05,777 - INFO - Measurement fetched and stored for station: ZNZ1
+2024-05-14 01:06:06,315 - INFO - Measurement fetched and stored for station: SPN3
+2024-05-14 01:06:06,847 - INFO - Measurement fetched and stored for station: TRU1
+2024-05-14 01:06:07,361 - INFO - Measurement fetched and stored for station: YBR2
+2024-05-14 01:06:07,903 - INFO - Measurement fetched and stored for station: OFE2
+2024-05-14 01:06:08,376 - INFO - Measurement fetched and stored for station: TUJ2
+2024-05-14 01:06:08,910 - INFO - Measurement fetched and stored for station: URS2
+2024-05-14 01:06:09,344 - INFO - Measurement fetched and stored for station: PAR2
+2024-05-14 01:06:09,812 - INFO - Measurement fetched and stored for station: BOG1
+2024-05-14 01:06:10,342 - INFO - Measurement fetched and stored for station: FUS2
+2024-05-14 01:06:10,843 - INFO - Measurement fetched and stored for station: SWM1
+2024-05-14 01:06:11,407 - INFO - Measurement fetched and stored for station: SAA2
+2024-05-14 01:06:11,971 - INFO - Measurement fetched and stored for station: BOG3
+2024-05-14 01:06:12,494 - INFO - Measurement fetched and stored for station: AMD1
+2024-05-14 01:06:13,034 - INFO - Measurement fetched and stored for station: SIM2
+2024-05-14 01:06:13,521 - INFO - Measurement fetched and stored for station: WFJ2
+2024-05-14 01:06:14,021 - INFO - Measurement fetched and stored for station: GUT2
+2024-05-14 01:06:14,523 - INFO - Measurement fetched and stored for station: SCA2
+2024-05-14 01:06:15,032 - INFO - Measurement fetched and stored for station: ELS1
+2024-05-14 01:06:15,573 - INFO - Measurement fetched and stored for station: HTR3
+2024-05-14 01:06:16,104 - INFO - Measurement fetched and stored for station: PUZ2
+2024-05-14 01:06:16,625 - INFO - Measurement fetched and stored for station: FUL1
+2024-05-14 01:06:17,205 - INFO - Measurement fetched and stored for station: ANV3
+2024-05-14 01:06:17,719 - INFO - Measurement fetched and stored for station: ARO2
+2024-05-14 01:06:18,256 - INFO - Measurement fetched and stored for station: VLS1
+2024-05-14 01:06:18,788 - INFO - Measurement fetched and stored for station: SCH1
+2024-05-14 01:06:19,383 - INFO - Measurement fetched and stored for station: SAA4
+2024-05-14 01:06:19,884 - INFO - Measurement fetched and stored for station: CAM1
+2024-05-14 01:06:20,465 - INFO - Measurement fetched and stored for station: MLB2
+2024-05-14 01:06:20,954 - INFO - Measurement fetched and stored for station: STH1
+2024-05-14 01:06:21,454 - INFO - Measurement fetched and stored for station: DIA2
+2024-05-14 01:06:21,953 - INFO - Measurement fetched and stored for station: TUM1
+2024-05-14 01:06:22,514 - INFO - Measurement fetched and stored for station: ANV2
+2024-05-14 01:06:23,029 - INFO - Measurement fetched and stored for station: ENG2
+2024-05-14 01:06:23,541 - INFO - Measurement fetched and stored for station: JAU2
+2024-05-14 01:06:24,112 - INFO - Measurement fetched and stored for station: VDS1
+2024-05-14 01:06:24,620 - INFO - Measurement fetched and stored for station: STH2
+2024-05-14 01:06:25,107 - INFO - Measurement fetched and stored for station: CSL2
+2024-05-14 01:06:25,616 - INFO - Measurement fetched and stored for station: ALI2
+2024-05-14 01:06:26,125 - INFO - Measurement fetched and stored for station: CAM3
+2024-05-14 01:06:26,607 - INFO - Measurement fetched and stored for station: PUZ1
+2024-05-14 01:06:27,130 - INFO - Measurement fetched and stored for station: KLT3
+2024-05-14 01:06:27,633 - INFO - Measurement fetched and stored for station: BER3
+2024-05-14 01:06:28,153 - INFO - Measurement fetched and stored for station: LHO2
+2024-05-14 01:06:28,673 - INFO - Measurement fetched and stored for station: VRG3
+2024-05-14 01:06:29,179 - INFO - Measurement fetched and stored for station: MUN2
+2024-05-14 01:06:29,663 - INFO - Measurement fetched and stored for station: LAG2
+2024-05-14 01:06:30,312 - INFO - Measurement fetched and stored for station: WAS2
+2024-05-14 01:06:30,904 - INFO - Measurement fetched and stored for station: ALI1
+2024-05-14 01:06:31,409 - INFO - Measurement fetched and stored for station: BOV1
+2024-05-14 01:06:31,927 - INFO - Measurement fetched and stored for station: BEV2
+2024-05-14 01:06:32,450 - INFO - Measurement fetched and stored for station: LUM3
+2024-05-14 01:06:32,995 - INFO - Measurement fetched and stored for station: ARO3
+2024-05-14 01:06:33,500 - INFO - Measurement fetched and stored for station: ELM1
+2024-05-14 01:06:34,054 - INFO - Measurement fetched and stored for station: DAV4
+2024-05-14 01:06:34,592 - INFO - Measurement fetched and stored for station: MES2
+2024-05-14 01:06:35,118 - INFO - Measurement fetched and stored for station: GRA1
+2024-05-14 01:06:35,657 - INFO - Measurement fetched and stored for station: GOS3
+2024-05-14 01:06:36,283 - INFO - Measurement fetched and stored for station: GAD2
+2024-05-14 01:06:36,789 - INFO - Measurement fetched and stored for station: DAV1
+2024-05-14 01:06:37,283 - INFO - Measurement fetched and stored for station: DTR1
+2024-05-14 01:06:37,919 - INFO - Measurement fetched and stored for station: SPN1
+2024-05-14 01:06:38,432 - INFO - Measurement fetched and stored for station: LUK2
+2024-05-14 01:06:38,998 - INFO - Measurement fetched and stored for station: SCA3
+2024-05-14 01:06:39,555 - INFO - Measurement fetched and stored for station: MEI2
+2024-05-14 01:06:40,095 - INFO - Measurement fetched and stored for station: BOG2
+2024-05-14 01:06:40,593 - INFO - Measurement fetched and stored for station: MUO2
+2024-05-14 01:06:41,112 - INFO - Measurement fetched and stored for station: FOU2
+2024-05-14 01:06:41,579 - INFO - Measurement fetched and stored for station: FIS2
+2024-05-14 01:06:42,090 - INFO - Measurement fetched and stored for station: SIM1
+2024-05-14 01:06:42,594 - INFO - Measurement fetched and stored for station: FIR2
+2024-05-14 01:06:43,117 - INFO - Measurement fetched and stored for station: ENG1
+2024-05-14 01:06:43,585 - INFO - Measurement fetched and stored for station: ALB2
+2024-05-14 01:06:44,051 - INFO - Measurement fetched and stored for station: LAV1
+2024-05-14 01:06:44,555 - INFO - Measurement fetched and stored for station: BED4
+2024-05-14 01:06:45,052 - INFO - Measurement fetched and stored for station: LUK1
+2024-05-14 01:06:45,630 - INFO - Measurement fetched and stored for station: OTT2
+2024-05-14 01:06:46,145 - INFO - Measurement fetched and stored for station: NAR2
+2024-05-14 01:06:46,618 - INFO - Measurement fetched and stored for station: ANV1
+2024-05-14 01:06:47,227 - INFO - Measurement fetched and stored for station: MUT1
+2024-05-14 01:06:47,876 - INFO - Measurement fetched and stored for station: BIN4
+2024-05-14 01:06:48,402 - INFO - Measurement fetched and stored for station: ELA2
+2024-05-14 01:06:48,913 - INFO - Measurement fetched and stored for station: URS1
+2024-05-14 01:06:49,403 - INFO - Measurement fetched and stored for station: SAA5
+2024-05-14 01:06:49,946 - INFO - Measurement fetched and stored for station: TUJ1
+2024-05-14 01:06:50,475 - INFO - Measurement fetched and stored for station: MES1
+2024-05-14 01:06:51,038 - INFO - Measurement fetched and stored for station: SCA1
+2024-05-14 01:06:51,564 - INFO - Measurement fetched and stored for station: SLF2
+2024-05-14 01:06:52,118 - INFO - Measurement fetched and stored for station: CHA1
+2024-05-14 01:06:52,742 - INFO - Measurement fetched and stored for station: MTR2
+2024-05-14 01:06:53,244 - INFO - Measurement fetched and stored for station: FNH1
+2024-05-14 01:06:53,818 - INFO - Measurement fetched and stored for station: EGH2
+2024-05-14 01:06:54,361 - INFO - Measurement fetched and stored for station: ORT2
+2024-05-14 01:06:54,872 - INFO - Measurement fetched and stored for station: TRU2
+2024-05-14 01:06:55,403 - INFO - Measurement fetched and stored for station: ATT2
+2024-05-14 01:06:55,969 - INFO - Measurement fetched and stored for station: ZNZ2
+2024-05-14 01:06:56,524 - INFO - Measurement fetched and stored for station: OBM2
+2024-05-14 01:06:57,015 - INFO - Measurement fetched and stored for station: MLB1
+2024-05-14 01:06:57,534 - INFO - Measurement fetched and stored for station: ZER4
+2024-05-14 01:06:58,082 - INFO - Measurement fetched and stored for station: HTR2
+2024-05-14 01:06:58,602 - INFO - Measurement fetched and stored for station: PMA2
+2024-05-14 01:06:59,289 - INFO - Measurement fetched and stored for station: DAV6
+2024-05-14 01:36:59,772 - INFO - Measurement fetched and stored for station: DAV2
+2024-05-14 01:37:00,291 - INFO - Measurement fetched and stored for station: VSC1
+2024-05-14 01:37:00,849 - INFO - Measurement fetched and stored for station: MUT2
+2024-05-14 01:37:01,373 - INFO - Measurement fetched and stored for station: TUM2
+2024-05-14 01:37:01,959 - INFO - Measurement fetched and stored for station: GLA2
+2024-05-14 01:37:02,457 - INFO - Measurement fetched and stored for station: GAN2
+2024-05-14 01:37:02,947 - INFO - Measurement fetched and stored for station: GOR2
+2024-05-14 01:37:03,440 - INFO - Measurement fetched and stored for station: GOM1
+2024-05-14 01:37:03,950 - INFO - Measurement fetched and stored for station: ILI1
+2024-05-14 01:37:04,467 - INFO - Measurement fetched and stored for station: VAL2
+2024-05-14 01:37:04,990 - INFO - Measurement fetched and stored for station: BEL2
+2024-05-14 01:37:05,457 - INFO - Measurement fetched and stored for station: TAM3
+2024-05-14 01:37:05,971 - INFO - Measurement fetched and stored for station: ILI2
+2024-05-14 01:37:06,457 - INFO - Measurement fetched and stored for station: MAN1
+2024-05-14 01:37:06,990 - INFO - Measurement fetched and stored for station: GOS2
+2024-05-14 01:37:07,506 - INFO - Measurement fetched and stored for station: ROT3
+2024-05-14 01:37:08,107 - INFO - Measurement fetched and stored for station: FUL2
+2024-05-14 01:37:08,574 - INFO - Measurement fetched and stored for station: ADE3
+2024-05-14 01:37:09,081 - INFO - Measurement fetched and stored for station: FRA2
+2024-05-14 01:37:09,555 - INFO - Measurement fetched and stored for station: SMN2
+2024-05-14 01:37:10,039 - INFO - Measurement fetched and stored for station: BER1
+2024-05-14 01:37:10,770 - INFO - Measurement fetched and stored for station: VLS2
+2024-05-14 01:37:11,641 - INFO - Measurement fetched and stored for station: HIN1
+2024-05-14 01:37:12,440 - INFO - Measurement fetched and stored for station: KLO1
+2024-05-14 01:37:13,116 - INFO - Measurement fetched and stored for station: NEN3
+2024-05-14 01:37:13,670 - INFO - Measurement fetched and stored for station: ARO1
+2024-05-14 01:37:14,263 - INFO - Measurement fetched and stored for station: ADE2
+2024-05-14 01:37:14,821 - INFO - Measurement fetched and stored for station: GRA2
+2024-05-14 01:37:15,451 - INFO - Measurement fetched and stored for station: CAM2
+2024-05-14 01:37:16,102 - INFO - Measurement fetched and stored for station: PLD2
+2024-05-14 01:37:16,726 - INFO - Measurement fetched and stored for station: SCH2
+2024-05-14 01:37:17,377 - INFO - Measurement fetched and stored for station: KES1
+2024-05-14 01:37:18,009 - INFO - Measurement fetched and stored for station: LUM2
+2024-05-14 01:37:18,793 - INFO - Measurement fetched and stored for station: LAU1
+2024-05-14 01:37:19,433 - INFO - Measurement fetched and stored for station: FRA3
+2024-05-14 01:37:20,192 - INFO - Measurement fetched and stored for station: KLT4
+2024-05-14 01:37:20,784 - INFO - Measurement fetched and stored for station: JUL2
+2024-05-14 01:37:21,505 - INFO - Measurement fetched and stored for station: JUL1
+2024-05-14 01:37:22,178 - INFO - Measurement fetched and stored for station: OFE1
+2024-05-14 01:37:22,872 - INFO - Measurement fetched and stored for station: ROA2
+2024-05-14 01:37:23,537 - INFO - Measurement fetched and stored for station: TIT2
+2024-05-14 01:37:24,257 - INFO - Measurement fetched and stored for station: CON2
+2024-05-14 01:37:24,929 - INFO - Measurement fetched and stored for station: GOM2
+2024-05-14 01:37:25,524 - INFO - Measurement fetched and stored for station: STN2
+2024-05-14 01:37:26,068 - INFO - Measurement fetched and stored for station: CMA2
+2024-05-14 01:37:26,714 - INFO - Measurement fetched and stored for station: LAU2
+2024-05-14 01:37:27,424 - INFO - Measurement fetched and stored for station: FOU1
+2024-05-14 01:37:28,082 - INFO - Measurement fetched and stored for station: ROA1
+2024-05-14 01:37:28,690 - INFO - Measurement fetched and stored for station: AMD2
+2024-05-14 01:37:29,371 - INFO - Measurement fetched and stored for station: KLO3
+2024-05-14 01:37:30,474 - INFO - Measurement fetched and stored for station: BOR2
+2024-05-14 01:37:31,057 - INFO - Measurement fetched and stored for station: OBW2
+2024-05-14 01:37:31,671 - INFO - Measurement fetched and stored for station: LAG1
+2024-05-14 01:37:32,249 - INFO - Measurement fetched and stored for station: JAU1
+2024-05-14 01:37:32,834 - INFO - Measurement fetched and stored for station: DTR2
+2024-05-14 01:37:33,590 - INFO - Measurement fetched and stored for station: GUT1
+2024-05-14 01:37:34,277 - INFO - Measurement fetched and stored for station: SHE2
+2024-05-14 01:37:34,931 - INFO - Measurement fetched and stored for station: VIN2
+2024-05-14 01:37:35,374 - INFO - Measurement fetched and stored for station: FLU2
+2024-05-14 01:37:35,993 - INFO - Measurement fetched and stored for station: MAE2
+2024-05-14 01:37:36,576 - INFO - Measurement fetched and stored for station: VSC2
+2024-05-14 01:37:36,978 - INFO - Measurement fetched and stored for station: DAV3
+2024-05-14 01:37:37,540 - INFO - Measurement fetched and stored for station: OBW1
+2024-05-14 01:37:38,108 - INFO - Measurement fetched and stored for station: NAR1
+2024-05-14 01:37:38,675 - INFO - Measurement fetched and stored for station: KES2
+2024-05-14 01:37:39,408 - INFO - Measurement fetched and stored for station: SCB2
+2024-05-14 01:37:40,065 - INFO - Measurement fetched and stored for station: ZER1
+2024-05-14 01:37:40,682 - INFO - Measurement fetched and stored for station: SPN2
+2024-05-14 01:37:41,264 - INFO - Measurement fetched and stored for station: TUJ3
+2024-05-14 01:37:41,891 - INFO - Measurement fetched and stored for station: FAE1
+2024-05-14 01:37:42,405 - INFO - Measurement fetched and stored for station: RNZ2
+2024-05-14 01:37:42,907 - INFO - Measurement fetched and stored for station: BED3
+2024-05-14 01:37:43,440 - INFO - Measurement fetched and stored for station: KLT1
+2024-05-14 01:37:43,941 - INFO - Measurement fetched and stored for station: ZER2
+2024-05-14 01:37:44,508 - INFO - Measurement fetched and stored for station: BER2
+2024-05-14 01:37:45,122 - INFO - Measurement fetched and stored for station: MUN1
+2024-05-14 01:37:45,807 - INFO - Measurement fetched and stored for station: NAS2
+2024-05-14 01:37:46,355 - INFO - Measurement fetched and stored for station: TAM1
+2024-05-14 01:37:47,142 - INFO - Measurement fetched and stored for station: ELS2
+2024-05-14 01:37:47,767 - INFO - Measurement fetched and stored for station: BEV1
+2024-05-14 01:37:48,333 - INFO - Measurement fetched and stored for station: VAL1
+2024-05-14 01:37:48,937 - INFO - Measurement fetched and stored for station: ELM2
+2024-05-14 01:37:49,618 - INFO - Measurement fetched and stored for station: BED1
+2024-05-14 01:37:50,337 - INFO - Measurement fetched and stored for station: FNH2
+2024-05-14 01:37:50,874 - INFO - Measurement fetched and stored for station: ELA1
+2024-05-14 01:37:51,517 - INFO - Measurement fetched and stored for station: GOM3
+2024-05-14 01:37:52,090 - INFO - Measurement fetched and stored for station: CHA2
+2024-05-14 01:37:52,688 - INFO - Measurement fetched and stored for station: TAM2
+2024-05-14 01:37:53,239 - INFO - Measurement fetched and stored for station: VIN1
+2024-05-14 01:37:53,852 - INFO - Measurement fetched and stored for station: NEN1
+2024-05-14 01:37:54,418 - INFO - Measurement fetched and stored for station: GAN1
+2024-05-14 01:37:55,298 - INFO - Measurement fetched and stored for station: LAG3
+2024-05-14 01:37:56,120 - INFO - Measurement fetched and stored for station: FAE2
+2024-05-14 01:37:56,830 - INFO - Measurement fetched and stored for station: BOV2
+2024-05-14 01:37:57,562 - INFO - Measurement fetched and stored for station: VDS2
+2024-05-14 01:37:58,260 - INFO - Measurement fetched and stored for station: SAA1
+2024-05-14 01:37:58,809 - INFO - Measurement fetched and stored for station: MUO1
+2024-05-14 01:37:59,372 - INFO - Measurement fetched and stored for station: ELA3
+2024-05-14 01:38:00,076 - INFO - Measurement fetched and stored for station: OBW3
+2024-05-14 01:38:00,825 - INFO - Measurement fetched and stored for station: HTR1
+2024-05-14 01:38:01,373 - INFO - Measurement fetched and stored for station: KLO2
+2024-05-14 01:38:02,073 - INFO - Measurement fetched and stored for station: ZNZ1
+2024-05-14 01:38:02,607 - INFO - Measurement fetched and stored for station: SPN3
+2024-05-14 01:38:03,222 - INFO - Measurement fetched and stored for station: TRU1
+2024-05-14 01:38:03,815 - INFO - Measurement fetched and stored for station: YBR2
+2024-05-14 01:38:04,374 - INFO - Measurement fetched and stored for station: OFE2
+2024-05-14 01:38:05,157 - INFO - Measurement fetched and stored for station: TUJ2
+2024-05-14 01:38:05,805 - INFO - Measurement fetched and stored for station: URS2
+2024-05-14 01:38:06,292 - INFO - Measurement fetched and stored for station: PAR2
+2024-05-14 01:38:06,990 - INFO - Measurement fetched and stored for station: BOG1
+2024-05-14 01:38:07,672 - INFO - Measurement fetched and stored for station: FUS2
+2024-05-14 01:38:08,391 - INFO - Measurement fetched and stored for station: SWM1
+2024-05-14 01:38:08,989 - INFO - Measurement fetched and stored for station: SAA2
+2024-05-14 01:38:09,572 - INFO - Measurement fetched and stored for station: BOG3
+2024-05-14 01:38:10,120 - INFO - Measurement fetched and stored for station: AMD1
+2024-05-14 01:38:10,731 - INFO - Measurement fetched and stored for station: SIM2
+2024-05-14 01:38:11,154 - INFO - Measurement fetched and stored for station: WFJ2
+2024-05-14 01:38:11,726 - INFO - Measurement fetched and stored for station: GUT2
+2024-05-14 01:38:12,231 - INFO - Measurement fetched and stored for station: SCA2
+2024-05-14 01:38:12,879 - INFO - Measurement fetched and stored for station: ELS1
+2024-05-14 01:38:13,474 - INFO - Measurement fetched and stored for station: HTR3
+2024-05-14 01:38:14,069 - INFO - Measurement fetched and stored for station: PUZ2
+2024-05-14 01:38:14,702 - INFO - Measurement fetched and stored for station: FUL1
+2024-05-14 01:38:15,302 - INFO - Measurement fetched and stored for station: ANV3
+2024-05-14 01:38:16,007 - INFO - Measurement fetched and stored for station: ARO2
+2024-05-14 01:38:16,735 - INFO - Measurement fetched and stored for station: VLS1
+2024-05-14 01:38:17,275 - INFO - Measurement fetched and stored for station: SCH1
+2024-05-14 01:38:17,909 - INFO - Measurement fetched and stored for station: SAA4
+2024-05-14 01:38:18,452 - INFO - Measurement fetched and stored for station: CAM1
+2024-05-14 01:38:19,026 - INFO - Measurement fetched and stored for station: MLB2
+2024-05-14 01:38:19,724 - INFO - Measurement fetched and stored for station: STH1
+2024-05-14 01:38:20,334 - INFO - Measurement fetched and stored for station: DIA2
+2024-05-14 01:38:20,942 - INFO - Measurement fetched and stored for station: TUM1
+2024-05-14 01:38:21,648 - INFO - Measurement fetched and stored for station: ANV2
+2024-05-14 01:38:22,422 - INFO - Measurement fetched and stored for station: ENG2
+2024-05-14 01:38:23,075 - INFO - Measurement fetched and stored for station: JAU2
+2024-05-14 01:38:23,636 - INFO - Measurement fetched and stored for station: VDS1
+2024-05-14 01:38:24,220 - INFO - Measurement fetched and stored for station: STH2
+2024-05-14 01:38:24,737 - INFO - Measurement fetched and stored for station: CSL2
+2024-05-14 01:38:25,297 - INFO - Measurement fetched and stored for station: ALI2
+2024-05-14 01:38:25,923 - INFO - Measurement fetched and stored for station: CAM3
+2024-05-14 01:38:26,723 - INFO - Measurement fetched and stored for station: PUZ1
+2024-05-14 01:38:27,301 - INFO - Measurement fetched and stored for station: KLT3
+2024-05-14 01:38:28,189 - INFO - Measurement fetched and stored for station: BER3
+2024-05-14 01:38:29,057 - INFO - Measurement fetched and stored for station: LHO2
+2024-05-14 01:38:29,774 - INFO - Measurement fetched and stored for station: VRG3
+2024-05-14 01:38:30,526 - INFO - Measurement fetched and stored for station: MUN2
+2024-05-14 01:38:31,387 - INFO - Measurement fetched and stored for station: LAG2
+2024-05-14 01:38:31,988 - INFO - Measurement fetched and stored for station: WAS2
+2024-05-14 01:38:32,557 - INFO - Measurement fetched and stored for station: ALI1
+2024-05-14 01:38:33,169 - INFO - Measurement fetched and stored for station: BOV1
+2024-05-14 01:38:33,739 - INFO - Measurement fetched and stored for station: BEV2
+2024-05-14 01:38:34,391 - INFO - Measurement fetched and stored for station: LUM3
+2024-05-14 01:38:35,090 - INFO - Measurement fetched and stored for station: ARO3
+2024-05-14 01:38:35,770 - INFO - Measurement fetched and stored for station: ELM1
+2024-05-14 01:38:36,306 - INFO - Measurement fetched and stored for station: DAV4
+2024-05-14 01:38:36,904 - INFO - Measurement fetched and stored for station: MES2
+2024-05-14 01:38:37,460 - INFO - Measurement fetched and stored for station: GRA1
+2024-05-14 01:38:38,015 - INFO - Measurement fetched and stored for station: GOS3
+2024-05-14 01:38:38,562 - INFO - Measurement fetched and stored for station: GAD2
+2024-05-14 01:38:39,156 - INFO - Measurement fetched and stored for station: DAV1
+2024-05-14 01:38:39,702 - INFO - Measurement fetched and stored for station: DTR1
+2024-05-14 01:38:40,274 - INFO - Measurement fetched and stored for station: SPN1
+2024-05-14 01:38:40,824 - INFO - Measurement fetched and stored for station: LUK2
+2024-05-14 01:38:41,388 - INFO - Measurement fetched and stored for station: SCA3
+2024-05-14 01:38:42,034 - INFO - Measurement fetched and stored for station: MEI2
+2024-05-14 01:38:42,674 - INFO - Measurement fetched and stored for station: BOG2
+2024-05-14 01:38:43,254 - INFO - Measurement fetched and stored for station: MUO2
+2024-05-14 01:38:43,773 - INFO - Measurement fetched and stored for station: FOU2
+2024-05-14 01:38:44,290 - INFO - Measurement fetched and stored for station: FIS2
+2024-05-14 01:38:44,839 - INFO - Measurement fetched and stored for station: SIM1
+2024-05-14 01:38:45,387 - INFO - Measurement fetched and stored for station: FIR2
+2024-05-14 01:38:46,021 - INFO - Measurement fetched and stored for station: ENG1
+2024-05-14 01:38:46,573 - INFO - Measurement fetched and stored for station: ALB2
+2024-05-14 01:38:47,123 - INFO - Measurement fetched and stored for station: LAV1
+2024-05-14 01:38:47,676 - INFO - Measurement fetched and stored for station: BED4
+2024-05-14 01:38:48,192 - INFO - Measurement fetched and stored for station: LUK1
+2024-05-14 01:38:48,771 - INFO - Measurement fetched and stored for station: OTT2
+2024-05-14 01:38:49,357 - INFO - Measurement fetched and stored for station: NAR2
+2024-05-14 01:38:50,117 - INFO - Measurement fetched and stored for station: ANV1
+2024-05-14 01:38:50,787 - INFO - Measurement fetched and stored for station: MUT1
+2024-05-14 01:38:51,324 - INFO - Measurement fetched and stored for station: BIN4
+2024-05-14 01:38:51,941 - INFO - Measurement fetched and stored for station: ELA2
+2024-05-14 01:38:52,539 - INFO - Measurement fetched and stored for station: URS1
+2024-05-14 01:38:53,148 - INFO - Measurement fetched and stored for station: SAA5
+2024-05-14 01:38:53,855 - INFO - Measurement fetched and stored for station: TUJ1
+2024-05-14 01:38:54,552 - INFO - Measurement fetched and stored for station: MES1
+2024-05-14 01:38:55,307 - INFO - Measurement fetched and stored for station: SCA1
+2024-05-14 01:38:55,901 - INFO - Measurement fetched and stored for station: SLF2
+2024-05-14 01:38:56,504 - INFO - Measurement fetched and stored for station: CHA1
+2024-05-14 01:38:57,064 - INFO - Measurement fetched and stored for station: MTR2
+2024-05-14 01:38:57,621 - INFO - Measurement fetched and stored for station: FNH1
+2024-05-14 01:38:58,362 - INFO - Measurement fetched and stored for station: EGH2
+2024-05-14 01:38:59,017 - INFO - Measurement fetched and stored for station: ORT2
+2024-05-14 01:38:59,623 - INFO - Measurement fetched and stored for station: TRU2
+2024-05-14 01:39:00,207 - INFO - Measurement fetched and stored for station: ATT2
+2024-05-14 01:39:00,811 - INFO - Measurement fetched and stored for station: ZNZ2
+2024-05-14 01:39:01,474 - INFO - Measurement fetched and stored for station: OBM2
+2024-05-14 01:39:02,366 - INFO - Measurement fetched and stored for station: MLB1
+2024-05-14 01:39:04,371 - INFO - Measurement fetched and stored for station: ZER4
+2024-05-14 01:39:04,867 - INFO - Measurement fetched and stored for station: HTR2
+2024-05-14 01:39:05,387 - INFO - Measurement fetched and stored for station: PMA2
+2024-05-14 01:39:05,911 - INFO - Measurement fetched and stored for station: DAV6
