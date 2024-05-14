@@ -84,6 +84,7 @@ const Hauptmenu = () => {
       }),
     });
   }, []);
+  // Funktion für die Schaltflächen im Hauptmenu und Routen zu den Menüs
   function hauptmenuSchaltfächenErstellen(text, link) {
     return (
       <Grid item xs={6} className="button-grid-item">
@@ -237,6 +238,7 @@ const Hauptmenu = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             justifyContent="center"
           >
+            {/*  Schaltflächen für die Menüs, Name und Route */}
             {hauptmenuSchaltfächenErstellen("Karte", "/Karte")}
             {hauptmenuSchaltfächenErstellen("Wetter", "/Wetter")}
             {hauptmenuSchaltfächenErstellen("Statistiken", "/Statistiken")}
