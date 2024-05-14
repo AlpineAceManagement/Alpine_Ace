@@ -82,6 +82,10 @@ const Wetter = () => {
     fetchData();
   }, []);
 
+  const currentDate = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = currentDate.toLocaleDateString('de-DE', options);
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -111,15 +115,15 @@ const Wetter = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-                <h1
+                <h2
                   style={{
                     textAlign: "center",
                     color: "#282c34",
                     marginBottom: "20px",
                   }}
                 >
-                  Wetter
-                </h1>
+                  Wetter am {formattedDate}
+                </h2>
             </Grid>
             <Grid item xs={12}>
                 <Vega
