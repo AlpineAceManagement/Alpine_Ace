@@ -182,42 +182,43 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
 
 <table style="border-collapse: collapse;">
     <tr>
-        <td style="border: none;">Mock-Up</td>
-        <td style="border: none;">App</td>
+        <td style="border: none;"><h3>Mock-Up</h3></td>
+        <td style="border: none;"><h3>App</h3></td>
     </tr>
     <tr>
         <td style="border: none;">Karte</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td>#TODO image Karte-App</td>
     </tr>
     <tr>
         <td style="border: none;">Wetter</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-wetter.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td></td>
+        <td>#TODO image Wetter-App</td>
     </tr>
     <tr>
         <td style="border: none;">Statistiken</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-stat.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td></td>
+        <td>#TODO image Statistiken-App</td>
     </tr>
     <tr>
         <td style="border: none;">Navi</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-navi.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td></td>
+        <td>#TODO image Navi-App</td>
     </tr>
     <tr>
         <td style="border: none;">Restaurant</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-restaurant.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td></td>
+        <td>#TODO image Restaurant-App</td>
     </tr>
 </table>
 
