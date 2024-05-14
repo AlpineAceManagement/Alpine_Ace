@@ -200,7 +200,7 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-karte.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-karte.jpg" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-karte.jpg" style="max-height: 75%; width: 75%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none; text-align: center;" colspan="2"><h4>Wetter</h4></td>
