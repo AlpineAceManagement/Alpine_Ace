@@ -102,3 +102,21 @@ LINE 1: ...VALUES ( '2024-05-12T16:00:00+00:00'::timestamptz,'gewitter'...
 2024-05-14 09:47:04,221 - INFO - Current weather data saved to database
 2024-05-14 09:47:04,292 - INFO - Hourly forecast data saved to database.
 2024-05-14 10:02:36,257 - INFO - Current weather data saved to database
+2024-05-14 13:55:55,754 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:55,813 - ERROR - Database error while saving hourly forecast: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:10:56,024 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:25:56,178 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:40:56,407 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:55:56,567 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:10:56,766 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:25:56,933 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:40:57,119 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
