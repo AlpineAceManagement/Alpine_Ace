@@ -291,11 +291,13 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 ##### Funktion
 
 - **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
-![Diagramme Dashboard](images/Dashboard_Analgen.png "Diagramme der aktuellen Pisten und Anlagen Informationen")
+![Diagramme Dashboard](images/Dashboard_Anlagen.png )
+*Diagramme der aktuellen Pisten und Anlagen Informationen*
 
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-![Bulletins Piktogramme](images/Lawinen_Piktogramme.png "Piktogramme der Bulletins")
+![Bulletins Piktogramme](images/Lawinen_Piktogramme.png )
+*Piktogramme der Bulletins*
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
@@ -399,8 +401,19 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 **Wettervorhersage**
 
 
+
 **Aktuelle Wetterdaten**
-Die Aktuellen Wetterdaten werden über eine API abfragen geholt.  
+Die Aktuellen Wetterdaten werden über eine API abfragen geholt. mit Express wird auf die Datenbank zugegriffen und folgende abfrage gemacht.
+`"SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"` Die daten lassen sich dann von 
+Somit hat man immer die aktuellsten Informationen welche in der Datenbank liegen. Die daten werden dann mit useEffect aufgerufen und in die Variabel weatherData gespeichert. der Aufruf des gewünschten werts erfoglt mit weatherData.md_temperatur. Möchte man die aktuelle windrichtung so ändert sich die eingabe nach dem Punkt auf md_windrichtung.
+
+Die aktuellen schneedaten werden ebenfalls über eine Express-API bezogen. `http://localhost:5000/api/schneehoehe`
+Die API zeigt dabei Werte die nach folgender Abfrage generiert werden.
+```
+SQL
+"SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"```
+Man erhölt somit immer die aktuelste information der schneehöhe.
+
 
 
 #### Statistiken
