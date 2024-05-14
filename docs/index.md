@@ -415,8 +415,6 @@ SQL
 ```
 Man erhölt somit immer die aktuelste information der schneehöhe.
 
-
-
 #### Statistiken
 
 Beschreibung Statistiken (#TODO)
