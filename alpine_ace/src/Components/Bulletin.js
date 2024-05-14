@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 const Bulletin = () => {
     const [bulletins, setBulletins] = useState(null);
     const [loading, setLoading] = useState(true);
