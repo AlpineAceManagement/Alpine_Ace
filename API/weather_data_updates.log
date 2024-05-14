@@ -63,3 +63,37 @@ LINE 1: ...VALUES ( '2024-05-12T16:00:00+00:00'::timestamptz,'gewitter'...
 
 2024-05-14 09:00:57,669 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
 
+2024-05-14 09:15:57,858 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 09:30:58,073 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 09:45:58,269 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 10:00:58,479 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 10:15:58,652 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 10:30:58,831 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 10:45:58,999 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 11:00:59,136 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 11:15:59,354 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 11:30:59,523 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 11:45:59,707 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 12:23:37,876 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 12:38:38,158 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 12:53:38,309 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:08:38,538 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:23:38,678 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:38:38,829 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
