@@ -432,6 +432,8 @@ Beschreibung Statistiken (#TODO)
 
 Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
 
+<iframe src="videos/Statistiken.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Statistiken Viewer
