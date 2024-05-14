@@ -27,7 +27,7 @@ def get_season(date):
         return "{}/{}".format(date.year - 1, date.year)
 
 # GPX-Datei hochladen
-path = 'GPX_files/6' 
+path = 'GPX_files/10'
 baum = ET.parse(path+'.gpx')
 wurzel = baum.getroot()
 

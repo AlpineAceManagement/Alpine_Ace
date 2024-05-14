@@ -11,7 +11,11 @@ import theme from "./theme";
 import { ZoomToExtent, defaults as defaultControls } from "ol/control.js";
 import { SwisstopoLayer } from "./swisstopoLayer";
 import { createVectorSource } from "./kartenWFS";
-import { skidatenAnfrageStyl } from "./kartenLayerStyle";
+import {
+  skidatenAnfrageStyl,
+  pistenStyle,
+  anlagenStyle,
+} from "./kartenLayerStyle";
 
 const StatistikenViewer = () => {
   const [mapInstance, setMapInstance] = useState(null);
@@ -36,16 +40,34 @@ const StatistikenViewer = () => {
   }, []);
 
   useEffect(() => {
+    //WFS Anfrage für alle Pisten aus kartenWFS.js
+    const pistenSource = createVectorSource("pisten", bboxStrategy);
+    //WFS Anfrage für alle Anlagen aus kartenWFS.js
+    const anlagenSource = createVectorSource("anlagen", bboxStrategy);
     //WFS Anfrage für das ausgewählte Skidaten Aufnahme
     const skidatenAnfrageSource = createVectorSource(
       "a_a_skidaten_weg&viewparams=Skidaten_ID:" + Skidaten_ID + ";",
       bboxStrategy
     );
+    //Pisten Layer Styl aus kartenLayerStyle.js
+    const pistenLayer = new VectorLayer({
+      source: pistenSource,
+      style: pistenStyle,
+    });
+    // Anlagen Layer Styl aus kartenLayerStyle.js
+    const styleFunction = function (feature) {
+      return anlagenStyle(feature);
+    };
 
     // Skidaten Anfrage Layer Styl aus kartenLayerStyle.js
     const skidatenAnfrageLayer = new VectorLayer({
       source: skidatenAnfrageSource,
       style: skidatenAnfrageStyl,
+    });
+    // Anlage Layer Styl aus kartenLayerStyle.js
+    const anlagenLayer = new VectorLayer({
+      source: anlagenSource,
+      style: styleFunction,
     });
 
     //Definition des Kartenextents für WMS/WMTS
@@ -55,7 +77,9 @@ const StatistikenViewer = () => {
 
     // Darstellungsreihenfolge der Layer festlegen
     WMSwinterlandeskarteLayer.setZIndex(0);
-    skidatenAnfrageLayer.setZIndex(1);
+    pistenLayer.setZIndex(1);
+    anlagenLayer.setZIndex(2);
+    skidatenAnfrageLayer.setZIndex(3);
 
     // Karte erstellen
     const map = new Map({
@@ -65,7 +89,12 @@ const StatistikenViewer = () => {
           extent: [2755375, 1164628, 2775625, 1195443],
         }),
       ]),
-      layers: [WMSwinterlandeskarteLayer, skidatenAnfrageLayer], // angezeigte Layer definieren
+      layers: [
+        WMSwinterlandeskarteLayer,
+        skidatenAnfrageLayer,
+        pistenLayer,
+        anlagenLayer,
+      ], // angezeigte Layer definieren
       target: mapRef.current,
       view: new View({
         center: [2762640.8, 1179359.1], // Zentrum der Karte
