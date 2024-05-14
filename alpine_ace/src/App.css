@@ -178,13 +178,13 @@
 
 }
 
-/* CSS for the parent div */
-.parent-div {
-  display: flex;
-  justify-content: space-between;
+
+
+.vega-container {
+  display: grid; /* Das übergeordnete Element als Grid definieren */
 }
 
-/* CSS for the Vega chart element */
 .vega-vis {
-  width: 100%; /* Optional if using Flexbox for parent */
+  width: 100%; /* Vega soll die gesamte Breite des Grid-Bereichs einnehmen */
+  height: auto; /* Höhe automatisch anpassen */
 }
