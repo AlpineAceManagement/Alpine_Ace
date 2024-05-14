@@ -2,7 +2,7 @@
 
 # Alpine Ace - Ski App
 
-**Willkommen auf der Projekt Website der _Alpine Ace Ski App_.**\
+**Willkommen auf der Projekt Website der _Alpine Ace Ski App_.** \
 
 Im Vertiefungsmodul _4230: GeoInformatik & Raumanalyse I_ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde im Rahmen einer Projektarbeit die Geodateninfrastruktur (GDI) _Alpine Ace-Ski App_ entwickelt. Abgesehen von der Vorgabe räumlich-zeitlicher Inhalte hatten wir freie Themenwahl.
 
