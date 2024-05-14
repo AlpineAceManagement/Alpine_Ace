@@ -190,35 +190,42 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" />#TODO ! Nur Beispiel</td>
+        <td style="border: none;"><img src="images/app-karte.jpg" style="max-width: 80%; max-height: 80%;" /></td>
     </tr>
     <tr>
         <td style="border: none;">Wetter</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-wetter.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td>#TODO image Wetter-App</td>
+        <td style="border: none;"><img src="images/app-wetter.jpg" style="max-width: 80%; max-height: 80%;" /></td>
     </tr>
     <tr>
         <td style="border: none;">Statistiken</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-stat.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td>#TODO image Statistiken-App</td>
+        <td style="border: none;"><img src="images/app-stat.jpg" style="max-width: 80%; max-height: 80%;" /></td>
+    </tr>
+    <tr>
+        <td style="border: none;">Weg</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-weg.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td style="border: none;"><img src="images/app-weg.jpg" style="max-width: 80%; max-height: 80%;" /></td>
     </tr>
     <tr>
         <td style="border: none;">Navi</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-navi.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td>#TODO image Navi-App</td>
+        <td style="border: none;"><img src="images/app-navi.jpg" style="max-width: 80%; max-height: 80%;" /></td>
     </tr>
     <tr>
         <td style="border: none;">Restaurant</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-restaurant.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td>#TODO image Restaurant-App</td>
+        <td style="border: none;"><img src="images/app-restaurant.jpg" style="max-width: 80%; max-height: 80%;" /></td>
     </tr>
 </table>
 
