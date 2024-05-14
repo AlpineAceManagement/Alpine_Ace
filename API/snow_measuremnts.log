@@ -3713,3 +3713,1627 @@ DETAIL:  Fehlgeschlagene Zeile enthält (3399, 2024-05-14 07:30:00, null, MLB1).
 2024-05-14 09:48:51,223 - INFO - Measurement fetched and stored for station: HTR2
 2024-05-14 09:48:51,996 - INFO - Measurement fetched and stored for station: PMA2
 2024-05-14 09:48:52,551 - INFO - Measurement fetched and stored for station: DAV6
+2024-05-14 13:55:53,491 - ERROR - Database error for station DAV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:54,693 - ERROR - Database error for station VSC1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:55,506 - ERROR - Database error for station MUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:56,308 - ERROR - Database error for station TUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:56,950 - ERROR - Database error for station GLA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:57,517 - ERROR - Database error for station GAN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:58,197 - ERROR - Database error for station GOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:59,087 - ERROR - Database error for station GOM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:55:59,984 - ERROR - Database error for station ILI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:00,843 - ERROR - Database error for station VAL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:01,699 - ERROR - Database error for station BEL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:02,501 - ERROR - Database error for station TAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:03,346 - ERROR - Database error for station ILI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:04,169 - ERROR - Database error for station MAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:04,966 - ERROR - Database error for station GOS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:05,749 - ERROR - Database error for station ROT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:06,617 - ERROR - Database error for station FUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:07,347 - ERROR - Database error for station ADE3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:08,299 - ERROR - Database error for station FRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:09,154 - ERROR - Database error for station SMN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:09,922 - ERROR - Database error for station BER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:10,646 - ERROR - Database error for station VLS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:11,372 - ERROR - Database error for station HIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:11,980 - ERROR - Database error for station KLO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:12,527 - ERROR - Database error for station NEN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:12,986 - ERROR - Database error for station ARO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:13,580 - ERROR - Database error for station ADE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:14,023 - ERROR - Database error for station GRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:14,538 - ERROR - Database error for station CAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:15,121 - ERROR - Database error for station PLD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:16,291 - ERROR - Database error for station SCH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:17,372 - ERROR - Database error for station KES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:18,014 - ERROR - Database error for station LUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:18,703 - ERROR - Database error for station LAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:19,372 - ERROR - Database error for station FRA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:19,915 - ERROR - Database error for station KLT4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:20,594 - ERROR - Database error for station JUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:21,333 - ERROR - Database error for station JUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:21,974 - ERROR - Database error for station OFE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:22,617 - ERROR - Database error for station ROA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:23,350 - ERROR - Database error for station TIT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:23,920 - ERROR - Database error for station CON2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:24,507 - ERROR - Database error for station GOM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:25,208 - ERROR - Database error for station STN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:25,952 - ERROR - Database error for station CMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:26,529 - ERROR - Database error for station LAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:27,148 - ERROR - Database error for station FOU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:27,846 - ERROR - Database error for station ROA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:28,431 - ERROR - Database error for station AMD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:29,080 - ERROR - Database error for station KLO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:29,624 - ERROR - Database error for station BOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:30,888 - ERROR - Database error for station OBW2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:31,398 - ERROR - Database error for station LAG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:31,971 - ERROR - Database error for station JAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:32,630 - ERROR - Database error for station DTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:33,409 - ERROR - Database error for station GUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:34,082 - ERROR - Database error for station SHE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:34,938 - ERROR - Database error for station VIN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:35,634 - ERROR - Database error for station FLU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:37,154 - ERROR - Database error for station MAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:38,113 - ERROR - Database error for station VSC2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:38,902 - ERROR - Database error for station DAV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:39,478 - ERROR - Database error for station OBW1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:40,041 - ERROR - Database error for station NAR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:40,591 - ERROR - Database error for station KES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:41,092 - ERROR - Database error for station SCB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:41,697 - ERROR - Database error for station ZER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:42,277 - ERROR - Database error for station SPN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:42,896 - ERROR - Database error for station TUJ3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:43,400 - ERROR - Database error for station FAE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:43,946 - ERROR - Database error for station RNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:44,517 - ERROR - Database error for station BED3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:45,059 - ERROR - Database error for station KLT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:45,594 - ERROR - Database error for station ZER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:46,098 - ERROR - Database error for station BER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:46,563 - ERROR - Database error for station MUN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:47,097 - ERROR - Database error for station NAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:47,632 - ERROR - Database error for station TAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:48,194 - ERROR - Database error for station ELS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:48,756 - ERROR - Database error for station BEV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:49,505 - ERROR - Database error for station VAL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:50,109 - ERROR - Database error for station ELM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:50,644 - ERROR - Database error for station BED1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:51,202 - ERROR - Database error for station FNH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:51,747 - ERROR - Database error for station ELA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:52,360 - ERROR - Database error for station GOM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:52,950 - ERROR - Database error for station CHA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:53,748 - ERROR - Database error for station TAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:54,434 - ERROR - Database error for station VIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:55,113 - ERROR - Database error for station NEN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:55,809 - ERROR - Database error for station GAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:56,489 - ERROR - Database error for station LAG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:57,150 - ERROR - Database error for station FAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:57,972 - ERROR - Database error for station BOV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:58,636 - ERROR - Database error for station VDS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:59,245 - ERROR - Database error for station SAA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:56:59,812 - ERROR - Database error for station MUO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:00,341 - ERROR - Database error for station ELA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:00,946 - ERROR - Database error for station OBW3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:01,460 - ERROR - Database error for station HTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:01,931 - ERROR - Database error for station KLO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:02,399 - ERROR - Database error for station ZNZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:02,953 - ERROR - Database error for station SPN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:03,599 - ERROR - Database error for station TRU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:04,129 - ERROR - Database error for station YBR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:04,636 - ERROR - Database error for station OFE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:05,319 - ERROR - Database error for station TUJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:06,393 - ERROR - Database error for station URS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:06,931 - ERROR - Database error for station PAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:07,531 - ERROR - Database error for station BOG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:08,074 - ERROR - Database error for station FUS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:08,623 - ERROR - Database error for station SWM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:09,195 - ERROR - Database error for station SAA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:09,915 - ERROR - Database error for station BOG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:10,699 - ERROR - Database error for station AMD1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:11,517 - ERROR - Database error for station SIM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:12,312 - ERROR - Database error for station WFJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:13,139 - ERROR - Database error for station GUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:13,996 - ERROR - Database error for station SCA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:14,923 - ERROR - Database error for station ELS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:16,041 - ERROR - Database error for station HTR3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:16,870 - ERROR - Database error for station PUZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:17,633 - ERROR - Database error for station FUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:18,498 - ERROR - Database error for station ANV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:19,300 - ERROR - Database error for station ARO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:20,005 - ERROR - Database error for station VLS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:20,558 - ERROR - Database error for station SCH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:21,416 - ERROR - Database error for station SAA4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:22,177 - ERROR - Database error for station CAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:22,732 - ERROR - Database error for station MLB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:23,245 - ERROR - Database error for station STH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:23,768 - ERROR - Database error for station DIA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:24,307 - ERROR - Database error for station TUM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:24,788 - ERROR - Database error for station ANV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:25,279 - ERROR - Database error for station ENG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:25,737 - ERROR - Database error for station JAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:26,230 - ERROR - Database error for station VDS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:26,688 - ERROR - Database error for station STH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:27,107 - ERROR - Database error for station CSL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:27,518 - ERROR - Database error for station ALI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:27,995 - ERROR - Database error for station CAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:28,581 - ERROR - Database error for station PUZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:29,091 - ERROR - Database error for station KLT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:29,612 - ERROR - Database error for station BER3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:30,053 - ERROR - Database error for station LHO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:30,497 - ERROR - Database error for station VRG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:30,946 - ERROR - Database error for station MUN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:31,381 - ERROR - Database error for station LAG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:31,934 - ERROR - Database error for station WAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:32,381 - ERROR - Database error for station ALI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:32,806 - ERROR - Database error for station BOV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:33,919 - ERROR - Database error for station BEV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:34,413 - ERROR - Database error for station LUM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:34,939 - ERROR - Database error for station ARO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:35,357 - ERROR - Database error for station ELM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:35,813 - ERROR - Database error for station DAV4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:36,343 - ERROR - Database error for station MES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:36,878 - ERROR - Database error for station GRA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:37,397 - ERROR - Database error for station GOS3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:37,902 - ERROR - Database error for station GAD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:38,360 - ERROR - Database error for station DAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:38,829 - ERROR - Database error for station DTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:39,280 - ERROR - Database error for station SPN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:39,730 - ERROR - Database error for station LUK2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:40,177 - ERROR - Database error for station SCA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:40,721 - ERROR - Database error for station MEI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:41,263 - ERROR - Database error for station BOG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:41,835 - ERROR - Database error for station MUO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:42,312 - ERROR - Database error for station FOU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:42,786 - ERROR - Database error for station FIS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:43,372 - ERROR - Database error for station SIM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:43,931 - ERROR - Database error for station FIR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:44,353 - ERROR - Database error for station ENG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:44,927 - ERROR - Database error for station ALB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:45,406 - ERROR - Database error for station LAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:45,894 - ERROR - Database error for station BED4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:46,392 - ERROR - Database error for station LUK1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:46,838 - ERROR - Database error for station OTT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:47,328 - ERROR - Database error for station NAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:47,761 - ERROR - Database error for station ANV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:48,246 - ERROR - Database error for station MUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:48,746 - ERROR - Database error for station BIN4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:49,265 - ERROR - Database error for station ELA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:49,701 - ERROR - Database error for station URS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:50,328 - ERROR - Database error for station SAA5: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:50,889 - ERROR - Database error for station TUJ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:51,503 - ERROR - Database error for station MES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:52,086 - ERROR - Database error for station SCA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:52,644 - ERROR - Database error for station SLF2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:53,208 - ERROR - Database error for station CHA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:53,766 - ERROR - Database error for station MTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:54,315 - ERROR - Database error for station FNH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:54,918 - ERROR - Database error for station EGH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:55,515 - ERROR - Database error for station ORT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:55,937 - ERROR - Database error for station TRU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:56,374 - ERROR - Database error for station ATT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:56,856 - ERROR - Database error for station ZNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:57,369 - ERROR - Database error for station OBM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:57,819 - ERROR - Database error for station MLB1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:58,460 - ERROR - Database error for station ZER4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:59,031 - ERROR - Database error for station HTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:57:59,524 - ERROR - Database error for station PMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 13:58:00,018 - ERROR - Database error for station DAV6: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:00,498 - ERROR - Database error for station DAV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:00,909 - ERROR - Database error for station VSC1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:01,341 - ERROR - Database error for station MUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:01,833 - ERROR - Database error for station TUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:02,320 - ERROR - Database error for station GLA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:02,750 - ERROR - Database error for station GAN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:03,251 - ERROR - Database error for station GOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:03,698 - ERROR - Database error for station GOM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:04,122 - ERROR - Database error for station ILI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:04,516 - ERROR - Database error for station VAL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:04,949 - ERROR - Database error for station BEL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:05,465 - ERROR - Database error for station TAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:05,924 - ERROR - Database error for station ILI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:06,340 - ERROR - Database error for station MAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:06,776 - ERROR - Database error for station GOS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:07,254 - ERROR - Database error for station ROT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:08,288 - ERROR - Database error for station FUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:09,274 - ERROR - Database error for station ADE3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:09,916 - ERROR - Database error for station FRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:11,056 - ERROR - Database error for station SMN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:11,850 - ERROR - Database error for station BER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:12,615 - ERROR - Database error for station VLS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:13,184 - ERROR - Database error for station HIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:13,678 - ERROR - Database error for station KLO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:14,124 - ERROR - Database error for station NEN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:14,596 - ERROR - Database error for station ARO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:15,086 - ERROR - Database error for station ADE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:15,580 - ERROR - Database error for station GRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:16,061 - ERROR - Database error for station CAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:16,492 - ERROR - Database error for station PLD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:16,928 - ERROR - Database error for station SCH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:17,362 - ERROR - Database error for station KES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:17,778 - ERROR - Database error for station LUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:18,169 - ERROR - Database error for station LAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:18,569 - ERROR - Database error for station FRA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:18,959 - ERROR - Database error for station KLT4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:19,406 - ERROR - Database error for station JUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:19,927 - ERROR - Database error for station JUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:20,410 - ERROR - Database error for station OFE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:20,874 - ERROR - Database error for station ROA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:21,358 - ERROR - Database error for station TIT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:21,797 - ERROR - Database error for station CON2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:22,248 - ERROR - Database error for station GOM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:22,770 - ERROR - Database error for station STN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:23,294 - ERROR - Database error for station CMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:23,755 - ERROR - Database error for station LAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:24,231 - ERROR - Database error for station FOU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:24,739 - ERROR - Database error for station ROA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:25,227 - ERROR - Database error for station AMD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:25,779 - ERROR - Database error for station KLO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:26,222 - ERROR - Database error for station BOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:26,770 - ERROR - Database error for station OBW2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:27,240 - ERROR - Database error for station LAG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:27,743 - ERROR - Database error for station JAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:28,303 - ERROR - Database error for station DTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:28,808 - ERROR - Database error for station GUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:29,293 - ERROR - Database error for station SHE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:29,845 - ERROR - Database error for station VIN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:30,298 - ERROR - Database error for station FLU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:30,744 - ERROR - Database error for station MAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:31,203 - ERROR - Database error for station VSC2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:31,624 - ERROR - Database error for station DAV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:32,094 - ERROR - Database error for station OBW1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:32,601 - ERROR - Database error for station NAR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:33,099 - ERROR - Database error for station KES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:33,607 - ERROR - Database error for station SCB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:34,068 - ERROR - Database error for station ZER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:34,612 - ERROR - Database error for station SPN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:35,095 - ERROR - Database error for station TUJ3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:35,557 - ERROR - Database error for station FAE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:36,280 - ERROR - Database error for station RNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:36,798 - ERROR - Database error for station BED3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:37,275 - ERROR - Database error for station KLT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:37,739 - ERROR - Database error for station ZER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:38,295 - ERROR - Database error for station BER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:38,759 - ERROR - Database error for station MUN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:39,248 - ERROR - Database error for station NAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:39,792 - ERROR - Database error for station TAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:40,398 - ERROR - Database error for station ELS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:40,809 - ERROR - Database error for station BEV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:41,221 - ERROR - Database error for station VAL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:41,675 - ERROR - Database error for station ELM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:42,089 - ERROR - Database error for station BED1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:42,527 - ERROR - Database error for station FNH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:42,947 - ERROR - Database error for station ELA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:43,510 - ERROR - Database error for station GOM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:43,955 - ERROR - Database error for station CHA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:44,461 - ERROR - Database error for station TAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:44,924 - ERROR - Database error for station VIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:45,394 - ERROR - Database error for station NEN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:45,943 - ERROR - Database error for station GAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:46,574 - ERROR - Database error for station LAG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:47,121 - ERROR - Database error for station FAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:47,753 - ERROR - Database error for station BOV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:48,272 - ERROR - Database error for station VDS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:48,802 - ERROR - Database error for station SAA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:49,246 - ERROR - Database error for station MUO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:49,821 - ERROR - Database error for station ELA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:50,494 - ERROR - Database error for station OBW3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:51,116 - ERROR - Database error for station HTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:51,684 - ERROR - Database error for station KLO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:52,231 - ERROR - Database error for station ZNZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:52,816 - ERROR - Database error for station SPN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:53,523 - ERROR - Database error for station TRU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:54,105 - ERROR - Database error for station YBR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:54,849 - ERROR - Database error for station OFE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:55,613 - ERROR - Database error for station TUJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:56,130 - ERROR - Database error for station URS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:56,613 - ERROR - Database error for station PAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:57,195 - ERROR - Database error for station BOG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:57,735 - ERROR - Database error for station FUS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:58,379 - ERROR - Database error for station SWM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:58,995 - ERROR - Database error for station SAA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:59,535 - ERROR - Database error for station BOG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:28:59,976 - ERROR - Database error for station AMD1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:00,447 - ERROR - Database error for station SIM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:00,875 - ERROR - Database error for station WFJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:01,424 - ERROR - Database error for station GUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:01,891 - ERROR - Database error for station SCA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:02,397 - ERROR - Database error for station ELS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:02,821 - ERROR - Database error for station HTR3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:03,256 - ERROR - Database error for station PUZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:03,681 - ERROR - Database error for station FUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:04,155 - ERROR - Database error for station ANV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:04,637 - ERROR - Database error for station ARO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:05,099 - ERROR - Database error for station VLS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:05,596 - ERROR - Database error for station SCH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:06,036 - ERROR - Database error for station SAA4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:06,467 - ERROR - Database error for station CAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:06,870 - ERROR - Database error for station MLB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:07,287 - ERROR - Database error for station STH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:07,734 - ERROR - Database error for station DIA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:08,178 - ERROR - Database error for station TUM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:08,644 - ERROR - Database error for station ANV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:09,081 - ERROR - Database error for station ENG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:09,517 - ERROR - Database error for station JAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:09,967 - ERROR - Database error for station VDS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:10,435 - ERROR - Database error for station STH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:10,901 - ERROR - Database error for station CSL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:11,501 - ERROR - Database error for station ALI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:11,965 - ERROR - Database error for station CAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:12,557 - ERROR - Database error for station PUZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:13,048 - ERROR - Database error for station KLT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:13,527 - ERROR - Database error for station BER3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:13,990 - ERROR - Database error for station LHO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:14,479 - ERROR - Database error for station VRG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:14,989 - ERROR - Database error for station MUN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:15,431 - ERROR - Database error for station LAG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:15,863 - ERROR - Database error for station WAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:16,429 - ERROR - Database error for station ALI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:16,800 - ERROR - Database error for station BOV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:17,196 - ERROR - Database error for station BEV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:17,598 - ERROR - Database error for station LUM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:18,028 - ERROR - Database error for station ARO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:18,556 - ERROR - Database error for station ELM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:18,983 - ERROR - Database error for station DAV4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:19,415 - ERROR - Database error for station MES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:19,877 - ERROR - Database error for station GRA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:20,308 - ERROR - Database error for station GOS3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:20,739 - ERROR - Database error for station GAD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:21,258 - ERROR - Database error for station DAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:21,674 - ERROR - Database error for station DTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:22,083 - ERROR - Database error for station SPN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:22,559 - ERROR - Database error for station LUK2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:23,018 - ERROR - Database error for station SCA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:23,440 - ERROR - Database error for station MEI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:23,873 - ERROR - Database error for station BOG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:24,308 - ERROR - Database error for station MUO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:24,774 - ERROR - Database error for station FOU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:25,200 - ERROR - Database error for station FIS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:25,599 - ERROR - Database error for station SIM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:26,023 - ERROR - Database error for station FIR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:26,471 - ERROR - Database error for station ENG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:26,912 - ERROR - Database error for station ALB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:27,351 - ERROR - Database error for station LAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:27,787 - ERROR - Database error for station BED4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:28,204 - ERROR - Database error for station LUK1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:28,620 - ERROR - Database error for station OTT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:29,143 - ERROR - Database error for station NAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:29,571 - ERROR - Database error for station ANV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:30,041 - ERROR - Database error for station MUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:30,555 - ERROR - Database error for station BIN4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:31,012 - ERROR - Database error for station ELA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:31,416 - ERROR - Database error for station URS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:31,834 - ERROR - Database error for station SAA5: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:32,316 - ERROR - Database error for station TUJ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:32,758 - ERROR - Database error for station MES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:33,184 - ERROR - Database error for station SCA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:33,638 - ERROR - Database error for station SLF2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:34,054 - ERROR - Database error for station CHA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:34,620 - ERROR - Database error for station MTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:35,153 - ERROR - Database error for station FNH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:35,680 - ERROR - Database error for station EGH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:36,223 - ERROR - Database error for station ORT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:36,970 - ERROR - Database error for station TRU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:37,508 - ERROR - Database error for station ATT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:37,972 - ERROR - Database error for station ZNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:38,552 - ERROR - Database error for station OBM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:39,135 - ERROR - Database error for station MLB1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:39,728 - ERROR - Database error for station ZER4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:40,212 - ERROR - Database error for station HTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:40,697 - ERROR - Database error for station PMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:29:41,109 - ERROR - Database error for station DAV6: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:41,863 - ERROR - Database error for station DAV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:42,488 - ERROR - Database error for station VSC1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:43,181 - ERROR - Database error for station MUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:43,820 - ERROR - Database error for station TUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:44,399 - ERROR - Database error for station GLA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:44,960 - ERROR - Database error for station GAN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:45,528 - ERROR - Database error for station GOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:46,158 - ERROR - Database error for station GOM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:46,719 - ERROR - Database error for station ILI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:47,270 - ERROR - Database error for station VAL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:47,793 - ERROR - Database error for station BEL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:48,333 - ERROR - Database error for station TAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:48,859 - ERROR - Database error for station ILI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:49,334 - ERROR - Database error for station MAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:49,841 - ERROR - Database error for station GOS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:50,316 - ERROR - Database error for station ROT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:50,873 - ERROR - Database error for station FUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:51,387 - ERROR - Database error for station ADE3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:51,879 - ERROR - Database error for station FRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:52,380 - ERROR - Database error for station SMN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:52,901 - ERROR - Database error for station BER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:53,388 - ERROR - Database error for station VLS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:53,831 - ERROR - Database error for station HIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:54,253 - ERROR - Database error for station KLO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:54,772 - ERROR - Database error for station NEN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:55,274 - ERROR - Database error for station ARO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:55,792 - ERROR - Database error for station ADE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:56,231 - ERROR - Database error for station GRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:56,810 - ERROR - Database error for station CAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:57,400 - ERROR - Database error for station PLD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:57,997 - ERROR - Database error for station SCH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:58,581 - ERROR - Database error for station KES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:59,148 - ERROR - Database error for station LUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 14:59:59,926 - ERROR - Database error for station LAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:00,580 - ERROR - Database error for station FRA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:01,244 - ERROR - Database error for station KLT4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:02,086 - ERROR - Database error for station JUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:02,832 - ERROR - Database error for station JUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:03,451 - ERROR - Database error for station OFE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:04,086 - ERROR - Database error for station ROA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:04,684 - ERROR - Database error for station TIT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:05,236 - ERROR - Database error for station CON2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:05,791 - ERROR - Database error for station GOM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:06,299 - ERROR - Database error for station STN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:07,037 - ERROR - Database error for station CMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:07,719 - ERROR - Database error for station LAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:08,368 - ERROR - Database error for station FOU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:08,980 - ERROR - Database error for station ROA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:09,593 - ERROR - Database error for station AMD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:09,999 - ERROR - Database error for station KLO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:10,562 - ERROR - Database error for station BOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:11,262 - ERROR - Database error for station OBW2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:11,827 - ERROR - Database error for station LAG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:12,481 - ERROR - Database error for station JAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:13,178 - ERROR - Database error for station DTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:13,680 - ERROR - Database error for station GUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:14,252 - ERROR - Database error for station SHE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:14,831 - ERROR - Database error for station VIN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:15,330 - ERROR - Database error for station FLU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:15,992 - ERROR - Database error for station MAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:16,974 - ERROR - Database error for station VSC2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:17,932 - ERROR - Database error for station DAV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:18,663 - ERROR - Database error for station OBW1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:19,267 - ERROR - Database error for station NAR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:19,859 - ERROR - Database error for station KES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:20,390 - ERROR - Database error for station SCB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:20,967 - ERROR - Database error for station ZER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:21,508 - ERROR - Database error for station SPN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:22,013 - ERROR - Database error for station TUJ3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:22,487 - ERROR - Database error for station FAE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:23,038 - ERROR - Database error for station RNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:23,488 - ERROR - Database error for station BED3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:24,175 - ERROR - Database error for station KLT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:24,966 - ERROR - Database error for station ZER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:25,582 - ERROR - Database error for station BER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:26,082 - ERROR - Database error for station MUN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:26,579 - ERROR - Database error for station NAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:27,028 - ERROR - Database error for station TAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:27,469 - ERROR - Database error for station ELS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:28,019 - ERROR - Database error for station BEV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:28,483 - ERROR - Database error for station VAL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:29,032 - ERROR - Database error for station ELM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:29,478 - ERROR - Database error for station BED1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:30,172 - ERROR - Database error for station FNH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:30,848 - ERROR - Database error for station ELA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:31,535 - ERROR - Database error for station GOM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:32,213 - ERROR - Database error for station CHA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:32,858 - ERROR - Database error for station TAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:33,637 - ERROR - Database error for station VIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:34,338 - ERROR - Database error for station NEN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:34,984 - ERROR - Database error for station GAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:35,589 - ERROR - Database error for station LAG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:36,219 - ERROR - Database error for station FAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:36,860 - ERROR - Database error for station BOV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:37,624 - ERROR - Database error for station VDS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:38,325 - ERROR - Database error for station SAA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:39,101 - ERROR - Database error for station MUO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:39,970 - ERROR - Database error for station ELA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:40,933 - ERROR - Database error for station OBW3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:41,691 - ERROR - Database error for station HTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:42,687 - ERROR - Database error for station KLO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:43,428 - ERROR - Database error for station ZNZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:44,001 - ERROR - Database error for station SPN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:44,684 - ERROR - Database error for station TRU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:45,921 - ERROR - Database error for station YBR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:46,495 - ERROR - Database error for station OFE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:47,131 - ERROR - Database error for station TUJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:47,796 - ERROR - Database error for station URS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:48,652 - ERROR - Database error for station PAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:49,347 - ERROR - Database error for station BOG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:50,150 - ERROR - Database error for station FUS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:50,822 - ERROR - Database error for station SWM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:51,424 - ERROR - Database error for station SAA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:52,101 - ERROR - Database error for station BOG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:52,880 - ERROR - Database error for station AMD1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:53,548 - ERROR - Database error for station SIM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:54,151 - ERROR - Database error for station WFJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:54,775 - ERROR - Database error for station GUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:55,526 - ERROR - Database error for station SCA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:56,617 - ERROR - Database error for station ELS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:57,354 - ERROR - Database error for station HTR3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:58,032 - ERROR - Database error for station PUZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:58,721 - ERROR - Database error for station FUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:00:59,475 - ERROR - Database error for station ANV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:00,236 - ERROR - Database error for station ARO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:00,844 - ERROR - Database error for station VLS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:01,662 - ERROR - Database error for station SCH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:02,450 - ERROR - Database error for station SAA4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:03,001 - ERROR - Database error for station CAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:03,867 - ERROR - Database error for station MLB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:04,704 - ERROR - Database error for station STH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:05,391 - ERROR - Database error for station DIA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:06,416 - ERROR - Database error for station TUM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:07,330 - ERROR - Database error for station ANV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:08,345 - ERROR - Database error for station ENG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:09,253 - ERROR - Database error for station JAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:10,085 - ERROR - Database error for station VDS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:10,836 - ERROR - Database error for station STH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:11,658 - ERROR - Database error for station CSL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:12,778 - ERROR - Database error for station ALI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:13,445 - ERROR - Database error for station CAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:14,250 - ERROR - Database error for station PUZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:14,966 - ERROR - Database error for station KLT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:15,712 - ERROR - Database error for station BER3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:16,326 - ERROR - Database error for station LHO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:17,017 - ERROR - Database error for station VRG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:17,663 - ERROR - Database error for station MUN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:18,362 - ERROR - Database error for station LAG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:19,023 - ERROR - Database error for station WAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:19,843 - ERROR - Database error for station ALI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:20,606 - ERROR - Database error for station BOV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:21,412 - ERROR - Database error for station BEV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:22,073 - ERROR - Database error for station LUM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:22,656 - ERROR - Database error for station ARO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:23,374 - ERROR - Database error for station ELM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:23,945 - ERROR - Database error for station DAV4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:24,462 - ERROR - Database error for station MES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:24,941 - ERROR - Database error for station GRA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:25,412 - ERROR - Database error for station GOS3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:26,033 - ERROR - Database error for station GAD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:26,697 - ERROR - Database error for station DAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:27,293 - ERROR - Database error for station DTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:27,844 - ERROR - Database error for station SPN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:28,494 - ERROR - Database error for station LUK2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:29,067 - ERROR - Database error for station SCA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:29,725 - ERROR - Database error for station MEI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:30,210 - ERROR - Database error for station BOG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:30,693 - ERROR - Database error for station MUO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:31,160 - ERROR - Database error for station FOU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:31,742 - ERROR - Database error for station FIS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:32,374 - ERROR - Database error for station SIM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:32,930 - ERROR - Database error for station FIR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:33,602 - ERROR - Database error for station ENG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:34,297 - ERROR - Database error for station ALB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:34,703 - ERROR - Database error for station LAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:35,271 - ERROR - Database error for station BED4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:35,844 - ERROR - Database error for station LUK1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:36,248 - ERROR - Database error for station OTT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:36,949 - ERROR - Database error for station NAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:37,729 - ERROR - Database error for station ANV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:38,507 - ERROR - Database error for station MUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:39,247 - ERROR - Database error for station BIN4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:39,998 - ERROR - Database error for station ELA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:40,665 - ERROR - Database error for station URS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:41,232 - ERROR - Database error for station SAA5: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:41,818 - ERROR - Database error for station TUJ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:42,413 - ERROR - Database error for station MES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:43,014 - ERROR - Database error for station SCA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:43,479 - ERROR - Database error for station SLF2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:44,160 - ERROR - Database error for station CHA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:45,058 - ERROR - Database error for station MTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:45,698 - ERROR - Database error for station FNH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:46,481 - ERROR - Database error for station EGH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:47,205 - ERROR - Database error for station ORT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:47,832 - ERROR - Database error for station TRU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:48,461 - ERROR - Database error for station ATT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:49,027 - ERROR - Database error for station ZNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:49,803 - ERROR - Database error for station OBM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:50,471 - ERROR - Database error for station MLB1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:51,174 - ERROR - Database error for station ZER4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:51,875 - ERROR - Database error for station HTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:52,568 - ERROR - Database error for station PMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:01:53,332 - ERROR - Database error for station DAV6: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:53,884 - ERROR - Database error for station DAV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:54,412 - ERROR - Database error for station VSC1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:54,992 - ERROR - Database error for station MUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:55,497 - ERROR - Database error for station TUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:55,991 - ERROR - Database error for station GLA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:56,689 - ERROR - Database error for station GAN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:57,599 - ERROR - Database error for station GOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:58,204 - ERROR - Database error for station GOM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:58,822 - ERROR - Database error for station ILI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:59,271 - ERROR - Database error for station VAL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:31:59,817 - ERROR - Database error for station BEL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:00,272 - ERROR - Database error for station TAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:00,791 - ERROR - Database error for station ILI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:01,378 - ERROR - Database error for station MAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:02,029 - ERROR - Database error for station GOS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:02,720 - ERROR - Database error for station ROT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:03,362 - ERROR - Database error for station FUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:04,218 - ERROR - Database error for station ADE3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:05,079 - ERROR - Database error for station FRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:05,809 - ERROR - Database error for station SMN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:06,655 - ERROR - Database error for station BER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:07,464 - ERROR - Database error for station VLS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:08,070 - ERROR - Database error for station HIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:08,824 - ERROR - Database error for station KLO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:09,479 - ERROR - Database error for station NEN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:10,145 - ERROR - Database error for station ARO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:10,983 - ERROR - Database error for station ADE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:12,029 - ERROR - Database error for station GRA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:12,826 - ERROR - Database error for station CAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:13,805 - ERROR - Database error for station PLD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:14,775 - ERROR - Database error for station SCH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:15,571 - ERROR - Database error for station KES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:16,504 - ERROR - Database error for station LUM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:17,576 - ERROR - Database error for station LAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:19,152 - ERROR - Database error for station FRA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:20,465 - ERROR - Database error for station KLT4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:21,419 - ERROR - Database error for station JUL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:22,372 - ERROR - Database error for station JUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:23,288 - ERROR - Database error for station OFE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:24,175 - ERROR - Database error for station ROA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:25,106 - ERROR - Database error for station TIT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:26,225 - ERROR - Database error for station CON2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:27,144 - ERROR - Database error for station GOM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:27,763 - ERROR - Database error for station STN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:28,280 - ERROR - Database error for station CMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:28,881 - ERROR - Database error for station LAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:29,613 - ERROR - Database error for station FOU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:30,617 - ERROR - Database error for station ROA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:31,551 - ERROR - Database error for station AMD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:32,111 - ERROR - Database error for station KLO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:33,060 - ERROR - Database error for station BOR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:34,283 - ERROR - Database error for station OBW2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:35,139 - ERROR - Database error for station LAG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:36,081 - ERROR - Database error for station JAU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:37,024 - ERROR - Database error for station DTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:37,698 - ERROR - Database error for station GUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:38,417 - ERROR - Database error for station SHE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:39,486 - ERROR - Database error for station VIN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:40,322 - ERROR - Database error for station FLU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:41,131 - ERROR - Database error for station MAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:41,783 - ERROR - Database error for station VSC2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:42,526 - ERROR - Database error for station DAV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:43,172 - ERROR - Database error for station OBW1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:43,852 - ERROR - Database error for station NAR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:44,505 - ERROR - Database error for station KES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:45,072 - ERROR - Database error for station SCB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:45,592 - ERROR - Database error for station ZER1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:46,148 - ERROR - Database error for station SPN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:46,775 - ERROR - Database error for station TUJ3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:47,540 - ERROR - Database error for station FAE1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:48,090 - ERROR - Database error for station RNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:48,480 - ERROR - Database error for station BED3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:49,001 - ERROR - Database error for station KLT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:49,565 - ERROR - Database error for station ZER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:50,042 - ERROR - Database error for station BER2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:50,582 - ERROR - Database error for station MUN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:51,207 - ERROR - Database error for station NAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:51,778 - ERROR - Database error for station TAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:52,221 - ERROR - Database error for station ELS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:52,831 - ERROR - Database error for station BEV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:53,148 - ERROR - Database error for station VAL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:53,710 - ERROR - Database error for station ELM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:54,100 - ERROR - Database error for station BED1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:54,742 - ERROR - Database error for station FNH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:55,249 - ERROR - Database error for station ELA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:55,767 - ERROR - Database error for station GOM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:56,226 - ERROR - Database error for station CHA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:56,711 - ERROR - Database error for station TAM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:57,319 - ERROR - Database error for station VIN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:58,265 - ERROR - Database error for station NEN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:59,292 - ERROR - Database error for station GAN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:32:59,925 - ERROR - Database error for station LAG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:00,539 - ERROR - Database error for station FAE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:01,163 - ERROR - Database error for station BOV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:01,722 - ERROR - Database error for station VDS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:02,143 - ERROR - Database error for station SAA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:02,631 - ERROR - Database error for station MUO1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:03,151 - ERROR - Database error for station ELA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:03,656 - ERROR - Database error for station OBW3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:04,231 - ERROR - Database error for station HTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:04,903 - ERROR - Database error for station KLO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:05,501 - ERROR - Database error for station ZNZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:05,970 - ERROR - Database error for station SPN3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:06,549 - ERROR - Database error for station TRU1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:07,041 - ERROR - Database error for station YBR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:07,554 - ERROR - Database error for station OFE2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:08,069 - ERROR - Database error for station TUJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:08,638 - ERROR - Database error for station URS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:09,151 - ERROR - Database error for station PAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:09,679 - ERROR - Database error for station BOG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:10,012 - ERROR - Database error for station FUS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:10,540 - ERROR - Database error for station SWM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:11,041 - ERROR - Database error for station SAA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:11,573 - ERROR - Database error for station BOG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:12,064 - ERROR - Database error for station AMD1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:12,580 - ERROR - Database error for station SIM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:13,295 - ERROR - Database error for station WFJ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:13,813 - ERROR - Database error for station GUT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:14,392 - ERROR - Database error for station SCA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:15,094 - ERROR - Database error for station ELS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:15,709 - ERROR - Database error for station HTR3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:16,353 - ERROR - Database error for station PUZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:16,929 - ERROR - Database error for station FUL1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:17,476 - ERROR - Database error for station ANV3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:18,008 - ERROR - Database error for station ARO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:18,573 - ERROR - Database error for station VLS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:19,172 - ERROR - Database error for station SCH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:19,642 - ERROR - Database error for station SAA4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:19,981 - ERROR - Database error for station CAM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:20,590 - ERROR - Database error for station MLB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:21,324 - ERROR - Database error for station STH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:22,057 - ERROR - Database error for station DIA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:22,700 - ERROR - Database error for station TUM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:23,625 - ERROR - Database error for station ANV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:24,504 - ERROR - Database error for station ENG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:25,149 - ERROR - Database error for station JAU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:25,683 - ERROR - Database error for station VDS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:26,446 - ERROR - Database error for station STH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:27,186 - ERROR - Database error for station CSL2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:31,271 - ERROR - Database error for station ALI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:31,872 - ERROR - Database error for station CAM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:32,543 - ERROR - Database error for station PUZ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:33,135 - ERROR - Database error for station KLT3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:33,698 - ERROR - Database error for station BER3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:34,379 - ERROR - Database error for station LHO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:34,982 - ERROR - Database error for station VRG3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:35,556 - ERROR - Database error for station MUN2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:36,066 - ERROR - Database error for station LAG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:36,666 - ERROR - Database error for station WAS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:37,207 - ERROR - Database error for station ALI1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:37,853 - ERROR - Database error for station BOV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:38,821 - ERROR - Database error for station BEV2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:39,631 - ERROR - Database error for station LUM3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:40,361 - ERROR - Database error for station ARO3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:41,022 - ERROR - Database error for station ELM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:41,586 - ERROR - Database error for station DAV4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:42,287 - ERROR - Database error for station MES2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:42,933 - ERROR - Database error for station GRA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:43,452 - ERROR - Database error for station GOS3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:44,088 - ERROR - Database error for station GAD2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:45,068 - ERROR - Database error for station DAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:46,421 - ERROR - Database error for station DTR1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:47,479 - ERROR - Database error for station SPN1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:48,364 - ERROR - Database error for station LUK2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:49,403 - ERROR - Database error for station SCA3: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:50,313 - ERROR - Database error for station MEI2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:51,112 - ERROR - Database error for station BOG2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:52,153 - ERROR - Database error for station MUO2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:53,362 - ERROR - Database error for station FOU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:54,370 - ERROR - Database error for station FIS2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:55,200 - ERROR - Database error for station SIM1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:56,025 - ERROR - Database error for station FIR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:56,972 - ERROR - Database error for station ENG1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:57,883 - ERROR - Database error for station ALB2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:58,485 - ERROR - Database error for station LAV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:58,944 - ERROR - Database error for station BED4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:59,498 - ERROR - Database error for station LUK1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:33:59,889 - ERROR - Database error for station OTT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:00,347 - ERROR - Database error for station NAR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:01,037 - ERROR - Database error for station ANV1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:01,552 - ERROR - Database error for station MUT1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:02,027 - ERROR - Database error for station BIN4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:02,513 - ERROR - Database error for station ELA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:03,004 - ERROR - Database error for station URS1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:03,559 - ERROR - Database error for station SAA5: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:04,156 - ERROR - Database error for station TUJ1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:05,181 - ERROR - Database error for station MES1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:06,156 - ERROR - Database error for station SCA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:06,752 - ERROR - Database error for station SLF2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:07,516 - ERROR - Database error for station CHA1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:08,283 - ERROR - Database error for station MTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:08,990 - ERROR - Database error for station FNH1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:09,587 - ERROR - Database error for station EGH2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:10,236 - ERROR - Database error for station ORT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:10,957 - ERROR - Database error for station TRU2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:11,633 - ERROR - Database error for station ATT2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:12,341 - ERROR - Database error for station ZNZ2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:13,068 - ERROR - Database error for station OBM2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:13,662 - ERROR - Database error for station MLB1: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:14,401 - ERROR - Database error for station ZER4: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:15,341 - ERROR - Database error for station HTR2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:16,275 - ERROR - Database error for station PMA2: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 15:34:17,099 - ERROR - Database error for station DAV6: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+

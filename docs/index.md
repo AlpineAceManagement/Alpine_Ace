@@ -26,7 +26,7 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
-      - [Mock-Up](#mockup)
+      - [Mock-Up](#mock-up)
       - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Kopfzeile](#kopfzeile)
@@ -43,18 +43,20 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [ÖV-Haltestellen](#öv-haltestellen)
       - [Funktion](#funktion-2)
     - [Wetter](#wetter)
-    - [Statistiken](#statistiken)
       - [Konzept](#konzept)
       - [Funktion](#funktion-3)
-    - [Navi](#navi)
+    - [Statistiken](#statistiken)
       - [Konzept](#konzept-1)
+      - [Funktion](#funktion-4)
+    - [Navi](#navi)
+      - [Konzept](#konzept-2)
       - [Aufbereitung der Daten](#aufbereitung-der-daten)
       - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
       - [Berechnen des Routings](#berechnen-des-routings)
       - [SQL views Routing](#sql-views-routing)
-      - [Funktion](#funktion-4)
-    - [Restaurant](#restaurant)
       - [Funktion](#funktion-5)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-6)
   - [Incoming Features](#incoming-features)
     - [Karte](#karte-1)
   - [Contribution](#contribution)
@@ -169,7 +171,7 @@ Folgende API's sind vorhanden:
 
 #TODO anpassen
 Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet wevrden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
+Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet verwenden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
 #### Mock-Up
 
@@ -239,7 +241,6 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
 </table>
 
-
 #### Farbschema
 
 <a id=farbschema></a>
@@ -252,9 +253,9 @@ Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedach
 
 Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
 
-Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipisten Farben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
 
-Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle  Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
+Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
 
 ## Funktionen
 
@@ -291,17 +292,16 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 ##### Funktion
 
 - **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
-![Diagramme Dashboard](images/Dashboard_Anlagen.png )
-*Diagramme der aktuellen Pisten und Anlagen Informationen*
-
+  ![Diagramme Dashboard](images/Dashboard_Anlagen.png)
+  _Diagramme der aktuellen Pisten und Anlagen Informationen_
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-![Bulletins Piktogramme](images/Lawinen_Piktogramme.png )
-*Piktogramme der Bulletins*
+  ![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
+  _Piktogramme der Bulletins_
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
-  #TODO
+  Die Menü Buttons werden mit Hilfe einer Funktion `hauptmenuSchaltfächenErstellen` erstellt. In dieser wird der Name der Schaltfläche und die Route benötigt. Die Routen führen beim anklicken in das jeweilige Menü.
 
 #### Karte
 
@@ -393,7 +393,8 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
-##### Konzept 
+##### Konzept
+
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
 #todo: video von wetter menu einfügen
@@ -402,19 +403,19 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 
 **Wettervorhersage**
 
-
-
 **Aktuelle Wetterdaten**
 Die Aktuellen Wetterdaten werden über eine API abfragen geholt. mit Express wird auf die Datenbank zugegriffen und folgende abfrage gemacht.
-`"SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"` Die daten lassen sich dann von 
+`"SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"` Die daten lassen sich dann von
 Somit hat man immer die aktuellsten Informationen welche in der Datenbank liegen. Die daten werden dann mit useEffect aufgerufen und in die Variabel weatherData gespeichert. der Aufruf des gewünschten werts erfoglt mit weatherData.md_temperatur. Möchte man die aktuelle windrichtung so ändert sich die eingabe nach dem Punkt auf md_windrichtung.
 
 Die aktuellen schneedaten werden ebenfalls über eine Express-API bezogen. `http://localhost:5000/api/schneehoehe`
 Die API zeigt dabei Werte die nach folgender Abfrage generiert werden.
+
 ```
 SQL
 "SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"
 ```
+
 Man erhölt somit immer die aktuelste information der schneehöhe.
 
 #### Statistiken
@@ -442,29 +443,29 @@ Statistiken Viewer
 Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`. #TODO nicht Restaurant_Viewer -> Statistiken_Viewer?
 
 - Im `StatistikenViewer` wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
-   `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
-   Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
-   Die SQL View ist folgendermassen definiert:
+  `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
+  Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
+  Die SQL View ist folgendermassen definiert:
 
-   ```
-   SELECT
-    v.Skidaten_ID,
-   v.SD_Date,
-   v.SD_Hoehenmeter,
-   v.SD_Distanz,
-   v.SD_Dauer,
-   v.SD_Geschwindigkeit,
-   v.SD_MaxGeschwindigkeit,
-   v.SD_Saison,
-   v.Benutzername,
-    v.SD_Geometrie
-   FROM
-    Skidaten AS v
-   WHERE
-    v.Skidaten_ID = %Skidaten_ID%
-   ```
+  ```
+  SELECT
+   v.Skidaten_ID,
+  v.SD_Date,
+  v.SD_Hoehenmeter,
+  v.SD_Distanz,
+  v.SD_Dauer,
+  v.SD_Geschwindigkeit,
+  v.SD_MaxGeschwindigkeit,
+  v.SD_Saison,
+  v.Benutzername,
+   v.SD_Geometrie
+  FROM
+   Skidaten AS v
+  WHERE
+   v.Skidaten_ID = %Skidaten_ID%
+  ```
 
-   Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
+  Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
 
 - Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 

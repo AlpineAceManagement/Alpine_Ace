@@ -6,6 +6,7 @@
     "Adding",
     "Ahnig",
     "AJPB",
+    "align",
     "alpineacemanagement",
     "andi",
     "anlage",
@@ -16,9 +17,11 @@
     "Bergfex",
     "Beschreibiung",
     "bewertungen",
+    "border",
     "Bricali",
     "Bricalli",
     "bulletins",
+    "collapse",
     "Collect",
     "column",
     "considerable",
@@ -71,8 +74,12 @@
     "meteo",
     "Meteo",
     "Meteodaten",
+    "mock",
+    "Mock",
+    "mockup",
     "Multilinen",
     "Multilines",
+    "navi",
     "nearest",
     "Neighbor",
     "noded",
@@ -115,6 +122,7 @@
     "shortest",
     "shutil",
     "SRID",
+    "stat",
     "stationen",
     "swissboundaries",
     "swisstlm",
@@ -140,9 +148,5 @@
     "zipfile",
     "Zoomstufe"
   ],
-  "cSpell.enableFiletypes": [
-    "!javascript",
-    "!javascriptreact",
-    "!python"
-  ]
+  "cSpell.enableFiletypes": ["!javascript", "!javascriptreact", "!python"]
 }
