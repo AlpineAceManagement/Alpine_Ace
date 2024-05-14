@@ -391,7 +391,7 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 #### Wetter
 
-Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
+Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
 ##### Konzept
 
@@ -408,7 +408,6 @@ Die täglichen Wettervorhersagen werden von einer lokalen API abgerufen:
 Die abgerufenen Daten werden in die entsprechende Zustandsvariablen *weatherChartData* gespeichert. Die Daten werden dann in einem Liniendiagramm dargestellt. Das Diagramm wird mit Vega dargestellt. 
 
 
-
 **Aktuelle Wetterdaten**\
 Die aktuellen Wetterdaten werden von einer lokalen API abgerufen:
 - **Aktuelle Wetterdaten**: `http://localhost:5000/api/messdaten`
@@ -418,7 +417,7 @@ Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snow
 
 #### Statistiken
 
-Beschreibung Statistiken (#TODO)
+Im Statistik-Menü finden Sie alle relevanten Informationen zu vergangenen Skitagen. Hier können Sie Vergleiche über die gesamte Saison hinweg anstellen, verschiedene Saisons miteinander vergleichen oder einzelne Tage im Detail auswerten.
 
 - **Datenursprung**: GPX-Dateien von der Garmin Fenix 6 Pro: 10 verschiedene Skitage im Skigebiet Arosa-Lenzerheide während des Winters 2023/24.
 - **Datenstand**: 30.01.2024-23.03.2024
@@ -647,18 +646,29 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 
 ## Incoming Features
 
+
+
 ### Karte
 
 SelectedFeature Zoomstufe verbessern
 
 <a id=features></a>
 
-mehrere Skigebiete
-bewertungen
-einstellungen
-benutzerkonto
-livetracking
-lawinenrückmeldungstool von slf einbauen
+### Mehrere Skigebiete
+
+
+### Bewertungen
+
+
+### Einstellungen
+
+### Benutzerkonto
+
+
+### Live Tracking
+
+### Lawinenrückmeldungstool 
+
 
 ## Contribution
 
