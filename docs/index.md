@@ -2,7 +2,7 @@
 
 # Alpine Ace - Ski App
 
-**Willkommen auf der Projekt Website der _Alpine Ace Ski App_.** \
+**Willkommen auf der Projekt Website der _Alpine Ace - Ski App_.** 
 
 Im Vertiefungsmodul _4230: GeoInformatik & Raumanalyse I_ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde im Rahmen einer Projektarbeit die Geodateninfrastruktur (GDI) _Alpine Ace-Ski App_ entwickelt. Abgesehen von der Vorgabe räumlich-zeitlicher Inhalte hatten wir freie Themenwahl.
 
@@ -80,17 +80,21 @@ Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren un
 <a id=architektur></a>
 Eine vollständige Geodateninfrastruktur (GDI) umfasst das Backend, das Frontend sowie die verwendeten Bibliotheken und API-Schnittstellen. Das folgende Schema zeigt die entwickelte und genutzte GDI der Alpine Ace-Ski App.
 
+<center><img src="images/architektur_app.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 Die App enthält dabei eine Server Client Umgebung:
 
 - Server: Node Server
 - Client: React + OpenLayers
 
-
-
 ### Backend
-
 <a id=backend></a>
+Das Backend beinhaltet alle unsichtbaren Inhalte und Daten, die sich auf dem Server, in unserem Fall der Raspberry PI, befinden. Dazu gehören folgenden Punkte:
+- Räumliches Datenbanksystem (RDBS)
+- API-Schnittstelle inklusive Datenspeicherung in der RDBS
+- Geoserver mit allen Kartendarstellungen
+- FME Workbenches für Datenspeicherung RDBS
+- Node-Server als Schnittstelle zwischen dem RDBS / Geoserver und dem Frontend
 
 #### API
 
@@ -186,9 +190,6 @@ Folgende Express-API's sind vorhanden:
 
 <a id=frontend></a>
 
-#TODO anpassen
-Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet verwenden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
 #### Mock-Up
 
