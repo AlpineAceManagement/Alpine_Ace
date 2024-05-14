@@ -189,7 +189,13 @@ Folgende Express-API's sind vorhanden:
 ### Frontend
 
 <a id=frontend></a>
+Das Frontend ist für das Auftreten unserer APP zuständig. Dabei baut unsere APP auf folgenden Technologien auf:
+- **npm** ist unser Paketmanager, um Abhängigkeiten und Bibliotheken effizient zu verwalten.
+- **JavaScript** ist die Grundlage unserer App, um dynamische und interaktive Inhalte zu erstellen. 
+- **React** ist eine Leistungsstarke Bibliothek für den Aufbau der Benutzeroberfläche, die schnelle und reaktive Anwendungen ermöglicht.
+- **MUI React** ist eine Sammlung von User Interface (UI)-Komponenten, die hilft, eine ansprechende und benutzerfreundliche Oberfläche zu gestalten.
 
+Der Vergleich zwischen Mockup und Endprodukt, die Erklärung zur Farbwahl und die einzelnen Funktionen werden in den nächsten Kapitel näher gebracht.
 
 #### Mock-Up
 
