@@ -9,7 +9,7 @@ Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![Alpine Ace Startseite Screenshot](images/Startseite_Alpine_Ace.png)
+<center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 ## Inhaltsverzeichnis
 
@@ -26,6 +26,8 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
+      - [Mock-Up](#mockup)
+      - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Kopfzeile](#kopfzeile)
       - [Funktion](#funktion)
@@ -168,6 +170,76 @@ Folgende API's sind vorhanden:
 #TODO anpassen
 Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
 Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet wevrden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
+
+#### Mock-Up
+
+<a id=mockup></a>
+
+Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [Mock-Up](https://github.com/AlpineAceManagement/Alpine_Ace/blob/main/docs/A1_Mockup_Alpine_Ace.pptx)
+
+Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten.
+
+
+<table style="border-collapse: collapse;">
+    <tr>
+        <td style="border: none;"><h3><center>Mock-Up</center></h3></td>
+        <td style="border: none;"><h3><center>App</center></h3></td>
+    </tr>
+    <tr>
+        <td style="border: none;">Karte</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" />#TODO ! Nur Beispiel</td>
+    </tr>
+    <tr>
+        <td style="border: none;">Wetter</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-wetter.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td>#TODO image Wetter-App</td>
+    </tr>
+    <tr>
+        <td style="border: none;">Statistiken</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-stat.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td>#TODO image Statistiken-App</td>
+    </tr>
+    <tr>
+        <td style="border: none;">Navi</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-navi.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td>#TODO image Navi-App</td>
+    </tr>
+    <tr>
+        <td style="border: none;">Restaurant</td>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="images/mock-up-restaurant.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td>#TODO image Restaurant-App</td>
+    </tr>
+</table>
+
+
+
+
+#### Farbschema
+
+<a id=farbschema></a>
+
+Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer.
+
+Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieses App und verleiht ihr eine solide Basis.
+
+Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
+
+Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+
+Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle  Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
 
 ## Funktionen
 
