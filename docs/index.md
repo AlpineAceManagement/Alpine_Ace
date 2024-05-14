@@ -387,7 +387,7 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 
 
 **Aktuelle Wetterdaten**
-
+Die Aktuellen Wetterdaten werden über eine API abfragen geholt.  
 
 
 #### Statistiken
