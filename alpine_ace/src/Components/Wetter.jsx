@@ -111,7 +111,6 @@ const Wetter = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <div className="large-box">
                 <h1
                   style={{
                     textAlign: "center",
@@ -121,9 +120,7 @@ const Wetter = () => {
                 >
                   Wetter
                 </h1>
-              </div>
             </Grid>
-
             <Grid item xs={12}>
                 <Vega
                   spec={spec_wetter}
@@ -227,10 +224,10 @@ const Wetter = () => {
 
 const WeatherDataItem = ({ label, value }) => (
   <div>
-    <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+    <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" , fontSize:"18px"}}>
       {label}
     </p>
-    <p style={{ textAlign: "center", color: "#00112e" }}>{value}</p>
+    <p style={{ textAlign: "center", color: "#00112e", fontSize:"20px" }}>{value}</p>
   </div>
 );
 
@@ -243,17 +240,17 @@ const weatherIconMap = {
 
 const WeatherDataItem2 = ({ label, value }) => {
   const weatherCondition = value;
-  const iconName = weatherIconMap[weatherCondition] || "help"; // Fallback to 'help' icon
+  const iconName = weatherIconMap[weatherCondition] || "help"; 
 
   return (
     <div>
-      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e",  fontSize:"18px" }}>
         {label}
       </p>
       <span
         className="material-symbols-outlined"
         style={{
-          fontSize: "24px",
+          fontSize: "50px",
           color: "#00112e",
           display: "block",
           textAlign: "center",
@@ -276,17 +273,17 @@ const windIconMap = {
 
 const WeatherDataItem3 = ({ label, value }) => {
   const windCondition = value;
-  const iconName = windIconMap[windCondition] || "help"; // Fallback to 'help' icon
+  const iconName = windIconMap[windCondition] || "help"; 
 
   return (
     <div>
-      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" }}>
+      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e", fontSize:"18px" }}>
         {label}
       </p>
       <span
         className="material-symbols-outlined"
         style={{
-          fontSize: "24px",
+          fontSize: "50px",
           color: "#00112e",
           display: "block",
           textAlign: "center",
