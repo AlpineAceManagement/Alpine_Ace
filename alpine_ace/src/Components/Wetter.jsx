@@ -125,24 +125,13 @@ const Wetter = () => {
             </Grid>
 
             <Grid item xs={12}>
-              <div
-                className="parent-div"
-                style={{
-                  width: "100%",
-                  height: "150px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginTop: "20px",
-                }}
-              >
+  
                 <Vega
                   spec={spec_wetter}
                   renderer="svg"
                   actions={false}
                   className="vega-vis"
                 />
-              </div>
             </Grid>
           </Grid>
         </Box>
@@ -171,24 +160,39 @@ const Wetter = () => {
                   padding: "20px",
                 }}
               >
-                <WeatherDataItem
-                  label="Temperatur (C°)"
-                  value={parseFloat(weatherData.md_temperatur).toFixed(1)}
-                />
-                <WeatherDataItem2
-                  label="Wetter"
-                  value={weatherData.md_wetter}
-                />
-                <WeatherDataItem
-                  label="Windgeschwindigkeit [km/h]"
-                  value={parseFloat(
-                    weatherData.md_windgeschwindigkeit.toFixed(1)
-                  )}
-                />
-                <WeatherDataItem3
-                  label="Windrichtung"
-                  value={weatherData.md_windrichtung}
-                />
+                <Grid
+                  container
+                  style={{width:"95", margin:"auto"}}
+                  columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                  justifyContent="center"
+                >
+                  <Grid item xs={6}>
+                    <WeatherDataItem
+                    label="Temperatur (C°)"
+                    value={parseFloat(weatherData.md_temperatur).toFixed(1)}
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <WeatherDataItem2
+                    label="Wetter"
+                    value={weatherData.md_wetter}
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <WeatherDataItem
+                    label="Windgeschwindigkeit [km/h]"
+                    value={parseFloat(
+                      weatherData.md_windgeschwindigkeit.toFixed(1)
+                    )}
+                     />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <WeatherDataItem3
+                    label="Windrichtung"
+                    value={weatherData.md_windrichtung}
+                    />
+                  </Grid>
+                </Grid>
               </Box>
             )}
             {snowData && (
@@ -200,10 +204,19 @@ const Wetter = () => {
                   padding: "20px",
                 }}
               >
-                <WeatherDataItem
-                  label="Schneehöhe [cm]"
-                  value={parseFloat(snowData.sh_hoehe).toFixed(1)}
-                />
+                <Grid
+                  container
+                  style={{ width: "95", margin: "auto" }}
+                  columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                  justifyContent="center"
+                >
+                  <Grid item xs={12}>
+                    <WeatherDataItem
+                    label="Schneehöhe [cm]"
+                    value={parseFloat(snowData.sh_hoehe).toFixed(1)}
+                    />
+                  </Grid>
+                </Grid>
               </Box>
             )}
           </div>
