@@ -5,7 +5,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   ResponsiveContainer,
   Label,
 } from "recharts";
@@ -163,7 +162,7 @@ const Graph = () => {
               marginTop: "10px",
             }}
           >
-            Graphs
+            Balkendiagramm
           </h1>
 
           <div

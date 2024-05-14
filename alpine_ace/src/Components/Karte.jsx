@@ -159,7 +159,7 @@ const Karte = () => {
           flexDirection="column" // Anordnung der Boxen in einer Spalte
           sx={{
             width: "95vw",
-            height: "65vh",
+            height: "55vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
