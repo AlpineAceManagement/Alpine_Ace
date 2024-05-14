@@ -411,7 +411,8 @@ Die aktuellen schneedaten werden ebenfalls über eine Express-API bezogen. `http
 Die API zeigt dabei Werte die nach folgender Abfrage generiert werden.
 ```
 SQL
-"SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"```
+"SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"
+```
 Man erhölt somit immer die aktuelste information der schneehöhe.
 
 
