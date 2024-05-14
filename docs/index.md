@@ -2,12 +2,20 @@
 
 # Alpine Ace - Ski App
 
-Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Server und eine Client Umgebung.
+**Willkommen auf der Projekt Website der _Alpine Ace Ski App_.**\
 
-- Server: Node Server
-- Client: React + OpenLayers
+Im Vertiefungsmodul _4230: GeoInformatik & Raumanalyse I_ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde im Rahmen einer Projektarbeit die Geodateninfrastruktur (GDI) _Alpine Ace-Ski App_ entwickelt. Abgesehen von der Vorgabe räumlich-zeitlicher Inhalte hatten wir freie Themenwahl.
 
-GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
+Diese Seite widmet sich der GDI _Alpine Ace-Ski App_. Wintersport ist in der Schweiz nicht nur ein Nationalsport, sondern auch ein bedeutender Wirtschaftszweig, der durch die Digitalisierung stark verändert wurde. Mittlerweile ist es möglich, Tickets im Voraus online zu buchen, Webcams an verschiedenen Standorten abzurufen und persönliche Statistiken über den Skitag zu erfassen. Allerdings erstellt jedes Skigebiet eigene Plattformen mit ähnlichen Funktionen, was dazu führt, dass man für jedes Skigebiet eine separate App herunterladen oder mehrere Webseiten als Lesezeichen speichern muss, um die wichtigsten Informationen zu erhalten. Dies kann die Anzahl der Apps und Lesezeichen auf dem Smartphone erheblich erhöhen.
+
+Aus diesem Grund wurde die GDI _Alpine Ace-Ski App_ entwickelt. Unser Ziel ist es, eine zentrale Plattform für verschiedene Skigebiete zu schaffen, die alle wichtigen Funktionen für den Wintersport bietet. Dazu gehören:
+
+- Eine hochwertige Karte für Orientierung und Navigation im Gelände
+- Aktuelle Wetter- und Lawineninformationen
+- Details zu Verpflegungsmöglichkeiten
+- Anzeige persönlicher Statistiken der Benutzer
+
+Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren und zu entdecken, wie die Alpine Ace-Ski App Ihr Wintersporterlebnis revolutionieren kann.
 
 <center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
@@ -15,7 +23,6 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 
 - [Alpine Ace - Ski App](#alpine-ace---ski-app)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Beschrieb des Apps](#beschrieb-des-apps)
   - [Architektur](#architektur)
     - [Backend](#backend)
       - [API](#api)
@@ -59,17 +66,27 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Funktion](#funktion-6)
   - [Incoming Features](#incoming-features)
     - [Karte](#karte-1)
+    - [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten)
+    - [Mehrere Skigebiete](#mehrere-skigebiete)
+    - [Bewertungen](#bewertungen)
+    - [Einstellungen](#einstellungen)
+    - [Benutzerkonto](#benutzerkonto)
+    - [Live Tracking](#live-tracking)
+    - [Rückmeldung Lawinen](#rückmeldung-lawinen)
   - [Contribution](#contribution)
-
-## Beschrieb des Apps
-
-<a id=beschrieb></a>
-
-Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erstellen, welche wichtige Funktionen für den Wintersport zu Verfügung stellt. Dies umfasst eine hochwertige Karte für die Orientierung und Navigation im Gelände, das aktuelle Wetter und Lawinensituation sowie Informationen zu Verpflegungsmöglichkeiten. Diese App ermöglicht Statistiken für den Benutzer darzustellen.
 
 ## Architektur
 
 <a id=architektur></a>
+Eine vollständige Geodateninfrastruktur (GDI) umfasst das Backend, das Frontend sowie die verwendeten Bibliotheken und API-Schnittstellen. Das folgende Schema zeigt die entwickelte und genutzte GDI der Alpine Ace-Ski App.
+
+
+Die App enthält dabei eine Server Client Umgebung:
+
+- Server: Node Server
+- Client: React + OpenLayers
+
+
 
 ### Backend
 
@@ -77,23 +94,23 @@ Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erst
 
 #### API
 
-Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden einige APIs benötigt.
+Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden folgende APIs verwendet:
 
-- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind Kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
+- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
 
-- Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
+- Lawinensituation: Die aktuellen Lawineninformationen werden über [https://aws.slf.ch/api/bulletin/caaml](https://aws.slf.ch/api/bulletin/caaml) bezogen. Es handelt sich um eine API des Institut für Schnee und Lawinenforschung (SLF). Die Nutzung ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
+- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des SLF. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
-- Informationen über Skigebiet: Die Informationen der Skigebiete werden in Zukunft über ein Webscraping der Seite Bergfex gemacht.
+- Informationen über Skigebiet: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen.
 
-Damit der Datenbezug reibungslos läuft, werden die Scripts für den Datenbezug über eine Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Scripts in den oben erwähnten Zeitintervallen auf um sie auszuführen.
+Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf, um sie auszuführen.
 
 #### Datenbank
 
 <a id=datenbank></a>
 
-In diesem Projekt werden neben Sachdaten auch Daten mit Raumbezug verwendet, wie Pisten und Anlagen welche Geometrien haben, verwendet. Um sicherzustellen, dass die Datenbank die geometrischen Daten effizient verarbeiten kann, wurde entschieden, eine relationale Datenbank mit der räumlichen Erweiterung PostGIS zu verwenden. Dadurch wird PostgreSQL in der Lage sein, räumliche Abfragen und Operationen durchzuführen, was für unser Projekt von entscheidender Bedeutung ist.
+In diesem Projekt werden neben Sachdaten auch räumliche Daten wie Pisten und Anlagen, die Geometrien besitzen, verwendet. Um sicherzustellen, dass die Datenbank diese geometrischen Daten effizient verarbeiten kann, haben wir uns für die Nutzung einer relationalen Datenbank mit der räumlichen Erweiterung PostGIS entschieden. Dadurch kann PostgreSQL räumliche Abfragen und Operationen durchführen, was für unser Projekt von entscheidender Bedeutung ist.
 
 ##### Datenbankverbindung
 
@@ -147,9 +164,9 @@ Folgende Daten werden mit Hilfe von FME in den GeoServer importiert:
 
 <a id=nodeserver></a>
 
-Node Server greift auf Daten des Servers zu GeoServer stellt diese innerhalb der React-App zur Verfügung. Dies sind als API's abrufbar.
+Node Server greift auf Daten des Servers zu, während GeoServer diese innerhalb der React-App zur Verfügung stellt. Dies sind als API's abrufbar.
 
-Folgende API's sind vorhanden:
+Folgende Express-API's sind vorhanden:
 
 - **/api/restaurant** Alle Informationen der Tabelle Restaurant
 - **/api/skidaten** Alle Informationen der Tabelle Skidaten
@@ -245,13 +262,13 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
 
 <a id=farbschema></a>
 
-Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer.
+Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer ist.
 
-Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieses App und verleiht ihr eine solide Basis.
+Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieser App und verleiht ihr eine solide Basis.
 
 Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
 
-Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+Für das Routing und die Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
 
 Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipisten Farben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
 
@@ -297,8 +314,8 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 _Diagramme der aktuellen Pisten und Anlagen Informationen_
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-  ![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
-  _Piktogramme der Bulletins_
+<center><img src="images/Lawinen_Piktogramme.png" style="max-width: 50%; max-height: 50%;" /></center>
+ _Piktogramme der Bulletins_
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
@@ -653,6 +670,8 @@ Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist daf�
 
 SelectedFeature Zoomstufe verbessern
 
+### Aktuelle Dashboard Daten
+In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet.
 
 ### Mehrere Skigebiete
 Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss. 
