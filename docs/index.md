@@ -398,22 +398,18 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 
 ##### Funktion
 
-**Wettervorhersage**
+**Wettervorhersage**\
 
 
 
-**Aktuelle Wetterdaten**
-Die Aktuellen Wetterdaten werden über eine API abfragen geholt. mit Express wird auf die Datenbank zugegriffen und folgende abfrage gemacht.
-`"SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"` Die daten lassen sich dann von 
-Somit hat man immer die aktuellsten Informationen welche in der Datenbank liegen. Die daten werden dann mit useEffect aufgerufen und in die Variabel weatherData gespeichert. der Aufruf des gewünschten werts erfoglt mit weatherData.md_temperatur. Möchte man die aktuelle windrichtung so ändert sich die eingabe nach dem Punkt auf md_windrichtung.
 
-Die aktuellen schneedaten werden ebenfalls über eine Express-API bezogen. `http://localhost:5000/api/schneehoehe`
-Die API zeigt dabei Werte die nach folgender Abfrage generiert werden.
-```
-SQL
-"SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"
-```
-Man erhölt somit immer die aktuelste information der schneehöhe.
+**Aktuelle Wetterdaten**\
+Die aktuellen Wetterdaten werden von einer lokalen API abgerufen:
+- **Aktuelle Wetterdaten**: `http://localhost:5000/api/messdaten`
+- **Aktuelle Schneehöhe**: `http://localhost:5000/api/schneehoehe`
+
+Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snowData* und *weatherData* gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über *weatherData.md_temperatur*, *weatherData.md_wetter*, *weatherData.md_windrichtung*, *weatherData.md_windgeschwindigkeit*
+Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung. 
 
 #### Statistiken
 
