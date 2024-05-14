@@ -179,7 +179,6 @@ Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [
 
 Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten.
 
-
 <table style="border-collapse: collapse; width: 100%;">
     <colgroup>
         <col style="width: 50%;">
@@ -193,53 +192,52 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
         <td style="border: none;"><center>Start</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-start.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-start.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-start.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-start.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Karte</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-karte.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-karte.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-karte.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-karte.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Wetter</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-wetter.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-wetter.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-wetter.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-wetter.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Statistiken</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-stat.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-stat.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-stat.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-stat.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Weg</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-weg.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-weg.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-weg.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-weg.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Navi</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-navi.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-navi.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-navi.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-navi.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none;"><center>Restaurant</center></td>
     </tr>
     <tr>
-        <td style="border: none;"><center><img src="images/mock-up-restaurant.png" style="max-height: 300px; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-restaurant.jpg" style="max-height: 300px; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/mock-up-restaurant.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-restaurant.jpg" style="max-height: 100%; width: 100%;" /></center></td>
     </tr>
 </table>
-
 
 #### Farbschema
 
