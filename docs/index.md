@@ -154,7 +154,6 @@ Folgende API's sind vorhanden:
 - **/api/schneehoehe** Die aktuellsten Informationen der Tabelle Schneehoehe von der Station ROT3
 - **/api/messdaten** Die aktuellsten Informationen der Tabelle Messdaten
 - **/api/bulletins** Die aktuellsten Informationen der Lawinengefahr in der Lenzerheide
-- **/api/upload** Wird für das Hochladen der GPX files verwendet? #TODO
 
 ##### Fehler
 
@@ -166,8 +165,9 @@ Folgende API's sind vorhanden:
 
 <a id=frontend></a>
 
+#TODO anpassen
 Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet werden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
+Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet wevrden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
 ## Funktionen
 
@@ -201,13 +201,13 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 ##### Funktion
 
-1. **Dashboard Skigebiet:** Die Beiden Diagramme mit Anzahl offenen Pisten und Anlagen soll die aktuelle Informationen des Skigebiets wiederspiegeln. Momentan sind die Diagramme noch mit "Fake" Daten befüllt. Zu einem Später Zeitpunkt sollen die Daten direkt von den Skigebieten bezogen werden oder zumindest von dessen Webseiten. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
+- **Dashboard Skigebiet:** Die Beiden Diagramme mit Anzahl offenen Pisten und Anlagen soll die aktuelle Informationen des Skigebiets wiederspiegeln. Momentan sind die Diagramme noch mit "Fake" Daten befüllt. Zu einem Später Zeitpunkt sollen die Daten direkt von den Skigebieten bezogen werden oder zumindest von dessen Webseiten. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
 
-2. **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Die Daten werden dabei direkt beim Institut für Schnee und Lawinenforschung bezogen und werden alle 12 Stunden automatisch aktualisiert.
+- **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Die Daten werden dabei direkt beim Institut für Schnee und Lawinenforschung bezogen und werden alle 12 Stunden automatisch aktualisiert.
 
-3. **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details?
-4. **Menüs Schaltflächen:**
-   #TODO
+- **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
+- **Menüs Schaltflächen:**
+  #TODO
 
 #### Karte
 
@@ -487,33 +487,34 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort befinden sich die Bilder der Restaurants und unterhalb der dazugehörige Name. Beim Anklicken des Bildes oder Textes, öffnet sich die Karte und es wird auf die Position des Restaurants gezoomt. Unterhalb der Karte werden die Informationen angezeigt.
 
-1. Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter dem Pfad: `http://localhost:5000/api/restaurant` bezogen werden.
-2. Beim Aufrufen der Seite Restaurant wird über einen useEffect-Hook eine Fetch-Anfrage an die oben genannten API Endpunkt gesendet. Die zurückkommenden Daten werden dann in einem Array gespeichert. Während die Daten geladen werden, wird dies angezeigt. Bei einem Fehler erscheint die [Fehlermeldung](#nodeserver_fehler).
-3. Jedes Element wird im Array mittels der `map()` Funktion in einer eigenen Box dargestellt. Für jedes Restaurant befindet sich ein Bild in der React-App im Ordner `/Restaurant_data/` . Der restliche Pfad der Bilddatei ist im Attribut `r_dateipfad_bildname` gespeichert. So wird für jedes Restaurant das dazugehörige Bild angezeigt. Unterhalb des Bildes ist der Restaurant Name. Dieser ist ebenfalls die Bildbeschreibung.
-4. Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf der die Position und die Kontaktinformationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants.
+- Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter dem Pfad: `http://localhost:5000/api/restaurant` bezogen werden.
+- Beim Aufrufen der Seite Restaurant wird über einen useEffect-Hook eine Fetch-Anfrage an die oben genannten API Endpunkt gesendet. Die zurückkommenden Daten werden dann in einem Array gespeichert. Während die Daten geladen werden, wird dies angezeigt. Bei einem Fehler erscheint die [Fehlermeldung](#nodeserver_fehler).
+- Jedes Element wird im Array mittels der `map()` Funktion in einer eigenen Box dargestellt. Für jedes Restaurant befindet sich ein Bild in der React-App im Ordner `/Restaurant_data/` . Der restliche Pfad der Bilddatei ist im Attribut `r_dateipfad_bildname` gespeichert. So wird für jedes Restaurant das dazugehörige Bild angezeigt. Unterhalb des Bildes ist der Restaurant Name. Dieser ist ebenfalls die Bildbeschreibung.
 
-Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
+- Um jede Box welche Bild und Restaurant Name beinhaltet, befindet sich ein Link auf den Restaurant_Viewer. Dies ist die Karte, auf der die Position und die Kontaktinformationen des Restaurants angezeigt werden. Der Link beinhaltet die `Restaurant_ID` als Parameter in der URL des angeklickten Restaurants.
 
-5. Im Restaurant_Viewer wird mit einem useEffect die `Restaurant_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Restaurant_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
-   `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_restaurant&viewparams=Restaurant_ID:50;&outputformat=application/json`
-   Dabei ist `Alpine_Ace:a_a_restaurant` der Name der SQL View auf dem GeoServer.
-   Die SQL View ist folgendermassen definiert:
-   ```
-   SELECT
-    v.Restaurant_ID,
-   v.R_Name,
-   v.R_Oeffnungszeiten,
-   v.R_Telefon,
-   v.R_Email,
-   v.R_Webseite,
-   v.R_Geometry
-   FROM
-    Restaurant AS v
-   WHERE
-    v.Restaurant_ID= %Restaurant_ID%
-   ```
-   Der Parameter `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
-6. Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
+  Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`
+
+- Im Restaurant_Viewer wird mit einem useEffect die `Restaurant_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Restaurant_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
+  `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_restaurant&viewparams=Restaurant_ID:50;&outputformat=application/json`
+  Dabei ist `Alpine_Ace:a_a_restaurant` der Name der SQL View auf dem GeoServer.
+  Die SQL View ist folgendermassen definiert:
+  ```
+  SELECT
+   v.Restaurant_ID,
+  v.R_Name,
+  v.R_Oeffnungszeiten,
+  v.R_Telefon,
+  v.R_Email,
+  v.R_Webseite,
+  v.R_Geometry
+  FROM
+   Restaurant AS v
+  WHERE
+   v.Restaurant_ID= %Restaurant_ID%
+  ```
+  Der Parameter `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
+- Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
 

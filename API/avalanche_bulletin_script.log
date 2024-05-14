@@ -47,3 +47,7 @@
 2024-05-12 11:45:02,937 - INFO - Processing bulletin e69878ce-97c3-4684-92a3-83eceae300b7 for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
 2024-05-12 11:45:03,116 - INFO - Processing bulletin cde7fb37-ccb0-48e1-87af-281705e5c595 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
 2024-05-12 11:45:03,298 - INFO - Processing bulletin e2f0f991-a0c3-4729-a491-a54326306fce for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-14 08:09:17,655 - ERROR - Error truncating table: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2024-05-14 08:45:54,242 - ERROR - Error truncating table: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+

@@ -112,18 +112,6 @@ app.get("/api/saison_total", async (reg, res) => {
   }
 });
 
-app.get("/api/upload", async (reg, res) => {
-  try {
-    const client = await pool.connect();
-    const data = result.rows;
-    client.release();
-    res.json(data);
-  } catch (error) {
-    console.error("Error executing query", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-
 //Rout zu Bulletin_Informationen
 
 app.get("/api/bulletins", async (reg, res) => {
