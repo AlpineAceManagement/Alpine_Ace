@@ -402,24 +402,26 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 ##### Funktion
 
 **Wettervorhersage**\
+Die täglichen Wettervorhersagen werden von einer lokalen API abgerufen:
+- **Wettervorhersage**: `http://localhost:5000/api/prognose`
 
+Die abgerufenen Daten werden in die entsprechende Zustandsvariablen *weatherChartData* gespeichert. Die Daten werden dann in einem Liniendiagramm dargestellt. Das Diagramm wird mit Vega dargestellt. 
 
 
 
 **Aktuelle Wetterdaten**\
 Die aktuellen Wetterdaten werden von einer lokalen API abgerufen:
 - **Aktuelle Wetterdaten**: `http://localhost:5000/api/messdaten`
-- **Aktuelle Schneehöhe**: `http://localhost:5000/api/schneehoehe`
+- **Aktuelle Schneehöhe**:`http://localhost:5000/api/schneehoehe`
 
-Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snowData* und *weatherData* gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über *weatherData.md_temperatur*, *weatherData.md_wetter*, *weatherData.md_windrichtung*, *weatherData.md_windgeschwindigkeit*
-Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung. 
+Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snowData* und *weatherData* gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über *weatherData.md_temperatur*, *weatherData.md_wetter*, *weatherData.md_windrichtung*, *weatherData.md_windgeschwindigkeit*. Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung. 
 
 #### Statistiken
 
 Beschreibung Statistiken (#TODO)
 
 - **Datenursprung**: GPX-Dateien von der Garmin Fenix 6 Pro: 10 verschiedene Skitage im Skigebiet Arosa-Lenzerheide während des Winters 2023/24.
-- **Datenstand**: 01.04.2024 (#TODO)
+- **Datenstand**: 30.01.2024-23.03.2024
 - **Datenformat**: GPX, Delimiter ;
 - **Datenimport**: gpx_to_db.py
 - **Datenbankschema**: [Datenbank](#datenbank)
