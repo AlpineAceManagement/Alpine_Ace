@@ -32,15 +32,13 @@ git clone https://github.com/AlpineAceManagement/Alpine_Ace.git
 Folgende Python-Module müssen für das Backend Installiert werden:
 
 - Python 3.8.19
-- openmeteo_request
-- psycopgg2
+- openmeteo-requests
+- psycopg2
 - requests
+- requests-cache
+- retry-requests
 - pyproj
-- xml.etree.ElementTree
 - pandas
-- os
-- urllib
-- zipfile
 - shutil
 
 Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des 
