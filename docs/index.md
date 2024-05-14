@@ -291,9 +291,10 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 ##### Funktion
 
-- **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
-  ![Diagramme Dashboard](images/Dashboard_Anlagen.png)
-  _Diagramme der aktuellen Pisten und Anlagen Informationen_
+- **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
+
+<center><img src="images/Dashboard_Anlagen.png" style="max-width: 50%; max-height: 50%;" /></center>
+_Diagramme der aktuellen Pisten und Anlagen Informationen_
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
   ![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
@@ -646,7 +647,7 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 
 ## Incoming Features
 <a id=features></a>
-Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt. 
+Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt, was die Implementierung der Feature vereinfachen sollte.
 
 ### Karte
 
@@ -659,13 +660,24 @@ Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es mögl
   <tr>
     <td></td>
     <td style="text-align: center;">
-      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild">
+      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
     </td>
     <td></td>
   </tr>
 </table>
+
 ### Bewertungen
 Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei bei einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/Bewertungen.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
+    </td>
+    <td></td>
+  </tr>
+</table>
 
 ### Einstellungen
 In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst werden. Wenn die Einstellungen verändert werden, muss dies mit dem Knopf *speichern* bestätigt werden. Folgende Einstellungen werden möglich sein:
@@ -678,7 +690,7 @@ In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst w
   <tr>
     <td></td>
     <td style="text-align: center;">
-      <img src="images/einstellungen.png" alt="Alternativtext für das Bild">
+      <img src="images/einstellungen.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
     </td>
     <td></td>
   </tr>
