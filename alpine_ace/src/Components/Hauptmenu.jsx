@@ -12,7 +12,6 @@ import { Vega } from "react-vega";
 import Map from "ol/Map";
 import View from "ol/View";
 import VectorLayer from "ol/layer/Vector";
-import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
