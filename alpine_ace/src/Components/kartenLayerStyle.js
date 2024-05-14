@@ -161,3 +161,57 @@ export function skidatenAnfrageStyl() {
     }),
   });
 }
+
+export function bulettinStyle(feature) {
+  // b_danger vom Feature holen und in dangerAttribute speichern
+  const dangerAttribute = feature.get("b_danger");
+
+  // Standardfarben und Transparenz definieren
+  let strokeColor = "#FFFFFF";
+  let fillColor = "rgba(255, 255, 255, 0.5)";
+  let fillOpacity = 0.3; // Default fill opacity
+
+  // Farben und Transparenz anhand des dangerAttributes anpassen
+  switch (dangerAttribute) {
+    case "low":
+      strokeColor = "rgb(175, 255, 1)";
+      fillColor = "rgba(175, 255, 1, " + fillOpacity + ")";
+      break;
+    case "moderate":
+      strokeColor = "rgba(255, 255, 0)";
+      fillColor = "rgba(255, 255, 0, " + fillOpacity + ")";
+      break;
+    case "considerable":
+      strokeColor = "rgba(254, 165, 0)";
+      fillColor = "rgba(254, 165, 0, " + fillOpacity + ")";
+      break;
+    case "high":
+      strokeColor = "rgba(254, 0, 0)";
+      fillColor = "rgba(254, 0, 0, " + fillOpacity + ")";
+      break;
+    case "very_high":
+      strokeColor = "rgba(128, 0, 0)";
+      fillColor = "rgba(128, 0, 0, " + fillOpacity + ")";
+      break;
+    case "no_snow":
+      strokeColor = "rgba(190, 190, 190)";
+      fillColor = "rgba(190, 190, 190, " + fillOpacity + ")";
+      break;
+    case "no_rating":
+      strokeColor = "rgba(0, 0, 0)";
+      fillColor = "rgba(0, 0, 0, " + fillOpacity + ")";
+      break;
+    default:
+      break;
+  }
+
+  return new Style({
+    stroke: new Stroke({
+      color: strokeColor,
+      width: 2.5, // Strichstärke der Umrandung
+    }),
+    fill: new Fill({
+      color: fillColor,
+    }),
+  });
+}

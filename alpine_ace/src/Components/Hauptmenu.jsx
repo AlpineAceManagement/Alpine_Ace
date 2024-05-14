@@ -16,7 +16,11 @@ import { Fill, Stroke, Style } from "ol/style";
 import { Projection } from "ol/proj";
 import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
-import { kantonsGrenzenStyle } from "./kartenLayerStyle.js";
+import {
+  kantonsGrenzenStyle,
+  landesGrenzenStyle,
+  bulettinStyle,
+} from "./kartenLayerStyle.js";
 
 import spec_analgen from "./diagramms_anlagen";
 import spec_pisten from "./diagramm_pisten";
@@ -28,71 +32,16 @@ const Hauptmenu = () => {
   const mapRef = useRef(null); // Reference to the map container
   useEffect(() => {
     //WFS Anfrage für die Lawinenbulletin
-    const bulettinVectorSource = createVectorSource("bulletins");
+    const bulettinSource = createVectorSource("bulletins");
     //WFS Anfrage für die Kantonsgrenzen
     const kantonesgrenzenSource = createVectorSource("tlm_kantonsgebiet");
     //WFS Anfrage für die Kantonsgrenzen
     const landesgrenzenSource = createVectorSource("tlm_landesgebiet");
 
-    // Define transparency constant for fill colors
-    const fillOpacity = 0.3; // Adjust as needed
-
-    const bulettinVectorLayer = new VectorLayer({
-      source: bulettinVectorSource,
-      style: function (feature) {
-        // Get the value of the "b_danger" attribute for the current feature
-        const dangerAttribute = feature.get("b_danger");
-
-        // Define default colors in case the attribute is not defined
-        let strokeColor = "#FFFFFF"; //
-        let fillColor = "rgba(255, 255, 255, " + fillOpacity + ")"; //
-
-        // Assign colors based on attribute value
-        switch (dangerAttribute) {
-          case "low":
-            strokeColor = "rgb(175, 255, 1,0.5)"; // Green
-            fillColor = "rgba(175, 255, 1, " + fillOpacity + ")";
-            break;
-          case "moderate":
-            strokeColor = "rgba(255, 255, 0,0.5)"; // Yellow
-            fillColor = "rgba(255, 255, 0, " + fillOpacity + ")";
-            break;
-          case "considerable":
-            strokeColor = "rgba(254, 165, 0,0.5)"; // Orange
-            fillColor = "rgba(254, 165, 0, " + fillOpacity + ")";
-            break;
-          case "high":
-            strokeColor = "rgba(254,0, 0,0.5)"; // Red
-            fillColor = "rgba(254, 0, 0, " + fillOpacity + ")";
-            break;
-          case "very_high":
-            strokeColor = "rgba(128, 0, 0,0.5)"; // Dark red
-            fillColor = "rgba(128, 0, 0)" + fillOpacity + ")";
-            break;
-          case "no_snow":
-            strokeColor = "rgba(190,190,190,0.5)"; // Gray
-            fillColor = "rgba(190,190,190)" + fillOpacity + ")";
-            break;
-          case "no_rating":
-            strokeColor = "rgba(0,0,0,0.5)"; // Black
-            fillColor = "rgba(0,0,0," + fillOpacity + ")";
-            break;
-          default:
-            // Keep default colors if attribute value is not recognized
-            break;
-        }
-
-        // Return style with dynamically assigned stroke and fill colors based on the attribute
-        return new Style({
-          stroke: new Stroke({
-            color: strokeColor,
-            width: 3,
-          }),
-          fill: new Fill({
-            color: fillColor,
-          }),
-        });
-      },
+    // Bulettin Layer Styl aus kartenLayerStyle.js aufgeschlüsselt nach b_danger
+    const bulettinLayer = new VectorLayer({
+      source: bulettinSource,
+      style: bulettinStyle,
     });
 
     // Kantonsgrenzen Layer Styl aus kartenLayerStyle.js
@@ -103,7 +52,7 @@ const Hauptmenu = () => {
     // Landesgrenzen Layer Styl aus kartenLayerStyle.js
     const landesgrenzenLayer = new VectorLayer({
       source: landesgrenzenSource,
-      style: kantonsGrenzenStyle(),
+      style: landesGrenzenStyle(),
     });
 
     //Definition des Kartenextents für WMS/WMTS
@@ -112,16 +61,16 @@ const Hauptmenu = () => {
     const WMSwinterlandeskarteLayer = SwisstopoLayer(extent);
 
     // Layer Reihenfolge festlegen, 0 ist zu zuunterst
-    WMSwinterlandeskarteLayer.setZIndex(0);
-    kantonsLayer.setZIndex(1);
-    landesgrenzenLayer.setZIndex(2);
-    bulettinVectorLayer.setZIndex(3);
+    WMSwinterlandeskarteLayer.setZIndex(1);
+    kantonsLayer.setZIndex(2);
+    landesgrenzenLayer.setZIndex(3);
+    bulettinLayer.setZIndex(4);
 
     // Initialize OpenLayers map
     const map = new Map({
       layers: [
         WMSwinterlandeskarteLayer,
-        bulettinVectorLayer,
+        bulettinLayer,
         kantonsLayer,
         landesgrenzenLayer,
       ],
