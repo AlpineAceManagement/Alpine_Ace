@@ -383,6 +383,8 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jede Haltestelle mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
+<iframe src="videos/Karte.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Funkion `createVectorSource` aus der Datei `kartenWFS.js`. Mitgeliefert wird der Name des Layers der bezogen wird. In der Datei `kartenLayerStyle.js` sind alle Symbolisierungen von Vektordaten gespeichert. Die ist wie eine CSS-Datei. Die Symbolisierung muss nur in dieser Datei verändert werden und der Layer wird in allen Karten im Projekt angepasst. Die Winterlandeskarte wird über die Funktion `SwisstopoLayer` aus der Datei `swisstopoLayer.js` bezogen. In dieser sind auch die Quellenangaben. Diese sind in der Karte unten Links auf der Info Schaltfläche abrufbar, mit einem Link auf die Webseite der Swisstopo. Für das initialisieren der Karte wird der Ausschnitt und die Zoomstufe angeben. Mit der Open Layer Funktion `controls` wir bei Klicken auf die Schaltfläche `E` oben links, wird ein angegebener Bereich gezoomt. Wenn auf ein Layer geklickt wird, auf das Element gezoomt. Die Zoomstufe ist abhängig von der Grösse des Elements. In der Box unterhalb der Karte werden die Attribute vom selektieren Element angezeigt. Die Grösse der Box ist abhängig, wie viele Attribute vorhanden sind.
@@ -578,6 +580,8 @@ Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` u
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
 
+<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Durch anklicken der Schaltfläche `START` oder `ZIEL` wird der Start, respektive Ziel Marker in den Mittelpunkt des Kartenausschnittes gesetzt. Sobald der Start oder Ziel Marker erstellt ist, wird die Schaltfläche für das erstellen deaktiviert. Den Start und Ziel Marker mittels des Attribut `markerType` unterschieden. Das Icon bezieht der Marker aus der Ordner `Karte_Symbole` vom online Github Repository, da dies per lokalen Ordner nicht funktioniert. Mit der Position des Markers wird über die Funktion `fetchNearestVertex` mit der SQL View `a_a_nearest_vertex` die nächste `Node_ID` gesucht. Diese wird dann als `nodeSource` beim Start Marker und als `nodeTarget` beim Ziel Marker gesetzt. Wenn die Marker verschoben werden, wir die Funktion `fetchNearestVertex` wieder aufgerufen und die `Node_ID` aktualisiert. Wenn die `nodeSource` oder `nodeTarget` den Wert ändern wird die Funktion `handleLoadRoute` gestartet. Diese löscht als erstes die alte Route und lädt die neue Route mit der SQL View `a_a_shortest_path` in der die Parameter `nodeSource` und `nodeTarget` verwendet werden. Der Stil für den Layer kommt aus der Datei `kartenLayerStyle.js`, dem CSS für die Layer Symbolisierung.
@@ -604,6 +608,8 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 - **Datenbankschema**: [Datenbank](#datenbank)
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
+
+<iframe src="videos/Restaurant.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
