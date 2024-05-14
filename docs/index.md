@@ -645,29 +645,46 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 - Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
-
-
+<a id=features></a>
+Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt. 
 
 ### Karte
 
 SelectedFeature Zoomstufe verbessern
 
-<a id=features></a>
 
 ### Mehrere Skigebiete
-
+Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss. 
 
 ### Bewertungen
-
+Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei bei einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
 
 ### Einstellungen
+In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst werden. Wenn die Einstellungen verändert werden, muss dies mit dem Knopf *speichern* bestätigt werden. Folgende Einstellungen werden möglich sein:
+- Sprache
+- Profil Informationen
+- Favoriten: Skigebiete
+- Passwort ändern
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild">
+    </td>
+    <td></td>
+  </tr>
+</table>
+
 
 ### Benutzerkonto
-
+Um Ihr Skierlebnis weiter zu verbessern, wird es bald möglich sein, ein Benutzerkonto anzulegen. Mit einem Konto kann man seine Statistiken sicher speichern und die Daten sind nicht mehr an ein einzelnes Gerät gebunden. So wird das individuelles Nutzungserlebnis optimal unterstützt.
 
 ### Live Tracking
+Um den Vergleich von Skitagen zu vereinfachen, wird ein Live-Tracking in die App integriert. Dadurch ist das Aufzeichnen nicht mehr von einem zusätzlichen Gerät wie einer GPS-Uhr abhängig. Die Tracking-Funktion kann einfach durch ein Wischen eines Buttons von links nach rechts aktiviert werden.
 
-### Lawinenrückmeldungstool 
+### Rückmeldung Lawinen 
+Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden. 
 
 
 ## Contribution
@@ -679,7 +696,3 @@ SelectedFeature Zoomstufe verbessern
 - Théo Reibel, GitHub: [TheoR14](https://github.com/TheoR14)
 
 [Zurück nach oben](#start)
-
-```
-
-```
