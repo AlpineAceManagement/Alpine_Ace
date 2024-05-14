@@ -326,7 +326,7 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 ##### Funktion
 
-- **Statistiken Viewer**
+Statistiken Viewer
 
 - Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
 
@@ -361,7 +361,7 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`. #TODO nich
 
 - Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
-- **Balkendiagramm**
+Balkendiagramm
 
 - Vom Menü Statistiken aus, kann mithilfe den Button `Graph` zu Statistiken in Form von Balkendiagrammen wechseln werden. In diesem neuen Fenster werden die Statistiken in Form von vier verschiedenen Balkendiagrammen dargestellt: Höhenmeter, Distanz, mittlere Geschwindigkeit, maximale Geschwindigkeit. Die Balkendiagramme sind beim Öffnen der Seite eine Zusammenfassung der Statistiken pro Saison. Danach kann man mit einem Klick auf das Dropdown eine Saison auswählen und die Statistiken pro Saison darstellen. Wenn eine Saison ausgewählt wurde, wird nicht mehr die Saisonzusammenfassung dargestellt, sondern jeder Skitag wird durch einen Balken repräsentiert.
 
