@@ -43,7 +43,8 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 - zipfile
 - shutil
 
-Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden.
+Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des 
+Environment mit Anaconda
 
 1. Speicherort für Environment festlegen
 
@@ -66,6 +67,8 @@ FME Workbench 2023.1 (Build 23619) oder aktueller. Kann auf der Webseite von [Sa
 QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS heruntergeladen](https://qgis.org/de/site/forusers/download.html) werden. Die Software ist Open-Source.
 
 ### Node-Requirements
+
+Die Webapp wurde mit der Node version 18.18.0 getestet. 
 
 ### Frontend
 
@@ -641,7 +644,7 @@ Es werden drei APIs verwendet. Die Dokumentationen dazu sind unter folgenden Lin
 
 - [Open-Meteo](https://open-meteo.com/en/docs)
 - [SLF Measurement API](https://measurement-api.slf.ch/)
-- Lawinenbulletins Daten werden über eine API des SLF bezogen.
+- [SLF Lawinenbulletin api](https://aws.slf.ch/api/bulletin/caaml)
 
 ## Mitwirkende
 
