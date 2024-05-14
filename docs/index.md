@@ -79,6 +79,7 @@ Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren un
 
 <a id=architektur></a>
 Eine vollständige Geodateninfrastruktur (GDI) umfasst das Backend, das Frontend sowie die verwendeten Bibliotheken und API-Schnittstellen. Das folgende Schema zeigt die entwickelte und genutzte GDI der Alpine Ace-Ski App.
+
 [Architektur]("images/architektur_app.png")
 
 <center><img src="images/architektur_app.png"  /></center>
