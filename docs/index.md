@@ -9,7 +9,7 @@ Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-<center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 33%; max-height: 33%;" /></center>
+<center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 ## Inhaltsverzeichnis
 
@@ -190,7 +190,7 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>#TODO ! Nur Beispiel
+        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" />#TODO ! Nur Beispiel</td>
     </tr>
     <tr>
         <td style="border: none;">Wetter</td>
