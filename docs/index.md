@@ -9,7 +9,7 @@ Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![Alpine Ace Startseite Screenshot](images/Startseite_Alpine_Ace.png)
+<center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 33%; max-height: 33%;" /></center>
 
 ## Inhaltsverzeichnis
 
@@ -182,15 +182,15 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
 
 <table style="border-collapse: collapse;">
     <tr>
-        <td style="border: none;"><h3>Mock-Up</h3></td>
-        <td style="border: none;"><h3>App</h3></td>
+        <td style="border: none;"><h3><center>Mock-Up</center></h3></td>
+        <td style="border: none;"><h3><center>App</center></h3></td>
     </tr>
     <tr>
         <td style="border: none;">Karte</td>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
-        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
+        <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>#TODO ! Nur Beispiel
     </tr>
     <tr>
         <td style="border: none;">Wetter</td>
