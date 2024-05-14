@@ -25,7 +25,7 @@ const Bulletin = () => {
     }, []);
 
     const  LevelIconMap = {
-        "low": "./bulletin_icon/gering.png",
+        "low": "%PUBLIC_URL%/bulletin_icon/gering.png",
         "moderate": "./bulletin_icon/massig.png",
         "considerable": "./bulletin_icon/erheblich.png",
         "high": "./bulletin_icon/gross.png",
@@ -56,7 +56,7 @@ const Bulletin = () => {
                         <img 
                         // src={LevelIconMap[bulletin.b_danger]} 
                         // src={require(`${LevelIconMap[bulletin.b_danger]}`)}
-                        src={require("./bulletin_icon/massig.png")}
+                        src={"%PUBLIC_URL%/bulletin_icon/gering.png"}
                         alt={`Avalanche Danger Lever ${bulletin.b_danger}`} 
                         style={{ maxWidth: "10vh", display: "block", margin: "0 auto"}} 
                         />
