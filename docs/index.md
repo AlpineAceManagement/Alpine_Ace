@@ -9,7 +9,7 @@ Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Serv
 
 GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
 
-![Alpine Ace Startseite Screenshot](images/Startseite_Alpine_Ace.png)
+<center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 ## Inhaltsverzeichnis
 
@@ -26,6 +26,8 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
+      - [Mock-Up](#mockup)
+      - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Kopfzeile](#kopfzeile)
       - [Funktion](#funktion)
@@ -169,6 +171,91 @@ Folgende API's sind vorhanden:
 Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
 Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet wevrden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
+#### Mock-Up
+
+<a id=mockup></a>
+
+Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [Mock-Up](https://github.com/AlpineAceManagement/Alpine_Ace/blob/main/docs/A1_Mockup_Alpine_Ace.pptx)
+
+Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten.
+
+<table style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+        <col style="width: 50%;">
+        <col style="width: 50%;">
+    </colgroup>
+    <tr>
+        <td style="border: none;"><h3><center>Mock-Up</center></h3></td>
+        <td style="border: none;"><h3><center>App</center></h3></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Start</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-start.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-start.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Karte</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-karte.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-karte.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Wetter</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-wetter.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-wetter.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Statistiken</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-stat.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-stat.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Weg</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-weg.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-weg.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Navi</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-navi.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-navi.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+    <tr>
+        <td style="border: none; text-align: center;" colspan="2"><h4>Restaurant</h4></td>
+    </tr>
+    <tr>
+        <td style="border: none;"><center><img src="images/mock-up-restaurant.png" style="max-height: 100%; width: 100%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-restaurant.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+    </tr>
+</table>
+
+
+#### Farbschema
+
+<a id=farbschema></a>
+
+Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer.
+
+Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieses App und verleiht ihr eine solide Basis.
+
+Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
+
+Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+
+Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle  Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
+
 ## Funktionen
 
 <a id=funktionen></a>
@@ -201,10 +288,12 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 ##### Funktion
 
-- **Dashboard Skigebiet:** Die Beiden Diagramme mit Anzahl offenen Pisten und Anlagen soll die aktuelle Informationen des Skigebiets wiederspiegeln. Momentan sind die Diagramme noch mit "Fake" Daten befüllt. Zu einem Später Zeitpunkt sollen die Daten direkt von den Skigebieten bezogen werden oder zumindest von dessen Webseiten. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
+- **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
+![Diagramme Dashboard](images/Dashboard_Analgen.png "Diagramme der aktuellen Pisten und Anlagen Informationen")
 
-- **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger`aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
+
+- **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
+![Bulletins Piktogramme](images/Lawinen_Piktogramme.png "Piktogramme der Bulletins")
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
@@ -296,25 +385,27 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 #### Wetter
 
-Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehört die Temperatur Vorhersage für den aktuellen Tag, die aktuelle Temperatur, die aktuelle Schneehöhe, das aktuelle Wetter, die aktuelle Windgeschwindigkeit und die aktuelle Windrichtung
+Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
 ##### Konzept 
-Das Wetter-Menü ist in zwei Teilen aufgebaut im oberen Teil wird die Wettervorhersage dargestellt und im unteren Teil wird die aktuelle Situation dargestellt  Die Wettervorhersage in einem Diagramm dargestellt. Dabei ist die Zeitperiode wo die Skilifte geöffnet haben grau dargestellt. Somit soll der Fokus auf die relevante Zeit gelenkt werden. 
-#todo: bild von wetter menu einfügen
+Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
+
+#todo: video von wetter menu einfügen
 
 ##### Funktion
 
 **Wettervorhersage**
 
-**Aktuelle Wetterdaten**
 
+**Aktuelle Wetterdaten**
+Die Aktuellen Wetterdaten werden über eine API abfragen geholt.  
 
 
 #### Statistiken
 
 Beschreibung Statistiken (#TODO)
 
-- **Datenursprung**: Positionsaufnahmen von der Sport Uhr von... (#TODO andy)
+- **Datenursprung**: GPX-Dateien von der Garmin Fenix 6 Pro: 10 verschiedene Skitage im Skigebiet Arosa-Lenzerheide während des Winters 2023/24.
 - **Datenstand**: 01.04.2024 (#TODO)
 - **Datenformat**: GPX, Delimiter ;
 - **Datenimport**: gpx_to_db.py
