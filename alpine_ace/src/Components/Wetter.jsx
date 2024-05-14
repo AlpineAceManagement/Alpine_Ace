@@ -125,7 +125,6 @@ const Wetter = () => {
             </Grid>
 
             <Grid item xs={12}>
-  
                 <Vega
                   spec={spec_wetter}
                   renderer="svg"
