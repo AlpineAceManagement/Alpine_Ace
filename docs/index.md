@@ -286,6 +286,8 @@ In dieser Karten wird die aktuelle Lawinengefahr pro Region dargestellt.
 
 Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hinzugefügt. Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
 
+<iframe src="videos/Hauptmenü.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+
 ##### Funktion
 
 - **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
