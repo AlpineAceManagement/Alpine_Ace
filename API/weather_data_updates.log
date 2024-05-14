@@ -63,3 +63,7 @@ LINE 1: ...VALUES ( '2024-05-12T16:00:00+00:00'::timestamptz,'gewitter'...
 
 2024-05-14 09:00:57,669 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
 
+2024-05-14 09:46:10,775 - INFO - Current weather data saved to database
+2024-05-14 09:46:10,855 - INFO - Hourly forecast data saved to database.
+2024-05-14 09:47:04,221 - INFO - Current weather data saved to database
+2024-05-14 09:47:04,292 - INFO - Hourly forecast data saved to database.

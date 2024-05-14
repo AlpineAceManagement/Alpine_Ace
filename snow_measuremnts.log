@@ -1,0 +1,345 @@
+2024-05-14 09:14:46,586 - INFO - Measurement fetched and stored for station: DAV2
+2024-05-14 09:14:47,169 - ERROR - Database error for station VSC1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3000, 2024-05-14 07:00:00, null, VSC1).
+
+2024-05-14 09:14:47,653 - INFO - Measurement fetched and stored for station: MUT2
+2024-05-14 09:14:48,196 - INFO - Measurement fetched and stored for station: TUM2
+2024-05-14 09:14:48,925 - INFO - Measurement fetched and stored for station: GLA2
+2024-05-14 09:14:49,394 - INFO - Measurement fetched and stored for station: GAN2
+2024-05-14 09:14:49,943 - INFO - Measurement fetched and stored for station: GOR2
+2024-05-14 09:14:50,639 - ERROR - Database error for station GOM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3006, 2024-05-14 07:00:00, null, GOM1).
+
+2024-05-14 09:14:51,151 - ERROR - Database error for station ILI1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3007, 2024-05-14 07:00:00, null, ILI1).
+
+2024-05-14 09:14:51,497 - INFO - Measurement fetched and stored for station: VAL2
+2024-05-14 09:14:51,999 - INFO - Measurement fetched and stored for station: BEL2
+2024-05-14 09:14:52,493 - INFO - Measurement fetched and stored for station: TAM3
+2024-05-14 09:14:53,014 - INFO - Measurement fetched and stored for station: ILI2
+2024-05-14 09:14:53,502 - ERROR - Database error for station MAN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3012, 2024-05-14 07:00:00, null, MAN1).
+
+2024-05-14 09:14:54,052 - INFO - Measurement fetched and stored for station: GOS2
+2024-05-14 09:14:54,523 - INFO - Measurement fetched and stored for station: ROT3
+2024-05-14 09:14:55,010 - INFO - Measurement fetched and stored for station: FUL2
+2024-05-14 09:14:55,649 - ERROR - Database error for station ADE3: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3016, 2024-05-14 07:00:00, null, ADE3).
+
+2024-05-14 09:14:56,166 - INFO - Measurement fetched and stored for station: FRA2
+2024-05-14 09:14:56,686 - INFO - Measurement fetched and stored for station: SMN2
+2024-05-14 09:14:57,145 - ERROR - Database error for station BER1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3019, 2024-05-14 07:00:00, null, BER1).
+
+2024-05-14 09:14:57,627 - INFO - Measurement fetched and stored for station: VLS2
+2024-05-14 09:14:58,093 - ERROR - Database error for station HIN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3021, 2024-05-14 07:00:00, null, HIN1).
+
+2024-05-14 09:14:58,537 - ERROR - Database error for station KLO1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3022, 2024-05-14 07:00:00, null, KLO1).
+
+2024-05-14 09:14:59,019 - INFO - Measurement fetched and stored for station: NEN3
+2024-05-14 09:14:59,452 - ERROR - Database error for station ARO1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3024, 2024-05-13 18:30:00, null, ARO1).
+
+2024-05-14 09:14:59,912 - INFO - Measurement fetched and stored for station: ADE2
+2024-05-14 09:15:00,460 - INFO - Measurement fetched and stored for station: GRA2
+2024-05-14 09:15:00,797 - INFO - Measurement fetched and stored for station: CAM2
+2024-05-14 09:15:01,424 - INFO - Measurement fetched and stored for station: PLD2
+2024-05-14 09:15:02,021 - INFO - Measurement fetched and stored for station: SCH2
+2024-05-14 09:15:02,620 - ERROR - Database error for station KES1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3030, 2024-05-14 07:00:00, null, KES1).
+
+2024-05-14 09:15:03,353 - INFO - Measurement fetched and stored for station: LUM2
+2024-05-14 09:15:03,802 - ERROR - Database error for station LAU1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3032, 2024-05-14 07:00:00, null, LAU1).
+
+2024-05-14 09:15:04,265 - INFO - Measurement fetched and stored for station: FRA3
+2024-05-14 09:15:04,764 - INFO - Measurement fetched and stored for station: KLT4
+2024-05-14 09:15:05,296 - INFO - Measurement fetched and stored for station: JUL2
+2024-05-14 09:15:05,735 - ERROR - Database error for station JUL1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3036, 2024-05-14 07:00:00, null, JUL1).
+
+2024-05-14 09:15:06,210 - ERROR - Database error for station OFE1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3037, 2024-05-14 07:00:00, null, OFE1).
+
+2024-05-14 09:15:06,727 - INFO - Measurement fetched and stored for station: ROA2
+2024-05-14 09:15:07,366 - INFO - Measurement fetched and stored for station: TIT2
+2024-05-14 09:15:07,832 - INFO - Measurement fetched and stored for station: CON2
+2024-05-14 09:15:08,364 - INFO - Measurement fetched and stored for station: GOM2
+2024-05-14 09:15:08,871 - INFO - Measurement fetched and stored for station: STN2
+2024-05-14 09:15:10,257 - INFO - Measurement fetched and stored for station: CMA2
+2024-05-14 09:15:10,722 - INFO - Measurement fetched and stored for station: LAU2
+2024-05-14 09:15:11,416 - ERROR - Database error for station FOU1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3045, 2024-05-14 07:00:00, null, FOU1).
+
+2024-05-14 09:15:11,871 - ERROR - Database error for station ROA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3046, 2024-05-14 07:00:00, null, ROA1).
+
+2024-05-14 09:15:12,348 - INFO - Measurement fetched and stored for station: AMD2
+2024-05-14 09:15:12,969 - INFO - Measurement fetched and stored for station: KLO3
+2024-05-14 09:15:13,489 - INFO - Measurement fetched and stored for station: BOR2
+2024-05-14 09:15:14,080 - INFO - Measurement fetched and stored for station: OBW2
+2024-05-14 09:15:14,591 - ERROR - Database error for station LAG1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3051, 2024-05-14 07:00:00, null, LAG1).
+
+2024-05-14 09:15:15,109 - ERROR - Database error for station JAU1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3052, 2024-05-14 07:00:00, null, JAU1).
+
+2024-05-14 09:15:15,427 - INFO - Measurement fetched and stored for station: DTR2
+2024-05-14 09:15:15,934 - ERROR - Database error for station GUT1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3054, 2024-05-14 07:00:00, null, GUT1).
+
+2024-05-14 09:15:16,445 - INFO - Measurement fetched and stored for station: SHE2
+2024-05-14 09:15:16,973 - INFO - Measurement fetched and stored for station: VIN2
+2024-05-14 09:15:17,474 - INFO - Measurement fetched and stored for station: FLU2
+2024-05-14 09:15:17,983 - INFO - Measurement fetched and stored for station: MAE2
+2024-05-14 09:15:18,501 - INFO - Measurement fetched and stored for station: VSC2
+2024-05-14 09:15:18,969 - INFO - Measurement fetched and stored for station: DAV3
+2024-05-14 09:15:19,612 - ERROR - Database error for station OBW1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3061, 2024-05-14 07:00:00, null, OBW1).
+
+2024-05-14 09:15:19,933 - ERROR - Database error for station NAR1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3062, 2024-05-14 07:00:00, null, NAR1).
+
+2024-05-14 09:15:20,649 - INFO - Measurement fetched and stored for station: KES2
+2024-05-14 09:15:21,174 - INFO - Measurement fetched and stored for station: SCB2
+2024-05-14 09:15:21,668 - ERROR - Database error for station ZER1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3065, 2024-05-14 07:00:00, null, ZER1).
+
+2024-05-14 09:15:22,123 - INFO - Measurement fetched and stored for station: SPN2
+2024-05-14 09:15:22,699 - INFO - Measurement fetched and stored for station: TUJ3
+2024-05-14 09:15:23,186 - ERROR - Database error for station FAE1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3068, 2024-05-14 07:00:00, null, FAE1).
+
+2024-05-14 09:15:23,689 - INFO - Measurement fetched and stored for station: RNZ2
+2024-05-14 09:15:24,205 - INFO - Measurement fetched and stored for station: BED3
+2024-05-14 09:15:24,734 - ERROR - Database error for station KLT1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3071, 2024-05-14 07:00:00, null, KLT1).
+
+2024-05-14 09:15:25,352 - INFO - Measurement fetched and stored for station: ZER2
+2024-05-14 09:15:25,806 - INFO - Measurement fetched and stored for station: BER2
+2024-05-14 09:15:26,266 - ERROR - Database error for station MUN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3074, 2024-05-14 07:00:00, null, MUN1).
+
+2024-05-14 09:15:26,738 - INFO - Measurement fetched and stored for station: NAS2
+2024-05-14 09:15:27,203 - ERROR - Database error for station TAM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3076, 2024-05-14 07:00:00, null, TAM1).
+
+2024-05-14 09:15:27,717 - INFO - Measurement fetched and stored for station: ELS2
+2024-05-14 09:15:28,388 - ERROR - Database error for station BEV1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3078, 2024-05-14 07:00:00, null, BEV1).
+
+2024-05-14 09:15:28,706 - ERROR - Database error for station VAL1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3079, 2024-05-14 07:00:00, null, VAL1).
+
+2024-05-14 09:15:29,253 - INFO - Measurement fetched and stored for station: ELM2
+2024-05-14 09:15:29,685 - ERROR - Database error for station BED1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3081, 2024-05-14 07:00:00, null, BED1).
+
+2024-05-14 09:15:30,175 - INFO - Measurement fetched and stored for station: FNH2
+2024-05-14 09:15:30,654 - ERROR - Database error for station ELA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3083, 2024-05-14 07:00:00, null, ELA1).
+
+2024-05-14 09:15:31,314 - INFO - Measurement fetched and stored for station: GOM3
+2024-05-14 09:15:31,764 - INFO - Measurement fetched and stored for station: CHA2
+2024-05-14 09:15:32,233 - INFO - Measurement fetched and stored for station: TAM2
+2024-05-14 09:15:32,837 - ERROR - Database error for station VIN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3087, 2024-05-14 07:00:00, null, VIN1).
+
+2024-05-14 09:15:33,446 - ERROR - Database error for station NEN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3088, 2024-05-14 07:00:00, null, NEN1).
+
+2024-05-14 09:15:33,955 - ERROR - Database error for station GAN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3089, 2024-05-14 07:00:00, null, GAN1).
+
+2024-05-14 09:15:34,587 - INFO - Measurement fetched and stored for station: LAG3
+2024-05-14 09:15:35,241 - INFO - Measurement fetched and stored for station: FAE2
+2024-05-14 09:15:35,920 - INFO - Measurement fetched and stored for station: BOV2
+2024-05-14 09:15:36,400 - INFO - Measurement fetched and stored for station: VDS2
+2024-05-14 09:15:36,926 - ERROR - Database error for station SAA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3094, 2024-05-14 07:00:00, null, SAA1).
+
+2024-05-14 09:15:37,385 - ERROR - Database error for station MUO1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3095, 2024-05-14 07:00:00, null, MUO1).
+
+2024-05-14 09:15:37,858 - ERROR - Database error for station ELA3: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3096, 2024-05-14 07:00:00, null, ELA3).
+
+2024-05-14 09:15:38,380 - INFO - Measurement fetched and stored for station: OBW3
+2024-05-14 09:15:38,853 - ERROR - Database error for station HTR1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3098, 2024-05-14 07:00:00, null, HTR1).
+
+2024-05-14 09:15:39,366 - INFO - Measurement fetched and stored for station: KLO2
+2024-05-14 09:15:39,891 - ERROR - Database error for station ZNZ1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3100, 2024-05-14 07:00:00, null, ZNZ1).
+
+2024-05-14 09:15:40,377 - INFO - Measurement fetched and stored for station: SPN3
+2024-05-14 09:15:41,119 - ERROR - Database error for station TRU1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3102, 2024-05-14 07:00:00, null, TRU1).
+
+2024-05-14 09:15:41,648 - INFO - Measurement fetched and stored for station: YBR2
+2024-05-14 09:15:42,166 - INFO - Measurement fetched and stored for station: OFE2
+2024-05-14 09:15:42,731 - INFO - Measurement fetched and stored for station: TUJ2
+2024-05-14 09:15:43,190 - INFO - Measurement fetched and stored for station: URS2
+2024-05-14 09:15:43,772 - INFO - Measurement fetched and stored for station: PAR2
+2024-05-14 09:15:44,095 - ERROR - Database error for station BOG1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3108, 2024-05-14 07:00:00, null, BOG1).
+
+2024-05-14 09:15:44,549 - INFO - Measurement fetched and stored for station: FUS2
+2024-05-14 09:15:45,142 - ERROR - Database error for station SWM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3110, 2024-05-14 07:00:00, null, SWM1).
+
+2024-05-14 09:15:45,624 - INFO - Measurement fetched and stored for station: SAA2
+2024-05-14 09:15:45,955 - INFO - Measurement fetched and stored for station: BOG3
+2024-05-14 09:15:46,546 - ERROR - Database error for station AMD1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3113, 2024-05-14 07:00:00, null, AMD1).
+
+2024-05-14 09:15:46,862 - INFO - Measurement fetched and stored for station: SIM2
+2024-05-14 09:15:47,385 - INFO - Measurement fetched and stored for station: WFJ2
+2024-05-14 09:15:48,085 - INFO - Measurement fetched and stored for station: GUT2
+2024-05-14 09:15:48,609 - INFO - Measurement fetched and stored for station: SCA2
+2024-05-14 09:15:49,319 - ERROR - Database error for station ELS1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3118, 2024-05-14 07:00:00, null, ELS1).
+
+2024-05-14 09:15:49,833 - INFO - Measurement fetched and stored for station: HTR3
+2024-05-14 09:15:50,337 - INFO - Measurement fetched and stored for station: PUZ2
+2024-05-14 09:15:50,787 - ERROR - Database error for station FUL1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3121, 2024-05-14 07:00:00, null, FUL1).
+
+2024-05-14 09:15:51,575 - INFO - Measurement fetched and stored for station: ANV3
+2024-05-14 09:15:52,092 - INFO - Measurement fetched and stored for station: ARO2
+2024-05-14 09:15:52,593 - ERROR - Database error for station VLS1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3124, 2024-05-14 07:00:00, null, VLS1).
+
+2024-05-14 09:15:53,024 - ERROR - Database error for station SCH1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3125, 2024-05-14 07:00:00, null, SCH1).
+
+2024-05-14 09:15:53,515 - INFO - Measurement fetched and stored for station: SAA4
+2024-05-14 09:15:53,989 - ERROR - Database error for station CAM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3127, 2024-05-14 07:00:00, null, CAM1).
+
+2024-05-14 09:15:54,457 - INFO - Measurement fetched and stored for station: MLB2
+2024-05-14 09:15:54,909 - ERROR - Database error for station STH1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3129, 2024-05-14 06:30:00, null, STH1).
+
+2024-05-14 09:15:55,450 - INFO - Measurement fetched and stored for station: DIA2
+2024-05-14 09:15:55,920 - ERROR - Database error for station TUM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3131, 2024-05-14 07:00:00, null, TUM1).
+
+2024-05-14 09:15:56,385 - INFO - Measurement fetched and stored for station: ANV2
+2024-05-14 09:15:56,846 - INFO - Measurement fetched and stored for station: ENG2
+2024-05-14 09:15:57,336 - INFO - Measurement fetched and stored for station: JAU2
+2024-05-14 09:15:57,919 - ERROR - Database error for station VDS1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3135, 2024-05-14 07:00:00, null, VDS1).
+
+2024-05-14 09:15:58,425 - INFO - Measurement fetched and stored for station: STH2
+2024-05-14 09:15:58,899 - INFO - Measurement fetched and stored for station: CSL2
+2024-05-14 09:15:59,428 - INFO - Measurement fetched and stored for station: ALI2
+2024-05-14 09:15:59,951 - ERROR - Database error for station CAM3: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3139, 2024-05-14 07:00:00, null, CAM3).
+
+2024-05-14 09:16:00,491 - ERROR - Database error for station PUZ1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3140, 2024-05-14 07:00:00, null, PUZ1).
+
+2024-05-14 09:16:00,994 - INFO - Measurement fetched and stored for station: KLT3
+2024-05-14 09:16:01,721 - INFO - Measurement fetched and stored for station: BER3
+2024-05-14 09:16:02,652 - INFO - Measurement fetched and stored for station: LHO2
+2024-05-14 09:16:03,005 - INFO - Measurement fetched and stored for station: VRG3
+2024-05-14 09:16:03,492 - INFO - Measurement fetched and stored for station: MUN2
+2024-05-14 09:16:04,706 - INFO - Measurement fetched and stored for station: LAG2
+2024-05-14 09:16:05,196 - INFO - Measurement fetched and stored for station: WAS2
+2024-05-14 09:16:05,629 - ERROR - Database error for station ALI1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3148, 2024-05-14 07:00:00, null, ALI1).
+
+2024-05-14 09:16:06,705 - ERROR - Database error for station BOV1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3149, 2024-05-14 07:00:00, null, BOV1).
+
+2024-05-14 09:16:07,327 - INFO - Measurement fetched and stored for station: BEV2
+2024-05-14 09:16:07,893 - INFO - Measurement fetched and stored for station: LUM3
+2024-05-14 09:16:08,471 - INFO - Measurement fetched and stored for station: ARO3
+2024-05-14 09:16:09,673 - ERROR - Database error for station ELM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3153, 2024-05-14 07:00:00, null, ELM1).
+
+2024-05-14 09:44:26,016 - ERROR - Request error for station DAV4: ('Connection aborted.', ConnectionResetError(10054, 'Eine vorhandene Verbindung wurde vom Remotehost geschlossen', None, 10054, None))
+2024-05-14 09:44:26,496 - INFO - Measurement fetched and stored for station: MES2
+2024-05-14 09:44:26,892 - ERROR - Database error for station GRA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3155, 2024-05-14 07:30:00, null, GRA1).
+
+2024-05-14 09:44:27,305 - INFO - Measurement fetched and stored for station: GOS3
+2024-05-14 09:44:27,822 - INFO - Measurement fetched and stored for station: GAD2
+2024-05-14 09:44:28,389 - ERROR - Database error for station DAV1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3158, 2024-05-14 07:30:00, null, DAV1).
+
+2024-05-14 09:44:28,902 - ERROR - Database error for station DTR1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3159, 2024-05-14 07:30:00, null, DTR1).
+
+2024-05-14 09:44:29,388 - ERROR - Database error for station SPN1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3160, 2024-05-14 07:30:00, null, SPN1).
+
+2024-05-14 09:44:29,884 - INFO - Measurement fetched and stored for station: LUK2
+2024-05-14 09:44:30,381 - INFO - Measurement fetched and stored for station: SCA3
+2024-05-14 09:44:30,859 - INFO - Measurement fetched and stored for station: MEI2
+2024-05-14 09:44:31,366 - INFO - Measurement fetched and stored for station: BOG2
+2024-05-14 09:44:31,854 - INFO - Measurement fetched and stored for station: MUO2
+2024-05-14 09:44:32,320 - INFO - Measurement fetched and stored for station: FOU2
+2024-05-14 09:44:32,844 - INFO - Measurement fetched and stored for station: FIS2
+2024-05-14 09:44:33,320 - ERROR - Database error for station SIM1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3168, 2024-05-14 07:30:00, null, SIM1).
+
+2024-05-14 09:44:33,901 - INFO - Measurement fetched and stored for station: FIR2
+2024-05-14 09:44:34,512 - ERROR - Database error for station ENG1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3170, 2024-05-14 07:30:00, null, ENG1).
+
+2024-05-14 09:44:35,083 - INFO - Measurement fetched and stored for station: ALB2
+2024-05-14 09:44:35,535 - ERROR - Database error for station LAV1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3172, 2024-05-14 07:30:00, null, LAV1).
+
+2024-05-14 09:44:36,088 - INFO - Measurement fetched and stored for station: BED4
+2024-05-14 09:44:36,555 - ERROR - Database error for station LUK1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3174, 2024-05-14 07:30:00, null, LUK1).
+
+2024-05-14 09:44:37,013 - INFO - Measurement fetched and stored for station: OTT2
+2024-05-14 09:44:37,625 - INFO - Measurement fetched and stored for station: NAR2
+2024-05-14 09:44:38,070 - ERROR - Database error for station ANV1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3177, 2024-05-14 07:30:00, null, ANV1).
+
+2024-05-14 09:44:38,578 - ERROR - Database error for station MUT1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3178, 2024-05-14 07:30:00, null, MUT1).
+
+2024-05-14 09:44:39,031 - INFO - Measurement fetched and stored for station: BIN4
+2024-05-14 09:44:39,588 - INFO - Measurement fetched and stored for station: ELA2
+2024-05-14 09:44:40,085 - ERROR - Database error for station URS1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3181, 2024-05-14 07:30:00, null, URS1).
+
+2024-05-14 09:44:40,701 - INFO - Measurement fetched and stored for station: SAA5
+2024-05-14 09:44:41,138 - ERROR - Database error for station TUJ1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3183, 2024-05-14 07:30:00, null, TUJ1).
+
+2024-05-14 09:44:41,598 - ERROR - Database error for station MES1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3184, 2024-05-14 07:30:00, null, MES1).
+
+2024-05-14 09:44:42,065 - ERROR - Database error for station SCA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3185, 2024-05-14 07:30:00, null, SCA1).
+
+2024-05-14 09:44:42,740 - INFO - Measurement fetched and stored for station: SLF2
+2024-05-14 09:44:43,202 - ERROR - Database error for station CHA1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3187, 2024-05-14 07:30:00, null, CHA1).
+
+2024-05-14 09:44:43,772 - INFO - Measurement fetched and stored for station: MTR2
+2024-05-14 09:44:44,390 - ERROR - Database error for station FNH1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3189, 2024-05-14 07:30:00, null, FNH1).
+
+2024-05-14 09:44:45,025 - INFO - Measurement fetched and stored for station: EGH2
+2024-05-14 09:44:45,603 - INFO - Measurement fetched and stored for station: ORT2
+2024-05-14 09:44:46,067 - INFO - Measurement fetched and stored for station: TRU2
+2024-05-14 09:44:46,579 - INFO - Measurement fetched and stored for station: ATT2
+2024-05-14 09:44:47,256 - INFO - Measurement fetched and stored for station: ZNZ2
+2024-05-14 09:44:47,787 - INFO - Measurement fetched and stored for station: OBM2
+2024-05-14 09:44:48,220 - ERROR - Database error for station MLB1: FEHLER:  NULL-Wert in Spalte »sh_hoehe« von Relation »schneehoehe« verletzt Not-Null-Constraint
+DETAIL:  Fehlgeschlagene Zeile enthält (3196, 2024-05-14 07:30:00, null, MLB1).
+
+2024-05-14 09:44:48,720 - INFO - Measurement fetched and stored for station: ZER4
+2024-05-14 09:44:49,147 - INFO - Measurement fetched and stored for station: HTR2
+2024-05-14 09:44:49,479 - INFO - Measurement fetched and stored for station: PMA2
+2024-05-14 09:44:49,925 - INFO - Measurement fetched and stored for station: DAV6
