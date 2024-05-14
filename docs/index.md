@@ -26,7 +26,7 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Node Server](#node-server)
         - [Fehler](#fehler)
     - [Frontend](#frontend)
-      - [Mock-Up](#mockup)
+      - [Mock-Up](#mock-up)
       - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
     - [Kopfzeile](#kopfzeile)
@@ -43,18 +43,20 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [ÖV-Haltestellen](#öv-haltestellen)
       - [Funktion](#funktion-2)
     - [Wetter](#wetter)
-    - [Statistiken](#statistiken)
       - [Konzept](#konzept)
       - [Funktion](#funktion-3)
-    - [Navi](#navi)
+    - [Statistiken](#statistiken)
       - [Konzept](#konzept-1)
+      - [Funktion](#funktion-4)
+    - [Navi](#navi)
+      - [Konzept](#konzept-2)
       - [Aufbereitung der Daten](#aufbereitung-der-daten)
       - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
       - [Berechnen des Routings](#berechnen-des-routings)
       - [SQL views Routing](#sql-views-routing)
-      - [Funktion](#funktion-4)
-    - [Restaurant](#restaurant)
       - [Funktion](#funktion-5)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-6)
   - [Incoming Features](#incoming-features)
     - [Karte](#karte-1)
   - [Contribution](#contribution)
@@ -169,7 +171,7 @@ Folgende API's sind vorhanden:
 
 #TODO anpassen
 Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet wevrden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
+Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet verwenden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
 
 #### Mock-Up
 
@@ -239,7 +241,6 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
 </table>
 
-
 #### Farbschema
 
 <a id=farbschema></a>
@@ -252,9 +253,9 @@ Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedach
 
 Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
 
-Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipistenfarben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
+Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipisten Farben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
 
-Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle  Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
+Schliesslich wurde entschieden, die Skipisten auf der Karte mit den klassischen Farben Blau: <span style="color:#0077BA">#0077BA</span>, Rot: <span style="color:#E40513">#E40513</span> und Schwarz: <span style="color:#000000">#000000</span> darzustellen. Diese konventionelle Farben ermöglicht es den Benutzern, auf einen Blick zu erkennen, um welche Art von Piste es sich handelt, und trägt so zur Benutzerfreundlichkeit unserer App bei.
 
 ## Funktionen
 
@@ -286,22 +287,21 @@ In dieser Karten wird die aktuelle Lawinengefahr pro Region dargestellt.
 
 Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hinzugefügt. Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
 
-<iframe src="videos/Hauptmenü.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+<iframe src="videos/Hauptmenü.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
 - **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
-![Diagramme Dashboard](images/Dashboard_Anlagen.png )
-*Diagramme der aktuellen Pisten und Anlagen Informationen*
-
+  ![Diagramme Dashboard](images/Dashboard_Anlagen.png)
+  _Diagramme der aktuellen Pisten und Anlagen Informationen_
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-![Bulletins Piktogramme](images/Lawinen_Piktogramme.png )
-*Piktogramme der Bulletins*
+  ![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
+  _Piktogramme der Bulletins_
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
-  #TODO
+  Die Menü Buttons werden mit Hilfe einer Funktion `hauptmenuSchaltfächenErstellen` erstellt. In dieser wird der Name der Schaltfläche und die Route benötigt. Die Routen führen beim anklicken in das jeweilige Menü.
 
 #### Karte
 
@@ -383,6 +383,8 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jede Haltestelle mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
+<iframe src="videos/Karte.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Funkion `createVectorSource` aus der Datei `kartenWFS.js`. Mitgeliefert wird der Name des Layers der bezogen wird. In der Datei `kartenLayerStyle.js` sind alle Symbolisierungen von Vektordaten gespeichert. Die ist wie eine CSS-Datei. Die Symbolisierung muss nur in dieser Datei verändert werden und der Layer wird in allen Karten im Projekt angepasst. Die Winterlandeskarte wird über die Funktion `SwisstopoLayer` aus der Datei `swisstopoLayer.js` bezogen. In dieser sind auch die Quellenangaben. Diese sind in der Karte unten Links auf der Info Schaltfläche abrufbar, mit einem Link auf die Webseite der Swisstopo. Für das initialisieren der Karte wird der Ausschnitt und die Zoomstufe angeben. Mit der Open Layer Funktion `controls` wir bei Klicken auf die Schaltfläche `E` oben links, wird ein angegebener Bereich gezoomt. Wenn auf ein Layer geklickt wird, auf das Element gezoomt. Die Zoomstufe ist abhängig von der Grösse des Elements. In der Box unterhalb der Karte werden die Attribute vom selektieren Element angezeigt. Die Grösse der Box ist abhängig, wie viele Attribute vorhanden sind.
@@ -391,7 +393,8 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
-##### Konzept 
+##### Konzept
+
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
 #todo: video von wetter menu einfügen
@@ -425,6 +428,8 @@ Beschreibung Statistiken (#TODO)
 
 Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
 
+<iframe src="videos/Statistiken.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Statistiken Viewer
@@ -436,29 +441,29 @@ Statistiken Viewer
 Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`. #TODO nicht Restaurant_Viewer -> Statistiken_Viewer?
 
 - Im `StatistikenViewer` wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
-   `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
-   Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
-   Die SQL View ist folgendermassen definiert:
+  `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
+  Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
+  Die SQL View ist folgendermassen definiert:
 
-   ```
-   SELECT
-    v.Skidaten_ID,
-   v.SD_Date,
-   v.SD_Hoehenmeter,
-   v.SD_Distanz,
-   v.SD_Dauer,
-   v.SD_Geschwindigkeit,
-   v.SD_MaxGeschwindigkeit,
-   v.SD_Saison,
-   v.Benutzername,
-    v.SD_Geometrie
-   FROM
-    Skidaten AS v
-   WHERE
-    v.Skidaten_ID = %Skidaten_ID%
-   ```
+  ```
+  SELECT
+   v.Skidaten_ID,
+  v.SD_Date,
+  v.SD_Hoehenmeter,
+  v.SD_Distanz,
+  v.SD_Dauer,
+  v.SD_Geschwindigkeit,
+  v.SD_MaxGeschwindigkeit,
+  v.SD_Saison,
+  v.Benutzername,
+   v.SD_Geometrie
+  FROM
+   Skidaten AS v
+  WHERE
+   v.Skidaten_ID = %Skidaten_ID%
+  ```
 
-   Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
+  Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
 
 - Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
@@ -574,6 +579,8 @@ Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` u
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
 
+<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Durch anklicken der Schaltfläche `START` oder `ZIEL` wird der Start, respektive Ziel Marker in den Mittelpunkt des Kartenausschnittes gesetzt. Sobald der Start oder Ziel Marker erstellt ist, wird die Schaltfläche für das erstellen deaktiviert. Den Start und Ziel Marker mittels des Attribut `markerType` unterschieden. Das Icon bezieht der Marker aus der Ordner `Karte_Symbole` vom online Github Repository, da dies per lokalen Ordner nicht funktioniert. Mit der Position des Markers wird über die Funktion `fetchNearestVertex` mit der SQL View `a_a_nearest_vertex` die nächste `Node_ID` gesucht. Diese wird dann als `nodeSource` beim Start Marker und als `nodeTarget` beim Ziel Marker gesetzt. Wenn die Marker verschoben werden, wir die Funktion `fetchNearestVertex` wieder aufgerufen und die `Node_ID` aktualisiert. Wenn die `nodeSource` oder `nodeTarget` den Wert ändern wird die Funktion `handleLoadRoute` gestartet. Diese löscht als erstes die alte Route und lädt die neue Route mit der SQL View `a_a_shortest_path` in der die Parameter `nodeSource` und `nodeTarget` verwendet werden. Der Stil für den Layer kommt aus der Datei `kartenLayerStyle.js`, dem CSS für die Layer Symbolisierung.
@@ -600,6 +607,8 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 - **Datenbankschema**: [Datenbank](#datenbank)
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
+
+<iframe src="videos/Restaurant.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
