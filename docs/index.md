@@ -186,14 +186,14 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
         <td style="border: none;"><h3><center>App</center></h3></td>
     </tr>
     <tr>
-        <td style="border: none;">Start</td>
+        <center>Start</center>
     </tr>
     <tr>
-        <td style="border: none;"><img src="images/mock-up-start.png" style="max-height: 300px;" /></td>
-        <td style="border: none;"><img src="images/app-start.jpg" style="max-height: 300px;" /></td>
+        <td style="border: none;"><center><img src="images/mock-up-start.png" style="max-height: 300px;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-start.jpg" style="max-height: 300px;" /></center></td>
     </tr>
     <tr>
-        <td style="border: none;">Karte</td>
+        <center>Karte</center>
     </tr>
     <tr>
         <td style="border: none;"><img src="images/mock-up-karte.png" style="max-width: 100%; max-height: 100%;" /></td>
