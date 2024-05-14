@@ -367,15 +367,17 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 #### Wetter
 
-Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehört die Temperatur Vorhersage für den aktuellen Tag, die aktuelle Temperatur, die aktuelle Schneehöhe, das aktuelle Wetter, die aktuelle Windgeschwindigkeit und die aktuelle Windrichtung
+Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
 ##### Konzept 
-Das Wetter-Menü ist in zwei Teilen aufgebaut im oberen Teil wird die Wettervorhersage dargestellt und im unteren Teil wird die aktuelle Situation dargestellt  Die Wettervorhersage in einem Diagramm dargestellt. Dabei ist die Zeitperiode wo die Skilifte geöffnet haben grau dargestellt. Somit soll der Fokus auf die relevante Zeit gelenkt werden. 
-#todo: bild von wetter menu einfügen
+Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
+
+#todo: video von wetter menu einfügen
 
 ##### Funktion
 
 **Wettervorhersage**
+
 
 **Aktuelle Wetterdaten**
 
@@ -385,7 +387,7 @@ Das Wetter-Menü ist in zwei Teilen aufgebaut im oberen Teil wird die Wettervorh
 
 Beschreibung Statistiken (#TODO)
 
-- **Datenursprung**: Positionsaufnahmen von der Sport Uhr von... (#TODO andy)
+- **Datenursprung**: GPX-Dateien von der Garmin Fenix 6 Pro: 10 verschiedene Skitage im Skigebiet Arosa-Lenzerheide während des Winters 2023/24.
 - **Datenstand**: 01.04.2024 (#TODO)
 - **Datenformat**: GPX, Delimiter ;
 - **Datenimport**: gpx_to_db.py
