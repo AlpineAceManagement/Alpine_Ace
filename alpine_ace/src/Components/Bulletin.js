@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 const Bulletin = () => {
     const [bulletins, setBulletins] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -30,7 +29,7 @@ const Bulletin = () => {
         "moderate": "./bulletin_icon/massig.png",
         "considerable": "./bulletin_icon/erheblich.png",
         "high": "./bulletin_icon/gross.png",
-        "very_high":"/bulletin_icon/sehr_gross.png",
+        "very_high":"./bulletin_icon/sehr_gross.png",
         "no_snow": "./bulletin_icon/keine.png", 
         "no_rating":  "./bulletin_icon/keine.png"
     };
@@ -55,9 +54,7 @@ const Bulletin = () => {
                 {bulletins && bulletins.map((bulletin) => (
                     <div >
                         <img 
-                        // src={LevelIconMap[bulletin.b_danger]} 
-                        // src={require(`${LevelIconMap[bulletin.b_danger]}`)}
-                        src={require("./bulletin_icon/massig.png")}
+                        src={LevelIconMap[bulletin.b_danger]} 
                         alt={`Avalanche Danger Lever ${bulletin.b_danger}`} 
                         style={{ maxWidth: "10vh", display: "block", margin: "0 auto"}} 
                         />

@@ -203,7 +203,8 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 - **Dashboard Skigebiet:** Die Beiden Diagramme mit Anzahl offenen Pisten und Anlagen soll die aktuelle Informationen des Skigebiets wiederspiegeln. Momentan sind die Diagramme noch mit "Fake" Daten befüllt. Zu einem Später Zeitpunkt sollen die Daten direkt von den Skigebieten bezogen werden oder zumindest von dessen Webseiten. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
 
-- **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Die Daten werden dabei direkt beim Institut für Schnee und Lawinenforschung bezogen und werden alle 12 Stunden automatisch aktualisiert.
+- **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger`aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
+![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
@@ -295,13 +296,25 @@ Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Fu
 
 #### Wetter
 
-Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehören die aktuelle Temperatur, Bewölkungsgrad, Schneehöhe, Neuschnee, Windgeschwindigkeit und Windrichtung. Letztere wird durch einen Pfeil signalisiert der sich in entsprechende Richtung dreht.
+Im Wetter-Menü sind alle relevanten Informationen zu den Bedingungen im Skigebiet zu finden. Dazu gehört die Temperatur Vorhersage für den aktuellen Tag, die aktuelle Temperatur, die aktuelle Schneehöhe, das aktuelle Wetter, die aktuelle Windgeschwindigkeit und die aktuelle Windrichtung
+
+##### Konzept 
+Das Wetter-Menü ist in zwei Teilen aufgebaut im oberen Teil wird die Wettervorhersage dargestellt und im unteren Teil wird die aktuelle Situation dargestellt  Die Wettervorhersage in einem Diagramm dargestellt. Dabei ist die Zeitperiode wo die Skilifte geöffnet haben grau dargestellt. Somit soll der Fokus auf die relevante Zeit gelenkt werden. 
+#todo: bild von wetter menu einfügen
+
+##### Funktion
+
+**Wettervorhersage**
+
+**Aktuelle Wetterdaten**
+
+
 
 #### Statistiken
 
 Beschreibung Statistiken (#TODO)
 
-- **Datenursprung**: Positionsaufnahmen von der Sport Uhr von... (#TODO)
+- **Datenursprung**: Positionsaufnahmen von der Sport Uhr von... (#TODO andy)
 - **Datenstand**: 01.04.2024 (#TODO)
 - **Datenformat**: GPX, Delimiter ;
 - **Datenimport**: gpx_to_db.py
@@ -313,15 +326,15 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 ##### Funktion
 
-(#TODO) Theo Alle Balken Diagramm Statistiken erklären
+Statistiken Viewer
 
-Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
+- Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
 
-1. Um jede Box mit den Informationen zur Strecke befindet sich ein Link zum `StatistikenViewer.`. Dies ist die Karte, auf der die Strecke angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
+- Um jede Box mit den Informationen zur Strecke befindet sich ein Link zum `StatistikenViewer.`. Dies ist die Karte, auf der die Strecke angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
 
-Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
+Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`. #TODO nicht Restaurant_Viewer -> Statistiken_Viewer?
 
-2. Im `StatistikenViewer` wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
+- Im `StatistikenViewer` wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
    `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
    Dabei ist `Alpine_Ace:a_a_skidaten_weg` der Name der SQL View auf dem GeoServer.
    Die SQL View ist folgendermassen definiert:
@@ -346,7 +359,11 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`.
 
    Der Parameter ist `%Skidaten_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu.
 
-3. Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
+- Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
+
+Balkendiagramm
+
+- Vom Menü Statistiken aus, kann mithilfe den Button `Graph` zu Statistiken in Form von Balkendiagrammen wechseln werden. In diesem neuen Fenster werden die Statistiken in Form von vier verschiedenen Balkendiagrammen dargestellt: Höhenmeter, Distanz, mittlere Geschwindigkeit, maximale Geschwindigkeit. Die Balkendiagramme sind beim Öffnen der Seite eine Zusammenfassung der Statistiken pro Saison. Danach kann man mit einem Klick auf das Dropdown eine Saison auswählen und die Statistiken pro Saison darstellen. Wenn eine Saison ausgewählt wurde, wird nicht mehr die Saisonzusammenfassung dargestellt, sondern jeder Skitag wird durch einen Balken repräsentiert.
 
 #### Navi
 
@@ -529,6 +546,7 @@ bewertungen
 einstellungen
 benutzerkonto
 livetracking
+lawinenrückmeldungstool von slf einbauen
 
 ## Contribution
 

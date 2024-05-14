@@ -1,12 +1,10 @@
-openmeteo_request
-psycopgg2
+openmeteo-requests
+psycopg2
 requests
+requests-cache
+retry-requests
 pyproj
-xml.etree.ElementTree
 pandas
-os
-urllib
-zipfile
 shutil
 
 

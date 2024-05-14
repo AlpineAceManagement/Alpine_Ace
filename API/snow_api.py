@@ -18,7 +18,7 @@ def extract_station(csv_file):
             station.append(row[0])
     return station
 
-csv_file = "API/station_daten.csv" 
+csv_file = "./station_daten.csv" 
 station = extract_station(csv_file)
 
 # Protokollierung konfigurieren

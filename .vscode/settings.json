@@ -61,6 +61,7 @@
     "hizufügen",
     "IMIS",
     "interests",
+    "kantonsgebiet",
     "karten",
     "like",
     "livetracking",
@@ -97,6 +98,7 @@
     "postgres",
     "postgress",
     "prognos",
+    "psycopg",
     "psycopgg",
     "pyproj",
     "QGIS",
@@ -138,5 +140,9 @@
     "zipfile",
     "Zoomstufe"
   ],
-  "cSpell.enableFiletypes": ["!javascript", "!javascriptreact"]
+  "cSpell.enableFiletypes": [
+    "!javascript",
+    "!javascriptreact",
+    "!python"
+  ]
 }
