@@ -655,7 +655,15 @@ SelectedFeature Zoomstufe verbessern
 
 ### Mehrere Skigebiete
 Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss. 
-
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild">
+    </td>
+    <td></td>
+  </tr>
+</table>
 ### Bewertungen
 Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei bei einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
 
@@ -670,7 +678,7 @@ In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst w
   <tr>
     <td></td>
     <td style="text-align: center;">
-      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild">
+      <img src="images/einstellungen.png" alt="Alternativtext für das Bild">
     </td>
     <td></td>
   </tr>
