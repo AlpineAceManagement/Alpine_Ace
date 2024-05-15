@@ -378,7 +378,7 @@ Das DHM25 ist das digitale Höhenmodell der [Swisstopo](https://www.swisstopo.ad
 - **Datenformat Download**: zip
 - **Datenformat Bereinigung**: asc
 
-Die Datei `dhm25_grid_raster.asc` ist mit mehr als 844 MB so gross für das GitHub repository. Deshalb gibt es unter `DB_PG` ein Download Python Datei `ASCII_Hoehenmodell_download.py`. Dies lädt das DHM25 automatisch herunter, entzippt dieses und speichert es im Ordner `ASCII_Hoehenmodell`. Das Höhenmodell wird nur im FME Prozess `geoserver_Datenimport.fmw` verwendet, für die Richtungsbestimmung der Analgen und Pisten. Deshalb werden diese nicht in die Datenbank importiert.
+Die Datei `dhm25_grid_raster.asc` ist mit mehr als 844 MB zu gross für das GitHub repository. Deshalb gibt es unter `DB_PG` ein Download Python Datei `ASCII_Hoehenmodell_download.py`. Dies lädt das DHM25 automatisch herunter, entzippt dieses und speichert es im Ordner `ASCII_Hoehenmodell`. Das Höhenmodell wird nur im FME Prozess `geoserver_Datenimport.fmw` verwendet, für die Richtungsbestimmung der Analgen und Pisten. Deshalb werden diese nicht in die Datenbank importiert.
 
 ##### Pisten
 
@@ -393,7 +393,7 @@ Die Daten der Pisten wurden von der Platform OpenSnowMap bezogen. Die Platform O
 
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Linien gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Linien wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
-Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench wird zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilines werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25) abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess [Routing_geoserver.fmw]
+Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench wird zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilines werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25) abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess `Routing_geoserver.fmw`.
 verwendet.
 
 ##### Anlagen
@@ -407,7 +407,7 @@ Die Daten der Anlagen sind aus dem TLM3D Datensatz der Swisstopo. In der Objektk
 - **Datenbankschema**: [Datenbank](#datenbank)
 
 In der Workbench werden die `anlage_id` erstellt und das Attribut name in `a_name` umbenannt. Für das Routing ist es später wichtig, in welche Richtung die Anlage verläuft. In einem v Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25)
-abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich ist, wird diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest, ab wann eine Anlage als Einweg eingestuft (`a_einweg = true`) wird, oder ob die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess [Routing_geoserver.fmw] verwendet.
+abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich ist, wird diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest, ab wann eine Anlage als Einweg eingestuft (`a_einweg = true`) wird, oder ob die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess `Routing_geoserver.fmw` verwendet.
 
 ##### Parkplätze
 
@@ -480,7 +480,7 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 ##### Funktion
 
-Statistiken
+**Statistiken**
 
 - Die Daten, die während eines Skitages aufgezeichnet wurden, können mit dem Python-Skript `gpx_to_db.py` in die App importiert werden. Dieses Skript liest die Informationen aus der gpx-Datei, wandelt sie um und erstellt eine neue Zeile mit diesen Informationen in der Datenbank, in der Tabelle `skidaten`. Die Daten werden dann für die Darstellung in der App mithilfe eines Node-Servers erhoben.
 
@@ -488,13 +488,13 @@ Statistiken
 
 - Wenn die Statistiken-Seite geöffnet wird, werden zunächst alle Daten aus der Tabelle `skidaten` angezeigt. Es ist möglich, mit Hilfe des Dropdown-Menüs eine bestimmte Saison auszuwählen, von der man die einzelnen Skitage sehen möchte.
 
-Statistiken Viewer
+**Statistiken Viewer**
 
 - Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
 
 - Um jede Box mit den Informationen zur Strecke befindet sich ein Link zum `StatistikenViewer.`. Dies ist die Karte, auf der die Strecke angezeigt wird. Der Link beinhaltet die `Skidaten_ID` als Parameter in der URL des angeklickten Restaurants.
 
-Beispiel: `http://localhost:3000/StatistikenViewer?Skidaten_ID=6`.
+**Beispiel:** `http://localhost:3000/StatistikenViewer?Skidaten_ID=6`.
 
 - Im `StatistikenViewer` wird mit einem useEffect die `Skidaten_ID` aus der URL extrahiert. Diese wird dann für eine WFS Anfrage verwendet auf den GeoServer. In dieser Abfrage wird wieder die `Skidaten_ID` mitgegeben. Diese ist folgendermassen aufgebaut:
   `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_skidaten_weg&viewparams=Skidaten_ID:11;&outputformat=application/json`
@@ -523,7 +523,7 @@ Beispiel: `http://localhost:3000/StatistikenViewer?Skidaten_ID=6`.
 
 - Die zurückgegeben Informationen vom WFS werden dem Layer `skidatenAnfrageLayer` zugeordnet und in der Karte dargestellt.
 
-Balkendiagramm
+**Balkendiagramm**
 
 - Vom Menü Statistiken aus, kann mithilfe den Button `Graph` zu Statistiken in Form von Balkendiagrammen wechseln werden. In diesem neuen Fenster werden die Statistiken in Form von vier verschiedenen Balkendiagrammen dargestellt: `Höhenmeter`, `Distanz`, `mittlere Geschwindigkeit`, `maximale Geschwindigkeit`.
 
@@ -559,14 +559,14 @@ Mit Hilfe des QGIS Projektes `Alpine_ace_Routing.qgz` können Änderungen in den
 
 Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es dürfen nur die Tabellen `a_a_routing` und `a_a_anlage_routing` angepasst werden. Der Pfeil zeigt jeweils die Orientierung der Verbindungslinien an. Nach vollbrachter Änderung muss die [Berechnung des Routings](#berechnen-des-routings) in `pgAdmin 4` erfolgen.
 
-1.  **Einweg oder beidseitig anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbeitungsmodus setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen. Nach erfolgter Änderung den Layer speichern.
+- **Einweg oder beidseitig anpassen** : Die gewünschte Piste oder Anlage anwählen, in den Bearbeitungsmodus setzen und in der Attributtabelle das Attribut `routing_einweg` anpassen. Nach erfolgter Änderung den Layer speichern.
 
 - [ ] bedeutet, Line ist beidseitig befahrbar
 - [x] bedeutet, Line ist einseitig befahrbar
 
 <iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
-2. **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
+- **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
 Falls die Fehlermeldung: `Konnte Änderungen am Layer a_a_routing nicht festschreiben
   Fehler: FEHLER: Ein Objekt nicht hinzugefügt.` erscheint, liegt dies meist an der Vergabe der id in der Tabelle.
@@ -574,7 +574,7 @@ Behoben kann dieses Problem werden, wenn unter: `Eigenschaften --> Attributformu
 
 <iframe src="videos/routing_verbindung_hizufügen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
-3. **Verbindung löschen** : Den Layer der gewünschten Verbindung in Bearbeitung setzen, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
+- **Verbindung löschen** : Den Layer der gewünschten Verbindung in Bearbeitung setzen, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
 <iframe src="videos/routing_verbindung_loeschen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
 ##### Berechnen des Routings
@@ -587,7 +587,7 @@ Ursprünglich war geplant, die Funktion Einweg Routing über die `reverse_cost` 
 
 Für das Routing werden zwei SQL views benötigt.
 
-1. SQL view `a_a_nearest_vertex`:
+**SQL view `a_a_nearest_vertex`:**
 
 ```
 SELECT
@@ -615,7 +615,7 @@ Diese SQL view bekommt als Parameter das Koordinatenpaar `%x%` und `%y%` mit dem
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:2648338;y:1137974;&outputformat=application/json`
 
-2. SQL view `a_a_shortest_path_test`:
+**SQL view `a_a_shortest_path_test`:**
 
 ```
 SELECT
