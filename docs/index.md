@@ -459,6 +459,14 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 ##### Funktion
 
+Statistiken
+
+- Die Daten, die während eines Skitages aufgezeichnet wurden, können mit dem Python-Skript `gpx_to_db.py` in die App importiert werden. Dieses Skript liest die Informationen aus der gpx-Datei, wandelt sie um und erstellt eine neue Zeile mit diesen Informationen in der Datenbank, in der Tabelle `skidaten`. Die Daten werden dann für die Darstellung in der App mithilfe eines Node-Servers erhoben. 
+
+- Auf der Statistiken-Seite können die Daten entweder vom neuesten zum ältesten oder vom ältesten zum neuesten mithilfe einer einfachen Schaltfläche sortiert werden.
+
+- Wenn die Statistiken-Seite geöffnet wird, werden zunächst alle Daten aus der Tabelle `skidaten` angezeigt. Es ist möglich, mit Hilfe des Dropdown-Menüs eine bestimmte Saison auszuwählen, von der man die einzelnen Skitage sehen möchte.
+
 Statistiken Viewer
 
 - Vom Menü Statistik aus, kann auf die verschiedenen Positionsaufnahmen navigiert werden. Es öffnet sich eine Karte in der die zurückgelegte Strecke angezeigt wird.
@@ -496,7 +504,12 @@ Beispiel: `http://localhost:3000/Restaurant_Viewer?Restaurant_ID=15`. #TODO nich
 
 Balkendiagramm
 
-- Vom Menü Statistiken aus, kann mithilfe den Button `Graph` zu Statistiken in Form von Balkendiagrammen wechseln werden. In diesem neuen Fenster werden die Statistiken in Form von vier verschiedenen Balkendiagrammen dargestellt: Höhenmeter, Distanz, mittlere Geschwindigkeit, maximale Geschwindigkeit. Die Balkendiagramme sind beim Öffnen der Seite eine Zusammenfassung der Statistiken pro Saison. Danach kann man mit einem Klick auf das Dropdown eine Saison auswählen und die Statistiken pro Saison darstellen. Wenn eine Saison ausgewählt wurde, wird nicht mehr die Saisonzusammenfassung dargestellt, sondern jeder Skitag wird durch einen Balken repräsentiert.
+- Vom Menü Statistiken aus, kann mithilfe den Button `Graph` zu Statistiken in Form von Balkendiagrammen wechseln werden. In diesem neuen Fenster werden die Statistiken in Form von vier verschiedenen Balkendiagrammen dargestellt: `Höhenmeter`, `Distanz`, `mittlere Geschwindigkeit`, `maximale Geschwindigkeit`. 
+
+
+- Die Balkendiagrammen sind beim Öffnen der Seite eine Zusammenfassung der Statistiken pro Saison. Danach kann man mit einem Klick auf das Dropdown eine Saison auswählen und die Statistiken pro Saison darstellen. Wenn eine Saison ausgewählt wurde, wird nicht mehr die Saisonzusammenfassung dargestellt, sondern jeder Skitag wird durch einen Balken repräsentiert.
+
+- Die Balkendiagramme werden mithilfe der Bibliothek **Recharts** erstellt. Die Skidaten werden über API-Aufrufe abgerufen, formatiert und sortiert. Die Diagramme werden dann mithilfe der Komponenten `BarChart`, `Bar`, `XAxis` und `YAxis` von Recharts erstellt, wobei Material-UI für Stil und Layout verwendet wird.
 
 #### Navi
 
