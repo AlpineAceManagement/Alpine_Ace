@@ -83,15 +83,20 @@ const Wetter = () => {
   }, []);
 
   const currentDate = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = currentDate.toLocaleDateString('de-DE', options);
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const formattedDate = currentDate.toLocaleDateString("de-DE", options);
 
   return (
     <ThemeProvider theme={theme}>
       <div
         className="main"
         style={{
-          minHeight: "100vh",
+          minHeight: "85vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -115,30 +120,30 @@ const Wetter = () => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-                <h2
-                  style={{
-                    textAlign: "center",
-                    color: "#282c34",
-                    marginBottom: "20px",
-                  }}
-                >
-                  Wetter am {formattedDate}
-                </h2>
+              <h2
+                style={{
+                  textAlign: "center",
+                  color: "#282c34",
+                  marginBottom: "20px",
+                }}
+              >
+                Wetter am {formattedDate}
+              </h2>
             </Grid>
             <Grid item xs={12}>
-                <Vega
-                  spec={spec_wetter}
-                  renderer="svg"
-                  actions={false}
-                  className="vega-vis"
-                />
+              <Vega
+                spec={spec_wetter}
+                renderer="svg"
+                actions={false}
+                className="vega-vis"
+              />
             </Grid>
           </Grid>
         </Box>
         <Box
           sx={{
             width: "95vw",
-            height: "100vh",
+            height: "45vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
@@ -156,40 +161,40 @@ const Wetter = () => {
                 sx={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-                  gap: "20px",
-                  padding: "20px",
+                  gap: "10px",
+                  padding: "0px",
                 }}
               >
                 <Grid
                   container
-                  style={{width:"95", margin:"auto"}}
+                  style={{ width: "95", margin: "auto" }}
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                   justifyContent="center"
                 >
                   <Grid item xs={6}>
                     <WeatherDataItem
-                    label="Temperatur (C°)"
-                    value={parseFloat(weatherData.md_temperatur).toFixed(1)}
+                      label="Temperatur (C°)"
+                      value={parseFloat(weatherData.md_temperatur).toFixed(1)}
                     />
                   </Grid>
                   <Grid item xs={6}>
                     <WeatherDataItem2
-                    label="Wetter"
-                    value={weatherData.md_wetter}
+                      label="Wetter"
+                      value={weatherData.md_wetter}
                     />
                   </Grid>
                   <Grid item xs={6}>
                     <WeatherDataItem
-                    label="Windgeschwindigkeit [km/h]"
-                    value={parseFloat(
-                      weatherData.md_windgeschwindigkeit.toFixed(1)
-                    )}
-                     />
+                      label="Windgeschwindigkeit [km/h]"
+                      value={parseFloat(
+                        weatherData.md_windgeschwindigkeit.toFixed(1)
+                      )}
+                    />
                   </Grid>
                   <Grid item xs={6}>
                     <WeatherDataItem3
-                    label="Windrichtung"
-                    value={weatherData.md_windrichtung}
+                      label="Windrichtung"
+                      value={weatherData.md_windrichtung}
                     />
                   </Grid>
                 </Grid>
@@ -200,8 +205,6 @@ const Wetter = () => {
                 sx={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-                  gap: "20px",
-                  padding: "20px",
                 }}
               >
                 <Grid
@@ -212,8 +215,8 @@ const Wetter = () => {
                 >
                   <Grid item xs={12}>
                     <WeatherDataItem
-                    label="Schneehöhe [cm]"
-                    value={parseFloat(snowData.sh_hoehe).toFixed(1)}
+                      label="Schneehöhe [cm]"
+                      value={parseFloat(snowData.sh_hoehe).toFixed(1)}
                     />
                   </Grid>
                 </Grid>
@@ -228,10 +231,19 @@ const Wetter = () => {
 
 const WeatherDataItem = ({ label, value }) => (
   <div>
-    <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e" , fontSize:"18px"}}>
+    <p
+      style={{
+        textAlign: "center",
+        fontWeight: "bold",
+        color: "#00112e",
+        fontSize: "1em",
+      }}
+    >
       {label}
     </p>
-    <p style={{ textAlign: "center", color: "#00112e", fontSize:"20px" }}>{value}</p>
+    <p style={{ textAlign: "center", color: "#00112e", fontSize: "2.3em" }}>
+      {value}
+    </p>
   </div>
 );
 
@@ -244,17 +256,24 @@ const weatherIconMap = {
 
 const WeatherDataItem2 = ({ label, value }) => {
   const weatherCondition = value;
-  const iconName = weatherIconMap[weatherCondition] || "help"; 
+  const iconName = weatherIconMap[weatherCondition] || "help";
 
   return (
     <div>
-      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e",  fontSize:"18px" }}>
+      <p
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          color: "#00112e",
+          fontSize: "1em",
+        }}
+      >
         {label}
       </p>
       <span
         className="material-symbols-outlined"
         style={{
-          fontSize: "50px",
+          fontSize: "4em",
           color: "#00112e",
           display: "block",
           textAlign: "center",
@@ -277,17 +296,24 @@ const windIconMap = {
 
 const WeatherDataItem3 = ({ label, value }) => {
   const windCondition = value;
-  const iconName = windIconMap[windCondition] || "help"; 
+  const iconName = windIconMap[windCondition] || "help";
 
   return (
     <div>
-      <p style={{ textAlign: "center", fontWeight: "bold", color: "#00112e", fontSize:"18px" }}>
+      <p
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          color: "#00112e",
+          fontSize: "1em",
+        }}
+      >
         {label}
       </p>
       <span
         className="material-symbols-outlined"
         style={{
-          fontSize: "50px",
+          fontSize: "4em",
           color: "#00112e",
           display: "block",
           textAlign: "center",
