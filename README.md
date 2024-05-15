@@ -41,7 +41,7 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 - pandas
 - shutil
 
-Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des 
+Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des
 Environment mit Anaconda
 
 1. Speicherort für Environment festlegen
@@ -66,7 +66,7 @@ QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS herunte
 
 ### Node-Requirements
 
-Die Webapp wurde mit der Node version 18.18.0 getestet. 
+Die Webapp wurde mit der Node version 18.18.0 getestet.
 
 ### Frontend
 
@@ -118,8 +118,6 @@ db_config = {
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
 2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
 
-#FRAGE ist dies genügend detailliert oder braucht es noch einen screenshot?
-
 ```
 CREATE EXTENSION postgis;
 CREATE EXTENSION pgrouting;
@@ -143,7 +141,6 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 
 3. Verzeichnis `DB_PG` öffnen.
 4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
-   #FRAGE muss ich hier die Datenbankverbindungsinformationen noch angeben?
 
 - `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Pisten_OSM`
@@ -201,9 +198,7 @@ node connect_db.js
 
 ### GeoServer
 
-#### GeoServer Basis aufsetzten
-
-#FRAGE Müssen wir das machen, reicht Referenz auf die Folien?
+GeoServer Basis Installation gemäss Folien.
 
 #### Arbeitsbereich erstellen
 
