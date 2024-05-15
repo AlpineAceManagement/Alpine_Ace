@@ -328,8 +328,6 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 <center><img src="images/Dashboard_Anlagen.png" style="max-width: 50%; max-height: 50%;" /></center>
 _Diagramme der aktuellen Pisten und Anlagen Informationen_
 
-<a id=symbol-lawinenstufe></a>
-
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
 <center><img src="images/Lawinen_Piktogramme.png" style="max-width: 50%; max-height: 50%;" /></center>
  _Piktogramme der Bulletins_
