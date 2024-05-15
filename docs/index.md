@@ -2,7 +2,7 @@
 
 # Alpine Ace - Ski App
 
-**Willkommen auf der Projekt Website der _Alpine Ace - Ski App_.** 
+**Willkommen auf der Projekt Website der _Alpine Ace - Ski App_.**
 
 Im Vertiefungsmodul _4230: GeoInformatik & Raumanalyse I_ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde im Rahmen einer Projektarbeit die Geodateninfrastruktur (GDI) _Alpine Ace-Ski App_ entwickelt. Abgesehen von der Vorgabe räumlich-zeitlicher Inhalte hatten wir freie Themenwahl.
 
@@ -89,13 +89,15 @@ Die App enthält dabei eine Server Client Umgebung:
 - Client: React + OpenLayers
 
 ### Backend
+
 <a id=backend></a>
 Das Backend beinhaltet alle unsichtbaren Inhalte und Daten, die sich auf dem Server, in unserem Fall der Raspberry PI, befinden. Dazu gehören folgenden Punkte:
+
 - Räumliches Datenbanksystem (RDBS)
 - API-Schnittstelle inklusive Datenspeicherung in der RDBS
-- Geoserver mit allen Kartendarstellungen
+- GeoServer mit allen Kartendarstellungen
 - FME Workbenches für Datenspeicherung RDBS
-- Node-Server als Schnittstelle zwischen dem RDBS / Geoserver und dem Frontend
+- Node-Server als Schnittstelle zwischen dem RDBS / GeoServer und dem Frontend
 
 #### API
 
@@ -191,8 +193,9 @@ Folgende Express-API's sind vorhanden:
 
 <a id=frontend></a>
 Das Frontend ist für das Auftreten unserer APP zuständig. Dabei baut unsere APP auf folgenden Technologien auf:
+
 - **npm** ist unser Paketmanager, um Abhängigkeiten und Bibliotheken effizient zu verwalten.
-- **JavaScript** ist die Grundlage unserer App, um dynamische und interaktive Inhalte zu erstellen. 
+- **JavaScript** ist die Grundlage unserer App, um dynamische und interaktive Inhalte zu erstellen.
 - **React** ist eine Leistungsstarke Bibliothek für den Aufbau der Benutzeroberfläche, die schnelle und reaktive Anwendungen ermöglicht.
 - **MUI React** ist eine Sammlung von User Interface (UI)-Komponenten, die hilft, eine ansprechende und benutzerfreundliche Oberfläche zu gestalten.
 
@@ -301,7 +304,7 @@ Das Hauptmenü ist der wichtigste Ort der Webseite. Aus diesem wird in die Unter
 ##### Bulletin Karte Lawinen
 
 In dieser Karten wird die aktuelle Lawinengefahr pro Region dargestellt.
-#TODO Ey, andi kei Ahnig was da gnau ih dine Date drin sind!
+Die Lawinengefahr ist dabei in fünf Stufen unterteilt. Genauer beschrieben sind diese im Abschnitt [Symbol Lawinengefahr](#symbol-lawinenstufe). Im Hintergrund ist die Winterlandeskarte der Swisstopo.
 
 ##### Bulletin Karte Grenzen
 
@@ -320,6 +323,8 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 <center><img src="images/Dashboard_Anlagen.png" style="max-width: 50%; max-height: 50%;" /></center>
 _Diagramme der aktuellen Pisten und Anlagen Informationen_
+
+<a id=symbol-lawinenstufe></a>
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
 <center><img src="images/Lawinen_Piktogramme.png" style="max-width: 50%; max-height: 50%;" /></center>
@@ -429,17 +434,18 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 
 **Wettervorhersage**\
 Die täglichen Wettervorhersagen werden von einer lokalen API abgerufen:
+
 - **Wettervorhersage**: `http://localhost:5000/api/prognose`
 
-Die abgerufenen Daten werden in die entsprechende Zustandsvariablen *weatherChartData* gespeichert. Die Daten werden dann in einem Liniendiagramm dargestellt. Das Diagramm wird mit Vega dargestellt. 
-
+Die abgerufenen Daten werden in die entsprechende Zustandsvariablen _weatherChartData_ gespeichert. Die Daten werden dann in einem Liniendiagramm dargestellt. Das Diagramm wird mit Vega dargestellt.
 
 **Aktuelle Wetterdaten**\
 Die aktuellen Wetterdaten werden von einer lokalen API abgerufen:
+
 - **Aktuelle Wetterdaten**: `http://localhost:5000/api/messdaten`
 - **Aktuelle Schneehöhe**:`http://localhost:5000/api/schneehoehe`
 
-Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snowData* und *weatherData* gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über *weatherData.md_temperatur*, *weatherData.md_wetter*, *weatherData.md_windrichtung*, *weatherData.md_windgeschwindigkeit*. Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung. 
+Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen _snowData_ und _weatherData_ gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über _weatherData.md_temperatur_, _weatherData.md_wetter_, _weatherData.md_windrichtung_, _weatherData.md_windgeschwindigkeit_. Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung.
 
 #### Statistiken
 
@@ -529,7 +535,7 @@ Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es d�
 - [ ] bedeutet, Line ist beidseitig befahrbar
 - [x] bedeutet, Line ist einseitig befahrbar
 
-<iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" height="100%" frameBorder="0" allowFullScreen></iframe>
+<iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
 
 2. **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
@@ -671,6 +677,7 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 - Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
+
 <a id=features></a>
 Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt, was die Implementierung der Feature vereinfachen sollte.
 
@@ -679,10 +686,13 @@ Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist daf�
 SelectedFeature Zoomstufe verbessern
 
 ### Aktuelle Dashboard Daten
+
 In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet.
 
 ### Mehrere Skigebiete
-Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss. 
+
+Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss.
+
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
     <td></td>
@@ -694,6 +704,7 @@ Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es mögl
 </table>
 
 ### Bewertungen
+
 Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei bei einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
 
 <table style="border-collapse: collapse; width: 100%;">
@@ -707,7 +718,9 @@ Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pist
 </table>
 
 ### Einstellungen
-In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst werden. Wenn die Einstellungen verändert werden, muss dies mit dem Knopf *speichern* bestätigt werden. Folgende Einstellungen werden möglich sein:
+
+In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst werden. Wenn die Einstellungen verändert werden, muss dies mit dem Knopf _speichern_ bestätigt werden. Folgende Einstellungen werden möglich sein:
+
 - Sprache
 - Profil Informationen
 - Favoriten: Skigebiete
@@ -723,16 +736,17 @@ In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst w
   </tr>
 </table>
 
-
 ### Benutzerkonto
+
 Um Ihr Skierlebnis weiter zu verbessern, wird es bald möglich sein, ein Benutzerkonto anzulegen. Mit einem Konto kann man seine Statistiken sicher speichern und die Daten sind nicht mehr an ein einzelnes Gerät gebunden. So wird das individuelles Nutzungserlebnis optimal unterstützt.
 
 ### Live Tracking
+
 Um den Vergleich von Skitagen zu vereinfachen, wird ein Live-Tracking in die App integriert. Dadurch ist das Aufzeichnen nicht mehr von einem zusätzlichen Gerät wie einer GPS-Uhr abhängig. Die Tracking-Funktion kann einfach durch ein Wischen eines Buttons von links nach rechts aktiviert werden.
 
-### Rückmeldung Lawinen 
-Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden. 
+### Rückmeldung Lawinen
 
+Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden.
 
 ## Contribution
 
