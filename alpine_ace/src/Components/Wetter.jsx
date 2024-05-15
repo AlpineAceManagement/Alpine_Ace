@@ -1,16 +1,10 @@
 import React from "react";
-import { Vega, VegaLite } from "react-vega";
-import { View } from "react-vega";
-import vegaEmbed from "vega-embed";
+import { Vega } from "react-vega";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import { useState, useEffect } from "react";
-import { parse, scale } from "vega";
-import { title } from "vega-lite/build/src/channeldef";
-import VegaEmbed from "react-vega/lib/VegaEmbed";
 import Grid from "@mui/material/Grid";
-
 import spec_wetter from "./Wetter_diagramm";
 
 const Wetter = () => {
@@ -24,8 +18,6 @@ const Wetter = () => {
   const [snowloading, setSnowLoading] = useState(true);
   const [snowerror, setSnowError] = useState(null);
   const [weatherChartData, setWeatherChartData] = useState(null);
-  const [prognoseerror, setPrognoseError] = useState(null);
-  const [prognoseloading, setPrognoseLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {

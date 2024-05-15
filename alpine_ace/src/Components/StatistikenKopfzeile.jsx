@@ -16,6 +16,7 @@ const StatistikenKopfzeile = () => {
         <Grid>
           <item>
             {" "}
+            {/*  Link zur Statistik Seite*/}
             <Link to="/Statistiken" className="Kopfzeile-link">
               <ArrowBackIosNewIcon
                 className="zurueck-icon"

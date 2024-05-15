@@ -350,7 +350,7 @@ In der Karte finden sich verschiedene Funktionen wieder. Beim Start der Karte be
 
 - **POI’s (points of interests)**: Zum Beispiel Parkplätze oder Bushaltestellen die Informationen wie den Namen enthalten.
 
-- **Hintergrundkarte**: Den Hintergrund bildet die Winterlandeskarte von Swisstopo
+- **Hintergrundkarte**: Den Hintergrund bildet die Winterlandeskarte von Swisstopo.
 
 ##### Skigebiete
 

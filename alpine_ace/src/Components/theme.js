@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
+// Farbpalette für Projekt
 const theme = createTheme({
   palette: {
     action: {

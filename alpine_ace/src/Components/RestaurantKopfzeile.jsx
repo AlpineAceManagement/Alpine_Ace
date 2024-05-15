@@ -16,6 +16,7 @@ const RestaurantKopfzeile = () => {
         <Grid>
           <item>
             {" "}
+            {/*  Link zur Restaurant Seite*/}
             <Link to="/Restaurant" className="Kopfzeile-link">
               <ArrowBackIosNewIcon
                 className="zurueck-icon"
