@@ -2,12 +2,20 @@
 
 # Alpine Ace - Ski App
 
-Das ist die Projekt Website des _Alpine Ace Ski App_. Das App enthält eine Server und eine Client Umgebung.
+**Willkommen auf der Projekt Website der _Alpine Ace - Ski App_.** 
 
-- Server: Node Server
-- Client: React + OpenLayers
+Im Vertiefungsmodul _4230: GeoInformatik & Raumanalyse I_ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde im Rahmen einer Projektarbeit die Geodateninfrastruktur (GDI) _Alpine Ace-Ski App_ entwickelt. Abgesehen von der Vorgabe räumlich-zeitlicher Inhalte hatten wir freie Themenwahl.
 
-GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAceManagement/Alpine_Ace)
+Diese Seite widmet sich der GDI _Alpine Ace-Ski App_. Wintersport ist in der Schweiz nicht nur ein Nationalsport, sondern auch ein bedeutender Wirtschaftszweig, der durch die Digitalisierung stark verändert wurde. Mittlerweile ist es möglich, Tickets im Voraus online zu buchen, Webcams an verschiedenen Standorten abzurufen und persönliche Statistiken über den Skitag zu erfassen. Allerdings erstellt jedes Skigebiet eigene Plattformen mit ähnlichen Funktionen, was dazu führt, dass man für jedes Skigebiet eine separate App herunterladen oder mehrere Webseiten als Lesezeichen speichern muss, um die wichtigsten Informationen zu erhalten. Dies kann die Anzahl der Apps und Lesezeichen auf dem Smartphone erheblich erhöhen.
+
+Aus diesem Grund wurde die GDI _Alpine Ace-Ski App_ entwickelt. Unser Ziel ist es, eine zentrale Plattform für verschiedene Skigebiete zu schaffen, die alle wichtigen Funktionen für den Wintersport bietet. Dazu gehören:
+
+- Eine hochwertige Karte für Orientierung und Navigation im Gelände
+- Aktuelle Wetter- und Lawineninformationen
+- Details zu Verpflegungsmöglichkeiten
+- Anzeige persönlicher Statistiken der Benutzer
+
+Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren und zu entdecken, wie die Alpine Ace-Ski App Ihr Wintersporterlebnis revolutionieren kann.
 
 <center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
@@ -15,7 +23,6 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
 
 - [Alpine Ace - Ski App](#alpine-ace---ski-app)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Beschrieb des Apps](#beschrieb-des-apps)
   - [Architektur](#architektur)
     - [Backend](#backend)
       - [API](#api)
@@ -59,41 +66,56 @@ GitHub Repository: [AlpineAceManagement/Alpine_Ace](https://github.com/AlpineAce
       - [Funktion](#funktion-6)
   - [Incoming Features](#incoming-features)
     - [Karte](#karte-1)
+    - [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten)
+    - [Mehrere Skigebiete](#mehrere-skigebiete)
+    - [Bewertungen](#bewertungen)
+    - [Einstellungen](#einstellungen)
+    - [Benutzerkonto](#benutzerkonto)
+    - [Live Tracking](#live-tracking)
+    - [Rückmeldung Lawinen](#rückmeldung-lawinen)
   - [Contribution](#contribution)
-
-## Beschrieb des Apps
-
-<a id=beschrieb></a>
-
-Ziel dieser App ist eine zentrale Plattform für verschiedene Skigebiete zu erstellen, welche wichtige Funktionen für den Wintersport zu Verfügung stellt. Dies umfasst eine hochwertige Karte für die Orientierung und Navigation im Gelände, das aktuelle Wetter und Lawinensituation sowie Informationen zu Verpflegungsmöglichkeiten. Diese App ermöglicht Statistiken für den Benutzer darzustellen.
 
 ## Architektur
 
 <a id=architektur></a>
+Eine vollständige Geodateninfrastruktur (GDI) umfasst das Backend, das Frontend sowie die verwendeten Bibliotheken und API-Schnittstellen. Das folgende Schema zeigt die entwickelte und genutzte GDI der Alpine Ace-Ski App.
+
+<center><img src="images/architektur_app.png"  /></center>
+_Architektur Client-Server Struktur_
+
+Die App enthält dabei eine Server Client Umgebung:
+
+- Server: Node Server
+- Client: React + OpenLayers
 
 ### Backend
-
 <a id=backend></a>
+Das Backend beinhaltet alle unsichtbaren Inhalte und Daten, die sich auf dem Server, in unserem Fall der Raspberry PI, befinden. Dazu gehören folgenden Punkte:
+- Räumliches Datenbanksystem (RDBS)
+- API-Schnittstelle inklusive Datenspeicherung in der RDBS
+- Geoserver mit allen Kartendarstellungen
+- FME Workbenches für Datenspeicherung RDBS
+- Node-Server als Schnittstelle zwischen dem RDBS / Geoserver und dem Frontend
 
 #### API
 
-Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden einige APIs benötigt.
+Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden folgende APIs verwendet:
 
-- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind Kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
+- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
 
-- Lawinensituation: Lawineninformationen werden über die API des Institut für Schnee und Lawinenforschung (SLF) bezogen. Der Bezug der Daten ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
+- Lawinensituation: Die aktuellen Lawineninformationen werden über [https://aws.slf.ch/api/bulletin/caaml](https://aws.slf.ch/api/bulletin/caaml) bezogen. Es handelt sich um eine API des Institut für Schnee und Lawinenforschung (SLF). Die Nutzung ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des Institut für Schnee- und Lawinenforschung. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
+- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des SLF. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
-- Informationen über Skigebiet: Die Informationen der Skigebiete werden in Zukunft über ein Webscraping der Seite Bergfex gemacht.
+- Informationen über Skigebiet: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen.
 
-Damit der Datenbezug reibungslos läuft, werden die Scripts für den Datenbezug über eine Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Scripts in den oben erwähnten Zeitintervallen auf um sie auszuführen.
+Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf, um sie auszuführen.
 
 #### Datenbank
 
 <a id=datenbank></a>
 
-In diesem Projekt werden neben Sachdaten auch Daten mit Raumbezug verwendet, wie Pisten und Anlagen welche Geometrien haben, verwendet. Um sicherzustellen, dass die Datenbank die geometrischen Daten effizient verarbeiten kann, wurde entschieden, eine relationale Datenbank mit der räumlichen Erweiterung PostGIS zu verwenden. Dadurch wird PostgreSQL in der Lage sein, räumliche Abfragen und Operationen durchzuführen, was für unser Projekt von entscheidender Bedeutung ist.
+In diesem Projekt werden neben Sachdaten auch räumliche Daten wie Pisten und Anlagen, die Geometrien besitzen, verwendet. Um sicherzustellen, dass die Datenbank diese geometrischen Daten effizient verarbeiten kann, haben wir uns für die Nutzung einer relationalen Datenbank mit der räumlichen Erweiterung PostGIS entschieden. Dadurch kann PostgreSQL räumliche Abfragen und Operationen durchführen, was für unser Projekt von entscheidender Bedeutung ist.
 
 ##### Datenbankverbindung
 
@@ -147,9 +169,9 @@ Folgende Daten werden mit Hilfe von FME in den GeoServer importiert:
 
 <a id=nodeserver></a>
 
-Node Server greift auf Daten des Servers zu GeoServer stellt diese innerhalb der React-App zur Verfügung. Dies sind als API's abrufbar.
+Node Server greift auf Daten des Servers zu, während GeoServer diese innerhalb der React-App zur Verfügung stellt. Dies sind als API's abrufbar.
 
-Folgende API's sind vorhanden:
+Folgende Express-API's sind vorhanden:
 
 - **/api/restaurant** Alle Informationen der Tabelle Restaurant
 - **/api/skidaten** Alle Informationen der Tabelle Skidaten
@@ -168,10 +190,13 @@ Folgende API's sind vorhanden:
 ### Frontend
 
 <a id=frontend></a>
+Das Frontend ist für das Auftreten unserer APP zuständig. Dabei baut unsere APP auf folgenden Technologien auf:
+- **npm** ist unser Paketmanager, um Abhängigkeiten und Bibliotheken effizient zu verwalten.
+- **JavaScript** ist die Grundlage unserer App, um dynamische und interaktive Inhalte zu erstellen. 
+- **React** ist eine Leistungsstarke Bibliothek für den Aufbau der Benutzeroberfläche, die schnelle und reaktive Anwendungen ermöglicht.
+- **MUI React** ist eine Sammlung von User Interface (UI)-Komponenten, die hilft, eine ansprechende und benutzerfreundliche Oberfläche zu gestalten.
 
-#TODO anpassen
-Da das Ziel ist, eine App für Mobiltelefone zu entwerfen musste ein performance-starkes Framework gewählt werden. Dabei kamen drei Frameworks in Frage, wie React Nativ, Flutter oder Progressive Web App (PWA).
-Der Entscheid fiel auf PWAs, da die sie webbasiert sind und somit keine Installation notwendig ist. Trotzdem ist ein App-like Design gegeben. Zudem funktionieren PWAs auf allen gängigen Plattformen und Betriebssystemen. Einschliesslich iOS, Android, Windows und macOS. Ein weiterer Vorteil ist, dass PWAs über einen offline Modus verfügen. Heisst sie können auch offline verwendet verwenden. Weiter können PWAs schneller gestartet werden als native Apps, da sie im Browser bereits zwischengespeichert sind.
+Der Vergleich zwischen Mockup und Endprodukt, die Erklärung zur Farbwahl und die einzelnen Funktionen werden in den nächsten Kapitel näher gebracht.
 
 #### Mock-Up
 
@@ -245,13 +270,13 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
 
 <a id=farbschema></a>
 
-Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer.
+Für diese App wurde das Farbschema sorgfältig entwickelt, sodass es nicht nur funktional ist, sondern auch visuelle ansprechend und leicht verständlich für die Benutzer ist.
 
-Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieses App und verleiht ihr eine solide Basis.
+Die Hauptfarbe, <span style="color:#00112E">#00112E</span>, bildet das Fundament dieser App und verleiht ihr eine solide Basis.
 
 Die Sekundärfarbe, <span style="color:#FF6155">#FF6155</span>, wurde mit Bedacht gewählt, um wichtige Elemente wie Buttons und interaktive Funktionen hervorzuheben. Ihre lebendige Präsenz zieht die Aufmerksamkeit auf sich und führt die Benutzer intuitiv durch die App.
 
-Für das Routing und Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden sorgfältig ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
+Für das Routing und die Elemente wurde <span style="color:#9EFF55">#9EFF55</span> und <span style="color:#B655FF">#B655FF</span> gewählt. Diese Farben wurden ausgewählt, da sie komplementär zu unserer Sekundärfarbe sind, was nicht nur visuell ansprechend ist, sondern auch einen starken Kontrast bietet, der die Benutzerführung erleichtert.
 
 Die Darstellung von gefahrenen Strecken oder Routing-Strecken erfolgt in <span style="color:#FFA500">#FFA500</span>. Diese kräftige Farbe hebt sich von den traditionellen Skipisten Farben ab und sorgt dafür, dass die Routen deutlich erkennbar sind, ohne mit den üblichen Farbkonventionen zu kollidieren.
 
@@ -291,13 +316,14 @@ Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hin
 
 ##### Funktion
 
-- **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt..
-  ![Diagramme Dashboard](images/Dashboard_Anlagen.png)
-  _Diagramme der aktuellen Pisten und Anlagen Informationen_
+- **Dashboard Skigebiet:** Die beiden Diagramme zur Anzahl der offenen Pisten und Anlagen sollen die aktuellen Informationen des Skigebiets darstellen. Derzeit sind die Diagramme noch mit Beispieldaten gefüllt. Zu einem späteren Zeitpunkt sollen die Daten direkt von den Skigebieten oder zumindest von deren Webseiten bezogen werden. Die Diagramme werden mit der Vega-Bibliothek dargestellt.
+
+<center><img src="images/Dashboard_Anlagen.png" style="max-width: 50%; max-height: 50%;" /></center>
+_Diagramme der aktuellen Pisten und Anlagen Informationen_
 
 - **Symbol Lawinenstufe:** Das Symbol der Lawinenstufe gibt Auskunft über die aktuelle Lawinensituation im ausgewähltem Gebiet. Sollte das Skigebiet über mehre Lawinengefahrenstufen verfügen wird die höchste angezeigt um die Sensibilisierung der Skifahrer zu erhöhen. Das Piktogramm wird dabei nach dem Attribut `b_danger` aus den Bulletin Daten aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Dargestellten Piktogramme sehen wie folgt aus:
-  ![Bulletins Piktogramme](images/Lawinen_Piktogramme.png)
-  _Piktogramme der Bulletins_
+<center><img src="images/Lawinen_Piktogramme.png" style="max-width: 50%; max-height: 50%;" /></center>
+ _Piktogramme der Bulletins_
 
 - **Bulletin Karte:** In der Karte werden die Bulletin Daten nach dem Attribut `b_danger` aufgeschlüsselt. Es wird unterschieden zwischen: `low`, `moderate`, `considerable` , `high` ,`very_high`, `no_snow` und `no_rating`. Die Farben der Flächen sind dieselben wie vom [SLF](https://www.slf.ch/de/lawinenbulletin-und-schneesituation/wissen-zum-lawinenbulletin/gefahrenstufen/). #FRAGE noch mehr details
 - **Menüs Schaltflächen:**
@@ -383,13 +409,15 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jede Haltestelle mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
+<iframe src="videos/Karte.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Funkion `createVectorSource` aus der Datei `kartenWFS.js`. Mitgeliefert wird der Name des Layers der bezogen wird. In der Datei `kartenLayerStyle.js` sind alle Symbolisierungen von Vektordaten gespeichert. Die ist wie eine CSS-Datei. Die Symbolisierung muss nur in dieser Datei verändert werden und der Layer wird in allen Karten im Projekt angepasst. Die Winterlandeskarte wird über die Funktion `SwisstopoLayer` aus der Datei `swisstopoLayer.js` bezogen. In dieser sind auch die Quellenangaben. Diese sind in der Karte unten Links auf der Info Schaltfläche abrufbar, mit einem Link auf die Webseite der Swisstopo. Für das initialisieren der Karte wird der Ausschnitt und die Zoomstufe angeben. Mit der Open Layer Funktion `controls` wir bei Klicken auf die Schaltfläche `E` oben links, wird ein angegebener Bereich gezoomt. Wenn auf ein Layer geklickt wird, auf das Element gezoomt. Die Zoomstufe ist abhängig von der Grösse des Elements. In der Box unterhalb der Karte werden die Attribute vom selektieren Element angezeigt. Die Grösse der Box ist abhängig, wie viele Attribute vorhanden sind.
 
 #### Wetter
 
-Im Wetter-Menü finden Sie alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
+Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im Skigebiet. Dazu gehören die Temperaturvorhersage für den aktuellen Tag, die aktuelle Temperatur, die Schneehöhe, das aktuelle Wetter, die Windgeschwindigkeit und die Windrichtung.
 
 ##### Konzept
 
@@ -399,29 +427,26 @@ Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wetter
 
 ##### Funktion
 
-**Wettervorhersage**
+**Wettervorhersage**\
+Die täglichen Wettervorhersagen werden von einer lokalen API abgerufen:
+- **Wettervorhersage**: `http://localhost:5000/api/prognose`
 
-**Aktuelle Wetterdaten**
-Die Aktuellen Wetterdaten werden über eine API abfragen geholt. mit Express wird auf die Datenbank zugegriffen und folgende abfrage gemacht.
-`"SELECT * FROM messdaten ORDER BY md_timestamp DESC LIMIT 1;"` Die daten lassen sich dann von
-Somit hat man immer die aktuellsten Informationen welche in der Datenbank liegen. Die daten werden dann mit useEffect aufgerufen und in die Variabel weatherData gespeichert. der Aufruf des gewünschten werts erfoglt mit weatherData.md_temperatur. Möchte man die aktuelle windrichtung so ändert sich die eingabe nach dem Punkt auf md_windrichtung.
+Die abgerufenen Daten werden in die entsprechende Zustandsvariablen *weatherChartData* gespeichert. Die Daten werden dann in einem Liniendiagramm dargestellt. Das Diagramm wird mit Vega dargestellt. 
 
-Die aktuellen schneedaten werden ebenfalls über eine Express-API bezogen. `http://localhost:5000/api/schneehoehe`
-Die API zeigt dabei Werte die nach folgender Abfrage generiert werden.
 
-```
-SQL
-"SELECT sh_hoehe FROM Schneehoehe WHERE station_id = 'ROT3' ORDER BY sh_zeit DESC LIMIt 1;"
-```
+**Aktuelle Wetterdaten**\
+Die aktuellen Wetterdaten werden von einer lokalen API abgerufen:
+- **Aktuelle Wetterdaten**: `http://localhost:5000/api/messdaten`
+- **Aktuelle Schneehöhe**:`http://localhost:5000/api/schneehoehe`
 
-Man erhölt somit immer die aktuelste information der schneehöhe.
+Die abgerufenen Daten werden dabei in den entsprechenden Zustandsvariablen *snowData* und *weatherData* gespeichert. Ebenfalls ist eine Fehlerbehandlung vorahnend, um Netzwerkfehler und fehlerhafte API-Antworten zu behandeln. Die Darstellung erfolgt über benutzerdefinierte Komponente, welche die jeweiligen Wetterinformation anzeigen, einschliesslich Temperatur, Wetterbedingungen, Windgeschwindigkeit und Windrichtung. Dabei erfolgt das aufrufen der Wetterinformationen über *weatherData.md_temperatur*, *weatherData.md_wetter*, *weatherData.md_windrichtung*, *weatherData.md_windgeschwindigkeit*. Wetter und Windrichtung verwenden Material-UI-Icons zur visuellen Darstellung. 
 
 #### Statistiken
 
-Beschreibung Statistiken (#TODO)
+Im Statistik-Menü finden Sie alle relevanten Informationen zu vergangenen Skitagen. Hier können Sie Vergleiche über die gesamte Saison hinweg anstellen, verschiedene Saisons miteinander vergleichen oder einzelne Tage im Detail auswerten.
 
 - **Datenursprung**: GPX-Dateien von der Garmin Fenix 6 Pro: 10 verschiedene Skitage im Skigebiet Arosa-Lenzerheide während des Winters 2023/24.
-- **Datenstand**: 01.04.2024 (#TODO)
+- **Datenstand**: 30.01.2024-23.03.2024
 - **Datenformat**: GPX, Delimiter ;
 - **Datenimport**: gpx_to_db.py
 - **Datenbankschema**: [Datenbank](#datenbank)
@@ -429,6 +454,8 @@ Beschreibung Statistiken (#TODO)
 ##### Konzept
 
 Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
+
+<iframe src="videos/Statistiken.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
@@ -579,6 +606,8 @@ Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` u
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
 
+<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
 ##### Funktion
 
 Durch anklicken der Schaltfläche `START` oder `ZIEL` wird der Start, respektive Ziel Marker in den Mittelpunkt des Kartenausschnittes gesetzt. Sobald der Start oder Ziel Marker erstellt ist, wird die Schaltfläche für das erstellen deaktiviert. Den Start und Ziel Marker mittels des Attribut `markerType` unterschieden. Das Icon bezieht der Marker aus der Ordner `Karte_Symbole` vom online Github Repository, da dies per lokalen Ordner nicht funktioniert. Mit der Position des Markers wird über die Funktion `fetchNearestVertex` mit der SQL View `a_a_nearest_vertex` die nächste `Node_ID` gesucht. Diese wird dann als `nodeSource` beim Start Marker und als `nodeTarget` beim Ziel Marker gesetzt. Wenn die Marker verschoben werden, wir die Funktion `fetchNearestVertex` wieder aufgerufen und die `Node_ID` aktualisiert. Wenn die `nodeSource` oder `nodeTarget` den Wert ändern wird die Funktion `handleLoadRoute` gestartet. Diese löscht als erstes die alte Route und lädt die neue Route mit der SQL View `a_a_shortest_path` in der die Parameter `nodeSource` und `nodeTarget` verwendet werden. Der Stil für den Layer kommt aus der Datei `kartenLayerStyle.js`, dem CSS für die Layer Symbolisierung.
@@ -605,6 +634,8 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 - **Datenbankschema**: [Datenbank](#datenbank)
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
+
+<iframe src="videos/Restaurant.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
@@ -640,19 +671,68 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
 - Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
 ## Incoming Features
+<a id=features></a>
+Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt, was die Implementierung der Feature vereinfachen sollte.
 
 ### Karte
 
 SelectedFeature Zoomstufe verbessern
 
-<a id=features></a>
+### Aktuelle Dashboard Daten
+In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet.
 
-mehrere Skigebiete
-bewertungen
-einstellungen
-benutzerkonto
-livetracking
-lawinenrückmeldungstool von slf einbauen
+### Mehrere Skigebiete
+Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss. 
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/Auswahl_Skigebiet.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+### Bewertungen
+Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei bei einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/Bewertungen.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+### Einstellungen
+In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst werden. Wenn die Einstellungen verändert werden, muss dies mit dem Knopf *speichern* bestätigt werden. Folgende Einstellungen werden möglich sein:
+- Sprache
+- Profil Informationen
+- Favoriten: Skigebiete
+- Passwort ändern
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td></td>
+    <td style="text-align: center;">
+      <img src="images/einstellungen.png" alt="Alternativtext für das Bild" style="max-width: 50%; max-height: 50%;">
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+
+### Benutzerkonto
+Um Ihr Skierlebnis weiter zu verbessern, wird es bald möglich sein, ein Benutzerkonto anzulegen. Mit einem Konto kann man seine Statistiken sicher speichern und die Daten sind nicht mehr an ein einzelnes Gerät gebunden. So wird das individuelles Nutzungserlebnis optimal unterstützt.
+
+### Live Tracking
+Um den Vergleich von Skitagen zu vereinfachen, wird ein Live-Tracking in die App integriert. Dadurch ist das Aufzeichnen nicht mehr von einem zusätzlichen Gerät wie einer GPS-Uhr abhängig. Die Tracking-Funktion kann einfach durch ein Wischen eines Buttons von links nach rechts aktiviert werden.
+
+### Rückmeldung Lawinen 
+Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden. 
+
 
 ## Contribution
 
@@ -663,7 +743,3 @@ lawinenrückmeldungstool von slf einbauen
 - Théo Reibel, GitHub: [TheoR14](https://github.com/TheoR14)
 
 [Zurück nach oben](#start)
-
-```
-
-```
