@@ -36,35 +36,35 @@ Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren un
       - [Mock-Up](#mock-up)
       - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
-      - [Kopfzeile](#kopfzeile)
-        - [Funktion](#funktion)
-      - [Hauptmenü](#hauptmenü)
-        - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
-        - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
-        - [Funktion](#funktion-1)
-      - [Karte](#karte)
-        - [Skigebiete](#skigebiete)
-        - [DHM25](#dhm25)
-        - [Pisten](#pisten)
-        - [Anlagen](#anlagen)
-        - [Parkplätze](#parkplätze)
-        - [ÖV-Haltestellen](#öv-haltestellen)
-        - [Funktion](#funktion-2)
-      - [Wetter](#wetter)
-        - [Konzept](#konzept)
-        - [Funktion](#funktion-3)
-      - [Statistiken](#statistiken)
-        - [Konzept](#konzept-1)
-        - [Funktion](#funktion-4)
-      - [Navi](#navi)
-        - [Konzept](#konzept-2)
-        - [Aufbereitung der Daten](#aufbereitung-der-daten)
-        - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
-        - [Berechnen des Routings](#berechnen-des-routings)
-        - [SQL views Routing](#sql-views-routing)
-        - [Funktion](#funktion-5)
-      - [Restaurant](#restaurant)
-        - [Funktion](#funktion-6)
+    - [Kopfzeile](#kopfzeile)
+      - [Funktion](#funktion)
+    - [Hauptmenü](#hauptmenü)
+      - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
+      - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
+      - [Funktion](#funktion-1)
+    - [Karte](#karte)
+      - [Skigebiete](#skigebiete)
+      - [DHM25](#dhm25)
+      - [Pisten](#pisten)
+      - [Anlagen](#anlagen)
+      - [Parkplätze](#parkplätze)
+      - [ÖV-Haltestellen](#öv-haltestellen)
+      - [Funktion](#funktion-2)
+    - [Wetter](#wetter)
+      - [Konzept](#konzept)
+      - [Funktion](#funktion-3)
+    - [Statistiken](#statistiken)
+      - [Konzept](#konzept-1)
+      - [Funktion](#funktion-4)
+    - [Navi](#navi)
+      - [Konzept](#konzept-2)
+      - [Aufbereitung der Daten](#aufbereitung-der-daten)
+      - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
+      - [Berechnen des Routings](#berechnen-des-routings)
+      - [SQL views Routing](#sql-views-routing)
+      - [Funktion](#funktion-5)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-6)
   - [Incoming Features](#incoming-features)
     - [Aktueller Standort](#aktueller-standort)
     - [Karten Legende](#karten-legende)
@@ -241,21 +241,21 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-wetter.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-wetter.png" style="max-height: 71%; width: 71%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-wetter.png" style="max-height: 68%; width: 68%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none; text-align: center;" colspan="2"><h4>Statistiken</h4></td>
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-stat.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-stat.jpg" style="max-height: 780%; width: 80%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-stat.jpg" style="max-height: 77%; width: 77%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none; text-align: center;" colspan="2"><h4>Weg</h4></td>
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-weg.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-weg.jpg" style="max-height: 85%; width: 85%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-weg.jpg" style="max-height: 82%; width: 82%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none; text-align: center;" colspan="2"><h4>Navi</h4></td>
@@ -269,7 +269,7 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-restaurant.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-restaurant.jpg" style="max-height: 81%; width: 81%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-restaurant.jpg" style="max-height: 78%; width: 78%;" /></center></td>
     </tr>
 </table>
 
