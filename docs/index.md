@@ -443,7 +443,7 @@ Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im S
 
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
-#todo: video von wetter menu einfügen
+<iframe src="videos/Wetter.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
@@ -536,6 +536,8 @@ Balkendiagramm
 Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Position verschoben. Der kürzeste Weg zum Ziel wird danach in der Karte als Route hervorgehoben. Mit nach anklicken Reset Schaltfläche verschwinden Marker und Route von der Karte.
 
 Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
+
+<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Konzept
 
@@ -638,8 +640,6 @@ GROUP BY
 Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und des Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgegeben werde die einzelnen die Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
-
-<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
 
 ##### Funktion
 
