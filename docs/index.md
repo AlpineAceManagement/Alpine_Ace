@@ -502,7 +502,7 @@ Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es d�
 - [ ] bedeutet, Line ist beidseitig befahrbar
 - [x] bedeutet, Line ist einseitig befahrbar
 
-<iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+<iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" height="100%" frameBorder="0" allowFullScreen></iframe>
 
 2. **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
