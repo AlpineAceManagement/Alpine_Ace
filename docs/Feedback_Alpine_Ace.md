@@ -17,7 +17,7 @@
 
 Code Organisation:
 
-- Code ist strukturiert, die Kommentare könnten noch erweitert werden. Frontend keine Kommentare vorhanden.
+- Code ist strukturiert, die Kommentare könnten noch erweitert werden. Frontend keine Kommentare vorhanden. #erledigt
 - Gute Auflistung der Ordnerorganisation ev. anstatt die Beschreibung der Datei auf zwei Zeilen, diese auf einer Zeile anzeigen, was zu einer kompakteren Übersicht der Struktur führt.
 - Wie wird der Geoserver aufgesetzt und wie sind die Layer eingbunden und vorprozessiert?
 
@@ -42,8 +42,9 @@ Architektur:
 
 Funktionen
 
-- Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen?
-- Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen.
+- Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen? # Lawinenbulletin im Dashboard bezieht sich auf das aktuelle Skigebiet. Das was auf Karte angezeigt wird ist selbsterklärend!
+
+- Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt
 - Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung
 - Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen.
 - Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen.
