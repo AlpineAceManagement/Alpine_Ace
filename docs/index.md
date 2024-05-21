@@ -17,6 +17,8 @@ Aus diesem Grund wurde die GDI _Alpine Ace-Ski App_ entwickelt. Unser Ziel ist e
 
 Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren und zu entdecken, wie die Alpine Ace-Ski App Ihr Wintersporterlebnis revolutionieren kann.
 
+Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceManagement/Alpine_Ace).
+
 <center><img src="images/Startseite_Alpine_Ace.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 ## Inhaltsverzeichnis

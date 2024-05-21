@@ -2,6 +2,8 @@
 
 Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Skigebiete bereitzustellen, die wichtige Funktionen für den Wintersport bietet. Zu diesen Funktionen gehören eine hochwertige Karte für die Orientierung und Navigation im Gelände, aktuelle Wetter- und Lawinensituationen sowie Informationen zu Verpflegungsmöglichkeiten. Darüber hinaus ermöglicht die App die Darstellung von Statistiken für den Benutzer.
 
+Die Dokumentation zum Projekt befindet sich [hier](https://alpineacemanagement.github.io/Alpine_Ace/).
+
 ## Funktionen
 
 - Hochwertige Karten zur Orientierung und Navigation im Gelände.
@@ -67,6 +69,10 @@ QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS herunte
 ### Node-Requirements
 
 Die Webapp wurde mit der Node version 18.18.0 getestet.
+
+### GeoServer-Requirements
+
+Voraussetzung für das
 
 ### Frontend
 
