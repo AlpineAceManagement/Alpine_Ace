@@ -218,7 +218,9 @@ Der Vergleich zwischen Mockup und Endprodukt, die Erklärung zur Farbwahl und di
 
 Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [Mock-Up](https://github.com/AlpineAceManagement/Alpine_Ace/blob/main/docs/A1_Mockup_Alpine_Ace.pptx)
 
-Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten.
+Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten. In den folgenden Grafiken werden die umgesetzten Features mit dem Mock-Up verglichen.
+
+<center><img src="images/umgesetze_feature.png" style="max-width: 50%; max-height: 50%;" /></center>
 
 <table style="border-collapse: collapse; width: 100%;">
     <colgroup>
