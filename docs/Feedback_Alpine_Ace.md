@@ -8,9 +8,9 @@
 **README**: Einleitung zur Installation und Projekt ergänzen mit einem klaren Verweis auf die GitHub Pages.
 
 - About (oben rechts) ergänzen mit Kurzbeschrieb und GitHub Pages Link #erledigt
-- Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #Nein
-- Sowie die Aufsetzen des Geoservers? #
-- Datenbank befühlen Variante 1 hat auf der gleichen Ebene keine Variante 2
+- Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #Nein, sollte aber funktionieren, da mehrmals getestet.
+- Sowie die Aufsetzen des Geoservers? # Hinweiss zur offiziellen Installationsanleitung vom GeoServer und welche Version.
+- Datenbank befühlen Variante 1 hat auf der gleichen Ebene keine Variante 2 #erledigt, Variante 2 Import Datenbank Dump erstellt.
 - Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich, sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind.
 
 - Preprocessing Ordner noch genauer erläutern, Struktur / Nutzung

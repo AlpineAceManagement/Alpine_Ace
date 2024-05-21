@@ -72,7 +72,7 @@ Die Webapp wurde mit der Node version 18.18.0 getestet.
 
 ### GeoServer-Requirements
 
-Voraussetzung für das
+Voraussetzung für das Projekt ist die installierte GeoSever Version 2.24.2. Hier ist die offizielle [Installationsanleitung](https://docs.geoserver.org/main/en/user/installation/index.html) für die verschieden Betriebssysteme.
 
 ### Frontend
 
@@ -169,6 +169,20 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 9. Vom Basisverzeichnis den Ordner `Routing` öffnen.
 10. Routing Script in PG Admin 4 kopieren und ausführen:
     `Routing\alpine_ace_routing.txt`
+
+### Datenbank befüllen Variante 2 mit Datenbank Dump
+
+1. Zu Datenbank Dump navigieren in Ordner `DB_PG`.
+
+```
+cd DB_PG
+```
+
+2. Datenbank Dump importieren mit SQL. Username und Passwort der Datenbank einsetzten.
+
+```
+psql --host "#hostname" --port "5432" --username "#username" --dbname "geoserver" --file "DatenbankDump.sql"
+```
 
 ## Datenbank befüllen mit API Daten
 
