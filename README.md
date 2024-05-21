@@ -2,6 +2,8 @@
 
 Die Skigebiets-App zielt darauf ab, eine zentrale Plattform für verschiedene Skigebiete bereitzustellen, die wichtige Funktionen für den Wintersport bietet. Zu diesen Funktionen gehören eine hochwertige Karte für die Orientierung und Navigation im Gelände, aktuelle Wetter- und Lawinensituationen sowie Informationen zu Verpflegungsmöglichkeiten. Darüber hinaus ermöglicht die App die Darstellung von Statistiken für den Benutzer.
 
+Die Dokumentation zum Projekt befindet sich [hier](https://alpineacemanagement.github.io/Alpine_Ace/).
+
 ## Funktionen
 
 - Hochwertige Karten zur Orientierung und Navigation im Gelände.
@@ -41,7 +43,7 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 - pandas
 - shutil
 
-Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des 
+Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des
 Environment mit Anaconda
 
 1. Speicherort für Environment festlegen
@@ -66,7 +68,11 @@ QGIS Desktop 3.32.3-Lima oder aktueller. Kann auf der Webseite von [QGIS herunte
 
 ### Node-Requirements
 
-Die Webapp wurde mit der Node version 18.18.0 getestet. 
+Die Webapp wurde mit der Node version 18.18.0 getestet.
+
+### GeoServer-Requirements
+
+Voraussetzung für das Projekt ist die installierte GeoSever Version 2.24.2. Hier ist die offizielle [Installationsanleitung](https://docs.geoserver.org/main/en/user/installation/index.html) für die verschieden Betriebssysteme.
 
 ### Frontend
 
@@ -118,8 +124,6 @@ db_config = {
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
 2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
 
-#FRAGE ist dies genügend detailliert oder braucht es noch einen screenshot?
-
 ```
 CREATE EXTENSION postgis;
 CREATE EXTENSION pgrouting;
@@ -143,7 +147,6 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 
 3. Verzeichnis `DB_PG` öffnen.
 4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
-   #FRAGE muss ich hier die Datenbankverbindungsinformationen noch angeben?
 
 - `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Pisten_OSM`
@@ -166,6 +169,20 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 9. Vom Basisverzeichnis den Ordner `Routing` öffnen.
 10. Routing Script in PG Admin 4 kopieren und ausführen:
     `Routing\alpine_ace_routing.txt`
+
+### Datenbank befüllen Variante 2 mit Datenbank Dump
+
+1. Zu Datenbank Dump navigieren in Ordner `DB_PG`.
+
+```
+cd DB_PG
+```
+
+2. Datenbank Dump importieren mit SQL. Username und Passwort der Datenbank einsetzten.
+
+```
+psql --host "#hostname" --port "5432" --username "#username" --dbname "geoserver" --file "DatenbankDump.sql"
+```
 
 ## Datenbank befüllen mit API Daten
 
@@ -201,9 +218,7 @@ node connect_db.js
 
 ### GeoServer
 
-#### GeoServer Basis aufsetzten
-
-#FRAGE Müssen wir das machen, reicht Referenz auf die Folien?
+GeoServer Basis Installation gemäss Folien.
 
 #### Arbeitsbereich erstellen
 
@@ -523,7 +538,7 @@ Reguläre Ausdruck-Validierung
 4. Name der View:
 
 ```
-Alpine_Ace:a_a_restaurant
+a_a_restaurant
 ```
 
 5. SQL-Statement:

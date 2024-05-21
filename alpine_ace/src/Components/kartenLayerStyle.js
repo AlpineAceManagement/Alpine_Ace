@@ -1,6 +1,8 @@
 import { Style, Stroke, Icon, Fill } from "ol/style";
 import LineString from "ol/geom/LineString";
-
+// -----------------------------------------------------
+//                      Anlage Style
+// -----------------------------------------------------
 const strichStaerkeAnlage = 4;
 const farbeAnlage = "#757575";
 const offsetDistance = 20;
@@ -65,6 +67,10 @@ export function anlagenStyle(feature) {
   }
 }
 
+// -----------------------------------------------------
+//                      Pisten Style
+// -----------------------------------------------------
+
 export function pistenStyle(feature) {
   // Klassierung nach Farbe
   const colorAttribute = feature.get("p_farbe");
@@ -86,10 +92,15 @@ export function pistenStyle(feature) {
   });
 }
 
+// Basis Pfad für die Icons
+
 const basisPfadKartenSymbole =
   "https://raw.githubusercontent.com/AlpineAceManagement/Alpine_Ace/main/alpine_ace/src/Components/Karte_Symbole/";
 
-// Haltestellen Layer Styl mit Icon
+// -----------------------------------------------------
+//          Haltestellen Layer Style mit Icon
+// -----------------------------------------------------
+
 export function oevStyle() {
   return new Style({
     image: new Icon({
@@ -99,6 +110,10 @@ export function oevStyle() {
     }),
   });
 }
+
+// ---------------------------------------------------
+//          Parkplatz Layer Style mit Icon
+// ---------------------------------------------------
 
 export function parkplatzStyle() {
   return new Style({
@@ -110,6 +125,10 @@ export function parkplatzStyle() {
   });
 }
 
+// ---------------------------------------------------
+//          Restaurant Layer Style mit Icon
+// ---------------------------------------------------
+
 export function restaurantStyle() {
   return new Style({
     image: new Icon({
@@ -119,6 +138,10 @@ export function restaurantStyle() {
     }),
   });
 }
+
+// ---------------------------------------------------
+//          Kantonsgrenze Style
+// ---------------------------------------------------
 
 export function kantonsGrenzenStyle() {
   return new Style({
@@ -132,6 +155,10 @@ export function kantonsGrenzenStyle() {
   });
 }
 
+// ---------------------------------------------------
+//          Landesgrenze Style
+// ---------------------------------------------------
+
 export function landesGrenzenStyle() {
   return new Style({
     stroke: new Stroke({
@@ -144,6 +171,10 @@ export function landesGrenzenStyle() {
   });
 }
 
+// ---------------------------------------------------
+//          Navigation Style
+// ---------------------------------------------------
+
 export function naviStyl() {
   return new Style({
     stroke: new Stroke({
@@ -153,6 +184,10 @@ export function naviStyl() {
   });
 }
 
+// ---------------------------------------------------
+//          Aufgenommene Strecke Style
+// ---------------------------------------------------
+
 export function skidatenAnfrageStyl() {
   return new Style({
     stroke: new Stroke({
@@ -161,6 +196,10 @@ export function skidatenAnfrageStyl() {
     }),
   });
 }
+
+// ---------------------------------------------------
+//               Lawinen-Bulletin Style
+// ---------------------------------------------------
 
 export function bulettinStyle(feature) {
   // b_danger vom Feature holen und in dangerAttribute speichern

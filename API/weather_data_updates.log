@@ -122,3 +122,32 @@ LINE 1: ...VALUES ( '2024-05-12T16:00:00+00:00'::timestamptz,'gewitter'...
 
 2024-05-14 15:55:57,247 - ERROR - Database error while saving current weather: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
 
+2024-05-15 09:02:59,008 - INFO - Current weather data saved to database
+2024-05-15 09:02:59,089 - INFO - Hourly forecast data saved to database.
+2024-05-15 09:03:05,125 - INFO - Current weather data saved to database
+2024-05-15 09:03:05,193 - INFO - Hourly forecast data saved to database.
+2024-05-15 09:18:05,303 - INFO - Current weather data saved to database
+2024-05-15 09:33:05,494 - INFO - Current weather data saved to database
+2024-05-15 09:48:05,654 - INFO - Current weather data saved to database
+2024-05-15 15:08:53,744 - INFO - Current weather data saved to database
+2024-05-15 15:08:53,928 - INFO - Hourly forecast data saved to database.
+2024-05-15 15:23:54,172 - INFO - Current weather data saved to database
+2024-05-15 15:38:54,442 - INFO - Current weather data saved to database
+2024-05-15 15:53:55,155 - INFO - Current weather data saved to database
+2024-05-15 16:08:55,489 - INFO - Current weather data saved to database
+2024-05-15 16:23:55,760 - INFO - Current weather data saved to database
+2024-05-15 16:38:56,048 - INFO - Current weather data saved to database
+2024-05-15 16:53:56,212 - INFO - Current weather data saved to database
+2024-05-15 17:08:56,377 - INFO - Current weather data saved to database
+2024-05-15 22:06:29,336 - INFO - Current weather data saved to database
+2024-05-15 22:06:29,415 - ERROR - Database error while saving hourly forecast: invalid input value for enum wetter: "gewitter"
+LINE 1: ...VALUES ( '2024-05-17T04:00:00+00:00'::timestamptz,'gewitter'...
+                                                             ^
+
+2024-05-15 22:21:29,587 - INFO - Current weather data saved to database
+2024-05-15 22:36:29,764 - INFO - Current weather data saved to database
+2024-05-16 09:49:03,037 - WARNING - Retrying (Retry(total=4, connect=5, read=5, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /v1/forecast?latitude=46.72&longitude=9.55&current=temperature_2m&current=precipitation&current=weather_code&current=surface_pressure&current=wind_speed_10m&current=wind_direction_10m&hourly=temperature_2m&hourly=precipitation_probability&hourly=precipitation&hourly=weather_code&hourly=cloud_cover&hourly=surface_pressure&hourly=wind_speed_10m&hourly=wind_direction_10m&forecast_days=3&format=flatbuffers
+2024-05-16 09:49:04,006 - WARNING - Retrying (Retry(total=3, connect=5, read=5, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /v1/forecast?latitude=46.72&longitude=9.55&current=temperature_2m&current=precipitation&current=weather_code&current=surface_pressure&current=wind_speed_10m&current=wind_direction_10m&hourly=temperature_2m&hourly=precipitation_probability&hourly=precipitation&hourly=weather_code&hourly=cloud_cover&hourly=surface_pressure&hourly=wind_speed_10m&hourly=wind_direction_10m&forecast_days=3&format=flatbuffers
+2024-05-16 09:49:05,483 - WARNING - Retrying (Retry(total=2, connect=5, read=5, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /v1/forecast?latitude=46.72&longitude=9.55&current=temperature_2m&current=precipitation&current=weather_code&current=surface_pressure&current=wind_speed_10m&current=wind_direction_10m&hourly=temperature_2m&hourly=precipitation_probability&hourly=precipitation&hourly=weather_code&hourly=cloud_cover&hourly=surface_pressure&hourly=wind_speed_10m&hourly=wind_direction_10m&forecast_days=3&format=flatbuffers
+2024-05-16 09:49:07,778 - WARNING - Retrying (Retry(total=1, connect=5, read=5, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /v1/forecast?latitude=46.72&longitude=9.55&current=temperature_2m&current=precipitation&current=weather_code&current=surface_pressure&current=wind_speed_10m&current=wind_direction_10m&hourly=temperature_2m&hourly=precipitation_probability&hourly=precipitation&hourly=weather_code&hourly=cloud_cover&hourly=surface_pressure&hourly=wind_speed_10m&hourly=wind_direction_10m&forecast_days=3&format=flatbuffers
+2024-05-16 09:49:11,517 - WARNING - Retrying (Retry(total=0, connect=5, read=5, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /v1/forecast?latitude=46.72&longitude=9.55&current=temperature_2m&current=precipitation&current=weather_code&current=surface_pressure&current=wind_speed_10m&current=wind_direction_10m&hourly=temperature_2m&hourly=precipitation_probability&hourly=precipitation&hourly=weather_code&hourly=cloud_cover&hourly=surface_pressure&hourly=wind_speed_10m&hourly=wind_direction_10m&forecast_days=3&format=flatbuffers

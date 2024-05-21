@@ -21,7 +21,7 @@ import { SwisstopoLayer } from "./swisstopoLayer.js";
 import { anlagenStyle, pistenStyle, naviStyl } from "./kartenLayerStyle.js";
 
 const Navi = () => {
-  const mapRef = useRef(null); // Reference to the map container
+  const mapRef = useRef(null);
   const [showStartMarker, setShowStartMarker] = useState(false);
   const [showZielMarker, setShowZielMarker] = useState(false);
   const [map, setMap] = useState(null);

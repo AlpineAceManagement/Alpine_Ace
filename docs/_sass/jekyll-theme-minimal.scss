@@ -35,16 +35,26 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 h2 {
-  color: #393939;
+  color: #313131;
+  font-size: 28px;
 }
 
-h3,
-h4,
-h5,
+h3 {
+  color: #494949;
+  font-size: 24px;
+}
+h4 {
+  color: #505050;
+  font-size: 20px;
+}
+h5 {
+  color: #575757;
+  font-size: 18px;
+}
 h6 {
   color: #494949;
 }
@@ -206,7 +216,7 @@ strong {
 }
 
 section {
-  width: 500px;
+  width: 700px;
   float: right;
   padding-bottom: 50px;
 }
