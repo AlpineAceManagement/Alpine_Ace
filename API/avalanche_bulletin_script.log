@@ -72,3 +72,5 @@
 2024-05-15 22:06:29,170 - INFO - Processing bulletin b7d6bf9b-8dc6-40d1-bbff-b66a8f4e4eae for region: {'name': 'Münstertal', 'regionID': 'CH-7231'}
 2024-05-15 22:06:29,209 - INFO - Processing bulletin 3015b05d-a21b-4886-97a9-582747f49839 for region: {'name': 'Vouvry', 'regionID': 'CH-1311'}
 2024-05-15 22:06:29,348 - INFO - Processing bulletin 20aaa162-4f9e-459b-8f83-df6702d37213 for region: {'name': 'Hohgant', 'regionID': 'CH-1213'}
+2024-05-16 09:49:00,869 - ERROR - Error requesting API zone: HTTPSConnectionPool(host='aws.slf.ch', port=443): Max retries exceeded with url: /api/bulletin/caaml/DE/geojson (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+2024-05-16 09:49:01,650 - ERROR - Error requesting API bulletins: HTTPSConnectionPool(host='aws.slf.ch', port=443): Max retries exceeded with url: /api/bulletin/caaml/de/json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))

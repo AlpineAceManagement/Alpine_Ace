@@ -518,7 +518,7 @@ Reguläre Ausdruck-Validierung
 4. Name der View:
 
 ```
-Alpine_Ace:a_a_restaurant
+a_a_restaurant
 ```
 
 5. SQL-Statement:
