@@ -69,7 +69,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
       - [Funktion](#funktion-5)
     - [Restaurant](#restaurant)
       - [Funktion](#funktion-6)
-  - [Incoming Features](#incoming-features)
+  - [Upcoming Features](#upcoming-features)
     - [Aktueller Standort](#aktueller-standort)
     - [Karten Legende](#karten-legende)
     - [Karten Zoom](#karten-zoom)
@@ -188,7 +188,7 @@ Folgende Express-API's sind vorhanden:
 
 - **/api/restaurant** Alle Informationen der Tabelle Restaurant
 - **/api/skidaten** Alle Informationen der Tabelle Skidaten
-- **api/saison_total** Die wichtigsten Kennzahlen der Skidaten pro Saison wie die Summe der Höhenmeter, Distanz sowie der Durchschnitt der Distanz, Geschwindigkeit und die maximale Geschwindigkeit.
+- **/api/saison_total** Die wichtigsten Kennzahlen der Skidaten pro Saison wie die Summe der Höhenmeter, Distanz sowie der Durchschnitt der Distanz, Geschwindigkeit und die maximale Geschwindigkeit.
 - **/api/prognos** Die aktuellsten Informationen der Tabelle Prognose
 - **/api/schneehoehe** Die aktuellsten Informationen der Tabelle Schneehoehe von der Station ROT3
 - **/api/messdaten** Die aktuellsten Informationen der Tabelle Messdaten
@@ -440,7 +440,6 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
   <source src="videos/Karte.mp4" type="video/mp4">
 </video>
 
-
 ##### Funktion
 
 Beim Öffnen werden zuerst alle WFS Daten bezogen, über die eigens erstellte Funkion `createVectorSource` aus der Datei `kartenWFS.js`. Mitgeliefert wird der Name des Layers der bezogen wird. In der Datei `kartenLayerStyle.js` sind alle Symbolisierungen von Vektordaten gespeichert. Die ist wie eine CSS-Datei. Die Symbolisierung muss nur in dieser Datei verändert werden und der Layer wird in allen Karten im Projekt angepasst. Die Winterlandeskarte wird über die Funktion `SwisstopoLayer` aus der Datei `swisstopoLayer.js` bezogen. In dieser sind auch die Quellenangaben. Diese sind in der Karte unten Links auf der Info Schaltfläche abrufbar, mit einem Link auf die Webseite der Swisstopo. Für das initialisieren der Karte wird der Ausschnitt und die Zoomstufe angeben. Mit der Open Layer Funktion `controls` wir bei Klicken auf die Schaltfläche `E` oben links, wird ein angegebener Bereich gezoomt. Wenn auf ein Layer geklickt wird, auf das Element gezoomt. Die Zoomstufe ist abhängig von der Grösse des Elements. In der Box unterhalb der Karte werden die Attribute vom selektieren Element angezeigt. Die Grösse der Box ist abhängig, wie viele Attribute vorhanden sind.
@@ -453,12 +452,9 @@ Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im S
 
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
-<center>
-  <video width="100%" height="auto" controls>
+<video width="100%" height="auto" controls>
    <source src="videos/Wetter.mp4" type="video/mp4">
-  </video>
-</center>
-
+</video>
 
 ##### Funktion
 
@@ -494,7 +490,6 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 <video width="100%" height="auto" controls>
   <source src="videos/Statistiken.mp4" type="video/mp4">
 </video>
-
 
 ##### Funktion
 
@@ -555,7 +550,6 @@ Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Pos
 
 Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
 
-
 <video width="100%" height="auto" controls>
   <source src="videos/Navi.mp4" type="video/mp4">
 </video>
@@ -585,11 +579,9 @@ Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es d�
 - [ ] bedeutet, Line ist beidseitig befahrbar
 - [x] bedeutet, Line ist einseitig befahrbar
 
-
 <video width="100%" height="auto" controls>
   <source src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" type="video/mp4">
 </video>
-
 
 - **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
