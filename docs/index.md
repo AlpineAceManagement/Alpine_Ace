@@ -697,11 +697,10 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
-<center>
-  <video width="100%" height="auto" controls>
-    <source src="videos/Restaurant.mp4" type="video/mp4">
-  </video>
-</center>
+<video width="100%" height="auto" controls>
+  <source src="videos/Restaurant.mp4" type="video/mp4">
+</video>
+
 
 
 ##### Funktion
