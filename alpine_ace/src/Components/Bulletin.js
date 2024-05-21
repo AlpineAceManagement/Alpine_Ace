@@ -62,6 +62,7 @@ const Bulletin = () => {
                 style={{
                   textAlign: "center",
                   fontWeight: "bold",
+                  fontSize: "20px",
                   color: "#00112e",
                 }}
               >

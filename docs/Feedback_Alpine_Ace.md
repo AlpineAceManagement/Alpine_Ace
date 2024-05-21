@@ -57,7 +57,7 @@ Incoming Features
 **Visualisierung und weitere Kommentare**
 
 - für Lawinengefahrkarte weniger Transparenz nutzen - Pseudostandards der Anbieter nutzen (z.B. WhiteRisk, MeteoSchweiz)
-- viel zu viele Skalenstriche bei den Anlagen/Pisten Balken, Beschriftung zu klein - viel besser im Mockup als in der App
+- viel zu viele Skalenstriche bei den Anlagen/Pisten Balken, Beschriftung zu klein - viel besser im Mockup als in der App #erledigt
 - Rote Buttons mit Icon ergänzen - grossgeschriebene Wörter können wir am schlechtesten lesen - zuviele Container (weisser Hintergrund für die Buttons weglassen, Rundung der Ecken anpassen)
 - gut, dass der Einstellungsknopf vom Mockup in der Anwendung in den Hintergrund gerückt ist
 - Karte hat mehr Platz erhalten, gut - was ist 'E' (links unter der Navigation)?
