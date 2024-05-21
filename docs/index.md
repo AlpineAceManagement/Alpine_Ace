@@ -19,7 +19,9 @@ Erkunden Sie unsere Seite, um mehr über dieses spannende Projekt zu erfahren un
 
 Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceManagement/Alpine_Ace).
 
-<iframe src="videos/AlpineACE.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/AlpineAce.mp4" type="video/mp4">
+</video>
 
 ## Inhaltsverzeichnis
 
