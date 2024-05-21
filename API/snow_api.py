@@ -1,3 +1,4 @@
+'''Wetterstationen aus einer CSV-Datei extrahieren und ruft die Schneemessdaten für jede Station regelmässig von einer API ab und speichert sie alle 30 Minuten in einer PostgreSQL-Datenbank.'''
 '''import relevant libraries'''
 import requests
 import psycopg2

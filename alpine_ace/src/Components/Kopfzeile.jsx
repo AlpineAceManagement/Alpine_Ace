@@ -1,3 +1,4 @@
+/* Dieser Code definiert eine Kopfleiste mit Navigationslinks zur Startseite und zur Einstellungsseite */
 import React from "react";
 import { Link } from "react-router-dom";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"; //Icon für Zurück

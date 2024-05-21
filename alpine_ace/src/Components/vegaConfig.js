@@ -1,3 +1,4 @@
+/* Abruf von API-Wetterdaten, Vorbereitung für ein Vega-Lite-Liniendiagramm */
 const fetch = require("node-fetch");
 const { compile } = require("vega-lite");
 

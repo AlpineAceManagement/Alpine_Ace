@@ -1,3 +1,4 @@
+/* Direkten Link zwischen Statistikenmenü und die Darstellung in einer Karte */
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css";
 import Map from "ol/Map";

@@ -1,3 +1,4 @@
+/* Code für das Restaurantmenü mit für jedes Restaurant einem Bild */
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";

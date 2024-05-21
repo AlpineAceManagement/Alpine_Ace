@@ -1,3 +1,4 @@
+/* Datenbankdaten in Form von Diagrammen darstellen */
 import React, { useState, useEffect } from "react";
 import {
   BarChart,

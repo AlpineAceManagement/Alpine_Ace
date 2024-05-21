@@ -1,3 +1,4 @@
+'''Daten über Lawinenbulletins aus einer API abrufen'''
 '''import relevant libraries'''
 import requests
 import psycopg2

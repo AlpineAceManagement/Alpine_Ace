@@ -1,3 +1,4 @@
+/* Code für die Navigation / Routing */
 import React, { useEffect, useRef, useState } from "react";
 import Map from "ol/Map";
 import View from "ol/View";

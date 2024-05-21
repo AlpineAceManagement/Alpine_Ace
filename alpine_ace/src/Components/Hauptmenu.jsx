@@ -1,3 +1,4 @@
+/* Code des Hauptmenüs */
 import React, { useEffect, useRef } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import { Link } from "react-router-dom";

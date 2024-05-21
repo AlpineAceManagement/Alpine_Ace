@@ -1,3 +1,4 @@
+'''ruft aktuelle Wetterdaten und stündliche Vorhersagen von der Open-Meteo-API ab'''
 '''import relevant libraries'''
 import openmeteo_requests
 import requests_cache
