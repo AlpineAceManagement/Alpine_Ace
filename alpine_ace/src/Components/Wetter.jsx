@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import spec_wetter from "./Wetter_diagramm";
 
+
 const Wetter = () => {
   //------------------------------------------------------------------------
   // Anziehen der aktuellen Wetterdaten API :)
@@ -18,6 +19,7 @@ const Wetter = () => {
   const [snowloading, setSnowLoading] = useState(true);
   const [snowerror, setSnowError] = useState(null);
   const [weatherChartData, setWeatherChartData] = useState(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
