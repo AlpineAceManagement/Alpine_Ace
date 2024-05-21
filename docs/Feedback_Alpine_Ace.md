@@ -51,8 +51,8 @@ Funktionen
 
 Incoming Features
 
-- Incoming -> Upcoming Features ändern
-- Übersicht Feature Grafik erstellen mit bestehenden und upcoming Features
+- Incoming -> Upcoming Features ändern # erledigt
+- Übersicht Feature Grafik erstellen mit bestehenden und upcoming Features #erledigt
 
 **Visualisierung und weitere Kommentare**
 
