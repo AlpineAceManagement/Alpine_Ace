@@ -47,8 +47,8 @@ const spec_pisten = {
   ],
 
   axes: [
-    { orient: "bottom", scale: "x", zindex: 1 },
-    { orient: "left", scale: "y", zindex: 1 , tickCount: 5},
+    { orient: "bottom", scale: "x", zindex: 1 , labelFontSize: 20, labelFontStyle: "bold"},
+    { orient: "left", scale: "y", zindex: 1 , tickCount: 5, labelFontSize: 12},
   ],
 
   marks: [

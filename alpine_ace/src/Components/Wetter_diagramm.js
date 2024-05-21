@@ -1,4 +1,4 @@
-/* Vega-Spezifikation für ein lineares Temperaturdiagramm */
+/* Vega-Spezifikation für das lineares Temperaturdiagramm */
 const spec_wetter = {
   $schema: "https://vega.github.io/schema/vega/v5.json",
   description: "A basic line chart example.",
@@ -81,7 +81,7 @@ const spec_wetter = {
 
   axes: [
     { orient: "bottom", scale: "x", title: "Tageszeit", titlePadding: 10 },
-    { orient: "left", scale: "y", title: "Temperatur [C°]", titlePadding: 10 },
+    { orient: "left", scale: "y", title: "Temperatur [C°]", titlePadding: 10, tickCount: 7 },
   ],
   marks: [
     {
@@ -106,7 +106,7 @@ const spec_wetter = {
           interpolate: { value: "monotone" },
           x: { scale: "x", field: "x" },
           y: { scale: "y", field: "y" },
-          stroke: { value: "steelblue" },
+          stroke: { value: "red" },
           strokeWidth: { value: 3 },
         },
       },
