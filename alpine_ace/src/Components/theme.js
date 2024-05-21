@@ -1,3 +1,4 @@
+/* Erstellen und Exportieren des Designs Material-UI mit bestimmten Farben und einer bestimmten Schriftart */
 import { createTheme } from "@mui/material/styles";
 
 // Farbpalette für Projekt

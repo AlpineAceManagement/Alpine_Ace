@@ -1,3 +1,4 @@
+/* Balkendiagramm, das die offenen Skipistenkilometer darstellt */
 const spec_analgen = {
   $schema: "https://vega.github.io/schema/vega/v5.json",
   width: 25,

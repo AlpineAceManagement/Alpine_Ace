@@ -1,3 +1,4 @@
+/* Vega-Spezifikation für ein lineares Temperaturdiagramm */
 const spec_wetter = {
   $schema: "https://vega.github.io/schema/vega/v5.json",
   description: "A basic line chart example.",

@@ -1,3 +1,4 @@
+/* Direkten Link zwischen Restaurantmenü und die Darstellung in einer Karte */
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";

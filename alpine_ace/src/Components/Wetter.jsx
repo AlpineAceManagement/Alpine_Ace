@@ -1,3 +1,4 @@
+/* Abrufen von Wetterdaten von einer API und Einbetten eines Vega-Wetterdiagramms */
 import React from "react";
 import { Vega } from "react-vega";
 import Box from "@mui/material/Box";

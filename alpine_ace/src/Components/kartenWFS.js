@@ -1,3 +1,4 @@
+/* WFS-Anfrage für die Karte */
 import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 

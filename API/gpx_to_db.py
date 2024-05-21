@@ -1,3 +1,4 @@
+'''GPX-Daten in die Datenbank speichern'''
 import xml.etree.ElementTree as ET
 import csv
 from datetime import datetime

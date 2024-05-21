@@ -1,3 +1,4 @@
+/* Karte mit Skipisten, Analgen, Övs, Parkplätzen und Restaurants darstellen  */
 import React, { useEffect, useRef, useState } from "react";
 import "ol/ol.css"; // Import OpenLayers CSS
 import Map from "ol/Map";

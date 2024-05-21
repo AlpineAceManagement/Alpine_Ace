@@ -1,3 +1,4 @@
+/* Definition von Stillayern für die Karte */
 import { Style, Stroke, Icon, Fill } from "ol/style";
 import LineString from "ol/geom/LineString";
 // -----------------------------------------------------

@@ -1,3 +1,4 @@
+/* Kopfzeile für das Statistikenmenü */
 import React from "react";
 import { Link } from "react-router-dom";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";

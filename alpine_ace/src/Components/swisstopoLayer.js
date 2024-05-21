@@ -1,3 +1,4 @@
+/* Dieser Code erstellt mithilfe von OpenLayers eine WMS-Kachelschicht von swisstopo */
 import TileLayer from "ol/layer/Tile"; // Importiere direkt aus ol/layer
 import { TileWMS } from "ol/source";
 

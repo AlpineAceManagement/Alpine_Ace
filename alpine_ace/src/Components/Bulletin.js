@@ -1,3 +1,4 @@
+/* Daten von Lawinenbulletins von einer API abrufen */
 import { useState, useEffect } from "react";
 const Bulletin = () => {
   const [bulletins, setBulletins] = useState(null);
