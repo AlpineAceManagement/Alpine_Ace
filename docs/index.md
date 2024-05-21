@@ -326,7 +326,9 @@ Die Lawinengefahr ist dabei in fünf Stufen unterteilt. Genauer beschrieben sind
 
 Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hinzugefügt. Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
 
-<iframe src="videos/Hauptmenü.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/Hauptmenü.mp4" type="video/mp4">
+</video>
 
 ##### Funktion
 
@@ -434,7 +436,10 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jede Haltestelle mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
-<iframe src="videos/Karte.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/Karte.mp4" type="video/mp4">
+</video>
+
 
 ##### Funktion
 
@@ -448,7 +453,10 @@ Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im S
 
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
-<iframe src="videos/Wetter.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/Wetter.mp4" type="video/mp4">
+</video>
+
 
 ##### Funktion
 
@@ -481,7 +489,10 @@ Im Statistik-Menü finden Sie alle relevanten Informationen zu vergangenen Skita
 
 Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
 
-<iframe src="videos/Statistiken.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/Statistiken.mp4" type="video/mp4">
+</video>
+
 
 ##### Funktion
 
@@ -542,7 +553,10 @@ Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Pos
 
 Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
 
-<iframe src="videos/Navi.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+
+<video width="100%" height="auto" controls>
+  <source src="videos/Navi.mp4" type="video/mp4">
+</video>
 
 ##### Konzept
 
@@ -569,7 +583,11 @@ Die Änderungen müssen in der Datengrundlage Routing vorgenommen werden . Es d�
 - [ ] bedeutet, Line ist beidseitig befahrbar
 - [x] bedeutet, Line ist einseitig befahrbar
 
-<iframe src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+
+<video width="100%" height="auto" controls>
+  <source src="videos/routing_einweg_oder_beidseitig_anpassen.mp4" type="video/mp4">
+</video>
+
 
 - **Verbindung hinzufügen** : Den Layer `a_a_routing` in Bearbeitung setzen, den Fangmodus einschalten (Magnetsymbol) und die gewünschte Verbindungslinie einzeichnen und in das Attribut `routing_einweg` abfüllen. Wenn eine Verbindung beidseitig ist, muss diese auch auf beide Seiten eingezeichnet werden. Nach erfolgter Änderung den Layer speichern.
 
@@ -577,10 +595,14 @@ Falls die Fehlermeldung: `Konnte Änderungen am Layer a_a_routing nicht festschr
   Fehler: FEHLER: Ein Objekt nicht hinzugefügt.` erscheint, liegt dies meist an der Vergabe der id in der Tabelle.
 Behoben kann dieses Problem werden, wenn unter: `Eigenschaften --> Attributformular --> Verfügbare Element --> Fields --> id --> Vorgaben` den Ausdruck `maximum( "id" ) + 1` eingefügt wird. Dieser erhöht den aktuell höchsten Wert der `id` um 1 und setzt diesen ins Attributformular automatisch ein. Zusätzlich die Checkbox bei `Vorgabewert bei Aktualisierung anwenden` setzen.
 
-<iframe src="videos/routing_verbindung_hizufügen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/routing_verbindung_hizufügen.mp4" type="video/mp4">
+</video>
 
 - **Verbindung löschen** : Den Layer der gewünschten Verbindung in Bearbeitung setzen, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
-<iframe src="videos/routing_verbindung_loeschen.mp4" width="100%" frameBorder="0" allowFullScreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/routing_verbindung_loeschen.mp4" type="video/mp4">
+</video>
 
 ##### Berechnen des Routings
 
@@ -673,7 +695,10 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
-<iframe src="videos/Restaurant.mp4" style="width: 100%; height: auto; border: none;" allowfullscreen></iframe>
+<video width="100%" height="auto" controls>
+  <source src="videos/Restaurant.mp4" type="video/mp4">
+</video>
+
 
 ##### Funktion
 
