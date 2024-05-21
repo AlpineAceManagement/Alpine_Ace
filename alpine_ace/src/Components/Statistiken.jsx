@@ -1,3 +1,4 @@
+/* Datenbankdaten in Form von Zahlen / Statistiken darstellen */
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
