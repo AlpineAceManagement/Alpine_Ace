@@ -453,9 +453,11 @@ Im Wetter-Menü findet man alle relevanten Informationen zu den Bedingungen im S
 
 Das Wetter-Menü ist in zwei Bereiche unterteilt: Im oberen Teil wird die Wettervorhersage präsentiert, während im unteren Teil die aktuelle Wettersituation dargestellt wird. Die Vorhersage wird in einem Diagramm visualisiert, wobei die Betriebszeiten der Skilifte grau hervorgehoben sind, um den Fokus auf die relevanten Zeiträume zu lenken. Der Bereich mit den aktuellen Informationen befindet sich im unteren Abschnitt der App. Windrichtung und Wetter werden dabei durch Symbole veranschaulicht.
 
-<video width="50%" height="auto" controls>
-  <source src="videos/Wetter.mp4" type="video/mp4">
-</video>
+<center>
+  <video width="50%" height="auto" controls>
+   <source src="videos/Wetter.mp4" type="video/mp4">
+  </video>
+</center>
 
 
 ##### Funktion
@@ -695,9 +697,11 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
-<video width="50%" height="auto" controls>
-  <source src="videos/Restaurant.mp4" type="video/mp4">
-</video>
+<center>
+  <video width="50%" height="auto" controls>
+    <source src="videos/Restaurant.mp4" type="video/mp4">
+  </video>
+</center>
 
 
 ##### Funktion
