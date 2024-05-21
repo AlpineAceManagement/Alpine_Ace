@@ -109,6 +109,9 @@ Das Backend beinhaltet alle unsichtbaren Inhalte und Daten, die sich auf dem Ser
 
 Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden folgende APIs verwendet:
 
+<center><img src="images/Architektur_API.png"  /></center>
+_Architektur der APIs_
+
 - Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
 
 - Lawinensituation: Die aktuellen Lawineninformationen werden über [https://aws.slf.ch/api/bulletin/caaml](https://aws.slf.ch/api/bulletin/caaml) bezogen. Es handelt sich um eine API des Institut für Schnee und Lawinenforschung (SLF). Die Nutzung ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
