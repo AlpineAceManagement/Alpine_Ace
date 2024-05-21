@@ -1,7 +1,7 @@
 /* Balkendiagramm, das die offenen Skipistenkilometer darstellt */
 const spec_pisten = {
   $schema: "https://vega.github.io/schema/vega/v5.json",
-  width: 25,
+  width: 30,
   height: 100,
   padding: 5,
 
@@ -48,7 +48,7 @@ const spec_pisten = {
 
   axes: [
     { orient: "bottom", scale: "x", zindex: 1 },
-    { orient: "left", scale: "y", zindex: 1 },
+    { orient: "left", scale: "y", zindex: 1 , tickCount: 5},
   ],
 
   marks: [
