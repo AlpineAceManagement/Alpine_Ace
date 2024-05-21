@@ -25,7 +25,7 @@ Code Organisation:
 
 **Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden.
 
-- Menu falls zeitlich noch möglich in die Sidebar einfügen
+- Menu falls zeitlich noch möglich in die Sidebar einfügen #nein
 - Reflektion einführen
 - Literatur und Daten/Library Übersicht am Ende als Quellenverzeichnis oder geeigneter Stelle einfügen.
 - zum Teil sehr detailliert
