@@ -25,7 +25,7 @@ Code Organisation:
 
 **Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden.
 
-- Menu falls zeitlich noch möglich in die Sidebar einfügen
+- Menu falls zeitlich noch möglich in die Sidebar einfügen #nein
 - Reflektion einführen
 - Literatur und Daten/Library Übersicht am Ende als Quellenverzeichnis oder geeigneter Stelle einfügen.
 - zum Teil sehr detailliert
@@ -34,11 +34,12 @@ Kommentare zu den einzelnen Pages/Abschnitten:
 
 Architektur:
 
-- Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js)
+- Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
 - Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht.
-- Localhost anstatt local host
+- Localhost anstatt local host 
 - Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden?
-- Express-API nicht FastAPI Rest Schnittstelle?
+- Express-API nicht FastAPI Rest Schnittstelle? # Express-API wird verwendet
+
 
 Funktionen
 
@@ -50,8 +51,8 @@ Funktionen
 
 Incoming Features
 
-- Incoming -> Upcoming Features ändern
-- Übersicht Feature Grafik erstellen mit bestehenden und upcoming Features
+- Incoming -> Upcoming Features ändern # erledigt
+- Übersicht Feature Grafik erstellen mit bestehenden und upcoming Features #erledigt
 
 **Visualisierung und weitere Kommentare**
 
