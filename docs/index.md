@@ -86,7 +86,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
 <a id=architektur></a>
 Eine vollständige Geodateninfrastruktur (GDI) umfasst das Backend, das Frontend sowie die verwendeten Bibliotheken und API-Schnittstellen. Das folgende Schema zeigt die entwickelte und genutzte GDI der Alpine Ace-Ski App.
 
-<center><img src="images/architektur_app.png"  /></center>
+<center><img src="images/Architektur_Client_Server.png"  /></center>
 _Architektur Client-Server Struktur_
 
 Die App enthält dabei eine Server Client Umgebung:
@@ -703,10 +703,13 @@ Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort
   Der Parameter `%Restaurant_ID%` hat dabei den Standardwert `0` und den Wertebereich `\d+`. Dieser lässt nur positive Integer zu. Die WFS Anfrage gibt nur die Attribute zurück die unterhalb der Karte angezeigt werden.
 - Die zurückgegeben Informationen vom WFS werden dem Layer `restaurantAnfrageLayer` zugeordnet. Dieser bekommt dann die Stil Eigenschaften `restaurantStyle` zugwiesen Dies umfasst das ein Icon aus einer svg Datei. Die weiteren Informationen vom Feature werden extrahiert, damit diese unterhalb der Karte dargestellt werden können. Von der Start Position der Karte wird anschliessend auf die Restaurant Position gezoomt mittels einer Animation. Unterhalb der Karte werden dann die Informationen des Restaurants angezeigt.
 
-## Incoming Features
+## Upcoming Features
 
 <a id=features></a>
-Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt, was die Implementierung der Feature vereinfachen sollte.
+Folgende Features werden in der AlpineAce V2.0 eingebaut. Die Datenbank ist dafür bereits ausgelegt, was die Implementierung der Features vereinfachen sollte.
+
+<center><img src="images/Upcoming_features.png"  /></center>
+_Upcoming features in AlpineACE V2.0_
 
 ### Aktueller Standort
 
