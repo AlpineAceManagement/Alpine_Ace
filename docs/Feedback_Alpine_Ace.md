@@ -34,11 +34,12 @@ Kommentare zu den einzelnen Pages/Abschnitten:
 
 Architektur:
 
-- Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js)
+- Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
 - Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht.
-- Localhost anstatt local host
+- Localhost anstatt local host 
 - Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden?
-- Express-API nicht FastAPI Rest Schnittstelle?
+- Express-API nicht FastAPI Rest Schnittstelle? # Express-API wird verwendet
+
 
 Funktionen
 
