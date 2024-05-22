@@ -1,3 +1,4 @@
+/*Bewertungen ist ein Upcoming Feature*/
 const Bewertungen = () => {
   return (
     <div>

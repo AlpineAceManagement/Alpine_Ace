@@ -1,3 +1,4 @@
+/*Einstellungen ist ein Upcoming Feature*/
 const Einstellungen = () => {
   return (
     <div>

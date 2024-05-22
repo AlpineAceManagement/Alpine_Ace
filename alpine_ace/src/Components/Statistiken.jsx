@@ -1,4 +1,5 @@
 /* Datenbankdaten in Form von Zahlen / Statistiken darstellen */
+/*Beim anklicken einer Tagesstatistik wird in den StaistikenViewer.jsx navigiert*/
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";

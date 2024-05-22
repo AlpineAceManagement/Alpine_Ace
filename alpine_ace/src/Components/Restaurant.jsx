@@ -1,4 +1,5 @@
 /* Code für das Restaurantmenü mit für jedes Restaurant einem Bild */
+/*Beim anklicken eines Restaurants wird in den RestaurantViewer.jsx navigiert*/
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
