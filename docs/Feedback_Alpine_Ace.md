@@ -36,9 +36,9 @@ Architektur:
 
 - Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
 - Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht.
-- Localhost anstatt local host
+- Localhost anstatt local host #erledigt
 - Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden?
-- Express-API nicht FastAPI Rest Schnittstelle? # Express-API wird verwendet
+- Express-API nicht FastAPI Rest Schnittstelle? #erledigt, Express-API wird verwendet, wir verwenden keine Fast-API
 
 Funktionen
 
@@ -56,8 +56,8 @@ Incoming Features
 
 **Visualisierung und weitere Kommentare**
 
-- für Lawinengefahrkarte weniger Transparenz nutzen - Pseudostandards der Anbieter nutzen (z.B. WhiteRisk, MeteoSchweiz)
-- viel zu viele Skalenstriche bei den Anlagen/Pisten Balken, Beschriftung zu klein - viel besser im Mockup als in der App #erledigt
+- für Lawinengefahrkarte weniger Transparenz nutzen - Pseudostandards der Anbieter nutzen (z.B. WhiteRisk, MeteoSchweiz)#erledigt, Transparenz von 0.3 auf 0.5 angepasst, Videos aber nicht angepasst aber auf Print Screen
+- viel zu viele Skalenstriche bei den Anlagen/Pisten Balken, Beschriftung zu klein - viel besser im Mockup als in der App #erledigt, Bilder in Doku angepasst
 - Rote Buttons mit Icon ergänzen - grossgeschriebene Wörter können wir am schlechtesten lesen - zuviele Container (weisser Hintergrund für die Buttons weglassen, Rundung der Ecken anpassen)
 - gut, dass der Einstellungsknopf vom Mockup in der Anwendung in den Hintergrund gerückt ist
 - Karte hat mehr Platz erhalten, gut - was ist 'E' (links unter der Navigation)?

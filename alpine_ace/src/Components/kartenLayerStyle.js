@@ -209,7 +209,7 @@ export function bulettinStyle(feature) {
   // Standardfarben und Transparenz definieren
   let strokeColor = "#FFFFFF";
   let fillColor = "rgba(255, 255, 255, 0.5)";
-  let fillOpacity = 0.3; // Default fill opacity
+  let fillOpacity = 0.5; // Default fill opacity
 
   // Farben und Transparenz anhand des dangerAttributes anpassen
   switch (dangerAttribute) {
