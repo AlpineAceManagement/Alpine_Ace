@@ -10,7 +10,7 @@ Diese Seite widmet sich der GDI _Alpine Ace-Ski App_. Wintersport ist in der Sch
 
 Aus diesem Grund wurde die GDI _Alpine Ace-Ski App_ entwickelt. Unser Ziel ist es, eine zentrale Plattform für verschiedene Skigebiete zu schaffen, die alle wichtigen Funktionen für den Wintersport bietet. Dazu gehören:
 
-- Eine hochwertige Karte für Orientierung und Navigation im Gelände
+- Eine umfangreiche Karte für Orientierung und Navigation im Gelände
 - Aktuelle Wetter- und Lawineninformationen
 - Details zu Verpflegungsmöglichkeiten
 - Anzeige persönlicher Statistiken der Benutzer

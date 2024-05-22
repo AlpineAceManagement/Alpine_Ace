@@ -107,7 +107,11 @@ Das Backend besteht aus vier Komponenten. Einem Datenbezugsteil (Python), einer 
 
 Das Schema der DB findet sich unter _DB_PG/geoserver_DB_erstellen.txt._ Schema in pgAdmin kopieren und ausführen.
 
-Damit die bezogenen Daten über die APIs gespeichert werden könne, muss das **config_template.py** angepasst und in **config.py** umbenannt werden. Es müssen folgende Parameter geändert werden:
+#### Datenbank Verbindungen
+
+Für die Python und Java Script Programme gibt es je ein Datei in der die Verbindungsinformationen gespeichert sind.
+
+Damit die bezogenen Daten per Python Script über die APIs gespeichert werden können, muss das **config_template.py** angepasst und in **config.py** umbenannt werden. Die Datei ist im Ordner `API`. Es müssen folgende Parameter geändert werden:
 
 ```python
 db_config = {
@@ -118,6 +122,8 @@ db_config = {
     'password': 'password'  #Passwort des Username
 }
 ```
+
+Damit die Daten in der React App mit der Express API von der Datenbank bezogen werden können, muss das **config_template.js** angepasst und in **config.js** umbenannt werden. Die Datei ist im Ordner `alpine_ace\src\DB`. Es müssen folgende Parameter geändert werden:
 
 ## Datenbank
 
