@@ -178,3 +178,10 @@ LINE 1: ...VALUES ( '2024-05-23T10:00:00+00:00'::timestamptz,'gewitter'...
 2024-05-21 23:03:56,117 - INFO - Current weather data saved to database
 2024-05-21 23:18:56,414 - INFO - Current weather data saved to database
 2024-05-21 23:33:56,684 - INFO - Current weather data saved to database
+2024-05-21 23:48:56,964 - INFO - Current weather data saved to database
+2024-05-22 00:00:57,443 - ERROR - Database error while saving hourly forecast: invalid input value for enum wetter: "gewitter"
+LINE 1: ...VALUES ( '2024-05-23T10:00:00+00:00'::timestamptz,'gewitter'...
+                                                             ^
+
+2024-05-22 00:03:57,555 - INFO - Current weather data saved to database
+2024-05-22 00:37:43,096 - INFO - Current weather data saved to database

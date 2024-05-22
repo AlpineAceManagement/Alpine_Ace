@@ -2,7 +2,7 @@ const Bewertungen = () => {
   return (
     <div>
       <h1>Bewertungen</h1>
-      <h2>#Incoming Features</h2>
+      <h2>#Upcoming Features</h2>
     </div>
   );
 };

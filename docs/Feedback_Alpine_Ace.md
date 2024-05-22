@@ -8,8 +8,8 @@
 **README**: Einleitung zur Installation und Projekt ergänzen mit einem klaren Verweis auf die GitHub Pages.
 
 - About (oben rechts) ergänzen mit Kurzbeschrieb und GitHub Pages Link #erledigt
-- Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #Nein, sollte aber funktionieren, da mehrmals getestet.
-- Sowie die Aufsetzen des Geoservers? # Hinweiss zur offiziellen Installationsanleitung vom GeoServer und welche Version.
+- Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #erledigt: Nein haben wir nicht, sollte aber funktionieren, da mehrmals getestet.
+- Sowie die Aufsetzen des Geoservers? #erledigt, Hinweiss zur offiziellen Installationsanleitung vom GeoServer und welche Version.
 - Datenbank befühlen Variante 1 hat auf der gleichen Ebene keine Variante 2 #erledigt, Variante 2 Import Datenbank Dump erstellt.
 - Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich, sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind.
 
@@ -44,14 +44,14 @@ Funktionen
 
 - Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen? # Lawinenbulletin im Dashboard bezieht sich auf das aktuelle Skigebiet. Das was auf Karte angezeigt wird ist selbsterklärend!
 
-- Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt
+- Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt, alle Videos getestet (Webseite neu Laden mit ctrl + F5 ohne Cache)
 - Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung
 - Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen.
 - Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen.
 
 Incoming Features
 
-- Incoming -> Upcoming Features ändern # erledigt
+- Incoming -> Upcoming Features ändern # erledigt, in der Doku so wie im App
 - Übersicht Feature Grafik erstellen mit bestehenden und upcoming Features #erledigt
 
 **Visualisierung und weitere Kommentare**
