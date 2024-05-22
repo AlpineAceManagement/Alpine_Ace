@@ -1,53 +1,64 @@
 **Projekt Feedback GitHub Pages:** Alpine Ace
 
+Im Todo Tree einen eigenen Eintrag erstellt für #erledigt
+
+    "erledigt": {
+      "icon": "check",
+      "foreground": "white",
+      "background": "green",
+      "iconColour": "green"
+    },
+
+Alle Einträge sind grün welche Erledigt sind.
+
 **GitHub Projekt:** Théo Reibel, Fabian Gross, Andrea Bricalli
 
 - https://github.com/AlpineAceManagement/Alpine_Ace
 - https://alpineacemanagement.github.io/Alpine_Ace/
 
-**README**: Einleitung zur Installation und Projekt ergänzen mit einem klaren Verweis auf die GitHub Pages.
+**README**: Einleitung zur Installation und Projekt ergänzen mit einem klaren Verweis auf die GitHub Pages.#erledigt
 
 - About (oben rechts) ergänzen mit Kurzbeschrieb und GitHub Pages Link #erledigt
 - Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #erledigt: Nein haben wir nicht, sollte aber funktionieren, da mehrmals getestet.
-- Sowie die Aufsetzen des Geoservers? #erledigt, Hinweiss zur offiziellen Installationsanleitung vom GeoServer und welche Version.
+- Sowie die Aufsetzen des Geoservers? #erledigt, Hinweis zur offiziellen Installationsanleitung vom GeoServer und welche Version.
 - Datenbank befühlen Variante 1 hat auf der gleichen Ebene keine Variante 2 #erledigt, Variante 2 Import Datenbank Dump erstellt.
-- Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich, sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind.
+- Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich, sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind. #TODO
 
 - Preprocessing Ordner noch genauer erläutern, Struktur / Nutzung
 
 Code Organisation:
 
 - Code ist strukturiert, die Kommentare könnten noch erweitert werden. Frontend keine Kommentare vorhanden. #erledigt
-- Gute Auflistung der Ordnerorganisation ev. anstatt die Beschreibung der Datei auf zwei Zeilen, diese auf einer Zeile anzeigen, was zu einer kompakteren Übersicht der Struktur führt.
-- Wie wird der Geoserver aufgesetzt und wie sind die Layer eingbunden und vorprozessiert?
+- Gute Auflistung der Ordnerorganisation ev. anstatt die Beschreibung der Datei auf zwei Zeilen, diese auf einer Zeile anzeigen, was zu einer kompakteren Übersicht der Struktur führt. #TODO
+- Wie wird der Geoserver aufgesetzt und wie sind die Layer eingebunden und vorprozessiert? #TODO
 
 **GitHub Pages:**
 
-**Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden.
+**Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden. #TODO
 
-- Menu falls zeitlich noch möglich in die Sidebar einfügen #nein
-- Reflektion einführen
-- Literatur und Daten/Library Übersicht am Ende als Quellenverzeichnis oder geeigneter Stelle einfügen.
-- zum Teil sehr detailliert
+- Menu falls zeitlich noch möglich in die Sidebar einfügen #TODO zeit hat nicht gereicht
+- Reflektion einführen #TODO
+- Literatur und Daten/Library Übersicht am Ende als Quellenverzeichnis oder geeigneter Stelle einfügen. #TODO
+- zum Teil sehr detailliert #erledigt, Wir hoffen, dass man es dank detailliertem Beschrieb gut verstehen kann
 
 Kommentare zu den einzelnen Pages/Abschnitten:
 
 Architektur:
 
 - Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
-- Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht.
+- Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht. #TODO
 - Localhost anstatt local host #erledigt
-- Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden?
+- Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden? #TODO
 - Express-API nicht FastAPI Rest Schnittstelle? #erledigt, Express-API wird verwendet, wir verwenden keine Fast-API
 
 Funktionen
 
-- Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen? # Lawinenbulletin im Dashboard bezieht sich auf das aktuelle Skigebiet. Das was auf Karte angezeigt wird ist selbsterklärend!
+- Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen? #erledigt Lawinenbulletin im Dashboard bezieht sich auf das aktuelle Skigebiet. In diesem Fall der Lenzerheide. Die Kantone dienen nur zur Orientierung.
 
 - Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt, alle Videos getestet (Webseite neu Laden mit ctrl + F5 ohne Cache)
-- Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung
-- Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen.
-- Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen.
+- Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung #TODO
+- Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen. #TODO
+- Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen. #TODO
 
 Incoming Features
 
