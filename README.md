@@ -113,7 +113,7 @@ Für die Python und Java Script Programme gibt es je ein Datei in der die Verbin
 
 Damit die bezogenen Daten per Python Script über die APIs gespeichert werden können, muss das **config_template.py** angepasst und in **config.py** umbenannt werden. Die Datei ist im Ordner `API`. Es müssen folgende Parameter geändert werden:
 
-```python
+```py
 db_config = {
     'host': 'host', #Hostname der DB
     'port': 'port', #Port der DB
@@ -124,6 +124,16 @@ db_config = {
 ```
 
 Damit die Daten in der React App mit der Express API von der Datenbank bezogen werden können, muss das **config_template.js** angepasst und in **config.js** umbenannt werden. Die Datei ist im Ordner `alpine_ace\src\DB`. Es müssen folgende Parameter geändert werden:
+
+```js
+module.exports = {
+  user: "username", // Username für die Verbindung zur DB
+  host: "hostname", // Hostname der DB
+  database: "databasename", //Name der DB
+  password: "password", //Passwort des Username
+  port: "portnumber", //Port der DB
+};
+```
 
 ## Datenbank
 
