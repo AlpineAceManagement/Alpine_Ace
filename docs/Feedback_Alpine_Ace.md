@@ -25,13 +25,13 @@ Alle Einträge sind grün welche Erledigt sind.
 - Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich #erledigt
 - sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind. #erledigt
 
-- Preprocessing Ordner noch genauer erläutern, Struktur / Nutzung
+- Preprocessing Ordner noch genauer erläutern, Struktur / Nutzung #TODO
 
 Code Organisation:
 
 - Code ist strukturiert, die Kommentare könnten noch erweitert werden. Frontend keine Kommentare vorhanden. #erledigt
 - Gute Auflistung der Ordnerorganisation ev. anstatt die Beschreibung der Datei auf zwei Zeilen, diese auf einer Zeile anzeigen, was zu einer kompakteren Übersicht der Struktur führt. #TODO
-- Wie wird der Geoserver aufgesetzt und wie sind die Layer eingebunden und vorprozessiert? #TODO
+- Wie wird der Geoserver aufgesetzt und wie sind die Layer eingebunden und vorprozessiert? #erledigt, GeoServer wird vorausgesetzt, Installations Anleitung ist angeben.
 
 **GitHub Pages:**
 

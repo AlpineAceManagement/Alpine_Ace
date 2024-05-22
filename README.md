@@ -58,13 +58,13 @@ Environment mit Anaconda
 
 1. Speicherort für Environment festlegen
 
-```python
+```bash
 cd path/to/workspace
 ```
 
 2. Python Environment erstellen
 
-```python
+```bash
 conda create -n my_env python=3.8.19 -c conda-forge --file path/to/requirements.txt
 ```
 
@@ -93,19 +93,19 @@ Um die Webapp zum Laufen zu bringen, müssen folgende Schritte ausgeführt werde
 1. neues Terminal öffnen -> als GitBash
 2. Ordner wechseln
 
-```python
+```bash
 cd alpine_ace
 ```
 
 3. npm Module installieren
 
-```python
+```bash
 npm install
 ```
 
 4. React-App starten
 
-```python
+```bash
 npm start
 ```
 
@@ -157,7 +157,7 @@ CREATE EXTENSION pgrouting;
 
 ### Datenbank befüllen Variante 1 mit FME
 
-Download vom Höhenmodell DHM25 der Swisstopo.
+Download vom Höhenmodell DHM25 der Swisstopo. Wird für den Datenimport in der FME Workbench verwendet.
 
 1. Zurück ins Basisverzeichnis navigieren:
 
@@ -171,22 +171,34 @@ cd $(git rev-parse --show-toplevel)
 python DB_PG/ASCII_Hoehenmodell_download.py
 ```
 
-3. Verzeichnis `DB_PG` öffnen.
+3. Verzeichnis `DB_PG` öffnen. In diesem sind alle Dateien für den Datenbank Import gespeichert. Jedes Datenformat hat einen eigenen Unterordner.
 4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
 
 - `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
+
+GeoPackage Daten:
+
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Pisten_OSM`
 - `DB_PG\gpkg_Daten\Pisten_OSM.gpkg`: Daten für den Reader `Skigebiete_OSM`
 - `DB_PG\gpkg_Daten\Anlagen.gpkg`: Daten für den Reader `Anlagen`
+
+Höhenmodell DHM 25:
+
 - `DB_PG\ASCII_Hoehenmodell\dhm25_grid_raster.asc`: Daten für den Reader `DHM25`
+
+CSV Dateien:
+
 - `DB_PG\CSV_Daten\Restaurants_Arosa_Lenzerheide.csv` : Daten für den Reader `Restaurants_Arosa_Lenzerheide`
 - `DB_PG\CSV_Daten\Parkplatz.csv` : Daten für den Reader `Parkplatz`
 - `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
 - `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
 
-5. Verzeichnis `DB_PG` öffnen.
+Datenimport für alle Daten ausser das Routing ist jetzt abgeschlossen.
+
+I
+
+5. Verzeichnis `Routing` öffnen. Hier sind alle Dateien für die Prozessierung des Routings.
 6. Ausführen der FME Workbench `Routing_geoserver.fmw`.
-7. Verzeichnis `DB_PG` öffnen.
 
 - `Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
 - Daten von Reader `geoserver_daten` von der Datenbank
