@@ -77,7 +77,7 @@ const Restaurant = () => {
             flexWrap="wrap"
             justifyContent="center"
             alignItems="right"
-            gap={2} // Abstand zwischen zwei Boxen
+            gap={3} // Abstand zwischen zwei Boxen
           >
             {restaurantData.map(
               (
@@ -90,8 +90,12 @@ const Restaurant = () => {
                 >
                   <Box
                     width="40vw"
-                    key={restaurant.restaurant_id}
                     className="restaurant-box"
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
                   >
                     <img
                       className="foto_restaurant"

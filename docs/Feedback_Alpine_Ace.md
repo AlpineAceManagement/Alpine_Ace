@@ -63,4 +63,4 @@ Incoming Features
 - Karte hat mehr Platz erhalten, gut - was ist 'E' (links unter der Navigation)? #erledigt Schaltfläche ist jetzt auch in der Navigation Beschreiben. Dabei wird auf einen vorgeben Extend gezoomt.
 - Wetterdaten sehen zufällig aus - Gestaltprinzipien wirken nicht (insbesondere Abstände) #TODO zeit hat nicht gereicht um dies aufzubauen wie im Mokup.
 - allenfalls invertierte Markierung der Tageszeit wählen - Nacht grau, Tag weiss #erledigt
-- Restaurants - Gestaltprinzip Nähe - Beschriftung näher zum zu bezeichnenden Restaurantbild platzieren als zum nächsten Bild
+- Restaurants - Gestaltprinzip Nähe - Beschriftung näher zum zu bezeichnenden Restaurantbild platzieren als zum nächsten Bild #erledigt, Abstand zwischen den einzelnen Restaurant-Boxen ist grösser, der Text ist jetzt direkt unter dem Bild. Text und Bild werden jetzt als Einheit wahrgenommen.
