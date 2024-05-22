@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import spec_wetter from "./Wetter_diagramm";
 
-
 const Wetter = () => {
   //------------------------------------------------------------------------
   // Anziehen der aktuellen Wetterdaten API :)
@@ -20,7 +19,6 @@ const Wetter = () => {
   const [snowloading, setSnowLoading] = useState(true);
   const [snowerror, setSnowError] = useState(null);
   const [weatherChartData, setWeatherChartData] = useState(null);
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -138,7 +136,7 @@ const Wetter = () => {
         <Box
           sx={{
             width: "95vw",
-            height: "45vh",
+            height: "40vh",
             borderRadius: "3vw",
             bgcolor: "p_white.main",
             marginBottom: "20px",
@@ -162,7 +160,7 @@ const Wetter = () => {
               >
                 <Grid
                   container
-                  style={{ width: "95", margin: "auto" }}
+                  style={{ width: "95" }}
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                   justifyContent="center"
                 >
@@ -204,7 +202,7 @@ const Wetter = () => {
               >
                 <Grid
                   container
-                  style={{ width: "95", margin: "auto" }}
+                  style={{ width: "95" }}
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                   justifyContent="center"
                 >
