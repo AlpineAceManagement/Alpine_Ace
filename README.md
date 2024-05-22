@@ -13,7 +13,7 @@ Die Dokumentation zum Projekt befindet sich [hier](https://alpineacemanagement.g
 
 ## Ablauf Installation
 
-<center><img src="images/Installationsschritten_grafik.png"  /></center>
+<center><img src="docs/images/Installationsschritten_grafik.png"  /></center>
 
 ## Requirements
 
