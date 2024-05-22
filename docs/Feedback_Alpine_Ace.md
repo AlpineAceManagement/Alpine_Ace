@@ -22,7 +22,8 @@ Alle Einträge sind grün welche Erledigt sind.
 - Habt Ihr den FME Import Prozess mit jemandem getestet, der/die nicht Teil des Projekt-Teams ist. #erledigt: Nein haben wir nicht, sollte aber funktionieren, da mehrmals getestet.
 - Sowie die Aufsetzen des Geoservers? #erledigt, Hinweis zur offiziellen Installationsanleitung vom GeoServer und welche Version.
 - Datenbank befühlen Variante 1 hat auf der gleichen Ebene keine Variante 2 #erledigt, Variante 2 Import Datenbank Dump erstellt.
-- Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich, sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind. #TODO
+- Vielleicht ist eine Übersichtsgrafik mit den Installationsschritten noch hilfreich #erledigt
+- sowie ein Erklärung der Ordnerstruktur API, DB_PG, GPX_Files, .. da die Ordner nicht in Frontend, Backend, Preprocessing unterteilt sind. #TODO
 
 - Preprocessing Ordner noch genauer erläutern, Struktur / Nutzung
 
