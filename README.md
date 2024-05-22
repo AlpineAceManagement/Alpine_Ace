@@ -11,6 +11,10 @@ Die Dokumentation zum Projekt befindet sich [hier](https://alpineacemanagement.g
 - Informationen zu Verpflegungsmöglichkeiten in den Skigebieten.
 - Statistikfunktionen zur Analyse der Aktivitäten des Benutzers.
 
+## Ablauf Installation
+
+<center><img src="images/Installationsschritten_grafik.png"  /></center>
+
 ## Requirements
 
 ### Repository lokal klonen
