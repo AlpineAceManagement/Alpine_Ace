@@ -95,7 +95,7 @@ const Hauptmenu = () => {
             variant="contained"
             color="p_red"
             fullWidth
-            sx={{ fontSize: "2.3vh" }}
+            sx={{ fontSize: "2.3vh", textTransform: "none" }}
           >
             {text}
           </Button>

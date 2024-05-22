@@ -152,7 +152,6 @@
   text-align: center; /* Centers the logo horizontally */
 }
 
-
 .Navi-button {
   width: 2em;
   height: 2em;
@@ -163,22 +162,19 @@
   margin-bottom: 2vh;
   height: 5vh;
 }
-.large-box{
+.large-box {
   flex: 1;
 }
-.small-boxes-wrapper{
+.small-boxes-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.prognosis-chart{
+.prognosis-chart {
   width: 100%;
   height: 80%;
-
 }
-
-
 
 .vega-container {
   display: grid; /* Das übergeordnete Element als Grid definieren */
