@@ -229,13 +229,13 @@ Um die Datenbank mit den API Daten zu befüllen, muss das **main.py** in _Backen
 1. Neues Terminal öffnen -> als Command Prompt
 2. Ordner wechseln
 
-```python
+```bash
 cd API
 ```
 
 3. main.py ausführen
 
-```python
+```bash
 python main.py
 ```
 
@@ -244,13 +244,13 @@ python main.py
 1. neues Terminal öffnen -> als GitBash
 2. Verbindungsaufbau zum Node Server
 
-```python
+```bash
 cd alpine_ace/src/DB
 ```
 
 3. Node Server starten
 
-```python
+```bash
 node connect_db.js
 ```
 
@@ -443,7 +443,7 @@ a_a_nearest_vertex
 
 5. SQL-Statement:
 
-```
+```sql
    SELECT
     v.id,
     v.the_geom
@@ -474,7 +474,7 @@ GROUP BY
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 ^[\d\.\+]+$
 ```
 
@@ -486,7 +486,7 @@ Reguläre Ausdruck-Validierung
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 ^[\d\.\+]+$
 ```
 
@@ -513,7 +513,7 @@ a_a_shortest_path_test
 
 5. SQL-Statement:
 
-```
+```sql
 SELECT
     min(r.seq) AS seq,
     e.old_id AS id,
@@ -542,7 +542,7 @@ GROUP BY
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 \d+
 ```
 
@@ -554,7 +554,7 @@ Reguläre Ausdruck-Validierung
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 \d+
 ```
 
@@ -581,7 +581,7 @@ a_a_restaurant
 
 5. SQL-Statement:
 
-```
+```sql
   SELECT
     v.Restaurant_ID,
    v.R_Name,
@@ -605,7 +605,7 @@ a_a_restaurant
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 \d+
 ```
 
@@ -632,7 +632,7 @@ a_a_skidaten_weg
 
 5. SQL-Statement:
 
-```
+```sql
 SELECT
     v.Skidaten_ID,
     v.SD_Date,
@@ -659,7 +659,7 @@ WHERE
 
 Reguläre Ausdruck-Validierung
 
-```
+```js
 \d+
 ```
 
@@ -677,7 +677,7 @@ Reguläre Ausdruck-Validierung
 
 Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden. Dazu muss das File **gpx_to_db.py** im Ordner _API_ ausgeführt werden. Im File muss dabei der Pfad zur GPX-Datei angegeben werden:
 
-```python
+```py
 # GPX-Datei hochladen
 path = "path/to/gpx"
 ```
