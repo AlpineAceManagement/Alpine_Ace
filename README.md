@@ -193,9 +193,9 @@ CSV Dateien:
 - `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
 - `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
 
-5. Jetzt kann die Workbench ausgeführt werden unter dem grünen Play-Button oben links.
+5. Jetzt kann die Workbench ausgeführt werden, unter dem grünen Play-Button oben links. Die Userparameter sind in der Dokumentation näher beschrieben im Kapitel [Pisten](https://alpineacemanagement.github.io/Alpine_Ace/#pisten) und [Anlagen](https://alpineacemanagement.github.io/Alpine_Ace/#anlagen). Das ändern der Standartwert ist nur Fortgeschritten Nutzern empfohlen.
 
-Datenimport für alle Daten ausser das Routing ist jetzt abgeschlossen.
+Der Datenimport für alle Daten, ausser das Routing ist jetzt abgeschlossen.
 
 6. Verzeichnis `Routing` öffnen. Hier sind alle Dateien für die Prozessierung des Routings.
 7. Ausführen der FME Workbench `Routing_geoserver.fmw`.
