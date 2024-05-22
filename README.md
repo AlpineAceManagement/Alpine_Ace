@@ -172,9 +172,9 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 ```
 
 3. Verzeichnis `DB_PG` öffnen. In diesem sind alle Dateien für den Datenbank Import gespeichert. Jedes Datenformat hat einen eigenen Unterordner.
-4. Ausführen der FME Workbench `geoserver_Datenimport.fmw`. Unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen.
+4. Öffnen der FME Workbench `geoserver_Datenimport.fmw`. Es werden alle Daten aus den verschieden Ordner und Datenformate in die Datenbank geschrieben. Dabei werden die Attribute und Geometrien so extrahiert und verändert, dass diese dem Datenbankschema entsprechen. Vor dem Start der FME Workbench muss unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen werden. Vor dem Ausführen muss überprüft werden ob der Pfad Reader auf die Daten zeigen.
 
-- `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`
+- `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`. Das [Datenbankschema](https://alpineacemanagement.github.io/Alpine_Ace/#datenbankschema) ist in der Dokumentation näher beschrieben
 
 GeoPackage Daten:
 
@@ -193,20 +193,18 @@ CSV Dateien:
 - `DB_PG\CSV_Daten\OeV.csv` : Daten für den Reader `OeV`
 - `DB_PG\CSV_Daten\meteo_stationen.csv` : Daten für den Reader `meteo_stationen`
 
+5. Jetzt kann die Workbench ausgeführt werden unter dem grünen Play-Button oben links.
+
 Datenimport für alle Daten ausser das Routing ist jetzt abgeschlossen.
 
-I
-
-5. Verzeichnis `Routing` öffnen. Hier sind alle Dateien für die Prozessierung des Routings.
-6. Ausführen der FME Workbench `Routing_geoserver.fmw`.
+6. Verzeichnis `Routing` öffnen. Hier sind alle Dateien für die Prozessierung des Routings.
+7. Ausführen der FME Workbench `Routing_geoserver.fmw`.
 
 - `Routing\alpine_ace_routing_DB_erweitern.txt`: Datenbankschema für die Routing Erweiterung für den Reader `DB_erweitern_Routing`
 - Daten von Reader `geoserver_daten` von der Datenbank
 
 8. Wenn nötig, anpassen der aufbereiteten Routing Daten im QGIS, [siehe Dokumentation](https://alpineacemanagement.github.io/Alpine_Ace/#manuelle-%C3%A4nderungen-des-routings).
-9. Vom Basisverzeichnis den Ordner `Routing` öffnen.
-10. Routing Script in PG Admin 4 kopieren und ausführen:
-    `Routing\alpine_ace_routing.txt`
+9. Routing Script in PG Admin 4 kopieren und ausführen:`Routing\alpine_ace_routing.txt`
 
 ### Datenbank befüllen Variante 2 mit Datenbank Dump
 
