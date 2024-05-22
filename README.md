@@ -74,6 +74,8 @@ Die Webapp wurde mit der Node version 18.18.0 getestet.
 
 Voraussetzung für das Projekt ist die installierte GeoSever Version 2.24.2. Hier ist die offizielle [Installationsanleitung](https://docs.geoserver.org/main/en/user/installation/index.html) für die verschieden Betriebssysteme.
 
+## Installation
+
 ### Frontend
 
 Um die Webapp zum Laufen zu bringen, müssen folgende Schritte ausgeführt werden:
@@ -96,8 +98,6 @@ npm install
 ```python
 npm start
 ```
-
-## Installation
 
 ### Backend
 
@@ -140,7 +140,7 @@ module.exports = {
 1. Mit pgAdmin 4 eine neue Datenbank erstellen mit dem Namen: `geoserver`
 2. Extension [postgis](https://postgis.net/) und [pgrouting](https://pgrouting.org/) installieren.
 
-```
+```sql
 CREATE EXTENSION postgis;
 CREATE EXTENSION pgrouting;
 ```
@@ -151,13 +151,13 @@ Download vom Höhenmodell DHM25 der Swisstopo.
 
 1. Zurück ins Basisverzeichnis navigieren:
 
-```
+```bash
 cd $(git rev-parse --show-toplevel)
 ```
 
 2. Daten download starten:
 
-```
+```bash
 python DB_PG/ASCII_Hoehenmodell_download.py
 ```
 
@@ -190,13 +190,13 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 
 1. Zu Datenbank Dump navigieren in Ordner `DB_PG`.
 
-```
+```bash
 cd DB_PG
 ```
 
 2. Datenbank Dump importieren mit SQL. Username und Passwort der Datenbank einsetzten.
 
-```
+```C#
 psql --host "#hostname" --port "5432" --username "#username" --dbname "geoserver" --file "DatenbankDump.sql"
 ```
 
