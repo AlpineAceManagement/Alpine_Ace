@@ -58,9 +58,9 @@ Incoming Features
 
 - für Lawinengefahrkarte weniger Transparenz nutzen - Pseudostandards der Anbieter nutzen (z.B. WhiteRisk, MeteoSchweiz)#erledigt, Transparenz von 0.3 auf 0.5 angepasst, Videos aber nicht angepasst aber auf Print Screen
 - viel zu viele Skalenstriche bei den Anlagen/Pisten Balken, Beschriftung zu klein - viel besser im Mockup als in der App #erledigt, Bilder in Doku angepasst
-- Rote Buttons mit Icon ergänzen - grossgeschriebene Wörter können wir am schlechtesten lesen - zuviele Container (weisser Hintergrund für die Buttons weglassen, Rundung der Ecken anpassen)
+- Rote Buttons mit Icon ergänzen - grossgeschriebene Wörter können wir am schlechtesten lesen - zuviele Container (weisser Hintergrund für die Buttons weglassen, Rundung der Ecken anpassen) #erledigt Schriftgrösse angepasst bei Buttons, Bild Startmenü neu gemacht, Video nicht angepasst, Container nicht angepasst
 - gut, dass der Einstellungsknopf vom Mockup in der Anwendung in den Hintergrund gerückt ist
-- Karte hat mehr Platz erhalten, gut - was ist 'E' (links unter der Navigation)?
-- Wetterdaten sehen zufällig aus - Gestaltprinzipien wirken nicht (insbesondere Abstände)
-- allenfalls invertierte Markierung der Tageszeit wählen - Nacht grau, Tag weiss
+- Karte hat mehr Platz erhalten, gut - was ist 'E' (links unter der Navigation)? #erledigt Schaltfläche ist jetzt auch in der Navigation Beschreiben. Dabei wird auf einen vorgeben Extend gezoomt.
+- Wetterdaten sehen zufällig aus - Gestaltprinzipien wirken nicht (insbesondere Abstände) #TODO zeit hat nicht gereicht um dies aufzubauen wie im Mokup.
+- allenfalls invertierte Markierung der Tageszeit wählen - Nacht grau, Tag weiss #erledigt
 - Restaurants - Gestaltprinzip Nähe - Beschriftung näher zum zu bezeichnenden Restaurantbild platzieren als zum nächsten Bild

@@ -48,9 +48,14 @@ const spec_wetter = {
       name: "tag",
       values: [
         {
-          start: 8,
-          end: 17,
-          text: "Lift offen",
+          start: 0,
+          end: 8,
+          text: "Lift geschlossen",
+        },
+        {
+          start: 17,
+          end: 23,
+          text: "Lift geschlossen",
         },
       ],
     },
@@ -81,7 +86,13 @@ const spec_wetter = {
 
   axes: [
     { orient: "bottom", scale: "x", title: "Tageszeit", titlePadding: 10 },
-    { orient: "left", scale: "y", title: "Temperatur [C°]", titlePadding: 10, tickCount: 7 },
+    {
+      orient: "left",
+      scale: "y",
+      title: "Temperatur [C°]",
+      titlePadding: 10,
+      tickCount: 7,
+    },
   ],
   marks: [
     {

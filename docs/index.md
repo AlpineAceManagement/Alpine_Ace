@@ -668,7 +668,7 @@ Durch anklicken der Schaltfläche `START` oder `ZIEL` wird der Start, respektive
 
 Mit der Funktion `resetMarkerUndRoute` wird durch anklicken von der Schaltfläche `RESET` gestartet. Dabei werden die Marker und den Routen Layer gelöscht. Die Schaltflächen `START` und `Ziel` werden wieder aktiviert (verwendbar).
 
-In der Karte sind die Layer Pisten und Anlagen mit der Winterlandeskarte im Hintergrund. Der Import der WFS und WMS Daten, die Symbolisierung, die Quellenangaben der Hintergrundkarte und das Zoomen auf einen vorgeben Bereich ist gleich wie in der [Karte](#funktion-2) der Mit der Funktion `setZIndex` wird die Darstellungsreihenfolge gesetzt. Dabei ist 1 zu unterst und 5 zuoberst:
+In der Karte sind die Layer Pisten und Anlagen mit der Winterlandeskarte im Hintergrund. Der Import der WFS und WMS Daten, die Symbolisierung, die Quellenangaben der Hintergrundkarte und das Zoomen auf einen vorgeben Bereich über die Schaltfläche `E` ist gleich wie in der [Karte](#funktion-2) der Mit der Funktion `setZIndex` wird die Darstellungsreihenfolge gesetzt. Dabei ist 1 zu unterst und 5 zuoberst:
 
 1. Winterlandeskarte
 2. Pisten
