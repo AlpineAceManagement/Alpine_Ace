@@ -139,7 +139,7 @@ Während des Betriebes der Plattform müssen verschiedene Systeme Lese- oder Sch
 - **Benutzername:** postgress
 - **Passwort:** gesetztes Passwort der Datenbank
 - **datenbankname:** geoserver
-- **host:** Während der Entwicklung wird Local host verwendet
+- **host:** Während der Entwicklung wird Localhost verwendet
 - **port:** Standardmässig wird der Port 5432 verwendet
 
 Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welchem die Verbindungsinformationen angegeben sind:
@@ -218,9 +218,7 @@ Der Vergleich zwischen Mockup und Endprodukt, die Erklärung zur Farbwahl und di
 
 Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [Mock-Up](https://github.com/AlpineAceManagement/Alpine_Ace/blob/main/docs/A1_Mockup_Alpine_Ace.pptx)
 
-Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten. In den folgenden Grafiken werden die umgesetzten Features mit dem Mock-Up verglichen.
-
-<center><img src="images/umgesetze_feature.png" style="max-width: 100%; max-height: auto;" /></center>
+Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten.
 
 <table style="border-collapse: collapse; width: 100%;">
     <colgroup>
@@ -236,7 +234,7 @@ Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema),
     </tr>
     <tr>
         <td style="border: none;"><center><img src="images/mock-up-start.png" style="max-height: 100%; width: 100%;" /></center></td>
-        <td style="border: none;"><center><img src="images/app-start.jpg" style="max-height: 77%; width: 77%;" /></center></td>
+        <td style="border: none;"><center><img src="images/app-start.png" style="max-height: 77%; width: 77%;" /></center></td>
     </tr>
     <tr>
         <td style="border: none; text-align: center;" colspan="2"><h4>Karte</h4></td>
@@ -691,11 +689,9 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
-<video width="100%" height="auto" controls>
-  <source src="videos/Restaurant.mp4" type="video/mp4">
+  <video width="50%" height="auto" controls>
+    <source src="videos/Restaurant.mp4" type="video/mp4">
 </video>
-
-
 
 ##### Funktion
 
