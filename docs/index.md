@@ -85,6 +85,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
     - [Gelerntes in diesem Projekt](#gelerntes-in-diesem-projekt)
       - [Fehler](#fehler-1)
     - [Vorgehen nächstes Projekt](#vorgehen-nächstes-projekt)
+  - [Literatur](#literatur)
   - [Contribution](#contribution)
 
 ## Architektur
@@ -838,6 +839,12 @@ Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawin
 #### Fehler
 
 ### Vorgehen nächstes Projekt
+
+## Literatur
+
+[Heuristic Pathfinding Algorithm Based on Dijkstra, Yan-Jiang SUN, Xiang-Qian DING, Lei-Na JIANG, 2017](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN)
+
+[Lernmodul 7 Dijkstra-Erweiterungen, 2004](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf)
 
 ## Contribution
 
