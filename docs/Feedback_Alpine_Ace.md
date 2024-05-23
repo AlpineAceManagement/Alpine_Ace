@@ -35,7 +35,7 @@ Code Organisation:
 
 **GitHub Pages:**
 
-**Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden. #TODO
+**Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden. #REVIEW gibt es PP noch?
 
 - Menu falls zeitlich noch möglich in die Sidebar einfügen #TODO zeit hat nicht gereicht
 - Reflektion einführen #TODO

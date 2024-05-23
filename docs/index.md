@@ -81,6 +81,10 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
     - [Benutzerkonto](#benutzerkonto)
     - [Live Tracking](#live-tracking)
     - [Rückmeldung Lawinen](#rückmeldung-lawinen)
+  - [Reflektion](#reflektion)
+    - [Gelerntes in diesem Projekt](#gelerntes-in-diesem-projekt)
+      - [Fehler](#fehler-1)
+    - [Vorgehen nächstes Projekt](#vorgehen-nächstes-projekt)
   - [Contribution](#contribution)
 
 ## Architektur
@@ -590,7 +594,7 @@ Falls die Fehlermeldung: `Konnte Änderungen am Layer a_a_routing nicht festschr
 Behoben kann dieses Problem werden, wenn unter: `Eigenschaften --> Attributformular --> Verfügbare Element --> Fields --> id --> Vorgaben` den Ausdruck `maximum( "id" ) + 1` eingefügt wird. Dieser erhöht den aktuell höchsten Wert der `id` um 1 und setzt diesen ins Attributformular automatisch ein. Zusätzlich die Checkbox bei `Vorgabewert bei Aktualisierung anwenden` setzen.
 
 <video width="100%" height="auto" controls>
-  <source src="videos/routing_verbindung_hizufügen.mp4" type="video/mp4">
+  <source src="videos/routing_verbindung_hinzufügen.mp4" type="video/mp4">
 </video>
 
 - **Verbindung löschen** : Den Layer der gewünschten Verbindung in Bearbeitung setzen, die Verbindung anwählen und löschen. Nach erfolgter Änderung den Layer speichern.
@@ -661,6 +665,10 @@ GROUP BY
 Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und des Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgegeben werde die einzelnen die Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=Alpine_Ace:a_a_shortest_path&viewparams=source:3862;target:2114;&outputformat=application/json`
+
+[Dijkstra](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) ist ein Algorithmus mit welchem der kürzeste Weg zwischen Start und Ziel, in einem Netzwerk berechnet werden kann. Dies ist mit Einbezug von von Kosten möglich, in diesem Fall der Abstand zwischen den Konten (Distanz). Der Dijkstra Algorithmus kann auch die Heuristik einbeziehen. Diese ist eine Schätzung, welche eine Annäherung zur optimalen ist. Diese muss aber nicht korrekt sein. Die Annäherung kann zum Beispiel die Luftlinie sein. Der Dijkstra Algorithmus mit Heuristik wird als `A\*` bezeichnet. Mit der Schätzung ist der Algorithmus [schneller](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN), da dieser einen Anhaltspunkt hat in welche Richtung die Suche gehen soll.
+
+**Wieso wurde nicht der `A\*` Algorithmus verwendet?** Die Luftlinienschätzung funktioniert bei den Anlagen weniger gut, da diese Gelände hinauf verlaufen und nicht immer in die Richtung des Zielpunktes. Der Geschwindigkeitsgewinn ist bei grossen Netzwerken mit mehren hundert Knoten signifikant. Die längste Strecke in der Lenzerheide ist von der Bergstation Piz Scalottas zur Brüggerhorn Black Diamond Piste umfasst 87 Teilstücke. Dies bedeutet, der Zeitgewinn bei diesem einfachen Netzwerk nicht gross ist. Um aber dies Umfassend zu klären müssten beide Algorithmen an den Daten getestet und verglichen werden.
 
 ##### Funktion
 
@@ -822,6 +830,14 @@ Um den Vergleich von Skitagen zu vereinfachen, wird ein Live-Tracking in die App
 ### Rückmeldung Lawinen
 
 Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden.
+
+## Reflektion
+
+### Gelerntes in diesem Projekt
+
+#### Fehler
+
+### Vorgehen nächstes Projekt
 
 ## Contribution
 
