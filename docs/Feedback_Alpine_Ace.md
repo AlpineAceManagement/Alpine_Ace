@@ -47,7 +47,7 @@ Kommentare zu den einzelnen Pages/Abschnitten:
 Architektur:
 
 - Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
-- Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht. #TODO
+- Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht. #erledigt, Web Scraping ist in den Sommermonaten schwierig, da nicht viele Daten vorhanden sind und das Skigebiert Arosa Lenzerheide zurzeit geschlossen ist.
 - Localhost anstatt local host #erledigt
 - Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitinformationen eingebunden? #TODO
 - Express-API nicht FastAPI Rest Schnittstelle? #erledigt, Express-API wird verwendet, wir verwenden keine Fast-API
@@ -58,7 +58,7 @@ Funktionen
 
 - Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt, alle Videos getestet (Webseite neu Laden mit ctrl + F5 ohne Cache)
 - Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung #TODO
-- Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen. #TODO
+- Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen. #erledigt, Ich bin mir nicht sicher ob dies korrekt ist.
 - Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen. #TODO
 
 Incoming Features

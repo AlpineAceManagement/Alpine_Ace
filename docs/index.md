@@ -119,13 +119,13 @@ Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung ste
 <center><img src="images/Architektur_API.png"  /></center>
 _Architektur der APIs_
 
-- Meteo: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
+- **Meteo**: Die Wetter Daten werden über [https://open-meteo.com/](https://open-meteo.com/) bezogen. Abfragen für nicht kommerzielle Nutzungen sind kostenlos. Insgesamt sind pro Tag 10'000 Abfragen möglich. Die Abfrage der aktuellen Wettersituation erfolgt im Viertelstunden Takt, die der Wettervorhersage erfolgt alle 24 Stunden.
 
-- Lawinensituation: Die aktuellen Lawineninformationen werden über [https://aws.slf.ch/api/bulletin/caaml](https://aws.slf.ch/api/bulletin/caaml) bezogen. Es handelt sich um eine API des Institut für Schnee und Lawinenforschung (SLF). Die Nutzung ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
+- **Lawinensituation**: Die aktuellen Lawineninformationen werden über [https://aws.slf.ch/api/bulletin/caaml](https://aws.slf.ch/api/bulletin/caaml) bezogen. Es handelt sich um eine API des Institut für Schnee und Lawinenforschung (SLF). Die Nutzung ist kostenlos. Die Abfrage der Daten erfolgt im 12 Stunden Takt.
 
-- Schneehöhen: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des SLF. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
+- **Schneehöhen**: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des SLF. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
-- Informationen über Skigebiet: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen.
+- **Informationen über Skigebiet**: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen. Dies ist im Upcoming Feature [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten) geplant mit Hilfe von Web Scraping. Dies ist in den Sommermonaten aber schwierig zun entwickeln, da nur wenige Daten von Skigebieten zur Verfügung stehen. Das Skigebiete Arosa Lenzerheide auf welchem das Projekt sich momentan fokussiert ist momentan geschlossen.
 
 Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf, um sie auszuführen.
 
@@ -669,7 +669,7 @@ Beispiel:
 
 [Dijkstra](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) ist ein Algorithmus mit welchem der kürzeste Weg zwischen Start und Ziel, in einem Netzwerk berechnet werden kann. Dies ist mit Einbezug von von Kosten möglich, in diesem Fall dem Abstand zwischen den Konten (Distanz). Der Dijkstra Algorithmus kann auch die Heuristik miteinbeziehen. Diese ist eine Schätzung, welche eine Annäherung zur optimalen Lösung ist. Diese muss aber nicht korrekt sein. Die Annäherung kann zum Beispiel die Luftlinie zwischen Start und Endpunkt sein. Der Dijkstra Algorithmus mit Heuristik wird als `A\*` bezeichnet. Mit der Schätzung ist der Algorithmus meist [schneller](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN), da dieser einen Anhaltspunkt hat in welche Richtung die Suche los gehen soll.
 
-**Wieso wurde nicht der `A\*` Algorithmus verwendet?** Die Luftlinienschätzung funktioniert bei den Anlagen weniger gut, da diese dem Gelände hinauf verlaufen. Dabei nicht immer in die Richtung des Zielpunktes zeigen. Der Geschwindigkeitsgewinn ist bei grossen Netzwerken mit mehren hundert Knoten signifikant. Da aber die längste Strecke in der Lenzerheide von der Bergstation Piz Scalottas zur Brüggerhorn Black Diamond Piste nur 87 Teilstücke umfasst ist dies nicht sehr lange. Dies bedeutet, der Zeitgewinn bei diesem einfachen Netzwerk ist nicht gross. Um aber dies Umfassend zu klären müssten beide Algorithmen an den Daten getestet und verglichen werden.
+**Wieso wird nicht der `A\*` Algorithmus verwendet?** Die Luftlinienschätzung funktioniert bei den Anlagen weniger gut, da diese dem Gelände hinauf verlaufen. Dabei nicht immer in die Richtung des Zielpunktes zeigen. Der Geschwindigkeitsgewinn ist bei grossen Netzwerken mit mehren hundert Knoten signifikant. Da aber die längste Strecke in der Lenzerheide von der Bergstation Piz Scalottas zur Brüggerhorn Black Diamond Piste nur 87 Teilstücke umfasst ist dies nicht sehr lange. Dies bedeutet, der Zeitgewinn bei diesem einfachen Netzwerk ist nicht gross. Um aber dies Umfassend zu klären müssten beide Algorithmen an den Daten getestet und verglichen werden.
 
 ##### Funktion
 
@@ -767,7 +767,7 @@ In der Karte kann das Zoomen zur Piste oder Anlage Verbessert werden. Es wird mo
 
 ### Aktuelle Dashboard Daten
 
-In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet.
+In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet. Eine weitere Möglichkeit wäre Web Scraping von der Webseite [Bergfex](https://www.bergfex.ch/arosa-lenzerheide/). Auf dieser sind sämtlich Anlage und Pisten Informationen von Skigebiete der Schweiz vorhanden. Das Web Scraping müsst so nur für einer Webseite programmiert werden und nciht für jedes Skigebiet neu.
 
 ### Status Pisten und Analgen
 
