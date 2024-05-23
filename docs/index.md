@@ -377,7 +377,7 @@ Die Daten der Skigebiete wurden von der Plattform OpenSnowMap bezogen. Die Platf
 
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Flächen gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Flächen wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
-Die Flächen werden in der Worckbench gefiltert auf Skigebiete (es gibt Pisten die als Flächen vorhanden sind in OSM). Das Attribut `skigebiet_name` und die ID `skigebiet_id` wird vergeben. Diese ID wird als Verknüpfung verwendet um die Zuordnung zum Skigebiet zu ermöglichen. Die Skigebiete werden anschliessend in der Tabelle `skigebiet` gespeichert. Die Skigebiete werden bis jetzt im Projekt nicht grafisch dargestellt. Sie dienen lediglich der Verknüpfung von andern Daten.
+Die Flächen werden in der Workbench gefiltert auf Skigebiete (es gibt Pisten die als Flächen vorhanden sind in OSM). Das Attribut `skigebiet_name` und die ID `skigebiet_id` wird vergeben. Diese ID wird als Verknüpfung verwendet um die Zuordnung zum Skigebiet zu ermöglichen. Die Skigebiete werden anschliessend in der Tabelle `skigebiet` gespeichert. Die Skigebiete werden bis jetzt im Projekt nicht grafisch dargestellt. Sie dienen lediglich der Verknüpfung von andern Daten.
 
 ##### DHM25
 
@@ -834,9 +834,15 @@ Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawin
 
 ## Reflektion
 
+Das Projekt war sehr umfassend mit verscheiden Herausforderungen.
+
 ### Gelerntes in diesem Projekt
 
+**Rotuing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebene berechnet werden. Dabei wurde das Verständnis für das automatische erstellen von Knoten , Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`).
+
 #### Fehler
+
+**Routing** : Zuerst wurden die Konten für die Pisten und Anlagen
 
 ### Vorgehen nächstes Projekt
 

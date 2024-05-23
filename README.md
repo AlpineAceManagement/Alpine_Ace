@@ -13,13 +13,13 @@ Die Dokumentation zum Projekt befindet sich [hier](https://alpineacemanagement.g
 
 ## Ablauf Installation
 
-<center><img src="docs/images/Installationsschritten_grafik.png"  /></center>
+<center><img style="max-height: 60%; width: 60%;" src="docs/images/Installationsschritten_grafik.png"  /></center>
 
 ## Ordnerstruktur
 
 Hier sind die wichtigsten Ordner und Dateien für die Installation aufgelistet.
 
-<center><img src="docs/images/Ordnerstruktur.png"  /></center>
+<center><img style="max-height: 60%; width: 60%;" src="docs/images/Ordnerstruktur.png"  /></center>
 
 ## Requirements
 
