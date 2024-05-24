@@ -37,7 +37,7 @@ Code Organisation:
 
 **Allgemein**: Gute Übersicht zum Projekt, es fehlt eine grafische Übersicht der implementierten und geplanten Features. Einleitung direkt auf das Ziel eingehen, der Projektkontext kann später erklärt werden, der hat nicht die Priorität, zuerst genannt zu werden. #REVIEW gibt es PP noch?
 
-- Menu falls zeitlich noch möglich in die Sidebar einfügen #TODO zeit hat nicht gereicht
+- Menu falls zeitlich noch möglich in die Sidebar einfügen #TODO Zeit hat nicht gereicht
 - Reflektion einführen #TODO
 - Literatur und Daten/Library Übersicht am Ende als Quellenverzeichnis oder geeigneter Stelle einfügen. #TODO
 - zum Teil sehr detailliert #erledigt, Wir hoffen, dass man es dank detailliertem Beschrieb gut verstehen kann
@@ -57,9 +57,9 @@ Funktionen
 - Ist beim Lawinen-Bulletin die Region der Lawinengefahr immer auf den Kanton bezogen? #erledigt Lawinenbulletin im Dashboard bezieht sich auf das aktuelle Skigebiet. In diesem Fall der Lenzerheide. Die Kantone dienen nur zur Orientierung.
 
 - Video - Einbindung Höhe vergrössern, ist doch sehr klein. Die Video lassen sich zum Teil nur mit mehrfachem probieren abspielen. #erledigt, alle Videos getestet (Webseite neu Laden mit ctrl + F5 ohne Cache)
-- Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung #TODO
+- Bei der Prozessierung z.B. der Pisten wären Grafiken/Workflow mit Beispielen noch hilfreich für das Verständnis der Vorprozessierung #erledigt
 - Methoden z.B. Dijkstra PostGIS Dokumentation und Paper als Literatur hinzufügen. #erledigt, Ich bin mir nicht sicher ob dies korrekt ist.
-- Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen. #TODO
+- Datenaufbereitung, sowie Routing mit einem Workflow/Grafik Beispiel ergänzen. #erledigt
 
 Incoming Features
 
