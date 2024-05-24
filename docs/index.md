@@ -422,7 +422,7 @@ Die Daten der Anlagen sind aus dem TLM3D Datensatz der Swisstopo. In der Objektk
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
-<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_anlagen.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_anlagen.png"  /></left>
 
 In der Workbench werden die `anlage_id` erstellt und das Attribut name in `a_name` umbenannt. Für das Routing ist es später wichtig, in welche Richtung die Anlage verläuft. In einem v Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25)
 abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich ist, wird diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest, ab wann eine Anlage als Einweg eingestuft (`a_einweg = true`) wird, oder ob die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess `Routing_geoserver.fmw` verwendet.
@@ -573,7 +573,7 @@ Bei der Nutzung wird ein Startpunkt angegeben. In einem ersten Schritt wird in d
 
 ##### Aufbereitung der Daten
 
-<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_routing.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_routing.png"  /></left>
 
 Die Daten werden in der FME Workbench `Routing_geoserver.fmw` aufbereitet. Dabei wird eine Verbindungslinie zwischen den Anlagen und Pisten berechnet um ein durchgängiges topologisches Netzwerk zu erhalten. Grund für die Aufbereitung ist, dass beide Datensätze verschiedene Datengrundlagen haben. Die jeweiligen Start- oder Endpunkte schliessen dabei nicht aufeinander ab. In einem weiteren Schritt werden alle Linien die beidseitig sind, dupliziert. Beim Duplikat wir die Orientierung gedreht.
 
@@ -613,6 +613,8 @@ Behoben kann dieses Problem werden, wenn unter: `Eigenschaften --> Attributformu
 
 ##### Berechnen des Routings
 
+<left><img style="max-height: 65%; width: 65%;" src="images/berechnung_routing.png"  /></left>
+
 Im `pgAdmin 4` wird anschliessend das Routing berechnet, der Code dafür liegt in der Datei `alpine_ace_routing.txt`. Zuerst werden für die Anlagen und die Pisten separat die Knoten berechnet mit dem Befehl `pgr_nodeNetwork`. Daraus resultieren die beiden Tabellen `a_a_routing_noded` und `a_a_anlage_routing_noded` Dies geschieht getrennt, da überall, wo sich zwei Linien schneiden, ein Knoten erstellt wird. Da die Anlagen über den Pisten sind dürfen zwischen diesen Linien keine Punkte erstellt werden. In die beiden Tabellen werden die Attribute der Ursprungsdaten kopiert. Die Knoten der Anlagen werden in Tabelle `a_a_routing_noded` kopiert. Darin wird das Routing gerechnet mit dem Befehl `pgr_createTopology`.
 
 Ursprünglich war geplant, die Funktion Einweg Routing über die `reverse_cost` zu steuern. Deshalb wurden Kosten in Abhängigkeit der Distanz vergeben. Wenn eine Strecke einseitig ist, wurde zu den `reverse_cost` eine Million addiert. Für beidseitige Strecken sind die Kosten in beide Richtungen gleich. Dies findet aber im jetzigen Routing keine Anwendung, da beidseitige Strecken doppelt in beide Richtungen im Datensatz vorhanden sind.
@@ -645,7 +647,7 @@ GROUP BY
     v.id, v.the_geom
 ```
 
-<center><img style="max-height: 65%; width: 65%;" src="images/sql_view_knoten_suchen.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/sql_view_knoten_suchen.png"  /></left>
 
 Diese SQL view bekommt als Parameter das Koordinatenpaar `%x%` und `%y%` mit dem Wertebereich `^[\d\.\+]+$` Dieser lässt Positive Gleitkommazahlen zu. Es sucht in der Tabelle `a_a_routing_noded ` den nächsten Knoten. Ausgeben wird die Geometrie des Knotens und die `id`.
 Beispiel:
@@ -673,7 +675,7 @@ GROUP BY
     e.old_id, e.p_farbe
 ```
 
-<center><img style="max-height: 65%; width: 65%;" src="images/sql_view_kuerzeste_distanz.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/sql_view_kuerzeste_distanz.png"  /></left>
 
 Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und des Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgegeben werde die einzelnen die Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
 Beispiel:
@@ -708,7 +710,7 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
-<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_restaurants.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_restaurants.png"  /></left>
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
