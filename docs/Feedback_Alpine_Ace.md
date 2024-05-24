@@ -49,7 +49,7 @@ Architektur:
 - Diagramm, Schrift zT. zu klein, was ist genau im Frontend und was im Backend (npm, node.js) # erledigt
 - Begründen warum kein Bezug der Skigebiet Informationen zur Verfügung steht. #erledigt, Web Scraping ist in den Sommermonaten schwierig, da nicht viele Daten vorhanden sind und das Skigebiet Arosa Lenzerheide zurzeit geschlossen ist.
 - Localhost anstatt local host #erledigt
-- Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitsinformationen eingebunden? #TODO
+- Datenbankschema routing -> welche Tabellen werden nun verwendet?, wie sind die Sicherheitsinformationen eingebunden? #erledigt, aktive Tabellen sind grün, inaktive Tabellen sind violet, die Sicherheitsinformationen sind jetzt im Teil Upcoming Features beschrieben.
 - Express-API nicht FastAPI Rest Schnittstelle? #erledigt, Express-API wird verwendet, wir verwenden keine Fast-API
 
 Funktionen

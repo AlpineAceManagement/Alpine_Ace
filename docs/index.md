@@ -787,7 +787,7 @@ In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergba
 
 ### Status Pisten und Analgen
 
-Das Attribut Status ist bei den Pisten und Analgen leer. Wenn die Daten von Bergbahnen automatisch bezogen werden, könnten geschlossene Pisten und Analgen zusätzlich symbolisiert werden. Auch das Routing könnte so angepasst werden, damit nur Routen angezeigt werden über offene Pisten.
+Das Attribut Status ist bei den Pisten und Analgen momentan leer. Wenn die Daten von Bergbahnen automatisch bezogen werden, könnten geschlossene Pisten und Analgen zusätzlich in der Karte differenziert symbolisiert werden. Auch das Routing könnte so angepasst werden, damit nur Routen angezeigt werden über offene Pisten und Anlagen. Das Datenbankschema wäre bereit für dieses Feature. Es existiert das Attribut Status auch in den Routing Tabellen. Wäre diese offen ist das Attribut Status `true` und wenn geschlossen `false`.
 
 ### Mehrere Skigebiete
 
