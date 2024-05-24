@@ -375,6 +375,8 @@ Die Daten der Skigebiete wurden von der Plattform OpenSnowMap bezogen. Die Platf
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
+<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_skigebiete.png"  /></center>
+
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Flächen gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Flächen wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
 Die Flächen werden in der Workbench gefiltert auf Skigebiete (es gibt Pisten die als Flächen vorhanden sind in OSM). Das Attribut `skigebiet_name` und die ID `skigebiet_id` wird vergeben. Diese ID wird als Verknüpfung verwendet um die Zuordnung zum Skigebiet zu ermöglichen. Die Skigebiete werden anschliessend in der Tabelle `skigebiet` gespeichert. Die Skigebiete werden bis jetzt im Projekt nicht grafisch dargestellt. Sie dienen lediglich der Verknüpfung von andern Daten.
@@ -403,6 +405,8 @@ Die Daten der Pisten wurden von der Platform OpenSnowMap bezogen. Die Platform O
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
+<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_pisten.png"  /></center>
+
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Linien gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Linien wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
 Die Attribute sind für dieses Projekt so noch nicht nutzbar, da viele wichtige Informationen im Attribute `other_tags` sind. In der FME Workbench wird zuerst der Schwierigkeitsgrad extrahiert und im Attribut `p_farbe` festgehalten. Dasselbe passiert mit der Pistennummer `p_nummer` und Pistenname `p_name`. Multilines werden aufgesplittet in Linien. Für jede Linie wird eine ID erstellt, die `piste_id`. Die nicht mehr benötigten Attribute werden gelöscht. Für das Routing ist es später wichtig in welche Richtung die Piste verläuft. In einem benutzerdefinierten Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25) abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Piste umgedreht. Danach werden alle Pisten einem Skigebiet zugeordnet. Ist dies nicht möglich, wird diese Piste aussortiert. Bevor die Pisten gespeichert werden, wird das Attribut `p_einweg` vergeben. Dieses legt fest ab wann eine Piste als Einweg eingestuft (`p_einweg = true`) wird oder ob die Piste beidseitig befahrbar ist (`p_einweg = false`). Die Höhendifferenz wird als UserParameter angegeben vor dem Start des Prozesses. Der Standardwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `pisten_startpunkt`, respektive `pisten_endpunkt` gespeichert und werden danach im Prozess `Routing_geoserver.fmw`.
@@ -417,6 +421,8 @@ Die Daten der Anlagen sind aus dem TLM3D Datensatz der Swisstopo. In der Objektk
 - **Datenformat**: gpkg
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
+
+<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_anlagen.png"  /></center>
 
 In der Workbench werden die `anlage_id` erstellt und das Attribut name in `a_name` umbenannt. Für das Routing ist es später wichtig, in welche Richtung die Anlage verläuft. In einem v Transformer, dem `Höhe_Start_und_Endpunkt_herausfinder`, wird die Höhe des Starts und Endpunkts ermittelt. Die Höhe wird vom [DHM25](#dhm25)
 abgegriffen. Ist die Höhe des Startpunktes tiefer als die des Endpunktes, wir die Orientierung der Anlage umgedreht. Danach werden alle Anlagen einem Skigebiet zugeordnet. Wenn dies nicht möglich ist, wird diese Anlage aussortiert. Bevor die Anlagen gespeichert werden, wird das Attribut `a_einweg` vergeben. Dieses legt fest, ab wann eine Anlage als Einweg eingestuft (`a_einweg = true`) wird, oder ob die Anlage beidseitig befahrbar ist (`a_einweg = false`). Die Höhendifferenz wird als UserParameter angeben vor dem Start des Prozesses. Der Standartwert ist 15m. Die Start- und Endpunkte werden in der Tabelle `anlagen_startpunkt`, respektive `anlagen_endpunkt` gespeichert und werden danach im Prozess `Routing_geoserver.fmw` verwendet.
@@ -567,6 +573,8 @@ Bei der Nutzung wird ein Startpunkt angegeben. In einem ersten Schritt wird in d
 
 ##### Aufbereitung der Daten
 
+<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_routing.png"  /></center>
+
 Die Daten werden in der FME Workbench `Routing_geoserver.fmw` aufbereitet. Dabei wird eine Verbindungslinie zwischen den Anlagen und Pisten berechnet um ein durchgängiges topologisches Netzwerk zu erhalten. Grund für die Aufbereitung ist, dass beide Datensätze verschiedene Datengrundlagen haben. Die jeweiligen Start- oder Endpunkte schliessen dabei nicht aufeinander ab. In einem weiteren Schritt werden alle Linien die beidseitig sind, dupliziert. Beim Duplikat wir die Orientierung gedreht.
 
 Für das Routing muss die Datenbank erweitert werden. Aus der Datei `alpine_ace_routing_DB_erweitern.txt` wird der SQL Code geladen der in der Datenbank mit einem SQLExecutor ausgeführt wird in der Datenbank. Es werden dabei zwei Tabellen erstellt. `a_a_routing` für das Routing der Pisten und `a_a_anlage_routing` für das Routing der Anlagen. Beide Tabellen sind nur für die Berechnung des Routings relevant und nachher inaktiv.
@@ -637,6 +645,8 @@ GROUP BY
     v.id, v.the_geom
 ```
 
+<center><img style="max-height: 65%; width: 65%;" src="images/sql_view_knoten_suchen.png"  /></center>
+
 Diese SQL view bekommt als Parameter das Koordinatenpaar `%x%` und `%y%` mit dem Wertebereich `^[\d\.\+]+$` Dieser lässt Positive Gleitkommazahlen zu. Es sucht in der Tabelle `a_a_routing_noded ` den nächsten Knoten. Ausgeben wird die Geometrie des Knotens und die `id`.
 Beispiel:
 `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:2648338;y:1137974;&outputformat=application/json`
@@ -662,6 +672,8 @@ WHERE
 GROUP BY
     e.old_id, e.p_farbe
 ```
+
+<center><img style="max-height: 65%; width: 65%;" src="images/sql_view_kuerzeste_distanz.png"  /></center>
 
 Diese SQL view bekommt als Parameter die Knoten ID des Startpunktes `%source%` und des Zielpunktes `%target%` mit dem Wertebereich `\d+`, der nur positive Integer zulässt. Mit Hilfe des Dijkstra Algorithmus wird die kürzeste Distanz zwischen den beiden Punkten im Topologie Netzwerk berechnet. Ausgegeben werde die einzelnen die Geometrien der Strecken, `seq` (Sequenznummer für die Reihenfolge), `p_farbe` und die `distance`.
 Beispiel:
@@ -695,6 +707,8 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 - **Datenformat Bilder**: png, ohne Umlaute
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
+
+<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_restaurants.png"  /></center>
 
 Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 

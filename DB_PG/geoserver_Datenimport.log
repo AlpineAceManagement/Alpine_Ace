@@ -1,108 +1,145 @@
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|System Time: 20240512004423 UTC
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Form (floating)
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Temporary License: 50 days left.
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Machine host name is: orange
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\DB_PG/'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'geoserver_Datenimport.fmw'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Platform: WIN64
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|System Status: 179.34 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1715474400554_36304\fmetmp_2)
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|START - ProcessID: 22388, peak process memory usage: 43864 kB, current process memory usage: 43864 kB
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\DB_PG\wb-xlate-1715474660124_36304' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `65512' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `65220'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\DB_PG'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1715474400554_36304\fmetmp_2', set from environment variable `FME_TEMP'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Creating writer for format: 
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Creating reader for format: 
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding OGCGEOPACKAGE Reader with keyword OGCGEOPACKAGE_4
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2024-05-12 02:44:22|   0.0|  0.0|INFORM|Creating reader for format: OGC GeoPackage
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `OGCGEOPACKAGE'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|Loaded module 'OGCGEOPACKAGE' from file 'C:\Program Files\FME_Build_23619\plugins/gdal/GDAL.dll'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|FME API version of module 'gdal/GDAL' matches current internal version (4.0 20230426)
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|OGCGEOPACKAGE reader: Directive '_EXPOSE_PRIMARY_KEY_ATTRIBUTE' has value 'YES'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|OGCGEOPACKAGE reader: Directive '_ENFORCE_FOREIGN_KEY_INTEGRITY' has value 'YES'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|OGCGEOPACKAGE reader: Opening file 'C:\FHNW_lokal\4230\Alpine_Ace\DB_PG\gpkg_Daten\swissBOUNDARIES3D_1_5_LV95_LN02.gpkg'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
-2024-05-12 02:44:23|   0.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
-2024-05-12 02:44:23|   0.1|  0.1|INFORM|The EPSG number of the FME coordinate system 'CH1903Plus_1.LV95/01' is '2056'
-2024-05-12 02:44:23|   0.1|  0.0|INFORM|FME Configuration: Source coordinate system for reader OGCGEOPACKAGE_4[OGCGEOPACKAGE] set to `CH1903Plus_1.LV95/01' as read from input data
-2024-05-12 02:44:23|   0.1|  0.0|INFORM|Coordinate System `CH1903Plus_1.LV95/01' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-05-12 02:44:23|   0.2|  0.1|INFORM|tlm_bezirksgebiet Feature Recorder -1 2147549488 (RecorderFactory): Splitting bulk features into individual features
-2024-05-12 02:44:23|   0.3|  0.1|INFORM|MULTI_READER(MULTI_READER): Done reading 9046 features from 1 readers
-2024-05-12 02:44:23|   0.3|  0.0|INFORM|Emptying factory pipeline
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 9046 input feature(s), wrote 9046 output feature(s): 9046 matched merge filters, 9046 were routed to output, 0 could not be routed.
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 30 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_kantonsgebiet_OGCGEOPACKAGE_4 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_landesgebiet_OGCGEOPACKAGE_4 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_hoheitsgrenze_OGCGEOPACKAGE_4 Splitter (TeeFactory): Cloned 6725 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_hoheitsgebiet_OGCGEOPACKAGE_4 Splitter (TeeFactory): Cloned 2157 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_bezirksgebiet_OGCGEOPACKAGE_4 Splitter (TeeFactory): Cloned 134 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |CSV_CSV2_4 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |CSV_CSV2_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |planet_pistesosm__multipolygons_OGCGEOPACKAGE_3 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |ESRIASCIIGRID_ESRIASCIIGRID_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |planet_pistesosm__lines_OGCGEOPACKAGE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |CSV_CSV2_3 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_oev_uebrige_bahn_OGCGEOPACKAGE_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |CSV_CSV2_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|STATS |                            Features Read Summary
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_bezirksgebiet                                                          134
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_hoheitsgebiet                                                         2157
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_hoheitsgrenze                                                         6725
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_kantonsgebiet                                                           26
-2024-05-12 02:44:23|   0.3|  0.0|STATS |tlm_landesgebiet                                                             4
-2024-05-12 02:44:23|   0.3|  0.0|STATS |==============================================================================
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Total Features Read                                                       9046
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|STATS |                           Features Written Summary
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|STATS |==============================================================================
-2024-05-12 02:44:23|   0.3|  0.0|STATS |Total Features Written                                                       0
-2024-05-12 02:44:23|   0.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~                                                                             ~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~    Feature caches have been recorded at every stage of the translation.     ~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~              click the feature cache icons next to the ports.               ~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~                                                                             ~-
-2024-05-12 02:44:23|   0.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2024-05-12 02:44:23|   0.3|  0.0|INFORM|Translation was SUCCESSFUL with 7 warning(s) (0 feature(s) output)
-2024-05-12 02:44:23|   0.3|  0.0|INFORM|FME Session Duration: 1.2 seconds. (CPU: 0.2s user, 0.1s system)
-2024-05-12 02:44:23|   0.3|  0.0|INFORM|END - ProcessID: 22388, peak process memory usage: 150112 kB, current process memory usage: 107980 kB
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|System Time: 20240523214936 UTC
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Form (floating)
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Temporary License: 39 days left.
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Machine host name is: orange
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\DB_PG/'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'geoserver_Datenimport.fmw'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Platform: WIN64
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|System Status: 164.89 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1716491605956_20344\fmetmp_2)
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|START - ProcessID: 17992, peak process memory usage: 43556 kB, current process memory usage: 43556 kB
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\DB_PG\wb-xlate-1716500971692_20344' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `56765' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `51228'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\DB_PG'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1716491605956_20344\fmetmp_2', set from environment variable `FME_TEMP'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Creating writer for format: 
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Creating reader for format: 
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding CSV2 Reader with keyword CSV2_1
+2024-05-23 23:49:36|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2024-05-23 23:49:36|   0.1|  0.1|INFORM|Creating reader for format: CSV (Comma Separated Value)
+2024-05-23 23:49:36|   0.2|  0.1|INFORM|Trying to find a DYNAMIC plugin for reader named `CSV2'
+2024-05-23 23:49:36|   0.2|  0.0|INFORM|FME Configuration: Source coordinate system for reader CSV2_1[CSV2] set to `EPSG:4326'
+2024-05-23 23:49:37|   0.3|  0.1|INFORM|Coordinate System `EPSG:4326' parameters: CS_NAME=`LL-WGS84' DESC_NM=`WGS84 Lat/Longs' DT_NAME=`WGS84' GROUP=`LL' MAP_SCL=`1' PROJ=`LL' QUAD=`1' SCL_RED=`1' UNIT=`DEGREE'
+2024-05-23 23:49:37|   0.4|  0.1|INFORM|Loaded module 'CSV2' from file 'C:\Program Files\FME_Build_23619\plugins/CSV2.dll'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|FME API version of module 'CSV2' matches current internal version (4.0 20230426)
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Opening dataset 'C:\FHNW_lokal\4230\Alpine_Ace\DB_PG\CSV_Daten\Restaurants_Arosa_Lenzerheide.csv'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_TRIM_FEATURE_TYPE_NAME' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_SUPPORTED_READER_ARCHIVE_EXTENSIONS' has the value 'csv.gz,txt.gz'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_DELIMITER' has the value ';'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_DELIMITER_DETECTION_ALGORITHM' has the value 'EQUAL_FIELDS_PER_LINE'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_FIELD_NAMES_LINE' has the value '1'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_DATA_START_LINE' has the value '2'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_SCAN_MAX_ROWS' has the value '250000'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_READ_SKIPPED_LINES' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_ENCODING' has the value 'utf-8'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive 'FME_NAMES_ENCODING' has the value 'UTF-8'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_SKIP_DUPLICATE_DELIMITERS' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_FIELD_QUALIFIER_CHARACTER' has the value '"'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_FIELD_QUALIFIER_ESCAPE_CHARACTER' has the value '"'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_NAME_QUALIFIERS' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_VALUE_QUALIFIERS' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_PRESERVE_SOURCE_ENCODING' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_CASE_SENSITIVE_FIELD_NAMES' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_ENFORCE_STRICT_SCHEMA' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_SCAN_TYPES' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_TYPE_ATTRIBUTE_HANDLING' has the value 'STANDARD_TYPES'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_STRING_TYPE_ATTRIBUTE_HANDLING' has the value 'EXPLICIT_WIDTH'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_SCAN_ADDITIONAL_FIELDS' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_DATE_INPUT_FORMAT' has the value 'ISO'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_CHUNK_SIZE' has the value '100000'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_NAME_WHITESPACE' has the value 'Yes'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_READ_EMPTY_VALUES_AS' has the value 'Null'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV reader: Directive '_REPLACE_ATTR_NAME_INVALID_CHARS' has the value 'No'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|Loaded module 'VertexCreatorFactory' from file 'C:\Program Files\FME_Build_23619\plugins/VertexCreatorFactory.dll'
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|FME API version of module 'VertexCreatorFactory' matches current internal version (4.0 20230426)
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|FME Configuration: Using FME Reprojection Engine
+2024-05-23 23:49:37|   0.4|  0.0|INFORM|CSV Feature Recorder -1 2147549197 (RecorderFactory): Splitting bulk features into individual features
+2024-05-23 23:49:38|   0.5|  0.1|INFORM|CS-MAP Reprojector: Transformation will be automatically selected for 'EPSG:4326' -> 'EPSG:2056', and is not guaranteed to remain the same in future releases of FME
+2024-05-23 23:49:38|   0.6|  0.1|INFORM|Reprojector: Using transformation `CH1903Plus_1_to_WGS84,Inverse(Geocentric)' when reprojecting from EPSG:4326 to EPSG:2056
+2024-05-23 23:49:38|   0.6|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 57 features from 1 readers
+2024-05-23 23:49:38|   0.6|  0.0|INFORM|Emptying factory pipeline
+2024-05-23 23:49:38|   0.6|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 57 input feature(s), wrote 57 output feature(s): 57 matched merge filters, 57 were routed to output, 0 could not be routed.
+2024-05-23 23:49:38|   0.6|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.6|  0.0|STATS |planet_pistesosm__lines_OGCGEOPACKAGE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.1|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |ESRIASCIIGRID_ESRIASCIIGRID_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_CSV2_4 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_CSV2_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_CSV2_3 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |tlm_oev_uebrige_bahn_OGCGEOPACKAGE_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_CSV2_1 Splitter (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |planet_pistesosm__multipolygons_OGCGEOPACKAGE_3 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant CSV_WGS84 Input Collector (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_CSV_WGS841716500973 Input Splitter (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_AttributeSplitter (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_AttributeExposer (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_CoordinateSystemSetter_5 (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_Reprojector (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant_LV951716500973 Output Collector (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV_WGS_to_LV95_Restaurant LV95 Output Renamer/Nuker (TeeFactory): Cloned 57 input feature(s) into 57 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 57 input feature(s), wrote 57 output feature(s): 0 matched merge filters, 0 were routed to output, 57 could not be routed.
+2024-05-23 23:49:38|   0.7|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 57 input feature(s) into 0 output feature(s)
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |      Features not written - verify feature type fanout/dynamic settings
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |  (Check that fanout/dynamic feature type attribute exists and has a value)
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |                                                                            57
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |==============================================================================
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |Total features not written                                                  57
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |                            Features Read Summary
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |CSV                                                                         57
+2024-05-23 23:49:38|   0.7|  0.0|STATS |==============================================================================
+2024-05-23 23:49:38|   0.7|  0.0|STATS |Total Features Read                                                         57
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |                           Features Written Summary
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|STATS |==============================================================================
+2024-05-23 23:49:38|   0.7|  0.0|STATS |Total Features Written                                                       0
+2024-05-23 23:49:38|   0.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~                                                                             ~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~    Feature caches have been recorded at every stage of the translation.     ~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~              click the feature cache icons next to the ports.               ~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~                                                                             ~-
+2024-05-23 23:49:38|   0.7|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2024-05-23 23:49:38|   0.7|  0.0|INFORM|Translation was SUCCESSFUL with 16 warning(s) (0 feature(s) output)
+2024-05-23 23:49:38|   0.7|  0.0|INFORM|FME Session Duration: 2.6 seconds. (CPU: 0.3s user, 0.4s system)
+2024-05-23 23:49:38|   0.7|  0.0|INFORM|END - ProcessID: 17992, peak process memory usage: 120704 kB, current process memory usage: 104568 kB
