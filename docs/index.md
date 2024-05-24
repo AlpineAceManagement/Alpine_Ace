@@ -375,7 +375,7 @@ Die Daten der Skigebiete wurden von der Plattform OpenSnowMap bezogen. Die Platf
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
-<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_skigebiete.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_skigebiete.png"  /></left>
 
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Flächen gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Flächen wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
@@ -405,7 +405,7 @@ Die Daten der Pisten wurden von der Platform OpenSnowMap bezogen. Die Platform O
 - **Datenimport**: FME Workbench geoserver_Datenimport.fmw
 - **Datenbankschema**: [Datenbank](#datenbank)
 
-<center><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_pisten.png"  /></center>
+<left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_pisten.png"  /></left>
 
 Die Daten wurden vor dem Import durch FME bereinigt. In einem QGIS Projekt wurden alle Linien gelöscht, welche nicht innerhalb der Schweiz (Puffer + 10km) liegen. Die Linien wurden anschliessend als Geopackage im Koordinatensystem EGSG:2056 gespeichert.
 
