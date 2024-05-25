@@ -103,7 +103,9 @@ cd alpine_ace
 npm install
 ```
 
-4. React-App starten
+4. In der Datei `alpine_ace\src\Components\Network\network_config.js` die aktuelle IP Adresse eintragen.
+
+5. React-App starten
 
 ```bash
 npm start
