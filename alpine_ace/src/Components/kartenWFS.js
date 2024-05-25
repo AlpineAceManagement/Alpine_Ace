@@ -1,12 +1,12 @@
 /* WFS-Anfrage für die Karte */
 import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
+import config from "./Network/network_config";
 
 // WFS Anfrage-Funktion
 // Eine der besten Funktionen, die ich je geschrieben habe
 
-const geoserverWFSAnfrage =
-  "http://localhost:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=";
+const geoserverWFSAnfrage = `${config.projectIPadress}:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=`;
 const geoserverWFSOutputFormat = "&outputFormat=application/json";
 
 export function createVectorSource(Abfrage, bboxStrategy) {

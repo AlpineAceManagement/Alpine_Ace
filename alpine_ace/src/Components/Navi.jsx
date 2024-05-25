@@ -20,6 +20,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { createVectorSource } from "./kartenWFS.js";
 import { SwisstopoLayer } from "./swisstopoLayer.js";
 import { anlagenStyle, pistenStyle, naviStyl } from "./kartenLayerStyle.js";
+import config from "./Network/network_config";
 
 const Navi = () => {
   const mapRef = useRef(null);
@@ -180,7 +181,7 @@ const Navi = () => {
     const [x, y] = coordinate;
 
     // WFS Abfrage für die nächste Node ID, Parameter x und y
-    const url = `http://localhost:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
+    const url = `${config.projectIPadress}:8080/geoserver/wfs?service=WFS&version=1.0.0&request=getFeature&typeName=Alpine_Ace:a_a_nearest_vertex&viewparams=x:${x};y:${y};&outputformat=application/json`;
 
     fetch(url)
       .then((response) => {

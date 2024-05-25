@@ -15,6 +15,7 @@ import theme from "./theme";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import config from "./Network/network_config";
 
 const Graph = () => {
   const [skiData, setSkiData] = useState([]);
@@ -26,7 +27,7 @@ const Graph = () => {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/skidaten")
+    fetch(`${config.projectIPadress}:5000/api/skidaten`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -62,7 +63,7 @@ const Graph = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/saison_total")
+    fetch(`${config.projectIPadress}:5000/api/saison_total`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

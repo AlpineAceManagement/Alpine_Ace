@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import "../App.css";
+import config from "./Network/network_config";
 
 const Statistiken = () => {
   const [skiData, setSkiData] = useState([]);
@@ -17,7 +18,7 @@ const Statistiken = () => {
   const [seasonFilter, setSeasonFilter] = useState("Alle Saison");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/skidaten")
+    fetch(`${config.projectIPadress}:5000/api/skidaten`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

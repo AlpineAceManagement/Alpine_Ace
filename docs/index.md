@@ -83,7 +83,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
     - [Rückmeldung Lawinen](#rückmeldung-lawinen)
   - [Reflektion](#reflektion)
     - [Gelerntes in diesem Projekt](#gelerntes-in-diesem-projekt)
-      - [Probleme](#probleme)
+    - [Probleme](#probleme)
     - [Vorgehen nächstes Projekt](#vorgehen-nächstes-projekt)
   - [Literatur](#literatur)
   - [Contribution](#contribution)
@@ -880,7 +880,7 @@ Das Projekt war sehr umfassend mit verscheiden Herausforderungen über alle Proj
 
 **Git Hub Page** : Erstellen einer Web-Dokumentation auf git Hub mit einem Markdown Datei. #TODO noch erweitern?
 
-#### Probleme
+### Probleme
 
 **CORS** : Den Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
 

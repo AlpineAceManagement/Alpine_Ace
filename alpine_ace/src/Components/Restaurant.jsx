@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import { Link } from "react-router-dom";
 import "../App.css";
+import config from "./Network/network_config";
 
 const Restaurant = () => {
   //------------------------------------------------------------------------
@@ -17,7 +18,7 @@ const Restaurant = () => {
 
   useEffect(() => {
     // Aufrufen der API von Node Server connect_db
-    fetch("http://localhost:5000/api/restaurant")
+    fetch(`${config.projectIPadress}:5000/api/restaurant`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -1,5 +1,6 @@
 /* Daten von Lawinenbulletins von einer API abrufen */
 import { useState, useEffect } from "react";
+import config from "./Network/network_config";
 const Bulletin = () => {
   const [bulletins, setBulletins] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -9,7 +10,9 @@ const Bulletin = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/bulletins");
+        const response = await fetch(
+          `${config.projectIPadress}:5000/api/bulletins`
+        );
         if (!response.ok) {
           throw new Error("something went wrong");
         }
