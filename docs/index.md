@@ -30,6 +30,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
   - [Architektur](#architektur)
     - [Backend](#backend)
       - [API](#api)
+      - [GeoServer](#geoserver)
       - [Datenbank](#datenbank)
         - [Datenbankverbindung](#datenbankverbindung)
         - [Datenbankschema](#datenbankschema)
@@ -112,6 +113,8 @@ Das Backend beinhaltet alle unsichtbaren Inhalte und Daten, die sich auf dem Ser
 - FME Workbenches für Datenspeicherung RDBS
 - Node-Server als Schnittstelle zwischen dem RDBS / GeoServer und dem Frontend
 
+In der Datei `network_config.js` muss vor dem Start der App die aktuelle IP Adresse eingetragen werden. Die IP Adresse wird in die lokalen API's, sowie WFS Abfragen eingetragen. So kann die React App von verschieden Geräten genutzt werden, solange dies im selben Netzwerk sind.
+
 #### API
 
 Um dem User die aktuellsten Informationen über das Skigebiet zur Verfügung stellen zu können, werden folgende APIs verwendet:
@@ -128,6 +131,10 @@ _Architektur der APIs_
 - **Informationen über Skigebiet**: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen. Dies ist im Upcoming Feature [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten) geplant mit Hilfe von Web Scraping. Dies ist in den Sommermonaten aber schwierig zun entwickeln, da nur wenige Daten von Skigebieten zur Verfügung stehen. Das Skigebiete Arosa Lenzerheide auf welchem das Projekt sich momentan fokussiert ist momentan geschlossen.
 
 Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf, um sie auszuführen.
+
+#### GeoServer
+
+Der GeoServer wird genutzt um alle räumlichen Daten zu Verfügung zu stellen, die in der Datenbank gespeichert sind. Die Daten werden via WFS vom GeoServer angefordert. Um CORS auf dem GeoServer zu aktivieren ist unter die Konfigurationsdatei unter `docs\web.xml` abgelegt. In dieser wird CORS aktiviert, um auch von anderen Geräten Daten WFS Anfragen zu tätigen.
 
 #### Datenbank
 
@@ -187,17 +194,17 @@ Folgende Daten werden mit Hilfe von FME in den GeoServer importiert:
 
 <a id=nodeserver></a>
 
-Node Server greift auf Daten des Servers zu, während GeoServer diese innerhalb der React-App zur Verfügung stellt. Dies sind als API's abrufbar.
+Mit der Express API greift die React App die der Datenbank zu. Dies sind als API's abrufbar über den Port 5000.
 
 Folgende Express-API's sind vorhanden:
 
-- **/api/restaurant** Alle Informationen der Tabelle Restaurant
-- **/api/skidaten** Alle Informationen der Tabelle Skidaten
-- **/api/saison_total** Die wichtigsten Kennzahlen der Skidaten pro Saison wie die Summe der Höhenmeter, Distanz sowie der Durchschnitt der Distanz, Geschwindigkeit und die maximale Geschwindigkeit.
-- **/api/prognos** Die aktuellsten Informationen der Tabelle Prognose
-- **/api/schneehoehe** Die aktuellsten Informationen der Tabelle Schneehoehe von der Station ROT3
-- **/api/messdaten** Die aktuellsten Informationen der Tabelle Messdaten
-- **/api/bulletins** Die aktuellsten Informationen der Lawinengefahr in der Lenzerheide
+- **IP-Adresse:5000/api/restaurant** Alle Informationen der Tabelle Restaurant
+- **IP-Adresse:5000/api/skidaten** Alle Informationen der Tabelle Skidaten
+- **IP-Adresse:5000/api/saison_total** Die wichtigsten Kennzahlen der Skidaten pro Saison wie die Summe der Höhenmeter, Distanz sowie der Durchschnitt der Distanz, Geschwindigkeit und die maximale Geschwindigkeit.
+- **IP-Adresse:5000/api/prognos** Die aktuellsten Informationen der Tabelle Prognose
+- **IP-Adresse:5000/api/schneehoehe** Die aktuellsten Informationen der Tabelle Schneehoehe von der Station ROT3
+- **IP-Adresse:5000/api/messdaten** Die aktuellsten Informationen der Tabelle Messdaten
+- **IP-Adresse:5000/api/bulletins** Die aktuellsten Informationen der Lawinengefahr in der Lenzerheide
 
 ##### Fehler
 
@@ -863,6 +870,8 @@ Das Projekt war sehr umfassend mit verscheiden Herausforderungen über alle Proj
 **SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereiche und Funktionen kreiert werden.
 
 **React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf Mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
+
+**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit Schlussendlich Daten auch auf Drittgeräten angezeigt werden.
 
 **Open Layer** : Mit der Open Layer Bibliothek konnten unterschiedliche Funktionen genutzt werden.
 

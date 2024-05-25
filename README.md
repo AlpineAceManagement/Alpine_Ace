@@ -260,6 +260,14 @@ node connect_db.js
 
 GeoServer Basis Installation gemäss Folien.
 
+#### GeoServer Konfigurationsdatei ersetzten
+
+1. In der GeoServer Installation in den Ordner `webapps\geoserver\WEB-INF` navigieren.
+
+2. Kopiere die Datei `docs\web.xml` aus dem Repository und ersetze die entsprechende Datei in der GeoServer Installation.
+
+3. GeoServer neu starten mit der Start Datei unter: `bin\startup`
+
 #### Arbeitsbereich erstellen
 
 1. Arbeitsbereiche
