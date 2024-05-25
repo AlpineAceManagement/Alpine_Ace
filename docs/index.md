@@ -83,7 +83,7 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
     - [Rückmeldung Lawinen](#rückmeldung-lawinen)
   - [Reflektion](#reflektion)
     - [Gelerntes in diesem Projekt](#gelerntes-in-diesem-projekt)
-      - [Fehler](#fehler-1)
+      - [Probleme](#probleme)
     - [Vorgehen nächstes Projekt](#vorgehen-nächstes-projekt)
   - [Literatur](#literatur)
   - [Contribution](#contribution)
@@ -850,17 +850,57 @@ Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawin
 
 ## Reflektion
 
-Das Projekt war sehr umfassend mit verscheiden Herausforderungen.
+Das Projekt war sehr umfassend mit verscheiden Herausforderungen über alle Projektphasen hinaus.
 
 ### Gelerntes in diesem Projekt
 
-**Rotuing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebene berechnet werden. Dabei wurde das Verständnis für das automatische erstellen von Knoten , Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`).
+**Besprechungen mit Whiteboard** : Mit regelmässigen Besprechungen im Team konnten konnten gut das Vorgehen geplant, Probleme gelöst oder Ideen gesucht werden. All das wird notiert auf den Whiteboard. So konnten effizient Visualisierungen ausprobiert werden. Die Besprechungen haben sehr vom Whiteboard profitiert und ist unverzichtbar.
 
-#### Fehler
+**API Datenbezug** : @andy
 
-**Routing** : Zuerst wurden die Konten für die Pisten und Anlagen
+**Geoserver** : Aufsetzten und betreiben des GeoServer auf den Betriebssystem Windows und Raspberry Pi OS.
+
+**SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereiche und Funktionen kreiert werden.
+
+**React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf Mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
+
+**Open Layer** : Mit der Open Layer Bibliothek konnten unterschiedliche Funktionen genutzt werden.
+
+- WMS: Datenbezug per WMS und mittels Funktion mehrmaliges wiederverwenden mit kleinst möglicher Redundanz im Code.
+- WFS: Datenbezug per WFS mittels eigenes erstellter Funktion welche immer wieder verwendbar ist.
+- Layer Stylen : Style Datei für alle Karten Style, welche erlaubt in mehren Karten die gleiche Style Definition zu nutzen. Für verschieden Geometrie Typen wie Linien, Flächen und Punkte (Icons) klassiert nach Attribut Werten. Diese dient als CSS für die Kartenlayers, mit all ihren Vorteilen.
+- Controls: Kontroll Elemente wie Info Schaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
+- Marker: Ein und ausblenden von Marker in der Karte, gesteuert über Buttons.
+
+**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebene berechnet werden. Dabei wurde vertieftes Verständnis für das automatische erstellen von Knoten , Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
+
+**Vega Diagramme** : @andy
+
+**Git Hub README** : Im README wurde eine Installationsanleitung erstellt und getestet für das Projekt. Es sind die ersten Erfahrungen um ein README zu schreiben. Bisher wurde dieses nur gelesen. Ist ein spanneden Perspektiven wechsel.
+
+**Git Hub Page** : Erstellen einer Web-Dokumentation auf git Hub mit einem Markdown Datei. #TODO noch erweitern?
+
+#### Probleme
+
+**CORS** : Den Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
+
+**Routing** : Zuerst wurden die Konten für die Pisten und Anlagen gemeinsam erstellt. Dies hatte als Folge, dass die Route mitten drin die Anlage genutzt und verlassen hat. Dies konnte gelöst werden, indem die Konten getrennt berechnet wurden. Dies brachte zusätzliche Komplexität mit den Attributen der Routen Tabellen und der manuellen Bearbeitung.
+
+**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für ein Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
+
+**GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies Versucht entsteht ein Fehler blockiert das ganze git Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den download aus, entzippt dieses und legt es am korrekten Verzeichnis ab.
+
+**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennung Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
 
 ### Vorgehen nächstes Projekt
+
+**Probleme Unterteilen** : Probleme in kleinstmögliche Form reduzieren und sich Hilfe in Foren suchen oder Chat GPT konsultieren. Nutzer von Foren helfen nur wenn der Code kurz ist dieser gut beschreiben ist (teilweise wird der Fehler beim dokumentieren bereits gefunden).
+
+**Funktionen** : Mehr Funktionen schreiben um Redundanzen möglichst klein zu halten. Faustregeln: Wird der gleiche Code mehr als drei Mal verwendet im Projekt gehört dieser in eine Funktion.
+
+**Verbindungsinformationen Datenbank** : Wenn möglich alle Verbindungsinformationen für alle gleich (DB Name, Passwort, Host und Port) während der Entwicklung und diese in sparenten Config File speichern.
+
+**Sprache und Namenskonventionen festlegen** : Vor dem Projekt Start sollte die Sprache (Code und Dokumentation) festgelegt werden. Für den Code sollte ausschliesslich in Englisch genutzt werden. Schreibfehler können mit einem Rechtschreiben-Plugin verhindert werden.
 
 ## Literatur
 
