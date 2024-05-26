@@ -232,7 +232,7 @@ Das Mock-Up der App ist in Form einer interaktiven PowerPoint hier verfügbar: [
 
 Dieses Mock-Up zeigt die ersten Ideen, wie die App aussehen sollte (Farbschema), aber auch die ersten Funktionen, die realisiert sein wollten. In den folgenden Grafiken werden die umgesetzten Features mit dem Mock-Up verglichen.
 
-<center><img src="images/umgesetze_feature.png" style="max-width: 50%; max-height: 50%;" /></center>
+<center><img src="images/umgesetze_feature.png" style="max-width: 100%; max-height: auto;" /></center>
 
 <table style="border-collapse: collapse; width: 100%;">
     <colgroup>
@@ -863,9 +863,9 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 
 ### Gelerntes in diesem Projekt
 
-**Besprechungen mit Whiteboard** : Mit regelmässigen Besprechungen im Team konnte das weitere Vorgehen gut geplant, Probleme gelöst oder Ideen gesucht werden. Alles wurde laufend auf den Whiteboard notiert. So konnten Visualisierungen effizient ausprobiert werden. Die Besprechungen haben sehr vom Whiteboard profitiert und ist zu einem unverzichtbaren Planungstool geworden.
+**Besprechungen mit Whiteboard** : Die regelmässigen Besprechungen im Team haben sich als äusserts wertvoll erwiesen, um das weitere Vorgehen zu planen, Probleme zu lösen und neue Ideen zu entwickeln. Durch die kontinuierliche Nutzung eines Whiteboards konnten wir unsere Gedanken und Pläne effektiv visualisieren. Diese Visualisierungen ermöglichten es uns, verschiedene Ansätze schnell auszuprobieren und zu bewerten. Das Whiteboard hat sich dabei als unverzichtbares Planungstool etabliert und wesentlich zur Effizienz unserer Meetings beigetragen.
 
-**API Datenbezug** : @andy
+**API Datenbezug** : Bezug von Daten mittels API-Adressen und Speicherung in ein RDBS.
 
 **Geoserver** : Aufsetzen und Betreiben des GeoServer auf den Betriebssystem Windows und Raspberry Pi OS.
 
@@ -885,7 +885,7 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 
 **Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
 
-**Vega Diagramme** : @andy
+**Vega Diagramme** : Die Nutzung von Vega und Vega-Lite hat sich als äusserst effektiv erwiesen, um Daten anschaulich im Zusammenhang mit JavaScript darzustellen. Diese beiden Tools bieten eine flexible und leistungsfähige Möglichkeit zur Datenvisualisierung, die uns geholfen hat, komplexe Datensätze verständlich und übersichtlich zu präsentieren.
 
 **Git Hub README** : Im README wurde eine Installationsanleitung für das Projekt erstellt und getestet. Es sind die ersten Erfahrungen um ein README zu schreiben. Bisher wurde dieses nur gelesen. Dies ist ein spannender Perspektivenwechsel.
 
@@ -902,6 +902,8 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 **GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
 
 **Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungs-Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
+
+**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datebank, welche über eine Express-API bezogen werden, mit Vega auf. DAher sind alle verwendeten Diagramme momentan noch Hard gecoded.
 
 ### Vorgehen nächstes Projekt
 
