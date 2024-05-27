@@ -893,17 +893,17 @@ Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Pr
 
 ### Probleme
 
-**CORS** : Den Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
+**CORS** : Der Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurden Teile der Webseite nicht geladen.
 
 **Routing** : Zuerst wurden die Konten für die Pisten und Anlagen gemeinsam erstellt. Dies hatte zur Folge, dass die Navigationsroute beim Kreuzen die Anlage genutzt und/oder verlassen hat. Das konnte gelöst werden, indem die Konten getrennt berechnet wurden. Dies brachte zusätzliche Komplexität mit den Attributen der Routen Tabellen und der manuellen Bearbeitung.
 
-**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für ein Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
+**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für einen Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
 
-**GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
+**GIT Hub Limit** : Das DHM25, mit einer Grösse von mehr als 100Mb,kann nicht auf GIT Hub hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
 
-**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungs-Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
+**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit besserer Absprache untereinander und einer guten Umbenennungs-Funktion konnte das Problem gelöst werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
 
-**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datenbank, welche über eine Express-API bezogen werden, mit Vega auf. Daher sind alle verwendeten Diagramme momentan noch Hard gecoded.
+**Vega** : Es traten Probleme mit der Darstellung von Daten der Datenbank, welche über eine Express-API bezogen werden, mit Vega auf. Daher sind alle verwendeten Diagramme momentan noch hartkodiert.
 
 ### Vorgehen nächstes Projekt
 
