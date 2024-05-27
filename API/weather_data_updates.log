@@ -325,3 +325,13 @@ LINE 1: ...VALUES ( '2024-05-23T10:00:00+00:00'::timestamptz,'gewitter'...
 2024-05-26 16:48:46,864 - INFO - Current weather data saved to database
 2024-05-26 17:03:47,368 - INFO - Current weather data saved to database
 2024-05-26 17:18:48,152 - INFO - Current weather data saved to database
+2024-05-26 20:42:18,641 - INFO - Current weather data saved to database
+2024-05-26 20:42:18,723 - INFO - Hourly forecast data saved to database.
+2024-05-26 20:57:18,901 - INFO - Current weather data saved to database
+2024-05-26 21:12:19,049 - INFO - Current weather data saved to database
+2024-05-26 21:27:19,236 - INFO - Current weather data saved to database
+2024-05-26 21:42:19,392 - INFO - Current weather data saved to database
+2024-05-26 21:57:19,581 - INFO - Current weather data saved to database
+2024-05-26 22:12:19,681 - INFO - Current weather data saved to database
+2024-05-26 22:27:19,855 - INFO - Current weather data saved to database
+2024-05-26 22:42:20,022 - INFO - Current weather data saved to database

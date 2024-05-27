@@ -859,7 +859,7 @@ Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawin
 
 ## Reflektion
 
-Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Projektphasen hinaus.
+Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Projektphasen hinaus.
 
 ### Gelerntes in diesem Projekt
 
@@ -869,21 +869,21 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 
 **Geoserver** : Aufsetzen und Betreiben des GeoServer auf den Betriebssystem Windows und Raspberry Pi OS.
 
-**SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereiche und Funktionen kreiert werden.
+**SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereichen und Funktionen kreiert werden.
 
 **React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf Mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
 
-**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit Schlussendlich Daten auch auf Drittgeräten angezeigt werden.
+**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit schlussendlich Daten auch auf Drittgeräten angezeigt werden.
 
 **Open Layer** : Mit der Open Layer Bibliothek konnten unterschiedliche Funktionen genutzt werden.
 
-- WMS: Datenbezug per WMS und mittels Funktion mehrmaliges Wiederverwenden mit kleinst möglicher Redundanz im Code.
-- WFS: Datenbezug per WFS mittels eigenes erstellter Funktion welche immer wieder verwendbar ist.
-- Layer Stylen : Style Datei für alle Karten Style, welche erlaubt in mehren Karten die gleiche Style Definition zu nutzen. Für verschieden Geometrie Typen wie Linien, Flächen und Punkte (Icons) klassiert nach Attribut Werten. Diese dient als CSS für die Kartenlayers, mit all ihren Vorteilen.
-- Controls: Kontroll Elemente wie Info Schaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
+- WMS: Datenbezug per WMS und mittels Funktion mehrmaliges Wiederverwenden mit kleinstmöglicher Redundanz im Code.
+- WFS: Datenbezug per WFS mittels eigens erstellter Funktion welche immer wieder verwendbar ist.
+- Layer Stylen : Style Datei für alle Karten Style, welche erlaubt in mehreren Karten die gleiche Style Definition zu nutzen. Für verschieden Geometrie Typen wie Linien, Flächen und Punkte (Icons) klassiert nach Attribut Werten. Diese dient als CSS für die Kartenlayers, mit all ihren Vorteilen.
+- Controls: Kontroll Elemente wie Infoschaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
 - Marker: Ein- und Ausblenden von Marker in der Karte, gesteuert über Buttons.
 
-**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
+**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische Erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
 
 **Vega Diagramme** : Die Nutzung von Vega und Vega-Lite hat sich als äusserst effektiv erwiesen, um Daten anschaulich im Zusammenhang mit JavaScript darzustellen. Diese beiden Tools bieten eine flexible und leistungsfähige Möglichkeit zur Datenvisualisierung, die uns geholfen hat, komplexe Datensätze verständlich und übersichtlich zu präsentieren.
 
@@ -903,7 +903,7 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 
 **Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungs-Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
 
-**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datebank, welche über eine Express-API bezogen werden, mit Vega auf. DAher sind alle verwendeten Diagramme momentan noch Hard gecoded.
+**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datenbank, welche über eine Express-API bezogen werden, mit Vega auf. Daher sind alle verwendeten Diagramme momentan noch Hard gecoded.
 
 ### Vorgehen nächstes Projekt
 
