@@ -920,9 +920,9 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
 
 ### Literatur
 
-geoinformation.net (o.J.). Lernmodul 7: Geo-Algorithmen und -Datenstrukturen - Dijkstra-Erweiterungen. URL: [http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf] (http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) [Zugriffsdatum: 28. Mai 2024].
+geoinformation.net (o.J.). Lernmodul 7: Geo-Algorithmen und -Datenstrukturen - Dijkstra-Erweiterungen. URL: [http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) [Zugriffsdatum: 28. Mai 2024].
 
-SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algorithm Based on Dijkstra. In. Qingdao, Shandong, China. DOI: 10.2991/eeeis-17.2017.59 URL.
+SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algorithm Based on Dijkstra. In. Qingdao, Shandong, China. DOI: 10.2991/eeeis-17.2017.59.
 
 ### Datenquellen
 
