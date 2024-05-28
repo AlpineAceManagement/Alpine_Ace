@@ -964,7 +964,31 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
         <p>Schneehöhe</p>
       </td>
       <td>
-        <a href="https://measurement-api.slf.ch/" >https://measurement-api.slf.ch/ b </a>
+        <a href="https://measurement-api.slf.ch/" >https://measurement-api.slf.ch/ </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Haltestellen</p>
+      </td>
+      <td>
+        <a href="https://www.google.com/maps" >https://www.google.com/maps </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Anlagen</p>
+      </td>
+      <td>
+        <a href="https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d" >https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d </a>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <p>Pisten</p>
+      </td>
+      <td>
+        <a href="data.opensnowmap.org." >data.opensnowmap.org. </a>
       </td>
     </tr>
 </table>
@@ -1054,6 +1078,69 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
       </td>
     </tr>
 </table>
+
+#### JavaScript
+
+<table style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+    </colgroup>
+    <tr>
+      <td style="border: none;">
+        <p style= "bold">
+          Namen der Library
+        </p>
+      </td>
+      <td style="border: none;">
+        <p style = "bold">
+          Link zur Dokumenation
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>React</p>
+      </td>
+      <td>
+        <a href="https://react.dev/" >https://react.dev/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MUI</p>
+      </td>
+      <td>
+        <a href="https://mui.com/" >https://mui.com/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>npm</p>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/" >https://www.npmjs.com/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Vega</p>
+      </td>
+      <td>
+        <a href="https://vega.github.io/vega/" >https://vega.github.io/vega/</a>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <p>Express</p>
+      </td>
+      <td>
+        <a href="https://expressjs.com/de/api.html" >https://expressjs.com/de/api.html</a>
+      </td>
+    </tr>
+</table>
+
+
 
 
 
