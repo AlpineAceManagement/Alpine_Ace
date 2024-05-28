@@ -972,7 +972,7 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
 ### Libraries
 #### Python
 
-table style="border-collapse: collapse; width: 100%;">
+<table style="border-collapse: collapse; width: 100%;">
     <colgroup>
       <col style="width: 50%;">
       <col style="width: 50%;">
