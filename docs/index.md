@@ -932,18 +932,40 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
     </colgroup>
     <tr>
       <td style="border: none;">
-        <h3>
+        <p style= "bold">
           <center>Namen der Datenquelle</center>
-        </h3>
+        </p>
       </td>
       <td style="border: none;">
-        <h3>
+        <p style = "bold">
           <center>Link</center>
-        </h3>
+        </p>
       </td>
     </tr>
     <tr>
-
+      <td>
+        <p>Wetterdaten</p>
+      </td>
+      <td>
+        <a href="https://open-meteo.com/ " >https://open-meteo.com/ </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Lawinensituation</p>
+      </td>
+      <td>
+        <a href="https://aws.slf.ch/api/bulletin/caaml" >https://aws.slf.ch/api/bulletin/caaml </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Schneehöhe</p>
+      </td>
+      <td>
+        <a href="https://measurement-api.slf.ch/" >https://measurement-api.slf.ch/ b </a>
+      </td>
+    </tr>
 </table>
 
 
