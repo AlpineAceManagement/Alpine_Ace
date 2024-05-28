@@ -128,13 +128,13 @@ _Architektur der APIs_
 
 - **Schneehöhen**: Die Schneehöhen werden über [https://measurement-api.slf.ch/](https://measurement-api.slf.ch/) bezogen. Es handelt sich um eine API des SLF. Die Daten werden vom Interkantonalen Mess- und Informationssystem (IMIS) bezogen. Die Nutzung ist Kostenlos. Die Abfrage der Daten erfolgt alle 30 min.
 
-- **Informationen über Skigebiet**: Momentan stehen keine aktuelle Informationen zu den SKigebieten zur Verfügung. Bei den Angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im viertelstunden Takt über die Webseiten der einzelnen Bergbahnen. Dies ist im Upcoming Feature [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten) geplant mit Hilfe von Web Scraping. Dies ist in den Sommermonaten aber schwierig zun entwickeln, da nur wenige Daten von Skigebieten zur Verfügung stehen. Das Skigebiete Arosa Lenzerheide auf welchem das Projekt sich momentan fokussiert ist momentan geschlossen.
+- **Informationen über Skigebiet**: Momentan stehen keine aktuellen Informationen zu den Skigebieten zur Verfügung. Bei den angezeigten Daten handelt es sich um Beispieldaten. Geplant ist ein Bezug im Viertelstunden Takt über die Webseiten der einzelnen Bergbahnen. Dies ist im Upcoming Feature [Aktuelle Dashboard Daten](#aktuelle-dashboard-daten) mithilfe von Web-Scraping geplant. Dies ist in den Sommermonaten aber schwierig zun entwickeln, da nur wenige Daten von Skigebieten zur Verfügung stehen. Das Skigebiete Arosa Lenzerheide auf welchem das Projekt sich momentan fokussiert ist momentan geschlossen.
 
-Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf, um sie auszuführen.
+Um einen reibungslosen Datenbezug zu gewährleisten, werden die entsprechenden Skripte über die Datei **main.py** gesteuert. Diese Datei läuft im Hintergrund und ruft die einzelnen Skripte in den festgelegten Zeitintervallen auf und führt sie aus.
 
 #### GeoServer
 
-Der GeoServer wird genutzt um alle räumlichen Daten zu Verfügung zu stellen, die in der Datenbank gespeichert sind. Die Daten werden via WFS vom GeoServer angefordert. Um CORS auf dem GeoServer zu aktivieren ist unter die Konfigurationsdatei unter `docs\web.xml` abgelegt. In dieser wird CORS aktiviert, um auch von anderen Geräten Daten WFS Anfragen zu tätigen.
+Der GeoServer wird genutzt, um alle räumlichen Daten zu Verfügung zu stellen, die in der Datenbank gespeichert sind. Die Daten werden via WFS vom GeoServer angefordert. Um CORS auf dem GeoServer zu aktivieren, ist unter die Konfigurationsdatei unter `docs\web.xml` abgelegt. In dieser wird CORS aktiviert, um auch von anderen Geräten Daten WFS Anfragen zu tätigen.
 
 #### Datenbank
 
@@ -154,11 +154,11 @@ Während des Betriebes der Plattform müssen verschiedene Systeme Lese- oder Sch
 - **host:** Während der Entwicklung wird Localhost verwendet
 - **port:** Standardmässig wird der Port 5432 verwendet
 
-Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und JS jeweils ein Config File erstellt, in welchem die Verbindungsinformationen angegeben sind:
+Die Informationen werden an verschiedenen Orten im Programm Code verwendet. Dafür wurde für Python und Javascript jeweils eine Config-Datei erstellt, in welchem die Verbindungsinformationen angegeben sind:
 
 - **Python:** `API\config.py`
 
-- **JS:** `alpine_ace\src\DB\config.js`
+- **Javascript:** `alpine_ace\src\DB\config.js`
 
 - **FME:** Bei FME muss unter ` Tools ->  FME Options -> Database Connections` die Datenbankverbindung zum GeoServer angepasst werden.
 
@@ -194,7 +194,7 @@ Folgende Daten werden mit Hilfe von FME in den GeoServer importiert:
 
 <a id=nodeserver></a>
 
-Mit der Express API greift die React App die der Datenbank zu. Dies sind als API's abrufbar über den Port 5000.
+Mit der Express-API greift die React App auf die Daten der Datenbank zu. Die Daten sind als API über den Port 5000 abrufbar.
 
 Folgende Express-API's sind vorhanden:
 
@@ -222,7 +222,7 @@ Das Frontend ist für das Auftreten unserer APP zuständig. Dabei baut unsere AP
 - **React** ist eine Leistungsstarke Bibliothek für den Aufbau der Benutzeroberfläche, die schnelle und reaktive Anwendungen ermöglicht.
 - **MUI React** ist eine Sammlung von User Interface (UI)-Komponenten, die hilft, eine ansprechende und benutzerfreundliche Oberfläche zu gestalten.
 
-Der Vergleich zwischen Mockup und Endprodukt, die Erklärung zur Farbwahl und die einzelnen Funktionen werden in den nächsten Kapitel näher gebracht.
+Der Vergleich zwischen Mock-Up und Endprodukt, die Erklärung zur Farbwahl und die einzelnen Funktionen werden in den nächsten Kapiteln beschrieben.
 
 #### Mock-Up
 
@@ -338,7 +338,7 @@ Die Lawinengefahr ist dabei in fünf Stufen unterteilt. Genauer beschrieben sind
 - **Datenformat**: gpkg
 - **Datenimport**: Datenspeicher swissBOUNDARIES3D, GeoPackage
 
-Die Kantons und Landesgrenzen werden direkt als GeoPackage als Datenspeicher hinzugefügt. Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
+Die Kantons- und Landesgrenzen werden direkt als GeoPackage dem Datenspeicher hinzugefügt. Sie sind nicht in der Datenbank, weil sich die Daten nicht häufig ändern. Die Daten sind ausserdem nur für den Hintergrund gedacht um die Lesbarkeit der Karte zu erhöhen.
 
 <video width="100%" height="auto" controls>
   <source src="videos/Hauptmenü.mp4" type="video/mp4">
@@ -365,9 +365,9 @@ In der Karte finden sich verschiedene Funktionen wieder. Beim Start der Karte be
 
 - **Pisten**: Die Pisten werden in der jeweiligen Farbe des Schwierigkeitsgrades visualisiert. Beim Anwählen der Piste wird die jeweilige Pistennummer unterhalb der Karte eingeblendet. Geschlossene Pisten sind zu 50% transparent dargestellt.
 
-- **Anlagen**: Die Sesselbahnen, Seilbahnen und Skilifte sind schwarz als Line dargestellt. Beim Anwählen wird der Name eingeblendet.
+- **Anlagen**: Die Sesselbahnen, Seilbahnen und Skilifte werden als schwarze Linie dargestellt. Beim Anwählen wird der Name eingeblendet.
 
-- **Restaurants**: und Bars Die Verpflegungsmöglichkeiten im Skigebiet sind mit jeweiligem Piktogramm visualisiert. Nach dem Anwählen erscheinen Informationen zur Örtlichkeit, sowie die Öffnungszeiten.
+- **Restaurants und Bars**: Die Verpflegungsmöglichkeiten im Skigebiet sind mit jeweiligem Piktogramm visualisiert. Nach dem Anwählen erscheinen Informationen zur Örtlichkeit sowie die Öffnungszeiten.
 
 - **POI’s (points of interests)**: Zum Beispiel Parkplätze oder Bushaltestellen die Informationen wie den Namen enthalten.
 
@@ -505,7 +505,7 @@ Im Statistik-Menü finden Sie alle relevanten Informationen zu vergangenen Skita
 
 ##### Konzept
 
-Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter, in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechendem Zeitpunkt. So kann der Wintersporttag analysiert werden.
+Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern. Die Informationen stammen vom Live-Tracking. Das Menü ist aufgeteilt in verschiedene Tagesstatistiken und den Saisonverlauf. Für jeden Tag wird die zurückgelegte Distanz angezeigt, sowie Höhenmeter, Dauer des Wintersporttages und die Anzahl der benutzten Anlagen. Der Saisonverlauf zeigt die über die gesamte Saison zurückgelegte Distanz sowie weitere Informationen und den Tagesdurchschnitt. Für jeden Tag wird der zurückgelegte Weg in der Karte dargestellt. Dieser erscheint nach Anklicken der jeweiligen Tagesstatistiken. Unterhalb der Karte sind zwei Liniendiagramme, welche die Geschwindigkeit und die Höhenmeter in Abhängigkeit der Zeit abbilden. Zum einen kann der ganze Tag abgespielt werden in der Karte und im Diagramm, zum andern kann im Diagramm ein Zeitpunkt ausgewählt werden. Der Marker springt dann zur Position in der Karte zum entsprechenden Zeitpunkt. So kann der Wintersporttag analysiert werden.
 
 <video width="100%" height="auto" controls>
   <source src="videos/Statistiken.mp4" type="video/mp4">
@@ -515,11 +515,11 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 **Statistiken**
 
-- Die Daten, die während eines Skitages aufgezeichnet wurden, können mit dem Python-Skript `gpx_to_db.py` in die App importiert werden. Dieses Skript liest die Informationen aus der gpx-Datei, wandelt sie um und erstellt eine neue Zeile mit diesen Informationen in der Datenbank, in der Tabelle `skidaten`. Die Daten werden dann für die Darstellung in der App mithilfe eines Node-Servers erhoben.
+- Die Daten, die während eines Skitages aufgezeichnet wurden, können mit dem Python-Skript `gpx_to_db.py` in die App importiert werden. Dieses Skript liest die Informationen aus der gpx-Datei, wandelt sie um und erstellt eine neue Zeile mit diesen Informationen in der Datenbank in der Tabelle `skidaten`. Die Daten werden dann für die Darstellung in der App mithilfe eines Node-Servers erhoben.
 
 - Auf der Statistiken-Seite können die Daten entweder vom neuesten zum ältesten oder vom ältesten zum neuesten mithilfe einer einfachen Schaltfläche sortiert werden.
 
-- Wenn die Statistiken-Seite geöffnet wird, werden zunächst alle Daten aus der Tabelle `skidaten` angezeigt. Es ist möglich, mit Hilfe des Dropdown-Menüs eine bestimmte Saison auszuwählen, von der man die einzelnen Skitage sehen möchte.
+- Wenn die Statistiken-Seite geöffnet wird, werden zunächst alle Daten aus der Tabelle `skidaten` angezeigt. Es ist möglich, mithilfe des Dropdown-Menüs eine bestimmte Saison auszuwählen, von der man die einzelnen Skitage sehen möchte.
 
 **Statistiken Viewer**
 
@@ -566,7 +566,7 @@ Das Menü Statistiken zeigt die Informationen zu den gefahrenen Pistenkilometern
 
 #### Navi
 
-Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Position verschoben. Der kürzeste Weg zum Ziel wird danach in der Karte als Route hervorgehoben. Mit nach anklicken Reset Schaltfläche verschwinden Marker und Route von der Karte.
+Im Menü Navi wird der Start- und Zielpunkt auf der Karte an die gewünschte Position verschoben. Der kürzeste Weg zum Ziel wird danach in der Karte als Route hervorgehoben. Durch das Anklicken des Reset Button verschwinden die Marker und die Route von der Karte.
 
 Alle Relevanten Dateien sind im Ordner `Routing` gespeichert.
 
@@ -692,7 +692,7 @@ Beispiel:
 
 [Dijkstra](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) ist ein Algorithmus mit welchem der kürzeste Weg zwischen Start und Ziel, in einem Netzwerk berechnet werden kann. Dies ist mit Einbezug von von Kosten möglich, in diesem Fall dem Abstand zwischen den Konten (Distanz). Der Dijkstra Algorithmus kann auch die Heuristik miteinbeziehen. Diese ist eine Schätzung, welche eine Annäherung zur optimalen Lösung ist. Diese muss aber nicht korrekt sein. Die Annäherung kann zum Beispiel die Luftlinie zwischen Start und Endpunkt sein. Der Dijkstra Algorithmus mit Heuristik wird als `A\*` bezeichnet. Mit der Schätzung ist der Algorithmus meist [schneller](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN), da dieser einen Anhaltspunkt hat in welche Richtung die Suche los gehen soll.
 
-**Wieso wird nicht der `A\*` Algorithmus verwendet?** Die Luftlinienschätzung funktioniert bei den Anlagen weniger gut, da diese dem Gelände hinauf verlaufen. Dabei nicht immer in die Richtung des Zielpunktes zeigen. Der Geschwindigkeitsgewinn ist bei grossen Netzwerken mit mehren hundert Knoten signifikant. Da aber die längste Strecke in der Lenzerheide von der Bergstation Piz Scalottas zur Brüggerhorn Black Diamond Piste nur 87 Teilstücke umfasst ist dies nicht sehr lange. Dies bedeutet, der Zeitgewinn bei diesem einfachen Netzwerk ist nicht gross. Um aber dies Umfassend zu klären müssten beide Algorithmen an den Daten getestet und verglichen werden.
+**Wieso wird nicht der `A\*` Algorithmus verwendet?** Die Luftlinienschätzung funktioniert bei den Anlagen weniger gut, da diese dem Gelände hinauf verlaufen. Dabei nicht immer in die Richtung des Zielpunktes zeigen. Der Geschwindigkeitsgewinn ist bei grossen Netzwerken mit mehren hundert Knoten signifikant. Da aber die längste Strecke in der Lenzerheide von der Bergstation Piz Scalottas zur Brüggerhorn Black Diamond Piste nur 87 Teilstücke umfasst, ist dies nicht sehr lange. Dies bedeutet, der Zeitgewinn bei diesem einfachen Netzwerk ist nicht gross. Um aber dies Umfassend zu klären müssten beide Algorithmen an den Daten getestet und verglichen werden.
 
 ##### Funktion
 
@@ -721,7 +721,7 @@ Die Restaurants des Skigebietes werden in Kacheln angeordnet. In diesen Kacheln 
 
 <left><img style="max-height: 65%; width: 65%;" src="images/vorprozessierung_restaurants.png"  /></left>
 
-Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mit Hilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
+Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 transformiert. Anschliessend wird jedes Restaurant mithilfe des NeighborFinder dem nächsten Skigebiet zugewiesen.
 
 <video width="100%" height="auto" controls>
     <source src="videos/Restaurant.mp4" type="video/mp4">
@@ -729,7 +729,7 @@ Beim Datenimport in die Datenbank werden die Koordinaten von WGS84 in LV95 trans
 
 ##### Funktion
 
-Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort befinden sich die Bilder der Restaurants und unterhalb der dazugehörige Name. Beim Anklicken des Bildes oder Textes, öffnet sich die Karte und es wird auf die Position des Restaurants gezoomt. Unterhalb der Karte werden die Informationen angezeigt.
+Vom Hauptmenü aus kann auf die Schaltfläche Restaurants navigiert werden. Dort befinden sich die Bilder der Restaurants und unterhalb der dazugehörige Name. Beim Anklicken des Bildes oder Textes öffnet sich die Karte und es wird auf die Position des Restaurants gezoomt. Unterhalb der Karte werden die Informationen angezeigt.
 
 - Über den [Node Server](#nodeserver) wird der SQL Befehl `SELECT * FROM Restaurant ORDER BY r_name;` abgesetzt. Mit diesem Befehl werden die gespeicherten Daten von der Datenbank alphabetisch nach dem Attribut `r_name` sortiert zurückgegeben. Die Daten können dann unter dem Pfad: `http://localhost:5000/api/restaurant` bezogen werden.
 - Beim Aufrufen der Seite Restaurant wird über einen useEffect-Hook eine Fetch-Anfrage an die oben genannten API Endpunkt gesendet. Die zurückkommenden Daten werden dann in einem Array gespeichert. Während die Daten geladen werden, wird dies angezeigt. Bei einem Fehler erscheint die [Fehlermeldung](#nodeserver_fehler).
@@ -770,7 +770,7 @@ _Upcoming features in AlpineACE V2.0_
 
 ### Aktueller Standort
 
-In der Karte wird die aktuelle Position des Gerätes angezeigt mit einem Marker. Dies erleichter das Nutzen der Karte und die Navi Funktion.
+In der Karte wird die aktuelle Position des Gerätes angezeigt mit einem Marker. Dies erleichter das Nutzen der Karte und die Navifunktion.
 
 ### Karten Legende
 
@@ -788,11 +788,11 @@ In der Karte werden alle Symbole erklärt. Zusätzlich lassen sich die verschied
 
 ### Karten Zoom
 
-In der Karte kann das Zoomen zur Piste oder Anlage Verbessert werden. Es wird momentan nur ein Teil der Linie dargestellt. Dies könnte behoben werden beim Import im `geoserver_Datenimport.fmw`. Pisten und Anlagen könnten mit dem Transformer `Aggregator` nach dem Attribut Namen, als eine Geometry zusammengesetzt werden. Im Frontend ist die Funktionalität nach der Ausdehnung der Geometrie bereits vorhanden.
+In der Karte kann das Zoomen zur Piste oder Anlage verbessert werden. Es wird momentan nur ein Teil der Linie dargestellt. Dies könnte behoben werden beim Import im `geoserver_Datenimport.fmw`. Pisten und Anlagen könnten mit dem Transformer `Aggregator` nach dem Attribut Namen als eine Geometry zusammengesetzt werden. Im Frontend ist die Funktionalität nach der Ausdehnung der Geometrie bereits vorhanden.
 
 ### Aktuelle Dashboard Daten
 
-In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet. Eine weitere Möglichkeit wäre Web Scraping von der Webseite [Bergfex](https://www.bergfex.ch/arosa-lenzerheide/). Auf dieser sind sämtlich Anlage und Pisten Informationen von Skigebiete der Schweiz vorhanden. Das Web Scraping müsst so nur für einer Webseite programmiert werden und nciht für jedes Skigebiet neu.
+In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergbahnen bezogen, um stets die aktuellsten Informationen bereitstellen zu können. Die Daten werden dann alle 15 min aktualisiert, somit ist eine hohe Aktualität gewährleistet. Eine weitere Möglichkeit wäre Webscraping von der Webseite [Bergfex](https://www.bergfex.ch/arosa-lenzerheide/). Auf dieser sind sämtlich Anlage und Pisten Informationen von Skigebieten der Schweiz vorhanden. Das Webscraping müsst so nur für einer Webseite programmiert werden und nciht für jedes Skigebiet neu.
 
 ### Status Pisten und Analgen
 
