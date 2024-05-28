@@ -796,11 +796,11 @@ In Version 2.0 werden die Daten im Dashboard direkt von den Webseiten der Bergba
 
 ### Status Pisten und Analgen
 
-Das Attribut Status ist bei den Pisten und Analgen momentan leer. Wenn die Daten von Bergbahnen automatisch bezogen werden, könnten geschlossene Pisten und Analgen zusätzlich in der Karte differenziert symbolisiert werden. Auch das Routing könnte so angepasst werden, damit nur Routen angezeigt werden über offene Pisten und Anlagen. Das Datenbankschema wäre bereit für dieses Feature. Es existiert das Attribut Status auch in den Routing Tabellen. Wäre diese offen ist das Attribut Status `true` und wenn geschlossen `false`.
+Das Attribut Status ist bei den Pisten und Analgen momentan leer. Wenn die Daten von Bergbahnen automatisch bezogen werden, könnten geschlossene Pisten und Analgen zusätzlich in der Karte differenziert symbolisiert werden. Auch das Routing könnte so angepasst werden, damit nur Routen angezeigt werden über offene Pisten und Anlagen. Das Datenbankschema wäre bereit für dieses Feature. Es existiert das Attribut Status auch in den Routing Tabellen. Wäre diese offen, ist das Attribut Status `true` und wenn geschlossen `false`.
 
 ### Mehrere Skigebiete
 
-Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es möglich sein mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Webapp das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein Favoriten festzulegen, damit nicht immer gesucht werden muss.
+Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt, wird es möglich sein, mehrere Skigebiete auszuwählen. Dabei muss beim Starten der Web-App das gewünschte Skigebiet gewählt werden und anschliessend werden die Informationen des ausgewählten Skigebiets dargestellt. Es wird möglich sein, Favoriten festzulegen, damit nicht immer gesucht werden muss.
 
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
@@ -814,7 +814,7 @@ Damit das Skierlebnis sich nicht nur auf ein Skigebiet beschränkt wird es mögl
 
 ### Bewertungen
 
-Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten Bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei nach einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
+Mit einem Bewertungsmenü sollen die Nutzer sowohl Restaurants als auch die Pisten bewerten können. Somit lassen sich Daten über die Nutzererfahrung und das Qualitätsempfinden sammeln. Das Bewertungsmenü wird dabei nach einem Restaurant Besuch automatisch geöffnet. Es kann aber auch manuell über das Hauptmenü geöffnet werden.
 
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
@@ -847,7 +847,7 @@ In den Einstellungen kann die Webapp an die Bedürfnisse des Nutzers angepasst w
 
 ### Benutzerkonto
 
-Um Ihr Skierlebnis weiter zu verbessern, wird es bald möglich sein, ein Benutzerkonto anzulegen. Mit einem Konto kann man seine Statistiken sicher speichern und die Daten sind nicht mehr an ein einzelnes Gerät gebunden. So wird das individuelles Nutzungserlebnis optimal unterstützt.
+Um Ihr Skierlebnis weiter zu verbessern, wird es bald möglich sein, ein Benutzerkonto anzulegen. Mit einem Konto kann man seine Statistiken sicher speichern und die Daten sind nicht mehr an ein einzelnes Gerät gebunden. So wird das individuelle Nutzungserlebnis optimal unterstützt.
 
 ### Live Tracking
 
@@ -855,7 +855,7 @@ Um den Vergleich von Skitagen zu vereinfachen, wird ein Live-Tracking in die App
 
 ### Rückmeldung Lawinen
 
-Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten wird ein Button mit einer Verlinkung zum Rückmeldetool https://pro.slf.ch/reply/public/#/ des Institut für Schnee und Lawinenforschung . Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden.
+Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawinenbulletin. Um die Rückmeldung zu gewährleisten, wird ein Button mit einer Verlinkung zum Rückmeldetool (https://pro.slf.ch/reply/public/#/) des Instituts für Schnee und Lawinenforschung gemacht. Damit kann ein Beitrag zu einem qualitativ hochwertigen Lawinenbulletin geleistet werden.
 
 ## Reflektion
 
@@ -871,9 +871,9 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 
 **SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereiche und Funktionen kreiert werden.
 
-**React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf Mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
+**React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
 
-**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit Schlussendlich Daten auch auf Drittgeräten angezeigt werden.
+**CORS** : Was Cross-Origin Ressource Sharing ist und wie dies in der Express-API und im GeoServer gehandhabt wird, damit schlussendlich Daten auch auf Drittgeräten angezeigt werden.
 
 **Open Layer** : Mit der Open Layer Bibliothek konnten unterschiedliche Funktionen genutzt werden.
 
@@ -883,37 +883,37 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 - Controls: Kontroll Elemente wie Info Schaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
 - Marker: Ein- und Ausblenden von Marker in der Karte, gesteuert über Buttons.
 
-**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
+**Routing** : Mithilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehrere Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische Erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
 
-**Vega Diagramme** : Die Nutzung von Vega und Vega-Lite hat sich als äusserst effektiv erwiesen, um Daten anschaulich im Zusammenhang mit JavaScript darzustellen. Diese beiden Tools bieten eine flexible und leistungsfähige Möglichkeit zur Datenvisualisierung, die uns geholfen hat, komplexe Datensätze verständlich und übersichtlich zu präsentieren.
+**Vega Diagramme** : Die Nutzung von Vega und Vega-Lite hat sich als äusserst effektiv erwiesen, um Daten anschaulich im Zusammenhang mit Javascript darzustellen. Diese beiden Tools bieten eine flexible und leistungsfähige Möglichkeit zur Datenvisualisierung, die uns geholfen hat, komplexe Datensätze verständlich und übersichtlich zu präsentieren.
 
-**Git Hub README** : Im README wurde eine Installationsanleitung für das Projekt erstellt und getestet. Es sind die ersten Erfahrungen um ein README zu schreiben. Bisher wurde dieses nur gelesen. Dies ist ein spannender Perspektivenwechsel.
+**Git Hub README** : Im README wurde eine Installationsanleitung für das Projekt erstellt und getestet. Es sind die ersten Erfahrungen, um ein README zu schreiben. Bisher wurde dieses nur gelesen. Dies ist ein spannender Perspektivenwechsel..
 
-**Git Hub Page** : Erstellen einer Web-Dokumentation auf git Hub mit einem Markdown Datei. #TODO noch erweitern?
+**Git Hub Page** : Erstellen einer Web-Dokumentation auf GitHub mit Markdown-Dateien.
 
 ### Probleme
 
-**CORS** : Den Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
+**CORS** : Den Zugriff auf andere Webressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
 
 **Routing** : Zuerst wurden die Konten für die Pisten und Anlagen gemeinsam erstellt. Dies hatte zur Folge, dass die Navigationsroute beim Kreuzen die Anlage genutzt und/oder verlassen hat. Das konnte gelöst werden, indem die Konten getrennt berechnet wurden. Dies brachte zusätzliche Komplexität mit den Attributen der Routen Tabellen und der manuellen Bearbeitung.
 
-**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für ein Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
+**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserter Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für ein Konflikt. Dies konnte mit einer separaten Config-Datei gelöst werden, welche in der gitignore-Datei eingetragen ist.
 
-**GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
+**GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze GitHub-Repository. Gelöst wurde dies mit einem Eintrag in der gitignore-Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den Download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
 
-**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungs-Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
+**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im Laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungsfunktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
 
-**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datebank, welche über eine Express-API bezogen werden, mit Vega auf. DAher sind alle verwendeten Diagramme momentan noch Hard gecoded.
+**Vega** : Es traten Probleme mit der Darstellung von Daten der Datenbank, welche über eine Express-API bezogen werden, mit Vega auf. Daher sind alle verwendeten Diagramme momentan noch Hard gecoded.
 
 ### Vorgehen nächstes Projekt
 
-**Probleme Unterteilen** : Probleme in kleinstmögliche Form reduzieren und sich Hilfe in Foren suchen oder Chat GPT konsultieren. Nutzer von Foren helfen nur, wenn der Code kurz und dieser gut beschreiben ist (teilweise wird der Fehler beim dokumentieren bereits gefunden).
+**Probleme Unterteilen** : Probleme in kleinstmögliche Form reduzieren und sich Hilfe in Foren suchen oder Chat-GPT konsultieren. Nutzer von Foren helfen nur, wenn der Code kurz und dieser gut beschreiben ist (teilweise wird der Fehler beim Dokumentieren bereits gefunden).
 
-**Funktionen** : Mehr Funktionen schreiben um Redundanzen möglichst klein zu halten. Faustregeln: Wird der gleiche Code mehr als drei Mal verwendet im Projekt gehört dieser in eine Funktion.
+**Funktionen** : Mehr Funktionen schreiben, um Redundanzen möglichst klein zu halten. Faustregeln: Wird der gleiche Code mehr als drei Mal verwendet im Projekt gehört dieser in eine Funktion.
 
-**Verbindungsinformationen Datenbank** : Wenn möglich alle Verbindungsinformationen für alle gleich (DB Name, Passwort, Host und Port) während der Entwicklung und diese in separaten Config File speichern.
+**Verbindungsinformationen Datenbank** : Wenn möglich alle Verbindungsinformationen für alle gleich (DB Name, Passwort, Host und Port) während der Entwicklung und diese in separaten Config-Dateien speichern.
 
-**Sprache und Namenskonventionen festlegen** : Vor dem Projekt Start sollte die Sprache (Code und Dokumentation) festgelegt werden. Für den Code sollte ausschliesslich Englisch genutzt werden. Schreibfehler können mit einem Rechtschreiben-Plugin verhindert werden.
+**Sprache und Namenskonventionen festlegen** : Vor dem Projekt Start sollte die Sprache (Code und Dokumentation) festgelegt werden. Für den Code sollte ausschliesslich Englisch genutzt werden. Schreibfehler können mit einem Rechtschreiben-Plug-in verhindert werden.
 
 ## Quellenverzeichnis
 Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt und aufgelistet.s
