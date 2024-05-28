@@ -859,7 +859,7 @@ Rückmeldungen aus dem Gelände sind unerlässlich für ein zuverlässiges Lawin
 
 ## Reflektion
 
-Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Projektphasen hinaus.
+Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Projektphasen hinaus.
 
 ### Gelerntes in diesem Projekt
 
@@ -869,21 +869,21 @@ Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Pr
 
 **Geoserver** : Aufsetzen und Betreiben des GeoServer auf den Betriebssystem Windows und Raspberry Pi OS.
 
-**SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereichen und Funktionen kreiert werden.
+**SQL Views** : Mit SQL Views auf dem GeoServer können nur gewünschte Objekte per WFS bezogen werden. Die Parameter werden dabei per URL übergeben. Es konnten verschiedenste SQL Views mit unterschiedlichen Parameter, Wertebereiche und Funktionen kreiert werden.
 
 **React App Mobile Version** : Entwickeln einer React Webseite spezifisch auf Mobile Endgeräte. Die Komponenten passen sich dabei automatisch der Grösse des Bildschirms an.
 
-**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit schlussendlich Daten auch auf Drittgeräten angezeigt werden.
+**CORS** : Was Cross-Origin Resource Sharing ist und wie dies in der Express API und im GeoServer gehandhabt wird, damit Schlussendlich Daten auch auf Drittgeräten angezeigt werden.
 
 **Open Layer** : Mit der Open Layer Bibliothek konnten unterschiedliche Funktionen genutzt werden.
 
-- WMS: Datenbezug per WMS und mittels Funktion mehrmaliges Wiederverwenden mit kleinstmöglicher Redundanz im Code.
-- WFS: Datenbezug per WFS mittels eigens erstellter Funktion welche immer wieder verwendbar ist.
-- Layer Stylen : Style Datei für alle Karten Style, welche erlaubt in mehreren Karten die gleiche Style Definition zu nutzen. Für verschieden Geometrie Typen wie Linien, Flächen und Punkte (Icons) klassiert nach Attribut Werten. Diese dient als CSS für die Kartenlayers, mit all ihren Vorteilen.
-- Controls: Kontroll Elemente wie Infoschaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
+- WMS: Datenbezug per WMS und mittels Funktion mehrmaliges Wiederverwenden mit kleinst möglicher Redundanz im Code.
+- WFS: Datenbezug per WFS mittels eigenes erstellter Funktion welche immer wieder verwendbar ist.
+- Layer Stylen : Style Datei für alle Karten Style, welche erlaubt in mehren Karten die gleiche Style Definition zu nutzen. Für verschieden Geometrie Typen wie Linien, Flächen und Punkte (Icons) klassiert nach Attribut Werten. Diese dient als CSS für die Kartenlayers, mit all ihren Vorteilen.
+- Controls: Kontroll Elemente wie Info Schaltfläche für Hintergrundkarten Quelle oder Extend Zoomen.
 - Marker: Ein- und Ausblenden von Marker in der Karte, gesteuert über Buttons.
 
-**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische Erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
+**Routing** : Mit Hilfe der Erweiterung pgrouting konnten Routing Netzwerke über mehre Ebenen berechnet werden. Dabei wurde vertieftes Verständnis für das automatische erstellen von Knoten, Netzwerk Topologien (gerichtet/ungerichtet, gewichtet/ungewichtet) und Routing Algorithmen (`Dijkstra`, `A\*`) erworben.
 
 **Vega Diagramme** : Die Nutzung von Vega und Vega-Lite hat sich als äusserst effektiv erwiesen, um Daten anschaulich im Zusammenhang mit JavaScript darzustellen. Diese beiden Tools bieten eine flexible und leistungsfähige Möglichkeit zur Datenvisualisierung, die uns geholfen hat, komplexe Datensätze verständlich und übersichtlich zu präsentieren.
 
@@ -893,17 +893,17 @@ Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Pr
 
 ### Probleme
 
-**CORS** : Der Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurden Teile der Webseite nicht geladen.
+**CORS** : Den Zugriff auf andere Web Ressourcen in der React App wurde zuerst nicht definiert. So wurde Teile der Webseite nicht geladen.
 
 **Routing** : Zuerst wurden die Konten für die Pisten und Anlagen gemeinsam erstellt. Dies hatte zur Folge, dass die Navigationsroute beim Kreuzen die Anlage genutzt und/oder verlassen hat. Das konnte gelöst werden, indem die Konten getrennt berechnet wurden. Dies brachte zusätzliche Komplexität mit den Attributen der Routen Tabellen und der manuellen Bearbeitung.
 
-**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für einen Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
+**GIT Hub merge conflict** : Mehrmals während der Bearbeitung des Projekts entstanden Konflikte, da an der gleichen Stelle im Code gearbeitet wurde. Dies konnte mit verbesserte Kommunikation gelöst werden. Die Verbindungsinformationen waren der häufigste Grund für ein Konflikt. Dies konnte mit einer separaten Config Datei gelöst werden, welche in der gitignore Datei eingetragen ist.
 
-**GIT Hub Limit** : Das DHM25, mit einer Grösse von mehr als 100Mb,kann nicht auf GIT Hub hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
+**GIT Hub Limit** : Das DHM25 mit einer Grösse von mehr als 100Mb können nicht hochgeladen werden. Wird dies versucht, entsteht ein Fehler und blockiert das ganze git HUB Repository. Gelöst wurde dies mit einem Eintrag in der gitignore Datei. Der Bezug vom DHM25 wurde mittels automatischen Download Skript gelöst. Dieses führt die den download aus, entzippt dieses und legt es im korrekten Verzeichnis ab.
 
-**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit besserer Absprache untereinander und einer guten Umbenennungs-Funktion konnte das Problem gelöst werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
+**Namenskonventionen** : Teilweisse änderten sich die Namen von Funktionen im laufe des Projekts. Dabei mussten Dateinamen und Konstante über alle Skripts angepasst werden. Mit bessere Absprache untereinander und einer guten Umbenennungs-Funktion konnte dem Problem entgegengesetzt werden. Die Mischung zwischen den Sprachen Deutsch Englisch besteht aber weiterhin.
 
-**Vega** : Es traten Probleme mit der Darstellung von Daten der Datenbank, welche über eine Express-API bezogen werden, mit Vega auf. Daher sind alle verwendeten Diagramme momentan noch hartkodiert.
+**Vega** : Es tratten Probleme mit der Darstellung von Daten der Datebank, welche über eine Express-API bezogen werden, mit Vega auf. DAher sind alle verwendeten Diagramme momentan noch Hard gecoded.
 
 ### Vorgehen nächstes Projekt
 
@@ -915,11 +915,39 @@ Das Projekt war sehr umfassend mit verschiedenen Herausforderungen über alle Pr
 
 **Sprache und Namenskonventionen festlegen** : Vor dem Projekt Start sollte die Sprache (Code und Dokumentation) festgelegt werden. Für den Code sollte ausschliesslich Englisch genutzt werden. Schreibfehler können mit einem Rechtschreiben-Plugin verhindert werden.
 
-## Literatur
+## Quellenverzeichnis
+Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt und aufgelistet.s
+
+### Literatur
 
 [Heuristic Pathfinding Algorithm Based on Dijkstra, Yan-Jiang SUN, Xiang-Qian DING, Lei-Na JIANG, 2017](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN)
 
 [Lernmodul 7 Dijkstra-Erweiterungen, 2004](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf)
+
+### Datenquellen
+<table style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+    </colgroup>
+    <tr>
+      <td style="border: none;">
+        <h3>
+          <center>Namen der Datenquelle</center>
+        </h3>
+      </td>
+      <td style="border: none;">
+        <h3>
+          <center>Link</center>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+
+</table>
+
+
+
 
 ## Contribution
 
