@@ -54,7 +54,7 @@ Folgende Python-Module müssen für das Backend Installiert werden:
 - shutil
 
 Die Module können über das **requirements.txt** im gewünschten Prompt installiert werden. Folgend den Code für die Erstellung des
-Environment mit Anaconda
+Environments mit Anaconda
 
 1. Speicherort für Environment festlegen
 
@@ -82,7 +82,7 @@ Die Webapp wurde mit der Node version 18.18.0 getestet.
 
 ### GeoServer-Requirements
 
-Voraussetzung für das Projekt ist die installierte GeoSever Version 2.24.2. Hier ist die offizielle [Installationsanleitung](https://docs.geoserver.org/main/en/user/installation/index.html) für die verschieden Betriebssysteme.
+Voraussetzung für das Projekt ist die GeoServer Version 2.24.2. Hier ist die offizielle [Installationsanleitung](https://docs.geoserver.org/main/en/user/installation/index.html) für die verschieden Betriebssysteme.
 
 ## Installation
 
@@ -113,7 +113,7 @@ npm start
 
 ### Backend
 
-Das Backend besteht aus vier Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis), einem Node-Sever und einem GeoServer der die Geodaten zur Verfügung stellt.
+Das Backend besteht aus vier Komponenten. Einem Datenbezugsteil (Python), einer Datenbank (Postgres inkl. Postgis), einem Node-Server und einem GeoServer der die Geodaten zur Verfügung stellt.
 
 #### Postgres inkl. Postgis
 
@@ -121,7 +121,7 @@ Das Schema der DB findet sich unter _DB_PG/geoserver_DB_erstellen.txt._ Schema i
 
 #### Datenbank Verbindungen
 
-Für die Python und Java Script Programme gibt es je ein Datei in der die Verbindungsinformationen gespeichert sind.
+Für die Python und Javascript Programme gibt es je eine Datei, in der die Verbindungsinformationen gespeichert sind.
 
 Damit die bezogenen Daten per Python Script über die APIs gespeichert werden können, muss das **config_template.py** angepasst und in **config.py** umbenannt werden. Die Datei ist im Ordner `API`. Es müssen folgende Parameter geändert werden:
 
@@ -174,7 +174,7 @@ python DB_PG/ASCII_Hoehenmodell_download.py
 ```
 
 3. Verzeichnis `DB_PG` öffnen. In diesem sind alle Dateien für den Datenbank Import gespeichert. Jedes Datenformat hat einen eigenen Unterordner.
-4. Öffnen der FME Workbench `geoserver_Datenimport.fmw`. Es werden alle Daten aus den verschieden Ordner und Datenformate in die Datenbank geschrieben. Dabei werden die Attribute und Geometrien so extrahiert und verändert, dass diese dem Datenbankschema entsprechen. Vor dem Start der FME Workbench muss unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen werden. Vor dem Ausführen muss überprüft werden, das der Reader Pfad auf die Daten zeigen.
+4. Öffnen der FME Workbench `geoserver_Datenimport.fmw`. Es werden alle Daten aus den verschiedenen Ordner und Datenformate in die Datenbank geschrieben. Dabei werden die Attribute und Geometrien so extrahiert und verändert, dass diese dem Datenbankschema entsprechen. Vor dem Start der FME Workbench muss unter `Tools ->  FME Options -> Database Connections` die Verbindungsinformationen zur Datenbank eintragen werden. Vor dem Ausführen muss überprüft werden, das der Reader Pfad auf die Daten zeigen.
 
 - `DB_PG\geoserver_DB_erstellen.txt`: Datenbankschema für den Reader `DB_erstellen_script`. Das [Datenbankschema](https://alpineacemanagement.github.io/Alpine_Ace/#datenbankschema) ist in der Dokumentation näher beschrieben
 
@@ -197,7 +197,7 @@ CSV Dateien:
 
 5. Jetzt kann die Workbench ausgeführt werden, unter dem grünen Play-Button oben links. Die Userparameter sind in der Dokumentation näher beschrieben im Kapitel [Pisten](https://alpineacemanagement.github.io/Alpine_Ace/#pisten) und [Anlagen](https://alpineacemanagement.github.io/Alpine_Ace/#anlagen). Das ändern der Standartwerte ist nur Fortgeschritten Nutzern empfohlen.
 
-Der Datenimport für alle Daten, ausser das Routing ist jetzt abgeschlossen.
+Der Datenimport für alle Daten, das Routing ausgenommen, ist jetzt abgeschlossen.
 
 6. Verzeichnis `Routing` öffnen. Hier sind alle Dateien für die Prozessierung des Routings.
 7. Öffnen der FME Workbench `Routing_geoserver.fmw`. Vor dem Ausführen muss überprüft werden, das der Reader Pfad auf die Daten zeigen.
@@ -692,7 +692,7 @@ Momentan müssen die GPX-Dateien noch manuell in die Datenbank eingelesen werden
 path = "path/to/gpx"
 ```
 
-Es empfiehlt sich, innerhalb des Projekts einen Ordner namens "GPX" anzulegen und dort die Dateien zu speichern.
+Es empfiehlt sich, innerhalb des Projekts einen Ordner namens "GPX" anzulegen und dort die GPX-Dateien zu speichern.
 
 ## Page
 
