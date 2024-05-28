@@ -920,9 +920,9 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
 
 ### Literatur
 
-[Heuristic Pathfinding Algorithm Based on Dijkstra, Yan-Jiang SUN, Xiang-Qian DING, Lei-Na JIANG, 2017](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.atlantis-press.com/article/25884610.pdf&ved=2ahUKEwj_y6COwKKGAxWNzwIHHUucBH4QFnoECDEQAQ&usg=AOvVaw0bBiVkZaVfQ8fKAlLYRrDN)
+geoinformation.net (o.J.). Lernmodul 7: Geo-Algorithmen und -Datenstrukturen - Dijkstra-Erweiterungen. URL: [http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf] (http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf) [Zugriffsdatum: 28. Mai 2024].
 
-[Lernmodul 7 Dijkstra-Erweiterungen, 2004](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf)
+SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algorithm Based on Dijkstra. In. Qingdao, Shandong, China. DOI: 10.2991/eeeis-17.2017.59 URL.
 
 ### Datenquellen
 
@@ -983,12 +983,20 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
         <a href="https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d" >https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d </a>
       </td>
     </tr>
-        <tr>
+    <tr>
       <td>
         <p>Pisten</p>
       </td>
       <td>
         <a href="data.opensnowmap.org." >data.opensnowmap.org. </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>DHM25</p>
+      </td>
+      <td>
+        <a href="https://www.swisstopo.admin.ch/de/hoehenmodell-dhm25" >https://www.swisstopo.admin.ch/de/hoehenmodell-dhm25 </a>
       </td>
     </tr>
 </table>
