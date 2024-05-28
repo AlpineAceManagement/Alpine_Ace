@@ -925,6 +925,7 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
 [Lernmodul 7 Dijkstra-Erweiterungen, 2004](http://www.geoinformation.net/lernmodule/folien/Lernmodul_07/druck/lm7_le2.pdf)
 
 ### Datenquellen
+
 <table style="border-collapse: collapse; width: 100%;">
     <colgroup>
       <col style="width: 50%;">
@@ -933,12 +934,12 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
     <tr>
       <td style="border: none;">
         <p style= "bold">
-          <center>Namen der Datenquelle</center>
+          Namen der Datenquelle
         </p>
       </td>
       <td style="border: none;">
         <p style = "bold">
-          <center>Link</center>
+          Link
         </p>
       </td>
     </tr>
@@ -967,6 +968,94 @@ Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt un
       </td>
     </tr>
 </table>
+
+### Libraries
+#### Python
+
+table style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 50%;">
+    </colgroup>
+    <tr>
+      <td style="border: none;">
+        <p style= "bold">
+          Namen der Library
+        </p>
+      </td>
+      <td style="border: none;">
+        <p style = "bold">
+          Link zur Dokumenation
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>openmeteo-requests</p>
+      </td>
+      <td>
+        <a href="https://pypi.org/project/openmeteo-requests/ " >https://pypi.org/project/openmeteo-requests/ </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>psycopg2</p>
+      </td>
+      <td>
+        <a href="https://www.psycopg.org/docs/" >https://www.psycopg.org/docs/ </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>requests</p>
+      </td>
+      <td>
+        <a href="https://pypi.org/project/requests/" >https://pypi.org/project/requests/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>requests-cache</p>
+      </td>
+      <td>
+        <a href="https://pypi.org/project/requests-cache/" >https://pypi.org/project/requests-cache/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>retry-requests</p>
+      </td>
+      <td>
+        <a href="https://pypi.org/project/retry-requests/" >https://pypi.org/project/retry-requests/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>pyproj</p>
+      </td>
+      <td>
+        <a href="https://pyproj4.github.io/pyproj/stable/" >https://pyproj4.github.io/pyproj/stable/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>pandas</p>
+      </td>
+      <td>
+        <a href="https://pandas.pydata.org/" >https://pandas.pydata.org/</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>shutil</p>
+      </td>
+      <td>
+        <a href="https://docs.python.org/3/library/shutil.html" >https://docs.python.org/3/library/shutil.html</a>
+      </td>
+    </tr>
+</table>
+
+
 
 
 
