@@ -933,9 +933,9 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
     </colgroup>
     <tr>
       <td style="border: none;">
-        <p style= "bold">
+        <h4>
           Namen der Datenquelle
-        </p>
+        </h4>
       </td>
       <td style="border: none;">
         <p style = "bold">
