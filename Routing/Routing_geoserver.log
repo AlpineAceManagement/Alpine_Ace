@@ -1,79 +1,79 @@
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|System Time: 20240526200033 UTC
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Form (floating)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Temporary License: 36 days left.
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Machine host name is: orange
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\Routing/'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Routing_geoserver.fmw'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Platform: WIN64
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|System Status: 164.84 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1716753588024_24684\fmetmp_2)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|START - ProcessID: 4320, peak process memory usage: 43784 kB, current process memory usage: 43784 kB
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\Routing\wb-xlate-1716753630019_24684' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `53606' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `53580'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\Routing'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1716753588024_24684\fmetmp_2', set from environment variable `FME_TEMP'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Creating writer for format: 
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Creating reader for format: 
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding TEXTLINE Reader with keyword TEXTLINE_1
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_2
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Creating reader for format: Text File
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `TEXTLINE'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Loaded module 'TEXTLINE' from file 'C:\Program Files\FME_Build_23619\plugins/TEXTLINE.dll'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version of module 'TEXTLINE' matches current internal version (4.0 20230426)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Text File Reader: Opening the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Text File Reader: Will read the entire contents of each file into a single attribute
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Loaded module 'CounterFactory' from file 'C:\Program Files\FME_Build_23619\plugins/CounterFactory.dll'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version of module 'CounterFactory' matches current internal version (4.0 20230426)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Loaded module 'VertexCreatorFactory' from file 'C:\Program Files\FME_Build_23619\plugins/VertexCreatorFactory.dll'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version of module 'VertexCreatorFactory' matches current internal version (4.0 20230426)
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|Loaded module 'QueryFactory' from file 'C:\Program Files\FME_Build_23619\plugins/QueryFactory.dll'
-2024-05-26 22:00:32|   0.0|  0.0|INFORM|FME API version of module 'QueryFactory' matches current internal version (4.0 20230426)
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for R_1
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Creating reader for format: PostGIS
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Loaded module 'POSTGIS' from file 'C:\Program Files\FME_Build_23619\plugins/POSTGIS.dll'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (4.0 20230426)
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Performing query against POSTGIS dataset `geoserver'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Executing custom data query: 'DROP TABLE IF EXISTS a_a_routing CASCADE;
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Current FME version: FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|System Time: 20240528120356 UTC
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME_Build_23619\'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Form (floating)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Temporary License: 34 days left.
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Machine host name is: orange
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|OS Locale Name     : en_CH
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version: '4.0 20230426'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\FHNW_lokal\4230\Alpine_Ace\Routing/'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Routing_geoserver.fmw'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2023.1.0.0'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 22631)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Platform: WIN64
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|System Status: 164.40 GB of disk space available in the FME temporary folder (C:\Temp\QGIS\wbrun_1716897799699_23880\fmetmp_1)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|System Status: 31.69 GB of physical memory available
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|System Status: 126.75 GB of virtual memory available
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|START - ProcessID: 21984, peak process memory usage: 43872 kB, current process memory usage: 43872 kB
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME_Build_23619\fme.exe' `C:\FHNW_lokal\4230\Alpine_Ace\Routing\wb-xlate-1716897833097_23880' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `65243' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `65205'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\fabia\AppData\Roaming\Safe Software\FME\'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME_Build_23619\datasources;C:\Users\fabia\Documents\FME\Formats
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\fabia\AppData\Roaming\Safe Software\FME\Packages\23619-win64\transformers;C:\Program Files\FME_Build_23619\transformers;C:\Users\fabia\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\fabia\Documents\FME\CoordinateSystems
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\fabia\Documents\FME\CoordinateSystemExceptions
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\fabia\Documents\FME\CoordinateSystemGridOverrides
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\fabia\Documents\FME\CsmapTransformationExceptions
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\fabia\Documents\FME\TransformerCategories
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `PRIMARY_DEST'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\FHNW_lokal\4230\Alpine_Ace\Routing'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Temp\QGIS\wbrun_1716897799699_23880\fmetmp_1', set from environment variable `FME_TEMP'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Temp\QGIS'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME_Build_23619\'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 95.06 GB
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 71.30 GB
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Creating writer for format: 
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Creating reader for format: 
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding TEXTLINE Reader with keyword TEXTLINE_1
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_2
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Creating reader for format: Text File
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `TEXTLINE'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'TEXTLINE' from file 'C:\Program Files\FME_Build_23619\plugins/TEXTLINE.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'TEXTLINE' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Text File Reader: Opening the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Text File Reader: Will read the entire contents of each file into a single attribute
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME_Build_23619\plugins/LogCount_func.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'CounterFactory' from file 'C:\Program Files\FME_Build_23619\plugins/CounterFactory.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'CounterFactory' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'VertexCreatorFactory' from file 'C:\Program Files\FME_Build_23619\plugins/VertexCreatorFactory.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'VertexCreatorFactory' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'QueryFactory' from file 'C:\Program Files\FME_Build_23619\plugins/QueryFactory.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'QueryFactory' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for R_1
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Creating reader for format: PostGIS
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Loaded module 'POSTGIS' from file 'C:\Program Files\FME_Build_23619\plugins/POSTGIS.dll'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (4.0 20230426)
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Performing query against POSTGIS dataset `geoserver'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|PostgreSQL 15.5, compiled by Visual C++ build 1914, 64-bit
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Executing custom data query: 'DROP TABLE IF EXISTS a_a_routing CASCADE;
 CREATE TABLE a_a_routing (
     id INTEGER PRIMARY KEY,
     routing_einweg BOOLEAN,
@@ -110,463 +110,462 @@ CREATE TABLE a_a_anlage_routing (
 	P_Status BOOL,
 	Skigebiet_ID INTEGER REFERENCES Skigebiet(Skigebiet_ID)
 );'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Text File Reader: Closing the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_2
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Creating reader for format: PostGIS
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Executing data query: 'declare "public_anlagen_crsr" cursor for select "anlage_id","a_name","a_hoehe","a_status","a_einweg","skigebiet_id", ST_AsEWKB("a_geometrie") as "a_geometrie" from "public"."anlagen"'
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen'...
-2024-05-26 22:00:33|   0.0|  0.0|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_2[POSTGIS] set to `EPSG:2056' as read from input data
-2024-05-26 22:00:33|   0.1|  0.1|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-05-26 22:00:33|   0.1|  0.0|INFORM|Executing data query: 'declare "public_anlagen_startpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("anlagen_startkoordinaten") as "anlagen_startkoordinaten" from "public"."anlagen_startpunkt"'
-2024-05-26 22:00:33|   0.1|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_startpunkt'...
-2024-05-26 22:00:33|   0.1|  0.0|INFORM|AttributeManager (AttrSetFactory): Splitting bulk features into individual features
-2024-05-26 22:00:33|   0.2|  0.1|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_4
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Creating writer for format: PostGIS
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Writer `POSTGIS_4' of type `POSTGIS' using group definition keyword `POSTGIS_4_DEF'
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Testing for the existence of table 'public.a_a_anlage_routing'...
-2024-05-26 22:00:33|   0.2|  0.0|INFORM|Using existing table 'public.a_a_anlage_routing'
-2024-05-26 22:00:34|   0.2|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_anlage_routing'
-2024-05-26 22:00:34|   0.2|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_anlage_routing'
-2024-05-26 22:00:34|   0.3|  0.1|INFORM|Committed transaction at feature '1000'
-2024-05-26 22:00:34|   0.4|  0.1|INFORM|Executing data query: 'declare "public_pisten_crsr" cursor for select "piste_id","p_name","p_nummer","p_farbe","p_status","p_einweg","skigebiet_id", ST_AsEWKB("p_geometrie") as "p_geometrie" from "public"."pisten"'
-2024-05-26 22:00:34|   0.4|  0.0|INFORM|Reading POSTGIS table: 'public.pisten'...
-2024-05-26 22:00:34|   0.4|  0.0|INFORM|CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
-2024-05-26 22:00:34|   0.4|  0.0|WARN  |NeighborFinder_3 (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
-2024-05-26 22:00:34|   0.6|  0.2|INFORM|Executing data query: 'declare "public_anlagen_endpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("Anlagen_Endkoordinaten") as "Anlagen_Endkoordinaten" from "public"."anlagen_endpunkt"'
-2024-05-26 22:00:34|   0.6|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_endpunkt'...
-2024-05-26 22:00:35|   0.8|  0.2|INFORM|DistanceChopper_RemainderOfLine_modeFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:35|   0.8|  0.0|INFORM|DistanceChopper_RemainderOfLine_locationVerifier (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:35|   0.9|  0.1|INFORM|DistanceChopper_RemainderOfLine_DeaggFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,32.645229498968796), which is out of bounds for a line length of 32.645229498968796. Snapping params to closest valid value.
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,28.943105018903), which is out of bounds for a line length of 28.943105018903. Snapping params to closest valid value.
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,50.085286681474365), which is out of bounds for a line length of 50.085286681474365. Snapping params to closest valid value.
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,98.97724603988748), which is out of bounds for a line length of 98.97724603988748. Snapping params to closest valid value.
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,33.68262143409596), which is out of bounds for a line length of 33.68262143409596. Snapping params to closest valid value.
-2024-05-26 22:00:35|   0.9|  0.0|WARN  |Logging limit reached for the preceding message. Further instances of this message will not be logged
-2024-05-26 22:00:35|   1.0|  0.1|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Splitting bulk features into individual features
-2024-05-26 22:00:35|   1.0|  0.0|WARN  |Length function was passed feature(s) which had too few dimensions -- returning 0 for their value(s)
-2024-05-26 22:00:40|   3.1|  2.1|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Processed 6256 of 9466 features
-2024-05-26 22:00:45|   5.1|  2.0|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Processed 9466 of 9466 features
-2024-05-26 22:00:45|   5.1|  0.0|INFORM|DistanceChopper_GetFirstPart_modeFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:45|   5.1|  0.0|INFORM|DistanceChopper_GetFirstPart_locationVerifier (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:45|   5.1|  0.0|INFORM|DistanceChopper_GetFirstPart_DeaggFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:45|   5.3|  0.2|INFORM|DistanceChopper_GetFirstPart_SplitRemnants (DeaggregateFactory): Splitting bulk features into individual features
-2024-05-26 22:00:46|   5.4|  0.1|INFORM|Executing data query: 'declare "public_pisten_startpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("pisten_startkoordinaten") as "pisten_startkoordinaten" from "public"."pisten_startpunkt"'
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_startpunkt'...
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|CoordinateExtractor_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
-2024-05-26 22:00:46|   5.4|  0.0|WARN  |NeighborFinder (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|Executing data query: 'declare "public_pisten_endpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("Pisten_Endkoordinaten") as "Pisten_Endkoordinaten" from "public"."pisten_endpunkt"'
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_endpunkt'...
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|CoordinateExtractor_2_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.4|  0.0|INFORM|CoordinateExtractor_2_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.5|  0.1|INFORM|CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.5|  0.0|INFORM|NeighborFinder (ProximityFactory): Splitting bulk features into individual features
-2024-05-26 22:00:46|   5.5|  0.0|INFORM|NeighborFinder_2 (ProximityFactory): Splitting bulk features into individual features
-2024-05-26 22:00:46|   5.6|  0.1|INFORM|CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.6|  0.0|INFORM|CoordinateExtractor_4_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.6|  0.0|INFORM|CoordinateExtractor_4_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.6|  0.0|INFORM|CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
-2024-05-26 22:00:46|   5.6|  0.0|INFORM|NeighborFinder_3 (ProximityFactory): Splitting bulk features into individual features
-2024-05-26 22:00:46|   5.6|  0.0|INFORM|NeighborFinder_4 (ProximityFactory): Splitting bulk features into individual features
-2024-05-26 22:00:47|   5.6|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-05-26 22:00:47|   5.6|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-05-26 22:00:47|   5.6|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 32236 features from 2 readers
-2024-05-26 22:00:47|   5.6|  0.0|INFORM|Emptying factory pipeline
-2024-05-26 22:00:47|   5.6|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 32236 input feature(s), wrote 32236 output feature(s): 32236 matched merge filters, 32236 were routed to output, 0 could not be routed.
-2024-05-26 22:00:47|   5.6|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.anlagen_POSTGIS_2 Splitter (TeeFactory): Cloned 1291 input feature(s) into 1291 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.anlagen_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.anlagen_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.pisten_POSTGIS_2 Splitter (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.pisten_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9453 input feature(s) into 9453 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |public.pisten_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9453 input feature(s) into 9453 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_TESTMODE (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_SPECIFIC (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_2 OUTPUT Splitter (TeeFactory): Cloned 9453 input feature(s) into 18906 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_TESTMODE (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_SPECIFIC (TestFactory): Tested 9453 input feature(s) -- 9453 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9453 input feature(s) -- 9453 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Tested 9453 input feature(s) -- 0 feature(s) passed and 9453 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_4 OUTPUT Splitter (TeeFactory): Cloned 9453 input feature(s) into 18906 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper INPUT Input Collector (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_INPUT1716753631 Input Splitter (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LOOP_Entrance1716753631 Input Splitter (TeeFactory): Cloned 40538 input feature(s) into 81076 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_2_LengthCalculatorInput (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_2_LengthCalculator (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_2_Rejector (TestFactory): Tested 9466 input feature(s) -- 0 feature(s) passed and 9466 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_3 (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_2 (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_Tester_3 (TestFactory): Tested 9466 input feature(s) -- 9466 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_4 (TeeFactory): Cloned 9466 input feature(s) into 9466 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_4 OUTPUT Splitter (TeeFactory): Cloned 9466 input feature(s) into 18932 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_5 (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_5 OUTPUT Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_modeFilter (TestFactory): Tested 50004 input feature(s) -- 0 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_vertexFilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_locationVerifier (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggFilter (TestFactory): Tested 50004 input feature(s) -- 0 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_Aggfilter (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_Typefilter (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggInput (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_MultiTypefilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggMultis (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggNullNuker (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_Input (TeeFactory): Cloned 50004 input feature(s) into 50004 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Split 50004 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 97899 line(s), 2109 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_NullNuker (TestFactory): Tested 100008 input feature(s) -- 0 feature(s) passed and 100008 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_RemainderOfLine_Outputter (TestFactory): Tested 100008 input feature(s) -- 50004 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_ExpressionEvaluator (TeeFactory): Cloned 50004 input feature(s) into 50004 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_3_LengthCalculatorInput (TeeFactory): Cloned 50004 input feature(s) into 50004 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_3_LengthCalculator (TeeFactory): Cloned 50004 input feature(s) into 50004 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_LengthCalculator_3_Rejector (TestFactory): Tested 50004 input feature(s) -- 0 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_Tester (TestFactory): Tested 50004 input feature(s) -- 2109 feature(s) passed and 47895 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_Tester_2 (TestFactory): Tested 47895 input feature(s) -- 7357 feature(s) passed and 40538 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_modeFilter (TestFactory): Tested 50004 input feature(s) -- 0 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_vertexFilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_locationVerifier (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggFilter (TestFactory): Tested 50004 input feature(s) -- 0 feature(s) passed and 50004 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_Aggfilter (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_Typefilter (TestFactory): Tested 50004 input feature(s) -- 50004 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggInput (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_MultiTypefilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggMultis (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggNullNuker (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_Input (TeeFactory): Cloned 50004 input feature(s) into 50004 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_SplitRemnants (DeaggregateFactory): Split 50004 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 97899 line(s), 0 point(s), and 0 aggregate(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_NullNuker (TestFactory): Tested 97899 input feature(s) -- 0 feature(s) passed and 97899 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_GetFirstPart_Outputter (TestFactory): Tested 97899 input feature(s) -- 50004 feature(s) passed and 47895 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_AttributeRemover_2 (TeeFactory): Cloned 57361 input feature(s) into 57361 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |Loop to DistanceChopper_LOOP_Entrance1716753631 Input Splitter (BranchingFactory): Branched 40538 input features -- 40538 features routed to the target factory, and 0 features routed to the fallback factory.
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper_CHOPPED1716753631 Output Collector (TeeFactory): Cloned 57361 input feature(s) into 57361 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |DistanceChopper CHOPPED Output Renamer/Nuker (TeeFactory): Cloned 57361 input feature(s) into 57361 output feature(s)
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-05-26 22:00:47|   5.6|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.6|  0.0|INFORM|Processing base feature(s)...
-2024-05-26 22:00:47|   5.7|  0.1|STATS |NeighborFinder_3 (ProximityFactory): Input Summary:  1286 base feature(s), 9453 candidate feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |NeighborFinder_3 (ProximityFactory): Output Summary: 1087 matched feature(s), 199 unmatched base feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|INFORM|Processing base feature(s)...
-2024-05-26 22:00:47|   5.7|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Input Summary:  199 base feature(s), 9453 candidate feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Output Summary: 63 matched feature(s), 136 unmatched base feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |Junction (TeeFactory): Cloned 1150 input feature(s) into 1150 output feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |GeometryRemover_2 (TeeFactory): Cloned 1150 input feature(s) into 1150 output feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.7|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-05-26 22:00:47|   5.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.7|  0.0|STATS |id                                                                        2456
-2024-05-26 22:00:47|   5.7|  0.0|STATS |==============================================================================
-2024-05-26 22:00:47|   5.7|  0.0|STATS |Total features counted:                                                   2456
-2024-05-26 22:00:47|   5.7|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.7|  0.0|STATS |Counter_2 OUTPUT Splitter (TeeFactory): Cloned 1150 input feature(s) into 2300 output feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-05-26 22:00:47|   5.7|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-05-26 22:00:47|   5.7|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
-2024-05-26 22:00:47|   5.7|  0.0|WARN  |Logging limit reached for the preceding message. Further instances of this message will not be logged
-2024-05-26 22:00:47|   5.7|  0.0|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 500 / 1150
-2024-05-26 22:00:47|   5.7|  0.0|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 1150 / 1150
-2024-05-26 22:00:47|   5.7|  0.0|STATS |LineBuilder_2 (ConnectionFactory): Processed 2300 input feature(s). Output 1150 feature(s) consisting of 0 polygonal feature(s), 1150 linear feature(s), and 0 point feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
-2024-05-26 22:00:47|   5.7|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
-2024-05-26 22:00:47|   5.7|  0.0|INFORM|Processing base feature(s)...
-2024-05-26 22:00:47|   5.7|  0.0|STATS |NeighborFinder (ProximityFactory): Input Summary:  1286 base feature(s), 9453 candidate feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|STATS |NeighborFinder (ProximityFactory): Output Summary: 953 matched feature(s), 333 unmatched base feature(s)
-2024-05-26 22:00:47|   5.7|  0.0|INFORM|Processing base feature(s)...
-2024-05-26 22:00:47|   5.8|  0.1|STATS |NeighborFinder_2 (ProximityFactory): Input Summary:  333 base feature(s), 9453 candidate feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |NeighborFinder_2 (ProximityFactory): Output Summary: 204 matched feature(s), 129 unmatched base feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Junction_2 (TeeFactory): Cloned 1157 input feature(s) into 1157 output feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |GeometryRemover (TeeFactory): Cloned 1157 input feature(s) into 1157 output feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.8|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-05-26 22:00:47|   5.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.8|  0.0|STATS |id                                                                        3613
-2024-05-26 22:00:47|   5.8|  0.0|STATS |==============================================================================
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Total features counted:                                                   3613
-2024-05-26 22:00:47|   5.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Counter OUTPUT Splitter (TeeFactory): Cloned 1157 input feature(s) into 2314 output feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|INFORM|LineBuilder (ConnectionFactory): Finished processing group 500 / 1157
-2024-05-26 22:00:47|   5.8|  0.0|INFORM|LineBuilder (ConnectionFactory): Finished processing group 1157 / 1157
-2024-05-26 22:00:47|   5.8|  0.0|STATS |LineBuilder (ConnectionFactory): Processed 2314 input feature(s). Output 1157 feature(s) consisting of 0 polygonal feature(s), 1157 linear feature(s), and 0 point feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Orientor (TeeFactory): Cloned 1157 input feature(s) into 1157 output feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Orientor_Rejector (TestFactory): Tested 1157 input feature(s) -- 0 feature(s) passed and 1157 feature(s) failed
-2024-05-26 22:00:47|   5.8|  0.0|STATS |AttributeRemover (TeeFactory): Cloned 2307 input feature(s) into 2307 output feature(s)
-2024-05-26 22:00:47|   5.8|  0.0|STATS |Junction_3 (TeeFactory): Cloned 59668 input feature(s) into 59668 output feature(s)
-2024-05-26 22:00:47|   5.9|  0.1|INFORM|LineOnLineOverlayer (OverlayFactory): Overlaying with an automatic tolerance of 5.678246686675283e-9
-2024-05-26 22:00:47|   6.1|  0.2|INFORM|FME Configuration: Using FME Reprojection Engine
-2024-05-26 22:00:50|   7.2|  1.1|STATS |LineOnLineOverlayer (OverlayFactory): Input Summary:  0 area(s), 0 point(s), and 59668 line(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |LineOnLineOverlayer (OverlayFactory): Output Summary: 0 area(s), 60381 point(s), and 68540 line(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |LineOnLineOverlayer LINE Splitter (TeeFactory): Cloned 68540 input feature(s) into 137080 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Tester_2 (TestFactory): Tested 68540 input feature(s) -- 60470 feature(s) passed and 8070 feature(s) failed
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Orientor_2 (TeeFactory): Cloned 8070 input feature(s) into 8070 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Orientor_2_Rejector (TestFactory): Tested 8070 input feature(s) -- 0 feature(s) passed and 8070 feature(s) failed
-2024-05-26 22:00:50|   7.2|  0.0|STATS |AttributeRemover_3 (TeeFactory): Cloned 76610 input feature(s) into 76610 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |id                                                                       80223
-2024-05-26 22:00:50|   7.2|  0.0|STATS |==============================================================================
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Total features counted:                                                  80223
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |AttributeManager OUTPUT Splitter (TeeFactory): Cloned 1291 input feature(s) into 2582 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Tester (TestFactory): Tested 1291 input feature(s) -- 1278 feature(s) passed and 13 feature(s) failed
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Tester_3 (TestFactory): Tested 1278 input feature(s) -- 2 feature(s) passed and 1276 feature(s) failed
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Orientor_3 (TeeFactory): Cloned 15 input feature(s) into 15 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Orientor_3_Rejector (TestFactory): Tested 15 input feature(s) -- 0 feature(s) passed and 15 feature(s) failed
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |                        `CountFactory' Domain Summary
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |id                                                                       80223
-2024-05-26 22:00:50|   7.2|  0.0|STATS |==============================================================================
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Total features counted:                                                  80223
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Successfully closed POSTGIS database reader
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 77916 input feature(s), wrote 77916 output feature(s): 0 matched merge filters, 77916 were routed to output, 0 could not be routed.
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Successfully closed POSTGIS database writer
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_4':
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |                               Features Written
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|STATS |public.a_a_anlage_routing                                                 1306
-2024-05-26 22:00:50|   7.2|  0.0|STATS |==============================================================================
-2024-05-26 22:00:50|   7.2|  0.0|STATS |Total Features Written                                                    1306
-2024-05-26 22:00:50|   7.2|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Started outputting features
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_3
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Creating writer for format: PostGIS
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|FME Configuration: Destination coordinate system set to `EPSG:2056'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Writer `POSTGIS_3' of type `POSTGIS' using group definition keyword `POSTGIS_3_DEF'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|PostGIS client encoding: 'UTF8'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|PostgreSQL 16.2, compiled by Visual C++ build 1937, 64-bit
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Testing for the existence of table 'public.a_a_routing'...
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Using existing table 'public.a_a_routing'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_routing'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_routing'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Committed transaction at feature '1000'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 1000 
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Committed transaction at feature '2000'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 2000 
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Committed transaction at feature '3000'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 3000 
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Committed transaction at feature '4000'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 4000 
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|Committed transaction at feature '5000'
-2024-05-26 22:00:50|   7.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 5000 
-2024-05-26 22:00:50|   7.3|  0.1|INFORM|Committed transaction at feature '6000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 6000 
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|Committed transaction at feature '7000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 7000 
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|Committed transaction at feature '8000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 8000 
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|Committed transaction at feature '9000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 9000 
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|Committed transaction at feature '10000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 10000 
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|Committed transaction at feature '11000'
-2024-05-26 22:00:50|   7.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 11000 
-2024-05-26 22:00:51|   7.4|  0.1|INFORM|Committed transaction at feature '12000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 12000 
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|Committed transaction at feature '13000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 13000 
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|Committed transaction at feature '14000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 14000 
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|Committed transaction at feature '15000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 15000 
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|Committed transaction at feature '16000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 16000 
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|Committed transaction at feature '17000'
-2024-05-26 22:00:51|   7.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 17000 
-2024-05-26 22:00:51|   7.5|  0.1|INFORM|Committed transaction at feature '18000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 18000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '19000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 19000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '20000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 20000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '21000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 21000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '22000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 22000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '23000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 23000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '24000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 24000 
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|Committed transaction at feature '25000'
-2024-05-26 22:00:51|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 25000 
-2024-05-26 22:00:51|   7.6|  0.1|INFORM|Committed transaction at feature '26000'
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 26000 
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|Committed transaction at feature '27000'
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 27000 
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|Committed transaction at feature '28000'
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 28000 
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|Committed transaction at feature '29000'
-2024-05-26 22:00:51|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 29000 
-2024-05-26 22:00:52|   7.6|  0.0|INFORM|Committed transaction at feature '30000'
-2024-05-26 22:00:52|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 30000 
-2024-05-26 22:00:52|   7.7|  0.1|INFORM|Committed transaction at feature '31000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 31000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '32000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 32000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '33000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 33000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '34000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 34000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '35000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 35000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '36000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 36000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '37000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 37000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '38000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 38000 
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|Committed transaction at feature '39000'
-2024-05-26 22:00:52|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 39000 
-2024-05-26 22:00:52|   7.8|  0.1|INFORM|Committed transaction at feature '40000'
-2024-05-26 22:00:52|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 40000 
-2024-05-26 22:00:52|   7.9|  0.1|INFORM|Committed transaction at feature '41000'
-2024-05-26 22:00:52|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 41000 
-2024-05-26 22:00:52|   7.9|  0.0|INFORM|Committed transaction at feature '42000'
-2024-05-26 22:00:52|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 42000 
-2024-05-26 22:00:52|   7.9|  0.0|INFORM|Committed transaction at feature '43000'
-2024-05-26 22:00:52|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 43000 
-2024-05-26 22:00:52|   8.0|  0.1|INFORM|Committed transaction at feature '44000'
-2024-05-26 22:00:52|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 44000 
-2024-05-26 22:00:52|   8.0|  0.0|INFORM|Committed transaction at feature '45000'
-2024-05-26 22:00:52|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 45000 
-2024-05-26 22:00:52|   8.0|  0.0|INFORM|Committed transaction at feature '46000'
-2024-05-26 22:00:52|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 46000 
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|Committed transaction at feature '47000'
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 47000 
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|Committed transaction at feature '48000'
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 48000 
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|Committed transaction at feature '49000'
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 49000 
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|Committed transaction at feature '50000'
-2024-05-26 22:00:53|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 50000 
-2024-05-26 22:00:53|   8.1|  0.1|INFORM|Committed transaction at feature '51000'
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 51000 
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|Committed transaction at feature '52000'
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 52000 
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|Committed transaction at feature '53000'
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 53000 
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|Committed transaction at feature '54000'
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 54000 
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|Committed transaction at feature '55000'
-2024-05-26 22:00:53|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 55000 
-2024-05-26 22:00:53|   8.2|  0.1|INFORM|Committed transaction at feature '56000'
-2024-05-26 22:00:53|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 56000 
-2024-05-26 22:00:53|   8.2|  0.0|INFORM|Committed transaction at feature '57000'
-2024-05-26 22:00:53|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 57000 
-2024-05-26 22:00:53|   8.2|  0.0|INFORM|Committed transaction at feature '58000'
-2024-05-26 22:00:53|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 58000 
-2024-05-26 22:00:53|   8.3|  0.1|INFORM|Committed transaction at feature '59000'
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 59000 
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|Committed transaction at feature '60000'
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 60000 
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|Committed transaction at feature '61000'
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 61000 
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|Committed transaction at feature '62000'
-2024-05-26 22:00:53|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 62000 
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|Committed transaction at feature '63000'
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 63000 
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|Committed transaction at feature '64000'
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 64000 
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|Committed transaction at feature '65000'
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 65000 
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|Committed transaction at feature '66000'
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 66000 
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|Committed transaction at feature '67000'
-2024-05-26 22:00:54|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 67000 
-2024-05-26 22:00:54|   8.4|  0.1|INFORM|Committed transaction at feature '68000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 68000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '69000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 69000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '70000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 70000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '71000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 71000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '72000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 72000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '73000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 73000 
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|Committed transaction at feature '74000'
-2024-05-26 22:00:54|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 74000 
-2024-05-26 22:00:54|   8.5|  0.1|INFORM|Committed transaction at feature '75000'
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 75000 
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|Committed transaction at feature '76000'
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 76000 
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|Successfully closed POSTGIS database writer
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_3':
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |                               Features Written
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.a_a_routing                                                       76610
-2024-05-26 22:00:54|   8.5|  0.0|STATS |==============================================================================
-2024-05-26 22:00:54|   8.5|  0.0|STATS |Total Features Written                                                   76610
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': done writing 76610 feature(s) 
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |                            Features Read Summary
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.anlagen                                                            1291
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.anlagen_endpunkt                                                   1286
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.anlagen_startpunkt                                                 1286
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.pisten                                                             9466
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.pisten_endpunkt                                                    9453
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.pisten_startpunkt                                                  9453
-2024-05-26 22:00:54|   8.5|  0.0|STATS |text_line                                                                    1
-2024-05-26 22:00:54|   8.5|  0.0|STATS |==============================================================================
-2024-05-26 22:00:54|   8.5|  0.0|STATS |Total Features Read                                                      32236
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |                           Features Written Summary
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.a_a_anlage_routing                                                 1306
-2024-05-26 22:00:54|   8.5|  0.0|STATS |public.a_a_routing                                                       76610
-2024-05-26 22:00:54|   8.5|  0.0|STATS |==============================================================================
-2024-05-26 22:00:54|   8.5|  0.0|STATS |Total Features Written                                                   77916
-2024-05-26 22:00:54|   8.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|Translation was SUCCESSFUL with 11 warning(s) (77916 feature(s) output)
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|FME Session Duration: 22 seconds. (CPU: 8.1s user, 0.4s system)
-2024-05-26 22:00:54|   8.5|  0.0|INFORM|END - ProcessID: 4320, peak process memory usage: 428156 kB, current process memory usage: 112812 kB
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Text File Reader: Closing the file 'C:\FHNW_lokal\4230\Alpine_Ace\Routing\alpine_ace_routing_DB_erweitern.txt'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_2
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Creating reader for format: PostGIS
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Opening POSTGIS reader for dataset 'geoserver'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|PostgreSQL 15.5, compiled by Visual C++ build 1914, 64-bit
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Executing data query: 'declare "public_anlagen_startpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("anlagen_startkoordinaten") as "anlagen_startkoordinaten" from "public"."anlagen_startpunkt"'
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_startpunkt'...
+2024-05-28 14:03:56|   0.0|  0.0|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_2[POSTGIS] set to `EPSG:2056' as read from input data
+2024-05-28 14:03:56|   0.1|  0.1|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
+2024-05-28 14:03:56|   0.1|  0.0|INFORM|Executing data query: 'declare "public_anlagen_endpunkt_crsr" cursor for select "anlage_id", ST_AsEWKB("Anlagen_Endkoordinaten") as "Anlagen_Endkoordinaten" from "public"."anlagen_endpunkt"'
+2024-05-28 14:03:56|   0.1|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen_endpunkt'...
+2024-05-28 14:03:56|   0.1|  0.0|INFORM|CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
+2024-05-28 14:03:56|   0.1|  0.0|WARN  |NeighborFinder_3 (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
+2024-05-28 14:03:56|   0.1|  0.0|INFORM|Executing data query: 'declare "public_pisten_endpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("Pisten_Endkoordinaten") as "Pisten_Endkoordinaten" from "public"."pisten_endpunkt"'
+2024-05-28 14:03:56|   0.1|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_endpunkt'...
+2024-05-28 14:03:57|   0.1|  0.0|INFORM|CoordinateExtractor_TESTZDEFAULT (TestFactory): Splitting bulk features into individual features
+2024-05-28 14:03:57|   0.1|  0.0|WARN  |NeighborFinder (ProximityFactory): Close Candidate List Name is blank so Number of Neighbors to Find will be forced to 1 ('' was specified)
+2024-05-28 14:03:57|   0.2|  0.1|INFORM|Executing data query: 'declare "public_anlagen_crsr" cursor for select "anlage_id","a_name","a_hoehe","a_status","a_einweg","skigebiet_id", ST_AsEWKB("a_geometrie") as "a_geometrie" from "public"."anlagen"'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Reading POSTGIS table: 'public.anlagen'...
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|CoordinateExtractor_4_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|CoordinateExtractor_4_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|NeighborFinder_3 (ProximityFactory): Splitting bulk features into individual features
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|NeighborFinder_4 (ProximityFactory): Splitting bulk features into individual features
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Executing data query: 'declare "public_pisten_crsr" cursor for select "piste_id","p_name","p_nummer","p_farbe","p_status","p_einweg","skigebiet_id", ST_AsEWKB("p_geometrie") as "p_geometrie" from "public"."pisten"'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Reading POSTGIS table: 'public.pisten'...
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|AttributeManager (AttrSetFactory): Splitting bulk features into individual features
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_4
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Creating writer for format: PostGIS
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Writer `POSTGIS_4' of type `POSTGIS' using group definition keyword `POSTGIS_4_DEF'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|PostgreSQL 15.5, compiled by Visual C++ build 1914, 64-bit
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Testing for the existence of table 'public.a_a_anlage_routing'...
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|Using existing table 'public.a_a_anlage_routing'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_anlage_routing'
+2024-05-28 14:03:57|   0.2|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_anlage_routing'
+2024-05-28 14:03:57|   0.3|  0.1|INFORM|Committed transaction at feature '1000'
+2024-05-28 14:03:57|   0.3|  0.0|INFORM|Committed transaction at feature '2000'
+2024-05-28 14:03:58|   0.6|  0.3|INFORM|Executing data query: 'declare "public_pisten_startpunkt_crsr" cursor for select "piste_id", ST_AsEWKB("pisten_startkoordinaten") as "pisten_startkoordinaten" from "public"."pisten_startpunkt"'
+2024-05-28 14:03:58|   0.6|  0.0|INFORM|Reading POSTGIS table: 'public.pisten_startpunkt'...
+2024-05-28 14:03:59|   0.9|  0.3|INFORM|DistanceChopper_RemainderOfLine_modeFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:59|   0.9|  0.0|INFORM|DistanceChopper_RemainderOfLine_locationVerifier (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:59|   1.0|  0.1|INFORM|DistanceChopper_RemainderOfLine_DeaggFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,32.645229498968796), which is out of bounds for a line length of 32.645229498968796. Snapping params to closest valid value.
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,28.943105018903), which is out of bounds for a line length of 28.943105018903. Snapping params to closest valid value.
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,50.085286681474365), which is out of bounds for a line length of 50.085286681474365. Snapping params to closest valid value.
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,98.97724603988748), which is out of bounds for a line length of 98.97724603988748. Snapping params to closest valid value.
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |@Snip (or FMELine::snip) was given a range of (100,33.68262143409596), which is out of bounds for a line length of 33.68262143409596. Snapping params to closest valid value.
+2024-05-28 14:03:59|   1.0|  0.0|WARN  |Logging limit reached for the preceding message. Further instances of this message will not be logged
+2024-05-28 14:03:59|   1.1|  0.1|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Splitting bulk features into individual features
+2024-05-28 14:03:59|   1.1|  0.0|WARN  |Length function was passed feature(s) which had too few dimensions -- returning 0 for their value(s)
+2024-05-28 14:04:04|   3.5|  2.4|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Processed 4403 of 9478 features
+2024-05-28 14:04:09|   5.7|  2.2|INFORM|DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Processed 9478 of 9478 features
+2024-05-28 14:04:09|   5.7|  0.0|INFORM|DistanceChopper_GetFirstPart_modeFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:09|   5.7|  0.0|INFORM|DistanceChopper_GetFirstPart_locationVerifier (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:09|   5.7|  0.0|INFORM|DistanceChopper_GetFirstPart_DeaggFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:09|   5.8|  0.1|INFORM|DistanceChopper_GetFirstPart_SplitRemnants (DeaggregateFactory): Splitting bulk features into individual features
+2024-05-28 14:04:10|   6.0|  0.2|INFORM|CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:10|   6.0|  0.0|INFORM|CoordinateExtractor_2_TESTMODE (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:10|   6.0|  0.0|INFORM|CoordinateExtractor_2_SPECIFIC (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:10|   6.0|  0.0|INFORM|CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2024-05-28 14:04:10|   6.0|  0.0|INFORM|NeighborFinder (ProximityFactory): Splitting bulk features into individual features
+2024-05-28 14:04:10|   6.0|  0.0|INFORM|NeighborFinder_2 (ProximityFactory): Splitting bulk features into individual features
+2024-05-28 14:04:10|   6.1|  0.1|INFORM|Successfully closed POSTGIS database reader
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Successfully closed POSTGIS database reader
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 32293 features from 2 readers
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Emptying factory pipeline
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 32293 input feature(s), wrote 32293 output feature(s): 32293 matched merge filters, 32293 were routed to output, 0 could not be routed.
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.anlagen_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.anlagen_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.anlagen_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.pisten_POSTGIS_2 Splitter (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.pisten_endpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |public.pisten_startpunkt_POSTGIS_2 Splitter (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |text_line_TEXTLINE_1 Splitter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_TESTZDEFAULT (TestFactory): Tested 9478 input feature(s) -- 9478 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_TESTMODE (TestFactory): Tested 9478 input feature(s) -- 0 feature(s) passed and 9478 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC (TestFactory): Tested 9478 input feature(s) -- 9478 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9478 input feature(s) -- 9478 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9478 input feature(s) -- 9478 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z_ROUTER (TestFactory): Tested 9478 input feature(s) -- 0 feature(s) passed and 9478 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_2 OUTPUT Splitter (TeeFactory): Cloned 9478 input feature(s) into 18956 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_TESTZDEFAULT (TestFactory): Tested 9478 input feature(s) -- 9478 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_TESTMODE (TestFactory): Tested 9478 input feature(s) -- 0 feature(s) passed and 9478 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC (TestFactory): Tested 9478 input feature(s) -- 9478 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 9478 input feature(s) -- 9478 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 9478 input feature(s) -- 9478 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z_ROUTER (TestFactory): Tested 9478 input feature(s) -- 0 feature(s) passed and 9478 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_4 OUTPUT Splitter (TeeFactory): Cloned 9478 input feature(s) into 18956 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper INPUT Input Collector (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_INPUT1716897834 Input Splitter (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LOOP_Entrance1716897834 Input Splitter (TeeFactory): Cloned 40682 input feature(s) into 81364 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_2_LengthCalculatorInput (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_2_LengthCalculator (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_2_Rejector (TestFactory): Tested 9478 input feature(s) -- 0 feature(s) passed and 9478 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_3 (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_2 (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_Tester_3 (TestFactory): Tested 9478 input feature(s) -- 9478 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_4 (TeeFactory): Cloned 9478 input feature(s) into 9478 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_4 OUTPUT Splitter (TeeFactory): Cloned 9478 input feature(s) into 18956 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_5 (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_EXPRESSIONEVALUATOR_5 OUTPUT Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_modeFilter (TestFactory): Tested 50160 input feature(s) -- 0 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_vertexFilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_locationVerifier (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggFilter (TestFactory): Tested 50160 input feature(s) -- 0 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_Aggfilter (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_Typefilter (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggInput (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_MultiTypefilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggMultis (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_DeaggNullNuker (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_Input (TeeFactory): Cloned 50160 input feature(s) into 50160 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_SplitRemnants (DeaggregateFactory): Split 50160 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 98212 line(s), 2108 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_NullNuker (TestFactory): Tested 100320 input feature(s) -- 0 feature(s) passed and 100320 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_RemainderOfLine_Outputter (TestFactory): Tested 100320 input feature(s) -- 50160 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_ExpressionEvaluator (TeeFactory): Cloned 50160 input feature(s) into 50160 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_3_LengthCalculatorInput (TeeFactory): Cloned 50160 input feature(s) into 50160 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_3_LengthCalculator (TeeFactory): Cloned 50160 input feature(s) into 50160 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_LengthCalculator_3_Rejector (TestFactory): Tested 50160 input feature(s) -- 0 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_Tester (TestFactory): Tested 50160 input feature(s) -- 2108 feature(s) passed and 48052 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_Tester_2 (TestFactory): Tested 48052 input feature(s) -- 7370 feature(s) passed and 40682 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_modeFilter (TestFactory): Tested 50160 input feature(s) -- 0 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_vertexFilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_locationVerifier (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggFilter (TestFactory): Tested 50160 input feature(s) -- 0 feature(s) passed and 50160 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_Aggfilter (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_Typefilter (TestFactory): Tested 50160 input feature(s) -- 50160 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggInput (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_MultiTypefilter (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggMultis (DeaggregateFactory): Split 0 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 0 line(s), 0 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_DeaggNullNuker (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_Input (TeeFactory): Cloned 50160 input feature(s) into 50160 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_SplitRemnants (DeaggregateFactory): Split 50160 input feature(s) into 0 point-in-polygon feature(s), 0 donut polygon(s), 0 polygon(s), 98212 line(s), 0 point(s), and 0 aggregate(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_NullNuker (TestFactory): Tested 98212 input feature(s) -- 0 feature(s) passed and 98212 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_GetFirstPart_Outputter (TestFactory): Tested 98212 input feature(s) -- 50160 feature(s) passed and 48052 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_AttributeRemover_2 (TeeFactory): Cloned 57530 input feature(s) into 57530 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Loop to DistanceChopper_LOOP_Entrance1716897834 Input Splitter (BranchingFactory): Branched 40682 input features -- 40682 features routed to the target factory, and 0 features routed to the fallback factory.
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper_CHOPPED1716897834 Output Collector (TeeFactory): Cloned 57530 input feature(s) into 57530 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |DistanceChopper CHOPPED Output Renamer/Nuker (TeeFactory): Cloned 57530 input feature(s) into 57530 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_3_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Processing base feature(s)...
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_3 (ProximityFactory): Input Summary:  1286 base feature(s), 9478 candidate feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_3 (ProximityFactory): Output Summary: 367 matched feature(s), 919 unmatched base feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Processing base feature(s)...
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Input Summary:  919 base feature(s), 9478 candidate feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_4 (ProximityFactory): Output Summary: 226 matched feature(s), 693 unmatched base feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Junction (TeeFactory): Cloned 593 input feature(s) into 593 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |GeometryRemover_2 (TeeFactory): Cloned 593 input feature(s) into 593 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |                        `CountFactory' Domain Summary
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |id                                                                        3165
+2024-05-28 14:04:10|   6.1|  0.0|STATS |==============================================================================
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Total features counted:                                                   3165
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Counter_2 OUTPUT Splitter (TeeFactory): Cloned 593 input feature(s) into 1186 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
+2024-05-28 14:04:10|   6.1|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
+2024-05-28 14:04:10|   6.1|  0.0|WARN  |AttributeManager_7: Attribute name is empty for value expression ''.  Ignoring expression since unable to create a blank attribute name
+2024-05-28 14:04:10|   6.1|  0.0|WARN  |Logging limit reached for the preceding message. Further instances of this message will not be logged
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 500 / 593
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|LineBuilder_2 (ConnectionFactory): Finished processing group 593 / 593
+2024-05-28 14:04:10|   6.1|  0.0|STATS |LineBuilder_2 (ConnectionFactory): Processed 1186 input feature(s). Output 593 feature(s) consisting of 0 polygonal feature(s), 593 linear feature(s), and 0 point feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_TESTZDEFAULT (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_TESTMODE (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_LIST (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_SPECIFIC (TestFactory): Tested 1286 input feature(s) -- 1286 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_SPECIFIC_X (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_SPECIFIC_Y (ExecuteFunctionFactory): Executed FME Functions on 1286 input feature(s) -- 1286 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z_ROUTER (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:10|   6.1|  0.0|STATS |CoordinateExtractor_SPECIFIC_Z (ExecuteFunctionFactory): Executed FME Functions on 0 input feature(s) -- 0 feature(s) completed and 0 feature(s) rejected
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Processing base feature(s)...
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder (ProximityFactory): Input Summary:  1286 base feature(s), 9478 candidate feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder (ProximityFactory): Output Summary: 463 matched feature(s), 823 unmatched base feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|INFORM|Processing base feature(s)...
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_2 (ProximityFactory): Input Summary:  823 base feature(s), 9478 candidate feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |NeighborFinder_2 (ProximityFactory): Output Summary: 222 matched feature(s), 601 unmatched base feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Junction_2 (TeeFactory): Cloned 685 input feature(s) into 685 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |GeometryRemover (TeeFactory): Cloned 685 input feature(s) into 685 output feature(s)
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |                        `CountFactory' Domain Summary
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |id                                                                        3850
+2024-05-28 14:04:10|   6.1|  0.0|STATS |==============================================================================
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Total features counted:                                                   3850
+2024-05-28 14:04:10|   6.1|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:10|   6.1|  0.0|STATS |Counter OUTPUT Splitter (TeeFactory): Cloned 685 input feature(s) into 1370 output feature(s)
+2024-05-28 14:04:10|   6.2|  0.1|INFORM|LineBuilder (ConnectionFactory): Finished processing group 500 / 685
+2024-05-28 14:04:10|   6.2|  0.0|INFORM|LineBuilder (ConnectionFactory): Finished processing group 685 / 685
+2024-05-28 14:04:10|   6.2|  0.0|STATS |LineBuilder (ConnectionFactory): Processed 1370 input feature(s). Output 685 feature(s) consisting of 0 polygonal feature(s), 685 linear feature(s), and 0 point feature(s)
+2024-05-28 14:04:10|   6.2|  0.0|STATS |Orientor (TeeFactory): Cloned 685 input feature(s) into 685 output feature(s)
+2024-05-28 14:04:10|   6.2|  0.0|STATS |Orientor_Rejector (TestFactory): Tested 685 input feature(s) -- 0 feature(s) passed and 685 feature(s) failed
+2024-05-28 14:04:10|   6.2|  0.0|STATS |AttributeRemover (TeeFactory): Cloned 1278 input feature(s) into 1278 output feature(s)
+2024-05-28 14:04:10|   6.2|  0.0|STATS |Junction_3 (TeeFactory): Cloned 58808 input feature(s) into 58808 output feature(s)
+2024-05-28 14:04:10|   6.2|  0.0|INFORM|LineOnLineOverlayer (OverlayFactory): Overlaying with an automatic tolerance of 5.681851820179024e-9
+2024-05-28 14:04:10|   6.4|  0.2|INFORM|FME Configuration: Using FME Reprojection Engine
+2024-05-28 14:04:13|   7.5|  1.1|STATS |LineOnLineOverlayer (OverlayFactory): Input Summary:  0 area(s), 0 point(s), and 58808 line(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |LineOnLineOverlayer (OverlayFactory): Output Summary: 0 area(s), 59800 point(s), and 68204 line(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |LineOnLineOverlayer LINE Splitter (TeeFactory): Cloned 68204 input feature(s) into 136408 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Tester_2 (TestFactory): Tested 68204 input feature(s) -- 60979 feature(s) passed and 7225 feature(s) failed
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Orientor_2 (TeeFactory): Cloned 7225 input feature(s) into 7225 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Orientor_2_Rejector (TestFactory): Tested 7225 input feature(s) -- 0 feature(s) passed and 7225 feature(s) failed
+2024-05-28 14:04:13|   7.5|  0.0|STATS |AttributeRemover_3 (TeeFactory): Cloned 75429 input feature(s) into 75429 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |                        `CountFactory' Domain Summary
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |id                                                                       79279
+2024-05-28 14:04:13|   7.5|  0.0|STATS |==============================================================================
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Total features counted:                                                  79279
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |AttributeManager OUTPUT Splitter (TeeFactory): Cloned 1286 input feature(s) into 2572 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Tester (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Tester_3 (TestFactory): Tested 0 input feature(s) -- 0 feature(s) passed and 0 feature(s) failed
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Orientor_3 (TeeFactory): Cloned 1286 input feature(s) into 1286 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Orientor_3_Rejector (TestFactory): Tested 1286 input feature(s) -- 0 feature(s) passed and 1286 feature(s) failed
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |                        `CountFactory' Domain Summary
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |id                                                                       79279
+2024-05-28 14:04:13|   7.5|  0.0|STATS |==============================================================================
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Total features counted:                                                  79279
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Successfully closed POSTGIS database reader
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Successfully closed POSTGIS database reader
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 78001 input feature(s), wrote 78001 output feature(s): 0 matched merge filters, 78001 were routed to output, 0 could not be routed.
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Successfully closed POSTGIS database writer
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_4':
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |                               Features Written
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|STATS |public.a_a_anlage_routing                                                 2572
+2024-05-28 14:04:13|   7.5|  0.0|STATS |==============================================================================
+2024-05-28 14:04:13|   7.5|  0.0|STATS |Total Features Written                                                    2572
+2024-05-28 14:04:13|   7.5|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Started outputting features
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|FME Configuration: Using connection values from 'geoserver' for POSTGIS_3
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Creating writer for format: PostGIS
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|FME Configuration: Destination coordinate system set to `EPSG:2056'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Coordinate System `EPSG:2056' parameters: CS_NAME=`CH1903Plus_1.LV95/01' DESC_NM=`CH1903+ / LV95' DT_NAME=`CH1903Plus_1' EPSG_QD=`1' GROUP=`SWITZERLAND' MAP_SCL=`1' MAX_LAT=`48' MAX_LNG=`11.05' MIN_LAT=`45.63333333333333' MIN_LNG=`5.4' ORG_LAT=`46.95240555555556' ORG_LNG=`7.439583333333333' PROJ=`SWISS' QUAD=`1' SCL_RED=`1' SOURCE=`EPSG, V6.3, 2056 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`2600000' Y_OFF=`1200000' ZERO_X=`0.0001' ZERO_Y=`0.0001'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Writer `POSTGIS_3' of type `POSTGIS' using group definition keyword `POSTGIS_3_DEF'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Opening POSTGIS writer for dataset 'geoserver'...
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|PostgreSQL 15.5, compiled by Visual C++ build 1914, 64-bit
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|3.4 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Testing for the existence of table 'public.a_a_routing'...
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Using existing table 'public.a_a_routing'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'public.a_a_routing'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'public.a_a_routing'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Committed transaction at feature '1000'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 1000 
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Committed transaction at feature '2000'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 2000 
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|Committed transaction at feature '3000'
+2024-05-28 14:04:13|   7.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 3000 
+2024-05-28 14:04:13|   7.6|  0.1|INFORM|Committed transaction at feature '4000'
+2024-05-28 14:04:13|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 4000 
+2024-05-28 14:04:13|   7.6|  0.0|INFORM|Committed transaction at feature '5000'
+2024-05-28 14:04:13|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 5000 
+2024-05-28 14:04:13|   7.6|  0.0|INFORM|Committed transaction at feature '6000'
+2024-05-28 14:04:13|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 6000 
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|Committed transaction at feature '7000'
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 7000 
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|Committed transaction at feature '8000'
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 8000 
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|Committed transaction at feature '9000'
+2024-05-28 14:04:14|   7.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 9000 
+2024-05-28 14:04:14|   7.7|  0.1|INFORM|Committed transaction at feature '10000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 10000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '11000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 11000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '12000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 12000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '13000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 13000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '14000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 14000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '15000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 15000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '16000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 16000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '17000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 17000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '18000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 18000 
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|Committed transaction at feature '19000'
+2024-05-28 14:04:14|   7.7|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 19000 
+2024-05-28 14:04:14|   7.8|  0.1|INFORM|Committed transaction at feature '20000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 20000 
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|Committed transaction at feature '21000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 21000 
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|Committed transaction at feature '22000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 22000 
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|Committed transaction at feature '23000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 23000 
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|Committed transaction at feature '24000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 24000 
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|Committed transaction at feature '25000'
+2024-05-28 14:04:14|   7.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 25000 
+2024-05-28 14:04:15|   7.9|  0.1|INFORM|Committed transaction at feature '26000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 26000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '27000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 27000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '28000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 28000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '29000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 29000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '30000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 30000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '31000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 31000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '32000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 32000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '33000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 33000 
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|Committed transaction at feature '34000'
+2024-05-28 14:04:15|   7.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 34000 
+2024-05-28 14:04:15|   8.0|  0.1|INFORM|Committed transaction at feature '35000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 35000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '36000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 36000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '37000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 37000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '38000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 38000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '39000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 39000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '40000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 40000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '41000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 41000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '42000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 42000 
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|Committed transaction at feature '43000'
+2024-05-28 14:04:15|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 43000 
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|Committed transaction at feature '44000'
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 44000 
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|Committed transaction at feature '45000'
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 45000 
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|Committed transaction at feature '46000'
+2024-05-28 14:04:16|   8.0|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 46000 
+2024-05-28 14:04:16|   8.1|  0.1|INFORM|Committed transaction at feature '47000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 47000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '48000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 48000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '49000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 49000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '50000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 50000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '51000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 51000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '52000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 52000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '53000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 53000 
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|Committed transaction at feature '54000'
+2024-05-28 14:04:16|   8.1|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 54000 
+2024-05-28 14:04:16|   8.2|  0.1|INFORM|Committed transaction at feature '55000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 55000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '56000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 56000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '57000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 57000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '58000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 58000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '59000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 59000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '60000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 60000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '61000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 61000 
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|Committed transaction at feature '62000'
+2024-05-28 14:04:16|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 62000 
+2024-05-28 14:04:17|   8.2|  0.0|INFORM|Committed transaction at feature '63000'
+2024-05-28 14:04:17|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 63000 
+2024-05-28 14:04:17|   8.2|  0.0|INFORM|Committed transaction at feature '64000'
+2024-05-28 14:04:17|   8.2|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 64000 
+2024-05-28 14:04:17|   8.3|  0.1|INFORM|Committed transaction at feature '65000'
+2024-05-28 14:04:17|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 65000 
+2024-05-28 14:04:17|   8.3|  0.0|INFORM|Committed transaction at feature '66000'
+2024-05-28 14:04:17|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 66000 
+2024-05-28 14:04:17|   8.3|  0.0|INFORM|Committed transaction at feature '67000'
+2024-05-28 14:04:17|   8.3|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 67000 
+2024-05-28 14:04:17|   8.4|  0.1|INFORM|Committed transaction at feature '68000'
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 68000 
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|Committed transaction at feature '69000'
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 69000 
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|Committed transaction at feature '70000'
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 70000 
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|Committed transaction at feature '71000'
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 71000 
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|Committed transaction at feature '72000'
+2024-05-28 14:04:17|   8.4|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 72000 
+2024-05-28 14:04:17|   8.5|  0.1|INFORM|Committed transaction at feature '73000'
+2024-05-28 14:04:17|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 73000 
+2024-05-28 14:04:17|   8.5|  0.0|INFORM|Committed transaction at feature '74000'
+2024-05-28 14:04:17|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 74000 
+2024-05-28 14:04:17|   8.5|  0.0|INFORM|Committed transaction at feature '75000'
+2024-05-28 14:04:17|   8.5|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Writing feature 75000 
+2024-05-28 14:04:17|   8.6|  0.1|INFORM|Successfully closed POSTGIS database writer
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_3':
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |                               Features Written
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.a_a_routing                                                       75429
+2024-05-28 14:04:17|   8.6|  0.0|STATS |==============================================================================
+2024-05-28 14:04:17|   8.6|  0.0|STATS |Total Features Written                                                   75429
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': done writing 75429 feature(s) 
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |                            Features Read Summary
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.anlagen                                                            1286
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.anlagen_endpunkt                                                   1286
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.anlagen_startpunkt                                                 1286
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.pisten                                                             9478
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.pisten_endpunkt                                                    9478
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.pisten_startpunkt                                                  9478
+2024-05-28 14:04:17|   8.6|  0.0|STATS |text_line                                                                    1
+2024-05-28 14:04:17|   8.6|  0.0|STATS |==============================================================================
+2024-05-28 14:04:17|   8.6|  0.0|STATS |Total Features Read                                                      32293
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |                           Features Written Summary
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.a_a_anlage_routing                                                 2572
+2024-05-28 14:04:17|   8.6|  0.0|STATS |public.a_a_routing                                                       75429
+2024-05-28 14:04:17|   8.6|  0.0|STATS |==============================================================================
+2024-05-28 14:04:17|   8.6|  0.0|STATS |Total Features Written                                                   78001
+2024-05-28 14:04:17|   8.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|Translation was SUCCESSFUL with 11 warning(s) (78001 feature(s) output)
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|FME Session Duration: 21.5 seconds. (CPU: 8.3s user, 0.3s system)
+2024-05-28 14:04:17|   8.6|  0.0|INFORM|END - ProcessID: 21984, peak process memory usage: 426180 kB, current process memory usage: 110328 kB

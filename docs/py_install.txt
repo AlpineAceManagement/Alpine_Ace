@@ -1,0 +1,76 @@
+sudo apt-get update
+// https://www.python.org/downloads/release/python-3819/
+// Gzipped source tarball
+// Herunterladen in Downloads
+cd ~/Downloads
+tar -xzvf Python-3.8.19.tgz
+
+sudo apt-get update
+sudo apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+
+
+
+sudo apt install python3-venv
+python3 -m venv ~/AlpineAceEnv
+source ~/AlpineAceEnv/bin/activate
+cd ..
+cd Alpine_Ace
+pip install -r requirements.txt
+
+
+// geht nicht
+pip install openmeteo-requests
+pip install psycopg2-binary
+pip install requests
+pip install requests-cache
+pip install pyproj
+pip install shutil
+pip install retry-requests
+
+
+enable corse geoserver /--> Jetty
+express simple 
+
+
+// auf PC powershell öffnen:
+pg_dump --host "localhost" --port "5432" --username "postgres" --password --role "postgres" --dbname "geoserver" --verbose --file "DatenbankDump.sql"
+
+// Auf Raspi zum Ordner navigieren
+psql --host "localhost" --port "5432" --username "postgres" --dbname "geoserver" --file "DatenbankDump.sql"
+
+//
+sudo apt-get install postgis
+sudo apt install postgresql-pgrouting
+
+
+//fals postgis nicht installiert
+psql -h localhost -U postgres -d geoserver -c "CREATE EXTENSION postgis;"
+
+// pgrouting installiern
+psql -h localhost -U postgres -d geoserver -c "CREATE EXTENSION pgrouting;"
+
+// evt. nicht nötig
+psql -d geoserver
+
+ALTER DATABASE name_of_your_db SET search_path = public, postgis;
+
+// User yellow rechte geben
+sudo chown -R yellow /usr/share/geoserver/
+
+
+// geoserver starten
+cd /usr/share/geoserver/bin
+
+sudo sh startup.sh
+
+
+// geoser im browser öffen (ip adresse vom raspi)
+http://192.168.1.87:8080/geoserver/web
+
+Layer erstellen gemäss readme
+//
+sudo apt update
+sudo apt install nodejs npm
+
+
+
