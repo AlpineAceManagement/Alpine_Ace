@@ -86,7 +86,13 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
     - [Gelerntes in diesem Projekt](#gelerntes-in-diesem-projekt)
     - [Probleme](#probleme)
     - [Vorgehen nächstes Projekt](#vorgehen-nächstes-projekt)
-  - [Literatur](#literatur)
+  - [Quellenverzeichnis](#quellenverzeichnis)
+    - [Literatur](#literatur)
+    - [Datenquellen](#datenquellen)
+    - [Libraries](#libraries)
+      - [Python](#python)
+      - [JavaScript](#javascript)
+      - [Verwendete Hilfsmittel](#verwendete-hilfsmittel)
   - [Contribution](#contribution)
 
 ## Architektur
@@ -916,6 +922,7 @@ Das Projekt war sehr umfassend mit verschieden Herausforderungen über alle Proj
 **Sprache und Namenskonventionen festlegen** : Vor dem Projekt Start sollte die Sprache (Code und Dokumentation) festgelegt werden. Für den Code sollte ausschliesslich Englisch genutzt werden. Schreibfehler können mit einem Rechtschreiben-Plug-in verhindert werden.
 
 ## Quellenverzeichnis
+
 Folgend sind alle Quellen für diese Arbeit in mehreren Kategorien unterteilt und aufgelistet.s
 
 ### Literatur
@@ -1002,6 +1009,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
 </table>
 
 ### Libraries
+
 #### Python
 
 <table style="border-collapse: collapse; width: 100%;">
@@ -1026,7 +1034,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>openmeteo-requests</p>
       </td>
       <td>
-        <a href="https://pypi.org/project/openmeteo-requests/ " >https://pypi.org/project/openmeteo-requests/ </a>
+        <p><a href="https://pypi.org/project/openmeteo-requests/ " >https://pypi.org/project/openmeteo-requests/ </a></p>
       </td>
     </tr>
     <tr>
@@ -1034,7 +1042,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>psycopg2</p>
       </td>
       <td>
-        <a href="https://www.psycopg.org/docs/" >https://www.psycopg.org/docs/ </a>
+        <p><a href="https://www.psycopg.org/docs/" >https://www.psycopg.org/docs/ </a></p>
       </td>
     </tr>
     <tr>
@@ -1042,7 +1050,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>requests</p>
       </td>
       <td>
-        <a href="https://pypi.org/project/requests/" >https://pypi.org/project/requests/</a>
+       <p> <a href="https://pypi.org/project/requests/" >https://pypi.org/project/requests/</a> </p>
       </td>
     </tr>
     <tr>
@@ -1050,7 +1058,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>requests-cache</p>
       </td>
       <td>
-        <a href="https://pypi.org/project/requests-cache/" >https://pypi.org/project/requests-cache/</a>
+       <p> <a href="https://pypi.org/project/requests-cache/" >https://pypi.org/project/requests-cache/</a></p>
       </td>
     </tr>
     <tr>
@@ -1058,7 +1066,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>retry-requests</p>
       </td>
       <td>
-        <a href="https://pypi.org/project/retry-requests/" >https://pypi.org/project/retry-requests/</a>
+        <p><a href="https://pypi.org/project/retry-requests/" >https://pypi.org/project/retry-requests/</a></p>
       </td>
     </tr>
     <tr>
@@ -1066,7 +1074,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>pyproj</p>
       </td>
       <td>
-        <a href="https://pyproj4.github.io/pyproj/stable/" >https://pyproj4.github.io/pyproj/stable/</a>
+       <p> <a href="https://pyproj4.github.io/pyproj/stable/" >https://pyproj4.github.io/pyproj/stable/</a></p>
       </td>
     </tr>
     <tr>
@@ -1074,7 +1082,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>pandas</p>
       </td>
       <td>
-        <a href="https://pandas.pydata.org/" >https://pandas.pydata.org/</a>
+       <p> <a href="https://pandas.pydata.org/" >https://pandas.pydata.org/</a></p>
       </td>
     </tr>
     <tr>
@@ -1082,7 +1090,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>shutil</p>
       </td>
       <td>
-        <a href="https://docs.python.org/3/library/shutil.html" >https://docs.python.org/3/library/shutil.html</a>
+        <p><a href="https://docs.python.org/3/library/shutil.html" >https://docs.python.org/3/library/shutil.html</a></p>
       </td>
     </tr>
 </table>
@@ -1102,7 +1110,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
       </td>
       <td style="border: none;">
         <p style = "bold">
-          Link zur Dokumenation
+          Link zur Dokumentation
         </p>
       </td>
     </tr>
@@ -1111,7 +1119,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>React</p>
       </td>
       <td>
-        <a href="https://react.dev/" >https://react.dev/</a>
+        <p><a href="https://react.dev/" >https://react.dev/</a></p>
       </td>
     </tr>
     <tr>
@@ -1119,7 +1127,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>MUI</p>
       </td>
       <td>
-        <a href="https://mui.com/" >https://mui.com/</a>
+       <p><a href="https://mui.com/" >https://mui.com/</a></p>
       </td>
     </tr>
     <tr>
@@ -1127,7 +1135,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>npm</p>
       </td>
       <td>
-        <a href="https://www.npmjs.com/" >https://www.npmjs.com/</a>
+       <p> <a href="https://www.npmjs.com/" >https://www.npmjs.com/</a></p>
       </td>
     </tr>
     <tr>
@@ -1135,7 +1143,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>Vega</p>
       </td>
       <td>
-        <a href="https://vega.github.io/vega/" >https://vega.github.io/vega/</a>
+        <p><a href="https://vega.github.io/vega/" >https://vega.github.io/vega/</a></p>
       </td>
     </tr>
         <tr>
@@ -1143,17 +1151,81 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         <p>Express</p>
       </td>
       <td>
-        <a href="https://expressjs.com/de/api.html" >https://expressjs.com/de/api.html</a>
+        <p><a href="https://expressjs.com/de/api.html" >https://expressjs.com/de/api.html</a></p>
       </td>
     </tr>
 </table>
 
+#### Verwendete Hilfsmittel
 
-
-
-
-
-
+<table style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+      <col style="width: 33%;">
+    </colgroup>
+    <tr>
+      <td style="border: none;">
+        <p style= "bold">
+          Namen des Hilfsmittel
+        </p>
+      </td>
+      <td style="border: none;">
+        <p style = "bold">
+          Anwendungsfall
+        </p>
+      </td>
+      <td style="border: none;">
+        <p style = "bold">
+          Link zur Webseite
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Duden</p>
+      </td>
+      <td>
+        <p>Synonym Suche</p>
+      </td>
+      <td>
+        <p><a href="https://www.duden.de/" >https://www.duden.de/</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>German - Code Spell Checker</p>
+      </td>
+      <td>
+        <p>Rechtschreibprüfung in der Dokumentation</p>
+      </td>
+      <td>
+        <p><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-german" >https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-german</a></p>
+      </td>
+          <tr>
+      <td>
+        <p>deepl</p>
+      </td>
+      <td>
+        <p>Rechtschreibprüfung in der Dokumentation</p>
+      </td>
+      <td>
+        <p><a href="https://www.deepl.com/de/translator" >https://www.deepl.com/de/translator</a></p>
+      </td>
+    </tr>
+              <tr>
+      <td>
+        <p>ChatGPT</p>
+      </td>
+      <td>
+        <p>Code Beispiele, Code Fehlersuche</p>
+      </td>
+      <td>
+        <p><a href="https://chatgpt.com/" >https://chatgpt.com/</a></p>
+      </td>
+    </tr>
+    </tr>
+</table>
 
 ## Contribution
 
