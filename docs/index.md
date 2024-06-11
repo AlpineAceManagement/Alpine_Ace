@@ -41,35 +41,35 @@ Die Installationsanleitung befindet sich [hier](https://github.com/AlpineAceMana
       - [Mock-Up](#mock-up)
       - [Farbschema](#farbschema)
   - [Funktionen](#funktionen)
-      - [Kopfzeile](#kopfzeile)
-        - [Funktion](#funktion)
-      - [Hauptmenü](#hauptmenü)
-        - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
-        - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
-        - [Funktion](#funktion-1)
-      - [Karte](#karte)
-        - [Skigebiete](#skigebiete)
-        - [DHM25](#dhm25)
-        - [Pisten](#pisten)
-        - [Anlagen](#anlagen)
-        - [Parkplätze](#parkplätze)
-        - [ÖV-Haltestellen](#öv-haltestellen)
-        - [Funktion](#funktion-2)
-      - [Wetter](#wetter)
-        - [Konzept](#konzept)
-        - [Funktion](#funktion-3)
-      - [Statistiken](#statistiken)
-        - [Konzept](#konzept-1)
-        - [Funktion](#funktion-4)
-      - [Navi](#navi)
-        - [Konzept](#konzept-2)
-        - [Aufbereitung der Daten](#aufbereitung-der-daten)
-        - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
-        - [Berechnen des Routings](#berechnen-des-routings)
-        - [SQL views Routing](#sql-views-routing)
-        - [Funktion](#funktion-5)
-      - [Restaurant](#restaurant)
-        - [Funktion](#funktion-6)
+    - [Kopfzeile](#kopfzeile)
+      - [Funktion](#funktion)
+    - [Hauptmenü](#hauptmenü)
+      - [Bulletin Karte Lawinen](#bulletin-karte-lawinen)
+      - [Bulletin Karte Grenzen](#bulletin-karte-grenzen)
+      - [Funktion](#funktion-1)
+    - [Karte](#karte)
+      - [Skigebiete](#skigebiete)
+      - [DHM25](#dhm25)
+      - [Pisten](#pisten)
+      - [Anlagen](#anlagen)
+      - [Parkplätze](#parkplätze)
+      - [ÖV-Haltestellen](#öv-haltestellen)
+      - [Funktion](#funktion-2)
+    - [Wetter](#wetter)
+      - [Konzept](#konzept)
+      - [Funktion](#funktion-3)
+    - [Statistiken](#statistiken)
+      - [Konzept](#konzept-1)
+      - [Funktion](#funktion-4)
+    - [Navi](#navi)
+      - [Konzept](#konzept-2)
+      - [Aufbereitung der Daten](#aufbereitung-der-daten)
+      - [Manuelle Änderungen des Routings](#manuelle-änderungen-des-routings)
+      - [Berechnen des Routings](#berechnen-des-routings)
+      - [SQL views Routing](#sql-views-routing)
+      - [Funktion](#funktion-5)
+    - [Restaurant](#restaurant)
+      - [Funktion](#funktion-6)
   - [Upcoming Features](#upcoming-features)
     - [Aktueller Standort](#aktueller-standort)
     - [Karten Legende](#karten-legende)
@@ -945,9 +945,9 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
         </h4>
       </td>
       <td style="border: none;">
-        <p style = "bold">
+        <h4 style = "bold">
           Link
-        </p>
+        </h4>
       </td>
     </tr>
     <tr>
@@ -1025,7 +1025,7 @@ SUN, Yan-Jiang/DING, Xiang-Qian/JIANG, Lei-Na (2017). Heuristic Pathfinding Algo
       </td>
       <td style="border: none;">
         <p style = "bold">
-          Link zur Dokumenation
+          Link zur Dokumentation
         </p>
       </td>
     </tr>
